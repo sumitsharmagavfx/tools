@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::resource('/', 'HomeController');
 
 Route::get('/test', function (){
    return view('tools/strikethrough');
