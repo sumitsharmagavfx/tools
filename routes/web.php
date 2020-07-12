@@ -13,7 +13,11 @@
 
 <<<<<<< Updated upstream
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/test', function (){
+   return view('tools/strikethrough');
 });
 =======
 Route::resource('/', 'HomeController');
