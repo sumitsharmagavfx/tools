@@ -11,6 +11,7 @@
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/', function () {
     return view('home');
 });
@@ -18,3 +19,6 @@ Route::get('/', function () {
 Route::get('/test', function (){
    return view('tools/strikethrough');
 });
+=======
+Route::resource('/', 'HomeController');
+>>>>>>> Stashed changes
