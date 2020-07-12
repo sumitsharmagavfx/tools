@@ -11,6 +11,10 @@
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/', function () {
     return view('welcome');
 });
+=======
+Route::resource('/', 'HomeController');
+>>>>>>> Stashed changes
