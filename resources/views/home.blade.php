@@ -46,7 +46,6 @@
         </div>
         <?php $i++; ?>
       @endforeach
-
     </div>
   </div>
 </div>
