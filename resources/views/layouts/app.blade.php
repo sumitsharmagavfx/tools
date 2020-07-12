@@ -87,7 +87,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div class="container">
+                    <div class="container" style="padding-top: 20px;">
                         @yield('content')
                     </div>
                     <!--end::Container-->
