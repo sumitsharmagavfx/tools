@@ -806,7 +806,7 @@
       }
     };
 
-    var global$4 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$4 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var getValue = function (item) {
       return isString(item.value) ? item.value : '';

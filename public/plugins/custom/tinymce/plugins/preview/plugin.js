@@ -13,7 +13,7 @@
 
     var global$1 = tinymce.util.Tools.resolve('tinymce.Env');
 
-    var global$2 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$2 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var getContentStyle = function (editor) {
       return editor.getParam('content_style', '');

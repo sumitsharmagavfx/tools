@@ -276,7 +276,7 @@
 
     var global$3 = tinymce.util.Tools.resolve('tinymce.util.Promise');
 
-    var global$4 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$4 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var global$5 = tinymce.util.Tools.resolve('tinymce.util.VK');
 

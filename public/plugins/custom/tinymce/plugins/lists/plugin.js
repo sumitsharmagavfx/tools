@@ -780,7 +780,7 @@
 
     var global$4 = tinymce.util.Tools.resolve('tinymce.dom.DomQuery');
 
-    var global$5 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$5 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var matchNodeName = function (name) {
       return function (node) {
