@@ -22,3 +22,6 @@ Route::get('/wordcounter', 'ToolsController@wordcounter');
 Route::get('/page-title-meta-description-checker', 'ToolsController@metachecker');
 Route::get('/dummy-credit-card-generator', 'ToolsController@creditcard');
 Route::get('/symbol-and-text-generator', 'ToolsController@symbolandtext');
+Route::get('/premium-tools', function (){
+    return view('premiumtools');
+});
