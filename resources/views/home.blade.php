@@ -18,8 +18,8 @@
        <?php $model = 'warning' ?>
        @endif
         <div class="col-lg-6 col-xl-4 mb-5">
-          <div class="card card-custom wave wave-animate-slow wave-{{$model}} mb-8 mb-lg-0">
-            <div class="card-body" style="max-height:300px;">
+          <div class="card card-custom wave wave-animate-slow wave-{{$model}} mb-8 mb-lg-0 card-stretch">
+            <div class="card-body">
               <div class="d-flex align-items-center p-5">
                 <div class="mr-6">
                   <span class="svg-icon svg-icon-success svg-icon-4x">
@@ -31,7 +31,11 @@
                   {{$datas['title']}}
                   </a>
                   <div class="text-dark-75">
+<<<<<<< Updated upstream
                    {{substr($datas['description'],0,240)}} ...
+=======
+                   {{substr($datas['description'],0,200)}} ...
+>>>>>>> Stashed changes
                   </div>
                 </div>
               </div>
