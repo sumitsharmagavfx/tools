@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
+        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);        
         return view('home', compact('data'));
     }
 
