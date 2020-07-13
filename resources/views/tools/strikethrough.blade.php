@@ -8,7 +8,7 @@
         <div class="card card-custom card-stretch" id="kt_page_stretched_card">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">STRIKETHROUGH <small>CROSS OUT TEXTS FOR ANY PLATFORM</small></h3>
+                    <h3 class="card-label">STRIKETHROUGH <small>cross out texts for any platform</small></h3>
                 </div>
             </div>
             <!--begin::Form-->

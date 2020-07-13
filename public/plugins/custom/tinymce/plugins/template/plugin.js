@@ -35,7 +35,7 @@
     var never = constant(false);
     var always = constant(true);
 
-    var global$1 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$1 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var global$2 = tinymce.util.Tools.resolve('tinymce.util.XHR');
 

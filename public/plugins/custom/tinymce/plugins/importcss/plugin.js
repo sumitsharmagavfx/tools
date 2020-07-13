@@ -17,7 +17,7 @@
 
     var global$3 = tinymce.util.Tools.resolve('tinymce.Env');
 
-    var global$4 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$4 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var shouldMergeClasses = function (editor) {
       return editor.getParam('importcss_merge_classes');

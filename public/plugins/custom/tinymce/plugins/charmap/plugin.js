@@ -20,7 +20,7 @@
       editor.execCommand('mceInsertContent', false, evtChr);
     };
 
-    var global$1 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$1 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var getCharMap = function (editor) {
       return editor.getParam('charmap');

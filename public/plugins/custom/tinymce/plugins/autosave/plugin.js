@@ -15,7 +15,7 @@
 
     var global$2 = tinymce.util.Tools.resolve('tinymce.util.LocalStorage');
 
-    var global$3 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$3 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var fireRestoreDraft = function (editor) {
       return editor.fire('RestoreDraft');

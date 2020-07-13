@@ -6274,7 +6274,7 @@
       });
     };
 
-    var global$1 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$1 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var getTDTHOverallStyle = function (dom, elm, name) {
       var cells = dom.select('td,th', elm);
