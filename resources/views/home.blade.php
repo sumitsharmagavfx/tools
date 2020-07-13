@@ -29,11 +29,11 @@
                   </span>
                 </div>
                 <div class="d-flex flex-column">
-                  <a href="#" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
+                  <a href="{{$datas['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
                   {{$datas['title']}}
                   </a>
                   <div class="text-dark-75">
-                   {{substr($datas['description'],0,200)}} ...
+                   {{substr($datas['description'],0,strpos($datas['description'], ' ', 200))}} ...
                   </div>
                 </div>
               </div>
