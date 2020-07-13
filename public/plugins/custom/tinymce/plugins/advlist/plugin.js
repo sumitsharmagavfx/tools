@@ -11,7 +11,7 @@
 
     var global = tinymce.util.Tools.resolve('tinymce.PluginManager');
 
-    var global$1 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$1 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var applyListFormat = function (editor, listName, styleValue) {
       var cmd = listName === 'UL' ? 'InsertUnorderedList' : 'InsertOrderedList';

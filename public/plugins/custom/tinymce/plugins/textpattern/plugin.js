@@ -768,7 +768,7 @@
     var zeroWidth = '\uFEFF';
     var nbsp = '\xA0';
 
-    var global$3 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$3 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var global$4 = tinymce.util.Tools.resolve('tinymce.dom.DOMUtils');
 

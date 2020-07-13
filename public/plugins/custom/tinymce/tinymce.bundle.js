@@ -18704,7 +18704,7 @@
 
     var global$d = tinymce.util.Tools.resolve('tinymce.util.Observable');
 
-    var global$e = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$e = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var global$f = tinymce.util.Tools.resolve('tinymce.util.VK');
 

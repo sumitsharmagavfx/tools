@@ -13,7 +13,7 @@
 
     var global$1 = tinymce.util.Tools.resolve('tinymce.dom.DOMUtils');
 
-    var global$2 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$2 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var enableWhenDirty = function (editor) {
       return editor.getParam('save_enablewhendirty', true);

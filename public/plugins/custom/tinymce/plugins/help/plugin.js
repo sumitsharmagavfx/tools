@@ -474,7 +474,7 @@
       },
       {
         key: 'imagetools',
-        name: 'Image Tools'
+        name: 'Image tools'
       },
       {
         key: 'importcss',

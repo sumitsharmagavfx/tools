@@ -19,7 +19,7 @@
 
     var global$4 = tinymce.util.Tools.resolve('tinymce.util.Delay');
 
-    var global$5 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$5 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var global$6 = tinymce.util.Tools.resolve('tinymce.util.VK');
 

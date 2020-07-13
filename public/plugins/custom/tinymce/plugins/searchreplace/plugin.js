@@ -160,7 +160,7 @@
 
     var punctuation$1 = punctuation;
 
-    var global$1 = tinymce.util.Tools.resolve('tinymce.util.Tools');
+    var global$1 = tinymce.util.Tools.resolve('tinymce.util.tools');
 
     var typeOf = function (x) {
       var t = typeof x;
