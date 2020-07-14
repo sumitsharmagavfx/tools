@@ -16,10 +16,11 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Input your text here:</label>
-                        <input type="email" class="form-control" placeholder="Enter Text Here"/>
+                        <input type="text" class="form-control" placeholder="Enter Text Here" id="strikeThis"/>
                         <span class="form-text text-muted" style="padding-bottom: 20px;">This Text Will Be Cross Out</span>
-                        <button type="reset" class="btn btn-primary mr-2" style="margin-bottom: 20px;" >StrikeEm</button>
-                        <input type="email" class="form-control" disabled="disabled" placeholder="Your Cross Out Text Will Display Here"/>
+                        <button type="button" class="btn btn-primary mr-2" style="margin-bottom: 20px;" onclick="strikeEm()">StrikeEm</button>
+                        <input type="text" class="form-control" placeholder="Your Cross Out Text Will Display Here" id="strikedResult" style="cursor: pointer" readonly/>
+                        <span id="alertcopy"></span>
                     </div>
                 </div>
                 <div class="card-body">
@@ -55,3 +56,7 @@
             <!--end::Form-->
         </div>
 @endsection
+
+@push('script')
+    <script src="{{asset('js/logic/strikethrough.js')}}"></script>
+@endpush

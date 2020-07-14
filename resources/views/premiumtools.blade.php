@@ -30,7 +30,7 @@
         <!--begin::Content-->
         <div class="container d-flex flex-row-fluid flex-column justify-content-md-center p-12">
             <h1 class="error-title font-weight-boldest text-info mt-10 mt-md-0 mb-12">Oops!</h1>
-            <p class="font-weight-boldest display-4">Paid Tools Is Under Construction</p>
+            <p class="font-weight-boldest display-4">Tools Is Under Construction</p>
             <p class="font-size-h3">We're working on it. You can back or use our Help Center.</p>
         </div>
         <!--end::Content-->

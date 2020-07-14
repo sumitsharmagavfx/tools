@@ -30,9 +30,6 @@
                     </p>
                 </div>
               </div>
-
-
-
-
-
 @endsection
+
+

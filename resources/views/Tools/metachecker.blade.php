@@ -30,9 +30,8 @@
                     </p>
                 </div>
               </div>
+@endsection
 
-
-
-
-
+@section('title-checker')
+    active
 @endsection
