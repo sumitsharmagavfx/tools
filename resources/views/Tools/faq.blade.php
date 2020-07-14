@@ -30,9 +30,8 @@
                     </p>
                 </div>
               </div>
+@endsection
 
-
-
-
-
+@section('json-ld')
+    active
 @endsection

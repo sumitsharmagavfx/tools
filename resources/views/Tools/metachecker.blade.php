@@ -109,9 +109,9 @@
 <small>Words length is 16</small>
         </div>
       </div>
+      @endsection
 
 
-
-
-
+@section('title-checker')
+    active
 @endsection
