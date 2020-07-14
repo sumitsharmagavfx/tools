@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <?php $i = 1; ?>
-      @foreach($data as $datas)
+      @foreach($data as $datum)
        @if($i % 3 == 0)
         <?php $model = 'success' ?>
        @elseif($i % 3 == 1)
@@ -24,23 +24,23 @@
                 <div class="mr-6">
                   <span class="svg-icon svg-icon-{{$model}} svg-icon-3x">
                   <!--begin::Svg Icon -->
-                      {!! $datas['img'] !!}
+                      {!! $datum['img'] !!}
                   <!--end::Svg Icon -->
                   </span>
                 </div>
                 <div class="d-flex flex-column">
-                  <a href="{{$datas['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
-                  {{$datas['title']}}
+                  <a href="{{$datum['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
+                  {{$datum['title']}}
                   </a>
                   <div class="text-dark-75">
-                   {{substr($datas['description'],0,strpos($datas['description'], ' ', 200))}} ...
+                   {{substr($datum['description'],0,strpos($datum['description'], ' ', 200))}} ...
                   </div>
                 </div>
               </div>
             </div>
             <div class="card-footer d-flex justify-content-end">
               <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                <a href="{{$datas['route']}}" class="btn font-weight-bolder text-uppercase btn-{{$model}} py-4 px-6">GO TO TOOL</a>
+                <a href="{{$datum['route']}}" class="btn font-weight-bolder text-uppercase btn-{{$model}} py-4 px-6">Launch</a>
               </div>
             </div>
           </div>
