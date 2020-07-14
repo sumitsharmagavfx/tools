@@ -18,14 +18,7 @@
                     <i class="flaticon2-analytics-2 icon-lg"></i>
                 </a>
             </li>
-            <!--end::Item-->
-            <!--begin::Item-->
-            <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="JSON-LD Schema Generator">
-                <a href="#" class="nav-link btn btn-icon btn-text-white btn-hover-text-white btn-lg" data-toggle="tab" data-target="#kt_aside_tab_2" role="tab">
-                    <i class="fas fa-code icon-lg"></i>
-                </a>
-            </li>
-            <!--end::Item-->
+            <!--end::Item-->                        
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Title & Lengths Checker">
                 <a href="#" class="nav-link btn btn-icon btn-text-white btn-hover-text-white btn-lg" data-toggle="tab" data-target="#kt_aside_tab_3" role="tab">
@@ -97,4 +90,3 @@
     </div>
     <!--end::Nav Wrapper-->
 </div>
-
