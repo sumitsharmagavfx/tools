@@ -1,36 +1,116 @@
 @extends('layouts.app')
 
 @section('title')
-    TOOLS TITTLE
+    TITLE & META DESCRIPTION CHECKER
 @endsection
 
 @section('content')
-        <div class="card card-custom card-stretch" id="kt_page_stretched_card">
+@push('style')
+<style media="screen">
+  @media only screen and (max-width: 768px) {
+    #desktop {
+      display: none;
+    }
+
+    #mobile{
+      width: 100%;
+    }
+}
+</style>
+@endpush
+        <div class="card card-custom mb-5" id="kt_page_stretched_card">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">Tools Tittle <small>Tools Description</small></h3>
+                    <h3 class="card-label">TITLE & META DESCRIPTION CHECKER <small>ADVANCE YOUR WRITING</small></h3>
                 </div>
             </div>
-            <!--begin::Form-->
-            <form>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label>Label</label>
-                        <input type="text" class="form-control" placeholder="Input"/><br>
-                        <button type="reset" class="btn btn-primary mr-2" style="margin-bottom: 20px;" >Button</button>
-                    </div>
+          </div>
+          <div class="row">
+    <div class="col-lg-5 mb-5" id="mobile">
+        <!--begin::Card-->
+        <div class="card card-custom card-stretch">
+            <div class="card-header justify-content-center">
+                <div class="card-title">
+                    <i class="fas fa-mobile-alt icon-3x"></i>
                 </div>
-              </form>
-              <!--end::Form-->
-
-                <div class="card-body">
-                <span class="font-size-h1 d-block d-block font-weight-boldest text-dark-75 py-2">Title Card</span>
-                    <p class="mb-15 d-flex flex-column">
-                        <span>Description Card</span><br>
-                    </p>
+            </div>
+            <div class="card-body">
+                <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
+                  <span style="color:#006621">https://cmlabs.co</span>
+                  <h3 style="color:#1558D6">CMLABS / Content Marketing Labs Indonesia</h3>
+                  <span>CMLABS specializes in the work of SEO Enterprise, Content Writing, Copywriting, and Content Marketing. Check 2020 offers?</span>
                 </div>
+            </div>
+        </div>
+        <!--end::Card-->
+    </div>
+    <div class="col-lg-7 mb-5" id="desktop">
+        <!--begin::Card-->
+        <div class="card card-custom card-stretch">
+            <div class="card-header justify-content-center">
+                <div class="card-title">
+                    <i class="fas fa-laptop icon-3x"></i>
+                </div>
+            </div>
+            <div class="card-body">
+              <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
+                <h3 style="color:#1558D6">CMLABS / Content Marketing Labs Indonesia</h3>
+                <span style="color:#006621">https://cmlabs.co</span> <br>
+                <span>CMLABS specializes in the work of SEO Enterprise, Content Writing, Copywriting, and Content Marketing. Check 2020 offers?</span>
               </div>
-@endsection
+            </div>
+        </div>
+        <!--end::Card-->
+    </div>
+</div>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+      <div class="card-title">
+          <h3 class="card-label">URL's <small></small></h3>
+      </div>
+  </div>
+    <div class="card-body">
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" class="form-control" value="https://cmlabs.co">
+        <button type="button" class="btn btn-primary mt-5" name="button">Get Title & Meta Desc. from URL's?</button> <br> <br>
+        <a href="#"> <small>Copy to clipboard!</small> </a> <br>
+        <small>eg. https://cmlabs.co/en/</small>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="card card-custom mb-5 mt-5">
+    <div class="card-header">
+        <div class="card-title">
+            <h3 class="card-label">PAGE TITLE <small></small></h3>
+        </div>
+    </div>
+      <div class="card-body">
+        <input type="text" name="" class="form-control" value="CMLABS / Content Marketing Labs Indonesia"> <br>
+        <a href="#"> <small>Copy to clipboard!</small> </a> <br>
+        <small>Page Title is 363 pixel(s) long, <span style="color:rgb(0, 102, 33)"> — an acceptable length </span></small> <br>
+        <small>Page Title is 41 character(s) Long, <span style="color:rgb(0, 102, 33)"> — an acceptable length </span></small> <br>
+        <small>Words length is 6</small>
+      </div>
+    </div>
+
+    <div class="card card-custom mb-5 mt-5">
+      <div class="card-header">
+          <div class="card-title">
+              <h3 class="card-label">META DESCRIPTION <small></small></h3>
+          </div>
+      </div>
+        <div class="card-body">
+          <input type="text" name="" class="form-control" value="CMLABS mengkhususkan diri pada pekerjaan SEO Enterprise, Content Writing, Copywriting, dan Content Marketing. Cek penawaran 2020?"><br>
+          <a href="#"> <small>Copy to clipboard!</small> </a> <br>
+          <small>Meta Description is 808 pixel(s) long, <span style="color: #d6564f"> too much 58 pixel(s)</span></small> <br>
+          <small>Meta Description is 129 character(s) long, <span style="color:rgb(0, 102, 33)"> — an acceptable length</span></small> <br>
+<small>Words length is 16</small>
+        </div>
+      </div>
+      @endsection
+
 
 @section('title-checker')
     active
