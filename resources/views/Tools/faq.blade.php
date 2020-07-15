@@ -16,15 +16,6 @@
         </div>
         <div class="card-body">
 
-<<<<<<< Updated upstream
-                <div class="card-body">
-                <span class="font-size-h1 d-block d-block font-weight-boldest text-dark-75 py-2">Title Card</span>
-                    <p class="mb-15 d-flex flex-column">
-                        <span>Description Card</span><br>
-                    </p>
-                </div>
-              </div>
-=======
         </div>
     </div>
     <!--end::Card-->
@@ -39,7 +30,7 @@
            </div>
            <div class="col-md-8">
              <button type="button" class="btn btn-warning form-control" name="button">Test Rich Result</button>
-           </div>           
+           </div>
          </div>
        </div>
       </div>
@@ -47,10 +38,7 @@
     </div>
   </div>
 @endsection
->>>>>>> Stashed changes
 
-
-
-
-
+@section('json-ld')
+    active
 @endsection

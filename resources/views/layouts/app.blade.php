@@ -129,6 +129,7 @@
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('js/pages/widgets.js?v=7.0.5')}}"></script>
+@stack('script')
 <!--end::Page Scripts-->
 </body>
 <!--end::Body-->

@@ -70,10 +70,10 @@
       </div>
   </div>
     <div class="card-body">
-      <form class="" action="index.html" method="post">
-        <input type="text" name="" class="form-control" value="https://cmlabs.co">
-        <button type="button" class="btn btn-primary mt-5" name="button">Get Title & Meta Desc. from URL's?</button> <br> <br>
-        <a href="#"> <small>Copy to clipboard!</small> </a> <br>
+      <form>
+        <input type="text" name="" class="form-control" value="https://cmlabs.co" id="url">
+        <button type="button" class="btn btn-primary mt-5" name="button" id="execute">Get Title & Meta Desc. from URL's?</button> <br> <br>
+        <a onclick="copy('title')" style="cursor:pointer;"> <small>Copy to clipboard!</small> </a> <br>
         <small>eg. https://cmlabs.co/en/</small>
       </form>
 
@@ -109,9 +109,11 @@
 <small>Words length is 16</small>
         </div>
       </div>
+      @endsection
 
-
-
-
-
+@push('script')
+    <script src="{{asset('js/logic/metachecker.js')}}"></script>
+@endpush
+@section('title-checker')
+    active
 @endsection
