@@ -53,7 +53,7 @@ var titlesizertemp = document.getElementById('titlesizertemp');
 var descsizer = document.getElementById('descsizer');
 var descsizertemp = document.getElementById('descsizertemp');
 resulttitle.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;";
-titlesizer.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden;";
+titlesizer.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif";
 titlesizertemp.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden;";
 resulttitlemobile.style = "display: inline-block; text-decoration: none; color: #1558d6; font-size: 18px !important; line-height: 24px !important;";
 resulturl.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
@@ -104,7 +104,7 @@ function calculate(title, desc) {
                 description = newDescription + " <b>...</b>";
                 jQuery("#descsizertemp").html(description)
             }
-            resultdesc.innerHTML = description;
+                resultdesc.innerHTML = description;
             resultdescmobile.innerHTML = description;
             desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
         } else {
