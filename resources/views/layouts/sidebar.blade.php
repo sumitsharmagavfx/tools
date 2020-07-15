@@ -21,7 +21,7 @@
             <!--end::Item-->
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="JSON-LD Schema Generator">
-                <a href="/construction" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')" >
+                <a href="/json-ld-faq-schema-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')" >
                     <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-07-181510/theme/html/demo4/dist/../src/media/svg/icons/Code/Code.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>

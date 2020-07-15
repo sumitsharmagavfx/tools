@@ -28,14 +28,11 @@
                 </div>
             </div>
             <div class="card-body">
-              <div class="mb-5">
-                <button type="button" class="btn btn-danger" name="button">Delete</button> <br> <br>
-                <input type="text" name="" class="form-control" placeholder="Question :" value=""> <br>
-                <input type="text" name="" class="form-control" placeholder="Answer :" value="">
+              <div class="mb-5" id="form">
+                <input type="text" name="" class="form-control mb-5 question" placeholder="Question :" value="" data-id="0">
+                <input type="text" name="" class="form-control mb-7 answer" placeholder="Answer :" value="" data-id="0">
               </div>
-              <button type="button" class="btn btn-success" name="button">Add Another FAQ</button>
-
-
+              <button type="button" class="btn btn-success" name="button" id="add">Add Another FAQ</button>
             </div>
         </div>
         <!--end::Card-->
@@ -43,19 +40,19 @@
     <div class="col-lg-4">
         <!--begin::Card-->
         <div class="card card-custom card-stretch gutter-b">
+            <form class="" target="_blank" rel="”nofollow" noreferrer”="" action="https://search.google.com/test/rich-results" method="post">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-5" >
                   <button type="button" id="copy" class="btn btn-success form-control mb-5" name="button">Copy</button>
                 </div>
                 <div class="col-lg-7" >
-                  <form class="" action="" method="post">
                     <button type="submit" id="test" class="btn btn-warning form-control mb-5" name="button">Test Rich Result!</button>
-                  </form>
                 </div>
               </div>
-              <textarea name="name" style="resize:none" rows="16" class="form-control"></textarea>
+              <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
             </div>
+            </form>
         </div>
         <!--end::Card-->
     </div>
@@ -156,6 +153,9 @@ $(document).ready(function () {
 </script>
 @endpush
 
+@push('script')
+    <script src="{{asset('js/logic/faq-json-ld.js')}}"></script>
+@endpush
 @section('json-ld')
     active
 @endsection
