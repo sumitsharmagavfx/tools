@@ -37,7 +37,7 @@
                 <div class="card-body">
                     <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
                         <span id="resulturlmobile">https://cmlabs.co</span><br>
-                        <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span>
+                        <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
                         <span id="resultdescmobile">CMLABS specializes in the work of SEO Enterprise, Content Writing, Copywriting, and Content Marketing. Check 2020 offers?</span>
                     </div>
                 </div>
