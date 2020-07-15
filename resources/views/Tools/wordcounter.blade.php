@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    TOOLS TITTLE
+    WORD COUNTER
 @endsection
 
 @section('content')
@@ -132,16 +132,17 @@
                 <div class="card-body">
                     <p>Perlu diketahui jika tipe konten itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?</p>
                     <div class="row">
-                        <div class="col-md-5 p-10 mb-5" style="background-color:#53F9AD">
+                        <div class="col-md-6 mb-5">
+                          <div class="container p-10"style="background-color:#53F9AD">
                             <h3>CONTENT WRITER</h3>
                             <p>Word Counter akan membantu aktifitas menulis konten artikel dan melakukan penghitungan kata, kalimat dan waktu baca dengan akurat.</p>
+                          </div>
                         </div>
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-5 p-10 mb-5" style="background-color:#53F9AD">
+                        <div class="col-md-6 mb-5" >
+                          <div class="container p-10" style="background-color:#53F9AD; height:100%">
                             <h3>COPYWRITER</h3>
                             <p>Popularitas copywriter semakin tinggi dan membuat pekerjaan ini dibutuhkan enterprise. Maka Word Counter akan sangat dibutuhkan.</p>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -222,6 +223,7 @@
             </div>
             <!--end::Card-->
         </div>
+        <!--end::Card-->
     </div>
 @endsection
 @push('script')
