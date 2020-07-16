@@ -14,7 +14,7 @@
         <ul class="nav flex-column">
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Page Speed">
-                <a href="/construction" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">
+                <a href="/page-speed" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">
                     <i class="flaticon2-analytics-2 icon-lg"></i>
                 </a>
             </li>
