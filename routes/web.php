@@ -22,6 +22,7 @@ Route::get('/word-counter', 'ToolsController@wordcounter');
 Route::get('/page-title-meta-description-checker', 'ToolsController@metachecker');
 Route::get('/dummy-credit-card-generator', 'ToolsController@creditcard');
 Route::get('/symbol-and-text-generator', 'ToolsController@symbolandtext');
+Route::get('/page-speed', 'ToolsController@pagespeed');
 Route::get('/construction', function (){
     return view('premiumtools');
 });

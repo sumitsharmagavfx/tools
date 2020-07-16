@@ -35,4 +35,9 @@ class ToolsController extends Controller
     {
       return view('Tools/metachecker');
     }
+
+    public function pagespeed()
+    {
+      return view('Tools/pagespeed');
+    }
 }
