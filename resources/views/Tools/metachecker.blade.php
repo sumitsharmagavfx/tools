@@ -70,16 +70,13 @@
             </div>
         </div>
         <div class="card-body">
-            <form>
-                <input type="text" name="" class="form-control" value="https://cmlabs.co" id="url">
-                <button type="button" class="btn btn-primary mt-5" name="button" id="execute">Get Title & Meta Desc.
-                    from URL's?
-                </button>
-                <br> <br>
-                <a onclick="copy('url')" style="cursor:pointer;"> <small>Copy to clipboard!</small> </a> <br>
-                <small id="urlcheck">eg. https://cmlabs.co/en/</small>
-            </form>
-
+            <input type="text" name="" class="form-control" value="https://cmlabs.co" id="url">
+            <button type="button" class="btn btn-primary mt-5" name="button" id="execute">Get Title & Meta Desc.
+                from URL's?
+            </button>
+            <br> <br>
+            <a onclick="copy('url')" style="cursor:pointer;"> <small>Copy to clipboard!</small> </a> <br>
+            <small id="urlcheck">eg. https://cmlabs.co/en/</small>
         </div>
     </div>
 

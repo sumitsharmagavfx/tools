@@ -1,11 +1,13 @@
 jQuery(document).ready(function () {
     jQuery('#execute').click(function(){
+        jQuery(this).addClass('spinner spinner-white spinner-right')
         var matchreg =/^(https?|ftp):\/\//;
         let urls = jQuery('#url').val().replace(matchreg,"");
         jQuery.get({
             url: 'https://scrapper.ermanu.vercel.app/?url=https://' + urls,
             success: (res) => {
                 calculate(res.title, res.description);
+                jQuery('#execute').removeClass('spinner spinner-white spinner-right');
             },
             fail: (res) => {
                 urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
