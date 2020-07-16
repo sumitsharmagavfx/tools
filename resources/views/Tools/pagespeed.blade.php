@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="col-lg-12">
+
         <div class="card card-custom gutter-b">
             <div class="card-header">
                 <div class="card-title">
@@ -24,141 +24,158 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-12">
         <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg" id="performance">
-                            <div class="progress mx-auto mb-5" data-value='100'>
-                      <span class="progress-left">
-                        <span class="progress-bar border-success"></span>
-                      </span>
-                                <span class="progress-right">
-                        <span class="progress-bar border-success"></span>
-                      </span>
-                                <div
-                                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                    <div class="h2 font-weight-bold">100<sup class="small">%</sup></div>
-                                </div>
-                            </div>
-                            <!-- END -->
-                            <h3 class="h6 font-weight-bold text-center mb-4">PERFORMANCE</h3>
-                        </div>
-
-                        <div class="col-12 col-sm-5 col-md-4 col-lg" id="accesibility">
-                            <div class="progress mx-auto mb-5" data-value='80'>
-                      <span class="progress-left">
-                        <span class="progress-bar border-warning"></span>
-                      </span>
-                                <span class="progress-right">
-                        <span class="progress-bar border-warning"></span>
-                      </span>
-                                <div
-                                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                    <div class="h2 font-weight-bold">80<sup class="small">%</sup></div>
-                                </div>
-                            </div>
-                            <!-- END -->
-                            <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3>
-                        </div>
-
-                        <div class="col-12 col-sm-5 col-md-4 col-lg" id="bestpractices">
-                            <div class="progress mx-auto mb-5" data-value='40'>
-                      <span class="progress-left">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                                <span class="progress-right">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                                <div
-                                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                    <div class="h2 font-weight-bold">40<sup class="small">%</sup></div>
-                                </div>
-                            </div>
-                            <!-- END -->
-                            <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3>
-                        </div>
-
-                        <div class="col-12 col-sm-5 col-md-4 col-lg" id="seo">
-                            <div class="progress mx-auto mb-5" data-value='0'>
-                      <span class="progress-left">
-                        <span class="progress-bar border-primary"></span>
-                      </span>
-                                <span class="progress-right">
-                        <span class="progress-bar border-primary"></span>
-                      </span>
-                                <div
-                                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                    <div class="h2 font-weight-bold">0<sup class="small">%</sup></div>
-                                </div>
-                            </div>
-                            <!-- END -->
-                            <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3>
-                        </div>
-
-                        <div class="col-12 col-sm-5 col-md-4 col-lg" id="pwa">
-                            <div class="progress mx-auto mb-5" data-value='20'>
-                      <span class="progress-left">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                                <span class="progress-right">
-                        <span class="progress-bar border-danger"></span>
-                      </span>
-                                <div
-                                    class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                                    <div class="h2 font-weight-bold">20<sup class="small">%</sup></div>
-                                </div>
-                            </div>
-                            <!-- END -->
-                            <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3>
-                        </div>
-
+         <div class="card-header p-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                  <a href="#performance">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg">
+                      <div class="progress" data-percentage="100">
+                				<span class="progress-left">
+                					<span class="progress-bar border-success"></span>
+                				</span>
+                				<span class="progress-right">
+                					<span class="progress-bar border-success"></span>
+                				</span>
+                				<div class="progress-value" style="width:100%">
+                					<div>
+                						100%
+                					</div>
+                				</div>
+                			</div>
+                        <h3 class="h6 font-weight-bold text-center mb-4">PERFORMANCE</h3>
                     </div>
+                    </a>
+                    <a href="#accesibility">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg">
+
+
+                        <div class="progress" data-percentage="80">
+                  				<span class="progress-left">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<span class="progress-right">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<div class="progress-value" style="width:100%">
+                  					<div>
+                  						80%
+                  					</div>
+                  				</div>
+                  			</div>
+                        <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3>
+                    </div>
+                    </a>
+
+
+                    <a href="#bestpractices">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg">
+                        <div class="progress" data-percentage="60">
+                  				<span class="progress-left">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<span class="progress-right">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<div class="progress-value" style="width:100%">
+                  					<div>
+                  						60%
+                  					</div>
+                  				</div>
+                  			</div>
+                        <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3>
+                    </div>
+                    </a>
+
+                    <a href="#seo">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg">
+                        <div class="progress" data-percentage="40">
+                  				<span class="progress-left">
+                  					<span class="progress-bar border-danger"></span>
+                  				</span>
+                  				<span class="progress-right">
+                  					<span class="progress-bar border-danger"></span>
+                  				</span>
+                  				<div class="progress-value" style="width:100%">
+                  					<div>
+                  						40%
+                  					</div>
+                  				</div>
+                  			</div>
+                        <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3>
+                    </div>
+                    </a>
+
+                    <a href="#pwa">
+                    <div class="col-12 col-sm-5 col-md-4 col-lg">
+                        <div class="progress" data-percentage="0">
+                  				<span class="progress-left">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<span class="progress-right">
+                  					<span class="progress-bar border-warning"></span>
+                  				</span>
+                  				<div class="progress-value" style="width:100%">
+                  					<div>
+                  						0%
+                  					</div>
+                  				</div>
+
+                  			</div>
+                        <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3>
+                    </div>
+                    </a>
+
                 </div>
-                <div class="row justify-content-center mb-5">
-                    <table style="border:5px solid #EEEEEE;">
-                        <tbody>
-                        <tr>
-                            <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
-                                                                            style="display: inline-block; width:30%; border-top:4px solid #F64E60; text-align:center"></span>
-                                0-49
-                            </td>
-                            <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
-                                                                            style="display: inline-block; width:30%; border-top:4px solid #FFA800; text-align:center"></span>
-                                50-89
-                            </td>
-                            <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
-                                                                            style="display: inline-block; width:30%; border-top:4px solid #1BC5BD; text-align:center"></span>
-                                90-100
-                            </td>
-                            <td style="width:20px"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+
             </div>
+
+         </div>
+         <div class="card-body">
+           <div class="row justify-content-center mb-5">
+               <table style="border:5px solid #EEEEEE;">
+                   <tbody>
+                   <tr>
+                       <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
+                                                                       style="display: inline-block; width:30%; border-top:4px solid #F64E60; text-align:center"></span>
+                           0-49
+                       </td>
+                       <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
+                                                                       style="display: inline-block; width:30%; border-top:4px solid #FFA800; text-align:center"></span>
+                           50-89
+                       </td>
+                       <td style="width:100px; text-align:right"><span class="mb-1 mr-3"
+                                                                       style="display: inline-block; width:30%; border-top:4px solid #1BC5BD; text-align:center"></span>
+                           90-100
+                       </td>
+                       <td style="width:20px"></td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+         </div>
         </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="col" id="performance">
-                    <div class="progress mx-auto mb-5" data-value='100'>
-                  <span class="progress-left">
-                    <span class="progress-bar border-success"></span>
-                  </span>
-                        <span class="progress-right">
-                    <span class="progress-bar border-success"></span>
-                  </span>
-                        <div
-                            class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold">100<sup class="small">%</sup></div>
-                        </div>
+        <div class="card card-custom gutter-b " id="performance">
+          <div class="ribbon ribbon-top">
+            <div class="ribbon-target bg-success" style="top: -2px; right: 20px;">PERFORMANCE</div>
+          </div>
+            <div class="card-body pt-25">
+                <div class="col" >
+                  <div class="progress" data-percentage="100">
+                    <span class="progress-left">
+                      <span class="progress-bar border-success"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar border-success"></span>
+                    </span>
+                    <div class="progress-value" style="width:100%">
+                      <div>
+                        100%
+                      </div>
                     </div>
+                  </div>
                     <!-- END -->
-                    <h3 class="h6 font-weight-bold text-center mb-4">PERFORMANCE</h3>
+                    <!-- <h3 class="h6 font-weight-bold text-center mb-4">PERFORMANCE</h3> -->
                 </div>
 
                 <div class="">
@@ -278,99 +295,106 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="col" id="accesibility">
-                    <div class="progress mx-auto mb-5" data-value='80'>
-                  <span class="progress-left">
-                    <span class="progress-bar border-warning"></span>
-                  </span>
-                        <span class="progress-right">
-                    <span class="progress-bar border-warning"></span>
-                  </span>
-                        <div
-                            class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold">80<sup class="small">%</sup></div>
-                        </div>
+        <div class="card card-custom gutter-b " id="accesibility" style="display:none">
+          <div class="ribbon ribbon-top">
+            <div class="ribbon-target bg-warning" style="top: -2px; right: 20px;">ACCESIBILITY</div>
+          </div>
+            <div class="card-body pt-25">
+                <div class="col" >
+                  <div class="progress" data-percentage="80">
+                    <span class="progress-left">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <div class="progress-value" style="width:100%">
+                      <div>
+                        80%
+                      </div>
                     </div>
+                  </div>
                     <!-- END -->
-                    <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3>
+                    <!-- <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3> -->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="col" id="bestpractices">
-                    <div class="progress mx-auto mb-5" data-value='40'>
-                  <span class="progress-left">
-                    <span class="progress-bar border-danger"></span>
-                  </span>
-                        <span class="progress-right">
-                    <span class="progress-bar border-danger"></span>
-                  </span>
-                        <div
-                            class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold">40<sup class="small">%</sup></div>
-                        </div>
+        <div class="card card-custom gutter-b " id="bestpractices" style="display:none">
+          <div class="ribbon ribbon-top">
+            <div class="ribbon-target bg-danger" style="top: -2px; right: 20px;">BEST PRACTICES</div>
+          </div>
+            <div class="card-body pt-25">
+                <div class="col">
+                  <div class="progress" data-percentage="60">
+                    <span class="progress-left">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <div class="progress-value" style="width:100%">
+                      <div>
+                        60%
+                      </div>
                     </div>
+                  </div>
                     <!-- END -->
-                    <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3>
+                    <!-- <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3> -->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="col" id="seo">
-                    <div class="progress mx-auto mb-5" data-value='0'>
-                  <span class="progress-left">
-                    <span class="progress-bar border-primary"></span>
-                  </span>
-                        <span class="progress-right">
-                    <span class="progress-bar border-primary"></span>
-                  </span>
-                        <div
-                            class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold">0<sup class="small">%</sup></div>
-                        </div>
+        <div class="card card-custom gutter-b " id="seo" style="display:none">
+          <div class="ribbon ribbon-top">
+            <div class="ribbon-target bg-primary" style="top: -2px; right: 20px;">SEO</div>
+          </div>
+            <div class="card-body pt-25" >
+                <div class="col" >
+                  <div class="progress" data-percentage="40">
+                    <span class="progress-left">
+                      <span class="progress-bar border-danger"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar border-danger"></span>
+                    </span>
+                    <div class="progress-value" style="width:100%">
+                      <div>
+                        40%
+                      </div>
                     </div>
+                  </div>
                     <!-- END -->
-                    <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3>
+                    <!-- <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3> -->
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="card card-custom gutter-b">
-            <div class="card-body">
-                <div class="col" id="pwa">
-                    <div class="progress mx-auto mb-5" data-value='20'>
-                  <span class="progress-left">
-                    <span class="progress-bar border-danger"></span>
-                  </span>
-                        <span class="progress-right">
-                    <span class="progress-bar border-danger"></span>
-                  </span>
-                        <div
-                            class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-                            <div class="h2 font-weight-bold">20<sup class="small">%</sup></div>
-                        </div>
+        <div class="card card-custom gutter-b " id="pwa" style="display:none">
+          <div class="ribbon ribbon-top">
+            <div class="ribbon-target bg-danger" style="top: -2px; right: 20px;">PWA</div>
+          </div>
+            <div class="card-body pt-25">
+                <div class="col" >
+
+                  <div class="progress" data-percentage="0">
+                    <span class="progress-left">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar border-warning"></span>
+                    </span>
+                    <div class="progress-value" style="width:100%">
+                      <div>
+                        0%
+                      </div>
                     </div>
-                    <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3>
+                  </div>
+                    <!-- <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3> -->
                 </div>
             </div>
         </div>
-    </div>
         @endsection
         @push('style')
             <style media="screen">
-
-                .progress {
+                /* .progress {
                     width: 150px;
                     height: 150px;
                     background: none;
@@ -449,7 +473,242 @@
 
                 div.h4 {
                     line-height: 1rem;
-                }
+                } */
+
+                .progress {
+	width: 150px;
+	height: 150px;
+	line-height: 150px;
+	background: none;
+	margin: 0 auto;
+	box-shadow: none;
+	position: relative;
+}
+
+.progress:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 7px solid #eee;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.progress > span {
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+.progress .progress-left {
+	left: 0;
+}
+
+.progress .progress-bar {
+	width: 100%;
+	height: 100%;
+	background: none;
+	border-width: 7px;
+	border-style: solid;
+	position: absolute;
+	top: 0;
+
+}
+
+.progress .progress-left .progress-bar {
+	left: 100%;
+	border-top-right-radius: 75px;
+	border-bottom-right-radius: 75px;
+	border-left: 0;
+	-webkit-transform-origin: center left;
+	transform-origin: center left;
+}
+
+.progress .progress-right {
+	right: 0;
+}
+
+.progress .progress-right .progress-bar {
+	left: -100%;
+	border-top-left-radius: 75px;
+	border-bottom-left-radius: 75px;
+	border-right: 0;
+	-webkit-transform-origin: center right;
+	transform-origin: center right;
+}
+
+.progress .progress-value {
+	display: flex;
+	border-radius: 50%;
+	font-size: 36px;
+	text-align: center;
+	line-height: 20px;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	font-weight: 300;
+}
+
+.progress .progress-value div {
+	margin-top: 10px;
+}
+
+.progress .progress-value span {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+/* This for loop creates the 	necessary css animation names
+Due to the split circle of progress-left and progress right, we must use the animations on each side.
+*/
+.progress[data-percentage="10"] .progress-right .progress-bar {
+	animation: loading-1 1.5s linear forwards;
+}
+
+.progress[data-percentage="10"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress[data-percentage="20"] .progress-right .progress-bar {
+	animation: loading-2 1.5s linear forwards;
+}
+
+.progress[data-percentage="20"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress[data-percentage="30"] .progress-right .progress-bar {
+	animation: loading-3 1.5s linear forwards;
+}
+
+.progress[data-percentage="30"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress[data-percentage="40"] .progress-right .progress-bar {
+	animation: loading-4 1.5s linear forwards;
+}
+
+.progress[data-percentage="40"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress[data-percentage="50"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="50"] .progress-left .progress-bar {
+	animation: 0;
+}
+
+.progress[data-percentage="60"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="60"] .progress-left .progress-bar {
+	animation: loading-1 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="70"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="70"] .progress-left .progress-bar {
+	animation: loading-2 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="80"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="80"] .progress-left .progress-bar {
+	animation: loading-3 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="90"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="90"] .progress-left .progress-bar {
+	animation: loading-4 1.5s linear forwards 1.5s;
+}
+
+.progress[data-percentage="100"] .progress-right .progress-bar {
+	animation: loading-5 1.5s linear forwards;
+}
+
+.progress[data-percentage="100"] .progress-left .progress-bar {
+	animation: loading-5 1.5s linear forwards 1.5s;
+}
+
+@keyframes loading-1 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(36);
+		transform: rotate(36deg);
+	}
+}
+
+@keyframes loading-2 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(72);
+		transform: rotate(72deg);
+	}
+}
+
+@keyframes loading-3 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(108);
+		transform: rotate(108deg);
+	}
+}
+
+@keyframes loading-4 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(144);
+		transform: rotate(144deg);
+	}
+}
+
+@keyframes loading-5 {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(180);
+		transform: rotate(180deg);
+	}
+}
+
+.progress {
+	margin-bottom: 1em;
+}
             </style>
 
         @endpush
