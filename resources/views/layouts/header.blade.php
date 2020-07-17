@@ -12,9 +12,9 @@
         <div class="topbar">
             <!--begin::User-->
             <div class="topbar-item">
-                <a href="/premium-tools" class="btn btn-primary pulse pulse-light">
+                <a href="/construction" class="btn btn-primary pulse pulse-light">
                     <div class="pulse pulse-light">
-                        <span class="pulse-ring" style="margin: -5px;"></span>
+                        <span class="pulse-ring" style="margin: -7px;"></span>
                       <span class="svg-icon svg-icon-light svg-icon-2x">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                           <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
