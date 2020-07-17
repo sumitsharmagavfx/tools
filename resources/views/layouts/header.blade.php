@@ -12,7 +12,7 @@
         <div class="topbar">
             <!--begin::User-->
             <div class="topbar-item">
-                <a href="/premium-tools" class="btn btn-primary pulse pulse-light">
+                <a href="/construction" class="btn btn-primary pulse pulse-light">
                     <div class="pulse pulse-light">
                         <span class="pulse-ring" style="margin: -7px;"></span>
                       <span class="svg-icon svg-icon-light svg-icon-2x">
