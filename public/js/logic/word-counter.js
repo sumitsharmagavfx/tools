@@ -1,33 +1,9 @@
-// var moreTextA = document.getElementById("showhidea");
-// var btnTextA = document.getElementById("readmorea");
-// btnTextA.addEventListener("click", myFunction);
-// moreTextA.style.display = "none";
-//
-// var bol = 0;
-//
-// function myFunction() {
-//     if (moreTextA.style.display == "none") {
-//         btnTextA.innerHTML = "<b>⇡⇡</b>";
-//         moreTextA.style.display = "block";
-//         bol = 0;
-//     } else {
-//
-//         btnTextA.innerHTML = "<b>⇣⇣</b>";
-//         moreTextA.style.display = "none";
-//         bol = 1;
-//     }
-// }
 var input = document.querySelectorAll('textarea')[0],
     characterCount = document.querySelector('#characterCount'),
     wordCount = document.querySelector('#wordCount'),
     sentenceCount = document.querySelector('#sentenceCount'),
     paragraphCount = document.querySelector('#paragraphCount'),
     readingTime = document.querySelector('#readingTime'),
-    keywordsDiv = document.querySelectorAll('.keywords')[0],
-    keywordsDiv2 = document.querySelectorAll('.keywords')[1],
-    keywordsDiv3 = document.querySelectorAll('.keywords')[2],
-    keywordsDiv4 = document.querySelectorAll('.keywords')[3],
-    keywordsDiv5 = document.querySelectorAll('.keywords')[4],
     topKeywords = document.querySelector('#topKeywords'),
     topKeywords2 = document.querySelector('#top2'),
     topKeywords3 = document.querySelector('#top3'),
@@ -63,8 +39,8 @@ input.addEventListener('input', function() {
 
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
-        sentenceCount.innerHTML = sentences.length - 1;
-        sessionStorage.setItem("sentences", sentences.length - 1);
+        sentenceCount.innerHTML = sentences.length;
+        sessionStorage.setItem("sentences", sentences.length);
     } else {
         sentenceCount.innerHTML = 0;
     }
