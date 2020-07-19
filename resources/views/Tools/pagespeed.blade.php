@@ -156,7 +156,7 @@
 {{--Performance--}}
     <div class="card card-custom gutter-b " id="performance">
         <div class="ribbon ribbon-top">
-            <div class="ribbon-target bg-success" style="top: -2px; right: 20px;">PERFORMANCE</div>
+            <div class="ribbon-target" id="ribbon-performance" style="top: -2px; right: 20px;">PERFORMANCE</div>
         </div>
         <div class="card-body pt-25">
             <div class="col">
@@ -186,16 +186,16 @@
 {{--accessibility--}}
     <div class="card card-custom gutter-b " id="accessibility" style="display:none">
         <div class="ribbon ribbon-top">
-            <div class="ribbon-target bg-warning" style="top: -2px; right: 20px;">ACCESSIBILITY</div>
+            <div class="ribbon-target" id="ribbon-accessibility" style="top: -2px; right: 20px;">ACCESSIBILITY</div>
         </div>
         <div class="card-body pt-25">
             <div class="col">
                 <div class="progress accessibility" data-percentage="0">
                     <span class="progress-left">
-                      <span class="progress-bar progress-bar-accesibility"></span>
+                      <span class="progress-bar progress-bar-accessibility"></span>
                     </span>
                     <span class="progress-right">
-                      <span class="progress-bar progress-bar-accesibility"></span>
+                      <span class="progress-bar progress-bar-accessibility"></span>
                     </span>
                     <div class="progress-value" style="width:100%">
                         <div class="value-accessibility">
@@ -218,7 +218,7 @@
 {{--best practice--}}
     <div class="card card-custom gutter-b " id="best-practices" style="display:none">
         <div class="ribbon ribbon-top">
-            <div class="ribbon-target bg-danger" style="top: -2px; right: 20px;">BEST PRACTICES</div>
+            <div class="ribbon-target" id="ribbon-best-practices" style="top: -2px; right: 20px;">BEST PRACTICES</div>
         </div>
         <div class="card-body pt-25">
             <div class="col">
@@ -250,7 +250,7 @@
 {{--seo--}}
     <div class="card card-custom gutter-b " id="seo" style="display:none">
         <div class="ribbon ribbon-top">
-            <div class="ribbon-target bg-primary" style="top: -2px; right: 20px;">SEO</div>
+            <div class="ribbon-target" id="ribbon-seo" style="top: -2px; right: 20px;">SEO</div>
         </div>
         <div class="card-body pt-25">
             <div class="col">
@@ -282,7 +282,7 @@
 {{--pwa--}}
     <div class="card card-custom gutter-b " id="pwa" style="display:none">
         <div class="ribbon ribbon-top">
-            <div class="ribbon-target bg-danger" style="top: -2px; right: 20px;">PWA</div>
+            <div class="ribbon-target" id="ribbon-pwa" style="top: -2px; right: 20px;">PWA</div>
         </div>
         <div class="card-body pt-25">
             <div class="col">
