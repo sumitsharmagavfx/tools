@@ -31,7 +31,9 @@ jQuery('#analysis-button').click(function () {
             jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
             jQuery('#performance').css('display','block');
             for (let j = 0; j < 5; j++) {
-                let score = data.lighthouseResult.categories[categories[j]].score * 100;
+                console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
+                let score = (data.lighthouseResult.categories[categories[j]].score * 100).toFixed(0);
+                console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
                 strokeValue(score, j + 1, categories[j]);
                 displayAuditsResult(data, categories[j])
             }
@@ -63,20 +65,24 @@ function hideResult() {
 
 function strokeValue(score, number, category) {
     let card = jQuery('.progress-bar-'+category);
+    let ribbon = jQuery('#ribbon-'+category);
     if (score >= 90) {
         card.addClass('border-success');
+        ribbon.addClass('bg-success');
     } else if (score >= 50) {
         card.addClass('border-warning');
+        ribbon.addClass('bg-warning');
     } else {
         card.addClass('border-danger');
+        ribbon.addClass('bg-danger');
     }
-    jQuery('.' + category).attr('data-percentage',score.toString());
+    jQuery('.' + category).attr('data-percentage',score);
     animateValue('value-'+category,0, score, 3000);
 }
 
 function displayAuditsResult(data, category) {
     let audits = data.lighthouseResult.categories[category].auditRefs;
-    let allAudits = data.lighthouseResult.audits
+    let allAudits = data.lighthouseResult.audits;
     let group = [];
     for (let audit of audits) {
         let show = showAs(allAudits[audit.id]);
@@ -240,7 +246,6 @@ function addItem(allAudits, audit, category, group = null) {
     //     "      <p style=\"color:white;\">" + converter.makeHtml(allAudits[audit.id].description) + "</p>\n" +
     //     table +
     //     "    </div>\n");
-    console.log(converter.makeHtml(allAudits[audit.id].title + displayValue));
     jQuery('.' + category + '-audit #' + groupId).append("<div class=\"card\">\n" +
         "                        <div class=\"card-header\">\n" +
         "                            <div class=\"card-title\" data-toggle=\"collapse\" data-target=\"#"+audit.id+"\">\n" +
@@ -290,7 +295,7 @@ function traceTreeData(data) {
 
 function subStringUrl(url) {
     let constrainUrl = 33;
-    let fixedUrl = '...'
+    let fixedUrl = '...';
     if (url.length > constrainUrl) {
         fixedUrl += url.substring(url.length - constrainUrl);
     } else {
@@ -333,7 +338,7 @@ function animateValue(id, start, end, duration) {
     var timer = setInterval(function() {
         current += increment;
         obj.html(current+'%');
-        if (current === end) {
+        if (current == end) {
             clearInterval(timer);
         }
     }, stepTime);
