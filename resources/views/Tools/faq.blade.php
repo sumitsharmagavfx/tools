@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    JSON-LD FAQ SCHEMA GENERATOR
+    | JSON-LD FAQ SCHEMA GENERATOR
 @endsection
 
 @section('content')

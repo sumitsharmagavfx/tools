@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    TITLE & META DESCRIPTION CHECKER
+    | TITLE & META DESCRIPTION CHECKER
 @endsection
 
 @section('content')

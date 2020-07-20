@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    PAGE SPEED
+    | PAGE SPEED
 @endsection
 
 @section('content')
@@ -326,4 +326,3 @@
 @section('home')
     active
 @endsection
-
