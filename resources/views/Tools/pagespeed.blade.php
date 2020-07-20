@@ -28,8 +28,8 @@
         <div class="card-header p-5">
             <div class="container">
                 <div class="row justify-content-center">
-                    <a href="#result" id="nav-performance">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+                          <a href="#result" id="nav-performance">
                             <div class="progress performance" data-percentage="0">
                 				<span class="progress-left">
                 					<span class="progress-bar progress-bar-performance"></span>
@@ -43,12 +43,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h6 font-weight-bold text-center mb-4">PERFORMANCE</h3>
+                            <h6 class="font-weight-bold text-center mb-4">PERFORMANCE</h6>
+                            </a>
                         </div>
-                    </a>
 
-                    <a href="#result" id="nav-accessibility">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg">
+
+
+                        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+                          <a href="#result" id="nav-accessibility">
                             <div class="progress accessibility" data-percentage="0">
                   				<span class="progress-left">
                   					<span class="progress-bar progress-bar-accessibility"></span>
@@ -62,12 +64,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3>
+                            <h6 class=" font-weight-bold text-center mb-4">ACCESIBILITY</h6>
+                            </a>
                         </div>
-                    </a>
 
-                    <a href="#result" id="nav-best-practices">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg">
+
+
+                        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+                          <a href="#result" id="nav-best-practices">
                             <div class="progress best-practices" data-percentage="0">
                   				<span class="progress-left">
                   					<span class="progress-bar progress-bar-best-practices"></span>
@@ -81,12 +85,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3>
+                            <h6 class=" font-weight-bold text-center mb-4">BEST PRACTICES</h6>
+                            </a>
                         </div>
-                    </a>
 
-                    <a href="#result" id="nav-seo">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg">
+
+
+                        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+                          <a href="#result" id="nav-seo">
                             <div class="progress seo" data-percentage="0">
                   				<span class="progress-left">
                   					<span class="progress-bar progress-bar-seo"></span>
@@ -100,12 +106,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3>
+                            <h6 class=" font-weight-bold text-center mb-4">SEO</h6>
+                            </a>
                         </div>
-                    </a>
 
-                    <a href="#result" id="nav-pwa">
-                        <div class="col-12 col-sm-5 col-md-4 col-lg">
+
+
+                        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+                          <a href="#result" id="nav-pwa">
                             <div class="progress pwa" data-percentage="0">
                   				<span class="progress-left">
                   					<span class="progress-bar progress-bar-pwa"></span>
@@ -120,9 +128,10 @@
                                 </div>
 
                             </div>
-                            <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3>
+                            <h6 class=" font-weight-bold text-center mb-4">PWA</h6>
+                            </a>
                         </div>
-                    </a>
+
 
                 </div>
             </div>
@@ -204,7 +213,7 @@
                     </div>
                 </div>
                 <!-- END -->
-                <!-- <h3 class="h6 font-weight-bold text-center mb-4">ACCESIBILITY</h3> -->
+                <!-- <h6 class=" font-weight-bold text-center mb-4">ACCESIBILITY</h6> -->
             </div>
             <div class="">
                 <div class="accordion accordion-light accordion-toggle-arrow accessibility-audit" id="accessibility-audit"></div>
@@ -236,7 +245,7 @@
                     </div>
                 </div>
                 <!-- END -->
-                <!-- <h3 class="h6 font-weight-bold text-center mb-4">BEST PRACTICES</h3> -->
+                <!-- <h6 class=" font-weight-bold text-center mb-4">BEST PRACTICES</h6> -->
             </div>
             <div class="">
                 <div class="accordion accordion-light accordion-toggle-arrow best-practices-audit" id="best-practices-audit"></div>
@@ -268,7 +277,7 @@
                     </div>
                 </div>
                 <!-- END -->
-                <!-- <h3 class="h6 font-weight-bold text-center mb-4">SEO</h3> -->
+                <!-- <h6 class=" font-weight-bold text-center mb-4">SEO</h6> -->
             </div>
             <div class="">
                 <div class="accordion accordion-light accordion-toggle-arrow seo-audit" id="seo-audit"></div>
@@ -299,7 +308,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <h3 class="h6 font-weight-bold text-center mb-4">PWA</h3> -->
+                <!-- <h6 class=" font-weight-bold text-center mb-4">PWA</h6> -->
             </div>
             <div class="">
                 <div class="accordion accordion-light accordion-toggle-arrow pwa-audit" id="pwa-audit"></div>
