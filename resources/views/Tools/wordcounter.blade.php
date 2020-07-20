@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    WORD COUNTER
+    | WORD COUNTER
 @endsection
 
 @section('content')
@@ -15,24 +15,24 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md" align="center">
+                    <div class="row justify-content-center">
+                        <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
                             <h6>KARAKTER</h6>
                             <h1 id="characterCount">99999</h1>
                         </div>
-                        <div class="col-md" align="center">
+                        <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
                             <h6>KATA</h6>
                             <h1 id="wordCount">99999</h1>
                         </div>
-                        <div class="col-md" align="center">
+                        <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
                             <h6>KALIMAT</h6>
                             <h1 id="sentenceCount">99999</h1>
                         </div>
-                        <div class="col-md" align="center">
+                        <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
                             <h6>PARAGRAF</h6>
                             <h1 id="paragraphCount">99999</h1>
                         </div>
-                        <div class="col-md" align="center">
+                        <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
                             <h6>WAKTU BACA</h6>
                             <h1 id="readingTime">99999</h1>
                         </div>
