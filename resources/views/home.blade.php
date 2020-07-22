@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
+    cmlabs
 @endsection
 
 @section('content')

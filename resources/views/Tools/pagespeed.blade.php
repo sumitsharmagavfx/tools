@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    | PAGE SPEED
+    Free SEO Tool untuk Content Writing
 @endsection
 
 @section('meta-desc')
-    {{--Isi Desc disini--}}
+    Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting
 @endsection
 
 @section('meta-keyword')
-    {{--Isi Keyword disini--}}
+    seo, free seo tool, content writing, copywriting
 @endsection
 
 @section('content')

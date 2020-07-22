@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    | TITLE & META DESCRIPTION CHECKER
+    Page Title and Meta Description Length Checker
 @endsection
 
 @section('meta-desc')
-    {{--Isi Desc disini--}}
+    Cek panjang Judul Halaman dan Meta Descriotion website anda di content writing Tools di website cmlabs. Tingkatkan skill menulis anda!
 @endsection
 
 @section('meta-keyword')
-    {{--Isi Keyword disini--}}
+    seo, jasa seo, seo enterprise, content marketing, content writer, google
 @endsection
 
 @section('content')
