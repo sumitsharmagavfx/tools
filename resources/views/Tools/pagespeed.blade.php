@@ -5,7 +5,7 @@
 @endsection
 
 @section('meta-desc')
-    Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting
+    Gunakan PageSpeed tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.
 @endsection
 
 @section('meta-keyword')
