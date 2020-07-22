@@ -53,6 +53,13 @@
         </button>
         <!--end::Aside Mobile Toggle-->
         <!--begin::Topbar Mobile Toggle-->
+        @if($local == "id")
+        <a href="https://cmlabs.co/" class="ml-7">
+        @else
+        <a href="https://cmlabs.co/en/" class="ml-7">
+        @endif
+          <img alt="Logo" src="{{asset('media/logos/logo-letter-11.png')}}" height="24px" />
+        </a>
         <button class="btn btn-hover-text-primary p-0 ml-2" id="">
 					<span class="svg-icon svg-icon-xl">
 						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
