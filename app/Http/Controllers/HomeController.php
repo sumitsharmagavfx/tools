@@ -14,7 +14,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // dd(App::getLocale());
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
+        if (session()->exists('local')) {
+            App::setLocale(session('local'));
+            session()->put('local',App::getLocale());
+            session()->save();
+        }
         $local = App::getLocale();
         return view('home', compact('data','local'));
     }
