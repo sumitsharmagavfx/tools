@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    Word Counter Online – Content Writing Tools
+    @lang('wordcounter.meta-title')
 @endsection
 
 @section('meta-desc')
-    Hitung jumlah kata artikel kamu disini. Cukup copy dan paste, lalu CMLABS Word Counter tool menghitung kata dan keyword density otomatis
+    @lang('wordcounter.meta-desc')
 @endsection
 
 @section('meta-keyword')
-    word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool
+    @lang('wordcounter.meta-keyword')
 @endsection
 
 @section('content')

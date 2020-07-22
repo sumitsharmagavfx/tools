@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    Free SEO Tool untuk Content Writing
+    @lang('meta-title')
 @endsection
 
 @section('meta-desc')
-    Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting
+    @lang('meta-desc')
 @endsection
 
 @section('meta-keyword')
-    seo, free seo tool, content writing, copywriting
+    @lang('meta-keyword')
 @endsection
 
 @section('content')

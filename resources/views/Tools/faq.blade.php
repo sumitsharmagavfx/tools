@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    FAQ Page — Realtime JphpSON-LD Schema Generator
+    @lang('faq.meta-title')
 @endsection
 
 @section('meta-desc')
-    Gunakan realtime JSON-LD Schema Generator (FAQ Page) untuk membantu aktifitas SEO membuat FAQ Schema dan aktifkan cuplikan kaya SERP di Google.
+    @lang('faq.meta-desc')
 @endsection
 
 @section('meta-keyword')
-    faq, faq schema, google rich result, schema generator, google serp
+    @lang('faq.meta-keyword')
 @endsection
 
 @section('content')
