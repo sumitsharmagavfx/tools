@@ -66,7 +66,7 @@ return [
     "copy-59"=>"Why is the real-international Chrome User Experience Report velocity records now no longer available for an origin?",
     "copy-60"=>"Chrome User Experience Report aggregates real-international velocity records from opted-in customers and calls for that an origin's root web page need to be public (crawlable and indexable) and feature enough variety of wonderful samples that offer a representative, anonymized view of origin’s overall performance throughout all URLs which might be visited on that origin.",
     "copy-61"=>"Lab records",
-    "meta-title" => "",
-    "meta-desc" => "",
-    "meta-keyword" => ""
+    "meta-title" => "Page Speed Test — cmlabs",
+    "meta-desc" => "Use the PageSpeed tool from CMLABS to see the performance, accessibility, SEO and PWA scores from your website.",
+    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool"
 ];

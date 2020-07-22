@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    @lang('meta-title')
+    @lang('pagespeed.meta-title')
 @endsection
 
 @section('meta-desc')
-    @lang('meta-desc')
+    @lang('pagespeed.meta-desc')
 @endsection
 
 @section('meta-keyword')
-    @lang('meta-keyword')
+    @lang('pagespeed.meta-keyword')
 @endsection
 
 @section('content')
