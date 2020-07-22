@@ -119,16 +119,16 @@
     <div class="card card-custom gutte-b">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Mengapa anda butuh tools ini?</h3>
+          <h3 class="card-label">@lang('metachecker.copy-0')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" style="color:blue" class="font-weight-bold">SERP</a>, singkatan dari <i class="font-weight-bold" style="color:black; font-size:1rem">Search Engine Results Page</i> menjadi medium penting dari hasil aktifitas SEO (Search Engine Optimization). Pekerjaan ini menuntut perhatian khusus dari setiap pelaku marketers, dari junior hingga level senior. Tiga atribut paling penting untuk SERP adalah <b>URL</b>, <b>Page Title</b>, dan <b>Meta Description</b>.</p>
+        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" style="color:blue" class="font-weight-bold">@lang('metachecker.copy-1')</p>
         <table class="table" border="1px" bordercolor="#EBEDF3" >
           <tbody>
             <tr>
               <th class="align-middle" style="text-align:center"> <i class="far fa-lightbulb icon-2x"></i> </th>
-              <td class="align-middle"> <p class="font-weight-bold">Mengapa 3 atribut ini penting?</p> <p>Jawaban yang paling sederhana adalah, karena mereka muncul di SERP seperti Google, Bing, dan Yahoo. Sehingga 3 atribut tersebut akan dilihat oleh users. Tentu saja dari hasil crawl dan indexing dari bot mesin telusur. Mari bahas lebih mendalam pada paragraf-paragraf berikutnya.</p> <p>Penting juga diketahui, jika mesin telusur adalah salah satu marketing channel dengan biaya paling murah dan memiliki akurasi lebih baik, karena skema demand dan supply yang terjadi di dalam penyajiannya.</p> </td>
+              <td class="align-middle"> <p class="font-weight-bold">@lang('metachecker.copy-2')</p> </td>
             </tr>
           </tbody>
         </table>
@@ -139,27 +139,27 @@
         </div>
       </div>
       <div class="card-body">
-        <p><b>URL</b> merupakan perwakilan merek/website anda. Sehingga umur domain dan popularitasnya menjadi penting. Misalnya: ketika merek cmlabs telah sering muncul di SERP Google, Bing, Yahoo, maka dengan sendirinya pembaca akan memberikan kepercayaan lebih tinggi, sehingga kedepannya berpotensi di klik lebih dulu. Begitupun dengan crawler atau bot. Semakin banyak keyword yang berhasil di tangkap domain tertentu, maka domain-authority website akan lebih tinggi dan terus direkomendasikan search engine untuk menjawan pertanyaan anda.</p>
+        <p>@lang('metachecker.copy-3')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">PAGE TITLE</h3>
+          <h3 class="card-label">@lang('metachecker.copy-4')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p><b>Page Title</b> merupakan salah satu pintu masuk ke website anda. Ketika judul itu menarik untuk di klik, dan cukup informatif menjawab secara singkat pertanyaan pengguna, maka website anda akan berpotensi di klik. Optimasi berkelanjutan dan konsisten akan mempengaruhi satu metrix penting di SEO, yaitu Click-Through Rate. Lebih dari itu, mesin telusur juga akan mengerti jika website anda relevan untuk menjawab pertanyaan tertentu, sehingga mesin telusur akan menampilkan artikel anda kepada pengguna lainnya yang menanyakan pertanyaan berkaitan.</p>
+        <p>@lang('metachecker.copy-5')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">META DESCRIPTION</h3>
+          <h3 class="card-label">@lang('metachecker.copy-6')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p><b>Meta Description</b> merupakan cara mesin relusur menberikan bagian konten yang terbatas, agar websmater memberikan pengantar konten atas pertanyaan pengguna yang ditampilkan di SERP. Pada tips yang paling sederhana dan umum diketahui, keyword tertentu dianggap penting untuk dicantumkan di meta-description ini, sehingga bot akan memahami keseluruhan konten dan target keyword anda dengan lebih baik dan lebih mudah. Tentu saja, harus diikuti dengan kualitas konten dan relevansi keyword yang anda targetkan. Strategi yang tidak mengikuti <a href="https://cmlabs.co/panduan-seo/" style="color:blue"><u>pedoman mesin telusur</u></a> akan berakibat pinalti dari crawler.</p>
+        <p>@lang('metachecker.copy-7')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">CONTOH DAN SIMULASI</h3>
+          <h3 class="card-label">@lang('metachecker.copy-8')</h3>
         </div>
       </div>
       <div class="card-body">
@@ -169,70 +169,70 @@
         </div>
         </center>
 
-        <p>Untuk memudahkan anda memahami Gambar (diatas), kami sudah membuat informasi yang dibutuhkan tepat dibawah bagian konten ini. Silahkan pelajari spesifikasi yang kami tentukan di dalam Tool dan Tip SEO yang dapat anda terapkan untuk optimasi website.</p>
+        <p>@lang('metachecker.copy-9')</p>
 
-        <h5>KOTAK ORANGE</h5>
+        <h5>@lang('metachecker.copy-10')</h5>
         <table class="table">
             <tbody>
             <tr>
-                <th scope="row" width="10%">Atribut:</th>
-                <td>Page Title / Title Tag</td>
+                <th scope="row" width="10%">@lang('metachecker.copy-11')</th>
+                <td>@lang('metachecker.copy-12')</td>
             </tr>
             <tr>
-                <th scope="row">Contoh:</th>
-                <td>Temukan Peluang Karir di CMLABS Indonesia</td>
+                <th scope="row">@lang('metachecker.copy-13')</th>
+                <td>@lang('metachecker.copy-14')</td>
             </tr>
             </tbody>
         </table>
 
-        <h5>KOTAK HIJAU</h5>
+        <h5>@lang('metachecker.copy-15')</h5>
         <table class="table">
             <tbody>
             <tr>
-                <th scope="row" width="10%">Atribut:</th>
-                <td>Page Title / Title Tag</td>
+                <th scope="row" width="10%">@lang('metachecker.copy-16')</th>
+                <td>@lang('metachecker.copy-17')</td>
             </tr>
             <tr>
-                <th scope="row">Contoh:</th>
-                <td>Temukan Peluang Karir di CMLABS Indonesia</td>
+                <th scope="row">@lang('metachecker.copy-18')</th>
+                <td>@lang('metachecker.copy-19')</td>
             </tr>
             <tr>
-                <th scope="row">Tip SEO:</th>
-                <td>Page title muncul di SERP, sehingga penting untuk diperhatikan, misalnya panjang dan informasi yang akan disampaikan.</td>
+                <th scope="row">@lang('metachecker.copy-20')</th>
+                <td>@lang('metachecker.copy-21')</td>
             </tr>
             <tr>
-                <th scope="row">*Pixel</th>
-                <td>Minimal 250 pixel dan Maksimal: 470 pixel.</td>
+                <th scope="row">@lang('metachecker.copy-22')</th>
+                <td>@lang('metachecker.copy-23')</td>
             </tr>
             <tr>
-                <th scope="row">*Katakter</th>
-                <td>Minimal 30 karakter dan Maksimal 55 karakter.</td>
+                <th scope="row">@lang('metachecker.copy-24')</th>
+                <td>@lang('metachecker.copy-25')</td>
             </tr>
             </tbody>
         </table>
 
-        <h5>KOTAK BIRU</h5>
+        <h5>@lang('metachecker.copy-26')</h5>
         <table class="table">
             <tbody>
             <tr>
-                <th scope="row" width="10%">Atribut:</th>
-                <td>Meta Description</td>
+                <th scope="row" width="10%">@lang('metachecker.copy-27')</th>
+                <td>@lang('metachecker.copy-28')</td>
             </tr>
             <tr>
-                <th scope="row">Contoh:</th>
-                <td>Mari bergabung di salah satu perusahaan jasa yang fokus pada SEO untuk Enterprise. Saat ini kami beroperasi di Jakarta dan Kota Malang.</td>
+                <th scope="row">@lang('metachecker.copy-29')</th>
+                <td>@lang('metachecker.copy-30')</td>
             </tr>
             <tr>
-                <th scope="row">Tip SEO:</th>
-                <td>Meta Description muncul di SERP, sehingga penting untuk diperhatikan, misalnya panjang dan informasi yang akan disampaikan.</td>
+                <th scope="row">@lang('metachecker.copy-31')</th>
+                <td>@lang('metachecker.copy-32')</td>
             </tr>
             <tr>
-                <th scope="row">*Pixel</th>
-                <td>Minimal 400 pixel dan Maksimal: 750 pixel.</td>
+                <th scope="row">@lang('metachecker.copy-33')</th>
+                <td>@lang('metachecker.copy-34')</td>
             </tr>
             <tr>
-                <th scope="row">*Katakter</th>
-                <td>Minimal 65 karakter dan Maksimal 160 karakter.</td>
+                <th scope="row">*@lang('metachecker.copy-35')</th>
+                <td>@lang('metachecker.copy-36')</td>
             </tr>
             </tbody>
         </table>
