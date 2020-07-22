@@ -82,5 +82,8 @@ return [
     "copy-desc-6-23" => "Dengan mengetahui kepadatan kata kunci dan berapa kata kunci target harus muncul dalam konten, jadi sekarang Anda sudah siap untuk menggunakan Word Counter CMLABS yang akan membantu Anda menulis konten yang SEO friendly.",
     "copy-desc-6-24" => "Perlu diketahui jika",
     "copy-desc-6-25" => "tipe konten",
-    "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?"
+    "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
+    "meta-title" => "Word Counter Online – Content Writing Tools",
+    "meta-desc" => "Hitung jumlah kata artikel kamu disini. Cukup copy dan paste, lalu CMLABS Word Counter tool menghitung kata dan keyword density otomatis",
+    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
 ];

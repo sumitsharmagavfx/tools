@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    Word Counter Online – Content Writing Tools
+    @lang('wordcounter.meta-title')
 @endsection
 
 @section('meta-desc')
-    Hitung jumlah kata artikel kamu disini. Cukup copy dan paste, lalu CMLABS Word Counter tool menghitung kata dan keyword density otomatis
+    @lang('wordcounter.meta-desc')
 @endsection
 
 @section('meta-keyword')
-    word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool
+    @lang('wordcounter.meta-keyword')
 @endsection
 
 @section('content')
@@ -316,12 +316,12 @@
                   </div>
               </div>
               <div class="card-body">
-                  <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-24')</u></a> @lang('wordcounter.copy-desc-6-25')</p>
+                  <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
                   <div class="row">
                       <div class="col-md-6 mb-5">
                         <div class="container p-10"style="background-color:#53F9AD">
                           <h3>@lang('wordcounter.copy-sub-title-5-1')</h3>
-                          <p>@lang('wordcounter.copy-desc-5-1')</p>
+                          <p>@lang('wordcounter.copy-desc-5-2')</p>
                         </div>
                       </div>
                       <div class="col-md-6 mb-5" >

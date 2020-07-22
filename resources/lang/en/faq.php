@@ -24,5 +24,8 @@ return [
     "li-1" => "Website pages are slower than expectations,",
     "li-2" => "The information displays the list of unstructured questions and answers, and",
     "li-3" => "Placement of FAQ information that is difficult to find by most internet users;",
-    "desc-3-5" => "Regardless of how it is applied and how difficult it is, those are three fundamental reasons why the FAQ Schema is important for the website owners to activate it. In the next section, we will provide a tutorial on how to install the Schema FAQ on the website."
+    "desc-3-5" => "Regardless of how it is applied and how difficult it is, those are three fundamental reasons why the FAQ Schema is important for the website owners to activate it. In the next section, we will provide a tutorial on how to install the Schema FAQ on the website.",
+    "meta-title" => "FAQ Page — Realtime JSON-LD Schema Generator",
+    "meta-desc" => "Use the realtime JSON-LD Schema Generator (FAQ Page) to help SEO activities create a Schema FAQ and activate SERP rich snippets on Google.",
+    "meta-keyword" => "faq, faq schema, google rich result, schema generator, google serp"
 ];
