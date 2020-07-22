@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    FAQ Page — Realtime JSON-LD Schema Generator
+    FAQ Page — Realtime JphpSON-LD Schema Generator
 @endsection
 
 @section('meta-desc')
