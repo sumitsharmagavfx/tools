@@ -211,112 +211,104 @@
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Apa Itu Keyword Density</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-0')</h3>
                 </div>
                 <div class="card-body">
-                  <p>Keyword density atau kepadatan istilah kunci adalah elemen optimasi kata kunci yg akan membantu Anda buat melihat berapa kali kata kunci target digunakan dalam page web tertentu.</p>
-                  <p>Perhitungan ini akan memunculkan persentase dan frekuensi kata kunci target yang muncul dibandingkan jumlah relatif kata yang muncul di halaman. Keyword density digunakan mesin pencari untuk menentukan apakah kata kunci atau frasa tertentu relevan dengan konten.</p>
+                  <p>@lang('wordcounter.copy-desc-6-1')</p>
+                  <p>@lang('wordcounter.copy-desc-6-2')</p>
                   <div class="p-5" style="background-color: #F4F4F4">
-                    <h5 class="font-weight-bold">“Keyword density adalah aspek SEO dalam penggunaan kata kunci yang menunjukkan pada berapa kali kata kunci target muncul dalam konten di halaman web.”</h5>
+                    <h5 class="font-weight-bold">@lang('wordcounter.copy-desc-6-3')</h5>
                   </div>
                 </div>
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Bagaimana Cara Menghitung Keyword Density Manual?</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-4')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Sangat mudah untuk belajar menghitung keyword density. Caranya yaitu menghitung berapa kali kata kunci sasaran muncul pada page web & membaginya menggunakan jumlah total istilah di page web tersebut. Berikut ini merupakan rumusnya:</p>
+                <p>@lang('wordcounter.copy-desc-6-5')</p>
                 <table class="table" border="1px" bordercolor="#EBEDF3" >
                   <tbody>
                     <tr>
                       <th class="align-middle" style="text-align:center"> <i class="far fa-lightbulb icon-2x"></i> </th>
-                      <td class="align-middle"> <p>“Frekuensi kata kunci target muncul / Jumlah istilah pada halaman web = Keyword density”</p> </td>
+                      <td class="align-middle"> <p>@lang('wordcounter.copy-desc-6-6')</p> </td>
                     </tr>
                   </tbody>
                 </table>
-                <p>Berikut adalah contoh cara mengukur keyword density secara manual</p>
-                <p>Misalkan situs cmlabs.co telah menerbitkan halaman web untuk content marketing. Di sini halaman tersebut menargetkan kata “content marketing” yang digunakan sebagai kata kunci muncul 20 kali dan jumlah total kata pada halaman web tersebut adalah 1.000 kata.</p>
-                <p>20 (Frekuensi kata “content marketing” yang muncul pada halaman) / 1.000 (Jumlah total kata pada halaman web) = 2% (Kepadatan Kata Kunci atau keyword density)</p>
+                  @lang('wordcounter.copy-desc-6-7')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Bagaimana Keyword Density Yang Ideal?</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-8')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Tidak ada aturan yang ditetapkan untuk berapa kali kita diizinkan untuk menampilkan kata kunci dalam suatu halaman. Mesin pencari belum menentukan persentase keyword density, jadi writer harus menggunakan kebijaksanaan dan praktik terbaik untuk bereksperimen.</p>
-                <p>Beberapa ahli SEO percaya bahwa kepadatan kata kunci yang ideal harus sekitar 1-2%. Yang berarti bahwa kata kunci target hanya muncul sekali atau dua kali dalam setiap 100 kata. Artinya jika kita menggunakannya pada tingkat ini, mesin pencari akan mengetahui bahwa kata kunci muncul tanpa berlebihan (keyword stuffing).</p>
+                  @lang('wordcounter.copy-desc-6-8-1')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Apa Artinya Keyword Stuffing?</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-8-2')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Keyword Stuffing adalah penggunaan kata kunci target berulang-ulang sehingga halaman tersebut mendapatkan peringkat untuk target niche tertentu. Taktik black hat SEO pernah sempat populer. Meskipun taktik ini tidak digunakan secara luas hari ini, tetap saja para marketer harus menyadari keyword stuffing sehingga mereka tidak melakukan dengan sengaja.</p>
-                <p>Jika kepadatan kata kunci atau keyword density sangat tinggi maka keyword stuffing akan terjadi. Banyak orang sebisa mungkin menghindari keyword stuffing karena bertentangan dengan pedoman Google dan itu dapat menyebabkan mesin pencari untuk memberikan penalti atau menghapus halaman tersebut dari SERP.</p>
-                <p>keyword density yang sangat tinggi dapat memberikan ketidaknyamanan bagi pembaca. Konten SEO yang mudah dibaca dapat mendatangkan pengunjung berulang kali.</p>
+                  @lang('wordcounter.copy-desc-6-9')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">4 Strategi Keyword Density Yang Baik Dan Benar</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-10')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Seperti yang kita ketahui tidak ada keyword density yang ideal yang dijelaskan oleh mesin pencari, tetapi tetap saja, harus tetap berpegang pada praktik optimasi kata kunci daripada susah payah memperhitungkan persentase kata kunci yang tepat.</p>
-                <p>Dengan menggunakan strategi berikut, Anda dapat melihat kepadatan kata kunci dalam konten.</p>
+                  @lang('wordcounter.copy-desc-6-11')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Utamakan Pembaca Terlebih Dahulu, Kemudian Fokus Pada Penggunaan Kata Kunci</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-12')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Anda harus selalu ingat bahwa konten terbaik ditulis dengan mengutamakan pengguna. Konten tersebut harus ditulis secara alami dan organik menggunakan kata kunci dalam konten. Kita harus membuat konten berkualitas tinggi, menarik, dan berharga. Setelah selesai, kita harus kembali dan menambahkan kata kunci untuk melihat apakah kita dapat mencapai keyword density sekitar 1-2%.</p>
+                <p>@lang('wordcounter.copy-desc-6-13')</p>
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Gunakan Keyword Stemming Untuk Menambahkan Variasi Kata Kunci Target</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-14')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Keyword stemming adalah kemampuan search engine untuk mengenali dan mengaitkan kata-kata serupa yang terhubung dengan kata kunci target. Biasanya, variasi ini berupa penambahan awalan, akhiran, atau pluralisasi ke kata kunci target.</p>
-                <p>Misalnya, yang berasal dari kata “content market” dapat berupa “content marketing” atau “content marketing”. Hal ini karena mesin pencari mengenali dan mengaitkan kata-kata ini dan juga menggunakannya dalam konten untuk mendukung kata kunci target dengan menambahkan kejelasan tekstual.</p>
+                  @lang('wordcounter.copy-desc-6-15')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Gunakan Kata Kunci Semantik Untuk Memberikan Konteks Dan Mendukung Kata Kunci Target</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-16')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Kata kunci semantik adalah beberapa istilah yang sinonim, variasi atau kata yang terkait secara kontekstual dengan kata kunci target. Kata-kata ini terkait dalam konteks dan bukan dalam arti literal.</p>
-                <p>Misalnya, kata kunci semantik yang ditargetkan adalah “content market” yang bisa mencakup “content marketing” atau “content marketer”. Semua mesin pencari menggunakan SEO semantik untuk membantu memahami dan memberi peringkat pada halaman web.</p>
+                  @lang('wordcounter.copy-desc-6-17')
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Hindari Keyword Stuffing</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-18')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Setelah selesai menyelesaikan konten, Anda harus memasukkannya ke tool CMLABS Keyword Counter sebelum menerbitkannya. Pastikan Anda telah menggunakan kata kunci target yang cukup untuk memberi tahu mesin pencari tentang semua halaman tanpa keyword stuffing dan menghindari penalti.</p>
+                <p>@lang('wordcounter.copy-desc-6-19')</p>
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Bagaimana Cara Memeriksa Keyword Density Dalam Konten?</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-20')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Sangat mudah untuk memeriksa kepadatan kata kunci di posting Anda. Pertama, kita dapat melakukannya secara manual dengan menghitung berapa kali kata kunci target muncul, kemudian jumlah total kata dalam posting dan kemudian menggunakan rumus yang disebutkan di atas. Kedua, kita dapat menggunakan alat yang disebut Word Counter CMLABS untuk memeriksa kepadatan kata kunci dalam postingan. Tool Word Counter ini punya fitur untuk mengukur keyword density.</p>
+                <p>@lang('wordcounter.copy-desc-6-21')</p>
               </div>
               <div class="card-header">
                 <div class="card-title">
-                  <h3 class="card-label">Bagaimana Cara Menemukan Dan Menggunakan Kata Kunci Dengan Benar?</h3>
+                  <h3 class="card-label">@lang('wordcounter.copy-desc-6-22')</h3>
                 </div>
               </div>
               <div class="card-body">
-                <p>Dengan mengetahui kepadatan kata kunci dan berapa kata kunci target harus muncul dalam konten, jadi sekarang Anda sudah siap untuk menggunakan Word Counter CMLABS yang akan membantu Anda menulis konten yang SEO friendly.</p>
+                <p>@lang('wordcounter.copy-desc-6-23')</p>
               </div>
               <div class="card-header">
                   <div class="card-title">
@@ -324,7 +316,7 @@
                   </div>
               </div>
               <div class="card-body">
-                  <p>Perlu diketahui jika <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">tipe konten</u></a> itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?</p>
+                  <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-24')</u></a> @lang('wordcounter.copy-desc-6-25')</p>
                   <div class="row">
                       <div class="col-md-6 mb-5">
                         <div class="container p-10"style="background-color:#53F9AD">
