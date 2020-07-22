@@ -59,13 +59,27 @@ class ToolsController extends Controller
     {
         $previous = url()->previous();
         $link = substr($previous, strrpos($previous,'/')+1);
-        return \redirect('/en/'.$link);
+        App::setLocale('en');
+        session()->put('local','en');
+        session()->save();
+        if ($link == null) {
+          return \redirect('/');
+        }else {
+            return \redirect('/en/'.$link);
+        }
     }
 
     public function indonesiaVersion()
     {
         $previous = url()->previous();
         $link = substr($previous, strrpos($previous,'/')+1);
-        return \redirect('/id/'.$link);
+        App::setLocale('id');
+        session()->put('local','id');
+        session()->save();
+        if ($link == null) {
+          return \redirect('/');
+        }else {
+            return \redirect('/id/'.$link);
+        }
     }
 }

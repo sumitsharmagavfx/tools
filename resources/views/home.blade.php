@@ -40,8 +40,12 @@
                   <a href="{{$datum['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
                   {{$datum['title']}}
                   </a>
-                  <div class="text-dark-75">
-                   {{substr($datum['description'],0,strpos($datum['description'], ' ', 200))}} ...
+                  <div class="text-dark-75">                    
+                    @if(App::getLocale()=="id")
+                   {{$datum['description']}}
+                   @else
+                   {{$datum['description-en']}}
+                   @endif
                   </div>
                 </div>
               </div>
