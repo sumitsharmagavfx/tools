@@ -8,36 +8,50 @@ class ToolsController extends Controller
 {
     public function strikethrough()
     {
-      return view('Tools/strikethrough');
+        return view('Tools/strikethrough');
     }
 
     public function FAQ()
     {
-      return view('Tools/faq');
+        return view('Tools/faq');
     }
 
     public function wordcounter()
     {
-      return view('Tools/wordcounter');
+        return view('Tools/wordcounter');
     }
 
     public function creditcard()
     {
-      return view('Tools/creditcard');
+        return view('Tools/creditcard');
     }
 
     public function symbolandtext()
     {
-      return view('Tools/symbolandtext');
+        return view('Tools/symbolandtext');
     }
 
     public function metachecker()
     {
-      return view('Tools/metachecker');
+        return view('Tools/metachecker');
     }
 
     public function pagespeed()
     {
-      return view('Tools/pagespeed');
+        return view('Tools/pagespeed');
+    }
+
+    public function englishVersion()
+    {
+        session()->put('local','en');
+        session()->save();
+        return back();
+    }
+
+    public function indonesiaVersion()
+    {
+        session()->put('local','id');
+        session()->save();
+        return back();
     }
 }

@@ -188,7 +188,11 @@ function addItem(allAudits, audit, category, group = null) {
                             } else if (heading['valueType'] === 'timespanMs' || heading['itemType'] === 'timespanMs') {
                                 value = item[heading.key] + " Ms";
                             } else if (heading['itemType'] === 'ms' || heading['valueType'] === 'ms') {
-                                value = item[heading.key].toFixed(1) + " ms";
+                                if (item[heading.key] !== undefined){
+                                    value = item[heading.key].toFixed(1) + " ms";
+                                }else {
+                                    value = "";
+                                }
                             } else if (heading['itemType'] === 'code' && item.hasOwnProperty(heading.key)) {
                                 value = converter.makeHtml("`" + item[heading.key].value + "`");
                             } else if (heading['itemType'] === 'link') {
@@ -249,8 +253,9 @@ function addItem(allAudits, audit, category, group = null) {
     jQuery('.' + category + '-audit #' + groupId).append("<div class=\"card\">\n" +
         "                        <div class=\"card-header\">\n" +
         "                            <div class=\"card-title\" data-toggle=\"collapse\" data-target=\"#"+audit.id+"\">\n" +
-        "<div class=\"btn btn-icon btn-circle bg-"+color+" mr-3\" style=\"height:15px; width:15px\">\n" +
-        "    </div><span class=\"title\">"+converter.makeHtml(allAudits[audit.id].title)+"<p class=\"text-"+color+"\">"+displayValue+"</p></span>"+
+        "<div class=\"mr-3\" style=\"width:15px\">"+
+        "<div class=\"btn btn-icon btn-circle bg-"+color+"\" style=\"height:15px; width:15px\">\n" +
+        "    </div></div><span class=\"title\">"+converter.makeHtml(allAudits[audit.id].title)+"<p class=\"text-"+color+"\">"+displayValue+"</p></span>"+
         "                            </div>\n" +
         "                        </div>\n" +
         "                        <div id=\""+audit.id+"\" class=\"collapse\" data-parent=\"#" + category + "-audit\">\n" +

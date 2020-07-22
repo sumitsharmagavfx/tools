@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Home
+    cmlabs
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
        @if($i % 3 == 0)
         <?php $model = 'success' ?>
        @elseif($i % 3 == 1)
-       <?php $model = 'primary' ?>
+       <?php $model = 'danger' ?>
        @else
        <?php $model = 'warning' ?>
        @endif
@@ -51,4 +51,3 @@
   </div>
 </div>
 @endsection
-

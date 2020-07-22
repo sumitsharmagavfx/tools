@@ -10,6 +10,9 @@ let main =
     };
 
 jQuery(document).ready(function () {
+    let deletes = lang ==='en'? 'Delete' : 'Hapus';
+    let question = lang ==='en'? 'Question' : 'Pertanyaan';
+    let answer = lang ==='en'? 'Answer' : 'Jawaban';
     main.mainEntity.push({
         "@type": "Question",
         "name": "",
@@ -29,15 +32,15 @@ jQuery(document).ready(function () {
             }
         });
         print();
-        jQuery('#form').append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">Delete</button>\n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 question\" placeholder=\"Question :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-7 answer\" placeholder=\"Answer :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\">"
+        jQuery('#form').append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +
+            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 question\" placeholder=\""+question+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
+            "                <input type=\"text\" name=\"\" class=\"form-control mb-7 answer\" placeholder=\""+answer+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\">"
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
     });
 
-})
+});
 
 jQuery(document).on('keyup', '.question', function () {
     let index = parseInt(jQuery(this).data('id'));
