@@ -85,9 +85,17 @@ function calculate(title, desc) {
         // console.log(resultdesc.clientWidth);
         let l = descsizer.clientWidth;
         if (l >= 0 && l < 400) {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >membutuhkan " + (400 - l) + " pixel lebih panjang</span><br>";
+            }
         } else if (l >= 400 && l <= 750) {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            if (lang ==='en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+            }
         } else if (l > 750) {
             var rawDescription = jQuery.trim(jQuery("#desc").val());
             var description = rawDescription;
@@ -106,30 +114,63 @@ function calculate(title, desc) {
                 description = newDescription + " <b>...</b>";
                 jQuery("#descsizertemp").html(description)
             }
-                resultdesc.innerHTML = description;
+            resultdesc.innerHTML = description;
             resultdescmobile.innerHTML = description;
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 750) + " pixel</span><br>";
+            }
         } else {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, Meta Description Tag : :(<br>"
+            }
         }
         l = desc.length;
         if (l >= 0 && l < 65) {
-            desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color: #d6564f' >butuh " + (65 - l) + " karakter lagi</span><br>";
+            }
+
         } else if (l >= 65 && l <= 160) {
-            desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            } else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+            }
         } else if (l > 160) {
-            desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 160) + " karakter</span><br>";
+            }
         } else {
-            desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, Meta Description Tag : :("
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, Meta Description Tag : :("
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, Meta Description Tag : :("
+            }
         }
         var w = descsizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
         if (w) {
-            desccount.innerHTML += "Words Length is " + w.length;
+            if (lang ==='en'){
+                desccount.innerHTML += "Words Length is " + w.length;
+            }else {
+                desccount.innerHTML += "Panjang Kata is " + w.length;
+            }
         } else {
-            desccount.innerHTML += "Words Length is " + 0;
+            if (lang ==='en'){
+                desccount.innerHTML += "Words Length is " + 0;
+            }else {
+                desccount.innerHTML += "Panjang Kata is " + 0;
+            }
         }
     }
-};
+}
 const titleInputHandler = function (t) {
     resulttitlemobile.innerHTML = t.target.value;
     resulttitle.innerHTML = t.target.value;
@@ -163,9 +204,17 @@ const descInputHandler = function (d) {
         // console.log(resultdesc.clientWidth);
         let l = descsizer.clientWidth;
         if (l >= 0 && l < 400) {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >membutuhkan " + (400 - l) + " pixel lebih panjang</span><br>";
+            }
         } else if (l >= 400 && l <= 750) {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            if (lang ==='en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+            }
         } else if (l > 750) {
             var rawDescription = jQuery.trim(jQuery("#desc").val());
             var description = rawDescription;
@@ -186,35 +235,76 @@ const descInputHandler = function (d) {
             }
             resultdesc.innerHTML = description;
             resultdescmobile.innerHTML = description;
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 750) + " pixel</span><br>";
+            }
         } else {
-            desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
+            if (lang === 'en'){
+                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
+            }else {
+                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, Meta Description Tag : :(<br>"
+            }
         }
         l = desc.value.length;
         if (l >= 0 && l < 65) {
-            desccount.innerHTML += "Meta Description is " + desc.value.length + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color: #d6564f' >butuh " + (65 - l) + " karakter lagi</span><br>";
+            }
+
         } else if (l >= 65 && l <= 160) {
-            desccount.innerHTML += "Meta Description is " + desc.value.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+            } else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+            }
         } else if (l > 160) {
-            desccount.innerHTML += "Meta Description is " + desc.value.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 160) + " karakter</span><br>";
+            }
         } else {
-            desccount.innerHTML += "Meta Description is " + desc.value.length + " character(s) long, Meta Description Tag : :("
+            if (lang === 'en'){
+                desccount.innerHTML += "Meta Description is " + l + " character(s) long, Meta Description Tag : :("
+            }else {
+                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, Meta Description Tag : :("
+            }
         }
         var w = descsizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
         console.log(w);
         if (w) {
-            desccount.innerHTML += "Words length is " + w.length;
+            if (lang ==='en'){
+                desccount.innerHTML += "Words Length is " + w.length;
+            }else {
+                desccount.innerHTML += "Panjang Kata is " + w.length;
+            }
         } else {
-            desccount.innerHTML += "Words length is " + 0;
+            if (lang ==='en'){
+                desccount.innerHTML += "Words Length is " + 0;
+            }else {
+                desccount.innerHTML += "Panjang Kata is " + 0;
+            }
         }
     }
 };
 function counttitle(){
     let l = titlesizer.clientWidth;
     if (l >= 0 && l < 250) {
-        titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color: #d6564f' > need more " + (250 - l) + " pixel(s)</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color: #d6564f' > need more " + (250 - l) + " pixel(s)</span><br>";
+        }else {
+            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, <span style='color: #d6564f' > membutuhkan " + (250 - l) + " pixel lebih panjang</span><br>";
+        }
     } else if (l >= 250 && l <= 470) {
-        titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+        }else {
+            titlecount.innerHTML = "Panjang Judul Halaman adalah  " + titlesizer.clientWidth + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+        }
     } else if (l > 470) {
         var rawTitle = jQuery.trim(jQuery("#title").val());
         var titles = rawTitle;
@@ -233,26 +323,58 @@ function counttitle(){
         }
         resulttitle.innerHTML = titles;
         resulttitlemobile.innerHTML = titles;
-        titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, <span style='color: #d6564f' >too much " + (l - 470) + " pixel(s)</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, <span style='color: #d6564f' >too much " + (l - 470) + " pixel(s)</span><br>";
+        }else {
+            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 470) + " pixel</span><br>";
+        }
     } else {
-        titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, Title tag : :(<br>"
+        if (lang === 'en'){
+            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, Title tag : :(<br>"
+        }else {
+            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, Title tag : :(<br>"
+        }
     }
     l = title.value.length;
     if (l >= 0 && l < 30) {
-        titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >need more " + (30 - l) + " character(s)</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >need more " + (30 - l) + " character(s)</span><br>";
+        }else {
+            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color: #d6564f' >butuh " + (30 - l) + " karakter lagi</span><br>";
+        }
     } else if (l >= 30 && l <= 55) {
-        titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
+        }else {
+            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
+        }
     } else if (l > 55) {
-        titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 55) + " character(s)</span><br>";
+        if (lang === 'en'){
+            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 55) + " character(s)</span><br>";
+        }else {
+            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 55) + " karakter</span><br>";
+        }
     } else {
-        titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, Title Tag : :("
+        if (lang === 'en'){
+            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, Title Tag : :("
+        }else {
+            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, Title Tag : :("
+        }
     }
     var w = titlesizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
     // console.log(w);
     if (w) {
-        titlecount.innerHTML += "Words length is " + w.length;
+        if (lang ==='en'){
+            titlecount.innerHTML += "Words Length is " + w.length;
+        }else {
+            titlecount.innerHTML += "Panjang Kata is " + w.length;
+        }
     } else {
-        titlecount.innerHTML += "Words length is " + 0;
+        if (lang ==='en'){
+            titlecount.innerHTML += "Words Length is " + 0;
+        }else {
+            titlecount.innerHTML += "Panjang Kata is " + 0;
+        }
     }
 }
 

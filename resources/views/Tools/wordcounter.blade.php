@@ -4,6 +4,14 @@
     | WORD COUNTER
 @endsection
 
+@section('meta-desc')
+    {{--Isi Desc disini--}}
+@endsection
+
+@section('meta-keyword')
+    {{--Isi Keyword disini--}}
+@endsection
+
 @section('content')
     <div class="row">
         <div class="col-lg-8">
@@ -11,30 +19,30 @@
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3 class="card-label">WORD COUNTER <small>TINGKATKAN SKILL MENULIS</small></h3>
+                        <h3 class="card-label">@lang('wordcounter.title') <small>@lang('wordcounter.subtitle')</small></h3>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="row justify-content-center">
                         <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-                            <h6>KARAKTER</h6>
-                            <h1 id="characterCount">99999</h1>
+                            <h6>@lang('wordcounter.character')</h6>
+                            <h1 id="characterCount">0</h1>
                         </div>
                         <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-                            <h6>KATA</h6>
-                            <h1 id="wordCount">99999</h1>
+                            <h6>@lang('wordcounter.word')</h6>
+                            <h1 id="wordCount">0</h1>
                         </div>
                         <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-                            <h6>KALIMAT</h6>
-                            <h1 id="sentenceCount">99999</h1>
+                            <h6>@lang('wordcounter.sentence')</h6>
+                            <h1 id="sentenceCount">0</h1>
                         </div>
                         <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-                            <h6>PARAGRAF</h6>
-                            <h1 id="paragraphCount">99999</h1>
+                            <h6>@lang('wordcounter.paragraph')</h6>
+                            <h1 id="paragraphCount">0</h1>
                         </div>
                         <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-                            <h6>WAKTU BACA</h6>
-                            <h1 id="readingTime">99999</h1>
+                            <h6>@lang('wordcounter.reading-time')</h6>
+                            <h1 id="readingTime">0</h1>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -49,7 +57,7 @@
             <div class="card card-custom card-stretch gutter-b">
                 <div class="card-header">
                     <div class="card-title">
-                        <h3 class="card-label">KEYWORD DENSITY</h3>
+                        <h3 class="card-label">@lang('wordcounter.keyword-density')</h3>
                     </div>
                 </div>
                 <div class="card-body">
@@ -57,7 +65,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title" data-toggle="collapse" data-target="#collapseOne1">
-                                    1 KATA
+                                    @lang('wordcounter.word-1')
                                 </div>
                             </div>
                             <div id="collapseOne1" class="collapse show" data-parent="#accordionExample1">
@@ -68,7 +76,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo1">
-                                    2 KATA
+                                    @lang('wordcounter.word-2')
                                 </div>
                             </div>
                             <div id="collapseTwo1" class="collapse" data-parent="#accordionExample1">
@@ -80,7 +88,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree1">
-                                    3 KATA
+                                    @lang('wordcounter.word-3')
                                 </div>
                             </div>
                             <div id="collapseThree1" class="collapse" data-parent="#accordionExample1">
@@ -92,7 +100,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour1">
-                                    4 KATA
+                                    @lang('wordcounter.word-4')
                                 </div>
                             </div>
                             <div id="collapseFour1" class="collapse" data-parent="#accordionExample1">
@@ -104,7 +112,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFive1">
-                                    5 KATA
+                                    @lang('wordcounter.word-5')
                                 </div>
                             </div>
                             <div id="collapseFive1" class="collapse" data-parent="#accordionExample1">
@@ -124,79 +132,79 @@
           <div class="card card-custom card-stretch-half">
               <div class="card-header">
                   <div class="card-title">
-                      <h3 class="card-label">Tentang Word Counter</h3>
+                      <h3 class="card-label">@lang('wordcounter.copy-title-1')</h3>
                   </div>
               </div>
               <div class="card-body">
-                  <p>  Sebagai content writer dan copywirter, menulis konten artikel menjadi aktifitas sehari-hari. Secara umum, penulis dituntut membuat sebuah konten dengan jumlah kata atau kalimat tertentu. Sehingga jumlah kata menjadi sangat penting. Maka CMLABS Word Countet adalah tool tepat untuk membantu pekerjaan penulis konten. </p>
-                  <p>Tujuan utama cmlabs adalah menjadi bagian dari aktifitas komunitas penulis konten, khususnya di Indonesia. Namun untuk membuat Tools ini bisa diakses lebih banyak content writer, kami telah berikan dukungan dua bahasa untuk Tools Content Writer ini, yakni versi Indonesia dan English.</p>
+                  <p>  @lang('wordcounter.copy-desc-1-1') </p>
+                  <p>@lang('wordcounter.copy-desc-1-1')</p>
                   <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="">
               </div>
               <div class="card-header">
                   <div class="card-title">
-                      <h3 class="card-label">Fase umum menulis konten</h3>
+                      <h3 class="card-label">@lang('wordcounter.copy-title-2')</h3>
                   </div>
               </div>
               <div class="card-body">
-                  <p>  Lalu apa saja fase-fase menulis konten? Berikut merupakan tujuh fase dalam membuat konten yang paling umum. Dengan catatan, fase dalam membuat konten akan disesuaikan dengan tujuan dan proyek/kontrak dibalik adanya pekerjaan konten.</p>
+                  <p>  @lang('wordcounter.copy-desc-2-1')</p>
                   <ol>
-                      <li>Riset keyword,</li>
-                      <li>Menemukan informasi untuk bahan konten,</li>
-                      <li>Mendapatkan saran dari kompetisi di search engine,</li>
-                      <li>Membuat outline,</li>
-                      <li>Mulai menulis,</li>
-                      <li>Melakukan revisi dan tambahan yang dibutuhkan, hingga</li>
-                      <li>Merilis konten.</li>
+                      <li>@lang('wordcounter.copy-li-1')</li>
+                      <li>@lang('wordcounter.copy-li-2')</li>
+                      <li>@lang('wordcounter.copy-li-3')</li>
+                      <li>@lang('wordcounter.copy-li-4')</li>
+                      <li>@lang('wordcounter.copy-li-5')</li>
+                      <li>@lang('wordcounter.copy-li-6')</li>
+                      <li>@lang('wordcounter.copy-li-7')</li>
                   </ol>
-                  <h5> SPESIFIKASI "COUNTER"</h5>
+                  <h5>@lang('wordcounter.copy-sub-title-2')</h5>
                   <table class="table">
                       <tbody>
                       <tr>
-                          <th scope="row">Karakter</th>
-                          <td>:Jumlah “character” dari semua tulisan anda di dalam kolom (termasuk SPASI di dalam sebuah kalimat dan tanda baca)</td>
+                          <th scope="row">{{ucfirst(strtolower(__('wordcounter.character')))}}</th>
+                          <td>@lang('wordcounter.copy-desc-3-1')</td>
                       </tr>
                       <tr>
-                          <th scope="row">Kata</th>
-                          <td>: Jumlah “word” dari tulisan anda dan semua kelompok karakter di dalam kolom</td>
+                          <th scope="row">{{ucfirst(strtolower(__('wordcounter.word')))}}</th>
+                          <td>@lang('wordcounter.copy-desc-3-2')</td>
                       </tr>
                       <tr>
-                          <th scope="row">Kalimat</th>
-                          <td>: Jumlah “kalimat” dari tulisan anda di dalam kolom.</td>
+                          <th scope="row">{{ucfirst(strtolower(__('wordcounter.sentence')))}}</th>
+                          <td>@lang('wordcounter.copy-desc-3-3')</td>
                       </tr>
                       <tr>
-                          <th scope="row">Paragraf</th>
-                          <td>: Jumlah “paragraf” atau kelompok kalimat dari tulisan anda di dalam kolom.</td>
+                          <th scope="row">{{ucfirst(strtolower(__('wordcounter.paragraph')))}}</th>
+                          <td>@lang('wordcounter.copy-desc-3-4')</td>
                       </tr>
                       <tr>
-                          <th scope="row">Waktu Baca</th>
-                          <td>: Merupakan waktu keterbacaan tulisan anda berdasarkan hitungan.</td>
+                          <th scope="row">{{ucfirst(strtolower(__('reading-time')))}}</th>
+                          <td>@lang('wordcounter.copy-desc-3-5')</td>
                       </tr>
                       </tbody>
                   </table>
-                  <h5> KEPADATAN KEYWORD</h5>
-                  <p>Kepadatan Keyword (dalam versi EN: <b>Keyword Density</b>) merupakan ukuran dan persentase kata yang digunakan oleh Content Writer, Copywriter dan SEO Specialist untuk menjaga kepadatan kata tertentu di dalam sebuah artikel.</p>
-                  <p>Menjaga Keyword Density menjadi sangat penting dan merupakan salah satu algoritmas mesin telusur mengukur Spam Rate dari sebuah konten.</p>
+                  <h5> @lang('wordcounter.copy-sub-title-3')</h5>
+                  <p>@lang('wordcounter.copy-desc-4-1')</p>
+                  <p>@lang('wordcounter.copy-desc-4-2')</p>
                   <table class="table">
                       <tbody>
                       <tr>
-                          <th scope="row">1 KATA</th>
-                          <td>merupakan persentase kata tertentu, yang diurutkan secara descending.</td>
+                          <th scope="row">@lang('wordcounter.word-1')</th>
+                          <td>@lang('wordcounter.copy-td-1')</td>
                       </tr>
                       <tr>
-                          <th scope="row">2 KATA</th>
-                          <td>merupakan persentase dari dua kata tertentu, yang diurutkan secara descending.</td>
+                          <th scope="row">@lang('wordcounter.word-2')</th>
+                          <td>@lang('wordcounter.copy-td-2')</td>
                       </tr>
                       <tr>
-                          <th scope="row">3 KATA</th>
-                          <td>merupakan persentase dari tiga kata tertentu, yang diurutkan secara descending.</td>
+                          <th scope="row">@lang('wordcounter.word-3')</th>
+                          <td>@lang('wordcounter.copy-td-3')</td>
                       </tr>
                       <tr>
-                          <th scope="row">4 KATA</th>
-                          <td>merupakan persentase dari empat kata tertentu, yang diurutkan secara descending.</td>
+                          <th scope="row">@lang('wordcounter.word-4')</th>
+                          <td>@lang('wordcounter.copy-td-4')</td>
                       </tr>
                       <tr>
-                          <th scope="row">5 KATA</th>
-                          <td>merupakan persentase dari lima kata tertentu, yang diurutkan secara descending.</td>
+                          <th scope="row">@lang('wordcounter.word-5')</th>
+                          <td>@lang('wordcounter.copy-td-5')</td>
                       </tr>
                       </tbody>
                   </table>
@@ -312,7 +320,7 @@
               </div>
               <div class="card-header">
                   <div class="card-title">
-                      <h3 class="card-label">Tool ini relevan untuk?</h3>
+                      <h3 class="card-label">@lang('wordcounter.copy-title-5')</h3>
                   </div>
               </div>
               <div class="card-body">
@@ -320,14 +328,14 @@
                   <div class="row">
                       <div class="col-md-6 mb-5">
                         <div class="container p-10"style="background-color:#53F9AD">
-                          <h3>CONTENT WRITER</h3>
-                          <p>Word Counter akan membantu aktifitas menulis konten artikel dan melakukan penghitungan kata, kalimat dan waktu baca dengan akurat.</p>
+                          <h3>@lang('wordcounter.copy-sub-title-5-1')</h3>
+                          <p>@lang('wordcounter.copy-desc-5-1')</p>
                         </div>
                       </div>
                       <div class="col-md-6 mb-5" >
                         <div class="container p-10" style="background-color:#53F9AD; height:100%">
-                          <h3>COPYWRITER</h3>
-                          <p>Popularitas copywriter semakin tinggi dan membuat pekerjaan ini dibutuhkan enterprise. Maka Word Counter akan sangat dibutuhkan.</p>
+                          <h3>@lang('wordcounter.copy-sub-title-5-2')</h3>
+                          <p>@lang('wordcounter.copy-desc-5-2')</p>
                         </div>
                       </div>
                   </div>

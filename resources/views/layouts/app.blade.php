@@ -6,8 +6,9 @@
 <head>
     <meta charset="utf-8" />
     <title>cmlabs @yield('title')</title>
-    <meta name="description" content="Page with empty content" />
+    <meta name="description" content="@yield('meta-desc')" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keyword" content="@yield('meta-keyword')">
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -37,6 +38,15 @@
     <!--end::Logo-->
     <!--begin::Toolbar-->
     <div class="d-flex align-items-center">
+        <div class="dropdown mr-3">
+            <button class="btn btn-bg-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-language"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/en">English</a>
+                <a class="dropdown-item" href="/id">Indonesia</a>
+            </div>
+        </div>
         <!--begin::Aside Mobile Toggle-->
         <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
             <span></span>
@@ -129,6 +139,7 @@
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('js/pages/widgets.js?v=7.0.5')}}"></script>
+<script>const lang = "{{session('local')}}"</script>
 @stack('script')
 <!--end::Page Scripts-->
 </body>

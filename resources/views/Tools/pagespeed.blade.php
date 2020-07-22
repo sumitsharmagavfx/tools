@@ -4,6 +4,14 @@
     | PAGE SPEED
 @endsection
 
+@section('meta-desc')
+    {{--Isi Desc disini--}}
+@endsection
+
+@section('meta-keyword')
+    {{--Isi Keyword disini--}}
+@endsection
+
 @section('content')
     <div class="card card-custom gutter-b">
         <div class="card-header">
