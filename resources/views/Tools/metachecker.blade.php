@@ -4,6 +4,14 @@
     | TITLE & META DESCRIPTION CHECKER
 @endsection
 
+@section('meta-desc')
+    {{--Isi Desc disini--}}
+@endsection
+
+@section('meta-keyword')
+    {{--Isi Keyword disini--}}
+@endsection
+
 @section('content')
     @push('style')
         <style media="screen">
@@ -232,7 +240,7 @@
         <div class="col-12 col-md-7">
             <img src="https://cmlabs.co/wp-content/uploads/2020/06/galaxy-note-10-cmlabs.png" width="100%" alt="">
         </div>
-        </center>        
+        </center>
       </div>
 
     </div>

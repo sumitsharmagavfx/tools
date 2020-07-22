@@ -4,6 +4,14 @@
     | JSON-LD FAQ SCHEMA GENERATOR
 @endsection
 
+@section('meta-desc')
+{{--Isi Desc disini--}}
+@endsection
+
+@section('meta-keyword')
+    {{--Isi Keyword disini--}}
+@endsection
+
 @section('content')
 @push('style')
 <style media="screen">

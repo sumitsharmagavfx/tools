@@ -45,5 +45,11 @@ return [
     "copy-desc-5-1" => "Word Counter akan membantu aktifitas menulis konten artikel dan melakukan penghitungan kata, kalimat dan waktu baca dengan akurat.",
     "copy-sub-title-5-2" => "COPYWRITER",
     "copy-desc-5-2" => "Popularitas copywriter semakin tinggi dan membuat pekerjaan ini dibutuhkan enterprise. Maka Word Counter akan sangat dibutuhkan.",
-    "copy-desc-5" => "Perlu diketahui jika tipe konten itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?"
+    "copy-desc-5" => "Perlu diketahui jika tipe konten itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
+    "Apa Itu Keyword Density" => "Apa Itu Keyword Density",
+    "copy-desc-6-1" => "Keyword density atau kepadatan istilah kunci adalah elemen optimasi kata kunci yg akan membantu Anda buat melihat berapa kali kata kunci target digunakan dalam page web tertentu.",
+    "copy-desc-6-2" => "Perhitungan ini akan memunculkan persentase dan frekuensi kata kunci target yang muncul dibandingkan jumlah relatif kata yang muncul di halaman. Keyword density digunakan mesin pencari untuk menentukan apakah kata kunci atau frasa tertentu relevan dengan konten.",
+    "copy-desc-6-3" => "“Keyword density adalah aspek SEO dalam penggunaan kata kunci yang menunjukkan pada berapa kali kata kunci target muncul dalam konten di halaman web.”",
+    "copy-desc-6-4" => "Bagaimana Cara Menghitung Keyword Density Manual?",
+    "copy-desc-6-5" => "Sangat mudah untuk belajar menghitung keyword density. Caranya yaitu menghitung berapa kali kata kunci sasaran muncul pada page web & membaginya menggunakan jumlah total istilah di page web tersebut. Berikut ini merupakan rumusnya:",
 ];
