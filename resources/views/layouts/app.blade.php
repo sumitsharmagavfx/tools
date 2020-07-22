@@ -139,7 +139,7 @@
 <!--end::Page Vendors-->
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('js/pages/widgets.js?v=7.0.5')}}"></script>
-<script>const lang = "{{session('local')}}"</script>
+<script>const lang = "{{\Illuminate\Support\Facades\App::getLocale()}}"</script>
 @stack('script')
 <!--end::Page Scripts-->
 </body>
