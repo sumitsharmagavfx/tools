@@ -14,7 +14,7 @@
         <ul class="nav flex-column">
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Page Speed">
-                <a href="/page-speed" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">
+                <a href="/{{$local}}/page-speed" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">
                     <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-07-181510/theme/html/demo4/dist/../src/media/svg/icons/Devices/Diagnostics.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>
@@ -28,7 +28,7 @@
             <!--end::Item-->
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="JSON-LD Schema Generator">
-                <a href="/json-ld-faq-schema-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')" >
+                <a href="/{{$local}}/json-ld-faq-schema-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')" >
                     <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-07-181510/theme/html/demo4/dist/../src/media/svg/icons/Code/Code.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>
@@ -41,7 +41,7 @@
             <!--end::Item-->
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Title & Lengths Checker">
-                <a href="/page-title-meta-description-checker" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('title-checker')" >
+                <a href="/{{$local}}/page-title-meta-description-checker" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('title-checker')" >
                     <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-07-181510/theme/html/demo4/dist/../src/media/svg/icons/Text/Text-width.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>
@@ -54,7 +54,7 @@
             <!--end::Item-->
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Word Counter">
-                <a href="/word-counter" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('word-counter')" >
+                <a href="/{{$local}}/word-counter" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('word-counter')" >
                     <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-07-181510/theme/html/demo4/dist/../src/media/svg/icons/Shopping/Calculator.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <rect x="0" y="0" width="24" height="24"/>

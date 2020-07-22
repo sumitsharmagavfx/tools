@@ -16,14 +16,14 @@ Route::resource('/', 'HomeController');
 //    return view('/tools/strikethrough');
 //});
 
-Route::get('/strikethrough', 'ToolsController@strikethrough');
-Route::get('/json-ld-faq-schema-generator', 'ToolsController@FAQ');
-Route::get('/word-counter', 'ToolsController@wordcounter');
-Route::get('/page-title-meta-description-checker', 'ToolsController@metachecker');
-Route::get('/dummy-credit-card-generator', 'ToolsController@creditcard');
-Route::get('/symbol-and-text-generator', 'ToolsController@symbolandtext');
-Route::get('/page-speed', 'ToolsController@pagespeed');
-Route::get('/construction', function (){
+Route::get('/{lang}/strikethrough', 'ToolsController@strikethrough');
+Route::get('/{lang}/json-ld-faq-schema-generator', 'ToolsController@FAQ');
+Route::get('/{lang}/word-counter', 'ToolsController@wordcounter');
+Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metachecker');
+Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
+Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext');
+Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
+Route::get('/{lang}/construction', function (){
     return view('premiumtools');
 });
 Route::get('/en', 'ToolsController@englishVersion');

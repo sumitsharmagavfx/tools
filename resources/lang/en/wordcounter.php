@@ -34,52 +34,52 @@ return[
     "copy-sub-title-3" => "KEYWORD DENSITY",
     "copy-desc-4-1" => "Keyword Density is a percentage calculation to maintain the density (proportion) of particular word(s) appears in an article. This term is widely known and used by Content Writer, Copywriter, as well as SEO specialist in producing a good online writing.",
     "copy-desc-4-2" => "Keyword Density must be in a good proportion since it becomes one of the parameters for search engine to consider whether or not the content is spammy.",
-    "copy-td-1" => "merupakan persentase kata tertentu, yang diurutkan secara descending.",
-    "copy-td-2" => "merupakan persentase dari dua kata tertentu, yang diurutkan secara descending.",
-    "copy-td-3" => "merupakan persentase dari tiga kata tertentu, yang diurutkan secara descending.",
-    "copy-td-4" => "merupakan persentase dari empat kata tertentu, yang diurutkan secara descending",
-    "copy-td-5" => "merupakan persentase dari lima kata tertentu, yang diurutkan secara descending.",
+    "copy-td-1" => "is a certain percentage of words, sorted descending.",
+    "copy-td-2" => "is a percentage of two specific words, sorted descending.",
+    "copy-td-3" => "is a percentage of three specific words, sorted descending.",
+    "copy-td-4" => "is a percentage of four specific words, sorted descending.",
+    "copy-td-5" => "is a percentage of five specific words, sorted descending.",
     "copy-title-5" => "Tool ini relevan untuk?",
     "copy-sub-title-5-1" => "CONTENT WRITER",
     "copy-desc-5-1" => "This Word Counter Tool will assist any online content writing project by providing an accurate automatic word and sentence count, as well as reading time calculation, all in real-time.",
     "copy-sub-title-5-2" => "COPYWRITER",
     "copy-desc-5-2" => "Career as a copywriter is increasingly popular in businesses and enterprises. Thus, using this Word Counter Tool will succeed any copy project, anytime, always.",
     "copy-desc-5" => "It is widely known that types of content are various. During the content-making process, writers might encounter quite complex problems in their project. So, for whom this Tool is developed?",
-    "copy-desc-6-0" => "Apa Itu Keyword Density",
-    "copy-desc-6-1" => "Keyword density atau kepadatan istilah kunci adalah elemen optimasi kata kunci yg akan membantu Anda buat melihat berapa kali kata kunci target digunakan dalam page web tertentu.",
-    "copy-desc-6-2" => "Perhitungan ini akan memunculkan persentase dan frekuensi kata kunci target yang muncul dibandingkan jumlah relatif kata yang muncul di halaman. Keyword density digunakan mesin pencari untuk menentukan apakah kata kunci atau frasa tertentu relevan dengan konten.",
-    "copy-desc-6-3" => "“Keyword density adalah aspek SEO dalam penggunaan kata kunci yang menunjukkan pada berapa kali kata kunci target muncul dalam konten di halaman web.”",
-    "copy-desc-6-4" => "Bagaimana Cara Menghitung Keyword Density Manual?",
-    "copy-desc-6-5" => "Sangat mudah untuk belajar menghitung keyword density. Caranya yaitu menghitung berapa kali kata kunci sasaran muncul pada page web & membaginya menggunakan jumlah total istilah di page web tersebut. Berikut ini merupakan rumusnya:",
-    "copy-desc-6-6" => "“Frekuensi kata kunci target muncul / Jumlah istilah pada halaman web = Keyword density”",
-    "copy-desc-6-7" => "<p>Berikut adalah contoh cara mengukur keyword density secara manual</p>
-                <p>Misalkan situs cmlabs.co telah menerbitkan halaman web untuk content marketing. Di sini halaman tersebut menargetkan kata “content marketing” yang digunakan sebagai kata kunci muncul 20 kali dan jumlah total kata pada halaman web tersebut adalah 1.000 kata.</p>
-                <p>20 (Frekuensi kata “content marketing” yang muncul pada halaman) / 1.000 (Jumlah total kata pada halaman web) = 2% (Kepadatan Kata Kunci atau keyword density)</p>",
-    "copy-desc-6-8" => "Bagaimana Keyword Density Yang Ideal?",
-    "copy-desc-6-8-1" => "<p>Tidak ada aturan yang ditetapkan untuk berapa kali kita diizinkan untuk menampilkan kata kunci dalam suatu halaman. Mesin pencari belum menentukan persentase keyword density, jadi writer harus menggunakan kebijaksanaan dan praktik terbaik untuk bereksperimen.</p>
-                <p>Beberapa ahli SEO percaya bahwa kepadatan kata kunci yang ideal harus sekitar 1-2%. Yang berarti bahwa kata kunci target hanya muncul sekali atau dua kali dalam setiap 100 kata. Artinya jika kita menggunakannya pada tingkat ini, mesin pencari akan mengetahui bahwa kata kunci muncul tanpa berlebihan (keyword stuffing).</p>",
-    "copy-desc-6-8-2" => "Apa Artinya Keyword Stuffing?",
-    "copy-desc-6-9" => "<p>Keyword Stuffing adalah penggunaan kata kunci target berulang-ulang sehingga halaman tersebut mendapatkan peringkat untuk target niche tertentu. Taktik black hat SEO pernah sempat populer. Meskipun taktik ini tidak digunakan secara luas hari ini, tetap saja para marketer harus menyadari keyword stuffing sehingga mereka tidak melakukan dengan sengaja.</p>
-                <p>Jika kepadatan kata kunci atau keyword density sangat tinggi maka keyword stuffing akan terjadi. Banyak orang sebisa mungkin menghindari keyword stuffing karena bertentangan dengan pedoman Google dan itu dapat menyebabkan mesin pencari untuk memberikan penalti atau menghapus halaman tersebut dari SERP.</p>
-                <p>keyword density yang sangat tinggi dapat memberikan ketidaknyamanan bagi pembaca. Konten SEO yang mudah dibaca dapat mendatangkan pengunjung berulang kali.</p>",
-    "copy-desc-6-10" => "4 Strategi Keyword Density Yang Baik Dan Benar",
-    "copy-desc-6-11" => "<p>Seperti yang kita ketahui tidak ada keyword density yang ideal yang dijelaskan oleh mesin pencari, tetapi tetap saja, harus tetap berpegang pada praktik optimasi kata kunci daripada susah payah memperhitungkan persentase kata kunci yang tepat.</p>
-                <p>Dengan menggunakan strategi berikut, Anda dapat melihat kepadatan kata kunci dalam konten.</p>",
-    "copy-desc-6-12" => "Utamakan Pembaca Terlebih Dahulu, Kemudian Fokus Pada Penggunaan Kata Kunci",
-    "copy-desc-6-13" => "Anda harus selalu ingat bahwa konten terbaik ditulis dengan mengutamakan pengguna. Konten tersebut harus ditulis secara alami dan organik menggunakan kata kunci dalam konten. Kita harus membuat konten berkualitas tinggi, menarik, dan berharga. Setelah selesai, kita harus kembali dan menambahkan kata kunci untuk melihat apakah kita dapat mencapai keyword density sekitar 1-2%.",
-    "copy-desc-6-14" => "Gunakan Keyword Stemming Untuk Menambahkan Variasi Kata Kunci Target",
-    "copy-desc-6-15" => "<p>Keyword stemming adalah kemampuan search engine untuk mengenali dan mengaitkan kata-kata serupa yang terhubung dengan kata kunci target. Biasanya, variasi ini berupa penambahan awalan, akhiran, atau pluralisasi ke kata kunci target.</p>
-                <p>Misalnya, yang berasal dari kata “content market” dapat berupa “content marketing” atau “content marketing”. Hal ini karena mesin pencari mengenali dan mengaitkan kata-kata ini dan juga menggunakannya dalam konten untuk mendukung kata kunci target dengan menambahkan kejelasan tekstual.</p>",
-    "copy-desc-6-16" => "Gunakan Kata Kunci Semantik Untuk Memberikan Konteks Dan Mendukung Kata Kunci Target",
-    "copy-desc-6-17" => "<p>Kata kunci semantik adalah beberapa istilah yang sinonim, variasi atau kata yang terkait secara kontekstual dengan kata kunci target. Kata-kata ini terkait dalam konteks dan bukan dalam arti literal.</p>
-                <p>Misalnya, kata kunci semantik yang ditargetkan adalah “content market” yang bisa mencakup “content marketing” atau “content marketer”. Semua mesin pencari menggunakan SEO semantik untuk membantu memahami dan memberi peringkat pada halaman web.</p>",
-    "copy-desc-6-18" => "Hindari Keyword Stuffing",
-    "copy-desc-6-19" => "Setelah selesai menyelesaikan konten, Anda harus memasukkannya ke tool CMLABS Keyword Counter sebelum menerbitkannya. Pastikan Anda telah menggunakan kata kunci target yang cukup untuk memberi tahu mesin pencari tentang semua halaman tanpa keyword stuffing dan menghindari penalti.",
-    "copy-desc-6-20" => "Bagaimana Cara Memeriksa Keyword Density Dalam Konten?",
-    "copy-desc-6-21" => "Sangat mudah untuk memeriksa kepadatan kata kunci di posting Anda. Pertama, kita dapat melakukannya secara manual dengan menghitung berapa kali kata kunci target muncul, kemudian jumlah total kata dalam posting dan kemudian menggunakan rumus yang disebutkan di atas. Kedua, kita dapat menggunakan alat yang disebut Word Counter CMLABS untuk memeriksa kepadatan kata kunci dalam postingan. Tool Word Counter ini punya fitur untuk mengukur keyword density.",
-    "copy-desc-6-22" => "Bagaimana Cara Menemukan Dan Menggunakan Kata Kunci Dengan Benar?",
-    "copy-desc-6-23" => "Dengan mengetahui kepadatan kata kunci dan berapa kata kunci target harus muncul dalam konten, jadi sekarang Anda sudah siap untuk menggunakan Word Counter CMLABS yang akan membantu Anda menulis konten yang SEO friendly.",
-    "copy-desc-6-24" => "Perlu diketahui jika",
-    "copy-desc-6-25" => "tipe konten",
-    "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?"
+    "copy-desc-6-0" => "What is Keyword Density",
+    "copy-desc-6-1" => "Keyword density is the element of keyword optimization that will help you see how many times the target keyword is used on a particular web page.",
+    "copy-desc-6-2" => "This calculation will show the percentage and frequency of the target keywords that appear compared to the relative number of words that appear on the page. Keyword density is used by search engines to determine whether certain keywords or phrases are relevant to the content.",
+    "copy-desc-6-3" => "\"Keyword density is an aspect of SEO in the use of keywords that shows how many times the target keyword appears in content on a web page.\"",
+    "copy-desc-6-4" => "How to Calculate Keyword Density Manually?",
+    "copy-desc-6-5" => "It's easy to calculate keyword density. The trick is to count the frequency of the target keyword appears on a web page & divide it with the total number of words on the web page. The following is the formula:",
+    "copy-desc-6-6" => "\"Number of times a target keyword appears / Number of words on a web page = Keyword density\"",
+    "copy-desc-6-7" => "<p>Here is an example of how to measure keyword density manually</p>
+                <p>For example, cmlabs.co has published a web page about content marketing. Here the page targets the word \"content marketing\" used as a keyword to appear 20 times and the total number of words on the web page is 1,000 words.</p>
+                <p>20 (the frequency of the word \"content marketing\" that appears on a page) / 1,000 (Total number of words on a web page) = 2% (Keyword Density).</p>",
+    "copy-desc-6-8" => "What is the Ideal Keyword Density?",
+    "copy-desc-6-8-1" => "<p>There are no rules for how many times we are allowed to display keywords on a page. The search engine hasn't determined the percentage of keyword density, so writers must use wisdom and best practices to experiment.</p>
+                <p>Some SEO experts believe that the ideal keyword density should be around 1-2%. Which means that the target keyword only appears once or twice in every 100 words. This means that if we use it at this level, search engines will know that keywords don't appear excessively (keyword stuffing).</p>",
+    "copy-desc-6-8-2" => "What Does Keyword Stuffing Mean?",
+    "copy-desc-6-9" => "<p>Keyword Stuffing is the use of target keywords over and over again for the page to get a ranking for a specific target niche. This black hat SEO tactics were once popular. Although this tactic is not widely used today, marketers must be aware of keyword stuffing so they don't do it on purpose.</p>
+                <p>If the keyword density is very high then keyword stuffing will occur. writers should avoid keyword stuffing because it goes against Google's guidelines and that can cause search engines to penalize or delete the page from SERP.</p>
+                <p>Very high keyword density can provide discomfort for the reader. SEO content that is easy to read can bring back visitors.</p>",
+    "copy-desc-6-10" => "4 Keyword Density Strategies",
+    "copy-desc-6-11" => "<p>As we know, there is no ideal keyword density described by search engines, but still, you must stick to the practice of keyword optimization rather than painstakingly calculating the right percentage of keywords.</p>
+                <p>By using the following strategy, you can see keyword density in content.</p>",
+    "copy-desc-6-12" => "Prioritize the Readers First, Then Focus on Using Keywords",
+    "copy-desc-6-13" => "You must always remember that the best content is written for users. The content must be written naturally and organically using keywords in the content. We must create high-quality, interesting and valuable content. Once done, we must go back and add keywords to see if we can reach a keyword density of around 1-2%.",
+    "copy-desc-6-14" => "Use Keyword Stemming to Add Target Keyword Variations",
+    "copy-desc-6-15" => "<p>Keyword stemming is the ability of search engines to recognize and associate similar words that are connected with target keywords. Typically, this variation is in the form of adding a prefix, suffix, or pluralization to the target keyword.</p>
+                <p>For example, derived from the word \"content market\" can be either \"content marketing\" or \"content marketer\". This is because search engines recognize and associate these words and also use them in content to support target keywords by adding textual clarity.</p>",
+    "copy-desc-6-16" => "Use Semantic Keywords to Provide Context and Support Target Keywords",
+    "copy-desc-6-17" => "<p>Semantic keywords are several terms that are synonymous, variations or words that are contextually related to the target keywords. These words are related in context and not in a literal sense.</p>
+                <p>For example, the targeted semantic keyword is \"content market\" which can include \"content marketing\" or \"content marketers\". All search engines use semantic SEO to help understand and rank web pages.</p>",
+    "copy-desc-6-18" => "Avoid Keyword Stuffing",
+    "copy-desc-6-19" => "After writing a content, you must enter it in the CMLABS Keyword Counter tool before publishing it. Make sure you have used enough target keywords to tell the search engine about all the pages without keyword stuffing and avoid penalties.",
+    "copy-desc-6-20" => "How to Check Keyword Density in Content?",
+    "copy-desc-6-21" => "It's easy to check keyword density in your posts. First, we can do it manually by counting the number of times the target keyword appears, then the total number of words in the post and then using the formula mentioned above. Second, we can use a tool called Word Counter CMLABS to check keyword density in posts. This Word Counter tool has a feature to measure keyword density.",
+    "copy-desc-6-22" => "How to Find and Use Keywords Correctly?",
+    "copy-desc-6-23" => "By knowing the keyword density and how many target keywords should appear in the content, so now you are ready to use CMLABS Word Counter which will help you write SEO friendly content.",
+    "copy-desc-6-24" => "It is widely known that",
+    "copy-desc-6-25" => "types of content",
+    "copy-desc-6-26" => "are various. During the content-making process, writers might encounter quite complex problems in their project. So, for whom this Tool is developed?"
 ];
