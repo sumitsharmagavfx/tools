@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
 {
@@ -11,47 +13,59 @@ class ToolsController extends Controller
         return view('Tools/strikethrough');
     }
 
-    public function FAQ()
+    public function FAQ($lang)
     {
-        return view('Tools/faq');
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/faq', compact('local'));
     }
 
-    public function wordcounter()
+    public function wordcounter($lang)
     {
-        return view('Tools/wordcounter');
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/wordcounter', compact('local'));
     }
 
-    public function creditcard()
+    public function creditcard($local)
     {
+        App::setLocale($local);
+        $lang = App::getLocale();
         return view('Tools/creditcard');
     }
 
-    public function symbolandtext()
+    public function symbolandtext($local)
     {
+        App::setLocale($local);
+        $lang = App::getLocale();
         return view('Tools/symbolandtext');
     }
 
-    public function metachecker()
+    public function metachecker($lang)
     {
-        return view('Tools/metachecker');
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/metachecker', compact('local'));
     }
 
-    public function pagespeed()
+    public function pagespeed($lang)
     {
-        return view('Tools/pagespeed');
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/pagespeed', compact('local'));
     }
 
     public function englishVersion()
     {
-        session()->put('local','en');
-        session()->save();
-        return back();
+        $previous = url()->previous();
+        $link = substr($previous, strrpos($previous,'/')+1);
+        return \redirect('/en/'.$link);
     }
 
     public function indonesiaVersion()
     {
-        session()->put('local','id');
-        session()->save();
-        return back();
+        $previous = url()->previous();
+        $link = substr($previous, strrpos($previous,'/')+1);
+        return \redirect('/id/'.$link);
     }
 }

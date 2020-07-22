@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);        
-        return view('home', compact('data'));
+        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
+        $local = App::getLocale();
+        return view('home', compact('data','local'));
     }
 
     /**

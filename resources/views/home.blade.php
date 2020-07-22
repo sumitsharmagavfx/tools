@@ -1,7 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    cmlabs
+    Free SEO Tool untuk Content Writing
+@endsection
+
+@section('meta-desc')
+    Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting
+@endsection
+
+@section('meta-keyword')
+    seo, free seo tool, content writing, copywriting
 @endsection
 
 @section('content')
@@ -40,7 +48,7 @@
             </div>
             <div class="card-footer d-flex justify-content-end">
               <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                <a href="{{$datum['route']}}" class="btn font-weight-bolder text-uppercase btn-{{$model}} py-4 px-6">Launch</a>
+                <a href="{{'/'.$local.$datum['route']}}" class="btn font-weight-bolder text-uppercase btn-{{$model}} py-4 px-6">Launch</a>
               </div>
             </div>
           </div>
