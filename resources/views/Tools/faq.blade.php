@@ -122,6 +122,51 @@
             </ul>
             <p>@lang('faq.desc-3-5')</p>
           </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label">Mengapa Memiliki Halaman FAQ Penting untuk Situs Web Anda?</h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Daftar FAQ yang bagus adalah salah satu elemen terpenting dari suatu situs web bisnis. Benar, semua perusahaan perlu memiliki konten yang berkulitas dan tampilan yang menawan untuk memberikan pengalaman pengguna yang baik. Namun, Anda perlu FAQ di situs Anda agar menarik traffic besar dan mengonversi lebih banyak pelanggan.</p>
+            <p>FAQ Shema adalah bagian integral dari navigasi yang baik dan perjalanan pelanggan menelusuri situs web. FAQ ini adalah pusat informasi bagi audiens Anda yang ingin mempelajari lebih lanjut tentang bisnis dan mencari tahu tentang produk dan layanan yang diberikan, dan melihat apakah sesuai dengan yang mereka inginkan.</p>
+            <p>Setiap kali seseorang mengklik FAQ Shema, mereka sudah masuk ke dalam bisnis Anda. Bagi banyak orang, halaman FAQ adalah halaman kedua yang mereka kunjungi setelah halaman Beranda atau Layanan.</p>
+            <p>Alih-alih menebak topik apa yang harus Anda tulis, Anda dapat menggunakan tool online marketing untuk bisnis kecil untuk membantu Anda memahami kebutuhan pelanggan. Cara ini adalah cara terbaik untuk mengoptimalkan FAQ Shema Anda sebelum menghabiskan banyak waktu atau sumber daya.</p>
+            <p>Bagi banyak orang, halaman FAQ pada situs web adalah halaman kedua yang mereka kunjungi setelah halaman Beranda atau Layanan. Pada bagian FAQ Anda perlu menyertakan konten berkualitas tinggi yang akan membantu pelanggan memahami produk dan layanan dengan cepat.</p>
+            <p>Artinya FAQ Shema Anda dapat memainkan peran penting dalam mengarahkan audiens menjadi pelanggan yang potensial. Anda harus tahu bahwa berinvestasi pada konten berkualitas tinggi untuk halaman FAQ akan sangat berdampak pada conversion rate dan membantu bisnis Anda meningkat pesat.</p>
+            <p>Seiring dengan pertanyaan dan jawaban teknis, halaman FAQ akan memberikan kesan bahwa web Anda adalah situs yang resmi dan terpercaya. FAQ Shema menunjukkan bahwa perusahaan Anda tahu banyak tentang produk dan layanan sehingga dapat menjawab pertanyaan bahkan sebelum ditanyakan.</p>
+            <p>Anda juga dapat menggunakan halaman FAQ sebagai bentuk bukti sosial karena bisnis Anda dapat menetapkan situs web perusahaan sebagai aset berharga untuk mendorong penjualan.</p>
+            <p>Terakhir, halaman FAQ di situs web akan mengurangi banyak tekanan dari customer service. Daripada membuat banyak pertanyaan yang dapat diakses untuk menjawab pertanyaan customer, sebaikny promosikan halaman FAQ Anda kepada klien sebagai sumber informasi praktis seputar perusahaan.</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h3 class="card-label">Manfaat Utama Halaman FAQ</h3>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Selain Beranda dan halaman penting lain di situs web Anda, pengunjung juga akan pergi ke halaman FAQ jika mereka ingin mempelajari lebih lanjut tentang produk dan penawaran yang tersedia.</p>
+            <p>Karena halaman FAQ akan menjadi laman favorit di situs web perusahaan, Anda harus memberikan tautan ke halaman produk. Ini akan membantu strategi internal linking di website Anda dan meningkatkan strategi SEO yang juga berdampak ke area lain di website Anda.</p>
+            <h4 class="font-weight-bold">1. Halaman FAQ Membantu Anda Mengatasi Kebutuhan Pembaca Anda</h4>
+            <p>Jika Anda ingin meningkatkan nilai praktis situs Anda, meningkatkan otoritas bisnis, dan meningkatkan konversi, maka Anda perlu memiliki FAQ Shema yang lengkap dan tertarget. FAQ Shema adalah pusat utama yang dituju pelanggan ketika mereka punya pertanyaan.</p>
+            <p>Salah satu alasan terkuat untuk memiliki bagian FAQ adalah untuk menjawab kebutuhan pelanggan, karena pelanggan adalah calon pembeli yang ingin tahu lebih banyak informasi tentang produk dan layanan dengan membaca di halaman FAQ. Anda harus memberikan konten berkualitas tentang bisnis Anda di halaman FAQ.</p>
+            <p>Cara terbaik yang dapat Anda lakukan untuk mengatasi keberatan dan meningkatkan penjualan adalah memberikan informasi yang akurat untuk menjawab pertanyaan yang besar kemungkinan ditanyakan pelanggan.</p>
+            <h4 class="font-weight-bold">2. Buatlah Website Perusahaan Anda Sebagai Rujukan Utama</h4>
+            <p>Ketika ada pertanyaan yang menggantung, orang akan mencari di website Anda karena mereka percaya website Anda adalah rujukan utama. Hal yang sama terjadi ketika pelanggan Anda mengajukan pertanyaan tentang produk dan layanan Anda. Karena pelanggan Anda ingin mengetahui informasi tentang masalah yang diketahui bisnis Anda, gunakan halaman FAQ sebagai cara untuk membangun website perusahan sebagai pakar tepercaya.</p>
+            <p>Setiap kali audiens mengajukan pertanyaan produk dan layanan, Anda dapat membuktikan diri sebagai pakar melalui jawaban-jawaban berisi informasi yang lengkap dan akurat.</p>
+            <p>Tugas Anda adalah membuat orang-orang tertarik, jadi Anda harus melakukan apa saja untuk menjadikan diri Anda sebagai pakar tepercaya. Memberikan jawaban luar biasa untuk pertanyaan yang diajukan pelanggan adalah cara terbaik bagi Anda untuk menjadi sumber informasi yang dapat dipercaya.</p>
+            <p>Gunakan FAQ Shema untuk membantu bisnis Anda mendapatkan kepercayaan dari pelanggan. Anda dapat menggunakan halaman  FAQ sebagai titik kontak pertama dengan pelanggan, setelah itu Anda dapat mengarahkan mereka menjadi pembeli.</p>
+            <h4 class="font-weight-bold">3. Tingkatkan Penjualan Anda</h4>
+            <p>Jika bisnis Anda memiliki halaman FAQ yang dioptimalkan di situs web, maka Anda akan melihat peningkatan konversi karena persentase pengunjung di situs web Anda akan membeli produk dan layanan yang tersedia.</p>
+            <p>Namun, memiliki halaman FAQ yang berisi informasi yang terlalu beragam tidak akan sukses.</p>
+            <p>Halaman FAQ Anda perlu disesuaikan dengan kebutuhan spesifik pelanggan. Selain memiliki konten yang fokus, Anda harus memiliki tautan dari halaman FAQ Anda ke halaman produk dan toko online.</p>
+            <p>Taktik yang lebih bagus untuk halaman FAQ adalah membandingkan produk dan layanan Anda dengan kompetitor. Strategi ini adalah cara alami untuk menunjukkan keunggulan bisnis Anda dibandingkan dengan pesaing yang lain.</p>
+            <h4 class="font-weight-bold">4. Tingkatkan SEO</h4>
+            <p>Search engine menyukai halaman FAQ karena mereka menyediakan konten yang relevan untuk membantu Google memahami bisnis Anda.</p>
+            <p>Artinya perlu banyak konten yang bagus untuk membantu website Anda muncul di mesin pencari. Halaman FAQ situs web Anda adalah tempat yang tepat untuk mempublikasikan banyak informasi menarik tentang bisnis, produk, dan layanan Anda.</p>
+            <p>Anda juga dapat memanfaatkan halaman FAQ Anda untuk memasukkan long tail keyword yang dicari pelanggan. Karena Anda sudah memberikan informasi tentang bisnis Anda, Anda dapat menambahkan konten yang kaya kata kunci sehingga ketika seseorang mencari produk dan layanan terkait, mereka akan menemukan halaman FAQ.</p>
+            <p>Pertanyaan dan jawaban yang Anda sertakan pada halaman FAQ Anda harus mewakili  pemikiran pelanggan. Ketika FAQ telah terisi banyak dan lengkap, halaman ini akan berperingkat tinggi di mesin pencari.</p>
+            <p>Inilah sebabnya Anda harus memasukkan pertanyaan spesifik dan terperinci di halaman FAQ Anda. Laman ini harus berisi informasi yang relevan tentang bisnis Anda sehingga dapat muncul di mesin pencari seperti Google dan Bing.</p>
+          </div>
       </div>
       <!--end::Card-->
     </div>
