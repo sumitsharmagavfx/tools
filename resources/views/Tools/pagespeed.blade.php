@@ -329,123 +329,113 @@
     <div class="card card-custom gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Tentang PageSpeed Tool</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-0')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>PageSpeed tool melaporkan kinerja halaman pada perangkat mobile dan desktop, dan memberikan saran tentang bagaimana halaman tersebut dapat ditingkatkan.</p>
-        <p>PageSpeed tool menyediakan data lab dan lapangan tentang halaman web. Data lab ini berguna untuk debugging masalah kinerja, karena dikumpulkan di lingkungan yang terkendali. Namun, tool ini mungkin tidak menangkap permasalahan dunia nyata. Data lapangan berguna untuk menangkap pengalaman pengguna nyata yang sebenarnya, tetapi memiliki serangkaian metrik yang lebih terbatas. </p>
+          @lang('pagespeed.copy-1')
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Skor kinerja/performa</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-2')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>Di bagian atas laporan, PageSpeed tool memberikan skor yang merangkum kinerja halaman. Skor ini ditentukan dengan menjalankan Lighthouse untuk mengumpulkan dan menganalisis data lab tentang halaman. Skor 90 atau lebih dianggap baik. 50 hingga 90 adalah skor yang perlu ditingkatkan, dan di bawah 50 dianggap buruk.</p>
+        <p>@lang('pagespeed.copy-3')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Data Lapangan Real-time</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-4')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>Saat URL diinput di PageSpeed tool, tool ini akan mencarinya dalam set data Chrome User Experience Report (CrUX). Jika tersedia, PageSpeed melaporkan First Contentful Paint (FCP), First Input Delay (FID), Largest Contentful Paint (LCP), dan data metrik Cumulative Layout Shift (CLS) untuk URL asal dan halaman tertentu yang berpotensi.</p>
+        <p>@lang('pagespeed.copy-5')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Klasifikasi Baik, Perlu Perbaikan, dan Buruk</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-6')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>PageSpeed juga mengklasifikasikan data lapangan menjadi 3 ember, menggambarkan pengalaman yang dianggap baik, perlu diperbaiki, atau buruk. PageSpeed menetapkan ambang berikut untuk standar baik / butuh peningkatan / buruk, berdasarkan analisis kami terhadap dataset CrUX:</p>
+        <p>@lang('pagespeed.copy-7')</p>
         <table class="table">
             <tbody>
             <tr>
                 <th scope="col"></th>
-                <th scope="col">Bagus</th>
-                <th scope="col">Butuh Peningkatan</th>
-                <th scope="col">Buruk</th>
+                <th scope="col">@lang('pagespeed.copy-8')</th>
+                <th scope="col">@lang('pagespeed.copy-9')</th>
+                <th scope="col">@lang('pagespeed.copy-10')</th>
             </tr>
             <tr>
-                <th scope="row">FCP</th>
-                <td>[0, 1000ms]</td>
-                <td>(1000ms, 3000ms)</td>
-                <td>lebih dari 3000ms</td>
+                <th scope="row">@lang('pagespeed.copy-11')</th>
+                <td>@lang('pagespeed.copy-12')</td>
+                <td>@lang('pagespeed.copy-13')</td>
+                <td>@lang('pagespeed.copy-14')</td>
             </tr>
             <tr>
-                <th scope="row">FID</th>
-                <td>[0, 100ms]</td>
-                <td>(100ms, 300ms)</td>
-                <td>melebihi 300ms</td>
+                <th scope="row">@lang('pagespeed.copy-15')</th>
+                <td>@lang('pagespeed.copy-16')</td>
+                <td>@lang('pagespeed.copy-17')</td>
+                <td>@lang('pagespeed.copy-18')</td>
             </tr>
             <tr>
-                <th scope="row">LCP</th>
-                <td>[0, 2500ms]</td>
-                <td>(2500ms, 4000ms)</td>
-                <td>lebih dari 4000ms</td>
+                <th scope="row">@lang('pagespeed.copy-19')</th>
+                <td>@lang('pagespeed.copy-20')</td>
+                <td>@lang('pagespeed.copy-21')</td>
+                <td>@lang('pagespeed.copy-22')</td>
             </tr>
             <tr>
-                <th scope="row">CLS</th>
-                <td>[0, 0,1]</td>
-                <td>(0,1, 0,25)</td>
-                <td>lebih dari 0,25</td>
+                <th scope="row">@lang('pagespeed.copy-23')</th>
+                <td>@lang('pagespeed.copy-24')</td>
+                <td>@lang('pagespeed.copy-25')</td>
+                <td>@lang('pagespeed.copy-26')</td>
             </tr>
             </tbody>
         </table>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Distribusi dan nilai metrik yang dipilih</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-27')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>PageSpeed menyajikan distribusi metrik ini sehingga developer dapat memahami rentang nilai FCP, FID, LCP, dan CLS untuk halaman tersebut. Distribusi ini juga dibagi menjadi tiga kategori: Baik, Butuh Peningkatan, dan Buruk, dilambangkan dengan warna hijau, oranye, dan merah. Sebagai contoh, melihat 14% berawrna oranye FCP menunjukkan bahwa 14% dari semua nilai FCP yang diamati berada di antara 1000ms dan 3000ms. Data ini mewakili tampilan agregat dari semua pemuatan halaman selama periode pengumpulan 28 hari sebelumnya.</p>
-        <p>Di atas bilah distribusi, PageSpeed melaporkan persentil ke-75 untuk semua metrik. Persentil ke-75 dipilih agar developer dapat memahami pengalaman pengguna yang paling membuat frustrasi di situs mereka. Nilai-nilai metrik lapangan ini diklasifikasikan sebagai baik / butuh peningkatan / buruk dengan menerapkan ambang yang sama seperti yang ditunjukkan di atas.</p>
+        <p>@lang('pagespeed.copy-28')</p>
+        <p>@lang('pagespeed.copy-29')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Tentang PageSpeed Tool</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-33')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>PageSpeed tool melaporkan kinerja halaman pada perangkat mobile dan desktop, dan memberikan saran tentang bagaimana halaman tersebut dapat ditingkatkan.</p>
-        <p>PageSpeed tool menyediakan data lab dan lapangan tentang halaman web. Data lab ini berguna untuk debugging masalah kinerja, karena dikumpulkan di lingkungan yang terkendali. Namun, tool ini mungkin tidak menangkap permasalahan dunia nyata. Data lapangan berguna untuk menangkap pengalaman pengguna nyata yang sebenarnya, tetapi memiliki serangkaian metrik yang lebih terbatas. </p>
+        <p>@lang('pagespeed.copy-34')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Core Web Vitals</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-35')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>Core Web Vitals adalah seperangkat sinyal umum yang penting untuk semua pengalaman web. Metrik Core Web Vitals adalah FID, LCP, dan CLS, dengan ambangnya masing-masing. Sebuah halaman melewati penilaian Core Web Vitals jika persentil ke-75 dari ketiga metrik baik. Jika tidak, halaman tersebut tidak lulus penilaian.</p>
+        <p>@lang('pagespeed.copy-36')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Perbedaan antara Data Lapangan dalam PageSpeed dan CrUX</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-61')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>Perbedaan antara data lapangan dalam PageSpeed versus Chrome User Experience Report di BigQuery, yaitu data PageSpeed diperbarui setiap hari untuk periode 28 hari berikutnya. Kumpulan data pada BigQuery hanya diperbarui setiap bulan.</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h3 class="card-label">Data lab</h3>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>PageSpeed menggunakan Lighthouse untuk menganalisis URL yang diinput, menghasilkan skor kinerja yang memperkirakan kinerja halaman pada metrik yang berbeda, termasuk: First Contentful Paint, Largest Contentful Paint, Speed Index, Cumulative Layout Shift, Time to Interactive, dan Total Blocking Time.</p>
-        <p>Setiap metrik diberi skor dan diberi label dengan ikon:</p>
+        <p>@lang('pagespeed.copy-37')</p>
+        <p>@lang('pagespeed.copy-38')</p>
         <ul>
-          <li>Bagus ditandai dengan warna biru
+          <li>@lang('pagespeed.copy-39')
               <div class="btn btn-icon btn-circle bg-success" style="height:15px; width:15px">
               </div>
           </li>
-          <li>Butuh Peningkatan ditunjukkan dengan warna oranye
+          <li>@lang('pagespeed.copy-40')
             <div class="btn btn-icon btn-circle bg-warning" style="height:15px; width:15px">
             </div>
           </li>
-          <li>Buruk ditandai dengan warna merah
+          <li>@lang('pagespeed.copy-41')
             <div class="btn btn-icon btn-circle bg-danger" style="height:15px; width:15px">
             </div>
           </li>
@@ -453,18 +443,15 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Audit</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-42')</h3>
         </div>
       </div>
       <div class="card-body">
-        <p>Lighthouse memisahkan auditnya menjadi tiga bagian:</p>
-        <p>Peluang (opportunities) memberikan saran cara meningkatkan metrik kinerja halaman. Setiap saran di bagian ini memperkirakan seberapa cepat halaman akan dimuat jika perbaikan diterapkan.</p>
-        <p>Diagnostik (diagnostics) memberikan informasi tambahan tentang bagaimana suatu halaman mematuhi praktik terbaik untuk pengembangan web.</p>
-        <p>Audit Lulus (Passed Audits) menunjukkan audit yang telah dilewati oleh halaman.</p>
+          @lang('pagespeed.copy-43')
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">Pertanyaan yang sering diajukan (FAQ)</h3>
+          <h3 class="card-label">@lang('pagespeed.copy-44')</h3>
         </div>
       </div>
       <div class="card-body">
@@ -472,96 +459,96 @@
           <div class="card">
               <div class="card-header">
                   <div class="card-title" data-toggle="collapse" data-target="#collapseOne1">
-                      Perangkat dan kondisi jaringan apa yang digunakan Lighthouse untuk mensimulasikan pemuatan halaman?
+                      @lang('pagespeed.copy-45')
                   </div>
               </div>
               <div id="collapseOne1" class="collapse show" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Saat ini, Lighthouse mensimulasikan pemuatan halaman pada perangkat tingkat menengah (Moto G4) pada jaringan seluler.
+                      @lang('pagespeed.copy-46')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo1">
-                      Mengapa data lapangan dan data lab terkadang saling bertentangan?
+                      @lang('pagespeed.copy-47')
                   </div>
               </div>
               <div id="collapseTwo1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Data lapangan adalah laporan historis tentang kinerja URL tertentu, dan merupakan data kinerja anonim dari pengguna di dunia nyata pada berbagai perangkat dan kondisi jaringan. Data lab didasarkan pada beban simulasi halaman pada satu perangkat dan kondisi jaringan tetap. Akibatnya, nilainya mungkin berbeda.
+                      @lang('pagespeed.copy-48')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree1">
-                      Mengapa persentil ke-75 dipilih untuk semua metrik?
+                      @lang('pagespeed.copy-49')
                   </div>
               </div>
               <div id="collapseThree1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Tujuan kami adalah memastikan bahwa halaman berfungsi dengan baik untuk sebagian besar pengguna. Dengan berfokus pada nilai persentil ke-75 untuk metrik kami, hal ini memastikan bahwa halaman memberikan pengalaman pengguna yang baik di bawah kondisi perangkat dan jaringan yang paling sulit.
+                      @lang('pagespeed.copy-50')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour1">
-                      Mengapa FID di v5 memiliki nilai yang berbeda?
+                      @lang('pagespeed.copy-51')
                   </div>
               </div>
               <div id="collapseFour1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      FID melaporkan persentil ke-75 (per 27 Mei 2020), sebelumnya yang dilaporkan adalah persentil ke-95.
+                      @lang('pagespeed.copy-52')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFive1">
-                      Apa skor yang baik untuk data lab?
+                      @lang('pagespeed.copy-53')
                   </div>
               </div>
               <div id="collapseFive1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Skor hijau apa pun (90+) dianggap baik.
+                      @lang('pagespeed.copy-54')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseSix1">
-                      Mengapa skor kinerja berubah padahal saya tidak mengubah apa pun di halaman saya?
+                      @lang('pagespeed.copy-55')
                   </div>
               </div>
               <div id="collapseSix1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Variabilitas dalam pengukuran kinerja diperkenalkan melalui sejumlah saluran dengan berbagai tingkat dampak. Beberapa sumber umum variabilitas metrik adalah ketersediaan jaringan lokal, ketersediaan perangkat keras klien, dan pertentangan sumber daya klien.
+                      @lang('pagespeed.copy-56')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseSeven1">
-                      Mengapa data kecepatan Chrome User Experience Report real-time tidak tersedia?
+                      @lang('pagespeed.copy-57')
                   </div>
               </div>
               <div id="collapseSeven1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa URL harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang memadai yang memberikan tampilan kinerja URL yang representatif dan dianonimkan.
+                      @lang('pagespeed.copy-58')
                   </div>
               </div>
           </div>
           <div class="card">
               <div class="card-header">
                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseEight1">
-                      Mengapa data kecepatan Chrome User Experience Report real-time tidak tersedia untuk sumber asli?
+                      @lang('pagespeed.copy-59')
                   </div>
               </div>
               <div id="collapseEight1" class="collapse" data-parent="#accordionExample1">
                   <div class="card-body">
-                      Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa halaman root asal harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang cukup yang memberikan pandangan yang representatif, anonim tentang kinerja asal di semua URL asal.
+                      @lang('pagespeed.copy-60')
                   </div>
               </div>
           </div>
