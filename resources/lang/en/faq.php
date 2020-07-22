@@ -1,0 +1,28 @@
+<?php
+return [
+    "subtitle" => "TURN ON RICH SNIPPET IN SERP",
+    "btn-add" => "Add Another FAQ",
+    "btn-copy" => "Copy",
+    "btn-test" => "Test Rich Result!",
+    "btn-delete" => "Delete",
+    "question" => "Question",
+    "answer" => "Answer",
+    "title" => "The Steps to Check FAQ Rich Result on Google",
+    "desc-1-1" => "1. After typing in the FAQ, a code will appear in the right box that you can copy. To see how this FAQ appears on Google, click <b>“Test Rich Result“</b>.",
+    "desc-1-2" => "2. On this page, you will check whether the code can be displayed in rich result by clicking <b>“TEST CODE“</b>.",
+    "desc-1-3" => "3. You will see a green check icon which means that the FAQ can appear in the rich result. Once you know that the FAQ you type can appear in SERP's rich result, you can see the preview in the smartphone display. Just click <b>“PREVIEW RESULTS“</b>",
+    "desc-1-4" => "4. Next, you will be directed to a Google page display that contains the FAQ you typed. This is the appearance of your FAQ in Google rich result.",
+    "desc-1-5" => "<b>Important note:</b> In order for the FAQ to appear in rich result, write at least 3 questions and answers.",
+    "title-2" => "What is the Schema FAQ?",
+    "desc-2-1" => "Frequently Asked Questions (FAQ) is the page containing questions and answers related to topics, products, and services of specific companies. Interestingly, search engines like Google support the display of FAQs for your website to appear on SERP. Of course, you you need to follow the procedures and conditions that have been made.",
+    "desc-2-2" => "Now, your activities on SEO would become easier with the third cmlabs tool: the FAQ Schema JSON Generator. With a simple process that doesn't even require coding knowledge of certain programming languages, you can enable rich snippets in SERP.",
+    "title-3" => "Why Does Your Website Need a Schema FAQ?",
+    "desc-3-1" => "Before answering the main question, we take you back two steps, and ask \"What information do users need most about your product or company?\"",
+    "desc-3-2" => "Then, the next step is, you have to prepare all the information they need, of course it is better if it is published online. Since when users have one particular question, they could immediately get the answer.",
+    "desc-3-3" => "Pay attention, <b>users need answers immediately</b>. So they expect important information to answer the difficult questions they are thinking about, of course relating to your product/service and other information about your company.",
+    "desc-3-4" => "Therefore, the Schema FAQ is the solution. This rich snippet feature was released by Google to answer the speed problem. When users really expect accurate and fast answers, sometimes:",
+    "li-1" => "Website pages are slower than expectations,",
+    "li-2" => "The information displays the list of unstructured questions and answers, and",
+    "li-3" => "Placement of FAQ information that is difficult to find by most internet users;",
+    "desc-3-5" => "Regardless of how it is applied and how difficult it is, those are three fundamental reasons why the FAQ Schema is important for the website owners to activate it. In the next section, we will provide a tutorial on how to install the Schema FAQ on the website."
+];

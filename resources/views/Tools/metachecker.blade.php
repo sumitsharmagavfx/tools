@@ -21,7 +21,7 @@
     <div class="card card-custom mb-5" id="kt_page_stretched_card">
         <div class="card-header">
             <div class="card-title">
-                <h3 class="card-label">TITLE & META DESCRIPTION CHECKER <small>ADVANCE YOUR WRITING</small></h3>
+                <h3 class="card-label">@lang('metachecker.title')</h3>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
                     <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
                         <span id="resulturlmobile">https://cmlabs.co</span><br>
                         <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
-                        <span id="resultdescmobile">CMLABS specializes in the work of SEO Enterprise, Content Writing, Copywriting, and Content Marketing. Check 2020 offers?</span>
+                        <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                     <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
                         <span id="resulttitle">CMLABS / Content Marketing Labs Indonesia</span><br>
                         <span id="resulturl">https://cmlabs.co</span> <br>
-                        <span id="resultdesc">CMLABS specializes in the work of SEO Enterprise, Content Writing, Copywriting, and Content Marketing. Check 2020 offers?</span>
+                        <span id="resultdesc">@lang('metachecker.desc-result')</span>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 from URL's?
             </button>
             <br> <br>
-            <a onclick="copy('url')" style="cursor:pointer;"> <small>Copy to clipboard!</small> </a> <br>
+            <a onclick="copy('url')" style="cursor:pointer;"> <small>@lang('metachecker.copy')</small> </a> <br>
             <small id="urlcheck">eg. https://cmlabs.co/en/</small>
         </div>
     </div>
@@ -83,13 +83,13 @@
     <div class="card card-custom mb-5 mt-5">
         <div class="card-header">
             <div class="card-title">
-                <h3 class="card-label">PAGE TITLE <small></small></h3>
+                <h3 class="card-label">@lang('metachecker.page-title') <small></small></h3>
             </div>
         </div>
         <div class="card-body">
             <input id="title" type="text" name="" class="form-control"
                    value="CMLABS / Content Marketing Labs Indonesia"> <br>
-            <a onclick="copy('title')" style="cursor: pointer"> <small>Copy to clipboard!</small> </a> <br>
+            <a onclick="copy('title')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small> </a> <br>
             <small id="titlecount"></small>
         </div>
     </div>
@@ -102,8 +102,8 @@
         </div>
         <div class="card-body">
             <input id="desc" type="text" name="" class="form-control"
-                   value="CMLABS mengkhususkan diri pada pekerjaan SEO Enterprise, Content Writing, Copywriting, dan Content Marketing. Cek penawaran 2020?"><br>
-            <a onclick="copy('desc')" style="cursor: pointer"> <small>Copy to clipboard!</small> </a> <br>
+                   value="@lang('metachecker.desc-result')"><br>
+            <a onclick="copy('desc')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small> </a> <br>
             <small id="desccount"></small>
         </div>
     </div><br>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title')    
+@section('title')
 @endsection
 
 @section('content')
@@ -12,7 +12,7 @@
        @if($i % 3 == 0)
         <?php $model = 'success' ?>
        @elseif($i % 3 == 1)
-       <?php $model = 'primary' ?>
+       <?php $model = 'danger' ?>
        @else
        <?php $model = 'warning' ?>
        @endif

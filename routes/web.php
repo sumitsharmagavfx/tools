@@ -12,9 +12,9 @@
 */
 
 Route::resource('/', 'HomeController');
-Route::get('/test', function (){
-    return view('/tools/strikethrough');
-});
+//Route::get('/test', function (){
+//    return view('/tools/strikethrough');
+//});
 
 Route::get('/strikethrough', 'ToolsController@strikethrough');
 Route::get('/json-ld-faq-schema-generator', 'ToolsController@FAQ');
@@ -26,3 +26,5 @@ Route::get('/page-speed', 'ToolsController@pagespeed');
 Route::get('/construction', function (){
     return view('premiumtools');
 });
+Route::get('/en', 'ToolsController@englishVersion');
+Route::get('/id', 'ToolsController@indonesiaVersion');
