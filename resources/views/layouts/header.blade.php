@@ -22,6 +22,15 @@
                         <a class="dropdown-item" href="/id">Indonesia</a>
                     </div>
                 </div>
+                @if($local == "id")
+                <a href="https://cmlabs.co/" class="mr-3">
+                @else
+                <a href="https://cmlabs.co/en/" class="mr-3">
+                @endif
+                  <button type="button" class="btn btn-success" name="button">
+                    <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
+                    cmlabs.co</button>
+                </a>
                 <a href="/construction" class="btn btn-primary pulse pulse-light">
                     <div class="pulse pulse-light">
                         <span class="pulse-ring" style="margin: -7px;"></span>
