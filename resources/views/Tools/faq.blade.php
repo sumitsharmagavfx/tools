@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('title')
-    | JSON-LD FAQ SCHEMA GENERATOR
+    FAQ Page — Realtime JSON-LD Schema Generator
 @endsection
 
 @section('meta-desc')
-{{--Isi Desc disini--}}
+    Gunakan realtime JSON-LD Schema Generator (FAQ Page) untuk membantu aktifitas SEO membuat FAQ Schema dan aktifkan cuplikan kaya SERP di Google.
 @endsection
 
 @section('meta-keyword')
-    {{--Isi Keyword disini--}}
+    faq, faq schema, google rich result, schema generator, google serp
 @endsection
 
 @section('content')

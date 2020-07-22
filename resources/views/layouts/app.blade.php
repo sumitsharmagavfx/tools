@@ -5,7 +5,7 @@
 <!--begin::Head-->
 <head>
     <meta charset="utf-8" />
-    <title>cmlabs @yield('title')</title>
+    <title>@yield('title')</title>
     <meta name="description" content="@yield('meta-desc')" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="keyword" content="@yield('meta-keyword')">
