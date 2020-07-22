@@ -65,5 +65,8 @@ return [
     "copy-58"=>"Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa URL harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang memadai yang memberikan tampilan kinerja URL yang representatif dan dianonimkan.",
     "copy-59"=>"Mengapa data kecepatan Chrome User Experience Report real-time tidak tersedia untuk sumber asli?",
     "copy-60"=>"Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa halaman root asal harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang cukup yang memberikan pandangan yang representatif, anonim tentang kinerja asal di semua URL asal.",
-    "copy-61"=>"Data Lab"
+    "copy-61"=>"Data Lab",
+    "meta-title" => "",
+    "meta-desc" => "",
+    "meta-keyword" => ""
 ];

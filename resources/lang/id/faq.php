@@ -24,5 +24,8 @@ return [
     "li-1" => "Laman website lebih lambat dari espektasi,",
     "li-2" => "Tayangan informasi daftar pertanyaan dan jawaban yang tidaktersetruktur, hingga",
     "li-3" => "Penempatan informasi FAQ yang sulit ditemukan oleh kebanyakan pengguna internet;",
-    "desc-3-5" => "Terlepas dengan cara penerapan dan tingkat kesulitannya, itulah tiga alasan mendasar mengapaa FAQ Schema penting untuk diaktifkan oleh pemilik website. Pada bagian berikutnya, kami akan berikan tutorial cara pasang FAQ Schema di dalam website."
+    "desc-3-5" => "Terlepas dengan cara penerapan dan tingkat kesulitannya, itulah tiga alasan mendasar mengapaa FAQ Schema penting untuk diaktifkan oleh pemilik website. Pada bagian berikutnya, kami akan berikan tutorial cara pasang FAQ Schema di dalam website.",
+    "meta-title" => "FAQ Page — Realtime JSON-LD Schema Generator",
+    "meta-desc" => "Gunakan realtime JSON-LD Schema Generator (FAQ Page) untuk membantu aktifitas SEO membuat FAQ Schema dan aktifkan cuplikan kaya SERP di Google.",
+    "meta-keyword" => "faq, faq schema, google rich result, schema generator, google serp"
 ];

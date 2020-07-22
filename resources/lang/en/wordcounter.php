@@ -81,5 +81,8 @@ return[
     "copy-desc-6-23" => "By knowing the keyword density and how many target keywords should appear in the content, so now you are ready to use CMLABS Word Counter which will help you write SEO friendly content.",
     "copy-desc-6-24" => "It is widely known that",
     "copy-desc-6-25" => "types of content",
-    "copy-desc-6-26" => "are various. During the content-making process, writers might encounter quite complex problems in their project. So, for whom this Tool is developed?"
+    "copy-desc-6-26" => "are various. During the content-making process, writers might encounter quite complex problems in their project. So, for whom this Tool is developed?",
+    "meta-title" => "Word Counter Online – Content Writing Tools",
+    "meta-desc" => "Count the number of words your article here. Just copy and paste, then the CMLABS Word Counter tool automatically calculates words and keyword density",
+    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
 ];
