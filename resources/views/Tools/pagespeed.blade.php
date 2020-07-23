@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('title')
-    @lang('pagespeed.meta-title')
-@endsection
+@section('title', Lang::get('pagespeed.meta-title'))
 
-@section('meta-desc')
-    @lang('pagespeed.meta-desc')
-@endsection
+@section('meta-desc', Lang::get('pagespeed.meta-desc'))
 
-@section('meta-keyword')
-    @lang('pagespeed.meta-keyword')
-@endsection
+@section('meta-keyword', Lang::get('pagespeed.meta-keyword'))
 
 @section('content')
     <div class="card card-custom gutter-b">
