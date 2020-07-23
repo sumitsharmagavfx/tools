@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('title')
-    @lang('faq.meta-title')
-@endsection
+@section('title', Lang::get('faq.meta-title'))
 
-@section('meta-desc')
-    @lang('faq.meta-desc')
-@endsection
+@section('meta-desc', Lang::get('faq.meta-desc'))
 
-@section('meta-keyword')
-    @lang('faq.meta-keyword')
-@endsection
+@section('meta-keyword', Lang::get('faq.meta-keyword'))
 
 @section('content')
 @push('style')

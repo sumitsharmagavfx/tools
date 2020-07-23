@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('title')
-    Free SEO Tool untuk Content Writing
-@endsection
+@section('title', 'Free SEO Tool untuk Content Writing')
 
-@section('meta-desc')
-    Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting
-@endsection
+@section('meta-desc', 'Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting')
 
-@section('meta-keyword')
-    seo, free seo tool, content writing, copywriting
-@endsection
+@section('meta-keyword', 'seo, free seo tool, content writing, copywriting')
 
 @section('content')
 <div class="d-flex flex-column-fluid mt-5">
