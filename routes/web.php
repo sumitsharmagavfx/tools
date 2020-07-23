@@ -23,7 +23,7 @@ Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metac
 Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
 Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext');
 Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
-Route::get('/{lang}/construction', function (){
+Route::get('/construction', function (){
     return view('premiumtools');
 });
 Route::get('/en', 'ToolsController@englishVersion');

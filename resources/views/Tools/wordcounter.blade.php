@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('title')
-    @lang('wordcounter.meta-title')
-@endsection
+@section('title', Lang::get('wordcounter.meta-title'))
 
-@section('meta-desc')
-    @lang('wordcounter.meta-desc')
-@endsection
+@section('meta-desc', Lang::get('wordcounter.meta-desc'))
 
-@section('meta-keyword')
-    @lang('wordcounter.meta-keyword')
-@endsection
+@section('meta-keyword', Lang::get('wordcounter.meta-keyword'))
 
 @section('content')
     <div class="row">

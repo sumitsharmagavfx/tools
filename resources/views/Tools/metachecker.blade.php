@@ -1,16 +1,10 @@
 @extends('layouts.app')
 
-@section('title')
-    @lang('metachecker.meta-title')
-@endsection
+@section('title', Lang::get('metachecker.meta-title'))
 
-@section('meta-desc')
-    @lang('metachecker.meta-desc')
-@endsection
+@section('meta-desc', Lang::get('metachecker.meta-desc'))
 
-@section('meta-keyword')
-    @lang('metachecker.meta-keyword')
-@endsection
+@section('meta-keyword', Lang::get('metachecker.meta-keyword'))
 
 @section('content')
     @push('style')
