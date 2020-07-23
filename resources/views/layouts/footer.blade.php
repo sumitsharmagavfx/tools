@@ -11,7 +11,7 @@
             <span class="text-muted font-weight-bold ml-2 mr-2">|</span>
             <a href="https://cmlabs.co/ruang-pers/" target="_blank" class="text-dark-75 text-hover-primary">Ruang Pers</a>
             <span class="text-muted font-weight-bold ml-2 mr-2">|</span>
-            <a href="https://cmlabs.co/about-us/" target="_blank" class="text-dark-75 text-hover-primary">Tentang Kami</a>
+            <a href="https://cmlabs.co/tentang-kami/" target="_blank" class="text-dark-75 text-hover-primary">Tentang Kami</a>
             @else
             <a href="https://cmlabs.co/en/" target="_blank" class="text-dark-75 text-hover-primary">cmlabs.co</a>
             <span class="text-muted font-weight-bold ml-2 mr-2">|</span>
