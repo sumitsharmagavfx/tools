@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="col-lg-2 mb-5">
-                    <button type="button" class="btn btn-success form-control" name="button" id="analysis-button">Analysis!</button>
+                    <button type="button" class="btn btn-success form-control" name="button" id="analysis-button">@lang('pagespeed.btn-analysis')!</button>
                 </div>
             </div>
         </div>
