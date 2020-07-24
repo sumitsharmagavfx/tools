@@ -82,4 +82,10 @@ class ToolsController extends Controller
             return \redirect('/id/'.$link);
         }
     }
+
+    public function sitemap()
+    {
+      $local = "en";
+      return view('Tools/sitemap', compact('local'));
+    }
 }
