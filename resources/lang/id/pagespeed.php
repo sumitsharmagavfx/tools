@@ -68,5 +68,6 @@ return [
     "copy-61"=>"Data Lab",
     "meta-title" => "Page Speed Test — cmlabs",
     "meta-desc" => "Gunakan PageSpeed tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
-    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool"
+    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
+    "btn-analysis" => "Analisis"
 ];
