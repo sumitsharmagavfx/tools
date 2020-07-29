@@ -11,12 +11,19 @@ const err_msg = document.getElementById('error-msg');
 const date_now = document.getElementById('date-now');
 const resIssues = document.getElementById('resource-issues');
 
+// res_section.style.display = "none";
+// err_section.style.display = "none";
+// $('.row-success').hide();
+// $('.row-error').hide();
+// $('.success-icon').hide();
+// $('.error-icon').hide();
+
+issueurl = '';
+issues_detail = '';
+
 $(document).ready(function() {
-    $('.row-success').hide();
-    $('.row-error').hide();
-    $('.success-icon').hide();
-    $('.error-icon').hide();
     $('#btn-check').on('click', function() {
+
         $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
@@ -36,26 +43,22 @@ $(document).ready(function() {
             contentType: "application/json",
             data : dataJson,
             success : function(result) {
+                console.clear(result);
                 console.log(result);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
                 $('.row-success').show();
 
                 if( result.testStatus.status === 'COMPLETE') {
-                    if(result.mobileFriendliness === 'MOBILE_FRIENDLY') {
-                        resultdata(result.mobileFriendliness, result.screenshot.data);
-                    } else {
-                        resultdata(result.mobileFriendliness, result.screenshot.data);
-                        mobileissues(result.mobileFriendlyIssues);
-                    }
+                    res_section.style.display = "inline";
 
-                    if(result.resourceIssues != "undefined") {
-                        resourceissues(result.resourceIssues);
-                    }
+                    resultdata(result.mobileFriendliness, result.screenshot.data);
+                    mobileissues(result.mobileFriendlyIssues);
+                    resourceissues(result.resourceIssues);
                 } else {
                     var errorstatus = result.testStatus.status;
                     var errormessage = result.testStatus.details;
 
-                    // err_section.style = 'display:block';
+                    err_section.style.display = "block";
                     err_msg.innerHTML = errormessage;
                 }
 
@@ -65,8 +68,7 @@ $(document).ready(function() {
                 console.log("Execute Error", e);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
 
-                // var errorstatus = e.testStatus.status;
-                // var errormessage = e.testStatus.details;
+                err_section.style.display = "block";
 
                 err_section.style = 'display:block';
                 err_msg.innerHTML = "Terjadi kesalahan saat proses test. Silakan coba lagi atau coba dengan URL website yang lain";
@@ -105,39 +107,57 @@ function resultdata(titledata, imagedata) {
 }
 
 function resourceissues(res_issues) {
-    var resissues = '';
-    var url = '';
-    var urls = '';
+    if ( typeof res_issues === 'undefined' ) {
+        resIssues.style = "display:none";
+        resIssues.innerHTML = "";
+    } else {
+        resIssues.style = "display:block";
 
-    for (i = 0; i < res_issues.length; i++) {
-        urls += url.replace(url,'<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-exclamation-triangle text-warning"></i>&nbsp;&nbsp' +res_issues[i].blockedResource.url+ '</div></div>');
+        delete issues_detail;
+        delete issueurl;
+        issues_detail = '';
+        issueurl = '';
+
+        for (i = 0; i < res_issues.length; i++) {
+            issueurl += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-exclamation-triangle text-warning"></i>&nbsp;&nbsp' +res_issues[i].blockedResource.url+ '</div></div>';
+        }
+
+        resIssues.innerHTML = "<p><b>Masalah Pemuatan Halaman pada</b></p>" + issueurl;
     }
-
-    resIssues.innerHTML = "<p><b>Masalah Pemuatan Halaman pada</b></p>" + urls;
 }
 
 function mobileissues(rules) {
-    var issues = '';
-    var issues_detail = '';
-    for (i = 0; i < rules.length; i++) {
+    if ( typeof rules === 'undefined' ) {
+        mob_issues.style = "display:none";
+        mob_issues.innerHTML = "";
+    } else {
+        mob_issues.style = "display:block";
 
-        if( rules[i].rule === 'MOBILE_FRIENDLY_RULE_UNSPECIFIED') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Maaf, kami tidak memiliki deskripsi pada pengaturan yang terdapat kesalahan / error.</div></div>';
-        } else if( rules[i].rule === 'USES_INCOMPATIBLE_PLUGINS') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Plugin tidak kompatibel dengan perangkat seluler sedang digunakan</div></div>';
-        } else if( rules[i].rule === 'CONFIGURE_VIEWPORT') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport tidak ditentukan menggunakan tag meta viewport</div></div>';
-        } else if( rules[i].rule === 'FIXED_WIDTH_VIEWPORT') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport didefinisikan sebagai width fixed</div></div>';
-        } else if( rules[i].rule === 'SIZE_CONTENT_TO_VIEWPORT') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Konten tidak berukuran sesuai viewport</div></div>';
-        } else if( rules[i].rule === 'USE_LEGIBLE_FONT_SIZES') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Ukuran font terlalu kecil untuk dibaca dengan mudah di layar kecil</div></div>';
-        } else if( rules[i].rule === 'TAP_TARGETS_TOO_CLOSE') {
-            issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Elemen sentuh terlalu dekat satu sama lain</div></div>';
+        delete issues_detail;
+        delete issueurl;
+        issues_detail = '';
+        issueurl = '';
+
+        for (i = 0; i < rules.length; i++) {
+
+            if( rules[i].rule === 'MOBILE_FRIENDLY_RULE_UNSPECIFIED') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Maaf, kami tidak memiliki deskripsi pada pengaturan yang terdapat kesalahan / error.</div></div>';
+            } else if( rules[i].rule === 'USES_INCOMPATIBLE_PLUGINS') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Plugin tidak kompatibel dengan perangkat seluler sedang digunakan</div></div>';
+            } else if( rules[i].rule === 'CONFIGURE_VIEWPORT') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport tidak ditentukan menggunakan tag meta viewport</div></div>';
+            } else if( rules[i].rule === 'FIXED_WIDTH_VIEWPORT') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport didefinisikan sebagai width fixed</div></div>';
+            } else if( rules[i].rule === 'SIZE_CONTENT_TO_VIEWPORT') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Konten tidak berukuran sesuai viewport</div></div>';
+            } else if( rules[i].rule === 'USE_LEGIBLE_FONT_SIZES') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Ukuran font terlalu kecil untuk dibaca dengan mudah di layar kecil</div></div>';
+            } else if( rules[i].rule === 'TAP_TARGETS_TOO_CLOSE') {
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Elemen sentuh terlalu dekat satu sama lain</div></div>';
+            }
+
+            mob_issues.innerHTML = "<p><b>Perbaiki Masalah Berikut</b></p>" + issues_detail;
         }
-
-        mob_issues.innerHTML = "<p><b>Perbaiki Masalah Berikut</b></p>" + issues_detail;
     }
 }
 
