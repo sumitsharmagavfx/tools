@@ -24,6 +24,7 @@ Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
 Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext');
 Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
 Route::get('/{lang}/sitemap-generator', 'ToolsController@sitemap');
+Route::get('/{lang}/mobile-test', 'ToolsController@mobiletest');
 Route::get('/construction', function (){
     return view('premiumtools');
 });
