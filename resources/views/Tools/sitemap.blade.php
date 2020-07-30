@@ -41,7 +41,7 @@
 {{--        <center><span id="detail-progress">0 of 100 Pages Crawled</span></center>--}}
       </div>
     </div>
-    <div class="card card-custom gutter-b"style="display:none">
+    <div class="card card-custom gutter-b" id="table" style="display:none">
       <div class="card-header">
         <div class="card-title">
           <h3 class="card-label">@lang('sitemap.result-title')</h3>
@@ -61,9 +61,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-    <div style="position:absolute;top:0px;left:3000px;width:1024px;height:768px;" id="render">
-        <iframe src="https://tools.cmlabs.co" frameborder="0" id="frame"></iframe>
     </div>
 <div class="card card-custom gutter-b">
   <div class="card-header">
@@ -126,7 +123,6 @@
     <p>@lang('sitemap.copy-6-2')</p>
   </div>
 </div>
->>>>>>> 57622dca7a3422e1ff333e9d5e38d7850ad9df12
 @endsection
 
 @push('script')
