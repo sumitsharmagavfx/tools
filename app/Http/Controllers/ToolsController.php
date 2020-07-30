@@ -64,6 +64,13 @@ class ToolsController extends Controller
       return view('Tools/mobiletest', compact('local'));
     }
 
+    public function sitemap($lang)
+    {
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/sitemap', compact('local'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();
@@ -90,12 +97,6 @@ class ToolsController extends Controller
         }else {
             return \redirect('/id/'.$link);
         }
-    }
-
-    public function sitemap()
-    {
-      $local = "en";
-      return view('Tools/sitemap', compact('local'));
-    }
+    }  
 
 }
