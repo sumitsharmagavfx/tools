@@ -29,3 +29,4 @@ Route::get('/construction', function (){
 });
 Route::get('/en', 'ToolsController@englishVersion');
 Route::get('/id', 'ToolsController@indonesiaVersion');
+Route::get('/url', 'ToolsController@curlWeb');

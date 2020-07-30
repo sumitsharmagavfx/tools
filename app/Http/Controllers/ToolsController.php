@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
@@ -88,4 +90,5 @@ class ToolsController extends Controller
       $local = "en";
       return view('Tools/sitemap', compact('local'));
     }
+
 }

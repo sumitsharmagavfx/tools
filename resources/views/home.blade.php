@@ -31,7 +31,7 @@
                   </span>
                 </div>
                 <div class="d-flex flex-column">
-                  <a href="{{$datum['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
+                  <a href="{{'/'.$local.$datum['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
                   {{$datum['title']}}
                   </a>
                   <div class="text-dark-75">
