@@ -13,18 +13,17 @@
 @section('id-link','/id/mobile-test')
 
 @section('content')
+
 @push('style')
 <style media="screen">
-  @media only screen and (max-width: 1200px) and (min-width: 992px)  {
-    #copy {
-      height: 50px;
+  @media only screen and (max-width: 576px) {
+    #icon {
+      display: none
     }
-    #test{
-      height: 50px;
-    }
-}
+  }
 </style>
 @endpush
+
 <div id="loader" class="center"></div>
 <div class="row">
     <div class="col-lg-12">
@@ -32,15 +31,11 @@
         <div class="card card-custom card-stretch gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">MOBILE FRIENDLY</h3>
+                    <h3 class="card-label">MOBILE FRIENDLY TEST</h3>
                 </div>
             </div>
             <div class="card-body">
               <div class="row">
-                  <div class="col-lg-12 mb-5">
-                      <h1 class="mb-4">@lang('mobiletest.title') </h1>
-                      <p>@lang('mobiletest.subtitle')</p>
-                  </div>
                       <div class="col-lg-10 mb-5">
                           <div id="spinner">
                               <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('mobiletest.question')">
@@ -69,15 +64,15 @@
                     <div class="card card-custom mb-4">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-12 col-sm-6 col-md-8">
+                                <div class="col-12 col-sm-8 col-md-10 col-lg-8">
                                     <p class="mb-3 text-secondary" id="date-now"></p>
                                     <h1 id="result-title"></h1>
                                     <p class="mt-3 text-black" id="result-subtitle"></p>
                                 </div>
-                                <div class="col-12 col-sm-6 col-md-4">
+                                <div class="col-12 col-sm-4 col-md-2 col-lg-4" id="icon">
                                     <div class="success-icon">
                                         <?xml version="1.0"?>
-                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" width="100%" height="100%">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" width="100%">
                                             <g><g><g><g>
                                                 <circle cx="150.001" cy="226.085" r="11.718" data-original="#000000" class="active-path" data-old_color="#000000" fill="#36D153"/>
                                                 <path d="M182.691,68.248h-65.382c-3.665,0-6.647,2.843-6.647,6.331v123.592c0,3.491,2.98,6.331,6.647,6.331h65.382     c3.665,0,6.647-2.843,6.647-6.331V74.579C189.336,71.088,186.356,68.248,182.691,68.248z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#36D153"/>
@@ -87,7 +82,7 @@
                                     </div>
                                     <div class="error-icon">
                                         <?xml version="1.0"?>
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 510 510" height="100%" viewBox="0 0 510 510" width="100%">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 510 510" viewBox="0 0 510 510" width="100%">
                                             <g><g>
                                                 <path d="m326.671 315h3.329v-135h-137.737z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525"/>
                                                 <path d="m317.763 120h-125.525c-6.748 0-12.238 5.49-12.238 12.238v17.762h150v-17.762c0-6.748-5.489-12.238-12.237-12.238z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525"/>
@@ -131,8 +126,7 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-12">
+
         <div class="card card-custom mb-4">
             <div class="card-header">
                 <div class="card-title">
@@ -141,10 +135,7 @@
             </div>
             <div class="card-body">
               <p>@lang('mobiletest.desc-2-1')</p>
-              <p>@lang('mobiletest.desc-2-2')</p>
             </div>
-        </div>
-        <div class="card card-custom mb-4">
             <div class="card-header">
                 <div class="card-title">
                     <h3 class="card-label">@lang('mobiletest.title-3')</h3>
@@ -152,36 +143,47 @@
             </div>
             <div class="card-body">
                 <p>@lang('mobiletest.desc-3-1')</p>
+                <p>@lang('mobiletest.desc-3-2')</p>
+                <h5>@lang('mobiletest.sub-title-3-1')</h5>
+                <p>@lang('mobiletest.desc-3-3')</p>
+                <p>@lang('mobiletest.desc-3-4')</p>
+                <h5>@lang('mobiletest.sub-title-3-2')</h5>
+                <p>@lang('mobiletest.desc-3-5')</p>
+                <ul>
+                  <li>@lang('mobiletest.desc-3-6')</li>
+                  <li>@lang('mobiletest.desc-3-7')</li>
+                  <li>@lang('mobiletest.desc-3-8')</li>
+                  <li>@lang('mobiletest.desc-3-9')</li>
+                </ul>
+                <h5>@lang('mobiletest.sub-title-3-3')</h5>
+                <p>@lang('mobiletest.desc-3-10')</p>
+                <h5>@lang('mobiletest.sub-title-3-4')</h5>
+                <p>@lang('mobiletest.desc-3-11')</p>
+            </div>
+            <div class="card-header">
+                <div class="card-title">
+                    <h3 class="card-label">@lang('mobiletest.title-4')</h3>
+                </div>
+            </div>
+            <div class="card-body">
+              <p>@lang('mobiletest.desc-4-1')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h5>
+              <p>@lang('mobiletest.desc-4-2')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h5>
+              <p>@lang('mobiletest.desc-4-3')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h5>
+              <p>@lang('mobiletest.desc-4-4')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h5>
+              <p>@lang('mobiletest.desc-4-5')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h5>
+              <p>@lang('mobiletest.desc-4-6')</p>
+              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h5>
+              <p>@lang('mobiletest.desc-4-7')</p>
             </div>
         </div>
-    </div>
-</div>
 
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content" >
-            <div class="modal-body">
-                <img class="img-responsive form-control" style="height:auto;" src="" />
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 @endsection
-
-{{-- @push('script')
-<script type="text/javascript">
-$(document).ready(function () {
-      $('#myModal').on('show.bs.modal', function (e) {
-          var image = $(e.relatedTarget).attr('src');
-          $(".img-responsive").attr("src", image);
-      });
-});
-</script>
-@endpush --}}
 
 @push('script')
     <script src="{{asset('js/logic/mobiletest.js')}}"></script>

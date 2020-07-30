@@ -71,7 +71,7 @@ $(document).ready(function() {
                 err_section.style.display = "block";
 
                 err_section.style = 'display:block';
-                err_msg.innerHTML = "Terjadi kesalahan saat proses test. Silakan coba lagi atau coba dengan URL website yang lain";
+                err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
             },
         });
     });
@@ -79,20 +79,20 @@ $(document).ready(function() {
 
 function resultdata(titledata, imagedata) {
     if(titledata === 'MOBILE_FRIENDLY') {
-        title.innerHTML = 'Halaman ini Mobile Friendly<br/>';
-        subtitle.innerHTML = 'Halaman ini mudah digunakan pada perangkat seluler';
+        title.innerHTML = "Page is mobile friendly<br/>";
+        subtitle.innerHTML = 'This page is easy to use on a mobile device';
         title.style = 'color: green';
         $('.error-icon').hide();
         $('.success-icon').show();
     } else if(titledata === 'MOBILE_FRIENDLY_TEST_RESULT_UNSPECIFIED') {
-        title.innerHTML = 'Terjadi Kesalahan Saat Melakukan Test. Silakan Coba Lagi<br/>';
+        title.innerHTML = 'An Error Occurred While Performing a Test. Please Try Again<br/>';
         subtitle.innerHTML = '';
         $('.error-icon').show();
         $('.success-icon').hide();
         title.style = 'color: red';
     } else if(titledata === 'NOT_MOBILE_FRIENDLY') {
-        title.innerHTML = 'Halaman ini Tidak Mobile Friendly<br/>';
-        subtitle.innerHTML = 'Halaman ini sulit digunakan pada perangkat seluler';
+        title.innerHTML = 'Page is not mobile friendly<br/>';
+        subtitle.innerHTML = 'This page is difficult to use on a mobile device';
         title.style = 'color: red';
         $('.error-icon').show();
         $('.success-icon').hide();
@@ -103,7 +103,7 @@ function resultdata(titledata, imagedata) {
     image.src = "data:image/png;base64," + baseStr64;
     image.style = "width: 100% !important; height: auto";
 
-    date_now.innerHTML = "Telah diuji pada " + datenow();
+    date_now.innerHTML = "Tested on " + datenow();
 }
 
 function resourceissues(res_issues) {
@@ -122,7 +122,7 @@ function resourceissues(res_issues) {
             issueurl += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-exclamation-triangle text-warning"></i>&nbsp;&nbsp' +res_issues[i].blockedResource.url+ '</div></div>';
         }
 
-        resIssues.innerHTML = "<p><b>Masalah Pemuatan Halaman pada</b></p>" + issueurl;
+        resIssues.innerHTML = "<h5>Page Loading Issues</h5>" + issueurl;
     }
 }
 
@@ -141,22 +141,22 @@ function mobileissues(rules) {
         for (i = 0; i < rules.length; i++) {
 
             if( rules[i].rule === 'MOBILE_FRIENDLY_RULE_UNSPECIFIED') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Maaf, kami tidak memiliki deskripsi pada pengaturan yang terdapat kesalahan / error.</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Sorry, we don\'t have a description of the settings for errors.</div></div>';
             } else if( rules[i].rule === 'USES_INCOMPATIBLE_PLUGINS') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Plugin tidak kompatibel dengan perangkat seluler sedang digunakan</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Uses incompatible plugins</div></div>';
             } else if( rules[i].rule === 'CONFIGURE_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport tidak ditentukan menggunakan tag meta viewport</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport not set</div></div>';
             } else if( rules[i].rule === 'FIXED_WIDTH_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport didefinisikan sebagai width fixed</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport not set to "device-width"</div></div>';
             } else if( rules[i].rule === 'SIZE_CONTENT_TO_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Konten tidak berukuran sesuai viewport</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Content wider than screen</div></div>';
             } else if( rules[i].rule === 'USE_LEGIBLE_FONT_SIZES') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Ukuran font terlalu kecil untuk dibaca dengan mudah di layar kecil</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Text too small to read</div></div>';
             } else if( rules[i].rule === 'TAP_TARGETS_TOO_CLOSE') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Elemen sentuh terlalu dekat satu sama lain</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Clickable elements too close together</div></div>';
             }
 
-            mob_issues.innerHTML = "<p><b>Perbaiki Masalah Berikut</b></p>" + issues_detail;
+            mob_issues.innerHTML = "<h5>Fix the Following Problems</h5>" + issues_detail;
         }
     }
 }
