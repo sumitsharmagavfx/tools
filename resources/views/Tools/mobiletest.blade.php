@@ -6,6 +6,12 @@
 
 @section('meta-keyword', Lang::get('mobiletest.meta-keyword'))
 
+@section('conical','/en/mobile-test')
+
+@section('en-link','/en/mobile-test')
+
+@section('id-link','/id/mobile-test')
+
 @section('content')
 @push('style')
 <style media="screen">

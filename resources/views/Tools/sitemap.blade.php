@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
-{{--<!-- @section('title', Lang::get('sitemap.meta-title'))--}}
+@section('title', Lang::get('sitemap.meta-title'))
 
-{{--@section('meta-desc', Lang::get('sitemap.meta-desc'))--}}
+@section('meta-desc', Lang::get('sitemap.meta-desc'))
 
-{{--@section('meta-keyword', Lang::get('sitemap.meta-keyword')) -->--}}
+@section('meta-keyword', Lang::get('sitemap.meta-keyword'))
+
+@section('conical','/en/sitemap-generator')
+
+@section('en-link','/en/sitemap-generator')
+
+@section('id-link','/id/sitemap-generator')
 
 @section('content')
     <div class="card card-custom gutter-b">
