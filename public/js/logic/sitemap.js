@@ -6,7 +6,7 @@ let DATA_FINAL;
 $('#generate').click(function () {
     $('#spin').addClass("spinner spinner-success spinner-right");
     let url = $('#url').val();
-    $('#render').attr('src',url);
+    $('#frame').attr('src',url);
     console.log('start we crawl your website');
     $.get({
         url: "http://localhost:3000?url="+url,
@@ -24,12 +24,12 @@ $('#generate').click(function () {
         },
         timeout:0
     });
-    // var frameDoc =$("#render")
-    // console.log(frameDoc);
-    // html2canvas(frameDoc).then(canvas=>{
-    //     console.log('testtt')
-    //     $('#screeshoot').attr('src',canvas.toDataURL())
-    // });
+    let frameDoc = $("#render");
+    console.log(frameDoc);
+    html2canvas(frameDoc).then(canvas=>{
+        console.log('testtt');
+        $('#screeshoot').attr('src',canvas.toDataURL())
+    });
 
     // $.get({
     //     url: "http://localhost:3000/img?url="+url,

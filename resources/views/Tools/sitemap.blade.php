@@ -62,7 +62,9 @@
         </table>
       </div>
     </div>
-{{--    <iframe src="" frameborder="0" style="position:absolute;top:0px;left:3000px;width:1024px;height:768px;" id="render"></iframe>--}}
+    <div style="position:absolute;top:0px;left:3000px;width:1024px;height:768px;" id="render">
+        <iframe src="https://tools.cmlabs.co" frameborder="0" id="frame"></iframe>
+    </div>
 @endsection
 
 @push('script')
