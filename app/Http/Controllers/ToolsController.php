@@ -57,6 +57,13 @@ class ToolsController extends Controller
         return view('Tools/pagespeed', compact('local'));
     }
 
+    public function mobiletest($lang)
+    {
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/mobiletest', compact('local'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();
