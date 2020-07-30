@@ -23,7 +23,7 @@
             <div class="row">
                 <div class="col-lg-10 mb-5">
                     <div id="spinner">
-                        <input type="text" name="" class="form-control" value="" id="url" placeholder="Input Your URL">
+                        <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('pagespeed.input-hint')">
                     </div>
                 </div>
                 <div class="col-lg-2 mb-5">
