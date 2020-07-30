@@ -6,6 +6,12 @@
 
 @section('meta-keyword', Lang::get('metachecker.meta-keyword'))
 
+@section('conical','/en/page-title-meta-description-checker')
+
+@section('en-link','/en/page-title-meta-description-checker')
+
+@section('id-link','/id/page-title-meta-description-checker')
+
 @section('content')
     @push('style')
         <style media="screen">
