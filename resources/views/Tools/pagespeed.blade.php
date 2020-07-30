@@ -569,6 +569,6 @@
     <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 @endpush
 
-@section('home')
+@section('page-speed')
     active
 @endsection
