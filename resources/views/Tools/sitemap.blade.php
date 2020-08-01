@@ -41,7 +41,7 @@
 {{--        <center><span id="detail-progress">0 of 100 Pages Crawled</span></center>--}}
       </div>
     </div>
-    <div class="card card-custom gutter-b"style="display:none">
+    <div class="card card-custom gutter-b" id="table" style="display:none">
       <div class="card-header">
         <div class="card-title">
           <h3 class="card-label">@lang('sitemap.result-title')</h3>
@@ -62,7 +62,6 @@
         </table>
       </div>
     </div>
-{{--    <iframe src="" frameborder="0" style="position:absolute;top:0px;left:3000px;width:1024px;height:768px;" id="render"></iframe>--}}
 <div class="card card-custom gutter-b">
   <div class="card-header">
     <div class="card-title">

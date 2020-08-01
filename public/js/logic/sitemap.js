@@ -6,13 +6,27 @@ let DATA_FINAL;
 $('#generate').click(function () {
     $('#spin').addClass("spinner spinner-success spinner-right");
     let url = $('#url').val();
-    $('#render').attr('src',url);
+    $('#frame').attr('src',url);
     console.log('start we crawl your website');
+
+    $.get({
+        url: "http://localhost:3000/img?url="+url,
+        success: function (response) {
+            // console.log(response);
+            $('#screeshoot').attr('src','http://localhost:3000/'+response.url);
+            $('#add').css('display','block');
+        },
+        error: function (response) {
+            console.log(response)
+        }
+    });
+
     $.get({
         url: "http://localhost:3000?url="+url,
         success: function (response) {
             $('#spin').removeClass("spinner spinner-success spinner-right");
             console.log(response);
+            $('#table').css('display','block');
             for (let datum in response.url){
                 addData(response.url[datum],parseInt(datum)+1);
             }
@@ -24,31 +38,6 @@ $('#generate').click(function () {
         },
         timeout:0
     });
-    // var frameDoc =$("#render")
-    // console.log(frameDoc);
-    // html2canvas(frameDoc).then(canvas=>{
-    //     console.log('testtt')
-    //     $('#screeshoot').attr('src',canvas.toDataURL())
-    // });
-
-    // $.get({
-    //     url: "http://localhost:3000/img?url="+url,
-    //     success: function (response) {
-    //         console.log(response);
-    //         var doc = document.implementation.createHTMLDocument();
-    //         doc.open();
-    //         doc.write(response.data);
-    //         doc.close();
-    //         $('#render').append(doc.body)
-    //         html2canvas(doc.body).then(canvas=>{
-    //         console.log('testtt')
-    //         $('#screeshoot').attr('src',canvas.toDataURL())
-    //         });
-    //     },
-    //     error: function (response) {
-    //         console.log(response)
-    //     }
-    // });
 });
 
 $('#download').click(function () {
