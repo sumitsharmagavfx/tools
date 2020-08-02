@@ -31,9 +31,7 @@
                   </span>
                 </div>
                 <div class="d-flex flex-column">
-                  <a href="{{'/'.$local.$datum['route']}}" class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">
-                  {{$datum['title']}}
-                  </a>
+                  <span class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">{{$datum['title']}}</span>                                    
                   <div class="text-dark-75">
                     @if(App::getLocale()=="id")
                    {{$datum['description']}}
