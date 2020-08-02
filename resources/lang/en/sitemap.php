@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "SITEMAP GENERATOR  <small>CREATE A FREE GOOGLE XML SITEMAP</small>",
+    "title" => "SITEMAP GENERATOR  <small>CREATE A FREE GOOGLE XML SITEMAP (MAX 500 PAGES)</small>",
     "btn-generate" => "Generate",
     "input-hint" => "Input Your URL",
     "result-title" => "SITEMAP RESULTS",

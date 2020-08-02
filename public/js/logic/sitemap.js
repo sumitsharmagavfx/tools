@@ -1,43 +1,60 @@
-// import html2canvas from "html2canvas";
-
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+};
 let DATA_FINAL;
+$(document).ready(function () {
+    const socket = io('http://128.199.126.255:3000/');
 
+    $('#generate').click(function () {
+        $('#spin').addClass("spinner spinner-success spinner-right");
+        clearTable();
+        let url = $('#url').val();
+        if (url.charAt(-1)==='/')
+            socket.emit('crawl',url.slice(0,-1));
+        else socket.emit('crawl',url);
+        console.log('start we crawl your website');
+        socket.emit('image',url);
+    });
 
-$('#generate').click(function () {
-    $('#spin').addClass("spinner spinner-success spinner-right");
-    let url = $('#url').val();
-    $('#frame').attr('src',url);
-    console.log('start we crawl your website');
+    socket.on('update queue', data =>{
+        // console.log(data);
+        updateProgressBar(data);
+    });
 
-    $.get({
-        url: "http://localhost:3000/img?url="+url,
-        success: function (response) {
-            // console.log(response);
-            $('#screeshoot').attr('src','http://localhost:3000/'+response.url);
-            $('#add').css('display','block');
-        },
-        error: function (response) {
-            console.log(response)
+    socket.on('image_url',url=>{
+        // console.log('image');
+        $('#screeshoot').attr('src','http://128.199.126.255:3000/'+url.url);
+        $('#add').css('display','block');
+    });
+
+    socket.on('result', response => {
+        $('#spin').removeClass("spinner spinner-success spinner-right");
+        // console.log(response);
+        $('#table').css('display','block');
+        for (let datum in response.url){
+            addData(response.url[datum],parseInt(datum)+1);
         }
+        DATA_FINAL = response;
     });
 
-    $.get({
-        url: "http://localhost:3000?url="+url,
-        success: function (response) {
-            $('#spin').removeClass("spinner spinner-success spinner-right");
-            console.log(response);
-            $('#table').css('display','block');
-            for (let datum in response.url){
-                addData(response.url[datum],parseInt(datum)+1);
-            }
-            DATA_FINAL = response;
-            console.log(DATA_FINAL)
-        },
-        error : function (response) {
-            console.log(response)
-        },
-        timeout:0
-    });
+    socket.on('notfound', msg =>{
+        $('#spin').removeClass("spinner spinner-success spinner-right");
+        toastr.error('Error', msg)
+    })
 });
 
 $('#download').click(function () {
@@ -60,5 +77,18 @@ function addData(data, i) {
         "              <td scope=\"col\" width=\"70px\">#"+i+"</td>\n" +
         "              <td scope=\"col\">"+data.loc+"</td>\n" +
         "            </tr>");
+}
+
+function updateProgressBar(data) {
+    let percentage = (data.site_length/(parseInt(data.site_length)+parseInt(data.queue_length))*100).toFixed(1);
+    $('#progress-bar')
+        .attr('aria-valuenow',percentage)
+        .css('width',percentage+'%')
+        .html(percentage+'%');
+    $('#detail-progress').html(data.site_length+' of '+(parseInt(data.site_length)+parseInt(data.queue_length))+' Pages Crawled')
+}
+
+function clearTable() {
+    $("#table tbody tr").remove();
 }
 
