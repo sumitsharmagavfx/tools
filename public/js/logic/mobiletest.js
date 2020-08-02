@@ -167,7 +167,7 @@ function datenow() {
     var mm = String(today.getMonth() + 1).padStart(2, '0');
     var yyyy = today.getFullYear();
     var hr = today.getHours();
-    var min = today.getMinutes();
+    var min = String(today.getMinutes()).padStart(2, '0');
 
     today = dd + '/' + mm + '/' + yyyy + " " + hr + "." + min;
     return today;
