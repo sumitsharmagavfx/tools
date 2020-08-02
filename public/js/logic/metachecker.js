@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
         var matchreg =/^(https?|ftp):\/\//;
         let urls = jQuery('#url').val().replace(matchreg,"");
         jQuery.get({
-            url: 'https://scrapper.ermanu.vercel.app/?url=https://' + urls,
+            url: 'http://128.199.126.255:3000/?url=https://' + urls,
             success: (res) => {
                 calculate(res.title, res.description);
                 jQuery('#execute').removeClass('spinner spinner-white spinner-right');

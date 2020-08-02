@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "SITEMAP GENERATOR  <small>BUAT SITEMAP XML GOOGLE GRATIS</small>",
+    "title" => "SITEMAP GENERATOR  <small>BUAT SITEMAP XML GOOGLE GRATIS (MAKSIMAL 500 HALAMAN)</small>",
     "btn-generate" => "Generate",
     "input-hint" => "Masukkan URL Anda",
     "result-title" => "HASIL SITEMAP",
@@ -31,6 +31,4 @@ return [
     "meta-title" => "Sitemap Generator - cmlabs",
     "meta-desc" => "Aplikasikan sitemap generator untuk ketahui detail halaman yang tersedia & permudah mesin pencari mengindeks laman",
     "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
-
-
 ];

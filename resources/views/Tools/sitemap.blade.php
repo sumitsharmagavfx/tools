@@ -35,10 +35,10 @@
             <img id="screeshoot" src="https://cmlabs.co/wp-content/uploads/2020/06/mural-cmlabs.jpg" width="100%" class="gutter-b" alt="">
           </div>
         </center>
-{{--        <div class="progress mb-2" style="height:20px">--}}
-{{--            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">0%</div>--}}
-{{--        </div>--}}
-{{--        <center><span id="detail-progress">0 of 100 Pages Crawled</span></center>--}}
+        <div class="progress mb-2" style="height:20px">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar">0%</div>
+        </div>
+        <center><span id="detail-progress">0 of 0 Pages Crawled</span></center>
       </div>
     </div>
     <div class="card card-custom gutter-b" id="table" style="display:none">
@@ -128,6 +128,7 @@
 @push('script')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script> const token = "{{csrf_token()}}"</script>
     <script src="{{asset('js/logic/download.js')}}"></script>
     <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
