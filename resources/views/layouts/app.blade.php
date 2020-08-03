@@ -54,8 +54,14 @@
                 <i class="fas fa-language"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/en">English</a>
-                <a class="dropdown-item" href="/id">Indonesia</a>
+              <a class="dropdown-item" href="/en">
+                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="">
+                 <span class="ml-1">English</span>
+               </a>
+              <a class="dropdown-item" href="/id">
+                <img src="{{asset('media/logos/indonesia.png')}}" border="1px solid black" height="20px" alt="">
+                 <span class="ml-1">Indonesia</span>
+              </a>
             </div>
         </div>
         <!--begin::Aside Mobile Toggle-->

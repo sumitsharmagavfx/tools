@@ -22,7 +22,12 @@ background-size: auto 110%;">
     <div class="wow fadeIn">
       <div class="container">
         <div class="row">
-          <div class="logo"> <img src="{{asset('media/logos/logo-letter-10.png')}}" width="50px" alr='logo' /> </div>
+          <div class="logo">
+            <a href="/">
+              <img src="{{asset('media/logos/logo-letter-10.png')}}" width="50px" alr='logo' />
+            </a>
+
+          </div>
         </div>
         <div class="heading text-center">
           <h2>WE ARE <b>ALMOST</b> THERE</h2>

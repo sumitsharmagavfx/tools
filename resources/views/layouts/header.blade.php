@@ -1,4 +1,4 @@
-<div id="kt_header" class="header bg-white header-fixed">
+<div id="kt_header" class="header bg-white header-fixed" >
     <!--begin::Container-->
     <div class="container-fluid d-flex align-items-stretch justify-content-between">
         <!--begin::Left-->
@@ -18,8 +18,14 @@
                         @lang('layout.language')
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/en">English</a>
-                        <a class="dropdown-item" href="/id">Indonesia</a>
+                        <a class="dropdown-item" href="/en">
+                          <img src="{{asset('media/logos/america.png')}}" height="20px" alt="">
+                           <span class="ml-1">English</span>
+                         </a>
+                        <a class="dropdown-item" href="/id">
+                          <img src="{{asset('media/logos/indonesia.png')}}" border="1px solid black" height="20px" alt="">
+                           <span class="ml-1">Indonesia</span>
+                        </a>
                     </div>
                 </div>
                 @if($local == "id")
@@ -27,11 +33,11 @@
                 @else
                 <a href="https://cmlabs.co/en/" class="mr-3">
                 @endif
-                  <button type="button" class="btn btn-success btn-fixed-height" name="button">
+                  <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
                     <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
                     cmlabs.co</button>
                 </a>
-                <a href="/construction" class="btn btn-primary pulse pulse-light btn-fixed-height">
+                <a href="/construction" class="btn btn-info pulse pulse-light btn-fixed-height">
                     <div class="pulse pulse-light">
                         <span class="pulse-ring" style="margin: -7px;"></span>
                       <span class="svg-icon svg-icon-light svg-icon-2x">
