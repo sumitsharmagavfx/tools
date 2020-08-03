@@ -1,6 +1,5 @@
 <?php
 return [
-    "input-hint" => "Masukkan URL Anda",
     "copy-0"=>"Tentang PageSpeed Tool",
     "copy-1"=>"<p>PageSpeed tool melaporkan kinerja halaman pada perangkat mobile dan desktop, dan memberikan saran tentang bagaimana halaman tersebut dapat ditingkatkan.</p>
         <p>PageSpeed tool menyediakan data lab dan lapangan tentang halaman web. Data lab ini berguna untuk debugging masalah kinerja, karena dikumpulkan di lingkungan yang terkendali. Namun, tool ini mungkin tidak menangkap permasalahan dunia nyata. Data lapangan berguna untuk menangkap pengalaman pengguna nyata yang sebenarnya, tetapi memiliki serangkaian metrik yang lebih terbatas. </p>",
@@ -69,6 +68,5 @@ return [
     "copy-61"=>"Data Lab",
     "meta-title" => "Page Speed Test — cmlabs",
     "meta-desc" => "Gunakan PageSpeed tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
-    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
-    "btn-analysis" => "Analisis"
+    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool"
 ];
