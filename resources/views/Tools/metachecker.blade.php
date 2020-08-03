@@ -6,12 +6,6 @@
 
 @section('meta-keyword', Lang::get('metachecker.meta-keyword'))
 
-@section('conical','/en/page-title-meta-description-checker')
-
-@section('en-link','/en/page-title-meta-description-checker')
-
-@section('id-link','/id/page-title-meta-description-checker')
-
 @section('content')
     @push('style')
         <style media="screen">
@@ -79,7 +73,8 @@
         </div>
         <div class="card-body">
             <input type="text" name="" class="form-control" value="https://cmlabs.co" id="url">
-            <button type="button" class="btn btn-primary mt-5" name="button" id="execute">@lang('metachecker.btn-get')
+            <button type="button" class="btn btn-primary mt-5" name="button" id="execute">Get Title & Meta Desc.
+                from URL's?
             </button>
             <br> <br>
             <a onclick="copy('url')" style="cursor:pointer;"> <small>@lang('metachecker.copy')</small> </a> <br>
