@@ -17,13 +17,13 @@ toastr.options = {
 };
 let DATA_FINAL;
 $(document).ready(function () {
-    const socket = io('http://128.199.126.255:3000/');
+    const socket = io('http://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
 
     $('#generate').click(function () {
         $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
         let url = $('#url').val();
-        if (url.charAt(-1)==='/')
+        if (url.substr(url.length-1)==='/')
             socket.emit('crawl',url.slice(0,-1));
         else socket.emit('crawl',url);
         console.log('start we crawl your website');
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     socket.on('image_url',url=>{
         // console.log('image');
-        $('#screeshoot').attr('src','http://128.199.126.255:3000/'+url.url);
+        $('#screeshoot').attr('src','https://api.cmlabs.co/'+url.url);
         $('#add').css('display','block');
     });
 
