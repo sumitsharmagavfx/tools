@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
@@ -55,6 +57,20 @@ class ToolsController extends Controller
         return view('Tools/pagespeed', compact('local'));
     }
 
+    public function mobiletest($lang)
+    {
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/mobiletest', compact('local'));
+    }
+
+    public function sitemap($lang)
+    {
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/sitemap', compact('local'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();
@@ -81,5 +97,6 @@ class ToolsController extends Controller
         }else {
             return \redirect('/id/'.$link);
         }
-    }
+    }  
+
 }

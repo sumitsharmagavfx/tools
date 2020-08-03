@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="keyword" content="@yield('meta-keyword')"/>
     <link rel="canonical" href="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>">
+    <meta http-equiv="content-security-policy" content="upgrade-insecure-request">
     <meta property="og:type" content="tools"/>
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('meta-desc')"/>
@@ -17,6 +18,8 @@
     <meta property="og:image" content="{{asset('media/logos/logo-letter-9.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
+    <link rel=”alternate” hreflang=”en-EN” href=”https://tools.cmlabs.co@yield('en-link')” />
+    <link rel=”alternate” hreflang=”id-ID” href=”https://tools.cmlabs.co@yield('id-link')” />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -71,7 +74,7 @@
         <button class="btn btn-hover-text-primary p-0 ml-2" id="">
 					<span class="svg-icon svg-icon-xl">
 						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
-						<a href="/premium-tools" class="icon-1x">
+						<a href="/construction" class="icon-1x">
                           <span class="svg-icon svg-icon-light svg-icon-2x">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
