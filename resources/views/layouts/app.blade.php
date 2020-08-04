@@ -179,6 +179,11 @@
     sticky.update();
   };
 </script>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 @stack('script')
 <!--end::Page Scripts-->
 </body>

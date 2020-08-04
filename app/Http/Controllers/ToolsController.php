@@ -10,95 +10,6 @@ use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
 {
-    public function strikethrough()
-    {
-        return view('Tools/strikethrough');
-    }
-
-    public function FAQ($lang)
-    {
-        App::setLocale($lang);
-        $local = App::getLocale();
-        return view('Tools/faq', compact('local'));
-    }
-
-    public function wordcounter($lang)
-    {
-        App::setLocale($lang);
-        $local = App::getLocale();
-        return view('Tools/wordcounter', compact('local'));
-    }
-
-    public function creditcard($local)
-    {
-        App::setLocale($local);
-        $lang = App::getLocale();
-        return view('Tools/creditcard');
-    }
-
-    public function symbolandtext($local)
-    {
-        App::setLocale($local);
-        $lang = App::getLocale();
-        return view('Tools/symbolandtext');
-    }
-
-    public function metachecker($lang)
-    {
-        App::setLocale($lang);
-        $local = App::getLocale();
-        return view('Tools/metachecker', compact('local'));
-    }
-
-    public function pagespeed($lang)
-    {
-        App::setLocale($lang);
-        $local = App::getLocale();
-        return view('Tools/pagespeed', compact('local'));
-    }
-
-    public function mobiletest($lang)
-    {
-      App::setLocale($lang);
-      $local = App::getLocale();
-      return view('Tools/mobiletest', compact('local'));
-    }
-
-    public function sitemap($lang)
-    {
-      App::setLocale($lang);
-      $local = App::getLocale();
-      return view('Tools/sitemap', compact('local'));
-    }
-
-    public function englishVersion()
-    {
-        $previous = url()->previous();
-        $link = substr($previous, strrpos($previous,'/')+1);
-        App::setLocale('en');
-        session()->put('local','en');
-        session()->save();
-        if ($link == null) {
-          return \redirect('/');
-        }else {
-            return \redirect('/en/'.$link);
-        }
-    }
-
-    public function indonesiaVersion()
-    {
-        $previous = url()->previous();
-        $link = substr($previous, strrpos($previous,'/')+1);
-        App::setLocale('id');
-        session()->put('local','id');
-        session()->save();
-        if ($link == null) {
-          return \redirect('/');
-        }else {
-            return \redirect('/id/'.$link);
-        }
-    }
-
     public function parse_date($date)
     {
         $dateFormat = date_create($date);
@@ -134,5 +45,108 @@ class ToolsController extends Controller
         }
         return $dataToPost;
     }
+
+    public function strikethrough()
+    {
+        return view('Tools/strikethrough');
+    }
+
+    public function FAQ($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/faq', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function wordcounter($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/wordcounter', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function creditcard($local)
+    {
+        App::setLocale($local);
+        $lang = App::getLocale();
+        return view('Tools/creditcard');
+    }
+
+    public function symbolandtext($local)
+    {
+        App::setLocale($local);
+        $lang = App::getLocale();
+        return view('Tools/symbolandtext');
+    }
+
+    public function metachecker($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/metachecker', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function pagespeed($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/pagespeed', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function mobiletest($lang)
+    {
+      $dataID = $this->getBlogWordpressId();
+      $dataEN = $this->getBlogWordpressEn();
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/mobiletest', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function sitemap($lang)
+    {
+      $dataID = $this->getBlogWordpressId();
+      $dataEN = $this->getBlogWordpressEn();
+      App::setLocale($lang);
+      $local = App::getLocale();
+      return view('Tools/sitemap', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function englishVersion()
+    {
+        $previous = url()->previous();
+        $link = substr($previous, strrpos($previous,'/')+1);
+        App::setLocale('en');
+        session()->put('local','en');
+        session()->save();
+        if ($link == null) {
+          return \redirect('/');
+        }else {
+            return \redirect('/en/'.$link);
+        }
+    }
+
+    public function indonesiaVersion()
+    {
+        $previous = url()->previous();
+        $link = substr($previous, strrpos($previous,'/')+1);
+        App::setLocale('id');
+        session()->put('local','id');
+        session()->save();
+        if ($link == null) {
+          return \redirect('/');
+        }else {
+            return \redirect('/id/'.$link);
+        }
+    }
+
+
 
 }
