@@ -346,7 +346,7 @@
     <!--end::Card-->
   </div>
   <div class="col-lg-4">
-    <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="1000">
+    <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="991">
       <!--begin::List Widget 4-->
       <div class="card card-custom card-stretch">
         <!--begin::Header-->
@@ -357,75 +357,37 @@
         <!--end::Header-->
         <!--begin::Body-->
         <div class="card-body pt-2">
+          @for ($i = 0; $i < count($dataEN); $i++)
+          @if($i == 0)
+          <?php $color = "bg-success" ?>
+          @elseif($i % 4 == 0)
+          <?php $color = "bg-primary" ?>
+          @elseif($i % 3 == 0)
+          <?php $color = "bg-danger" ?>
+          @elseif($i % 2 == 0)
+          <?php $color = "bg-warning" ?>
+          @elseif($i % 1 == 0)
+          <?php $color = "bg-info" ?>
+          @endif
           <!--begin::Item-->
+          @if ($i == 0)
           <div class="d-flex align-items-center">
-            <!--begin::Bullet-->
-            <span class="bullet bullet-bar bg-success align-self-stretch"></span>
-            <!--end::Bullet-->
-            <!--begin::Text-->
-            <div class="d-flex flex-column flex-grow-1 mx-4">
-              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">9 Plugin SEO Terbaik untuk Optimasi Web</a>
-              <span class="text-muted font-weight-bold">2020-07-27T07:01:52</span>
-            </div>
-            <!--end::Text-->
-          </div>
-          <!--end:Item-->
-
-          <!--begin::Item-->
+          @else
           <div class="d-flex align-items-center mt-10">
-            <!--begin::Bullet-->
-            <span class="bullet bullet-bar bg-info align-self-stretch"></span>
-            <!--end::Bullet-->
-            <!--begin::Text-->
-            <div class="d-flex flex-column flex-grow-1 mx-4">
-              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">5 Tips Blogging Menarik untuk Situs eCommerce</a>
-              <span class="text-muted font-weight-bold">2020-07-26T14:27:29</span>
+          @endif
+              <span class="bullet bullet-bar {{$color}} align-self-stretch"></span>
+              <div class="d-flex flex-column flex-grow-1 mx-4">
+                @if($local == "en")
+                <a href="{{$dataEN[$i]['link']}}" data-toggle="tooltip" title="{{$dataEN[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataEN[$i]['title'],0,strpos($dataEN[$i]['title'], ' ', 20))}} ...</a>
+                <span class="text-muted font-weight-bold">{{$dataEN[$i]['date']}}</span>
+                @else
+                <a href="{{$dataID[$i]['link']}}" data-toggle="tooltip" title="{{$dataID[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataID[$i]['title'],0,strpos($dataID[$i]['title'], ' ', 20))}} ...</a>
+                <span class="text-muted font-weight-bold">{{$dataID[$i]['date']}}</span>
+                @endif
             </div>
-            <!--end::Text-->
           </div>
           <!--end:Item-->
-
-          <!--begin::Item-->
-          <div class="d-flex align-items-center mt-10">
-            <!--begin::Bullet-->
-            <span class="bullet bullet-bar bg-warning align-self-stretch"></span>
-            <!--end::Bullet-->
-            <!--begin::Text-->
-            <div class="d-flex flex-column flex-grow-1 mx-4">
-              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">SEO Hacks untuk Meningkatkan Traffic Website Bisnis</a>
-              <span class="text-muted font-weight-bold">2020-07-26T14:17:06</span>
-            </div>
-            <!--end::Text-->
-          </div>
-          <!--end:Item-->
-
-          <!--begin::Item-->
-          <div class="d-flex align-items-center mt-10">
-            <!--begin::Bullet-->
-            <span class="bullet bullet-bar bg-danger align-self-stretch"></span>
-            <!--end::Bullet-->
-            <!--begin::Text-->
-            <div class="d-flex flex-column flex-grow-1 mx-4">
-              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">Tips Masuk First Page Google dengan Google Trends</a>
-              <span class="text-muted font-weight-bold">2020-07-26T14:22:51</span>
-            </div>
-            <!--end::Text-->
-          </div>
-          <!--end:Item-->
-
-          <!--begin::Item-->
-          <div class="d-flex align-items-center mt-10">
-            <!--begin::Bullet-->
-            <span class="bullet bullet-bar bg-primary align-self-stretch"></span>
-            <!--end::Bullet-->
-            <!--begin::Text-->
-            <div class="d-flex flex-column flex-grow-1 mx-4">
-              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">7 Hal Paling Berpengaruh Terhadap Kualitas Artikel</a>
-              <span class="text-muted font-weight-bold">2020-07-26T14:24:38</span>
-            </div>
-            <!--end::Text-->
-          </div>
-          <!--end:Item-->
+          @endfor
         </div>
         <!--end::Body-->
       </div>
