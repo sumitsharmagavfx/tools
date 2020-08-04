@@ -97,6 +97,36 @@ class ToolsController extends Controller
         }else {
             return \redirect('/id/'.$link);
         }
-    }  
+    }
+
+    public function getBlogWordpressId()
+    {
+        $dataToPost =[];
+        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=4');
+        $dataArr=json_decode($result_from_json,true );
+        foreach ($dataArr as $data){
+            array_push($dataToPost,[
+                "title" => $data["title"]["rendered"],
+                "date" => $data["date"],
+                "link" => $data["link"]
+            ]);
+        }
+        return $dataToPost;
+    }
+
+    public function getBlogWordpressEn()
+    {
+        $dataToPost =[];
+        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4');
+        $dataArr=json_decode($result_from_json,true );
+        foreach ($dataArr as $data){
+            array_push($dataToPost,[
+                "title" => $data["title"]["rendered"],
+                "date" => $data["date"],
+                "link" => $data["link"]
+            ]);
+        }
+        return $dataToPost;
+    }
 
 }
