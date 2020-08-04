@@ -23,12 +23,13 @@ issues_detail = '';
 
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
+
         $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
             "url" : $('#url').val(),
             "requestScreenshot": true
-        };
+        }
         var dataJson = JSON.stringify(newData);
 
         $.ajax({
@@ -53,17 +54,15 @@ $(document).ready(function() {
                     resultdata(result.mobileFriendliness, result.screenshot.data);
                     mobileissues(result.mobileFriendlyIssues);
                     resourceissues(result.resourceIssues);
-                    sticky.update();
                 } else {
                     var errorstatus = result.testStatus.status;
                     var errormessage = result.testStatus.details;
 
                     err_section.style.display = "block";
                     err_msg.innerHTML = errormessage;
-                    sticky.update();
                 }
+
                 resultdata(result.mobileFriendliness, result.screenshot.data);
-                sticky.update();
             },
             error: function(e) {
                 console.log("Execute Error", e);
@@ -73,10 +72,8 @@ $(document).ready(function() {
 
                 err_section.style = 'display:block';
                 err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
-                sticky.update();
             },
         });
-        sticky.update();
     });
 });
 
