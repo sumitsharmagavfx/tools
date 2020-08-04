@@ -40,6 +40,7 @@ jQuery('#analysis-button').click(function () {
             listener();
             addListenerForCollapsible();
             jQuery('#container-loader').css('display', 'none');
+            sticky.update();
         },
         error:function () {
             jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
@@ -53,6 +54,7 @@ function listener() {
         jQuery('#nav-'+categories[i]).click(function () {
             hideResult();
             jQuery('#'+categories[i]).css('display','block');
+            sticky.update();
         })
     }
 }
