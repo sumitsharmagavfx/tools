@@ -159,7 +159,7 @@ function mobileissues(rules) {
 
             mob_issues.innerHTML = "<h5>Fix the Following Problems</h5>" + issues_detail;
         }
-    }    
+    }
 }
 
 function datenow() {
