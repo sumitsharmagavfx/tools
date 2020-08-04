@@ -99,15 +99,21 @@ class ToolsController extends Controller
         }
     }
 
+    public function parse_date($date)
+    {
+        $dateFormat = date_create($date);
+        return date_format($dateFormat,"d/m/Y H:i");
+    }
+
     public function getBlogWordpressId()
     {
         $dataToPost =[];
-        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=4');
+        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5');
         $dataArr=json_decode($result_from_json,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
                 "title" => $data["title"]["rendered"],
-                "date" => $data["date"],
+                "date" => $this->parse_date($data["date"]),
                 "link" => $data["link"]
             ]);
         }
@@ -117,12 +123,12 @@ class ToolsController extends Controller
     public function getBlogWordpressEn()
     {
         $dataToPost =[];
-        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4');
+        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5');
         $dataArr=json_decode($result_from_json,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
                 "title" => $data["title"]["rendered"],
-                "date" => $data["date"],
+                "date" => $this->parse_date($data["date"]),
                 "link" => $data["link"]
             ]);
         }
