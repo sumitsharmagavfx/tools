@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
@@ -121,6 +119,7 @@ class ToolsController extends Controller
         return view('Tools/pagespeed', compact('local', 'dataID', 'dataEN'));
     }
 
+<<<<<<< HEAD
     public function mobiletest($lang)
     {
       $dataID = $this->getBlogWordpressId();
@@ -139,6 +138,8 @@ class ToolsController extends Controller
       return view('Tools/sitemap', compact('local', 'dataID', 'dataEN'));
     }
 
+=======
+>>>>>>> origin/master
     public function englishVersion()
     {
         $previous = url()->previous();
@@ -166,7 +167,10 @@ class ToolsController extends Controller
             return \redirect('/id/'.$link);
         }
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/master
 }

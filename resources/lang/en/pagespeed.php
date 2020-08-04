@@ -1,6 +1,5 @@
 <?php
 return [
-    "input-hint" => "Input Your URL",
     "copy-0"=>"About PageSpeed",
     "copy-1"=>"<p>PageSpeed tool by CMLABS reviews the overall performance of a web page on each cellular and laptop gadgets, and affords hints on how that web page can be improved.</p>
         <p>PageSpeed tool by CMLABS shows each lab and discipline records approximately a web page. Lab records are beneficial for debugging overall performance issues, as it's miles gathered in a managed environment. However, it could now no longer seize real-world bottlenecks. Field records is beneficial for taking pictures true, international consumer enjoy - however has an extra restrained set of metrics. </p>",
@@ -69,7 +68,11 @@ return [
     "copy-61"=>"Lab records",
     "meta-title" => "Page Speed Test - Site Analysis Tool",
     "meta-desc" => "Use the PageSpeed tool from CMLABS to see the performance, accessibility, SEO and PWA scores from your website.",
+<<<<<<< HEAD
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
     "subtitle" => "CHECK UP PAGE SPEED AND WEB ISSUES",
     "btn-analysis" => "Analyze"
+=======
+    "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool"
+>>>>>>> origin/master
 ];
