@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Date;
@@ -19,15 +20,17 @@ class ToolsController extends Controller
     public function getBlogWordpressId()
     {
         $dataToPost =[];
-        $stream = [
-            'ssl' => [
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true,
-            ],
-        ];
-        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
-        $dataArr=json_decode($result_from_json,true );
+//        $stream = [
+//            'ssl' => [
+//                'verify_peer' => false,
+//                'verify_peer_name' => false,
+//                'allow_self_signed' => true,
+//            ],
+//        ];
+        $client = new Client();
+        $request = $client->get('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5');
+        $response = $request->getBody()->getContents();
+        $dataArr=json_decode($response,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
                 "title" => $data["title"]["rendered"],
@@ -41,15 +44,18 @@ class ToolsController extends Controller
     public function getBlogWordpressEn()
     {
         $dataToPost =[];
-        $stream = [
-            'ssl' => [
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true,
-            ],
-        ];
-        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
-        $dataArr=json_decode($result_from_json,true );
+//        $stream = [
+//            'ssl' => [
+//                'verify_peer' => false,
+//                'verify_peer_name' => false,
+//                'allow_self_signed' => true,
+//            ],
+//        ];
+//        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
+        $client = new Client();
+        $request = $client->get('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5');
+        $response = $request->getBody()->getContents();
+        $dataArr=json_decode($response,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
                 "title" => $data["title"]["rendered"],
