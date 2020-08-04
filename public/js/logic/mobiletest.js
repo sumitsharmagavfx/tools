@@ -1,3 +1,20 @@
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+};
 const dataurl = document.getElementById('url');
 const btn_check = document.getElementById('btn-check');
 const title = document.getElementById('result-title');
@@ -10,6 +27,8 @@ const err_section = document.getElementById('error-section');
 const err_msg = document.getElementById('error-msg');
 const date_now = document.getElementById('date-now');
 const resIssues = document.getElementById('resource-issues');
+$('.error-icon').hide();
+res_section.style.display='none';
 
 // res_section.style.display = "none";
 // err_section.style.display = "none";
@@ -23,6 +42,9 @@ issues_detail = '';
 
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
+        res_section.style.display='none';
+        resIssues.style.display='none';
+        mob_issues.style.display='none';
         $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
@@ -45,21 +67,19 @@ $(document).ready(function() {
                 console.clear(result);
                 console.log(result);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-                $('.row-success').show();
-
+                // $('.row-success').show();
                 if( result.testStatus.status === 'COMPLETE') {
-                    res_section.style.display = "inline";
-
                     resultdata(result.mobileFriendliness, result.screenshot.data);
                     mobileissues(result.mobileFriendlyIssues);
                     resourceissues(result.resourceIssues);
+                    res_section.style.display = "inline";
                     sticky.update();
                 } else {
                     var errorstatus = result.testStatus.status;
                     var errormessage = result.testStatus.details;
-
-                    err_section.style.display = "block";
-                    err_msg.innerHTML = errormessage;
+                    toastr.error('Error',"An error occurred during the test process. Please try again with http/https or try with another website URL");
+                    // err_section.style.display = "block";
+                    // err_msg.innerHTML = errormessage;
                     sticky.update();
                 }
                 resultdata(result.mobileFriendliness, result.screenshot.data);
@@ -68,17 +88,38 @@ $(document).ready(function() {
             error: function(e) {
                 console.log("Execute Error", e);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-
-                err_section.style.display = "block";
-
-                err_section.style = 'display:block';
-                err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
+                toastr.error('Error',"An error occurred during the test process. Please try again or try with another website URL");
+                // err_section.style.display = "block";
+                //
+                // err_section.style = 'display:block';
+                // err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
                 sticky.update();
             },
         });
         sticky.update();
     });
 });
+
+var observer1 = new MutationObserver(function(mutations) {
+    console.log('running');
+    mutations.forEach(function(mutation) {
+        if (mutation.attributeName === "style") {
+            console.log('yeyy');
+            sticky.update();
+        }
+    });
+});
+var observer2 = new MutationObserver(function(mutations) {
+    console.log('running');
+    mutations.forEach(function(mutation) {
+        if (mutation.attributeName === "style") {
+            console.log('yeyy');
+            sticky.update();
+        }
+    });
+});
+observer1.observe(res_section,{attributes:true});
+observer2.observe(err_section,{attributes:true})
 
 function resultdata(titledata, imagedata) {
     if(titledata === 'MOBILE_FRIENDLY') {
