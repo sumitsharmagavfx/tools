@@ -34,9 +34,10 @@ return [
     "desc-4-6" => "It is the error that happens when the text font size for the page is too small and would require users to \"squeeze to zoom\" in order to read. After setting a viewport for your pages, set your text font size to scale appropriately inside the viewport.",
     "sub-title-4-6" => "Clickable elements too close together",
     "desc-4-7" => "Linkable components, for example, buttons and anchor text with links, are so near that a mobile client need significant effort to tap an ideal component with their finger without tapping a neighboring component. To fix these mistakes, make a point to accurately estimate and space buttons and links to make it appropriate for your mobile users.",
-    "meta-title" => "Mobile Friendly Test Tool",
+    "meta-title" => "Mobile Friendly Test Tool – Site Preview Tool",
     "meta-desc" => "The Mobile Friendly Test Tool from CMLABS is a fast and easy way to test whether your site pages are mobile-friendly",
-    "meta-keyword" => "mobile, mobile friendly, mobile friendly test, mobile test, friendly test",
+    "meta-keyword" => "google mobile friendly, mobile friendly, mobile test, google, mobile test tool, mobile friendly test, mobile friendly tool",
+    "subtitle" => "SITES PREVIEW ON MOBILE",
     "result-title" => "Test Result",
     "result-screenshot" => "Page Screenshot",
 

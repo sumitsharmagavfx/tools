@@ -180,5 +180,5 @@ input.addEventListener('input', function() {
             topKeywords5.appendChild(li);
         }
     }
-
+      sticky.update();
 });

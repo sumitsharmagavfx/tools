@@ -124,6 +124,7 @@ function resourceissues(res_issues) {
 
         resIssues.innerHTML = "<h5>Page Loading Issues</h5>" + issueurl;
     }
+
 }
 
 function mobileissues(rules) {
@@ -158,7 +159,7 @@ function mobileissues(rules) {
 
             mob_issues.innerHTML = "<h5>Fix the Following Problems</h5>" + issues_detail;
         }
-    }
+    }    
 }
 
 function datenow() {

@@ -35,6 +35,14 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKJKT46');</script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKJKT46"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -164,6 +172,13 @@
 <!--begin::Page Scripts(used by this page)-->
 <script src="{{asset('js/pages/widgets.js?v=7.0.5')}}"></script>
 <script>const lang = "{{\Illuminate\Support\Facades\App::getLocale()}}"</script>
+<script type="text/javascript">
+  var sticky = new Sticky('.sticky');
+  sticky.update();
+  window.onresize = function(e) {
+    sticky.update();
+  };
+</script>
 @stack('script')
 <!--end::Page Scripts-->
 </body>

@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "SITEMAP GENERATOR  <small>BUAT SITEMAP XML GOOGLE GRATIS (MAKSIMAL 500 HALAMAN)</small>",
+    "title" => "SITEMAP GENERATOR  <small>PERKAYA PETA SITUS UNTUK CRAWLER</small>",
     "btn-generate" => "Generate",
     "input-hint" => "Masukkan URL Anda",
     "result-title" => "HASIL SITEMAP",
@@ -28,7 +28,7 @@ return [
     "copy-title-6" => "SITEMAP GENERATOR DAN SEO",
     "copy-6-1"=>"Situs web dibuat agar informasi yang dikandungnya dapat ditemukan oleh pengguna. Oleh karena itu impian setiap pemilik situs web adalah untuk mencapai peringkat tertinggi dalam SERP. Membuat, mengirim, dan memperbarui sitemap menggunakan sitemap generator akan sangat membantu memastikan Anda memperoleh peringkat yang lebih tinggi dalam SERP untuk kata kunci yang ditargetkan.",
     "copy-6-2"=>"Rahasia untuk mendapatkan hasil terbaik dari generator sitemap terletak pada kebutuhan spesifik Anda. Mungkin ada banyak tool di internet, tetapi tidak ada jaminan bahwa semuanya efektif. Karena itu Anda harus meluangkan waktu, memeriksa tools ini dan pilih satu yang menawarkan hasil nyata untuk Anda. Saat ini, Sitemap Generator adalah yang terbaik, cobalah tool ini dan bisnis Anda akan menigkat pesat dari sebelumnya. Membuat dan memperbarui sitemap kini mudah dan bermanfaat.",
-    "meta-title" => "Sitemap Generator - cmlabs",
+    "meta-title" => "Sitemap Generator – Developer Tool",
     "meta-desc" => "Aplikasikan sitemap generator untuk ketahui detail halaman yang tersedia & permudah mesin pencari mengindeks laman",
-    "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
+    "meta-keyword" => "sitemap generator, sitemap, sitemap check, seo tool, sitemap xml, download sitemap",
 ];

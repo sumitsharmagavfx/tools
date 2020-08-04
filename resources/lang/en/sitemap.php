@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "SITEMAP GENERATOR  <small>CREATE A FREE GOOGLE XML SITEMAP (MAX 500 PAGES)</small>",
+    "title" => "SITEMAP GENERATOR  <small>ENHANCE SITEMAP FOR CRAWLERS</small>",
     "btn-generate" => "Generate",
     "input-hint" => "Input Your URL",
     "result-title" => "SITEMAP RESULTS",
@@ -28,9 +28,9 @@ return [
     "copy-title-6" => "SITEMAP GENERATORS AND SEO ",
     "copy-6-1"=>"Sites exists with the goal that the data they contain can be found by clients. It is in this way every site proprietor's goal to achieve the most elevated conceivable positioning in SERPs. Making, submitting and refreshing sitemaps utilizing a sitemap generator will go far in guaranteeing that you increase higher rankings in SERPs for your objective catchphrases. ",
     "copy-6-2"=>"The key to getting the best from a sitemap generator lies in understanding your particular necessities. We may have numerous apparatuses in the market, however there is no assurance that every one of them are compelling. You ought to in this way take as much time as necessary, investigate these tools and just settle for one that offers the best feature. Right now, Sitemap Generator by CMLABS is the best, us it and move your business to the following degree of incomprehensible achievement. Making and refreshing sitemaps is easy and beneficial.",
-    "meta-title" => "Sitemap Generator - cmlabs",
-    "meta-desc" => "Aplikasikan sitemap generator untuk ketahui detail halaman yang tersedia & permudah mesin pencari mengindeks laman",
-    "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
+    "meta-title" => "Sitemap Generator – Developer Tool",
+    "meta-desc" => "Utilize the sitemap generator to find out the available page details & get the best of search engines crawlers",
+    "meta-keyword" => "sitemap generator, sitemap, sitemap check, seo tool, sitemap xml, download sitemap",
 
 
 ];
