@@ -136,9 +136,13 @@
                   </div>
               </div>
               <div class="card-body">
-                  <p>  @lang('wordcounter.copy-desc-1-1') </p>
                   <p>@lang('wordcounter.copy-desc-1-1')</p>
-                  <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="">
+                  <center>
+                  <div class="col-12 col-md-9">
+                    <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="">
+
+                  </div>
+                </center>
               </div>
               <div class="card-header">
                   <div class="card-title">
