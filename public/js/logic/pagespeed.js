@@ -18,6 +18,7 @@ toastr.options = {
 };
 const categories = ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'];
 hideResult();
+
 jQuery('#analysis-button').click(function () {
     let urlWeb = jQuery('#url').val();
     jQuery('#spinner').addClass('spinner spinner-success spinner-right');
@@ -41,6 +42,17 @@ jQuery('#analysis-button').click(function () {
             addListenerForCollapsible();
             jQuery('#container-loader').css('display', 'none');
             sticky.update();
+            var target= $('.collapse');
+            for (let i = 0; i < target.length; i++) {
+                var observer = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.attributeName === "class") {
+                            sticky.update();
+                        }
+                    });
+                });
+                observer.observe(target[i],{attributes:true});
+            }
         },
         error:function () {
             jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
