@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Date;
-use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller

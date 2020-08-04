@@ -6,12 +6,6 @@
 
 @section('meta-keyword', Lang::get('pagespeed.meta-keyword'))
 
-@section('conical','/en/page-speed')
-
-@section('en-link','/en/page-speed')
-
-@section('id-link','/id/page-speed')
-
 @section('content')
 <div class="card card-custom gutter-b">
   <div class="card-header">
