@@ -42,19 +42,15 @@ issues_detail = '';
 
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
-<<<<<<< HEAD
-
-=======
         res_section.style.display='none';
         resIssues.style.display='none';
         mob_issues.style.display='none';
->>>>>>> e9686608e2aa8e6a4050e5e434c821674115cdc1
         $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
             "url" : $('#url').val(),
             "requestScreenshot": true
-        }
+        };
         var dataJson = JSON.stringify(newData);
 
         $.ajax({
@@ -76,14 +72,6 @@ $(document).ready(function() {
                     resultdata(result.mobileFriendliness, result.screenshot.data);
                     mobileissues(result.mobileFriendlyIssues);
                     resourceissues(result.resourceIssues);
-<<<<<<< HEAD
-                } else {
-                    var errorstatus = result.testStatus.status;
-                    var errormessage = result.testStatus.details;
-
-                    err_section.style.display = "block";
-                    err_msg.innerHTML = errormessage;
-=======
                     res_section.style.display = "inline";
                     sticky.update();
                 } else {
@@ -93,30 +81,22 @@ $(document).ready(function() {
                     // err_section.style.display = "block";
                     // err_msg.innerHTML = errormessage;
                     sticky.update();
->>>>>>> e9686608e2aa8e6a4050e5e434c821674115cdc1
                 }
-
                 resultdata(result.mobileFriendliness, result.screenshot.data);
+                sticky.update();
             },
             error: function(e) {
                 console.log("Execute Error", e);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-<<<<<<< HEAD
-
-                err_section.style.display = "block";
-
-                err_section.style = 'display:block';
-                err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
-=======
                 toastr.error('Error',"An error occurred during the test process. Please try again or try with another website URL");
                 // err_section.style.display = "block";
                 //
                 // err_section.style = 'display:block';
                 // err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
                 sticky.update();
->>>>>>> e9686608e2aa8e6a4050e5e434c821674115cdc1
             },
         });
+        sticky.update();
     });
 });
 
