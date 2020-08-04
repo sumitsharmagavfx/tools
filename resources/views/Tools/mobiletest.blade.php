@@ -31,7 +31,7 @@
         <div class="card card-custom card-stretch gutter-b">
             <div class="card-header">
                 <div class="card-title">
-                    <h3 class="card-label">MOBILE FRIENDLY TEST</h3>
+                    <h3 class="card-label">MOBILE FRIENDLY TEST <small>@lang('mobiletest.subtitle')</small></h3>
                 </div>
             </div>
             <div class="card-body">
@@ -127,60 +127,154 @@
     </div>
 </div>
 
-        <div class="card card-custom mb-4">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3 class="card-label">@lang('mobiletest.title-2')</h3>
-                </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('mobiletest.desc-2-1')</p>
-            </div>
-            <div class="card-header">
-                <div class="card-title">
-                    <h3 class="card-label">@lang('mobiletest.title-3')</h3>
-                </div>
-            </div>
-            <div class="card-body">
-                <p>@lang('mobiletest.desc-3-1')</p>
-                <p>@lang('mobiletest.desc-3-2')</p>
-                <h5>@lang('mobiletest.sub-title-3-1')</h5>
-                <p>@lang('mobiletest.desc-3-3')</p>
-                <p>@lang('mobiletest.desc-3-4')</p>
-                <h5>@lang('mobiletest.sub-title-3-2')</h5>
-                <p>@lang('mobiletest.desc-3-5')</p>
-                <ul>
-                  <li>@lang('mobiletest.desc-3-6')</li>
-                  <li>@lang('mobiletest.desc-3-7')</li>
-                  <li>@lang('mobiletest.desc-3-8')</li>
-                  <li>@lang('mobiletest.desc-3-9')</li>
-                </ul>
-                <h5>@lang('mobiletest.sub-title-3-3')</h5>
-                <p>@lang('mobiletest.desc-3-10')</p>
-                <h5>@lang('mobiletest.sub-title-3-4')</h5>
-                <p>@lang('mobiletest.desc-3-11')</p>
-            </div>
-            <div class="card-header">
-                <div class="card-title">
-                    <h3 class="card-label">@lang('mobiletest.title-4')</h3>
-                </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('mobiletest.desc-4-1')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h5>
-              <p>@lang('mobiletest.desc-4-2')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h5>
-              <p>@lang('mobiletest.desc-4-3')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h5>
-              <p>@lang('mobiletest.desc-4-4')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h5>
-              <p>@lang('mobiletest.desc-4-5')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h5>
-              <p>@lang('mobiletest.desc-4-6')</p>
-              <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h5>
-              <p>@lang('mobiletest.desc-4-7')</p>
+
+
+<div class="row" data-sticky-container>
+  <div class="col-lg-8">
+    <div class="card card-custom mb-4 mb-5">
+        <div class="card-header">
+            <div class="card-title">
+                <h3 class="card-label">@lang('mobiletest.title-2')</h3>
             </div>
         </div>
+        <div class="card-body">
+          <p>@lang('mobiletest.desc-2-1')</p>
+        </div>
+        <div class="card-header">
+            <div class="card-title">
+                <h3 class="card-label">@lang('mobiletest.title-3')</h3>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>@lang('mobiletest.desc-3-1')</p>
+            <p>@lang('mobiletest.desc-3-2')</p>
+            <h5>@lang('mobiletest.sub-title-3-1')</h5>
+            <p>@lang('mobiletest.desc-3-3')</p>
+            <p>@lang('mobiletest.desc-3-4')</p>
+            <h5>@lang('mobiletest.sub-title-3-2')</h5>
+            <p>@lang('mobiletest.desc-3-5')</p>
+            <ul>
+              <li>@lang('mobiletest.desc-3-6')</li>
+              <li>@lang('mobiletest.desc-3-7')</li>
+              <li>@lang('mobiletest.desc-3-8')</li>
+              <li>@lang('mobiletest.desc-3-9')</li>
+            </ul>
+            <h5>@lang('mobiletest.sub-title-3-3')</h5>
+            <p>@lang('mobiletest.desc-3-10')</p>
+            <h5>@lang('mobiletest.sub-title-3-4')</h5>
+            <p>@lang('mobiletest.desc-3-11')</p>
+        </div>
+        <div class="card-header">
+            <div class="card-title">
+                <h3 class="card-label">@lang('mobiletest.title-4')</h3>
+            </div>
+        </div>
+        <div class="card-body">
+          <p>@lang('mobiletest.desc-4-1')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h5>
+          <p>@lang('mobiletest.desc-4-2')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h5>
+          <p>@lang('mobiletest.desc-4-3')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h5>
+          <p>@lang('mobiletest.desc-4-4')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h5>
+          <p>@lang('mobiletest.desc-4-5')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h5>
+          <p>@lang('mobiletest.desc-4-6')</p>
+          <h5><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h5>
+          <p>@lang('mobiletest.desc-4-7')</p>
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="1000">
+      <!--begin::List Widget 4-->
+      <div class="card card-custom card-stretch">
+        <!--begin::Header-->
+        <div class="card-header border-0">
+          <h3 class="card-title font-weight-bolder text-dark">cmlabs Blog</h3>
+
+        </div>
+        <!--end::Header-->
+        <!--begin::Body-->
+        <div class="card-body pt-2">
+          <!--begin::Item-->
+          <div class="d-flex align-items-center">
+            <!--begin::Bullet-->
+            <span class="bullet bullet-bar bg-success align-self-stretch"></span>
+            <!--end::Bullet-->
+            <!--begin::Text-->
+            <div class="d-flex flex-column flex-grow-1 mx-4">
+              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">9 Plugin SEO Terbaik untuk Optimasi Web</a>
+              <span class="text-muted font-weight-bold">2020-07-27T07:01:52</span>
+            </div>
+            <!--end::Text-->
+          </div>
+          <!--end:Item-->
+
+          <!--begin::Item-->
+          <div class="d-flex align-items-center mt-10">
+            <!--begin::Bullet-->
+            <span class="bullet bullet-bar bg-info align-self-stretch"></span>
+            <!--end::Bullet-->
+            <!--begin::Text-->
+            <div class="d-flex flex-column flex-grow-1 mx-4">
+              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">5 Tips Blogging Menarik untuk Situs eCommerce</a>
+              <span class="text-muted font-weight-bold">2020-07-26T14:27:29</span>
+            </div>
+            <!--end::Text-->
+          </div>
+          <!--end:Item-->
+
+          <!--begin::Item-->
+          <div class="d-flex align-items-center mt-10">
+            <!--begin::Bullet-->
+            <span class="bullet bullet-bar bg-warning align-self-stretch"></span>
+            <!--end::Bullet-->
+            <!--begin::Text-->
+            <div class="d-flex flex-column flex-grow-1 mx-4">
+              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">SEO Hacks untuk Meningkatkan Traffic Website Bisnis</a>
+              <span class="text-muted font-weight-bold">2020-07-26T14:17:06</span>
+            </div>
+            <!--end::Text-->
+          </div>
+          <!--end:Item-->
+
+          <!--begin::Item-->
+          <div class="d-flex align-items-center mt-10">
+            <!--begin::Bullet-->
+            <span class="bullet bullet-bar bg-danger align-self-stretch"></span>
+            <!--end::Bullet-->
+            <!--begin::Text-->
+            <div class="d-flex flex-column flex-grow-1 mx-4">
+              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">Tips Masuk First Page Google dengan Google Trends</a>
+              <span class="text-muted font-weight-bold">2020-07-26T14:22:51</span>
+            </div>
+            <!--end::Text-->
+          </div>
+          <!--end:Item-->
+
+          <!--begin::Item-->
+          <div class="d-flex align-items-center mt-10">
+            <!--begin::Bullet-->
+            <span class="bullet bullet-bar bg-primary align-self-stretch"></span>
+            <!--end::Bullet-->
+            <!--begin::Text-->
+            <div class="d-flex flex-column flex-grow-1 mx-4">
+              <a href="#" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">7 Hal Paling Berpengaruh Terhadap Kualitas Artikel</a>
+              <span class="text-muted font-weight-bold">2020-07-26T14:24:38</span>
+            </div>
+            <!--end::Text-->
+          </div>
+          <!--end:Item-->
+        </div>
+        <!--end::Body-->
+      </div>
+      <!--end:List Widget 4-->
+    </div>
+  </div>
+</div>
+
 
 
 @endsection

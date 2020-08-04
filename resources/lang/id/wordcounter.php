@@ -84,6 +84,6 @@ return [
     "copy-desc-6-25" => "tipe konten",
     "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
     "meta-title" => "Word Counter Online – Content Writing Tools",
-    "meta-desc" => "Hitung jumlah kata artikel kamu disini. Cukup copy dan paste, lalu CMLABS Word Counter tool menghitung kata dan keyword density otomatis",
+    "meta-desc" => "Terapkan Word Counter dari CMLABS untuk hitung jumlah kata dan keyword density otomatis",
     "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
 ];

@@ -1,6 +1,6 @@
 <?php
 return [
-    "subtitle" => "TURN ON RICH SNIPPET IN SERP",
+    "subtitle" => "ACTIVATE RICH SNIPPET IN SERP",
     "btn-add" => "Add Another FAQ",
     "btn-copy" => "Copy",
     "btn-test" => "Test Rich Result!",

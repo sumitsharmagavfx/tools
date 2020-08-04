@@ -49,6 +49,7 @@ $(document).ready(function () {
             addData(response.url[datum],parseInt(datum)+1);
         }
         DATA_FINAL = response;
+        sticky.update();
     });
 
     socket.on('notfound', msg =>{
@@ -91,4 +92,3 @@ function updateProgressBar(data) {
 function clearTable() {
     $("#table tbody tr").remove();
 }
-

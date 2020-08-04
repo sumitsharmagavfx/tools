@@ -34,9 +34,10 @@ return [
     "desc-4-6" => "Ukuran font dalam halaman yang terlalu kecil dan sulit dibaca akan mempersulit pengunjung yang menggunakan smartphone sehingga harus men-zoom agar dapat membaca. Setelah menentukan viewport untuk halaman Anda, atur ukuran font Anda untuk skala dengan benar dalam viewport.",
     "sub-title-4-6" => "Elemen yang dapat diklik terlalu berdekatan",
     "desc-4-7" => "Elemen yang dapat disentuh, seperti tombol dan link navigasi yang berdekatan akan membuat pengguna ponsel kesulitan untuk mengetuk elemen yang diinginkan dengan jari mereka tanpa terganggu elemen di sebelahnya. Untuk memperbaiki kesalahan ini, pastikan untuk mengukur dengan benar tombol spasi dan ruang serta link navigasi agar sesuai untuk pengunjung seluler.",
-    "meta-title" => "Mobile Friendly Test Tool",
+    "meta-title" => "Mobile Friendly Test Tool – Site Preview Tool",
     "meta-desc" => "Mobile Friendly Test Tool dari CMLABS adalah cara cepat dan mudah untuk menguji apakah halaman situs Anda mobile-friendly",
-    "meta-keyword" => "mobile, mobile friendly, mobile friendly test, tes mobile, tes friendly",
+    "meta-keyword" => "google mobile friendly, mobile friendly, mobile test, google, mobile test tool, mobile friendly test, mobile friendly tool",
+    "subtitle" => "TES TAMPILAN WEB DI MOBILE",
     "result-title" => "Hasil Tes",
-    "result-screenshot" => "Screenshot Halaman",    
+    "result-screenshot" => "Screenshot Halaman",
 ];

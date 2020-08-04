@@ -1,12 +1,12 @@
 <?php
 return [
-    "title" => "TITLE & META DESCRIPTION CHECKER <small>TINGKATKAN SKILL MENULIS</small>",
+    "title" => "TITLE & META DESCRIPTION CHECKER <small>CEK PANJANG JUDUL DAN META</small>",
     "desc-result" => "CMLABS mengkhususkan diri pada pekerjaan SEO Enterprise, Content Writing, Copywriting, dan Content Marketing. Cek penawaran 2020?",
     "copy" => "Copy ke clipboard!",
     "btn-get" => "Cek Judul dan Meta Deskripsi dari URL",
     "page-title" => "Judul Halaman",
     "meta-title" => "Page Title and Meta Description Length Checker",
-    "meta-desc" => "Cek panjang Judul Halaman dan Meta Descriotion website anda di content writing Tools di website cmlabs. Tingkatkan skill menulis anda!",
+    "meta-desc" => "Cek panjang Judul Halaman dan Meta Description website Anda di content writing Tools di website CMLABS. Tingkatkan skill menulis Anda!",
     "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
     "copy-0" => "Mengapa Anda membutuhkan Tool ini?",
     "copy-1"=>"SERP</a>, singkatan dari <i class=\"font-weight-bold\" style=\"color:black; font-size:1rem\">Search Engine Results Page</i> menjadi medium penting dari hasil aktifitas SEO (Search Engine Optimization). Pekerjaan ini menuntut perhatian khusus dari setiap pelaku marketers, dari junior hingga level senior. Tiga atribut paling penting untuk SERP adalah <b>URL</b>, <b>Page Title</b>, dan <b>Meta Description</b>",

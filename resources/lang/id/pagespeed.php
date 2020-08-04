@@ -67,8 +67,9 @@ return [
     "copy-59"=>"Mengapa data kecepatan Chrome User Experience Report real-time tidak tersedia untuk sumber asli?",
     "copy-60"=>"Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa halaman root asal harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang cukup yang memberikan pandangan yang representatif, anonim tentang kinerja asal di semua URL asal.",
     "copy-61"=>"Data Lab",
-    "meta-title" => "Page Speed Test — cmlabs",
+    "meta-title" => "Page Speed Test - Site Analysis Tool",
     "meta-desc" => "Gunakan PageSpeed tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
+    "subtitle" => "PERIKSA KECEPATAN SITUS DAN MASALAH WEB",
     "btn-analysis" => "Analisis"
 ];

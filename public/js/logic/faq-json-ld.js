@@ -38,7 +38,10 @@ jQuery(document).ready(function () {
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
+        sticky.update();
     });
+
+
 
 });
 
