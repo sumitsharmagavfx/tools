@@ -19,7 +19,14 @@ class ToolsController extends Controller
     public function getBlogWordpressId()
     {
         $dataToPost =[];
-        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5');
+        $stream = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ],
+        ];
+        $result_from_json = file_get_contents('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
         $dataArr=json_decode($result_from_json,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
@@ -34,7 +41,14 @@ class ToolsController extends Controller
     public function getBlogWordpressEn()
     {
         $dataToPost =[];
-        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5');
+        $stream = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ],
+        ];
+        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
         $dataArr=json_decode($result_from_json,true );
         foreach ($dataArr as $data){
             array_push($dataToPost,[
