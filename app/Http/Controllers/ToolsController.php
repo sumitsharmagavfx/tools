@@ -28,7 +28,7 @@ class ToolsController extends Controller
 //            ],
 //        ];
         $client = new Client();
-        $request = $client->get('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5');
+        $request = $client->get('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
         $response = $request->getBody()->getContents();
         $dataArr=json_decode($response,true );
         foreach ($dataArr as $data){
@@ -53,7 +53,7 @@ class ToolsController extends Controller
 //        ];
 //        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
         $client = new Client();
-        $request = $client->get('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5');
+        $request = $client->get('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
         $response = $request->getBody()->getContents();
         $dataArr=json_decode($response,true );
         foreach ($dataArr as $data){
