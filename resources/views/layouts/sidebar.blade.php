@@ -12,6 +12,23 @@
     <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid pt-7">
         <!--begin::Nav-->
         <ul class="nav flex-column">
+          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
+              data-boundary="window" title="SSL Checker">
+              <a href="/{{$local}}/ssl-checker"
+                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('ssl-checker')">
+                <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-29-055858/theme/html/demo4/dist/../src/media/svg/icons/Devices/Tablet.svg--><svg
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <rect x="0" y="0" width="24" height="24"/>
+                          <path
+                              d="M6.5,4 L6.5,20 L17.5,20 L17.5,4 L6.5,4 Z M7,2 L17,2 C18.1045695,2 19,2.8954305 19,4 L19,20 C19,21.1045695 18.1045695,22 17,22 L7,22 C5.8954305,22 5,21.1045695 5,20 L5,4 C5,2.8954305 5.8954305,2 7,2 Z"
+                              fill="#000000" fill-rule="nonzero"/>
+                          <polygon fill="#000000" opacity="0.3" points="6.5 4 6.5 20 17.5 20 17.5 4"/>
+                      </g>
+                  </svg><!--end::Svg Icon--></span>
+              </a>
+          </li>
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
                 data-boundary="window" title="Mobile Friendly Test">
                 <a href="/{{$local}}/mobile-test"

@@ -38,7 +38,7 @@ class ToolsController extends Controller
 //                "link" => $data["link"]
 //            ]);
 //        }
-        return json_encode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
     }
 
     public function getBlogWordpressEn()
@@ -69,6 +69,15 @@ class ToolsController extends Controller
     public function strikethrough()
     {
         return view('Tools/strikethrough');
+    }
+
+    public function sslchecker($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();        
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/sslchecker', compact('local', 'dataID', 'dataEN'));
     }
 
     public function FAQ($lang)
