@@ -28,7 +28,7 @@ class ToolsController extends Controller
 //            ],
 //        ];
 //        $client = new Client();
-//        $request = $client->get('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
+//        $request = $client->get('https://api.cmlabs.co/wordpress?lang=en');
 //        $response = $request->getBody()->getContents();
 //        $dataArr=json_decode($response,true );
 //        foreach ($dataArr as $data){
@@ -38,7 +38,7 @@ class ToolsController extends Controller
 //                "link" => $data["link"]
 //            ]);
 //        }
-        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+        return json_encode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
     }
 
     public function getBlogWordpressEn()
