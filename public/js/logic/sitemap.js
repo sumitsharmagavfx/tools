@@ -22,7 +22,8 @@ $(document).ready(function () {
     $('#generate').click(function () {
         $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
-        let url = $('#url').val();
+        let match =/^(http?|ftp):\/\//;
+        let url = $('#url').val().replace(match,"https://");
         if (url.substr(url.length-1)==='/')
             socket.emit('crawl',url.slice(0,-1));
         else socket.emit('crawl',url);
