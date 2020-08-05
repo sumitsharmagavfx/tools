@@ -17,7 +17,7 @@ toastr.options = {
 };
 let DATA_FINAL;
 $(document).ready(function () {
-    const socket = io('http://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
 
     $('#generate').click(function () {
         $('#spin').addClass("spinner spinner-success spinner-right");

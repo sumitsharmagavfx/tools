@@ -9,8 +9,7 @@
     <meta name="description" content="@yield('meta-desc')" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="keyword" content="@yield('meta-keyword')"/>
-    <link rel="canonical" href="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>">
-    <meta http-equiv="content-security-policy" content="upgrade-insecure-request">
+    <link rel="canonical" href="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>">    
     <meta property="og:type" content="tools"/>
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('meta-desc')"/>
