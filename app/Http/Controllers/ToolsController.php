@@ -74,7 +74,7 @@ class ToolsController extends Controller
     public function sslchecker($lang)
     {
         $dataID = $this->getBlogWordpressId();
-        $dataEN = $this->getBlogWordpressEn();        
+        $dataEN = $this->getBlogWordpressEn();
         App::setLocale($lang);
         $local = App::getLocale();
         return view('Tools/sslchecker', compact('local', 'dataID', 'dataEN'));
@@ -176,6 +176,14 @@ class ToolsController extends Controller
         }
     }
 
+    public function loadssl()
+    {
+        $url = http_get_request_body();
+        $client = new Client();
+        $request = $client->get('https://ssl-cert.glitch.me/?host='.$url);
+        $response = $request->getBody()->getContents();
+        echo $response;
+    }
 
 
 }

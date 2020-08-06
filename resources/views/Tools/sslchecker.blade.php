@@ -22,10 +22,10 @@
   <div class="card-body">
     <div class="row">
       <div class="col-lg-10 mb-5">
-          <input type="text" name="" class="form-control" value="" placeholder="Input Your URL">
+          <input id="url" type="text" name="" class="form-control" value="" placeholder="Input Your URL">
       </div>
       <div class="col-lg-2 mb-5">
-        <button type="button" class="btn btn-success form-control" name="button">CHECK!</button>
+        <button id="btn-ssl" type="button" class="btn btn-success form-control" name="button">CHECK!</button>
       </div>
     </div>
   </div>

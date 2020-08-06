@@ -46,7 +46,7 @@
   <div class="col-lg-4">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
-      <form class="" target="_blank" rel="”nofollow" noreferrer”="" action="https://search.google.com/test/rich-results" method="post">
+      <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
         <div class="card-body">
           <div class="row">
             <div class="col-lg-5">
