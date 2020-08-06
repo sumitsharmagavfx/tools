@@ -29,7 +29,7 @@
 <div class="card card-custom mb-5" id="kt_page_stretched_card">
   <div class="card-header">
     <div class="card-title">
-      <h3 class="card-label">@lang('metachecker.title')</h3>
+      <h1 class="card-label">@lang('metachecker.title')</h1>
     </div>
   </div>
 </div>
@@ -77,7 +77,7 @@
     <div class="card card-custom mb-5">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">URL's <small></small></h3>
+          <h2 class="card-label">URL's</h2>
         </div>
       </div>
       <div class="card-body">
@@ -94,7 +94,7 @@
     <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('metachecker.page-title') <small></small></h3>
+          <h2 class="card-label">@lang('metachecker.page-title')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -108,7 +108,7 @@
     <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">META DESCRIPTION <small></small></h3>
+          <h2 class="card-label">META DESCRIPTION</h2>
         </div>
       </div>
       <div class="card-body">
@@ -121,7 +121,7 @@
     <div class="card card-custom">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('metachecker.copy-0')</h3>
+          <h2 class="card-label">@lang('metachecker.copy-0')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -139,7 +139,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">URL</h3>
+          <h2 class="card-label">URL</h2>
         </div>
       </div>
       <div class="card-body">
@@ -147,7 +147,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('metachecker.copy-4')</h3>
+          <h2 class="card-label">@lang('metachecker.copy-4')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -155,7 +155,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('metachecker.copy-6')</h3>
+          <h2 class="card-label">@lang('metachecker.copy-6')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -163,19 +163,19 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('metachecker.copy-8')</h3>
+          <h2 class="card-label">@lang('metachecker.copy-8')</h2>
         </div>
       </div>
       <div class="card-body">
         <center>
           <div class="col-12 col-md-7">
-            <img src="https://cmlabs.co/wp-content/uploads/2020/06/serp-google-cmlabs-1024x820.png" width="100%" alt="">
+            <img src="https://cmlabs.co/wp-content/uploads/2020/06/serp-google-cmlabs-1024x820.png" width="100%" alt="serp google cmlabs">
           </div>
         </center>
 
         <p>@lang('metachecker.copy-9')</p>
 
-        <h5>@lang('metachecker.copy-10')</h5>
+        <h3>@lang('metachecker.copy-10')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -189,7 +189,7 @@
           </tbody>
         </table>
 
-        <h5>@lang('metachecker.copy-15')</h5>
+        <h3>@lang('metachecker.copy-15')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -215,7 +215,7 @@
           </tbody>
         </table>
 
-        <h5>@lang('metachecker.copy-26')</h5>
+        <h3>@lang('metachecker.copy-26')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -242,7 +242,7 @@
         </table>
         <center>
           <div class="col-12 col-md-7">
-            <img src="https://cmlabs.co/wp-content/uploads/2020/06/galaxy-note-10-cmlabs.png" width="100%" alt="">
+            <img src="https://cmlabs.co/wp-content/uploads/2020/06/galaxy-note-10-cmlabs.png" width="100%" alt="galaxy note 10 cmlabs">
           </div>
         </center>
       </div>
@@ -250,55 +250,7 @@
     </div>
   </div>
 
-  <div class="col-lg-4">
-    <div class="card card-custom sticky " data-sticky="true" data-margin-top="100" data-sticky-for="991">
-      <!--begin::List Widget 4-->
-      <div class="card card-custom card-stretch">
-        <!--begin::Header-->
-        <div class="card-header border-0">
-          <h3 class="card-title font-weight-bolder text-dark">cmlabs Blog</h3>
-
-        </div>
-        <!--end::Header-->
-        <!--begin::Body-->
-        <div class="card-body pt-2">
-          @for ($i = 0; $i < count($dataEN); $i++)
-          @if($i == 0)
-          <?php $color = "bg-success" ?>
-          @elseif($i % 4 == 0)
-          <?php $color = "bg-primary" ?>
-          @elseif($i % 3 == 0)
-          <?php $color = "bg-danger" ?>
-          @elseif($i % 2 == 0)
-          <?php $color = "bg-warning" ?>
-          @elseif($i % 1 == 0)
-          <?php $color = "bg-info" ?>
-          @endif
-          <!--begin::Item-->
-          @if ($i == 0)
-          <div class="d-flex align-items-center">
-          @else
-          <div class="d-flex align-items-center mt-10">
-          @endif
-              <span class="bullet bullet-bar {{$color}} align-self-stretch"></span>
-              <div class="d-flex flex-column flex-grow-1 mx-4">
-                @if($local == "en")
-                <a href="{{$dataEN[$i]['link']}}" data-toggle="tooltip" title="{{$dataEN[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataEN[$i]['title'],0,strpos($dataEN[$i]['title'], ' ', 20))}} ...</a>
-                <span class="text-muted font-weight-bold">{{$dataEN[$i]['date']}}</span>
-                @else
-                <a href="{{$dataID[$i]['link']}}" data-toggle="tooltip" title="{{$dataID[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataID[$i]['title'],0,strpos($dataID[$i]['title'], ' ', 20))}} ...</a>
-                <span class="text-muted font-weight-bold">{{$dataID[$i]['date']}}</span>
-                @endif
-            </div>
-          </div>
-          <!--end:Item-->
-          @endfor
-        </div>
-        <!--end::Body-->
-      </div>
-      <!--end:List Widget 4-->
-    </div>
-  </div>
+  @include('layouts/stickybar')
 </div>
 
 

@@ -31,7 +31,7 @@
                   </span>
                 </div>
                 <div class="d-flex flex-column">
-                  <span class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">{{$datum['title']}}</span>                                    
+                  <span class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">{{$datum['title']}}</span>
                   <div class="text-dark-75">
                     @if(App::getLocale()=="id")
                    {{$datum['description']}}
