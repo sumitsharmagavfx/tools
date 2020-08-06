@@ -17,84 +17,6 @@ class ToolsController extends Controller
         return date_format($dateFormat,"d/m/Y H:i");
     }
 
-    public function getEN()
-    {
-      $curl = curl_init();
-
-  		curl_setopt_array($curl, array(
-  		  CURLOPT_URL => "https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5",
-  		  CURLOPT_RETURNTRANSFER => true,
-  		  CURLOPT_ENCODING => "",
-  		  CURLOPT_MAXREDIRS => 10,
-  		  CURLOPT_TIMEOUT => 0,
-  		  CURLOPT_FOLLOWLOCATION => false,
-  		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  		  CURLOPT_CUSTOMREQUEST => "GET",
-  		));
-
-  		$response = curl_exec($curl);
-  		$err = curl_error($curl);
-  		curl_close($curl);
-  		if ($err) {
-  			$response =  "cURL Error #:" . $err;
-  		} else {
-  			$response;
-  		}
-  		return json_decode($response,TRUE);
-    }
-
-    public function getID()
-    {
-      $curl = curl_init();
-
-      curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://cmlabs.co/wp-json/wp/v2/posts?per_page=5",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => false,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-      ));
-
-      $response = curl_exec($curl);
-      $err = curl_error($curl);
-      curl_close($curl);
-      if ($err) {
-        $response =  "cURL Error #:" . $err;
-      } else {
-        $response;
-      }
-      return json_decode($response,TRUE);
-    }
-
-    public function parseID()
-    {
-      $data = $this->getID();
-  		$result=array();
-  		for ($i=0; $i < count($data); $i++) {
-  			$result[$i]['title'] = $data[$i]['title']['rendered'];
-  			$result[$i]['date'] = $data[$i]['date'];
-  			$result[$i]['link'] = $data[$i]['link'];
-  		}
-  		return $result;
-
-    }
-
-    public function parseEN()
-    {
-      $data = $this->getEN();
-  		$result=array();
-  		for ($i=0; $i < count($data); $i++) {
-  			$result[$i]['title'] = $data[$i]['title']['rendered'];
-  			$result[$i]['date'] = $data[$i]['date'];
-  			$result[$i]['link'] = $data[$i]['link'];
-  		}
-  		return $result;
-
-    }
-
     public function getBlogWordpressId()
     {
 //        $dataToPost =[];
@@ -151,8 +73,6 @@ class ToolsController extends Controller
 
     public function sslchecker($lang)
     {
-        $ea = $this-> parseID();
-        dd($ea);
         $dataID = $this->getBlogWordpressId();
         $dataEN = $this->getBlogWordpressEn();
         App::setLocale($lang);
@@ -162,8 +82,6 @@ class ToolsController extends Controller
 
     public function FAQ($lang)
     {
-        $ea = $this-> parseEN();
-        dd($ea);
         $dataID = $this->getBlogWordpressId();
         $dataEN = $this->getBlogWordpressEn();
         App::setLocale($lang);
