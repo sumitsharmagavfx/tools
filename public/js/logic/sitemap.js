@@ -17,18 +17,33 @@ toastr.options = {
 };
 let DATA_FINAL;
 $(document).ready(function () {
-    const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    const socket = io('http://localhost:3000', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
 
     $('#generate').click(function () {
-        $('#spin').addClass("spinner spinner-success spinner-right");
+        // $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
-        let match =/^(http?|ftp):\/\//;
-        let url = $('#url').val().replace(match,"https://");
+        let match =/^(http(s)?|ftp):\/\//;
+        let url = $('#url').val().replace(match,"");
         if (url.substr(url.length-1)==='/')
-            socket.emit('crawl',url.slice(0,-1));
-        else socket.emit('crawl',url);
+            socket.emit('crawl',"https://"+url.slice(0,-1));
+        else socket.emit('crawl',"https://"+url);
         console.log('start we crawl your website');
         socket.emit('image',url);
+        Swal.fire({
+            title: 'Proses crawling akan memakan waktu',
+            html:"<div class=\"progress mb-2\" style=\"height:20px\">\n" +
+                "      <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 0%;\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progress-bar\">0%</div>\n" +
+                "    </div>\n" +
+                "    <center><span id=\"detail-progress\">0 of 0 Pages Crawled</span></center>",
+            showCancelButton:true,
+            showConfirmButton:false,
+            allowOutsideClick: false
+        }).then((result)=>{
+            if (result.dismiss === 'cancel'){
+                socket.emit('stop','abort');
+                toastr.error('Cencel button clicked','Cancel');
+            }
+        })
     });
 
     socket.on('update queue', data =>{
@@ -37,13 +52,13 @@ $(document).ready(function () {
     });
 
     socket.on('image_url',url=>{
-        // console.log('image');
-        $('#screeshoot').attr('src','https://api.cmlabs.co/'+url.url);
+        console.log('image '+url);
+        $('#screenshot').attr('src','https://api.cmlabs.co/'+url.url);
         $('#add').css('display','block');
     });
 
     socket.on('result', response => {
-        $('#spin').removeClass("spinner spinner-success spinner-right");
+        // $('#spin').removeClass("spinner spinner-success spinner-right");
         // console.log(response);
         $('#table').css('display','block');
         for (let datum in response.url){
@@ -51,6 +66,7 @@ $(document).ready(function () {
         }
         DATA_FINAL = response;
         sticky.update();
+        Swal.close();
     });
 
     socket.on('notfound', msg =>{

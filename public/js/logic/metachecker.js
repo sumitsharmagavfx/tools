@@ -4,10 +4,11 @@ jQuery(document).ready(function () {
         var matchreg =/^(https?|ftp):\/\//;
         let urls = jQuery('#url').val().replace(matchreg,"");
         jQuery.get({
-            url: 'https://scrapper.ermanu.vercel.app/?url=https://' + urls,
+            url: 'https://api.cmlabs.co/?url=https://' + urls,
             success: (res) => {
                 calculate(res.title, res.description);
                 jQuery('#execute').removeClass('spinner spinner-white spinner-right');
+                toastr.success("Title and meta title loaded", "Success");
             },
             fail: (res) => {
                 urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
@@ -24,15 +25,15 @@ function copy(element){
     var alertdesc = document.getElementById("alertdesc");
     var alerturl = document.getElementById("alerturl");
     if(element==='title'){
-        alerttitle.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
+        alerttitle.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
         alerttitle.innerHTML = "Copied";
         setTimeout(function(){jQuery('#alerttitle').hide()}, 3000);
     }else if(element === 'desc'){
-        alertdesc.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
+        alertdesc.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
         alertdesc.innerHTML = "Copied";
         setTimeout(function(){jQuery('#alertdesc').hide()}, 3000);
     }else if(element === 'url'){
-        alerturl.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
+        alerturl.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
         alerturl.innerHTML = "Copied";
         setTimeout(function(){jQuery('#alerturl').hide()}, 3000);
     }

@@ -1,3 +1,4 @@
+let loader;
 var converter = new showdown.Converter();
 toastr.options = {
     "closeButton": true,
@@ -20,16 +21,42 @@ const categories = ['performance', 'accessibility', 'best-practices', 'seo', 'pw
 hideResult();
 
 jQuery('#analysis-button').click(function () {
-    let urlWeb = jQuery('#url').val();
-    jQuery('#spinner').addClass('spinner spinner-success spinner-right');
+    let match =/^(http(s)?|ftp):\/\//;
+    let urlWeb = jQuery('#url').val().replace(match,"");
+    Swal.fire({
+        title: 'Proses ini memakan beberapa waktu',
+        html:'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>',
+        showCancelButton: true,
+        cancelButtonColor: '#FE2151',
+        allowClickOutside: false,
+        // timer:0,
+        // timerProgressBar:true,
+        onBeforeOpen: () => {
+            // $('#swal2-content').after('<div class="spinner spinner-primary spinner-lg mr-15 spinner-right"></div>');
+            // $('.swal2-confirm').after('<br>')
+            // Swal.enableButtons();
+            $('.swal2-actions').css('flex-direction','column');
+            $('.swal2-actions').css('flex-direction','column');
+            $('.swal2-actions').css('flex-wrap','nowrap');
+            $('.swal2-actions').css('justify-content','flex-start');
+            $('.swal2-actions').css('align-items','center');
+            $('.swal2-actions').css('align-content','center');
+            $('.swal2-confirm').addClass('mb-9');
+            Swal.showLoading();
+        }
+    }).then((result)=>{
+        if (result.dismiss === 'cancel'){
+            loader.abort();
+        }
+    });
+    // jQuery('#spinner').addClass('spinner spinner-success spinner-right');
     hideResult();
     jQuery('#container-loader').css('display', 'block');
-    jQuery.ajax({
-        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent(urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
+    loader = jQuery.ajax({
+        url: 'https://pagespeedonline.googleapis.com/pagespeedonline/v5/runPagespeed?category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=PWA&category=SEO&url=' + encodeURIComponent('https://'+urlWeb) + '&key=AIzaSyDjg7PenszK_cEZfg4tzvOlKFmnufwxVLs',
         success: function (data) {
-            console.log(data);
             refreshAuditsResult();
-            jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
+            // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
             jQuery('#performance').css('display','block');
             for (let j = 0; j < 5; j++) {
                 console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
@@ -53,10 +80,16 @@ jQuery('#analysis-button').click(function () {
                 });
                 observer.observe(target[i],{attributes:true});
             }
+            Swal.close();
         },
-        error:function () {
-            jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-            toastr.error('Url not found. Use https:// or http://','Error');
+        error:function (response) {
+            // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
+            console.log(response);
+            if (response.statusText === 'abort'){
+                toastr.error('Cencel button clicked','Cancel');
+            }else {
+                toastr.error('Url not found. Use https:// or http://','Error');
+            }
         }
     });
 });
@@ -266,7 +299,7 @@ function addItem(allAudits, audit, category, group = null) {
     //     "    </div>\n");
     jQuery('.' + category + '-audit #' + groupId).append("<div class=\"card\">\n" +
         "                        <div class=\"card-header\">\n" +
-        "                            <div class=\"card-title\" data-toggle=\"collapse\" data-target=\"#"+audit.id+"\">\n" +
+        "                            <div class=\"card-title collapsed\" data-toggle=\"collapse\" data-target=\"#"+audit.id+"\">\n" +
         "<div class=\"mr-3\" style=\"width:15px\">"+
         "<div class=\"btn btn-icon btn-circle bg-"+color+"\" style=\"height:15px; width:15px\">\n" +
         "    </div></div><span class=\"title\">"+converter.makeHtml(allAudits[audit.id].title)+"<p class=\"text-"+color+"\">"+displayValue+"</p></span>"+
