@@ -156,6 +156,7 @@
 <script src="{{asset('plugins/global/plugins.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('js/scripts.bundle.js?v=7.0.5')}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>

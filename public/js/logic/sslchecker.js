@@ -1,9 +1,8 @@
 $('#btn-ssl').on('click',function () {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//,'')
     $.ajax({
-        url :'https://ssl-cert.glitch.me/',
+        url :'http://128.199.126.255:8080/',
         type : 'GET',
-        credentials: 'include',
         header: {
             "Access-Control-Allow-Origin": "*",
         },

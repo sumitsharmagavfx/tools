@@ -85,7 +85,8 @@
         <button type="button" class="btn btn-primary mt-5" name="button" id="execute">@lang('metachecker.btn-get')
         </button>
         <br> <br>
-        <a onclick="copy('url')" style="cursor:pointer;"> <small>@lang('metachecker.copy')</small> </a> <br>
+        <a onclick="copy('url')" style="cursor:pointer;"> <small>@lang('metachecker.copy')</small></a>
+          <small id="alerturl"></small><br>
         <small id="urlcheck">eg. https://cmlabs.co/en/</small>
       </div>
     </div>
@@ -99,7 +100,8 @@
       </div>
       <div class="card-body">
         <input id="title" type="text" name="" class="form-control" value="CMLABS / Content Marketing Labs Indonesia"> <br>
-        <a onclick="copy('title')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small> </a> <br>
+        <a onclick="copy('title')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small> </a>
+          <small id="alerttitle"></small><br>
         <small id="titlecount"></small>
       </div>
 
@@ -113,7 +115,8 @@
       </div>
       <div class="card-body">
         <input id="desc" type="text" name="" class="form-control" value="@lang('metachecker.desc-result')"><br>
-        <a onclick="copy('desc')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small> </a> <br>
+        <a onclick="copy('desc')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small></a>
+          <small id="alertdesc"></small><br>
         <small id="desccount"></small>
       </div>
     </div>
