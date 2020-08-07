@@ -34,14 +34,8 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MKJKT46');</script>
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKJKT46"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- INI KODE GSC GAN -->
+    <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -62,11 +56,11 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/en">
-                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="">
+                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                  <span class="ml-1">English</span>
                </a>
               <a class="dropdown-item" href="/id">
-                <img src="{{asset('media/logos/indonesia.png')}}" border="1px solid black" height="20px" alt="">
+                <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                  <span class="ml-1">Indonesia</span>
               </a>
             </div>
