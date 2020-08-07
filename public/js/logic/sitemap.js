@@ -41,7 +41,7 @@ $(document).ready(function () {
         }).then((result)=>{
             if (result.dismiss === 'cancel'){
                 socket.emit('stop','abort');
-                toastr.error('Cencel button clicked','Cancel');
+                toastr.error('Cancel button clicked','Cancel');
             }
         })
     });
