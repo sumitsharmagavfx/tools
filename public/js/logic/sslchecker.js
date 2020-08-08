@@ -1,7 +1,7 @@
 $('#btn-ssl').on('click',function () {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//,'')
     $.ajax({
-        url :'http://localhost:3000/ssl',
+        url :'https://api.cmlabs.co/ssl',
         type : 'GET',
         header: {
             "Access-Control-Allow-Origin": "*",
