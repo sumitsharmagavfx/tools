@@ -32,7 +32,7 @@
 </div>
 <div class="row" data-sticky-container>
   <div class="col-lg-8">
-    <div class="card card-custom mb-5">
+    <div class="card card-custom mb-5" id="result" style="display: none">
       <div class="card-header">
         <div class="card-title">
           <h2 class="card-label">CHECK RESULT</h2>
@@ -48,7 +48,7 @@
             </div>
             <div id="collapseOne5" class="collapse show" data-parent="#accordionExample5">
               <div class="card-body">
-                <p>HTTP Server Header: Apache/2.4.41 (Ubuntu)</p>
+                <p style="color: red">HTTP Server Header: Apache/2.4.41 (Ubuntu)</p>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
               </div>
             </div>
             <div id="collapseTwo5" class="collapse" data-parent="#accordionExample5">
-              <div class="card-body">
+              <div class="card-body" id="tls-certificate">
                 <p>Common Name = tools.cmlabs.co</p>
                 <p>Subject Alternative Names = tools.cmlabs.co</p>
                 <p>Issuer = Let's Encrypt Authority X3</p>
@@ -79,9 +79,9 @@
             </div>
             <div id="collapseThree5" class="collapse" data-parent="#accordionExample5">
               <div class="card-body">
-                <p>OCSP Staple: Not Enabled</p>
-                <p>OCSP Origin: Good</p>
-                <p>CRL Status: Not Enabled</p>
+                <p style="color: red">OCSP Staple: Not Enabled</p>
+                <p style="color: red">OCSP Origin: Good</p>
+                <p style="color: red">CRL Status: Not Enabled</p>
               </div>
             </div>
           </div>
@@ -93,7 +93,7 @@
             </div>
             <div id="collapseFour5" class="collapse" data-parent="#accordionExample5">
               <div class="card-body">
-                <p>The certificate expires October 21, 2020 (77 days from today)</p>
+                <p id="date">The certificate expires October 21, 2020 (77 days from today)</p>
               </div>
             </div>
           </div>
@@ -123,9 +123,9 @@
                   <tr>
                     <td> <img src="{{asset('media/images/intermediate-certificate.png')}}" alt="intermediate certificate" width="150"> </td>
                     <td class="pt-5 pl-5">
-                      <p>Subject Let's Encrypt Authority X3</p>
-                      <p>Valid from 17/Mar/2016 to 17/Mar/2021</p>
-                      <p>Issuer DST Root CA X3</p>
+                      <p style="color: red">Subject Let's Encrypt Authority X3</p>
+                      <p style="color: red">Valid from 17/Mar/2016 to 17/Mar/2021</p>
+                      <p style="color: red">Issuer DST Root CA X3</p>
                     </td>
                   </tr>
                 </table>
@@ -140,7 +140,7 @@
             </div>
             <div id="collapseSix5" class="collapse" data-parent="#accordionExample5">
               <div class="card-body">
-                <p>Congratulations! This certificate is correctly installed.</p>
+                <p style="color: red">Congratulations! This certificate is correctly installed.</p>
               </div>
             </div>
           </div>
