@@ -8,10 +8,14 @@ jQuery(document).ready(function () {
             success: (res) => {
                 calculate(res.title, res.description);
                 jQuery('#execute').removeClass('spinner spinner-white spinner-right');
-                toastr.success("Title and meta title loaded", "Success");
+                if (lang === 'en')
+                    toastr.success("Title and meta title loaded", "Success");
+                else toastr.success("Title and meta title berhasil didapat", "Sukses");
             },
             fail: (res) => {
-                urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
+                if (lang === 'en')
+                    urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
+                else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Valid</span><br>";
             }
         });
     })
@@ -190,9 +194,13 @@ const urlInputHandler = function (u) {
         var check = new RegExp("^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$");
         var checkurl = tempurl.match(check);
         if (checkurl) {
-            urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Your Url Is Valid</span><br>";
+            if (lang === 'en')
+                urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Your Url Is Valid</span><br>";
+            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Url Anda Valid</span><br>";
         } else {
-            urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
+            if (lang === 'en')
+                urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
+            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Valid</span><br>";
         }
     }
 };

@@ -16,7 +16,7 @@
     <div class="card card-custom mb-5">
         <div class="card-header">
             <div class="card-title">
-                <h1 class="card-label">SSL CHECKER</h1>
+                <h1 class="card-label">SSL CHECKER TOOL <small>@lang('sslchecker.subtitle')</small></h1>
             </div>
         </div>
         <div class="card-body">
@@ -38,11 +38,11 @@
             <div class="card card-custom mb-5" id="result" style="display: none">
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">CHECK RESULT</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-1')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <h3 id="nothing" style="display: none"><i class="fa fa-times-circle text-danger mr-5"></i>Your SSL is not installed</h3>
+                    <h3 id="nothing" style="display: none"><i class="fa fa-times-circle text-danger mr-5"></i>@lang('sslchecker.copy-8')</h3>
                     <div class="accordion accordion-light accordion-toggle-arrow" id="accordionExample5">
                         <div class="card">
                             <div class="card-header" id="headingTwo5">
@@ -91,22 +91,22 @@
             <div class="card card-custom mb-5">
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">Cek SSL di Website Anda</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-2')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>Memasang sertifikat SSL bisa menjadi kesulitan tersendiri bagi developer. Anda tidak hanya ditugaskan untuk mendapatkan jenis sertifikat yang benar, tantangannya datang ketika Anda harus menerbitkannya, menginstalnya dan kemudian mengonfigurasi server web Anda dengan benar dan melakukan migrasi seluruh situs web Anda ke HTTPS.</p>
-                    <p>Anda dapat meringankan beban ini dan meminta seorang yang ahli untuk menangani pemasangan sertifikat SSL. Tetapi jika Anda merasa sangat suka tantangan dan ingin mencoba instalasi dan konfigurasi sendiri, kami siap membantu Anda.</p>
+                    <p>@lang('sslchecker.copy-3')</p>
+                    <p>@lang('sslchecker.copy-4')</p>
                 </div>
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">SSL Checker Tool CMLABS</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-5')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>SSL Checker Tool dari CMLABS dapat memverifikasi untuk mengecek apakah Sertifikat SSL di server web Anda dipasang dengan benar dan tepercaya. SSL Checker akan menampilkan Common Name, jenis server, penerbit, validitas, rantai sertifikat, bersama dengan detail sertifikat tambahan.</p>
-                    <p>Dengan hanya memasukkan nama host atau alamat IP server Anda di kotak di bawah ini dan mengklik "Periksa", Anda dapat langsung melihat detail yang berkaitan dengan Sertifikat SSL Anda.</p>
-                </div>                
+                    <p>@lang('sslchecker.copy-6')</p>
+                    <p>@lang('sslchecker.copy-7')</p>
+                </div>
             </div>
         </div>
         @include('layouts/stickybar')
