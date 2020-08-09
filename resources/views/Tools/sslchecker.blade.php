@@ -50,7 +50,7 @@
                                     <i class="fas fa-check text-success"></i> TLS Certificate
                                 </div>
                             </div>
-                            <div id="collapseTwo5" class="collapse" data-parent="#accordionExample5">
+                            <div id="collapseTwo5" class="collapse show" data-parent="#accordionExample5">
                                 <div class="card-body" id="tls-certificate">
                                     <p>Common Name = tools.cmlabs.co</p>
                                     <p>Subject Alternative Names = tools.cmlabs.co</p>
