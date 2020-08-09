@@ -16,7 +16,7 @@ $('#btn-ssl').on('click',function () {
         },
         success: (response)=>{
             $('#input').removeClass('spinner spinner-success spinner-right');
-            console.log(response);
+            // console.log(response);
             if ("errno" in response){
                 $('#nothing').css('display','block');
                 $('#accordionExample5').css('display','none');

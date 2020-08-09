@@ -47,14 +47,14 @@ jQuery(document).ready(function () {
 
 jQuery(document).on('keyup', '.question', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log('index:' + index);
+    // console.log('index:' + index);
     main.mainEntity[index].name = jQuery(this).val();
     print();
 });
 
 jQuery(document).on('keyup', '.answer', function () {
     let index = parseInt(jQuery(this).data('id'));
-    console.log('index:' + index);
+    // console.log('index:' + index);
     main.mainEntity[index].acceptedAnswer.text = jQuery(this).val();
     print();
 });

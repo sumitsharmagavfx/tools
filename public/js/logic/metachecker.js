@@ -284,7 +284,7 @@ const descInputHandler = function (d) {
             }
         }
         var w = descsizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
-        console.log(w);
+        // console.log(w);
         if (w) {
             if (lang ==='en'){
                 desccount.innerHTML += "Words Length is " + w.length;

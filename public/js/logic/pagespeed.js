@@ -73,9 +73,9 @@ jQuery('#analysis-button').click(function () {
             // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
             jQuery('#performance').css('display','block');
             for (let j = 0; j < 5; j++) {
-                console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
+                // console.log('real score : '+data.lighthouseResult.categories[categories[j]].score);
                 let score = (data.lighthouseResult.categories[categories[j]].score * 100).toFixed(0);
-                console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
+                // console.log('multiple score : '+data.lighthouseResult.categories[categories[j]].score * 100);
                 strokeValue(score, j + 1, categories[j]);
                 displayAuditsResult(data, categories[j])
             }
@@ -98,7 +98,7 @@ jQuery('#analysis-button').click(function () {
         },
         error:function (response) {
             // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-            console.log(response);
+            // console.log(response);
             if (response.statusText === 'abort'){
                 if (lang === 'en')
                     toastr.error('Cencel button clicked','Cancel');
