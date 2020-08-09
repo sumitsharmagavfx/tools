@@ -6,6 +6,12 @@
 
 @section('meta-keyword', Lang::get('wordcounter.meta-keyword'))
 
+@section('conical','/en/word-counter')
+
+@section('en-link','/en/word-counter')
+
+@section('id-link','/id/word-counter')
+
 @section('content')
 <div class="row">
   <div class="col-lg-8">
