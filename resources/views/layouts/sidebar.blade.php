@@ -12,6 +12,57 @@
     <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid pt-7">
         <!--begin::Nav-->
         <ul class="nav flex-column">
+          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
+              data-boundary="window" title="SSL Checker">
+              <a href="/{{$local}}/ssl-checker"
+                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('ssl-checker')">
+                 <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-08-03-114926/theme/html/demo4/dist/../src/media/svg/icons/General/Lock.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                       <mask fill="white">
+                           <use xlink:href="#path-1"/>
+                       </mask>
+                       <g/>
+                       <path d="M7,10 L7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 L17,10 L18,10 C19.1045695,10 20,10.8954305 20,12 L20,18 C20,19.1045695 19.1045695,20 18,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,12 C4,10.8954305 4.8954305,10 6,10 L7,10 Z M12,5 C10.3431458,5 9,6.34314575 9,8 L9,10 L15,10 L15,8 C15,6.34314575 13.6568542,5 12,5 Z" fill="#000000"/>
+                   </g>
+               </svg><!--end::Svg Icon--></span>
+              </a>
+          </li>
+            <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
+                data-boundary="window" title="Mobile Friendly Test">
+                <a href="/{{$local}}/mobile-test"
+                   class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('mobile-test')">
+                  <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-29-055858/theme/html/demo4/dist/../src/media/svg/icons/Devices/Tablet.svg--><svg
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                          height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <rect x="0" y="0" width="24" height="24"/>
+                            <path
+                                d="M6.5,4 L6.5,20 L17.5,20 L17.5,4 L6.5,4 Z M7,2 L17,2 C18.1045695,2 19,2.8954305 19,4 L19,20 C19,21.1045695 18.1045695,22 17,22 L7,22 C5.8954305,22 5,21.1045695 5,20 L5,4 C5,2.8954305 5.8954305,2 7,2 Z"
+                                fill="#000000" fill-rule="nonzero"/>
+                            <polygon fill="#000000" opacity="0.3" points="6.5 4 6.5 20 17.5 20 17.5 4"/>
+                        </g>
+                    </svg><!--end::Svg Icon--></span>
+                </a>
+            </li>
+            <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
+                data-boundary="window" title="Sitemap Generator">
+                <a href="/{{$local}}/sitemap-generator"
+                   class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('sitemap')">
+                  <span class="svg-icon svg-icon-light svg-icon-2x"><!--begin::Svg Icon | path:/var/www/preview.keenthemes.com/metronic/releases/2020-07-29-055858/theme/html/demo4/dist/../src/media/svg/icons/Code/Code.svg-->
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                           height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1"
+                               fill="none" fill-rule="evenodd">
+                                <rect x="0" y="0" width="24"
+                                      height="24"></rect>
+                                <path
+                                    d="M15.2718029,8.68536757 C14.8932864,8.28319382 14.9124644,7.65031935 15.3146382,7.27180288 C15.7168119,6.89328641 16.3496864,6.91246442 16.7282029,7.31463817 L20.7282029,11.5646382 C21.0906029,11.9496882 21.0906029,12.5503176 20.7282029,12.9353676 L16.7282029,17.1853676 C16.3496864,17.5875413 15.7168119,17.6067193 15.3146382,17.2282029 C14.9124644,16.8496864 14.8932864,16.2168119 15.2718029,15.8146382 L18.6267538,12.2500029 L15.2718029,8.68536757 Z M8.72819712,8.6853647 L5.37324625,12.25 L8.72819712,15.8146353 C9.10671359,16.2168091 9.08753558,16.8496835 8.68536183,17.2282 C8.28318808,17.6067165 7.65031361,17.5875384 7.27179713,17.1853647 L3.27179713,12.9353647 C2.90939712,12.5503147 2.90939712,11.9496853 3.27179713,11.5646353 L7.27179713,7.3146353 C7.65031361,6.91246155 8.28318808,6.89328354 8.68536183,7.27180001 C9.08753558,7.65031648 9.10671359,8.28319095 8.72819712,8.6853647 Z"
+                                    fill="#000000"
+                                    fill-rule="nonzero"></path>
+                            </g>
+                        </svg><!--end::Svg Icon--></span>
+                </a>
+            </li>
             <!--begin::Item-->
             <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Page Speed">
                 <a href="/{{$local}}/page-speed" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">

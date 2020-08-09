@@ -17,17 +17,48 @@ toastr.options = {
 };
 let DATA_FINAL;
 $(document).ready(function () {
-    const socket = io('http://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
 
     $('#generate').click(function () {
-        $('#spin').addClass("spinner spinner-success spinner-right");
+        // $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
-        let url = $('#url').val();
+        let match =/^(http(s)?|ftp):\/\//;
+        let url = $('#url').val().replace(match,"");
         if (url.substr(url.length-1)==='/')
-            socket.emit('crawl',url.slice(0,-1));
-        else socket.emit('crawl',url);
-        console.log('start we crawl your website');
+            socket.emit('crawl',"https://"+url.slice(0,-1));
+        else socket.emit('crawl',"https://"+url);
         socket.emit('image',url);
+        let title = '';
+        let button = '';
+        let progress = '';
+        if (lang === 'en'){
+            title = 'The crawling process will take some time';
+            button = 'Cancel';
+            progress = '0 of 0 Pages Crawled'
+        }
+        else {
+            title = 'Proses crawling akan memakan waktu';
+            button = 'Batal';
+            progress = '0 dari 0 Halaman'
+        }
+        Swal.fire({
+            title: title,
+            html:"<div class=\"progress mb-2\" style=\"height:20px\">\n" +
+                "      <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 0%;\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progress-bar\">0%</div>\n" +
+                "    </div>\n" +
+                "    <center><span id=\"detail-progress\">"+progress+"</span></center>",
+            showCancelButton:true,
+            showConfirmButton:false,
+            allowOutsideClick: false,
+            cancelButtonText : button
+        }).then((result)=>{
+            if (result.dismiss === 'cancel'){
+                socket.emit('stop','abort');
+                if (lang === 'en')
+                    toastr.error('Cancel button clicked','Cancel');
+                else toastr.error('Anda menekan tombol batal','Batal');
+            }
+        })
     });
 
     socket.on('update queue', data =>{
@@ -36,13 +67,12 @@ $(document).ready(function () {
     });
 
     socket.on('image_url',url=>{
-        // console.log('image');
-        $('#screeshoot').attr('src','https://api.cmlabs.co/'+url.url);
+        $('#screenshot').attr('src','https://api.cmlabs.co/'+url.url);
         $('#add').css('display','block');
     });
 
     socket.on('result', response => {
-        $('#spin').removeClass("spinner spinner-success spinner-right");
+        // $('#spin').removeClass("spinner spinner-success spinner-right");
         // console.log(response);
         $('#table').css('display','block');
         for (let datum in response.url){
@@ -50,6 +80,7 @@ $(document).ready(function () {
         }
         DATA_FINAL = response;
         sticky.update();
+        Swal.close();
     });
 
     socket.on('notfound', msg =>{
@@ -70,7 +101,7 @@ $('#download').click(function () {
         parse.json2xml_str(DATA_FINAL)+
         "</urlset>";
     download(vkbeautify.xml(text),"sitemap.xml","text/xml");
-    console.log(parse.json2xml_str(DATA_FINAL))
+    // console.log(parse.json2xml_str(DATA_FINAL))
 });
 
 function addData(data, i) {
@@ -81,12 +112,21 @@ function addData(data, i) {
 }
 
 function updateProgressBar(data) {
+    let of = '';
+    let pages = '';
+    if (lang === 'en'){
+        of = ' of ';
+        pages = ' Pages Crawled';
+    }else {
+        of = ' dari ';
+        pages = ' Halaman';
+    }
     let percentage = (data.site_length/(parseInt(data.site_length)+parseInt(data.queue_length))*100).toFixed(1);
     $('#progress-bar')
         .attr('aria-valuenow',percentage)
         .css('width',percentage+'%')
         .html(percentage+'%');
-    $('#detail-progress').html(data.site_length+' of '+(parseInt(data.site_length)+parseInt(data.queue_length))+' Pages Crawled')
+    $('#detail-progress').html(data.site_length+of+(parseInt(data.site_length)+parseInt(data.queue_length))+pages)
 }
 
 function clearTable() {

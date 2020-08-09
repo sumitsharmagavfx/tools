@@ -26,7 +26,7 @@ class ToolsController extends Controller
 //            ],
 //        ];
 //        $client = new Client();
-//        $request = $client->get('https://cmlabs.co/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
+//        $request = $client->get('https://api.cmlabs.co/wordpress?lang=en');
 //        $response = $request->getBody()->getContents();
 //        $dataArr=json_decode($response,true );
 //        foreach ($dataArr as $data){
@@ -67,6 +67,15 @@ class ToolsController extends Controller
     public function strikethrough()
     {
         return view('Tools/strikethrough');
+    }
+
+    public function sslchecker($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/sslchecker', compact('local', 'dataID', 'dataEN'));
     }
 
     public function FAQ($lang)
@@ -165,6 +174,14 @@ class ToolsController extends Controller
         }
     }
 
+    public function loadssl()
+    {
+        $url = $_GET['host'];
+        $client = new Client();
+        $request = $client->get('https://ssl-cert.glitch.me/?host='.$url);
+        $response = $request->getBody()->getContents();
+        echo $response;
+    }
 
 
 }
