@@ -25,9 +25,11 @@ Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext')
 Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
 Route::get('/{lang}/sitemap-generator', 'ToolsController@sitemap');
 Route::get('/{lang}/mobile-test', 'ToolsController@mobiletest');
+Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
 Route::get('/construction', function (){
     return view('premiumtools');
 });
 Route::get('/en', 'ToolsController@englishVersion');
 Route::get('/id', 'ToolsController@indonesiaVersion');
-Route::get('/url', 'ToolsController@curlWeb');
+Route::get('/url', 'ToolsController@loadssl');
+

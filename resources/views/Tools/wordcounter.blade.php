@@ -6,12 +6,6 @@
 
 @section('meta-keyword', Lang::get('wordcounter.meta-keyword'))
 
-@section('conical','/en/word-counter')
-
-@section('en-link','/en/word-counter')
-
-@section('id-link','/id/word-counter')
-
 @section('content')
 <div class="row">
   <div class="col-lg-8">
@@ -19,30 +13,35 @@
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.title') <small>@lang('wordcounter.subtitle')</small></h3>
+          <h1 class="card-label">@lang('wordcounter.title') <small>@lang('wordcounter.subtitle')</small></h1>
         </div>
       </div>
       <div class="card-body">
         <div class="row justify-content-center">
           <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <h6>@lang('wordcounter.character')</h6>
-            <h1 id="characterCount">0</h1>
+            <span class="h6">@lang('wordcounter.character')</span>
+            <br>
+            <span class="h1" id="characterCount">0</span>
           </div>
           <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <h6>@lang('wordcounter.word')</h6>
-            <h1 id="wordCount">0</h1>
+            <span class="h6">@lang('wordcounter.word')</span>
+            <br>
+            <span class="h1" id="wordCount">0</span>
           </div>
           <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <h6>@lang('wordcounter.sentence')</h6>
-            <h1 id="sentenceCount">0</h1>
+            <span class="h6">@lang('wordcounter.sentence')</span>
+            <br>
+            <span class="h1" id="sentenceCount">0</span>
           </div>
           <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <h6>@lang('wordcounter.paragraph')</h6>
-            <h1 id="paragraphCount">0</h1>
+            <span class="h6">@lang('wordcounter.paragraph')</span>
+            <br>
+            <span class="h1" id="paragraphCount">0</span>
           </div>
           <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <h6>@lang('wordcounter.reading-time')</h6>
-            <h1 id="readingTime">0</h1>
+            <span class="h6">@lang('wordcounter.reading-time')</span>
+            <br>
+            <span class="h1" id="readingTime">0</span>
           </div>
         </div>
         <div class="col-md-12">
@@ -57,7 +56,7 @@
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.keyword-density')</h3>
+          <h2 class="card-label">@lang('wordcounter.keyword-density')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -136,21 +135,21 @@
     <div class="card card-custom card-stretch-half">
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-title-1')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-title-1')</h2>
         </div>
       </div>
       <div class="card-body">
         <p>@lang('wordcounter.copy-desc-1-1')</p>
         <center>
           <div class="col-12 col-md-9">
-            <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="">
+            <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="cmlabs word counter">
 
           </div>
         </center>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-title-2')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-title-2')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -164,7 +163,7 @@
           <li>@lang('wordcounter.copy-li-6')</li>
           <li>@lang('wordcounter.copy-li-7')</li>
         </ol>
-        <h5>@lang('wordcounter.copy-sub-title-2')</h5>
+        <h3>@lang('wordcounter.copy-sub-title-2')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -189,7 +188,7 @@
             </tr>
           </tbody>
         </table>
-        <h5> @lang('wordcounter.copy-sub-title-3')</h5>
+        <h3> @lang('wordcounter.copy-sub-title-3')</h3>
         <p>@lang('wordcounter.copy-desc-4-1')</p>
         <p>@lang('wordcounter.copy-desc-4-2')</p>
         <table class="table">
@@ -219,19 +218,19 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-0')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-0')</h2>
         </div>
         <div class="card-body">
           <p>@lang('wordcounter.copy-desc-6-1')</p>
           <p>@lang('wordcounter.copy-desc-6-2')</p>
           <div class="p-5" style="background-color: #F4F4F4">
-            <h5 class="font-weight-bold">@lang('wordcounter.copy-desc-6-3')</h5>
+            <h3 class="font-weight-bold">@lang('wordcounter.copy-desc-6-3')</h3>
           </div>
         </div>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-4')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-4')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -250,7 +249,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-8')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-8')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -258,7 +257,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-8-2')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-8-2')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -266,7 +265,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-10')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-10')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -274,7 +273,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-12')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-12')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -282,7 +281,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-14')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-14')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -290,7 +289,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-16')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-16')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -298,7 +297,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-18')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-18')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -306,7 +305,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-20')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-20')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -314,7 +313,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-desc-6-22')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-desc-6-22')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -322,7 +321,7 @@
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h3 class="card-label">@lang('wordcounter.copy-title-5')</h3>
+          <h2 class="card-label">@lang('wordcounter.copy-title-5')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -345,55 +344,7 @@
     </div>
     <!--end::Card-->
   </div>
-  <div class="col-lg-4">
-    <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="991">
-      <!--begin::List Widget 4-->
-      <div class="card card-custom card-stretch">
-        <!--begin::Header-->
-        <div class="card-header border-0">
-          <h3 class="card-title font-weight-bolder text-dark">cmlabs Blog</h3>
-
-        </div>
-        <!--end::Header-->
-        <!--begin::Body-->
-        <div class="card-body pt-2">
-          @for ($i = 0; $i < count($dataEN); $i++)
-          @if($i == 0)
-          <?php $color = "bg-success" ?>
-          @elseif($i % 4 == 0)
-          <?php $color = "bg-primary" ?>
-          @elseif($i % 3 == 0)
-          <?php $color = "bg-danger" ?>
-          @elseif($i % 2 == 0)
-          <?php $color = "bg-warning" ?>
-          @elseif($i % 1 == 0)
-          <?php $color = "bg-info" ?>
-          @endif
-          <!--begin::Item-->
-          @if ($i == 0)
-          <div class="d-flex align-items-center">
-          @else
-          <div class="d-flex align-items-center mt-10">
-          @endif
-              <span class="bullet bullet-bar {{$color}} align-self-stretch"></span>
-              <div class="d-flex flex-column flex-grow-1 mx-4">
-                @if($local == "en")
-                <a href="{{$dataEN[$i]['link']}}" data-toggle="tooltip" title="{{$dataEN[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataEN[$i]['title'],0,strpos($dataEN[$i]['title'], ' ', 20))}} ...</a>
-                <span class="text-muted font-weight-bold">{{$dataEN[$i]['date']}}</span>
-                @else
-                <a href="{{$dataID[$i]['link']}}" data-toggle="tooltip" title="{{$dataID[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataID[$i]['title'],0,strpos($dataID[$i]['title'], ' ', 20))}} ...</a>
-                <span class="text-muted font-weight-bold">{{$dataID[$i]['date']}}</span>
-                @endif
-            </div>
-          </div>
-          <!--end:Item-->
-          @endfor
-        </div>
-        <!--end::Body-->
-      </div>
-      <!--end:List Widget 4-->
-    </div>
-  </div>
+  @include('layouts/stickybar')
 </div>
 
 @endsection

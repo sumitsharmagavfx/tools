@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="keyword" content="@yield('meta-keyword')"/>
     <link rel="canonical" href="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>">
-    <meta http-equiv="content-security-policy" content="upgrade-insecure-request">
     <meta property="og:type" content="tools"/>
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('meta-desc')"/>
@@ -18,8 +17,8 @@
     <meta property="og:image" content="{{asset('media/logos/logo-letter-9.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
-    <link rel=”alternate” hreflang=”en-EN” href=”https://tools.cmlabs.co@yield('en-link')” />
-    <link rel=”alternate” hreflang=”id-ID” href=”https://tools.cmlabs.co@yield('id-link')” />
+    <link rel="alternate" hreflang="en-EN" href="https://tools.cmlabs.co{{$_SERVER['REQUEST_URI']}}" />
+    <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co{{$_SERVER['REQUEST_URI']}}" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
     <!--end::Fonts-->
@@ -35,14 +34,7 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MKJKT46');</script>
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKJKT46"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- INI KODE GSC GAN -->
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -63,11 +55,11 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/en">
-                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="">
+                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                  <span class="ml-1">English</span>
                </a>
               <a class="dropdown-item" href="/id">
-                <img src="{{asset('media/logos/indonesia.png')}}" border="1px solid black" height="20px" alt="">
+                <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                  <span class="ml-1">Indonesia</span>
               </a>
             </div>
@@ -88,7 +80,7 @@
         <button class="btn btn-hover-text-primary p-0 ml-2" id="">
 					<span class="svg-icon svg-icon-xl">
 						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
-						<a href="/construction" class="icon-1x">
+						<a href="/premium-tools" class="icon-1x">
                           <span class="svg-icon svg-icon-light svg-icon-2x">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -163,6 +155,7 @@
 <script src="{{asset('plugins/global/plugins.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('js/scripts.bundle.js?v=7.0.5')}}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>

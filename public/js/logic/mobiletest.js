@@ -29,6 +29,7 @@ const date_now = document.getElementById('date-now');
 const resIssues = document.getElementById('resource-issues');
 $('.error-icon').hide();
 res_section.style.display='none';
+let loader;
 
 // res_section.style.display = "none";
 // err_section.style.display = "none";
@@ -42,10 +43,50 @@ issues_detail = '';
 
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
+        let title = '';
+        let button = '';
+        let htmlFill = '';
+        if (lang === 'en'){
+            title = 'The crawling process will take some time';
+            button = 'Cancel';
+            htmlFill = 'While waiting please read our blog <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">here</a>'
+        }
+        else {
+            title = 'Proses crawling akan memakan waktu';
+            button = 'Batal';
+            htmlFill = 'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>'
+        }
+        Swal.fire({
+            title: title,
+            html:htmlFill,
+            showCancelButton: true,
+            cancelButtonColor: '#FE2151',
+            allowClickOutside: false,
+            cancelButtonText : button,
+            // timer:0,
+            // timerProgressBar:true,
+            onBeforeOpen: () => {
+                // $('#swal2-content').after('<div class="spinner spinner-primary spinner-lg mr-15 spinner-right"></div>');
+                // $('.swal2-confirm').after('<br>')
+                // Swal.enableButtons();
+                $('.swal2-actions').css('flex-direction','column');
+                $('.swal2-actions').css('flex-direction','column');
+                $('.swal2-actions').css('flex-wrap','nowrap');
+                $('.swal2-actions').css('justify-content','flex-start');
+                $('.swal2-actions').css('align-items','center');
+                $('.swal2-actions').css('align-content','center');
+                $('.swal2-confirm').addClass('mb-9');
+                Swal.showLoading();
+            }
+        }).then((result)=>{
+            if (result.dismiss === 'cancel'){
+                loader.abort();
+            }
+        });
         res_section.style.display='none';
         resIssues.style.display='none';
         mob_issues.style.display='none';
-        $('#spinner').addClass('spinner spinner-success spinner-right');
+        // $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
             "url" : $('#url').val(),
@@ -53,7 +94,7 @@ $(document).ready(function() {
         };
         var dataJson = JSON.stringify(newData);
 
-        $.ajax({
+        loader = $.ajax({
             url : "https://searchconsole.googleapis.com/v1/urlTestingTools/mobileFriendlyTest:run?key=AIzaSyAe7AXnQrH6VxQk6wDlg3E7eJuZn9AywC8",
             type : "POST",
             credentials: 'include',
@@ -64,8 +105,8 @@ $(document).ready(function() {
             contentType: "application/json",
             data : dataJson,
             success : function(result) {
-                console.clear(result);
-                console.log(result);
+                // console.clear(result);
+                // console.log(result);
                 jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
                 // $('.row-success').show();
                 if( result.testStatus.status === 'COMPLETE') {
@@ -77,7 +118,9 @@ $(document).ready(function() {
                 } else {
                     var errorstatus = result.testStatus.status;
                     var errormessage = result.testStatus.details;
-                    toastr.error('Error',"An error occurred during the test process. Please try again with http/https or try with another website URL");
+                    if (lang === 'en')
+                        toastr.error('Error',"An error occurred during the test process. Please try again with http/https or try with another website URL");
+                    else toastr.error('Error',"Error terjadi selama proses. Coba lagi dengan http/https atau coba dengan url website lain");
                     // err_section.style.display = "block";
                     // err_msg.innerHTML = errormessage;
                     sticky.update();
@@ -86,9 +129,17 @@ $(document).ready(function() {
                 sticky.update();
             },
             error: function(e) {
-                console.log("Execute Error", e);
-                jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
-                toastr.error('Error',"An error occurred during the test process. Please try again or try with another website URL");
+                // console.log("Execute Error", e);
+                if (e.statusText === 'abort'){
+                    if (lang === 'en')
+                        toastr.error('Cencel button clicked','Cancel');
+                    else toastr.error('Anda membatalkan proses','Batal');
+                }else {
+                    if (lang === 'en')
+                        toastr.error('Error',"An error occurred during the test process. Please try again or try with another website URL");
+                    else toastr.error('Error',"Error terjadi selama proses. Coba lagi dengan url website lain");
+                }
+                // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
                 // err_section.style.display = "block";
                 //
                 // err_section.style = 'display:block';
@@ -101,19 +152,19 @@ $(document).ready(function() {
 });
 
 var observer1 = new MutationObserver(function(mutations) {
-    console.log('running');
+    // console.log('running');
     mutations.forEach(function(mutation) {
         if (mutation.attributeName === "style") {
-            console.log('yeyy');
+            // console.log('yeyy');
             sticky.update();
         }
     });
 });
 var observer2 = new MutationObserver(function(mutations) {
-    console.log('running');
+    // console.log('running');
     mutations.forEach(function(mutation) {
         if (mutation.attributeName === "style") {
-            console.log('yeyy');
+            // console.log('yeyy');
             sticky.update();
         }
     });
