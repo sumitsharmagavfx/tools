@@ -48,7 +48,7 @@
   </div>
 </div>
 
-<div id="result-section" style="display: none">
+<div id="result-section" style="display: block">
   <div class="row">
     <div class="col-lg-7 mb-5">
       <div class="card card-custom card-stretch">
@@ -122,7 +122,7 @@
           </div>
         </div>
         <div class="card-body">
-          <img id="result-image" src="" width="100%" height="auto" alt="mobile preview small">
+          <img id="result-image" src="{{asset('media/images/ss.jpg')}}" width="100%" height="auto" alt="mobile preview small">
         </div>
       </div>
     </div>
