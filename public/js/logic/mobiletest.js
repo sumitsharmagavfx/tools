@@ -126,6 +126,7 @@ $(document).ready(function() {
                     sticky.update();
                 }
                 resultdata(result.mobileFriendliness, result.screenshot.data);
+                Swal.close();
                 sticky.update();
             },
             error: function(e) {
@@ -144,6 +145,7 @@ $(document).ready(function() {
                 //
                 // err_section.style = 'display:block';
                 // err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
+                Swal.close();
                 sticky.update();
             },
         });
