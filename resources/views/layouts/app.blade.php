@@ -35,7 +35,6 @@
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
     <!-- INI KODE GSC GAN -->
-    <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -81,7 +80,7 @@
         <button class="btn btn-hover-text-primary p-0 ml-2" id="">
 					<span class="svg-icon svg-icon-xl">
 						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
-						<a href="/construction" class="icon-1x">
+						<a href="/premium-tools" class="icon-1x">
                           <span class="svg-icon svg-icon-light svg-icon-2x">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

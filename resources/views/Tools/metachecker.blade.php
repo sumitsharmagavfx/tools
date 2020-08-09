@@ -6,12 +6,6 @@
 
 @section('meta-keyword', Lang::get('metachecker.meta-keyword'))
 
-@section('conical','/en/page-title-meta-description-checker')
-
-@section('en-link','/en/page-title-meta-description-checker')
-
-@section('id-link','/id/page-title-meta-description-checker')
-
 @section('content')
 @push('style')
 <style media="screen">
@@ -59,12 +53,14 @@
         <div class="card-title">
           <i class="fas fa-mobile-alt icon-3x"></i>
         </div>
-      </div>
-      <div class="card-body">
-        <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
-          <span id="resulturlmobile">https://cmlabs.co</span><br>
-          <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
-          <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
+        <div class="card-body">
+            <input type="text" name="" class="form-control" value="https://cmlabs.co" id="url">
+            <button type="button" class="btn btn-primary mt-5" name="button" id="execute">Get Title & Meta Desc.
+                from URL's?
+            </button>
+            <br> <br>
+            <a onclick="copy('url')" style="cursor:pointer;"> <small>@lang('metachecker.copy')</small> </a> <br>
+            <small id="urlcheck">eg. https://cmlabs.co/en/</small>
         </div>
       </div>
     </div>

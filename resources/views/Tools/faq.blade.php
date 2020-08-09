@@ -6,10 +6,6 @@
 
 @section('meta-keyword', Lang::get('faq.meta-keyword'))
 
-@section('conical','/en/json-ld-faq-schema-generator')
-@section('en-link','/en/json-ld-faq-schema-generator')
-@section('id-link','/id/json-ld-faq-schema-generator')
-
 @section('content')
 @push('style')
 <style media="screen">
