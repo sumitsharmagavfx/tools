@@ -91,43 +91,22 @@
             <div class="card card-custom mb-5">
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">Lorem Ipsum Dolor Sit Amet</h2>
+                        <h2 class="card-label">Cek SSL di Website Anda</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
+                    <p>Memasang sertifikat SSL bisa menjadi kesulitan tersendiri bagi developer. Anda tidak hanya ditugaskan untuk mendapatkan jenis sertifikat yang benar, tantangannya datang ketika Anda harus menerbitkannya, menginstalnya dan kemudian mengonfigurasi server web Anda dengan benar dan melakukan migrasi seluruh situs web Anda ke HTTPS.</p>
+                    <p>Anda dapat meringankan beban ini dan meminta seorang yang ahli untuk menangani pemasangan sertifikat SSL. Tetapi jika Anda merasa sangat suka tantangan dan ingin mencoba instalasi dan konfigurasi sendiri, kami siap membantu Anda.</p>
                 </div>
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">Lorem Ipsum Dolor Sit Amet</h2>
+                        <h2 class="card-label">SSL Checker Tool CMLABS</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                </div>
-                <div class="card-header">
-                    <div class="card-title">
-                        <h2 class="card-label">Lorem Ipsum Dolor Sit Amet</h2>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis
-                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                </div>
+                    <p>SSL Checker Tool dari CMLABS dapat memverifikasi untuk mengecek apakah Sertifikat SSL di server web Anda dipasang dengan benar dan tepercaya. SSL Checker akan menampilkan Common Name, jenis server, penerbit, validitas, rantai sertifikat, bersama dengan detail sertifikat tambahan.</p>
+                    <p>Dengan hanya memasukkan nama host atau alamat IP server Anda di kotak di bawah ini dan mengklik "Periksa", Anda dapat langsung melihat detail yang berkaitan dengan Sertifikat SSL Anda.</p>
+                </div>                
             </div>
         </div>
         @include('layouts/stickybar')
