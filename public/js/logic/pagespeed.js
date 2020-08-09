@@ -23,12 +23,26 @@ hideResult();
 jQuery('#analysis-button').click(function () {
     let match =/^(http(s)?|ftp):\/\//;
     let urlWeb = jQuery('#url').val().replace(match,"");
+    let title = '';
+    let button = '';
+    let htmlFill = '';
+    if (lang === 'en'){
+        title = 'The crawling process will take some time';
+        button = 'Cancel';
+        htmlFill = 'While waiting please read our blog <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">here</a>'
+    }
+    else {
+        title = 'Proses crawling akan memakan waktu';
+        button = 'Batal';
+        htmlFill = 'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>'
+    }
     Swal.fire({
-        title: 'Proses ini memakan beberapa waktu',
-        html:'Sambil menunggu silahkan baca blog kami <a href="javascript:window.open(\'https://cmlabs.co/blog/\')" style="text-decoration: underline">disini</a>',
+        title: title,
+        html:htmlFill,
         showCancelButton: true,
         cancelButtonColor: '#FE2151',
         allowClickOutside: false,
+        cancelButtonText : button,
         // timer:0,
         // timerProgressBar:true,
         onBeforeOpen: () => {
@@ -86,9 +100,13 @@ jQuery('#analysis-button').click(function () {
             // jQuery('#spinner').removeClass('spinner spinner-success spinner-right');
             console.log(response);
             if (response.statusText === 'abort'){
-                toastr.error('Cencel button clicked','Cancel');
+                if (lang === 'en')
+                    toastr.error('Cencel button clicked','Cancel');
+                else toastr.error('Anda membatalkan proses','Batal');
             }else {
-                toastr.error('Url not found. Use https:// or http://','Error');
+                if (lang === 'en')
+                    toastr.error('Url not found. Use https:// or http://','Error');
+                else toastr.error('Url tidak ditemukan. Gunakan https:// atau http://','Error');
             }
         }
     });

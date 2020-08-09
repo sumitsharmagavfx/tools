@@ -1,6 +1,6 @@
 $('#btn-ssl').on('click',function () {
     $('#result').css('display','none');
-    $('#input').addClass('spinner spinner-primary spinner-right');
+    $('#input').addClass('spinner spinner-success spinner-right');
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//,'');
     url = url.substr(url.length-1)==='/'? url.slice(0,-1) : url;
     $.ajax({
@@ -15,7 +15,7 @@ $('#btn-ssl').on('click',function () {
             url: url
         },
         success: (response)=>{
-            $('#input').removeClass('spinner spinner-primary spinner-right');
+            $('#input').removeClass('spinner spinner-success spinner-right');
             console.log(response);
             if ("errno" in response){
                 $('#nothing').css('display','block');
@@ -34,39 +34,54 @@ $('#btn-ssl').on('click',function () {
                 let valid_until = new Date(response.valid_to);
                 let diff = valid_until-Date.now();
                 let difDay = Math.ceil(Math.abs(diff)/(1000*60*60*24));
-                let words = 'The certificate expires '+parseMonth(valid_until.getMonth())+' '+valid_until.getDate()+', '+valid_until.getFullYear();
+                let words = '';
+                if (lang === 'en')
+                    words = 'The certificate expires '+parseMonth(valid_until.getMonth())+' '+valid_until.getDate()+', '+valid_until.getFullYear();
+                else words = 'Sertifikat kadaluarsa pada '+parseMonthId(valid_until.getMonth())+' '+valid_until.getDate()+', '+valid_until.getFullYear();
                 let word;
                 if (diff < 0){
-                    word = words+' ('+difDay+' days ago)';
+                    if (lang === 'en')
+                        word = words+' ('+difDay+' days ago)';
+                    else word = words+' ('+difDay+' hari yang lalu)';
                     $('#date').html(word).addClass('text-danger');
                     $('#date-ex').removeClass('fas fa-check text-success');
                     $('#date-ex').addClass('fa fa-times-circle text-danger');
-                    let correct = '<i class="fa fa-times-circle text-danger"></i> TLS Certificate is not correctly installed'
+                    let correct ='';
+                    if (lang === 'en')
+                        correct = '<i class="fa fa-times-circle text-danger"></i> TLS Certificate is not correctly installed'
+                    else correct = '<i class="fa fa-times-circle text-danger"></i> TLS Certificate tidak terpasang dengan benar'
                     $('#correct').html(correct);
-                    $('#congrats').addClass('text-danger').html('Sorry, This certificate is expired.')
+                    if (lang === 'en')
+                        $('#congrats').addClass('text-danger').html('Sorry, This certificate is expired.');
+                    else $('#congrats').addClass('text-danger').html('Maaf, sertifikat ini telah kadaluarsa');
                 }else {
-                    word = words+' ('+difDay+' days from today)';
+                    if (lang === 'en')
+                        word = words+' ('+difDay+' days from today)';
+                    else word = words+' ('+difDay+' hari dari sekarang)';
                     $('#date-ex').removeClass('fa fa-times-circle text-danger');
                     $('#date-ex').addClass('fas fa-check text-success');
                     $('#date').html(word).removeClass('text-danger');
-                    let correct = '<i class="fas fa-check text-success"></i> TLS Certificate is correctly installed';
+                    let correct ='';
+                    if (lang === 'en')
+                        correct = '<i class="fas fa-check text-success"></i> TLS Certificate is correctly installed';
+                    else correct = '<i class="fas fa-check text-success"></i> TLS Certificate telah terpasang dengan benar';
                     $('#correct').html(correct);
-                    $('#congrats').removeClass('text-danger').html('Congratulations! This certificate is correctly installed.')
+                    if (lang === 'en')
+                        $('#congrats').removeClass('text-danger').html('Congratulations! This certificate is correctly installed.')
+                    else $('#congrats').removeClass('text-danger').html('Selamat! sertifikat ini telah terpasang dengan benar')
                 }
-                let format_from = valid_from.getDay()+'/'+valid_from.getMonth()+'/'+valid_from.getFullYear();
-                let format_to = valid_until.getDay()+'/'+valid_until.getMonth()+'/'+valid_until.getFullYear();
-                let server = '<p>Subject '+response.subject.CN+'</p>\n' +
-                    '         <p>Valid from '+format_from+' to '+format_to+'</p>\n' +
-                    '         <p>Issuer '+response.issuer.CN+'</p>';
-                $('#cerf').html(server);
-                toastr.success('Success scan your ssl', 'Success');
+                if (lang === 'en')
+                    toastr.success('Success scan your ssl', 'Success');
+                else toastr.success('Success mendeteksi ssl anda', 'Success');
             }
             $('#result').css('display','block');
             sticky.update();
         },
         error:(error)=>{
-            $('#input').removeClass('spinner spinner-primary spinner-right');
-            toastr.error('Error happen during proses','Error')
+            $('#input').removeClass('spinner spinner-success spinner-right');
+            if (lang === 'en')
+                toastr.error('Error happen during proses','Error')
+            else toastr.error('Error terjadi selama proses berlangsung','Error')
         }
     })
 });
@@ -108,6 +123,47 @@ function parseMonth(month) {
             break;
         case 12:
             return 'December';
+            break;
+    }
+}
+
+function parseMonthId(month) {
+    switch (month) {
+        case 1:
+            return 'Januari';
+            break;
+        case 2:
+            return 'Februari';
+            break;
+        case 3:
+            return 'Maret';
+            break;
+        case 4:
+            return 'April';
+            break;
+        case 5:
+            return 'Mei';
+            break;
+        case 6:
+            return 'Juni';
+            break;
+        case 7:
+            return 'Juli';
+            break;
+        case 8:
+            return 'Agustus';
+            break;
+        case 9:
+            return 'September';
+            break;
+        case 10:
+            return 'Oktober';
+            break;
+        case 11:
+            return 'November';
+            break;
+        case 12:
+            return 'Desember';
             break;
     }
 }
