@@ -28,7 +28,7 @@ const err_msg = document.getElementById('error-msg');
 const date_now = document.getElementById('date-now');
 const resIssues = document.getElementById('resource-issues');
 $('.error-icon').hide();
-res_section.style.display='none';
+// res_section.style.display='none';
 let loader;
 
 // res_section.style.display = "none";
@@ -43,6 +43,8 @@ issues_detail = '';
 
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
+        let match =/^(http(s)?|ftp):\/\//;
+        let url = $('#url').val().replace(match,"");
         let title = '';
         let button = '';
         let htmlFill = '';
@@ -89,7 +91,7 @@ $(document).ready(function() {
         // $('#spinner').addClass('spinner spinner-success spinner-right');
         var newData =
         {
-            "url" : $('#url').val(),
+            "url" : 'https://'+url,
             "requestScreenshot": true
         };
         var dataJson = JSON.stringify(newData);
@@ -145,8 +147,8 @@ $(document).ready(function() {
                 //
                 // err_section.style = 'display:block';
                 // err_msg.innerHTML = "An error occurred during the test process. Please try again or try with another website URL";
-                Swal.close();
                 sticky.update();
+                Swal.close();
             },
         });
         sticky.update();
