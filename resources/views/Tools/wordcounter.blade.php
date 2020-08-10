@@ -12,6 +12,41 @@
 
 @section('id-link','/id/word-counter')
 
+@push('style')
+  <style media="screen">
+  @media only screen and (max-width: 320px) {
+    .tulisan {
+      font-size: 60%;
+    }
+  }
+
+  @media only screen and (min-width: 320px) {
+    .tulisan {
+      font-size: 65%;
+    }
+  }
+
+  @media only screen and (min-width: 375px) {
+    .tulisan {
+      font-size: 80%;
+    }
+  }
+
+  @media only screen and (min-width: 425px) {
+    .tulisan {
+      font-size: 90%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .tulisan {
+      font-size: 120%;
+    }
+  }
+
+  </style>
+@endpush
+
 @section('content')
 <div class="row">
   <div class="col-lg-8">
@@ -24,28 +59,28 @@
       </div>
       <div class="card-body">
         <div class="row justify-content-center">
-          <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <span class="h6">@lang('wordcounter.character')</span>
+          <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
+            <span class="tulisan">@lang('wordcounter.character')</span>
             <br>
             <span class="h1" id="characterCount">0</span>
           </div>
-          <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <span class="h6">@lang('wordcounter.word')</span>
+          <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
+            <span class="tulisan">@lang('wordcounter.word')</span>
             <br>
             <span class="h1" id="wordCount">0</span>
           </div>
-          <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <span class="h6">@lang('wordcounter.sentence')</span>
+          <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
+            <span class="tulisan">@lang('wordcounter.sentence')</span>
             <br>
             <span class="h1" id="sentenceCount">0</span>
           </div>
-          <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <span class="h6">@lang('wordcounter.paragraph')</span>
+          <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
+            <span class="tulisan">@lang('wordcounter.paragraph')</span>
             <br>
             <span class="h1" id="paragraphCount">0</span>
           </div>
-          <div class="col-6 col-sm-4 col-md col-lg-4 col-xl" align="center">
-            <span class="h6">@lang('wordcounter.reading-time')</span>
+          <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
+            <span class="tulisan">@lang('wordcounter.reading-time')</span>
             <br>
             <span class="h1" id="readingTime">0</span>
           </div>
@@ -69,11 +104,11 @@
         <div class="accordion accordion-toggle-arrow" id="accordionExample1">
           <div class="card">
             <div class="card-header">
-              <div class="card-title" data-toggle="collapse" data-target="#collapseOne1">
+              <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne1">
                 @lang('wordcounter.word-1')
               </div>
             </div>
-            <div id="collapseOne1" class="collapse show" data-parent="#accordionExample1">
+            <div id="collapseOne1" class="collapse" data-parent="#accordionExample1">
               <div class="card-body" id="topKeywords">
               </div>
             </div>
