@@ -39,7 +39,7 @@
                 @endif
                   <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
                     <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
-                    cmlabs.co</button>
+                    cmlabs</button>
                 </a>
                 <a href="/construction" class="btn btn-info pulse pulse-light btn-fixed-height">
                     <div class="pulse pulse-light">
