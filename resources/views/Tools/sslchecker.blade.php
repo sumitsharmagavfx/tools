@@ -25,13 +25,14 @@ id/ssl-checker
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-10 mb-5">
+                <div class="col-lg-5 mb-5">
                     <div id="input">
-                        <input id="url" type="text" name="" class="form-control" value="" placeholder="Input Your URL">
+                        <input id="url" type="text" name="" class="form-control" value="" placeholder="@lang('sslchecker.placeholder')">
                     </div>
                 </div>
                 <div class="col-lg-2 mb-5">
-                    <button id="btn-ssl" type="button" class="btn btn-success form-control" name="button">CHECK!
+                    <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control" name="button">
+                    <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
                     </button>
                 </div>
             </div>

@@ -25,13 +25,14 @@ id/page-speed
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-lg-10 mb-5">
+      <div class="col-lg-5 mb-5">
         <div id="spinner">
           <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('pagespeed.input-hint')">
         </div>
       </div>
       <div class="col-lg-2 mb-5">
-        <button type="button" class="btn btn-success form-control" name="button" id="analysis-button">@lang('pagespeed.btn-analysis')!</button>
+        <button type="button" class="btn btn btn-light-info form-control" name="button" id="analysis-button">
+        <i class="flaticon2-heart-rate-monitor"></i> @lang('pagespeed.btn-analysis')</button>
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@ id/json-ld-faq-schema-generator
 </style>
 @endpush
 <div class="row">
-  <div class="col-lg-8">
+  <div class="col-lg-6">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
@@ -42,22 +42,27 @@ id/json-ld-faq-schema-generator
           <input type="text" name="" class="form-control mb-5 question" placeholder="@lang('faq.question') :" value="" data-id="0">
           <input type="text" name="" class="form-control mb-7 answer" placeholder="@lang('faq.answer') :" value="" data-id="0">
         </div>
-        <button type="button" class="btn btn-success" name="button" id="add">@lang('faq.btn-add')</button>
+        <button type="button" class="btn btn btn-light-info" name="button" id="add">
+        <i class="flaticon2-plus"></i> @lang('faq.btn-add')
+        </button>
       </div>
     </div>
     <!--end::Card-->
   </div>
-  <div class="col-lg-4">
+  <div class="col-lg-6">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
       <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
         <div class="card-body">
           <div class="row">
-            <div class="col-lg-5">
-              <button type="button" id="copy" class="btn btn-success form-control mb-5" name="button">@lang('faq.btn-copy')</button>
+            <div class="col-lg-6">
+              <button type="button" id="copy" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
+              <i class="far fa-copy"></i> @lang('faq.btn-copy')
+              </button>
             </div>
-            <div class="col-lg-7">
-              <button type="submit" id="test" class="btn btn-warning form-control mb-5" name="button">@lang('faq.btn-test')</button>
+            <div class="col-lg-6">
+              <button type="submit" id="test" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
+              <i class="fas fa-circle"></i> @lang('faq.btn-test')</button>
             </div>
           </div>
           <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>

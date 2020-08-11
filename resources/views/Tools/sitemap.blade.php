@@ -25,13 +25,14 @@ id/sitemap-generator
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-md-10 gutter-b">
+      <div class="col-md-5 gutter-b">
         <div class="" id="spin">
           <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
         </div>
       </div>
       <div class="col-md-2 gutter-b">
-        <button type="button" class="btn btn-success form-control" name="button" id="generate">@lang('sitemap.btn-generate')</button>
+        <button type="button" class="btn btn btn-light-info  form-control" name="button" id="generate">
+        <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
       </div>
     </div>
     <center>
