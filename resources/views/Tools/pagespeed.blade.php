@@ -8,9 +8,13 @@
 
 @section('conical','/en/page-speed')
 
-@section('en-link','/en/page-speed')
+@section('en-link')
+en/page-speed
+@endsection
 
-@section('id-link','/id/page-speed')
+@section('id-link')
+id/page-speed
+@endsection
 
 @section('content')
 <div class="card card-custom gutter-b">

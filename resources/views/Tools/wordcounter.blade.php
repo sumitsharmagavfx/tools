@@ -8,9 +8,13 @@
 
 @section('conical','/en/word-counter')
 
-@section('en-link','/en/word-counter')
+@section('en-link')
+en/word-counter
+@endsection
 
-@section('id-link','/id/word-counter')
+@section('id-link')
+id/word-counter
+@endsection
 
 @push('style')
   <style media="screen">

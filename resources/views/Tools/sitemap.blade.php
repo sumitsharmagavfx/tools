@@ -8,9 +8,13 @@
 
 @section('conical','/en/sitemap-generator')
 
-@section('en-link','/en/sitemap-generator')
+@section('en-link')
+en/sitemap-generator
+@endsection
 
-@section('id-link','/id/sitemap-generator')
+@section('id-link')
+id/sitemap-generator
+@endsection
 
 @section('content')
 <div class="card card-custom gutter-b">

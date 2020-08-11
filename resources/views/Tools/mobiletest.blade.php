@@ -8,9 +8,13 @@
 
 @section('conical','/en/mobile-test')
 
-@section('en-link','/en/mobile-test')
+@section('en-link')
+en/mobile-test
+@endsection
 
-@section('id-link','/id/mobile-test')
+@section('id-link')
+id/mobile-test
+@endsection
 
 @section('content')
 

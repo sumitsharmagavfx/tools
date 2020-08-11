@@ -8,9 +8,13 @@
 
 @section('conical','/en/page-title-meta-description-checker')
 
-@section('en-link','/en/page-title-meta-description-checker')
+@section('en-link')
+en/page-title-meta-description-checker
+@endsection
 
-@section('id-link','/id/page-title-meta-description-checker')
+@section('id-link')
+id/page-title-meta-description-checker
+@endsection
 
 @section('content')
 @push('style')

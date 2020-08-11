@@ -8,9 +8,13 @@
 
 @section('conical','/en/ssl-checker')
 
-@section('en-link','/en/ssl-checker')
+@section('en-link')
+en/ssl-checker
+@endsection
 
-@section('id-link','/id/ssl-checker')
+@section('id-link')
+id/ssl-checker
+@endsection
 
 @section('content')
     <div class="card card-custom mb-5">
