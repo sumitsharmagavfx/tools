@@ -71,5 +71,5 @@ return [
     "meta-desc" => "Gunakan PageSpeed tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
     "subtitle" => "PERIKSA KECEPATAN SITUS DAN MASALAH WEB",
-    "btn-analysis" => "Analisis"
+    "btn-analysis" => "Analisa URL"
 ];

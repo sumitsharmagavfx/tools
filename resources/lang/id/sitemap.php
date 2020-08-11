@@ -1,7 +1,7 @@
 <?php
 return [
     "title" => "SITEMAP GENERATOR  <small>PERKAYA PETA SITUS UNTUK CRAWLER</small>",
-    "btn-generate" => "Generate",
+    "btn-generate" => "Membuat XML",
     "input-hint" => "Masukkan URL Anda",
     "result-title" => "HASIL SITEMAP",
     "btn-download" => "Unduh Sitemap",
