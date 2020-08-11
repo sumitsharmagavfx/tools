@@ -148,6 +148,15 @@ class ToolsController extends Controller
       return view('Tools/sitemap', compact('local', 'dataID', 'dataEN'));
     }
 
+    public function robotgenerator($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/robotgenerator', compact('local', 'dataID', 'dataEN'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();
