@@ -90,7 +90,14 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-12">
-          <textarea data-autoresize name="name" rows="15" style="resize:none; overflow:hidden" class="form-control" id="textarea"></textarea>
+          <textarea data-autoresize name="name" 
+            rows="15" style="resize:none; overflow:hidden" 
+            class="form-control" id="textarea" 
+            data-placement="bottom" data-trigger="click" 
+            data-toggle="popover" data-html="true" 
+            title="@lang('wordcounter.popover-title')" 
+            data-content="@lang('wordcounter.popover-content')" 
+            onclick="myFunction()"></textarea>
         </div>
       </div>
     </div>
@@ -106,7 +113,7 @@ id/word-counter
       </div>
       <div class="card-body">
         <div class="accordion accordion-toggle-arrow" id="accordionExample1">
-          <div class="card">
+          <div class="card" id="kd">
             <div class="card-header">
               <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne1">
                 @lang('wordcounter.word-1')
@@ -208,7 +215,7 @@ id/word-counter
           <li>@lang('wordcounter.copy-li-6')</li>
           <li>@lang('wordcounter.copy-li-7')</li>
         </ol>
-        <h3>@lang('wordcounter.copy-sub-title-2')</h3>
+        <h3 id="@lang('wordcounter.jumpto-link-1')" >@lang('wordcounter.copy-sub-title-2')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -233,7 +240,7 @@ id/word-counter
             </tr>
           </tbody>
         </table>
-        <h3> @lang('wordcounter.copy-sub-title-3')</h3>
+        <h3 id="@lang('wordcounter.jumpto-link-2')"> @lang('wordcounter.copy-sub-title-3')</h3>
         <p>@lang('wordcounter.copy-desc-4-1')</p>
         <p>@lang('wordcounter.copy-desc-4-2')</p>
         <table class="table">
@@ -366,7 +373,7 @@ id/word-counter
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">@lang('wordcounter.copy-title-5')</h2>
+          <h2 id ="@lang('wordcounter.jumpto-link-3')" class="card-label">@lang('wordcounter.copy-title-5')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -406,6 +413,11 @@ id/word-counter
       resizeTextarea(this);
     }).removeAttr('data-autoresize');
   });
+</script>
+<script>
+function myFunction() {
+  document.getElementById("kd").style.borderBottom = "2px solid #24daff";
+}
 </script>
 @endpush
 
