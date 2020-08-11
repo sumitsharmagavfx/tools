@@ -373,15 +373,15 @@ id/word-counter
         <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
         <div class="row">
           <div class="col-md-6 mb-5">
-            <div class="container p-10" style="background-color:#53F9AD">
+            <div class="container p-10" style="background-color:#f2f2f2; border-radius: 7px;">
               <h3>@lang('wordcounter.copy-sub-title-5-1')</h3>
               <p>@lang('wordcounter.copy-desc-5-2')</p>
             </div>
           </div>
           <div class="col-md-6 mb-5">
-            <div class="container p-10" style="background-color:#53F9AD; height:100%">
+            <div class="container p-10" style="background-color:#f2f2f2; height:100%; border-radius: 7px;">
               <h3>@lang('wordcounter.copy-sub-title-5-2')</h3>
-              <p>@lang('wordcounter.copy-desc-5-2')</p>
+              <p>@lang('wordcounter.copy-desc-5-3')</p>
             </div>
           </div>
         </div>
