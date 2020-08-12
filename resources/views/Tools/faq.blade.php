@@ -36,7 +36,8 @@ id/json-ld-faq-schema-generator
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h1 class="card-label">JSON-LD FAQ SCHEMA GENERATOR <small>@lang('faq.subtitle')</small></h1>
+          <h1 class="card-label">JSON-LD FAQ SCHEMA GENERATOR </h1>
+          <small>@lang('faq.subtitle')</small>
         </div>
       </div>
       <div class="card-body">

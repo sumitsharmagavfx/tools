@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::redirect('/', '/en');
 //Route::resource('/', 'HomeController');
 Route::get('/construction', function (){
@@ -17,6 +18,7 @@ Route::get('/construction', function (){
 });
 Route::get('/url', 'ToolsController@loadssl');
 Route::get('/{lang}','HomeController@index');
+
 //Route::get('/test', function (){
 //    return view('/tools/strikethrough');
 //});

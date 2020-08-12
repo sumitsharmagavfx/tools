@@ -1,6 +1,5 @@
 <?php
-return[
-    "title" => "WORD COUNTER",
+return[    
     "subtitle" => "ADVANCE YOUR WRITING",
     "character" => "CHARACTER",
     "word" => "WORD",
@@ -85,5 +84,10 @@ return[
     "copy-desc-6-26" => "are various. During the content-making process, writers might encounter quite complex problems in their project. So, for whom this Tool is developed?",
     "meta-title" => "Word Counter Online – Content Writing Tools",
     "meta-desc" => "Count the number of words your article here. Just copy and paste, then the CMLABS Word Counter tool automatically calculates words and keyword density",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
+    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "popover-title" => "Writer or Paste your content here!",
+    "popover-content" => "It's very easy. Just write or put your content above, on textarea. <br /><br /><strong>Important</strong>: you can direcly check the <a href='#keyword-density'><u>keyword density</u></a> on right (or bellow for mobile-web version). <br /><br />Learn more about the cmlabs <a href='#counter-specs'><u>counter specification</u></a> here. <br /><br /><a href='#do-i-need-this-tools' class='label label-inline font-weight-normal label-light-info'>Do I need this tools?</a>",
+    "jumpto-link-1" => "counter-specs",
+    "jumpto-link-2" => "keyword-density",
+    "jumpto-link-3" => "do-i-need-this-tools"
 ];
