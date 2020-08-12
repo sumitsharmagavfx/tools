@@ -33,7 +33,8 @@ id/mobile-test
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h1 class="card-label">MOBILE FRIENDLY TEST <small>@lang('mobiletest.subtitle')</small></h1>
+          <h1 class="card-label">MOBILE FRIENDLY TEST </h1>
+          <small>@lang('mobiletest.subtitle')</small>
         </div>
       </div>
       <div class="card-body">
@@ -43,7 +44,7 @@ id/mobile-test
               <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('mobiletest.question')">
             </div>
           </div>
-          <div class="col-lg-2 mb-5">
+          <div class="col-lg-3 col-xl-2 mb-5">
             <button type="button" class="btn btn btn-light-info  form-control" name="button" id="btn-check">
             <i class="flaticon2-heart-rate-monitor"></i> @lang('mobiletest.btn-add')</button>
           </div>

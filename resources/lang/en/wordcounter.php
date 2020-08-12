@@ -1,6 +1,5 @@
 <?php
-return[
-    "title" => "WORD COUNTER",
+return[    
     "subtitle" => "ADVANCE YOUR WRITING",
     "character" => "CHARACTER",
     "word" => "WORD",

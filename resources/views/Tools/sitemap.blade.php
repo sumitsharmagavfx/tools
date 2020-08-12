@@ -20,17 +20,18 @@ id/sitemap-generator
 <div class="card card-custom gutter-b">
   <div class="card-header">
     <div class="card-title">
-      <h1 class="card-label">@lang('sitemap.title')</h1>
+      <h1 class="card-label">SITEMAP GENERATOR </h1>
+      <small>@lang('sitemap.sub-title')</small>
     </div>
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-md-5 gutter-b">
+      <div class="col-lg-5 gutter-b">
         <div class="" id="spin">
           <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
         </div>
       </div>
-      <div class="col-md-2 gutter-b">
+      <div class="col-lg-3 col-xl-3 col-xxl-2 gutter-b">
         <button type="button" class="btn btn btn-light-info  form-control" name="button" id="generate">
         <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
       </div>

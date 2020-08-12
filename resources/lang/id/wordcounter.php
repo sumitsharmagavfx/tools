@@ -1,7 +1,6 @@
 <?php
 
-return [
-    "title" => "WORD COUNTER",
+return [    
     "subtitle" => "TINGKATKAN SKILL MENULIS",
     "character" => "KARAKTER",
     "word" => "KATA",
