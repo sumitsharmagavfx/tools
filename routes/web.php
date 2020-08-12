@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::resource('/', 'HomeController');
+Route::redirect('/', '/en');
+Route::resource('/{lang}', 'HomeController');
 //Route::get('/test', function (){
 //    return view('/tools/strikethrough');
 //});

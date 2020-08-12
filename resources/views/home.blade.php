@@ -6,6 +6,13 @@
 
 @section('meta-keyword', 'seo, free seo tool, content writing, copywriting')
 
+@section('en-link')
+en
+@endsection
+@section('id-link')
+id
+@endsection
+
 @section('content')
 <div class="d-flex flex-column-fluid mt-5">
   <div class="container">

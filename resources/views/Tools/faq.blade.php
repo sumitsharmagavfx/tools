@@ -7,9 +7,11 @@
 @section('meta-keyword', Lang::get('faq.meta-keyword'))
 
 @section('conical','/en/json-ld-faq-schema-generator')
+
 @section('en-link')
 en/json-ld-faq-schema-generator
 @endsection
+
 @section('id-link')
 id/json-ld-faq-schema-generator
 @endsection
