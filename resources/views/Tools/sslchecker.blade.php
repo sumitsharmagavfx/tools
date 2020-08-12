@@ -20,7 +20,8 @@ id/ssl-checker
     <div class="card card-custom mb-5">
         <div class="card-header">
             <div class="card-title">
-                <h1 class="card-label">SSL CHECKER TOOL <small>@lang('sslchecker.subtitle')</small></h1>
+                <h1 class="card-label">SSL CHECKER TOOL </h1>
+                <small>@lang('sslchecker.subtitle')</small>
             </div>
         </div>
         <div class="card-body">
@@ -30,7 +31,7 @@ id/ssl-checker
                         <input id="url" type="text" name="" class="form-control" value="" placeholder="@lang('sslchecker.placeholder')">
                     </div>
                 </div>
-                <div class="col-lg-2 mb-5">
+                <div class="col-lg-3 col-xl-2 mb-5">
                     <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control" name="button">
                     <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
                     </button>

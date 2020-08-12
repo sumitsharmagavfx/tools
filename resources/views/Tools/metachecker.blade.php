@@ -33,7 +33,8 @@ id/page-title-meta-description-checker
 <div class="card card-custom mb-5" id="kt_page_stretched_card">
   <div class="card-header">
     <div class="card-title">
-      <h1 class="card-label">@lang('metachecker.title')</h1>
+      <h1 class="card-label">TITLE & META DESCRIPTION CHECKER </h1>
+      <small>@lang('metachecker.sub-title')</small>
     </div>
   </div>
 </div>
