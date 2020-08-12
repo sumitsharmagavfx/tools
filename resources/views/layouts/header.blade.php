@@ -16,17 +16,17 @@
         <div class="topbar">
 
             <!--begin::User-->
-            
+
             <div class="topbar-item">
 
             @if($local == "id")
-                <a href="/contruction" class="btn btn-outline-primary mr-3">
+                <a href="/construction" class="btn btn-outline-primary mr-3">
                 <i class="flaticon2-line-chart"></i> Analitik
                 </a>
                 @else
-                <a href="/contruction" class="btn btn-outline-primary mr-3">
+                <a href="/construction" class="btn btn-outline-primary mr-3">
                 <i class="flaticon2-line-chart"></i> Analytics
-                </a> 
+                </a>
                 @endif
 
                 <div class="dropdown mr-3">
@@ -34,11 +34,11 @@
                     <i class="fa fa-language"></i> @lang('layout.language')
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/en">
+                        <a class="dropdown-item" href="/en/version">
                           <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                            <span class="ml-1">English</span>
                          </a>
-                        <a class="dropdown-item" href="/id">
+                        <a class="dropdown-item" href="/id/version">
                           <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                            <span class="ml-1">Indonesia</span>
                         </a>

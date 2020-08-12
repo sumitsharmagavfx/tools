@@ -11,7 +11,12 @@
 |
 */
 Route::redirect('/', '/en');
-Route::resource('/{lang}', 'HomeController');
+//Route::resource('/', 'HomeController');
+Route::get('/construction', function (){
+    return view('premiumtools');
+});
+Route::get('/url', 'ToolsController@loadssl');
+Route::get('/{lang}','HomeController@index');
 //Route::get('/test', function (){
 //    return view('/tools/strikethrough');
 //});
@@ -27,9 +32,6 @@ Route::get('/{lang}/sitemap-generator', 'ToolsController@sitemap');
 Route::get('/{lang}/mobile-test', 'ToolsController@mobiletest');
 Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
 Route::get('/{lang}/robotstxt-generator', 'ToolsController@robotgenerator');
-Route::get('/construction', function (){
-    return view('premiumtools');
-});
-Route::get('/en', 'ToolsController@englishVersion');
-Route::get('/id', 'ToolsController@indonesiaVersion');
-Route::get('/url', 'ToolsController@loadssl');
+Route::get('/en/version', 'ToolsController@englishVersion');
+Route::get('/id/version', 'ToolsController@indonesiaVersion');
+
