@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Free SEO Tool untuk Content Writing')
+@section('title', Lang::get('home.meta-title'))
 
-@section('meta-desc', 'Gunakan SEO tools dari CMLABS untuk meningkatkan kemampuan content writing & copywriting')
+@section('meta-desc', Lang::get('home.meta-desc'))
 
-@section('meta-keyword', 'seo, free seo tool, content writing, copywriting')
+@section('meta-keyword', Lang::get('home.meta-keyword'))
 
 @section('en-link')
 en
@@ -62,3 +62,4 @@ id
   </div>
 </div>
 @endsection
+<!-- home -->

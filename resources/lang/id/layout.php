@@ -1,6 +1,6 @@
 <?php
 return [
-    "language" => "Choose Language",
+    "language" => "Bahasa",
     "paid-tools" => "Tools Berbayar",
-    "title" => "SEO Tools Gratis"
+    "title" => "/tool-seo"
 ];

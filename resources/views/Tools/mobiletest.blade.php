@@ -38,13 +38,14 @@ id/mobile-test
       </div>
       <div class="card-body">
         <div class="row">
-          <div class="col-lg-10 mb-5">
+          <div class="col-lg-5 mb-5">
             <div id="spinner">
               <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('mobiletest.question')">
             </div>
           </div>
           <div class="col-lg-2 mb-5">
-            <button type="button" class="btn btn-success form-control" name="button" id="btn-check">@lang('mobiletest.btn-add')</button>
+            <button type="button" class="btn btn btn-light-info  form-control" name="button" id="btn-check">
+            <i class="flaticon2-heart-rate-monitor"></i> @lang('mobiletest.btn-add')</button>
           </div>
         </div>
       </div>

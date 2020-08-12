@@ -26,10 +26,10 @@ Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
 Route::get('/{lang}/sitemap-generator', 'ToolsController@sitemap');
 Route::get('/{lang}/mobile-test', 'ToolsController@mobiletest');
 Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
+Route::get('/{lang}/robotstxt-generator', 'ToolsController@robotgenerator');
 Route::get('/construction', function (){
     return view('premiumtools');
 });
 Route::get('/en', 'ToolsController@englishVersion');
 Route::get('/id', 'ToolsController@indonesiaVersion');
 Route::get('/url', 'ToolsController@loadssl');
-

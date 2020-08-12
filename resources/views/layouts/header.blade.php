@@ -16,10 +16,22 @@
         <div class="topbar">
 
             <!--begin::User-->
+            
             <div class="topbar-item">
-                <div class="dropdown mr-4">
-                    <button class="btn btn-bg-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        @lang('layout.language')
+
+            @if($local == "id")
+                <a href="/contruction" class="btn btn-outline-primary mr-3">
+                <i class="flaticon2-line-chart"></i> Analitik
+                </a>
+                @else
+                <a href="/contruction" class="btn btn-outline-primary mr-3">
+                <i class="flaticon2-line-chart"></i> Analytics
+                </a> 
+                @endif
+
+                <div class="dropdown mr-3">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-language"></i> @lang('layout.language')
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item" href="/en">
@@ -32,16 +44,77 @@
                         </a>
                     </div>
                 </div>
+
                 @if($local == "id")
-                <a href="https://cmlabs.co/" class="mr-3">
+                <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
+                <div class="dropdown dropdown-inline">
+                    <a href="#" class="btn btn-outline-primary font-weight-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-fingerprint"></i> Blog & Panduan
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-md py-5">
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/kamus-seo/">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">Kamus SEO</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/panduan-seo/">
+                                    <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">Panduan SEO</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/blog/">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">Blog</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 @else
-                <a href="https://cmlabs.co/en/" class="mr-3">
+                <!-- <a href="https://cmlabs.co/en/" class="mr-3"> -->
+                <div class="dropdown dropdown-inline">
+                    <a href="#" class="btn btn-outline-primary font-weight-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-fingerprint"></i> Blog & Resource
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-md py-5">
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/en/seo-terms/">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">SEO Terms</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/en/seo-guide/">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">SEO Guide</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="https://cmlabs.co/en/blog/">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">Blog's</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 @endif
-                  <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
+                  <!-- <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
                     <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
-                    cmlabs.co</button>
-                </a>
-                <a href="/construction" class="btn btn-info pulse pulse-light btn-fixed-height">
+                    cmlabs</button>
+                </a> -->
+                <!-- <a href="/construction" class="btn btn-info pulse pulse-light btn-fixed-height">
                     <div class="pulse pulse-light">
                         <span class="pulse-ring" style="margin: -7px;"></span>
                       <span class="svg-icon svg-icon-light svg-icon-2x">
@@ -55,7 +128,7 @@
                       </span>
                         @lang('layout.paid-tools')
                     </div>
-                </a>
+                </a> -->
             </div>
             <!--end::User-->
         </div>
