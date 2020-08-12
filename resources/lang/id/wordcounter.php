@@ -86,5 +86,10 @@ return [
     "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
     "meta-title" => "Word Counter Online – Content Writing Tools",
     "meta-desc" => "Terapkan Word Counter dari CMLABS untuk hitung jumlah kata dan keyword density otomatis",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
+    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "popover-title" => "Tulis atau tempel tulisan disini!",
+    "popover-content" => "Sangat mudah! Silahkan mulai menulis atau tempel konten kamu di kolom atas. <br /><br /><strong>Informasi Penting</strong>: setelah itu, kamu dapat langsung cek hasil <a href='#kepadatan-kata-kunci'><u>kepadatan kata-kunci</u></a> pada bagian kanan (atau bagian bawah, ketika berada di versi-mobile web). <br /><br />Pelajari lebih lanjut perihal <a href='#spesifikasi-counter'><u>spesifikasi counter</u></a> disini. <br /><br /><a href='#apakah-saya-butuh-tool-ini' class='label label-inline font-weight-normal label-light-info' >Apakah saya butuh tool ini?</a>",
+    "jumpto-link-1" => "spesifikasi-counter",
+    "jumpto-link-2" => "kepadatan-kata-kunci",
+    "jumpto-link-3" => "apakah-saya-butuh-tool-ini"
 ];
