@@ -579,6 +579,7 @@ id/page-speed
 @endpush
 
 @push('script')
+<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 @endpush
 

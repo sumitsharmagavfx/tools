@@ -199,6 +199,7 @@ id/mobile-test
 @endsection
 
 @push('script')
+<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')

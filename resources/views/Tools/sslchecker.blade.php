@@ -120,6 +120,7 @@ id/ssl-checker
 @endsection
 
 @push('script')
+    <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
     <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 @endpush
 @section('ssl-checker')
