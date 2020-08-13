@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{$local}}">
 <!--begin::Head-->
 <head>
     <meta charset="utf-8" />
@@ -20,7 +20,7 @@
     @if(env('APP_ENV')==='development')
         <meta name="robots" content="noindex">
     @endif
-    <link rel="alternate" hreflang="en-EN" href="https://tools.cmlabs.co/@yield('en-link')" />
+    <link rel="alternate" hreflang="en-ID" href="https://tools.cmlabs.co/@yield('en-link')" />
     <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co/@yield('id-link')" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
