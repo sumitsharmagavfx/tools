@@ -58,11 +58,11 @@
                 <i class="fas fa-language"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/en">
+              <a class="dropdown-item" href="/en/version">
                 <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                  <span class="ml-1">English</span>
                </a>
-              <a class="dropdown-item" href="/id">
+              <a class="dropdown-item" href="/id/version">
                 <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                  <span class="ml-1">Indonesia</span>
               </a>
