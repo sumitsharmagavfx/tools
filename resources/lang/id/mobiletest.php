@@ -1,6 +1,6 @@
 <?php
 return [
-    "btn-add" => "Cek URL",
+    "btn-add" => "Periksa URL",
     "question" => "Masukkan URL Anda",
     "title-2" => "Mobile-Friendly Test Tool",
     "desc-2-1" => "Memiliki situs web yang mobile-friendly adalah suatu hal penting untuk meningkatkan brand awarenesss bisnis Anda. Di banyak negara, traffic smartphone sekarang melebihi traffic desktop. Jika Anda belum membuat situs web Anda mobile-friendly, Anda harus melakukannya sekarang. Menggunakan Mobile-Friendly Test Tool dari CMLABS adalah cara cepat dan mudah untuk menguji apakah suatu halaman di situs Anda mobile-friendly.",

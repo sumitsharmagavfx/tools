@@ -1,6 +1,6 @@
 <?php
 return [
-    'copy-1' => 'CHECK RESULT',
+    'copy-1' => 'Check SSL',
     'copy-2' => 'Check SSL in Your Website',
     'copy-3' => 'Installing an SSL certificate can be a hassle for developers. You are not only tasked with obtaining the correct type of certificate, the challenge comes when you have to publish it, install it and then configure your Web server correctly and migrate your entire website to HTTPS.',
     'copy-4' => 'You can relieve this burden and ask an expert to handle the installation of an SSL certificate. But if you feel like a challenge and want to try your own installation and configuration, we are here to help.',
@@ -12,5 +12,6 @@ return [
     "meta-desc" => "Try SSL Checker Tool to cheek the validity of the SSL certificate on your website",
     "meta-keyword" => "ssl, ssl tool, ssl checker, check ssl certificate, web ssl certificate",
     "title" => "SSL Checker tool",
-    "subtitle" => "CHECK YOU SSL CERTIFICATE"
+    "subtitle" => "CHECK YOU SSL CERTIFICATE",
+    "placeholder" => "Input Your URL"
 ];

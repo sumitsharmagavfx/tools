@@ -1,7 +1,7 @@
 <?php
 return [
-    "title" => "SITEMAP GENERATOR  <small>ENHANCE SITEMAP FOR CRAWLERS</small>",
-    "btn-generate" => "Generate",
+    "sub-title" => "ENHANCE SITEMAP FOR CRAWLERS",
+    "btn-generate" => "Generate XML",
     "input-hint" => "Input Your URL",
     "result-title" => "SITEMAP RESULTS",
     "btn-download" => "Download Sitemap",

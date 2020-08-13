@@ -2,8 +2,8 @@
 return [
     "subtitle" => "ACTIVATE RICH SNIPPET IN SERP",
     "btn-add" => "Add Another FAQ",
-    "btn-copy" => "Copy",
-    "btn-test" => "Test Rich Result!",
+    "btn-copy" => "Copy to Clipboard",
+    "btn-test" => "Live Test Rich Result",
     "btn-delete" => "Delete",
     "question" => "Question",
     "answer" => "Answer",

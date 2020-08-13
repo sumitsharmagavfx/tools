@@ -8,26 +8,32 @@
 
 @section('conical','/en/page-speed')
 
-@section('en-link','/en/page-speed')
+@section('en-link')
+en/page-speed
+@endsection
 
-@section('id-link','/id/page-speed')
+@section('id-link')
+id/page-speed
+@endsection
 
 @section('content')
 <div class="card card-custom gutter-b">
   <div class="card-header">
     <div class="card-title">
-      <h1 class="card-label">PAGE SPEED <small>@lang('pagespeed.subtitle')</small></h1>
+      <h1 class="card-label">PAGE SPEED </h1>
+      <small>@lang('pagespeed.subtitle')</small>
     </div>
   </div>
   <div class="card-body">
     <div class="row">
-      <div class="col-lg-10 mb-5">
+      <div class="col-lg-5 mb-5">
         <div id="spinner">
           <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('pagespeed.input-hint')">
         </div>
       </div>
-      <div class="col-lg-2 mb-5">
-        <button type="button" class="btn btn-success form-control" name="button" id="analysis-button">@lang('pagespeed.btn-analysis')!</button>
+      <div class="col-lg-3 col-xl-2 mb-5">
+        <button type="button" class="btn btn btn-light-info form-control" name="button" id="analysis-button">
+        <i class="flaticon2-heart-rate-monitor"></i> @lang('pagespeed.btn-analysis')</button>
       </div>
     </div>
   </div>

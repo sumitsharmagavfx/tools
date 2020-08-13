@@ -148,6 +148,15 @@ class ToolsController extends Controller
       return view('Tools/sitemap', compact('local', 'dataID', 'dataEN'));
     }
 
+    public function robotgenerator($lang)
+    {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        App::setLocale($lang);
+        $local = App::getLocale();
+        return view('Tools/robotgenerator', compact('local', 'dataID', 'dataEN'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();
@@ -155,8 +164,8 @@ class ToolsController extends Controller
         App::setLocale('en');
         session()->put('local','en');
         session()->save();
-        if ($link == null) {
-          return \redirect('/');
+        if ($link === 'en' || $link === 'id') {
+          return \redirect('/en');
         }else {
             return \redirect('/en/'.$link);
         }
@@ -169,8 +178,8 @@ class ToolsController extends Controller
         App::setLocale('id');
         session()->put('local','id');
         session()->save();
-        if ($link == null) {
-          return \redirect('/');
+        if ($link === 'en' || $link === 'id') {
+          return \redirect('/id');
         }else {
             return \redirect('/id/'.$link);
         }
@@ -180,7 +189,7 @@ class ToolsController extends Controller
     {
         $url = $_GET['host'];
         $client = new Client();
-        $request = $client->get('https://ssl-cert.glitch.me/?host='.$url);
+        $request = $client->get('https://api.cmlabs.co/ssl/?url='.$url);
         $response = $request->getBody()->getContents();
         echo $response;
     }

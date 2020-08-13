@@ -8,26 +8,32 @@
 
 @section('conical','/en/ssl-checker')
 
-@section('en-link','/en/ssl-checker')
+@section('en-link')
+en/ssl-checker
+@endsection
 
-@section('id-link','/id/ssl-checker')
+@section('id-link')
+id/ssl-checker
+@endsection
 
 @section('content')
     <div class="card card-custom mb-5">
         <div class="card-header">
             <div class="card-title">
-                <h1 class="card-label">SSL CHECKER TOOL <small>@lang('sslchecker.subtitle')</small></h1>
+                <h1 class="card-label">SSL CHECKER TOOL </h1>
+                <small>@lang('sslchecker.subtitle')</small>
             </div>
         </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-lg-10 mb-5">
+                <div class="col-lg-5 mb-5">
                     <div id="input">
-                        <input id="url" type="text" name="" class="form-control" value="" placeholder="Input Your URL">
+                        <input id="url" type="text" name="" class="form-control" value="" placeholder="@lang('sslchecker.placeholder')">
                     </div>
                 </div>
-                <div class="col-lg-2 mb-5">
-                    <button id="btn-ssl" type="button" class="btn btn-success form-control" name="button">CHECK!
+                <div class="col-lg-3 col-xl-2 mb-5">
+                    <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control" name="button">
+                    <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
                     </button>
                 </div>
             </div>

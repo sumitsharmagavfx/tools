@@ -1,7 +1,6 @@
 <?php
 
-return [
-    "title" => "WORD COUNTER",
+return [    
     "subtitle" => "TINGKATKAN SKILL MENULIS",
     "character" => "KARAKTER",
     "word" => "KATA",
@@ -44,7 +43,8 @@ return [
     "copy-sub-title-5-1" => "CONTENT WRITER",
     "copy-desc-5-1" => "Word Counter akan membantu aktifitas menulis konten artikel dan melakukan penghitungan kata, kalimat dan waktu baca dengan akurat.",
     "copy-sub-title-5-2" => "COPYWRITER",
-    "copy-desc-5-2" => "Popularitas copywriter semakin tinggi dan membuat pekerjaan ini dibutuhkan enterprise. Maka Word Counter akan sangat dibutuhkan.",
+    "copy-desc-5-2" => "Permintaan posisi content writer semakin dicari dan kemampuan menulis kontent kini menjadi skill mahal. Maka Word Counter akan sangat dibutuhkan.",
+    "copy-desc-5-3" => "Popularitas copywriter semakin tinggi dan membuat pekerjaan ini dibutuhkan enterprise. Oleh karenanya, copywriter perlu menggunakan Word Counter.",
     "copy-desc-5" => "Perlu diketahui jika tipe konten itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
     "copy-desc-6-0" => "Apa Itu Keyword Density",
     "copy-desc-6-1" => "Keyword density atau kepadatan istilah kunci adalah elemen optimasi kata kunci yg akan membantu Anda buat melihat berapa kali kata kunci target digunakan dalam page web tertentu.",
@@ -85,5 +85,10 @@ return [
     "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Tools ini tepat untuk siapa saja?",
     "meta-title" => "Word Counter Online – Content Writing Tools",
     "meta-desc" => "Terapkan Word Counter dari CMLABS untuk hitung jumlah kata dan keyword density otomatis",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool"
+    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "popover-title" => "Tulis atau tempel tulisan disini!",
+    "popover-content" => "Sangat mudah! Silahkan mulai menulis atau tempel konten kamu di kolom atas. <br /><br /><strong>Informasi Penting</strong>: setelah itu, kamu dapat langsung cek hasil <a href='#kepadatan-kata-kunci'><u>kepadatan kata-kunci</u></a> pada bagian kanan (atau bagian bawah, ketika berada di versi-mobile web). <br /><br />Pelajari lebih lanjut perihal <a href='#spesifikasi-counter'><u>spesifikasi counter</u></a> disini. <br /><br /><a href='#apakah-saya-butuh-tool-ini' class='label label-inline font-weight-normal label-light-info' >Apakah saya butuh tool ini?</a>",
+    "jumpto-link-1" => "spesifikasi-counter",
+    "jumpto-link-2" => "kepadatan-kata-kunci",
+    "jumpto-link-3" => "apakah-saya-butuh-tool-ini"
 ];
