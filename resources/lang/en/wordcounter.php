@@ -38,7 +38,7 @@ return[
     "copy-td-3" => "is a percentage of three specific words, sorted descending.",
     "copy-td-4" => "is a percentage of four specific words, sorted descending.",
     "copy-td-5" => "is a percentage of five specific words, sorted descending.",
-    "copy-title-5" => "Tool ini relevan untuk?",
+    "copy-title-5" => "This tools relevant for",
     "copy-sub-title-5-1" => "CONTENT WRITER",
     "copy-desc-5-1" => "This Word Counter Tool will assist any online content writing project by providing an accurate automatic word and sentence count, as well as reading time calculation, all in real-time.",
     "copy-sub-title-5-2" => "COPYWRITER",

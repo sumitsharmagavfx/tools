@@ -2,7 +2,7 @@
     <!--begin::Brand-->
     <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-4 py-lg-8">
         <!--begin::Logo-->
-        <a href="/">
+        <a href="/{{$local}}">
             <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px"/>
         </a>
         <!--end::Logo-->

@@ -12,14 +12,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($lang)
     {
         // dd(App::getLocale());
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
-        if (session()->exists('local')) {
-            App::setLocale(session('local'));
-            session()->put('local',App::getLocale());
-            session()->save();
+//        if (session()->exists('local')) {
+//            App::setLocale(session('local'));
+//            session()->put('local',App::getLocale());
+//            session()->save();
+//        }
+        if ($lang==='en'){
+            App::setLocale('en');
+        }else{
+            App::setLocale('id');
         }
         $local = App::getLocale();
         return view('home', compact('data','local'));
