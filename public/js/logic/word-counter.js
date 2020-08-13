@@ -180,5 +180,15 @@ input.addEventListener('input', function() {
             topKeywords5.appendChild(li);
         }
     }
-      sticky.update();
+    if (words){
+        if (sentences.length === 1){
+            $('#collapseOne1').addClass('show');
+            $('#word1').removeClass('collapsed').attr('aria-expanded','true')
+        }
+    }else {
+        $('#collapseOne1').removeClass('show');
+        $('#word1').addClass('collapsed').attr('aria-expanded','false')
+    }
+
+    sticky.update();
 });

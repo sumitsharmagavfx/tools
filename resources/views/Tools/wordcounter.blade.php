@@ -91,13 +91,13 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-12">
-          <textarea data-autoresize name="name" 
-            rows="15" style="resize:none; overflow:hidden" 
-            class="form-control" id="textarea" 
-            data-placement="bottom" data-trigger="click" 
-            data-toggle="popover" data-html="true" 
-            title="@lang('wordcounter.popover-title')" 
-            data-content="@lang('wordcounter.popover-content')" 
+          <textarea data-autoresize name="name"
+            rows="15" style="resize:none; overflow:hidden"
+            class="form-control" id="textarea"
+            data-placement="bottom" data-trigger="click"
+            data-toggle="popover" data-html="true"
+            title="@lang('wordcounter.popover-title')"
+            data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
         </div>
       </div>
@@ -108,7 +108,7 @@ id/word-counter
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
-        <div class="card-title">
+        <div id="word1" class="card-title">
           <h2 class="card-label">@lang('wordcounter.keyword-density')</h2>
         </div>
       </div>
