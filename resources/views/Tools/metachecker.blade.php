@@ -133,7 +133,7 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" style="color:blue" class="font-weight-bold">@lang('metachecker.copy-1')</p>
+        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" target="_blank" style="color:blue" class="font-weight-bold">@lang('metachecker.copy-1')</p>
         <table class="table" border="1px" bordercolor="#EBEDF3">
           <tbody>
             <tr>

@@ -91,13 +91,13 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-12">
-          <textarea data-autoresize name="name" 
-            rows="15" style="resize:none; overflow:hidden" 
-            class="form-control" id="textarea" 
-            data-placement="bottom" data-trigger="click" 
-            data-toggle="popover" data-html="true" 
-            title="@lang('wordcounter.popover-title')" 
-            data-content="@lang('wordcounter.popover-content')" 
+          <textarea data-autoresize name="name"
+            rows="15" style="resize:none; overflow:hidden"
+            class="form-control" id="textarea"
+            data-placement="bottom" data-trigger="click"
+            data-toggle="popover" data-html="true"
+            title="@lang('wordcounter.popover-title')"
+            data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
         </div>
       </div>
@@ -378,7 +378,7 @@ id/word-counter
         </div>
       </div>
       <div class="card-body">
-        <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
+        <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/" target="_blank"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
         <div class="row">
           <div class="col-md-6 mb-5">
             <div class="container p-10" style="background-color:#f2f2f2; border-radius: 7px;">
