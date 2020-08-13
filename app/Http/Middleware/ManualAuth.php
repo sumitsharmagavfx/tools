@@ -16,10 +16,14 @@ class ManualAuth
     public function handle($request, Closure $next)
     {
         if (env('APP_ENV','local')=='development'){
-            if (session('logged_in')===false){
-                redirect('/login');
+            if (session()->exists('logged_in')){
+                if (session('logged_in')===false){
+                    return edirect('/login');
+                }else{
+                    return $next($request);
+                }
             }else{
-                return $next($request);
+                return redirect('/login');
             }
         }else{
             return $next($request);

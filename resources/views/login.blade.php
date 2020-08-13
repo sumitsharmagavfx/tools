@@ -55,21 +55,13 @@
               <h3>Welcome to CMLABS Staging Free Tools</h3>
               <div class="text-muted font-weight-bold">Enter your details to login to your account:</div>
             </div>
-            <form class="form" action="" method="POST">
+            <form class="form" action="/validate" method="POST">
+                @csrf
               <div class="form-group mb-5">
-                <input class="form-control h-auto form-control-solid py-4 px-8" type="text" placeholder="Email" name="name" autocomplete="off" />
+                <input class="form-control h-auto form-control-solid py-4 px-8" type="text" placeholder="Username" name="username" autocomplete="off" />
               </div>
               <div class="form-group mb-5">
                 <input class="form-control h-auto form-control-solid py-4 px-8" type="password" placeholder="Password" name="password" />
-              </div>
-              <div class="form-group d-flex flex-wrap justify-content-between align-items-center">
-                <div class="checkbox-inline">
-                  <label class="checkbox m-0 text-muted">
-                    <input type="checkbox" name="remember" />
-                    <span></span>
-                    Remember me
-                  </label>
-                </div>
               </div>
               <button id="kt_login_signin_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">Sign In</button>
             </form>
