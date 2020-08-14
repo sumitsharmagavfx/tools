@@ -177,21 +177,29 @@ observer1.observe(res_section,{attributes:true});
 observer2.observe(err_section,{attributes:true})
 
 function resultdata(titledata, imagedata) {
+
+    let resu_page = lang ==='en'? 'Page is mobile friendly' : 'Halaman ramah seluler';
+    let resu_desc = lang ==='en'? 'This page is easy to use on a mobile device' : 'Halaman ini mudah digunakan di perangkat seluler';
+    let resu_error = lang ==='en'? 'An Error Occurred While Performing a Test. Please Try Again' : 'Terjadi Kesalahan Saat Melakukan Tes. Silakan Coba Lagi';
+    let resu_pagenot = lang ==='en'? 'Page is not mobile friendly' : 'Halaman tidak ramah seluler';
+    let resu_descnot = lang ==='en'? 'This page is difficult to use on a mobile device' : 'Halaman ini sulit digunakan di perangkat seluler';
+    let resu_date = lang ==='en'? 'Tested on ' : 'Diuji Pada ';
+
     if(titledata === 'MOBILE_FRIENDLY') {
-        title.innerHTML = "Page is mobile friendly<br/>";
-        subtitle.innerHTML = 'This page is easy to use on a mobile device';
+        title.innerHTML = resu_page + "<br/>";
+        subtitle.innerHTML = resu_desc;
         title.style = 'color: green';
         $('.error-icon').hide();
         $('.success-icon').show();
     } else if(titledata === 'MOBILE_FRIENDLY_TEST_RESULT_UNSPECIFIED') {
-        title.innerHTML = 'An Error Occurred While Performing a Test. Please Try Again<br/>';
+        title.innerHTML = resu_error + "<br/>";
         subtitle.innerHTML = '';
         $('.error-icon').show();
         $('.success-icon').hide();
         title.style = 'color: red';
     } else if(titledata === 'NOT_MOBILE_FRIENDLY') {
-        title.innerHTML = 'Page is not mobile friendly<br/>';
-        subtitle.innerHTML = 'This page is difficult to use on a mobile device';
+        title.innerHTML = resu_pagenot + "<br/>";
+        subtitle.innerHTML = resu_descnot;
         title.style = 'color: red';
         $('.error-icon').show();
         $('.success-icon').hide();
@@ -202,10 +210,13 @@ function resultdata(titledata, imagedata) {
     image.src = "data:image/png;base64," + baseStr64;
     image.style = "width: 100% !important; height: auto";
 
-    date_now.innerHTML = "Tested on " + datenow();
+    date_now.innerHTML = resu_date + datenow();
 }
 
 function resourceissues(res_issues) {
+
+    let reso_pageloading = lang ==='en'? 'Page Loading Issues' : 'Masalah Pemuatan Halaman';
+
     if ( typeof res_issues === 'undefined' ) {
         resIssues.style = "display:none";
         resIssues.innerHTML = "";
@@ -221,12 +232,22 @@ function resourceissues(res_issues) {
             issueurl += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-exclamation-triangle text-warning"></i>&nbsp;&nbsp' +res_issues[i].blockedResource.url+ '</div></div>';
         }
 
-        resIssues.innerHTML = "<h5>Page Loading Issues</h5>" + issueurl;
+        resIssues.innerHTML = "<h5>"+reso_pageloading+"</h5>" + issueurl;
     }
 
 }
 
 function mobileissues(rules) {
+
+    let mob_wider = lang ==='en'? 'Content wider than screen' : 'Konten lebih lebar dari layar';
+    let mob_unexpected = lang ==='en'? 'Sorry, we don\'t have a description of the settings for errors.' : 'Maaf, kami tidak memiliki deskripsi tentang pengaturan untuk kesalahan.';
+    let mob_plugin = lang ==='en'? 'Uses incompatible plugins' : 'Menggunakan plugin yang tidak cocok   ';
+    let mob_viewnot = lang ==='en'? 'Viewport not set' : 'Area pandang tidak diatur';
+    let mob_viewnotto = lang ==='en'? 'Viewport not set to "device-width"' : 'Area pandang tidak diatur ke lebar perangkat';
+    let mob_text = lang ==='en'? 'Text too small to read' : 'Teks terlalu kecil untuk dibaca';
+    let mob_element = lang ==='en'? 'Clickable elements too close together' : 'Elemen yang dapat diklik terlalu berdekatan';
+    let mob_fix = lang ==='en'? 'Fix the Following Problems' : 'Perbaiki Masalah Berikut';
+
     if ( typeof rules === 'undefined' ) {
         mob_issues.style = "display:none";
         mob_issues.innerHTML = "";
@@ -241,22 +262,22 @@ function mobileissues(rules) {
         for (i = 0; i < rules.length; i++) {
 
             if( rules[i].rule === 'MOBILE_FRIENDLY_RULE_UNSPECIFIED') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Sorry, we don\'t have a description of the settings for errors.</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_unexpected +'</div></div>';
             } else if( rules[i].rule === 'USES_INCOMPATIBLE_PLUGINS') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Uses incompatible plugins</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_plugin +'</div></div>';
             } else if( rules[i].rule === 'CONFIGURE_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport not set</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_viewnot +'</div></div>';
             } else if( rules[i].rule === 'FIXED_WIDTH_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Viewport not set to "device-width"</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_viewnotto +'</div></div>';
             } else if( rules[i].rule === 'SIZE_CONTENT_TO_VIEWPORT') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Content wider than screen</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_wider +'</div></div>';
             } else if( rules[i].rule === 'USE_LEGIBLE_FONT_SIZES') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Text too small to read</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_text +'</div></div>';
             } else if( rules[i].rule === 'TAP_TARGETS_TOO_CLOSE') {
-                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;Clickable elements too close together</div></div>';
+                issues_detail += '<div class="card card-custom mb-4"><div class="card-body"><i class="fa fa-times-circle text-danger"></i>&nbsp;&nbsp;'+ mob_element +'</div></div>';
             }
 
-            mob_issues.innerHTML = "<h5>Fix the Following Problems</h5>" + issues_detail;
+            mob_issues.innerHTML = "<h5>"+mob_fix+"</h5>" + issues_detail;
         }
     }
 }
