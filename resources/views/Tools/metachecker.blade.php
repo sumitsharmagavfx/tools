@@ -33,7 +33,7 @@ id/page-title-meta-description-checker
 <div class="card card-custom mb-5" id="kt_page_stretched_card">
   <div class="card-header">
     <div class="card-title">
-      <h1 class="card-label">TITLE & META DESCRIPTION CHECKER </h1>
+      <h1 class="card-label">@lang('metachecker.title') </h1>
       <small>@lang('metachecker.sub-title')</small>
     </div>
   </div>
@@ -115,7 +115,7 @@ id/page-title-meta-description-checker
     <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">META DESCRIPTION</h2>
+          <h2 class="card-label">@lang('metachecker.copy-6')</h2>
         </div>
       </div>
       <div class="card-body">

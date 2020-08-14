@@ -1,5 +1,6 @@
 <?php
 return [
+    "title" => "MOBILE FRIENDLY TEST",
     "btn-add" => "Check URL",
     "question" => "Input Your URL",
     "title-2" => "Mobile Friendly Test Tool",
@@ -40,5 +41,7 @@ return [
     "subtitle" => "SITES PREVIEW ON MOBILE",
     "result-title" => "Test Result",
     "result-screenshot" => "Page Screenshot",
-
+    "example-resultdate"    => "Tested on 04/08/2020 22.50",
+    "example-resulttitle"   => "Page is mobile friendly",
+    "example-resultdesc"    => "This page is easy to use on a mobile device"
 ];

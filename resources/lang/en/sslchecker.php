@@ -12,6 +12,7 @@ return [
     "meta-desc" => "Try SSL Checker Tool to cheek the validity of the SSL certificate on your website",
     "meta-keyword" => "ssl, ssl tool, ssl checker, check ssl certificate, web ssl certificate",
     "title" => "SSL Checker tool",
+    "title-2" => "SSL CHECKER TOOL ",
     "subtitle" => "CHECK YOU SSL CERTIFICATE",
     "placeholder" => "Input Your URL"
 ];

@@ -58,7 +58,7 @@ id/word-counter
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h1 class="card-label">WORD COUNTER </h1>
+          <h1 class="card-label">@lang('wordcounter.title') </h1>
           <small>@lang('wordcounter.subtitle')</small>
         </div>
       </div>
