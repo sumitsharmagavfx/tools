@@ -181,16 +181,28 @@ input.addEventListener('input', function() {
         }
     }
     if (words){
-        if (sentences.length === 1){
+        if (sentences.length >= 1){
             $('#collapseOne1').addClass('show');
             $('#word1').removeClass('collapsed').attr('aria-expanded','true')
             sticky.update();
         }
+        sticky.update();
     }else {
         $('#collapseOne1').removeClass('show');
         $('#word1').addClass('collapsed').attr('aria-expanded','false')
         sticky.update();
     }
-
     sticky.update();
 });
+
+var target = $('.collapse');
+for (let i = 0; i < target.length; i++) {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === "class") {
+                sticky.update();
+            }
+        });
+    });
+    observer.observe(target[i],{attributes:true});
+}
