@@ -147,6 +147,7 @@ id/sitemap-generator
 </script>
 <script src="{{asset('js/logic/download.js')}}"></script>
 <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
+<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/sitemap.js')}}"></script>
 @endpush
 

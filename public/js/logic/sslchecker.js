@@ -1,3 +1,4 @@
+triggerEnter('#btn-ssl','#url');
 $('#btn-ssl').on('click',function () {
     $('#result').css('display','none');
     $('#input').addClass('spinner spinner-success spinner-right');
