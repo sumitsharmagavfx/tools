@@ -18,7 +18,7 @@ toastr.options = {
 let DATA_FINAL;
 $(document).ready(function () {
     const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
-
+    triggerEnter('#generate','#url');
     $('#generate').click(function () {
         // $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();

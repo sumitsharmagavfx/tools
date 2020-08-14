@@ -40,7 +40,7 @@ let loader;
 
 issueurl = '';
 issues_detail = '';
-
+triggerEnter('#btn-check','#url');
 $(document).ready(function() {
     $('#btn-check').on('click', function() {
         let match =/^(http(s)?|ftp):\/\//;

@@ -108,7 +108,7 @@ id/word-counter
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
-        <div class="card-title">
+        <div id="word1" class="card-title">
           <h2 class="card-label">@lang('wordcounter.keyword-density')</h2>
         </div>
       </div>

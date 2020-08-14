@@ -19,7 +19,7 @@ toastr.options = {
 };
 const categories = ['performance', 'accessibility', 'best-practices', 'seo', 'pwa'];
 hideResult();
-
+triggerEnter('#analysis-button','#url');
 jQuery('#analysis-button').click(function () {
     let match =/^(http(s)?|ftp):\/\//;
     let urlWeb = jQuery('#url').val().replace(match,"");
