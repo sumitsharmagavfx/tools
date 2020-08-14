@@ -99,6 +99,9 @@ id/word-counter
             title="@lang('wordcounter.popover-title')"
             data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-primary btn-sm" id="reset">@lang('wordcounter.btn-reset')</button>
+            </div>
         </div>
       </div>
     </div>

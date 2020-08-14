@@ -206,3 +206,22 @@ for (let i = 0; i < target.length; i++) {
     });
     observer.observe(target[i],{attributes:true});
 }
+
+jQuery('#reset').click(function () {
+    sessionStorage.clear();
+    jQuery('#textarea').val('');
+
+    characterCount.innerHTML = 0;
+    wordCount.innerHTML = 0;
+    sentenceCount.innerHTML = 0;
+    paragraphCount.innerHTML = 0;
+    readingTime.innerHTML = 0;
+
+    topKeywords.innerHTML = '';
+    topKeywords2.innerHTML = '';
+    topKeywords3.innerHTML = '';
+    topKeywords4.innerHTML = '';
+    topKeywords5.innerHTML = '';
+
+    sticky.update();
+});

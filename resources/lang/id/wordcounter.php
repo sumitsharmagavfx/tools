@@ -1,6 +1,6 @@
 <?php
 
-return [    
+return [
     "title" => "PENGHITUNG KATA",
     "subtitle" => "TINGKATKAN SKILL MENULIS",
     "character" => "KARAKTER",
@@ -91,5 +91,6 @@ return [
     "popover-content" => "Sangat mudah! Silahkan mulai menulis atau tempel konten kamu di kolom atas. <br /><br /><strong>Informasi Penting</strong>: setelah itu, kamu dapat langsung cek hasil <a href='#kepadatan-kata-kunci'><u>kepadatan kata-kunci</u></a> pada bagian kanan (atau bagian bawah, ketika berada di versi-mobile web). <br /><br />Pelajari lebih lanjut perihal <a href='#spesifikasi-counter'><u>spesifikasi counter</u></a> disini. <br /><br /><a href='#apakah-saya-butuh-alat-ini' class='label label-inline font-weight-normal label-light-info' >Apakah saya butuh alat ini?</a>",
     "jumpto-link-1" => "spesifikasi-counter",
     "jumpto-link-2" => "kepadatan-kata-kunci",
-    "jumpto-link-3" => "apakah-saya-butuh-alat-ini"
+    "jumpto-link-3" => "apakah-saya-butuh-alat-ini",
+    "btn-reset" => "BERSIHKAN TEKS"
 ];
