@@ -10,6 +10,7 @@
   <link href="countdown/css/animate.css" rel="stylesheet" media="screen">
   <link rel="stylesheet" href="countdown/css/styles.css" />
   <link href="countdown/font/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="robots" content="noindex">
 </head>
 
 <body style="background-image: url('countdown/images/1.jpg');

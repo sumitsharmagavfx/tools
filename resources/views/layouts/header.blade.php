@@ -20,11 +20,11 @@
             <div class="topbar-item">
 
             @if($local == "id")
-                <a href="/construction" class="btn btn-outline-primary mr-3">
+                <a href="/analytics" class="btn btn-outline-primary mr-3">
                 <i class="flaticon2-line-chart"></i> Analitik
                 </a>
                 @else
-                <a href="/construction" class="btn btn-outline-primary mr-3">
+                <a href="/analytics" class="btn btn-outline-primary mr-3">
                 <i class="flaticon2-line-chart"></i> Analytics
                 </a>
                 @endif
