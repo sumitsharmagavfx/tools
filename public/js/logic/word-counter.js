@@ -210,6 +210,7 @@ for (let i = 0; i < target.length; i++) {
 jQuery('#reset').click(function () {
     sessionStorage.clear();
     jQuery('#textarea').val('');
+    jQuery('.collapse').collapse('hide');
 
     characterCount.innerHTML = 0;
     wordCount.innerHTML = 0;
