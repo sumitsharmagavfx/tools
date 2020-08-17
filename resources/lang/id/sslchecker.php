@@ -8,11 +8,10 @@ return [
     'copy-6' => 'Alat Pemeriksa SSL dari CMLABS dapat memverifikasi untuk mengecek apakah Sertifikat SSL di server web Anda dipasang dengan benar dan tepercaya. Pemeriksa SSL akan menampilkan nama yang umum, jenis server, penerbit, validitas, rantai sertifikat, bersama dengan detail sertifikat tambahan.',
     'copy-7' => 'Dengan hanya memasukkan nama host atau alamat IP server Anda di kotak dibawah ini dan mengklik "Periksa", Anda dapat langsung melihat detail yang berkaitan dengan Sertifikat SSL Anda.',
     'copy-8' => 'SSL Anda tidak terpasang',
-    "meta-title" => "Free SSL Checker Tool Online – Developer Tool",
-    "meta-desc" => "Gunakan SSL Checker Tool untuk mengecek validitas sertifikat SSL di website Anda",
+    "meta-title" => "SSL Checker, Periksa Sertifikat SSL Website",
+    "meta-desc" => "Gunakan cmlabs SSL Checker untuk membantu anda identifikasi masalah pada instalasi sertifikat SSL website secara online.",
     "meta-keyword" => "ssl, ssl tool, ssl checker, check ssl certificate, web ssl certificate",
-    "title" => "SSL Checker tool",
-    "title-2" => "ALAT PEMERIKSA SSL ",
-    "subtitle" => "PERIKSA SERTIFIKAT SSL ANDA",
+    "title" => "SSL CHECKER",
+    "subtitle" => "( CMLABS TOOLS )",
     "placeholder" => "Masukan URL Anda"
 ];
