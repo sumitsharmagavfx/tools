@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
             fail: (res) => {
                 if (lang === 'en')
                     urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
-                else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Valid</span><br>";
+                else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
             }
         });
     })
@@ -196,11 +196,11 @@ const urlInputHandler = function (u) {
         if (checkurl) {
             if (lang === 'en')
                 urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Your Url Is Valid</span><br>";
-            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Url Anda Valid</span><br>";
+            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Url Anda Sah</span><br>";
         } else {
             if (lang === 'en')
                 urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
-            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Valid</span><br>";
+            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
         }
     }
 };

@@ -37,7 +37,6 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
-    <!-- INI KODE GSC GAN -->
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
@@ -58,11 +57,11 @@
                 <i class="fas fa-language"></i>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="/en">
+              <a class="dropdown-item" href="/en/version">
                 <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                  <span class="ml-1">English</span>
                </a>
-              <a class="dropdown-item" href="/id">
+              <a class="dropdown-item" href="/id/version">
                 <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                  <span class="ml-1">Indonesia</span>
               </a>

@@ -18,7 +18,7 @@ toastr.options = {
 let DATA_FINAL;
 $(document).ready(function () {
     const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
-
+    triggerEnter('#generate','#url');
     $('#generate').click(function () {
         // $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
@@ -55,8 +55,8 @@ $(document).ready(function () {
             if (result.dismiss === 'cancel'){
                 socket.emit('stop','abort');
                 if (lang === 'en')
-                    toastr.error('Cancel button clicked','Cancel');
-                else toastr.error('Anda menekan tombol batal','Batal');
+                    toastr.error('Site Crawling Canceled','Cancel');
+                else toastr.error('Proses Crawling Dibatalkan','Batal');
             }
         })
     });

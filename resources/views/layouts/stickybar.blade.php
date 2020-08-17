@@ -30,10 +30,10 @@
             <span class="bullet bullet-bar {{$color}} align-self-stretch"></span>
             <div class="d-flex flex-column flex-grow-1 mx-4">
               @if($local == "en")
-              <a href="{{$dataEN[$i]['link']}}" data-toggle="tooltip" title="{{$dataEN[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataEN[$i]['title'],0,strpos($dataEN[$i]['title'], ' ', 20))}} ...</a>
+              <a href="{{$dataEN[$i]['link']}}" target="_blank" data-toggle="tooltip" title="{{$dataEN[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataEN[$i]['title'],0,strpos($dataEN[$i]['title'], ' ', 20))}} ...</a>
               <span class="text-muted font-weight-bold">{{$dataEN[$i]['date']}}</span>
               @else
-              <a href="{{$dataID[$i]['link']}}" data-toggle="tooltip" title="{{$dataID[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataID[$i]['title'],0,strpos($dataID[$i]['title'], ' ', 20))}} ...</a>
+              <a href="{{$dataID[$i]['link']}}" target="_blank" data-toggle="tooltip" title="{{$dataID[$i]['title']}}" class="text-dark-75 text-hover-primary font-weight-bold font-size-lg mb-1">{{substr($dataID[$i]['title'],0,strpos($dataID[$i]['title'], ' ', 20))}} ...</a>
               <span class="text-muted font-weight-bold">{{$dataID[$i]['date']}}</span>
               @endif
           </div>

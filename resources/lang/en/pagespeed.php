@@ -1,5 +1,6 @@
 <?php
 return [
+    "title" => "PAGE SPEED",
     "input-hint" => "Input Your URL",
     "copy-0"=>"About PageSpeed",
     "copy-1"=>"<p>PageSpeed tool by CMLABS reviews the overall performance of a web page on each cellular and laptop gadgets, and affords hints on how that web page can be improved.</p>
@@ -71,5 +72,10 @@ return [
     "meta-desc" => "Use the PageSpeed tool from CMLABS to see the performance, accessibility, SEO and PWA scores from your website.",
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
     "subtitle" => "CHECK UP PAGE SPEED AND WEB ISSUES",
-    "btn-analysis" => "Analyze URL"
+    "btn-analysis" => "Analyze URL",
+    "performance"   => "PERFORMANCE",
+    "accessibility"  => "ACCESIBILITY",
+    "practice"      => "BEST PRACTICES",
+    "seo"   => "SEO",
+    "pwa"   => "PWA",
 ];

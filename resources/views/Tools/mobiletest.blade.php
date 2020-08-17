@@ -33,7 +33,7 @@ id/mobile-test
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h1 class="card-label">MOBILE FRIENDLY TEST </h1>
+          <h1 class="card-label">@lang('mobiletest.title') </h1>
           <small>@lang('mobiletest.subtitle')</small>
         </div>
       </div>
@@ -68,10 +68,9 @@ id/mobile-test
             <div class="card-body">
               <div class="row">
                 <div class="col-12 col-sm-8 col-md-10 col-lg-8">
-                  <p class="mb-3 text-secondary" id="date-now">Tested on 04/08/2020 22.50</p>
-                  <span class="h1" id="result-title">Page is mobile friendly</span>
-                  <p class="mt-3 text-black" id="result-subtitle">This page is easy to use on a mobile
-                    device</p>
+                  <p class="mb-3 text-secondary" id="date-now">@lang('mobiletest.example-resultdate')</p>
+                  <span class="h1" id="result-title">@lang('mobiletest.example-resulttitle')</span>
+                  <p class="mt-3 text-black" id="result-subtitle">@lang('mobiletest.example-resultdesc')</p>
                 </div>
                 <div class="col-12 col-sm-4 col-md-2 col-lg-4" id="icon">
                   <div class="success-icon">
@@ -199,6 +198,7 @@ id/mobile-test
 @endsection
 
 @push('script')
+<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')

@@ -20,7 +20,7 @@ id/page-speed
 <div class="card card-custom gutter-b">
   <div class="card-header">
     <div class="card-title">
-      <h1 class="card-label">PAGE SPEED </h1>
+      <h1 class="card-label">@lang('pagespeed.title') </h1>
       <small>@lang('pagespeed.subtitle')</small>
     </div>
   </div>
@@ -57,7 +57,7 @@ id/page-speed
                 </div>
               </div>
             </div>
-            <h2 class="font-weight-bold text-center mb-4 h6">PERFORMANCE</h2>
+            <h2 class="font-weight-bold text-center mb-4 h6">@lang('pagespeed.performance')</h2>
           </a>
         </div>
 
@@ -78,7 +78,7 @@ id/page-speed
                 </div>
               </div>
             </div>
-            <h2 class=" font-weight-bold text-center mb-4 h6">ACCESIBILITY</h2>
+            <h2 class=" font-weight-bold text-center mb-4 h6">@lang('pagespeed.accessibility')</h2>
           </a>
         </div>
 
@@ -99,7 +99,7 @@ id/page-speed
                 </div>
               </div>
             </div>
-            <h2 class=" font-weight-bold text-center mb-4 h6">BEST PRACTICES</h2>
+            <h2 class=" font-weight-bold text-center mb-4 h6">@lang('pagespeed.practice')</h2>
           </a>
         </div>
 
@@ -120,7 +120,7 @@ id/page-speed
                 </div>
               </div>
             </div>
-            <h2 class=" font-weight-bold text-center mb-4 h6">SEO</h2>
+            <h2 class=" font-weight-bold text-center mb-4 h6">@lang('pagespeed.seo')</h2>
           </a>
         </div>
 
@@ -142,7 +142,7 @@ id/page-speed
               </div>
 
             </div>
-            <h2 class=" font-weight-bold text-center mb-4 h6">PWA</h2>
+            <h2 class=" font-weight-bold text-center mb-4 h6">@lang('pagespeed.pwa')</h2>
           </a>
         </div>
 
@@ -579,6 +579,7 @@ id/page-speed
 @endpush
 
 @push('script')
+<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 @endpush
 
