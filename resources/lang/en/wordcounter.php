@@ -1,5 +1,5 @@
 <?php
-return[    
+return[
     "title" => "WORD COUNTER",
     "subtitle" => "ADVANCE YOUR WRITING",
     "character" => "CHARACTER",
@@ -90,5 +90,6 @@ return[
     "popover-content" => "It's very easy. Just write or put your content above, on textarea. <br /><br /><strong>Important</strong>: you can direcly check the <a href='#keyword-density'><u>keyword density</u></a> on right (or bellow for mobile-web version). <br /><br />Learn more about the cmlabs <a href='#counter-specs'><u>counter specification</u></a> here. <br /><br /><a href='#do-i-need-this-tools' class='label label-inline font-weight-normal label-light-info'>Do I need this tools?</a>",
     "jumpto-link-1" => "counter-specs",
     "jumpto-link-2" => "keyword-density",
-    "jumpto-link-3" => "do-i-need-this-tools"
+    "jumpto-link-3" => "do-i-need-this-tools",
+    "btn-reset" => "CLEAR TEXT"
 ];
