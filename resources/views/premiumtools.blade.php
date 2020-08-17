@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="countdown/css/styles.css" />
   <link href="countdown/font/css/font-awesome.min.css" rel="stylesheet">
   <meta name="robots" content="noindex">
+    <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
 </head>
 
 <body style="background-image: url('countdown/images/1.jpg');
