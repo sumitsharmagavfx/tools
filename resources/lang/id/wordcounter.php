@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "title" => "PENGHITUNG KATA",
+    "title" => "WORD COUNTER",
     "subtitle" => "TINGKATKAN SKILL MENULIS",
     "character" => "KARAKTER",
     "word" => "KATA",
@@ -14,8 +14,8 @@ return [
     "word-3" => "3 KATA",
     "word-4" => "4 KATA",
     "word-5" => "5 KATA",
-    "copy-title-1" => "Tentang Penghitung Kata",
-    "copy-desc-1-1" => "Sebagai penulis konten dan copywirter, menulis konten artikel menjadi aktifitas sehari-hari. Secara umum, penulis dituntut membuat sebuah konten dengan jumlah kata atau kalimat tertentu. Sehingga jumlah kata menjadi sangat penting. Maka CMLABS Penghitung Kata adalah alat tepat untuk membantu pekerjaan penulis konten. ",
+    "copy-title-1" => "Tentang Word Counter",
+    "copy-desc-1-1" => "Sebagai penulis konten dan copywriter, menulis konten artikel menjadi aktifitas sehari-hari. Secara umum, penulis dituntut membuat sebuah konten dengan jumlah kata atau kalimat tertentu. Sehingga jumlah kata menjadi sangat penting. Maka CMLABS Penghitung Kata adalah alat tepat untuk membantu pekerjaan penulis konten. ",
     "copy-desc-1-2" => "Tujuan utama cmlabs adalah menjadi bagian dari aktifitas komunitas penulis konten, khususnya di Indonesia. Namun untuk membuat alat ini bisa diakses lebih banyak penulis konten, kami telah berikan dukungan dua bahasa untuk Alat Penulis Konten ini, yakni versi Indonesia dan English.",
     "copy-title-2" => "Fase umum menulis konten",
     "copy-desc-2-1" => "Lalu apa saja fase-fase menulis konten? Berikut merupakan tujuh fase dalam membuat konten yang paling umum. Dengan catatan, fase dalam membuat konten akan disesuaikan dengan tujuan dan proyek/kontrak dibalik adanya pekerjaan konten.",
@@ -92,5 +92,6 @@ return [
     "jumpto-link-1" => "spesifikasi-counter",
     "jumpto-link-2" => "kepadatan-kata-kunci",
     "jumpto-link-3" => "apakah-saya-butuh-alat-ini",
-    "btn-reset" => "BERSIHKAN TEKS"
+    "btn-reset" => "BERSIHKAN TEKS",
+    "placeholder"   => "Fase Umum Dalam Penulisan Konten\n\nLalu, apa saja tahapan dalam mengembangkan content writing yang baik? Di sini kami memiliki tujuh fase umum yang dapat diterapkan untuk penulisan online. Namun, langkah-langkah ini harus terlebih dahulu disesuaikan dengan tujuan proyek karena proyek yang berbeda mungkin datang dengan skema dan pendekatan yang berbeda juga. Ketujuh fase tersebut adalah sebagai berikut : "
 ];

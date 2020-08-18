@@ -114,7 +114,7 @@ id/page-title-meta-description-checker
     </div>
     <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
-        <div class="card-title">
+        <div class="card-title">  
           <h2 class="card-label">@lang('metachecker.copy-6')</h2>
         </div>
       </div>
