@@ -93,5 +93,5 @@ return [
     "jumpto-link-2" => "kepadatan-kata-kunci",
     "jumpto-link-3" => "apakah-saya-butuh-alat-ini",
     "btn-reset" => "BERSIHKAN TEKS",
-    "placeholder"   => "Fase Umum Dalam Penulisan Konten\n\nLalu, apa saja tahapan dalam mengembangkan content writing yang baik? Di sini kami memiliki tujuh fase umum yang dapat diterapkan untuk penulisan online. Namun, langkah-langkah ini harus terlebih dahulu disesuaikan dengan tujuan proyek karena proyek yang berbeda mungkin datang dengan skema dan pendekatan yang berbeda juga. Ketujuh fase tersebut adalah sebagai berikut : "
+    "placeholder"   => "( teks di bawah ini adalah contoh, Anda dapat mengubah contoh kapan saja )\nFase Umum Dalam Penulisan Konten\n\nLalu, apa saja tahapan dalam mengembangkan content writing yang baik? Di sini kami memiliki tujuh fase umum yang dapat diterapkan untuk penulisan online. Namun, langkah-langkah ini harus terlebih dahulu disesuaikan dengan tujuan proyek karena proyek yang berbeda mungkin datang dengan skema dan pendekatan yang berbeda juga. Ketujuh fase tersebut adalah sebagai berikut : "
 ];

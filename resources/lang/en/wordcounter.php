@@ -92,5 +92,5 @@ return[
     "jumpto-link-2" => "keyword-density",
     "jumpto-link-3" => "do-i-need-this-tools",
     "btn-reset" => "CLEAR TEXT",
-    "placeholder"   => "Common Phases In Content Writing\n\nThen, what are the phases in developing a good content writing? Here we have seven common phases that can be applied for online writing. However, these steps must be firstly adjusted to the project objectives since different project may come with different scheme and approach, too. The seven phases are in the following : "
+    "placeholder"   => "( text bellow is an example, you can change the example anytime )\nCommon Phases In Content Writing\n\nThen, what are the phases in developing a good content writing? Here we have seven common phases that can be applied for online writing. However, these steps must be firstly adjusted to the project objectives since different project may come with different scheme and approach, too. The seven phases are in the following : "
 ];
