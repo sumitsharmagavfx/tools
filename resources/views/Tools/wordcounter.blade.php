@@ -96,6 +96,7 @@ id/word-counter
             class="form-control" id="textarea"
             data-placement="bottom" data-trigger="click"
             data-toggle="popover" data-html="true"
+            placeholder="@lang('wordcounter.placeholder') "
             title="@lang('wordcounter.popover-title')"
             data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
