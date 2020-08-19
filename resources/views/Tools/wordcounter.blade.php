@@ -91,12 +91,12 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-12">
-          <textarea data-autoresize name="name"
+          <textarea
+            data-autoresize name="name"
             rows="15" style="resize:none; overflow:hidden"
             class="form-control" id="textarea"
             data-placement="bottom" data-trigger="click"
             data-toggle="popover" data-html="true"
-            placeholder="@lang('wordcounter.placeholder') "
             title="@lang('wordcounter.popover-title')"
             data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
