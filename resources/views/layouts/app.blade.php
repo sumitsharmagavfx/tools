@@ -37,7 +37,6 @@
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
-    <!-- INI KODE GSC GAN -->
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->

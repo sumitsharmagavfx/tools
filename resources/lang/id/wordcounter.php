@@ -1,7 +1,7 @@
 <?php
 
-return [    
-    "title" => "PENGHITUNG KATA",
+return [
+    "title" => "WORD COUNTER",
     "subtitle" => "TINGKATKAN SKILL MENULIS",
     "character" => "KARAKTER",
     "word" => "KATA",
@@ -14,8 +14,8 @@ return [
     "word-3" => "3 KATA",
     "word-4" => "4 KATA",
     "word-5" => "5 KATA",
-    "copy-title-1" => "Tentang Penghitung Kata",
-    "copy-desc-1-1" => "Sebagai penulis konten dan copywirter, menulis konten artikel menjadi aktifitas sehari-hari. Secara umum, penulis dituntut membuat sebuah konten dengan jumlah kata atau kalimat tertentu. Sehingga jumlah kata menjadi sangat penting. Maka CMLABS Penghitung Kata adalah alat tepat untuk membantu pekerjaan penulis konten. ",
+    "copy-title-1" => "Tentang Word Counter",
+    "copy-desc-1-1" => "Sebagai penulis konten dan copywriter, menulis konten artikel menjadi aktifitas sehari-hari. Secara umum, penulis dituntut membuat sebuah konten dengan jumlah kata atau kalimat tertentu. Sehingga jumlah kata menjadi sangat penting. Maka CMLABS Penghitung Kata adalah alat tepat untuk membantu pekerjaan penulis konten. ",
     "copy-desc-1-2" => "Tujuan utama cmlabs adalah menjadi bagian dari aktifitas komunitas penulis konten, khususnya di Indonesia. Namun untuk membuat alat ini bisa diakses lebih banyak penulis konten, kami telah berikan dukungan dua bahasa untuk Alat Penulis Konten ini, yakni versi Indonesia dan English.",
     "copy-title-2" => "Fase umum menulis konten",
     "copy-desc-2-1" => "Lalu apa saja fase-fase menulis konten? Berikut merupakan tujuh fase dalam membuat konten yang paling umum. Dengan catatan, fase dalam membuat konten akan disesuaikan dengan tujuan dan proyek/kontrak dibalik adanya pekerjaan konten.",
@@ -91,5 +91,7 @@ return [
     "popover-content" => "Sangat mudah! Silahkan mulai menulis atau tempel konten kamu di kolom atas. <br /><br /><strong>Informasi Penting</strong>: setelah itu, kamu dapat langsung cek hasil <a href='#kepadatan-kata-kunci'><u>kepadatan kata-kunci</u></a> pada bagian kanan (atau bagian bawah, ketika berada di versi-mobile web). <br /><br />Pelajari lebih lanjut perihal <a href='#spesifikasi-counter'><u>spesifikasi counter</u></a> disini. <br /><br /><a href='#apakah-saya-butuh-alat-ini' class='label label-inline font-weight-normal label-light-info' >Apakah saya butuh alat ini?</a>",
     "jumpto-link-1" => "spesifikasi-counter",
     "jumpto-link-2" => "kepadatan-kata-kunci",
-    "jumpto-link-3" => "apakah-saya-butuh-alat-ini"
+    "jumpto-link-3" => "apakah-saya-butuh-alat-ini",
+    "btn-reset" => "BERSIHKAN TEKS",
+    "placeholder"   => "Fase Umum Dalam Penulisan Konten\n\nLalu, apa saja tahapan dalam mengembangkan content writing yang baik? Di sini kami memiliki tujuh fase umum yang dapat diterapkan untuk penulisan online. Namun, langkah-langkah ini harus terlebih dahulu disesuaikan dengan tujuan proyek karena proyek yang berbeda mungkin datang dengan skema dan pendekatan yang berbeda juga. Ketujuh fase tersebut adalah sebagai berikut : "
 ];

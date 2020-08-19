@@ -55,8 +55,8 @@ $(document).ready(function () {
             if (result.dismiss === 'cancel'){
                 socket.emit('stop','abort');
                 if (lang === 'en')
-                    toastr.error('Cancel button clicked','Cancel');
-                else toastr.error('Anda menekan tombol batal','Batal');
+                    toastr.error('Site Crawling Canceled','Cancel');
+                else toastr.error('Proses Crawling Dibatalkan','Batal');
             }
         })
     });
