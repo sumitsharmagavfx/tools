@@ -14,6 +14,8 @@ class HomeController extends Controller
      */
     public function index($lang)
     {
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
         // dd(App::getLocale());
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
 //        if (session()->exists('local')) {
@@ -27,7 +29,7 @@ class HomeController extends Controller
             App::setLocale('id');
         }
         $local = App::getLocale();
-        return view('home', compact('data','local'));
+        return view('home', compact('data','local', 'dataID', 'dataEN'));
     }
 
     /**
@@ -94,5 +96,54 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getBlogWordpressId()
+    {
+//        $dataToPost =[];
+//        $stream = [
+//            'ssl' => [
+//                'verify_peer' => false,
+//                'verify_peer_name' => false,
+//                'allow_self_signed' => true,
+//            ],
+//        ];
+//        $client = new Client();
+//        $request = $client->get('https://api.cmlabs.co/wordpress?lang=en');
+//        $response = $request->getBody()->getContents();
+//        $dataArr=json_decode($response,true );
+//        foreach ($dataArr as $data){
+//            array_push($dataToPost,[
+//                "title" => $data["title"]["rendered"],
+//                "date" => $this->parse_date($data["date"]),
+//                "link" => $data["link"]
+//            ]);
+//        }
+        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+    }
+
+    public function getBlogWordpressEn()
+    {
+//        $dataToPost =[];
+//        $stream = [
+//            'ssl' => [
+//                'verify_peer' => false,
+//                'verify_peer_name' => false,
+//                'allow_self_signed' => true,
+//            ],
+//        ];
+//        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
+//        $client = new Client();
+//        $request = $client->get('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
+//        $response = $request->getBody()->getContents();
+//        $dataArr=json_decode($response,true );
+//        foreach ($dataArr as $data){
+//            array_push($dataToPost,[
+//                "title" => $data["title"]["rendered"],
+//                "date" => $this->parse_date($data["date"]),
+//                "link" => $data["link"]
+//            ]);
+//        }
+        return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')),true);
     }
 }

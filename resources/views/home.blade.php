@@ -16,48 +16,60 @@ id
 @section('content')
 <div class="d-flex flex-column-fluid mt-5">
   <div class="container">
-    <div class="row">
-      <?php $i = 1; ?>
-      @foreach($data as $datum)
-       @if($i % 3 == 0)
-        <?php $model = 'success' ?>
-       @elseif($i % 3 == 1)
-       <?php $model = 'danger' ?>
-       @else
-       <?php $model = 'warning' ?>
-       @endif
-        <div class="col-lg-6 col-xl-4 mb-5">
-          <div class="card card-custom wave wave-animate-slow wave-{{$model}} mb-8 mb-lg-0 card-stretch">
-            <div class="card-body">
-              <div class="d-flex align-items-center p-5">
-                <div class="mr-6">
-                  <span class="svg-icon svg-icon-{{$model}} svg-icon-3x">
-                  <!--begin::Svg Icon -->
-                      {!! $datum['img'] !!}
-                  <!--end::Svg Icon -->
-                  </span>
+    <div class="row"  data-sticky-container>
+        <div class="col-lg-8 mb-5">
+            <div class="card card-custom mb-5">
+                <div class="card-body">
+                    <p>
+                        PT CMLABS INDONESIA DIGITAL adalah sebuah perusahaan yang fokus pada jasa SEO, Marketing dan platform pendukung aktifitas SEO.
+                        Umumnya kami menggunakan nama pendek yaitu CMLABS, yang merupakan singkatan dari Content Marketing Labs.
+                        <a href="https://cmlabs.co" style="color: #0095EB">Kunjungi Website</a>
+                    </p>
                 </div>
-                <div class="d-flex flex-column">
-                  <span class="text-dark text-hover-primary font-weight-bold font-size-h4 mb-3">{{$datum['title']}}</span>
-                  <div class="text-dark-75">
-                    @if(App::getLocale()=="id")
-                   {{$datum['description']}}
-                   @else
-                   {{$datum['description-en']}}
-                   @endif
+            </div>
+            <div class="card card-custom gutter-b">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h3 class="card-label">
+                     Features
+                    </h3>
+                   </div>
                   </div>
+                <div class="card-body">
+                    @foreach($data as $datum)
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0 mr-7">
+                                    <div class="symbol symbol-50 symbol-lg-120">
+                                        <span class="svg-icon svg-icon-3x">
+                                        <!--begin::Svg Icon -->
+                                            {!! $datum['img'] !!}
+                                        <!--end::Svg Icon -->
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                                        <div class="mr-3">
+                                            <p class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">{{$datum['title']}}</p>
+                                            <div class="d-flex flex-wrap my-2">
+                                                <a href="{{'/'.$local.$datum['route']}}" class="mr-lg-8 mr-5 mb-lg-0 mb-2" style="color:#0095EB">Lihat Detail</a>
+                                            </div>
+                                        </div>
+                                        <div class="my-lg-0 my-1">
+                                            <a href="{{'/'.$local.$datum['route']}}" class="btn btn-sm btn-success font-weight-bolder text-uppercase" style="background-color: #0095EB">Launch</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
                 </div>
-              </div>
             </div>
-            <div class="card-footer d-flex justify-content-end">
-              <div class="ml-6 ml-lg-0 ml-xxl-6 flex-shrink-0">
-                <a href="{{'/'.$local.$datum['route']}}" class="btn font-weight-bolder text-uppercase btn-{{$model}} py-4 px-6">Launch</a>
-              </div>
-            </div>
-          </div>
         </div>
-        <?php $i++; ?>
-      @endforeach
+        @include('layouts/stickybar')
     </div>
   </div>
 </div>
