@@ -74,6 +74,7 @@ $(document).ready(function () {
     socket.on('result', response => {
         // $('#spin').removeClass("spinner spinner-success spinner-right");
         // console.log(response);
+        clearTable();
         $('#table').css('display','block');
         for (let datum in response.url){
             addData(response.url[datum],parseInt(datum)+1);

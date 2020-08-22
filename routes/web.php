@@ -17,7 +17,7 @@ Route::get('/logout','Auth\LoginController@logout');
 Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::redirect('/', '/en');
 //Route::resource('/', 'HomeController');
-    Route::get('/construction', function (){
+    Route::get('/analytics', function (){
         return view('premiumtools');
     });
     Route::get('/url', 'ToolsController@loadssl');
