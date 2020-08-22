@@ -58,7 +58,7 @@ id/word-counter
     <div class="card card-custom card-stretch gutter-b">
       <div class="card-header">
         <div class="card-title">
-          <h1 class="card-label">WORD COUNTER </h1>
+          <h1 class="card-label">@lang('wordcounter.title') </h1>
           <small>@lang('wordcounter.subtitle')</small>
         </div>
       </div>
@@ -91,7 +91,8 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-12">
-          <textarea data-autoresize name="name"
+          <textarea
+            data-autoresize name="name"
             rows="15" style="resize:none; overflow:hidden"
             class="form-control" id="textarea"
             data-placement="bottom" data-trigger="click"
@@ -99,6 +100,9 @@ id/word-counter
             title="@lang('wordcounter.popover-title')"
             data-content="@lang('wordcounter.popover-content')"
             onclick="myFunction()"></textarea>
+            <div class="text-center mt-5">
+                <button type="button" class="btn btn-primary btn-sm" id="reset">@lang('wordcounter.btn-reset')</button>
+            </div>
         </div>
       </div>
     </div>
@@ -378,7 +382,7 @@ id/word-counter
         </div>
       </div>
       <div class="card-body">
-        <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
+        <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/" target="_blank"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
         <div class="row">
           <div class="col-md-6 mb-5">
             <div class="container p-10" style="background-color:#f2f2f2; border-radius: 7px;">

@@ -22,7 +22,52 @@ paragraphCount.innerHTML = 0;
 readingTime.innerHTML = sessionStorage.getItem("read");
 readingTime.innerHTML = 0;
 
+let prefilled_en = '( text bellow is an example, you can change the example anytime )\n\nCommon Phases In Content Writing\n\nThen, what are the phases in developing a good content writing? Here we have seven common phases that can be applied for online writing. However, these steps must be firstly adjusted to the project objectives since different project may come with different scheme and approach, too. The seven phases are in the following :';
+let prefilled_id = '( teks di bawah ini adalah contoh, Anda dapat mengubah contoh kapan saja )\n\nFase Umum Dalam Penulisan Konten\n\nLalu, apa saja tahapan dalam mengembangkan content writing yang baik? Di sini kami memiliki tujuh fase umum yang dapat diterapkan untuk penulisan online. Namun, langkah-langkah ini harus terlebih dahulu disesuaikan dengan tujuan proyek karena proyek yang berbeda mungkin datang dengan skema dan pendekatan yang berbeda juga. Ketujuh fase tersebut adalah sebagai berikut :';
+
+if (lang === 'en')
+    $('#textarea').val(prefilled_en);
+else $('#textarea').val(prefilled_id);
+start();
+
+
 input.addEventListener('input', function() {
+    start();
+});
+
+var target = $('.collapse');
+for (let i = 0; i < target.length; i++) {
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === "class") {
+                sticky.update();
+            }
+        });
+    });
+    observer.observe(target[i],{attributes:true});
+}
+
+jQuery('#reset').click(function () {
+    sessionStorage.clear();
+    jQuery('#textarea').val('');
+    jQuery('.collapse').collapse('hide');
+
+    characterCount.innerHTML = 0;
+    wordCount.innerHTML = 0;
+    sentenceCount.innerHTML = 0;
+    paragraphCount.innerHTML = 0;
+    readingTime.innerHTML = 0;
+
+    topKeywords.innerHTML = '';
+    topKeywords2.innerHTML = '';
+    topKeywords3.innerHTML = '';
+    topKeywords4.innerHTML = '';
+    topKeywords5.innerHTML = '';
+
+    sticky.update();
+});
+
+function start(){
     sessionStorage.setItem("text", input.value);
     console.clear();
 
@@ -193,16 +238,4 @@ input.addEventListener('input', function() {
         sticky.update();
     }
     sticky.update();
-});
-
-var target = $('.collapse');
-for (let i = 0; i < target.length; i++) {
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.attributeName === "class") {
-                sticky.update();
-            }
-        });
-    });
-    observer.observe(target[i],{attributes:true});
 }

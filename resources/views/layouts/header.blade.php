@@ -20,36 +20,20 @@
             <div class="topbar-item">
 
             @if($local == "id")
-                <a href="/construction" class="btn btn-outline-primary mr-3">
-                <i class="flaticon2-line-chart"></i> Analitik
+                <a href="/analytics" style="margin-right:25px">
+                    Analitik
                 </a>
                 @else
-                <a href="/construction" class="btn btn-outline-primary mr-3">
-                <i class="flaticon2-line-chart"></i> Analytics
+                <a href="/analytics" style="margin-right:25px">
+                     Analytics
                 </a>
                 @endif
-
-                <div class="dropdown mr-3">
-                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-language"></i> @lang('layout.language')
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/en/version">
-                          <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
-                           <span class="ml-1">English</span>
-                         </a>
-                        <a class="dropdown-item" href="/id/version">
-                          <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
-                           <span class="ml-1">Indonesia</span>
-                        </a>
-                    </div>
-                </div>
-
+   
                 @if($local == "id")
                 <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-outline-primary font-weight-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-fingerprint"></i> Blog & Panduan
+                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px">
+                        Blog & Panduan
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
                         <ul class="navi navi-hover">
@@ -80,8 +64,8 @@
                 @else
                 <!-- <a href="https://cmlabs.co/en/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" class="btn btn-outline-primary font-weight-bold dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-fingerprint"></i> Blog & Resource
+                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px">
+                        Blog & Resource
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
                         <ul class="navi navi-hover">
@@ -110,6 +94,20 @@
                     </div>
                 </div>
                 @endif
+
+                <div class="dropdown mr-3">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @lang('layout.language')
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/en/version">
+                           <span class="ml-1">English</span>
+                         </a>
+                        <a class="dropdown-item" href="/id/version">
+                           <span class="ml-1">Indonesia</span>
+                        </a>
+                    </div>
+                </div>
                   <!-- <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
                     <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
                     cmlabs</button>

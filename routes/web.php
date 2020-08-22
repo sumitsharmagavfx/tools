@@ -20,6 +20,9 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::get('/analytics', function (){
         return view('premiumtools');
     });
+    Route::get('/construction', function (){
+        return redirect('/analytics');
+    });
     Route::get('/url', 'ToolsController@loadssl');
     Route::get('/{lang}','HomeController@index');
 

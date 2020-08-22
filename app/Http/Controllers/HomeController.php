@@ -14,20 +14,16 @@ class HomeController extends Controller
      */
     public function index($lang)
     {
-        // dd(App::getLocale());
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();        
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
-//        if (session()->exists('local')) {
-//            App::setLocale(session('local'));
-//            session()->put('local',App::getLocale());
-//            session()->save();
-//        }
         if ($lang==='en'){
             App::setLocale('en');
         }else{
             App::setLocale('id');
         }
         $local = App::getLocale();
-        return view('home', compact('data','local'));
+        return view('home', compact('data','local', 'dataID', 'dataEN'));
     }
 
     /**
@@ -94,5 +90,15 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getBlogWordpressId()
+    {
+        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+    }
+
+    public function getBlogWordpressEn()
+    {
+        return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')),true);
     }
 }

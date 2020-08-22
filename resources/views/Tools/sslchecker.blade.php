@@ -20,7 +20,7 @@ id/ssl-checker
     <div class="card card-custom mb-5">
         <div class="card-header">
             <div class="card-title">
-                <h1 class="card-label">SSL CHECKER TOOL </h1>
+                <h1 class="card-label">@lang('sslchecker.title')</h1>
                 <small>@lang('sslchecker.subtitle')</small>
             </div>
         </div>
