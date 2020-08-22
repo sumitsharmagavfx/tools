@@ -1,135 +1,157 @@
-<div class="aside aside-left d-flex flex-column bg-white" id="kt_aside">
-    <!--begin::Brand-->
-    <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-4 py-lg-8">
-        <!--begin::Logo-->
-        <a href="/{{$local}}">
-            <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px"/>
+<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto bg-white" id="kt_aside">
+  <!--begin::Brand-->
+  <div class="aside-brand d-flex flex-column align-items-center flex-column-auto py-4 py-lg-8">
+    <!--begin::Logo-->
+    <a href="/{{$local}}">
+      <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px" />
+    </a>
+    <!--end::Logo-->
+  </div>
+  <!--end::Brand-->
+  <!--begin::Nav Wrapper-->
+  <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid pt-7">
+    <!--begin::Nav-->
+    <ul class="nav flex-column">
+      <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Overview">
+        <a href="/{{$local}}" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('home')">
+          <span class="svg-icon svg-icon-2x">
+            <!--begin::Svg Icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24" />
+                <path d="M3,5v3v6v3v2c0,2.201,1.794,3,3,3h15v-2H6.012C5.55,19.988,5,19.806,5,19s0.55-0.988,1.012-1H19h1h1v-1v-2V4 c0-1.103-0.897-2-2-2H6C4.794,2,3,2.799,3,5z" fill="#B2B2B2" />
+              </g>
+            </svg>
+            <!--end::Svg Icon-->
+          </span>
         </a>
-        <!--end::Logo-->
-    </div>
-    <!--end::Brand-->
-    <!--begin::Nav Wrapper-->
-    <div class="aside-nav d-flex flex-column align-items-center flex-column-fluid pt-7">
-        <!--begin::Nav-->
-        <ul class="nav flex-column">
-            <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-                data-boundary="window" title="Overview">
-                <a href="/{{$local}}"
-                   class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('word-counter')">
-                    <span class="svg-icon svg-icon-light svg-icon-2x">
-                        <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 5V8V14V17V19C3 21.201 4.794 22 6 22H21V20H6.012C5.55 19.988 5 19.806 5 19C5 18.194 5.55 18.012 6.012 18H19H20H21V17V15V4C21 2.897 20.103 2 19 2H6C4.794 2 3 2.799 3 5Z" fill="#0095EB"/>
-                        </svg>
-                        <!--end::Svg Icon-->
-                    </span>
-                </a>
-            </li>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="Word Counter">
-              <a href="/{{$local}}/word-counter"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('word-counter')">
-                  <span class="svg-icon svg-icon-light svg-icon-2x">
-                      <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 22H18C19.104 22 20 21.104 20 20V4C20 2.896 19.104 2 18 2H6C4.896 2 4 2.896 4 4V20C4 21.104 4.896 22 6 22ZM9 19H7V17H9V19ZM9 15H7V13H9V15ZM9 11H7V9H9V11ZM13 19H11V17H13V19ZM13 15H11V13H13V15ZM13 11H11V9H13V11ZM17 19H15V13H17V19ZM17 11H15V9H17V11ZM6 4H18V7H6V4Z" fill="#0095EB"/>
-                        </svg>                        
-                      <!--end::Svg Icon-->
-                </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="Title & Lengths Checker">
-              <a href="/{{$local}}/page-title-meta-description-checker"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('title-checker')">
-                    <span class="svg-icon svg-icon-light svg-icon-2x">
-                      <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 8H7V6H10.252L7.68 18H5V20H13V18H10.748L13.32 6H17V8H19V4H5V8Z" fill="#0095EB"/></g>
-                        </svg>
-                      <!--end::Svg Icon-->
-                    </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="JSON-LD Schema Generator">
-              <a href="/{{$local}}/json-ld-faq-schema-generator"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')">
-                <span class="svg-icon svg-icon-light svg-icon-2x">
-                    <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.29306 6.29303L2.58606 12L8.29306 17.707L9.70706 16.293L5.41406 12L9.70706 7.70703L8.29306 6.29303ZM15.7071 17.707L21.4141 12L15.7071 6.29303L14.2931 7.70703L18.5861 12L14.2931 16.293L15.7071 17.707Z" fill="#0095EB"/>
-                        </svg>
-                    <!--end::Svg Icon-->
-                </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="Page Speed">
-              <a href="/{{$local}}/page-speed"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('page-speed')">
-                <span class="svg-icon svg-icon-light svg-icon-2x">
-                        <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 3H17V5H13V3ZM3 8H7V10H3V8ZM3 16H7V18H3V16ZM2 12H5.99V14H2V12ZM21.707 6.707L20.293 5.293L18.586 7C17.536 6.369 16.312 6 15 6C11.141 6 8 9.141 8 13C8 16.859 11.141 20 15 20C18.859 20 22 16.859 22 13C22 11.176 21.292 9.517 20.145 8.27L21.707 6.707ZM16 14H14V8.958H16V14Z" fill="#0095EB"/>
-                        </svg>
-                        <!--end::Svg Icon-->
-                </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="Sitemap Generator">
-              <a href="/{{$local}}/sitemap-generator"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('sitemap')">
-                <span class="svg-icon svg-icon-light svg-icon-2x">
-                    <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 3H4C2.897 3 2 3.897 2 5V19C2 20.103 2.897 21 4 21H20C21.103 21 22 20.103 22 19V5C22 3.897 21.103 3 20 3ZM4 19V7H20L20.002 19H4Z" fill="#0095EB"/>
-                            <path d="M9.29306 9.29303L5.58606 13L9.29306 16.707L10.7071 15.293L8.41406 13L10.7071 10.707L9.29306 9.29303ZM14.7071 9.29303L13.2931 10.707L15.5861 13L13.2931 15.293L14.7071 16.707L18.4141 13L14.7071 9.29303Z" fill="#0095EB"/>
-                        </svg>
-                    <!--end::Svg Icon-->
-                </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="Mobile Friendly Test">
-              <a href="/{{$local}}/mobile-test"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('mobile-test')">
-                <span class="svg-icon svg-icon-light svg-icon-2x">
-                    <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18 22C19.103 22 20 21.103 20 20V4C20 2.897 19.103 2 18 2H8C6.897 2 6 2.897 6 4V20C6 21.103 6.897 22 8 22H18ZM13 17C13.553 17 14 17.447 14 18C14 18.553 13.553 19 13 19C12.447 19 12 18.553 12 18C12 17.447 12.447 17 13 17Z" fill="#0095EB"/>
-                        </svg>
-                    <!--end::Svg Icon--></span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body"
-              data-boundary="window" title="SSL Checker">
-              <a href="/{{$local}}/ssl-checker"
-                 class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('ssl-checker')">
-                <span class="svg-icon svg-icon-light svg-icon-2x">
-                    <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.488 21.754C11.782 21.911 12.151 21.91 12.445 21.753C20.457 17.449 21.026 9.03998 21.019 6.64898C21.018 6.25498 20.784 5.90498 20.423 5.74598L12.373 2.17998C12.114 2.06598 11.819 2.06598 11.56 2.18098L3.56603 5.74698C3.21103 5.90598 2.97903 6.24998 2.97403 6.63898C2.94003 9.01798 3.41903 17.445 11.488 21.754ZM8.67403 10.293L10.967 12.586L15.26 8.29298L16.674 9.70698L10.967 15.414L7.26003 11.707L8.67403 10.293Z" fill="#0095EB"/>
-                        </svg>
-                    <!--end::Svg Icon-->
-                </span>
-              </a>
-          </li>
-          <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Robots.txt Generator">
-                <a href="/{{$local}}/robotstxt-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('robotstxt-generator')">
-                    <span class="svg-icon svg-icon-light svg-icon-2x">
-                        <!--begin::Svg Icon-->
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 6H5C3.346 6 2 7.346 2 9V14C2 16.206 3.794 18 6 18H7.637C8.803 18 9.917 17.443 10.618 16.509C11.278 15.63 12.722 15.629 13.382 16.51C14.083 17.444 15.197 18 16.363 18H18C20.206 18 22 16.206 22 14V9C22 7.346 20.654 6 19 6ZM7.5 13C6.119 13 5 12.328 5 11.5C5 10.672 6.119 10 7.5 10C8.881 10 10 10.672 10 11.5C10 12.328 8.881 13 7.5 13ZM16.5 13C15.119 13 14 12.328 14 11.5C14 10.672 15.119 10 16.5 10C17.881 10 19 10.672 19 11.5C19 12.328 17.881 13 16.5 13Z" fill="#0095EB"/>
-                        </svg>   
-                        <!--end::Svg Icon--> 
-                    </span>
-                </a>
-            </li>
-        </ul>
-        <!--end::Nav-->
-    </div>
-    <!--end::Nav Wrapper-->
+      </li>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Word Counter">
+          <a href="/{{$local}}/word-counter" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('word-counter')">
+            <span class="svg-icon svg-icon-2x">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path
+                    d="M6,22h12c1.104,0,2-0.896,2-2V4c0-1.104-0.896-2-2-2H6C4.896,2,4,2.896,4,4v16C4,21.104,4.896,22,6,22z M9,19H7v-2h2V19z M9,15H7v-2h2V15z M9,11H7V9h2V11z M13,19h-2v-2h2V19z M13,15h-2v-2h2V15z M13,11h-2V9h2V11z M17,19h-2v-6h2V19z M17,11h-2V9h2V11z M6,4h12v3H6V4z"
+                    fill="#B2B2B2" />
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Title & Lengths Checker">
+          <a href="/{{$local}}/page-title-meta-description-checker" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('title-checker')">
+            <span class="svg-icon svg-icon-2x">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path d="M5 8L7 8 7 6 10.252 6 7.68 18 5 18 5 20 13 20 13 18 10.748 18 13.32 6 17 6 17 8 19 8 19 4 5 4z" fill="#B2B2B2" />
+                </g>
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="JSON-LD Schema Generator">
+          <a href="/{{$local}}/json-ld-faq-schema-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('json-ld')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path d="M8.293 6.293L2.586 12 8.293 17.707 9.707 16.293 5.414 12 9.707 7.707zM15.707 17.707L21.414 12 15.707 6.293 14.293 7.707 18.586 12 14.293 16.293z" fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon-->
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Page Speed">
+          <a href="/{{$local}}/page-speed" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('page-speed')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path d="M20.145,8.27l1.563-1.563l-1.414-1.414L18.586,7c-1.05-0.63-2.274-1-3.586-1c-3.859,0-7,3.14-7,7s3.141,7,7,7s7-3.14,7-7 C22,11.175,21.292,9.517,20.145,8.27z M15,18c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S17.757,18,15,18z"
+                    fill="#B2B2B2" />
+                  <path d="M14 10H16V14H14zM13 3H17V5H13zM3 8H7V10H3zM3 16H7V18H3zM2 12H5.99V14H2z" fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon-->
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Sitemap Generator">
+          <a href="/{{$local}}/sitemap-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('sitemap')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z" fill="#B2B2B2" />
+                  <path d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z" fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon-->
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Mobile Friendly Test">
+          <a href="/{{$local}}/mobile-test" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('mobile-test')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path d="M18,22c1.103,0,2-0.897,2-2V4c0-1.103-0.897-2-2-2H8C6.897,2,6,2.897,6,4v16c0,1.103,0.897,2,2,2H18z M13,17 c0.553,0,1,0.447,1,1s-0.447,1-1,1s-1-0.447-1-1S12.447,17,13,17z" fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon--></span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="SSL Checker">
+          <a href="/{{$local}}/ssl-checker" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('ssl-checker')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path
+                    d="M11.488,21.754c0.294,0.157,0.663,0.156,0.957-0.001c8.012-4.304,8.581-12.713,8.574-15.104 c-0.001-0.394-0.235-0.744-0.596-0.903L12.373,2.18c-0.259-0.114-0.554-0.114-0.813,0.001L3.566,5.747 C3.211,5.906,2.979,6.25,2.974,6.639C2.94,9.018,3.419,17.445,11.488,21.754z M8.674,10.293l2.293,2.293l4.293-4.293l1.414,1.414 l-5.707,5.707L7.26,11.707L8.674,10.293z"
+                    fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon-->
+            </span>
+          </a>
+        </li>
+        <li class="nav-item mb-5" data-toggle="tooltip" data-placement="right" data-container="body" data-boundary="window" title="Robots.txt Generator">
+          <a href="/{{$local}}/robotstxt-generator" class="nav-link btn btn-icon btn-clean btn-text-white btn-lg @yield('robotstxt-generator')">
+            <span class="svg-icon svg-icon-light svg-icon-2x">
+              <!--begin::Svg Icon-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <rect x="0" y="0" width="24" height="24" />
+                  <path
+                    d="M19,6H5C3.346,6,2,7.346,2,9v5c0,2.206,1.794,4,4,4h1.637c1.166,0,2.28-0.557,2.981-1.491 c0.66-0.879,2.104-0.88,2.764,0.001c0.701,0.934,1.815,1.49,2.981,1.49H18c2.206,0,4-1.794,4-4V9C22,7.346,20.654,6,19,6z M7.5,13 C6.119,13,5,12.328,5,11.5S6.119,10,7.5,10s2.5,0.672,2.5,1.5S8.881,13,7.5,13z M16.5,13c-1.381,0-2.5-0.672-2.5-1.5 s1.119-1.5,2.5-1.5s2.5,0.672,2.5,1.5S17.881,13,16.5,13z"
+                    fill="#B2B2B2" />
+                </g>
+              </svg>
+              <!--end::Svg Icon-->
+            </span>
+          </a>
+        </li>
+      </ul>
+      <!--end::Nav-->
+  </div>
+  <!--end::Nav Wrapper-->
 </div>
+@push('style')
+<style media="screen">
+  .btn.btn-clean .svg-icon svg g [fill]:hover {
+    fill: #0095EB;
+  }
+</style>
+@endpush
