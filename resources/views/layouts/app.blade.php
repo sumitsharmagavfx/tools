@@ -31,6 +31,7 @@
     <link href="{{asset('plugins/global/plugins.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('css/style.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/themes/layout/aside/dark.css?v=7.0.6')}}" rel="stylesheet" type="text/css"/>
     @stack('style')
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
