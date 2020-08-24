@@ -14,6 +14,14 @@ id
 @endsection
 @push('style')
 <style media="screen">
+.nav-link.active{
+  border-bottom: 2px solid #0095EB !important;
+  color: #0095EB !important;
+}
+.nav-link:hover{
+  color: #0095EB !important;
+  border-bottom: 2px solid #0095EB !important;
+}
 @media only screen and (max-width: 600px) and (min-width: 425px) {
   .button {
     display: none;
