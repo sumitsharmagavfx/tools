@@ -36,6 +36,9 @@ id
   .title{
     width: 75%;
   }
+  .contributor-content {
+      text-align: center;
+  }
 }
 </style>
 @endpush
@@ -46,19 +49,17 @@ id
         <div class="col-lg-8 mb-5">
             <div class="card card-custom mb-5">
                 <div class="card-body">
-                    <p>
+                    <p class="pt-4">
                         PT CMLABS INDONESIA DIGITAL adalah sebuah perusahaan yang fokus pada jasa SEO, Marketing dan platform pendukung aktifitas SEO.
                         Umumnya kami menggunakan nama pendek yaitu CMLABS, yang merupakan singkatan dari Content Marketing Labs.
                         <a href="https://cmlabs.co" style="color: #0095EB"><b>Kunjungi Website</b></a>
                     </p>
                 </div>
             </div>
-            <div class="card card-custom gutter-b">
-                <div class="card-header">
+            <div class="card card-custom mb-5">
+                <div class="card-header border-0">
                   <div class="card-title">
-                    <h2 class="card-label">
-                     Features
-                    </h3>
+                     <h2 class="card-label pt-4">Features</h2>
                    </div>
                   </div>
                 <div class="card-body">
@@ -79,19 +80,43 @@ id
                 </div>
             </div>
             <div class="card card-custom mb-5">
-              <div class="card-header">
+              <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label">SEO From Contributor</h2>
+                  <h2 class="card-label pt-4">SEO From Contributor</h2>
                 </div>
               </div>
               <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="row mb-5">
+                    <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                        <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+							<div class="symbol-label" style="background-image: url('media/images/seo-contributor.png')"></div>
+						</div>
+						<h4 class="font-weight-bold my-2">Ilman Akbar</h4>
+						<div class="text-muted mb-2">Digital Marketing</div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 col-sm-12">
+                        <div class="contributor-content">
+                            <h4 class="font-weight-bold my-2 mb-4">Content Writing – Panduan & Cara Buat Artikel SEO</h4>
+                            <p>
+                                Ingin belajar cara buat artikel SEO? Disini, panduan online cmlabs akan membantu kamu belajar apa itu Content Writing dengan cara yang tepat!
+                            </p>
+                        </div>
+                        <div class="mt-10 text-center">
+                            <span>
+                                <button class="btn btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
+                            </span>
+                            <span>
+                                <button class="btn btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
             <div class="card card-custom mb-5">
-              <div class="card-header">
+              <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label">Why Choose Us</h2>
+                  <h2 class="card-label pt-4">Why Choose Us</h2>
                 </div>
               </div>
               <div class="card-body">
@@ -133,19 +158,92 @@ id
               </div>
             </div>
             <div class="card card-custom mb-5">
-              <div class="card-header">
-                <div class="card-title">
-                  <h2 class="card-label">Lorem Ipsum</h2>
-                </div>
-              </div>
               <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <h4>Lorem Ipsum</h4>
+                  <ul class="nav nav-tabs nav-tabs-line nav-bolder nav-tabs-line-2x justify-content-center mb-5">
+                     <li class="nav-item">
+                         <a class="nav-link mr-10 active" data-toggle="tab" href="#importantnotes">Important Notes</a>
+                     </li>
+                     <li class="nav-item ml-10">
+                         <a class="nav-link" data-toggle="tab" href="#howtouse">How To Use</a>
+                     </li>
+                </ul>
+                <div class="tab-content mt-5" id="myTabContent">
+                    <div class="tab-pane fade show active" id="importantnotes" role="tabpanel" aria-labelledby="importantnotes">
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="howtouse" role="tabpanel" aria-labelledby="howtouse">
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                        <table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            </td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
               </div>
             </div>
             <div class="card card-custom mb-5">
-              <div class="card-header">
+              <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label">FAQ</h2>
+                  <h2 class="card-label pt-4">FAQ</h2>
                 </div>
               </div>
               <div class="card-body">
