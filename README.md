@@ -3,8 +3,8 @@ Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generato
 
 ## Installation
 ### Before Installation Process
-Make sure you have `composer` and `xampp` with PHP version >= 7.2.0
-This Project Using Laravel 6.18.25
+- Make sure you have `composer` and `xampp` with PHP version >= 7.2.0
+- This Project Using Laravel 6.18.25
 
 ###  Next
 - run `git clone https://github.com/cmlabsdev/tools` to download this repository to your local
