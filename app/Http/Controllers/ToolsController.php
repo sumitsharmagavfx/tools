@@ -11,59 +11,43 @@ use Illuminate\Support\Facades\Redirect;
 
 class ToolsController extends Controller
 {
-    public function parse_date($date)
-    {
-        $dateFormat = date_create($date);
-        return date_format($dateFormat,"d/m/Y H:i");
-    }
+  public function parseDate($date)
+  {
+      $date=date_create($date);
+      return date_format($date,"M d, Y - H:i");
+  }
 
     public function getBlogWordpressId()
     {
-//        $dataToPost =[];
-//        $stream = [
-//            'ssl' => [
-//                'verify_peer' => false,
-//                'verify_peer_name' => false,
-//                'allow_self_signed' => true,
-//            ],
-//        ];
-//        $client = new Client();
-//        $request = $client->get('https://api.cmlabs.co/wordpress?lang=en');
-//        $response = $request->getBody()->getContents();
-//        $dataArr=json_decode($response,true );
-//        foreach ($dataArr as $data){
-//            array_push($dataToPost,[
-//                "title" => $data["title"]["rendered"],
-//                "date" => $this->parse_date($data["date"]),
-//                "link" => $data["link"]
-//            ]);
-//        }
-        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+      $client = new Client();
+      $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
+      $data = json_decode($response->getBody()->getContents(),true);
+      $data_fix = [];
+      foreach ($data as $datum){
+          array_push($data_fix,[
+              "link" => $datum['link'],
+              "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+              "date" => $this->parseDate($datum['date'])
+          ]);
+      }
+      return $data_fix;
     }
 
     public function getBlogWordpressEn()
     {
-//        $dataToPost =[];
-//        $stream = [
-//            'ssl' => [
-//                'verify_peer' => false,
-//                'verify_peer_name' => false,
-//                'allow_self_signed' => true,
-//            ],
-//        ];
-//        $result_from_json = file_get_contents('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',false,stream_context_create($stream));
-//        $client = new Client();
-//        $request = $client->get('https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=5',['verify'=> false]);
-//        $response = $request->getBody()->getContents();
-//        $dataArr=json_decode($response,true );
-//        foreach ($dataArr as $data){
-//            array_push($dataToPost,[
-//                "title" => $data["title"]["rendered"],
-//                "date" => $this->parse_date($data["date"]),
-//                "link" => $data["link"]
-//            ]);
-//        }
-        return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')),true);
+      $client = new Client();
+      $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
+      $data = json_decode($response->getBody()->getContents(),true);
+      $data2 = $response->getBody()->getContents();
+      $data_fix = [];
+      foreach ($data as $datum){
+          array_push($data_fix,[
+              "link" => $datum['link'],
+              "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+              "date" => $this->parseDate($datum['date'])
+          ]);
+      }
+      return $data_fix;
     }
 
     public function strikethrough()

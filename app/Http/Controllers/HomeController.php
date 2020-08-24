@@ -102,7 +102,7 @@ class HomeController extends Controller
         foreach ($data as $datum){
             array_push($data_fix,[
                 "link" => $datum['link'],
-                "title" => $datum['title']['rendered'],
+                "title" => str_replace('&#038;','&',$datum['title']['rendered']),
                 "date" => $this->parseDate($datum['date'])
             ]);
         }
@@ -120,7 +120,7 @@ class HomeController extends Controller
         foreach ($data as $datum){
             array_push($data_fix,[
                 "link" => $datum['link'],
-                "title" => $datum['title']['rendered'],
+                "title" => str_replace('&#038;','&',$datum['title']['rendered']),
                 "date" => $this->parseDate($datum['date'])
             ]);
         }
