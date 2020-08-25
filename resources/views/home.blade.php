@@ -58,16 +58,14 @@ id
             <div class="card card-custom mb-5">
                 <div class="card-body">
                     <p class="pt-4">
-                        PT CMLABS INDONESIA DIGITAL adalah sebuah perusahaan yang fokus pada jasa SEO, Marketing dan platform pendukung aktifitas SEO.
-                        Umumnya kami menggunakan nama pendek yaitu CMLABS, yang merupakan singkatan dari Content Marketing Labs.
-                        <a href="https://cmlabs.co" style="color: #0095EB"><b>Kunjungi Website</b></a>
+                        @lang('home.desc')
                     </p>
                 </div>
             </div>
             <div class="card card-custom mb-5">
                 <div class="card-header border-0">
                   <div class="card-title">
-                     <h2 class="card-label pt-4">Features</h2>
+                     <h2 class="card-label pt-4">@lang('home.title-1')</h2>
                    </div>
                   </div>
                 <div class="card-body">
@@ -90,7 +88,7 @@ id
             <div class="card card-custom mb-5">
               <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label pt-4">SEO From Contributor</h2>
+                  <h2 class="card-label pt-4">@lang('home.title-2')</h2>
                 </div>
               </div>
               <div class="card-body">
@@ -101,16 +99,16 @@ id
                                  <div class="row mb-5">
                                      <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
                                          <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor.png')"></div>
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/Andaru-Pramudito-Suhud-110x110.png')"></div>
                  						</div>
-                 						<h4 class="font-weight-bold my-2">Ilman Akbar</h4>
-                 						<div class="text-muted mb-2">Digital Marketing</div>
+                 						<h4 class="font-weight-bold my-2">ANDARU SUHUD</h4>
+                 						<div class="text-muted mb-2">DATA SCIENTIST</div>
                                      </div>
                                      <div class="col-lg-7 col-md-6 col-sm-12">
                                          <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">Content Writing – Panduan & Cara Buat Artikel SEO</h4>
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4>
                                              <p>
-                                                 Ingin belajar cara buat artikel SEO? Disini, panduan online cmlabs akan membantu kamu belajar apa itu Content Writing dengan cara yang tepat!
+                                                 @lang('home.desc-2-1-1')
                                              </p>
                                          </div>
                                      </div>
@@ -120,16 +118,16 @@ id
                                  <div class="row mb-5">
                                      <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
                                          <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor-2.png')"></div>
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/m-ilman-akbar-110x110.png')"></div>
                  						</div>
-                 						<h4 class="font-weight-bold my-2">Alif Seyta</h4>
-                 						<div class="text-muted mb-2">SEO Content Writer</div>
+                 						<h4 class="font-weight-bold my-2">ILMAN AKBAR</h4>
+                 						<div class="text-muted mb-2">DIGITAL MARKETING</div>
                                      </div>
                                      <div class="col-lg-7 col-md-6 col-sm-12">
                                          <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4>
                                              <p>
-                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @lang('home.desc-2-2-1')
                                              </p>
                                          </div>
                                      </div>
@@ -139,16 +137,73 @@ id
                                  <div class="row mb-5">
                                      <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
                                          <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor-3.png')"></div>
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/hangga-nuarta-2-110x110.jpeg')"></div>
                  						</div>
-                 						<h4 class="font-weight-bold my-2">Rifqi Ardhian</h4>
-                 						<div class="text-muted mb-2">Web Developer</div>
+                 						<h4 class="font-weight-bold my-2">HANGGA NUARTA</h4>
+                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
                                      </div>
                                      <div class="col-lg-7 col-md-6 col-sm-12">
                                          <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">Seberapa Besar Kontribusi SEO dalam Sebuah Website</h4>
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4>
                                              <p>
-                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                                 @lang('home.desc-2-3-1')
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/udhi-vilanata-110x110.jpeg')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">UDHI S VILANATA</h4>
+                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-4')</h4>
+                                             <p>
+                                                 @lang('home.desc-2-4-1')
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">ROCHMAN</h4>
+                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4>
+                                             <p>
+                                                 @lang('home.desc-2-5-1')
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/08/photo6145300840353737129-1-110x110.jpg')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">SELENA</h4>
+                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-6')</h4>
+                                             <p>
+                                                 @lang('home.desc-2-6-1')
                                              </p>
                                          </div>
                                      </div>
@@ -170,7 +225,7 @@ id
             <div class="card card-custom mb-5">
               <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label pt-4">Why Choose Us</h2>
+                  <h2 class="card-label pt-4">@lang('home.title-3')</h2>
                 </div>
               </div>
               <div class="card-body">
@@ -179,10 +234,10 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         01
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">Lorem Ipsum</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
                   </tr>
                   <tr>
-                    <td> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> </td>
+                    <td> <p>@lang('home.desc-3-1-1')</p> </td>
                   </tr>
                 </table>
 
@@ -191,10 +246,10 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         02
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">Lorem Ipsum</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
                   </tr>
                   <tr>
-                    <td> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> </td>
+                    <td> <p>@lang('home.desc-3-2-1')</p> </td>
                   </tr>
                 </table>
 
@@ -203,23 +258,23 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         03
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">Lorem Ipsum</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
                   </tr>
                   <tr>
-                    <td> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> </td>
+                    <td> <p>@lang('home.desc-3-3-1')</p> </td>
                   </tr>
                 </table>
               </div>
             </div>
             <div class="card card-custom mb-5">
               <div class="card-body">
-                  <h4>Lorem Ipsum</h4>
+                  <h4>@lang('home.title-4')</h4>
                   <ul class="nav nav-tabs nav-tabs-line nav-bolder nav-tabs-line-2x justify-content-center mb-5">
                      <li class="nav-item">
-                         <a class="nav-link mr-10 active" data-toggle="tab" href="#importantnotes">Important Notes</a>
+                         <a class="nav-link mr-10 active" data-toggle="tab" href="#importantnotes">@lang('home.sub-title-4-1')</a>
                      </li>
                      <li class="nav-item ml-10">
-                         <a class="nav-link" data-toggle="tab" href="#howtouse">How To Use</a>
+                         <a class="nav-link" data-toggle="tab" href="#howtouse">@lang('home.sub-title-4-2')</a>
                      </li>
                 </ul>
                 <div class="tab-content mt-5" id="myTabContent">
@@ -228,7 +283,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>@lang('home.desc-4-1-1')</p>
                             </td>
                           </tr>
                         </table>
@@ -236,7 +291,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>@lang('home.desc-4-1-2')</p>
                             </td>
                           </tr>
                         </table>
@@ -244,7 +299,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>@lang('home.desc-4-1-3')</p>
                             </td>
                           </tr>
                         </table>
@@ -252,7 +307,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>@lang('home.desc-4-1-4')</p>
                             </td>
                           </tr>
                         </table>
@@ -260,7 +315,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <p>@lang('home.desc-4-1-5')</p>
                             </td>
                           </tr>
                         </table>
@@ -270,7 +325,13 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-1')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-1-1')</li>
+                                  <li>@lang('home.desc-4-2-1-2')</li>
+                                  <li>@lang('home.desc-4-2-1-3')</li>
+                                  <li>@lang('home.desc-4-2-1-4')</li>
+                                </ol>
                             </td>
                           </tr>
                         </table>
@@ -278,15 +339,89 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-2')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-2-1')</li>
+                                  <li>@lang('home.desc-4-2-2-2')</li>
+                                  <li>@lang('home.desc-4-2-2-3')</li>
+                                  <li>@lang('home.desc-4-2-2-4')</li>
+                                  <li>@lang('home.desc-4-2-2-5')</li>
+                                </ol>
                             </td>
                           </tr>
-                        </table>
-                        <table width="100%" class="mb-5">
+                        </table><table width="100%" class="mb-5">
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-3')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-3-1')</li>
+                                  <li>@lang('home.desc-4-2-3-2')</li>
+                                  <li>@lang('home.desc-4-2-3-3')</li>
+                                </ol>
+                            </td>
+                          </tr>
+                        </table><table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-4')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-4-1')</li>
+                                  <li>@lang('home.desc-4-2-4-2')</li>
+                                  <li>@lang('home.desc-4-2-4-3')</li>
+                                  <li>@lang('home.desc-4-2-4-4')</li>
+                                </ol>
+                            </td>
+                          </tr>
+                        </table><table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-5')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-5-1')</li>
+                                  <li>@lang('home.desc-4-2-5-2')</li>
+                                  <li>@lang('home.desc-4-2-5-3')</li>
+                                  <li>@lang('home.desc-4-2-5-4')</li>
+                                </ol>
+                            </td>
+                          </tr>
+                        </table><table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-6')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-6-1')</li>
+                                  <li>@lang('home.desc-4-2-6-2')</li>
+                                  <li>@lang('home.desc-4-2-6-3')</li>
+                                  <li>@lang('home.desc-4-2-6-4')</li>
+                                </ol>
+                            </td>
+                          </tr>
+                        </table><table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-7')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-7-1')</li>
+                                  <li>@lang('home.desc-4-2-7-2')</li>
+                                  <li>@lang('home.desc-4-2-7-3')</li>
+                                </ol>
+                            </td>
+                          </tr>
+                        </table><table width="100%" class="mb-5">
+                          <tr>
+                            <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                            <td width="90%">
+                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-8')</span>
+                                <ol class="pl-5">
+                                  <li>@lang('home.desc-4-2-8-1')</li>
+                                  <li>@lang('home.desc-4-2-8-2')</li>
+                                  <li>@lang('home.desc-4-2-8-3')</li>
+                                </ol>
                             </td>
                           </tr>
                         </table>
@@ -297,7 +432,7 @@ id
             <div class="card card-custom mb-5">
               <div class="card-header border-0">
                 <div class="card-title">
-                  <h2 class="card-label pt-4">FAQ</h2>
+                  <h2 class="card-label pt-4">@lang('home.title-5')</h2>
                 </div>
               </div>
               <div class="card-body">
@@ -305,36 +440,36 @@ id
                  <div class="card">
                   <div class="card-header" id="headingOne2">
                    <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                    Apa itu CMLABS tools?
+                    @lang('home.sub-title-5-1')
                    </div>
                   </div>
                   <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                    <div class="card-body">
-                    CMLABS tools adalah lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    @lang('home.desc-5-1-1')
                    </div>
                   </div>
                  </div>
                  <div class="card">
                   <div class="card-header" id="headingTwo2">
                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo2">
-                    Apa saja yang tools yang sudah rilis?
+                    @lang('home.sub-title-5-2')
                    </div>
                   </div>
                   <div id="collapseTwo2" class="collapse"  data-parent="#accordionExample2">
                    <div class="card-body">
-                    CMLABS tools adalah lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    @lang('home.desc-5-2-1')
                    </div>
                   </div>
                  </div>
                  <div class="card">
                   <div class="card-header" id="headingThree2">
                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree2">
-                    Siapa yang butuh tools ini?
+                    @lang('home.sub-title-5-3')
                    </div>
                   </div>
                   <div id="collapseThree2" class="collapse" data-parent="#accordionExample2">
                    <div class="card-body">
-                    CMLABS tools adalah lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    @lang('home.desc-5-3-1')
                    </div>
                   </div>
                  </div>

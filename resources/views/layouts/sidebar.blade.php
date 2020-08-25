@@ -13,7 +13,7 @@
       <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
           <!--begin::Nav-->
         <ul class="menu-nav">
-          <li class="menu-item @yield('home')" aria-haspopup="true">
+          <li class="menu-item mb-5 @yield('home')" aria-haspopup="true">
             <a href="/{{$local}}" class="menu-link">
               <span class="svg-icon menu-icon">
                 <!--begin::Svg Icon-->
@@ -28,7 +28,7 @@
               <span class="menu-text">Overview</span>
             </a>
           </li>
-            <li class="menu-item @yield('word-counter')" aria-haspopup="true">
+            <li class="menu-item mb-5 @yield('word-counter')" aria-haspopup="true">
               <a href="/{{$local}}/word-counter" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@
                 <span class="menu-text">Word Counter</span>
               </a>
             </li>
-            <li class="menu-item @yield('title-checker')">
+            <li class="menu-item mb-5 @yield('title-checker')">
               <a href="/{{$local}}/page-title-meta-description-checker" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@
                 <span class="menu-text">Title & Lengths Checker</span>
               </a>
             </li>
-            <li class="menu-item @yield('json-ld')">
+            <li class="menu-item mb-5 @yield('json-ld')">
               <a href="/{{$local}}/json-ld-faq-schema-generator" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
@@ -71,7 +71,7 @@
                 <span class="menu-text">JSON-LD Schema Generator</span>
               </a>
             </li>
-            <li class="menu-item @yield('page-speed')">
+            <li class="menu-item mb-5 @yield('page-speed')">
               <a href="/{{$local}}/page-speed" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
@@ -88,7 +88,7 @@
                 <span class="menu-text">Page Speed</span>
               </a>
             </li>
-            <li class="menu-item @yield('sitemap')">
+            <li class="menu-item mb-5 @yield('sitemap')">
               <a href="/{{$local}}/sitemap-generator" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
@@ -104,7 +104,7 @@
                 <span class="menu-text">Sitemap Generator</span>
               </a>
             </li>
-            <li class="menu-item @yield('mobile-test')">
+            <li class="menu-item mb-5 @yield('mobile-test')">
               <a href="/{{$local}}/mobile-test" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
@@ -119,7 +119,7 @@
                 <span class="menu-text">Mobile Friendly Test</span>
               </a>
             </li>
-            <li class="menu-item @yield('ssl-checker')">
+            <li class="menu-item mb-5 @yield('ssl-checker')">
               <a href="/{{$local}}/ssl-checker" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
@@ -136,7 +136,7 @@
                 <span class="menu-text">SSL Checker</span>
               </a>
             </li>
-            <li class="menu-item @yield('robotstxt-generator')">
+            <li class="menu-item mb-5 @yield('robotstxt-generator')">
               <a href="/{{$local}}/robotstxt-generator" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
