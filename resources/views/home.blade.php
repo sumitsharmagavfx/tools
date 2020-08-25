@@ -94,31 +94,77 @@ id
                 </div>
               </div>
               <div class="card-body">
-                <div class="row mb-5">
-                    <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                        <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-							<div class="symbol-label" style="background-image: url('media/images/seo-contributor.png')"></div>
-						</div>
-						<h4 class="font-weight-bold my-2">Ilman Akbar</h4>
-						<div class="text-muted mb-2">Digital Marketing</div>
-                    </div>
-                    <div class="col-lg-7 col-md-6 col-sm-12">
-                        <div class="contributor-content">
-                            <h4 class="font-weight-bold my-2 mb-4">Content Writing – Panduan & Cara Buat Artikel SEO</h4>
-                            <p>
-                                Ingin belajar cara buat artikel SEO? Disini, panduan online cmlabs akan membantu kamu belajar apa itu Content Writing dengan cara yang tepat!
-                            </p>
-                        </div>
-                        <div class="mt-10 text-center">
-                            <span>
-                                <button class="btn btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
-                            </span>
-                            <span>
-                                <button class="btn btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="contributor-slider">
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor.png')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">Ilman Akbar</h4>
+                 						<div class="text-muted mb-2">Digital Marketing</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">Content Writing – Panduan & Cara Buat Artikel SEO</h4>
+                                             <p>
+                                                 Ingin belajar cara buat artikel SEO? Disini, panduan online cmlabs akan membantu kamu belajar apa itu Content Writing dengan cara yang tepat!
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor-2.png')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">Alif Seyta</h4>
+                 						<div class="text-muted mb-2">SEO Content Writer</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
+                                             <p>
+                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div>
+                                 <div class="row mb-5">
+                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
+                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                 							<div class="symbol-label" style="background-image: url('media/images/seo-contributor-3.png')"></div>
+                 						</div>
+                 						<h4 class="font-weight-bold my-2">Rifqi Ardhian</h4>
+                 						<div class="text-muted mb-2">Web Developer</div>
+                                     </div>
+                                     <div class="col-lg-7 col-md-6 col-sm-12">
+                                         <div class="contributor-content">
+                                             <h4 class="font-weight-bold my-2 mb-4">Seberapa Besar Kontribusi SEO dalam Sebuah Website</h4>
+                                             <p>
+                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                             </p>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-lg-12 text-center">
+                         <span>
+                             <button class="btn btn-prev btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
+                         </span>
+                         <span>
+                             <button class="btn btn-next btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
+                         </span>
+                     </div>
+                 </div>
               </div>
             </div>
             <div class="card card-custom mb-5">
@@ -301,7 +347,13 @@ id
   </div>
 </div>
 @endsection
+
+@push('script')
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{asset('js/slick.js')}}"></script>
+@endpush
+
 <!-- home -->
 @section('home')
-active
+menu-item-active
 @endsection

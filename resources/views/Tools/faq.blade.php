@@ -200,6 +200,7 @@ id/json-ld-faq-schema-generator
   @include('layouts/stickybar')
 </div>
 
+
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -230,5 +231,5 @@ id/json-ld-faq-schema-generator
 <script src="{{asset('js/logic/faq-json-ld.js')}}"></script>
 @endpush
 @section('json-ld')
-active
+menu-item-active
 @endsection

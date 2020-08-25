@@ -17,6 +17,7 @@ id/page-speed
 @endsection
 
 @section('content')
+
 <div class="card card-custom gutter-b">
   <div class="card-header">
     <div class="card-title">
@@ -584,5 +585,5 @@ id/page-speed
 @endpush
 
 @section('page-speed')
-active
+menu-item-active
 @endsection

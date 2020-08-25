@@ -194,7 +194,6 @@ id/mobile-test
   @include('layouts/stickybar')
 </div>
 
-
 @endsection
 
 @push('script')
@@ -202,5 +201,5 @@ id/mobile-test
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')
-active
+menu-item-active
 @endsection
