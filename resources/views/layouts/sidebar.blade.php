@@ -1,3 +1,12 @@
+@push('style')
+<style media="screen">
+  .aside {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+</style>
+@endpush
+
 <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
   <!--begin::Brand-->
   <div class="brand flex-column-auto justify-content-center">
