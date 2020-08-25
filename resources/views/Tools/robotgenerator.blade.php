@@ -13,6 +13,7 @@
 @section('id-link','/id/robotstxt-generator')
 
 @section('content')
+
 <div class="row">
   <div class="col-lg-12">
     <!--begin::Card-->
@@ -146,11 +147,12 @@
   </div>
   @include('layouts/stickybar')
 </div>
+
 @endsection
 
 @push('script')
 <script src="{{asset('js/logic/robotgenerator.js')}}"></script>
 @endpush
 @section('robotstxt-generator')
-active
+menu-item-active
 @endsection

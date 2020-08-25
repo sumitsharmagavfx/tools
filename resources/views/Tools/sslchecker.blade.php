@@ -124,7 +124,7 @@ id/ssl-checker
     <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 @endpush
 @section('ssl-checker')
-    active
+    menu-item-active
 @endsection
 
 {{--test--}}

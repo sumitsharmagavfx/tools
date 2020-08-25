@@ -1,4 +1,4 @@
-<div id="kt_header" class="header bg-white header-fixed" >
+<div id="kt_header" class="header header-fixed" >
     <!--begin::Container-->
     <div class="container-fluid d-flex align-items-stretch justify-content-between">
         <!--begin::Left-->
@@ -20,19 +20,19 @@
             <div class="topbar-item">
 
             @if($local == "id")
-                <a href="/analytics" style="margin-right:25px">
+                <a href="/analytics" style="margin-right:25px; color: black;">
                     Analitik
                 </a>
                 @else
-                <a href="/analytics" style="margin-right:25px">
+                <a href="/analytics" style="margin-right:25px; color: black;">
                      Analytics
                 </a>
                 @endif
-   
+
                 @if($local == "id")
                 <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px">
+                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px; color: black;">
                         Blog & Panduan
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
@@ -64,7 +64,7 @@
                 @else
                 <!-- <a href="https://cmlabs.co/en/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px">
+                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px; color: black">
                         Blog & Resource
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">

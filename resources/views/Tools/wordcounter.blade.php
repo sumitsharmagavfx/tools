@@ -431,5 +431,5 @@ function myFunction() {
 @endpush
 
 @section('word-counter')
-active
+menu-item-active
 @endsection
