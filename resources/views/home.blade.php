@@ -56,6 +56,11 @@ id
 @section('content')
 <div class="d-flex flex-column-fluid mt-5">
   <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+        <li class="breadcrumb-item active" style="color:#2F80ED"><b>Homepage</b></li>
+      </ol>
+    </nav>
     <div class="row"  data-sticky-container>
         <div class="col-lg-8">
             <div class="card card-custom mb-5">
