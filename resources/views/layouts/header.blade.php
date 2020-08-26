@@ -19,20 +19,14 @@
 
             <div class="topbar-item">
 
-            @if($local == "id")
-                <a href="/analytics" style="margin-right:25px; color: black;">
-                    Analitik
+                <a href="/analytics" class="analytic-links ml-5 mr-5 font-weight-bold" target="_blank">
+                    @if($local == "id") Analitik @else Analytics @endif
                 </a>
-                @else
-                <a href="/analytics" style="margin-right:25px; color: black;">
-                     Analytics
-                </a>
-                @endif
 
                 @if($local == "id")
                 <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px; color: black;">
+                    <a href="#" class="resource-links ml-5 mr-5 font-weight-bold" data-toggle="dropdown" aria-expanded="false">
                         Blog & Panduan
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
@@ -64,7 +58,7 @@
                 @else
                 <!-- <a href="https://cmlabs.co/en/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" data-toggle="dropdown" aria-expanded="false" style="margin-right:25px; color: black">
+                    <a href="#" class="resource-links ml-5 mr-5 font-weight-bold" data-toggle="dropdown" aria-expanded="false">
                         Blog & Resource
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
@@ -96,7 +90,7 @@
                 @endif
 
                 <div class="dropdown mr-3">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @lang('layout.language')
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
