@@ -43,17 +43,20 @@
     .menu-breadcrumb:hover {
       color: #2F80ED;
     }
+    a:hover {
+        color: #0095EB !important;
+    }
       .logo-mobile {
           display: none;
       }
-      .analytic-links, .resource-links, .dropdown-toggle {
+      .analytic-links, .resource-links, .dropdown-toggle, .contributor-title {
           color: black;
       }
-      .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus {
-          color: #0095EB;
+      .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus, .contributor-title:hover {
+          color: #0095EB !important;
       }
       .analytic-icon:hover > .svg-icon.svg-menu-icon svg g [fill] {
-          fill: #0095EB;
+          fill: #0095EB !important;
       }
       .menu-item.menu-item-active > .menu-link .menu-text, .menu-item:hover > .menu-link .menu-text {
           color: #0095EB !important;

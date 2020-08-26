@@ -22,9 +22,6 @@ id
   color: #0095EB !important;
   border-bottom: 2px solid #0095EB !important;
 }
-.contributor-slider:focus {
-    border: 3px solid white;
-}
 @media only screen and (max-width: 600px) and (min-width: 425px) {
   .button {
     display: none;
@@ -36,7 +33,11 @@ id
     width: 80%;
   }
 }
-
+@media only screen and (max-width: 600px) {
+    .contributor-profile {
+        display: none;
+    }
+}
 @media only screen and (max-width: 425px) {
   .button {
     display: none;
@@ -46,9 +47,6 @@ id
   }
   .title{
     width: 75%;
-  }
-  .contributor-content {
-      text-align: center;
   }
 }
 </style>
@@ -83,11 +81,11 @@ id
                         <th rowspan="2" width="13%" class="image"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px">
                             {!! $datum['img'] !!}
                         </span></th>
-                        <td width="72%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">{{$datum['title']}}</span></td>
+                        <td width="72%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3 tools-title">{{$datum['title']}}</span></td>
                         <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control" style="background-color: #0095EB">Launch</button></a></td>
                       </tr>
                       <tr>
-                        <td><a href="{{'/'.$local.$datum['route']}}" class="mr-lg-8 mr-5 mb-lg-0 mb-2" style="color:#0095EB">Lihat Detail</a></td>
+                        <td><a href="{{'/'.$local.$datum['route']}}" class="mr-lg-8 mr-5 mb-lg-0 mb-2"  data-toggle="modal" data-target="#modaldetail" style="color:#0095EB">Lihat Detail</a></td>
                       </tr>
                     </table>
                     @endforeach
@@ -100,134 +98,102 @@ id
                 </div>
               </div>
               <div class="card-body">
-                 <div class="row">
-                     <div class="col-lg-12">
-                         <div class="contributor-slider">
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/Andaru-Pramudito-Suhud-110x110.png')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">ANDARU SUHUD</h3>
-                 						<div class="text-muted mb-2">DATA SCIENTIST</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-1-1')
-                                             </p>
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div id="contributor-slide" class="carousel slide" data-ride="carousel" data-interval="4000">
+                              <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row mb-5">
+                                         <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                             <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                     							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/Andaru-Pramudito-Suhud-110x110.png')"></div>
+                     						</div>
+                     						<h4 class="font-weight-bold my-2">ANDARU SUHUD</h4>
+                     						<div class="text-muted mb-2">DATA SCIENTIST</div>
+                                         </div>
+                                         <div class="col-lg-7 col-md-6 col-sm-12">
+                                             <div class="contributor-content">
+                                                 <a href="https://cmlabs.co/en/what-is-data-driven/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4></a>
+                                                 <p>
+                                                     @lang('home.desc-2-1-1')
+                                                 </p>
+                                             </div>
                                          </div>
                                      </div>
-                                 </div>
-                             </div>
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/m-ilman-akbar-110x110.png')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">ILMAN AKBAR</h3>
-                 						<div class="text-muted mb-2">DIGITAL MARKETING</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-2-1')
-                                             </p>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row mb-5">
+                                       <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                           <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                   							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/m-ilman-akbar-110x110.png')"></div>
+                   						</div>
+                   						<h4 class="font-weight-bold my-2">ILMAN AKBAR</h4>
+                   						<div class="text-muted mb-2">DIGITAL MARKETING</div>
+                                       </div>
+                                       <div class="col-lg-7 col-md-6 col-sm-12">
+                                           <div class="contributor-content">
+                                               <a href="https://cmlabs.co/en/seo-content-guideline/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4></a>
+                                               <p>
+                                                   @lang('home.desc-2-2-1')
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row mb-5">
+                                       <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                           <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                   							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/hangga-nuarta-2-110x110.jpeg')"></div>
+                   						</div>
+                   						<h4 class="font-weight-bold my-2">HANGGA NUARTA</h4>
+                   						<div class="text-muted mb-2">SEO SPECIALIST</div>
+                                       </div>
+                                       <div class="col-lg-7 col-md-6 col-sm-12">
+                                           <div class="contributor-content">
+                                               <a href="https://cmlabs.co/en/seo-for-sme-startup/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4></a>
+                                               <p>
+                                                   @lang('home.desc-2-3-1')
+                                               </p>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row mb-5">
+                                         <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                             <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                     							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
+                     						</div>
+                     						<h4 class="font-weight-bold my-2">ROCHMAN</h4>
+                     						<div class="text-muted mb-2">SEO SPECIALIST</div>
+                                         </div>
+                                         <div class="col-lg-7 col-md-6 col-sm-12">
+                                             <div class="contributor-content">
+                                                 <a href="https://cmlabs.co/en/seo-content-guideline/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4></a>
+                                                 <p>
+                                                     @lang('home.desc-2-5-1')
+                                                 </p>
+                                             </div>
                                          </div>
                                      </div>
-                                 </div>
-                             </div>
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/hangga-nuarta-2-110x110.jpeg')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">HANGGA NUARTA</h3>
-                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-3-1')
-                                             </p>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/udhi-vilanata-110x110.jpeg')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">UDHI S VILANATA</h3>
-                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-4')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-4-1')
-                                             </p>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">ROCHMAN</h3>
-                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-5-1')
-                                             </p>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div>
-                                 <div class="row mb-5">
-                                     <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5">
-                                         <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
-                 							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/08/photo6145300840353737129-1-110x110.jpg')"></div>
-                 						</div>
-                 						<h3 class="font-weight-bold my-2">SELENA</h3>
-                 						<div class="text-muted mb-2">SEO SPECIALIST</div>
-                                     </div>
-                                     <div class="col-lg-7 col-md-6 col-sm-12">
-                                         <div class="contributor-content">
-                                             <h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-6')</h4>
-                                             <p>
-                                                 @lang('home.desc-2-6-1')
-                                             </p>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     <div class="col-lg-12 text-center">
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-12 text-center">
                          <span>
-                             <button class="btn btn-prev btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
+                             <a href="#contributor-slide" data-slide="prev">
+                                 <button class="btn btn-prev btn-icon btn-circle flaticon2-back btn-light-twitter mr-3"></button>
+                             <a/>
                          </span>
                          <span>
-                             <button class="btn btn-next btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
+                             <a href="#contributor-slide" data-slide="next">
+                                 <button class="btn btn-next btn-icon btn-circle flaticon2-next btn-light-twitter ml-3"></button>
+                             </a>
                          </span>
                      </div>
-                 </div>
+                  </div>
               </div>
             </div>
             <div class="card card-custom mb-5">
@@ -489,11 +455,44 @@ id
     </div>
   </div>
 </div>
+
+<!-- Modal Detail Tools-->
+<div class="modal fade" id="modaldetail" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i aria-hidden="true" class="ki ki-close"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary font-weight-bold">Launch</button>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @push('script')
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="{{asset('js/slick.js')}}"></script>
+<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{asset('js/slick.js')}}"></script> -->
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('#modaldetail').on('show.bs.modal', function(e) {
+        var title = $('.tools-title').innerHTML;
+        $(".modal-title").innerHTML = title;
+      });
+
+      $('.contributor-slide').carousel({
+          pause: "hover"
+      })
+    });
+</script>
 @endpush
 
 <!-- home -->

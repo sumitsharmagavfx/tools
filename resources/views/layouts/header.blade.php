@@ -19,14 +19,14 @@
 
             <div class="topbar-item">
 
-                <a href="/analytics" class="analytic-links ml-5 mr-5 font-weight-bold" target="_blank">
-                    @if($local == "id") Analitik @else Analytics @endif
+                <a href="/analytics" target="_blank">
+                    <div class="analytic-links ml-5 mr-5 font-weight-bold">@if($local == "id") Analitik @else Analytics @endif</div>
                 </a>
 
                 @if($local == "id")
                 <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
                 <div class="dropdown dropdown-inline">
-                    <a href="#" class="resource-links ml-5 mr-5 font-weight-bold" data-toggle="dropdown" aria-expanded="false">
+                    <a href="#"  class="resource-links ml-5 mr-5 font-weight-boldest" data-toggle="dropdown" aria-expanded="false">
                         Blog & Panduan
                     </a>
                     <div class="dropdown-menu dropdown-menu-md py-5">
