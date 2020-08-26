@@ -108,7 +108,7 @@ id
                                              <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
                      							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/Andaru-Pramudito-Suhud-110x110.png')"></div>
                      						</div>
-                     						<h4 class="font-weight-bold my-2">ANDARU SUHUD</h4>
+                     						<h3 class="font-weight-bold my-2">ANDARU SUHUD</h3>
                      						<div class="text-muted mb-2">DATA SCIENTIST</div>
                                          </div>
                                          <div class="col-lg-7 col-md-6 col-sm-12">
@@ -127,7 +127,7 @@ id
                                            <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
                    							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/m-ilman-akbar-110x110.png')"></div>
                    						</div>
-                   						<h4 class="font-weight-bold my-2">ILMAN AKBAR</h4>
+                   						<h3 class="font-weight-bold my-2">ILMAN AKBAR</h3>
                    						<div class="text-muted mb-2">DIGITAL MARKETING</div>
                                        </div>
                                        <div class="col-lg-7 col-md-6 col-sm-12">
@@ -146,7 +146,7 @@ id
                                            <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
                    							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/hangga-nuarta-2-110x110.jpeg')"></div>
                    						</div>
-                   						<h4 class="font-weight-bold my-2">HANGGA NUARTA</h4>
+                   						<h3 class="font-weight-bold my-2">HANGGA NUARTA</h3>
                    						<div class="text-muted mb-2">SEO SPECIALIST</div>
                                        </div>
                                        <div class="col-lg-7 col-md-6 col-sm-12">
@@ -165,7 +165,7 @@ id
                                              <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
                      							<div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
                      						</div>
-                     						<h4 class="font-weight-bold my-2">ROCHMAN</h4>
+                     						<h3 class="font-weight-bold my-2">ROCHMAN</h3>
                      						<div class="text-muted mb-2">SEO SPECIALIST</div>
                                          </div>
                                          <div class="col-lg-7 col-md-6 col-sm-12">
@@ -461,7 +461,7 @@ id
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <h2 class="modal-title" id="exampleModalLabel"></h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
