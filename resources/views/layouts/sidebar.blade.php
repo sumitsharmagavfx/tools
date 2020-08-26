@@ -12,7 +12,7 @@
   <div class="brand flex-column-auto justify-content-center">
     <!--begin::Logo-->
     <a href="/{{$local}}" class="brand-logo">
-      <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px" />
+      <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-40px" />
     </a>
     <!--end::Logo-->
   </div>
@@ -21,14 +21,14 @@
   <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
       <div class="logo-mobile text-center pt-10">
         <a href="/{{$local}}">
-          <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px" />
+          <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-40px" />
         </a>
       </div>
       <div id="kt_aside_menu" class="aside-menu footer-fixed" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
           <!--begin::Nav-->
         <ul class="menu-nav mb-25">
             <li class="menu-section mb-5 border-bottom">
-				<h4 class="menu-text">SEO Tools</h4>
+				<span class="h5 text-uppercase">SEO Tools</span>
 			</li>
           <li class="menu-item mb-5 @yield('home')" aria-haspopup="true">
             <a href="/{{$local}}" class="menu-link">
