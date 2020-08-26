@@ -37,9 +37,15 @@
     <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     @stack('style')
     <style media="screen">
-        a:hover {
-            color: #0095EB !important;
-        }
+    .menu-breadcrumb {
+      color: #ABABAB;
+    }
+    .menu-breadcrumb:hover {
+      color: #2F80ED;
+    }
+    a:hover {
+        color: #0095EB !important;
+    }
       .logo-mobile {
           display: none;
       }

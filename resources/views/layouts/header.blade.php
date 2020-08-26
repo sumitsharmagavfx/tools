@@ -4,7 +4,7 @@
         <!--begin::Left-->
         <div class="d-flex align-items-stretch mr-2">
             <!--begin::Page Title-->
-            @if(request()->path() == "/")
+            @if(request()->path() == "en" || request()->path() == "id")            
             <h1 class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0 h3">@lang('layout.title')</h1>
             @else
             <span class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0 h3">@lang('layout.title')</span>
