@@ -36,6 +36,40 @@
     <link href="{{asset('css/themes/layout/aside/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     @stack('style')
+    <style media="screen">
+      .logo-mobile {
+          display: none;
+      }
+      .analytic-links, .resource-links, .dropdown-toggle {
+          color: black;
+      }
+      .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus {
+          color: #0095EB;
+      }
+      .analytic-icon:hover > .svg-icon.svg-menu-icon svg g [fill] {
+          fill: #0095EB;
+      }
+      .menu-item.menu-item-active > .menu-link .menu-text, .menu-item:hover > .menu-link .menu-text {
+          color: #0095EB !important;
+      }
+      .menu-item.menu-item-active > .menu-link .svg-icon.menu-icon svg g [fill], .menu-item:hover > .menu-link .svg-icon.menu-icon svg g [fill] {
+          fill: #0095EB !important;
+      }
+      .menu-item.menu-item-active, .menu-item:hover {
+          border-right: 3px solid #0095EB;
+          background: rgba(0, 149, 235, 0.7);
+      }
+      .aside-menu-wrapper > .footer-fixed .footer {
+          left: 0;
+          bottom: 0;
+          width: 265px;
+      }
+      @media only screen and (max-width: 991px) {
+          .logo-mobile {
+              display: block;
+          }
+      }
+    </style>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
@@ -56,7 +90,7 @@
     <!--end::Logo-->
     <!--begin::Toolbar-->
     <div class="d-flex align-items-center">
-        <a href="/analytics" class="mr-5">
+        <a href="/analytics" class="analytic-icon mr-5" target="_blank">
           <span class="svg-icon svg-menu-icon svg-icon-xl">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -67,7 +101,7 @@
           </span>
         </a>
         <div class="dropdown mr-5">
-            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 @if($local == "id")
                 ID
                 @else
@@ -126,9 +160,6 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
-            <!--begin::Footer-->
-            @include('layouts.footer')
-            <!--end::Footer-->
         </div>
         <!--end::Wrapper-->
     </div>

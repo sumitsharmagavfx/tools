@@ -22,6 +22,9 @@ id
   color: #0095EB !important;
   border-bottom: 2px solid #0095EB !important;
 }
+.contributor-slider:focus {
+    border: 3px solid white;
+}
 @media only screen and (max-width: 600px) and (min-width: 425px) {
   .button {
     display: none;
@@ -54,7 +57,7 @@ id
 <div class="d-flex flex-column-fluid mt-5">
   <div class="container">
     <div class="row"  data-sticky-container>
-        <div class="col-lg-8 mb-5">
+        <div class="col-lg-8">
             <div class="card card-custom mb-5">
                 <div class="card-body">
                     <p class="pt-4">
@@ -75,8 +78,8 @@ id
                         <th rowspan="2" width="13%" class="image"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px">
                             {!! $datum['img'] !!}
                         </span></th>
-                        <td width="72%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">{{$datum['title']}}</span></td>
-                        <td rowspan="2" width="15%" class="button"><a href="{{'/'.$local.$datum['route']}}" class="btn btn-sm text-white font-weight-bolder text-uppercase form-control" style="background-color: #0095EB">Launch</a></td>
+                        <td width="72%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">{{$datum['title']}}</span></td>
+                        <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control" style="background-color: #0095EB">Launch</button></a></td>
                       </tr>
                       <tr>
                         <td><a href="{{'/'.$local.$datum['route']}}" class="mr-lg-8 mr-5 mb-lg-0 mb-2" style="color:#0095EB">Lihat Detail</a></td>
@@ -234,7 +237,7 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         01
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
                   </tr>
                   <tr>
                     <td> <p>@lang('home.desc-3-1-1')</p> </td>
@@ -246,7 +249,7 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         02
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
                   </tr>
                   <tr>
                     <td> <p>@lang('home.desc-3-2-1')</p> </td>
@@ -258,7 +261,7 @@ id
                     <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                         03
                     </span></th>
-                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
+                    <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
                   </tr>
                   <tr>
                     <td> <p>@lang('home.desc-3-3-1')</p> </td>
@@ -325,7 +328,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-1')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-1')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-1-1')</li>
                                   <li>@lang('home.desc-4-2-1-2')</li>
@@ -339,7 +342,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-2')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-2')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-2-1')</li>
                                   <li>@lang('home.desc-4-2-2-2')</li>
@@ -353,7 +356,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-3')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-3')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-3-1')</li>
                                   <li>@lang('home.desc-4-2-3-2')</li>
@@ -365,7 +368,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-4')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-4')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-4-1')</li>
                                   <li>@lang('home.desc-4-2-4-2')</li>
@@ -378,7 +381,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-5')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-5')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-5-1')</li>
                                   <li>@lang('home.desc-4-2-5-2')</li>
@@ -391,7 +394,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-6')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-6')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-6-1')</li>
                                   <li>@lang('home.desc-4-2-6-2')</li>
@@ -404,7 +407,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-7')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-7')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-7-1')</li>
                                   <li>@lang('home.desc-4-2-7-2')</li>
@@ -416,7 +419,7 @@ id
                           <tr>
                             <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
                             <td width="90%">
-                                <span class="text-dark text-hover-primary font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-8')</span>
+                                <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-8')</span>
                                 <ol class="pl-5">
                                   <li>@lang('home.desc-4-2-8-1')</li>
                                   <li>@lang('home.desc-4-2-8-2')</li>
@@ -429,7 +432,7 @@ id
                 </div>
               </div>
             </div>
-            <div class="card card-custom mb-5">
+            <div class="card card-custom">
               <div class="card-header border-0">
                 <div class="card-title">
                   <h2 class="card-label pt-4">@lang('home.title-5')</h2>

@@ -10,9 +10,17 @@
   <!--end::Brand-->
   <!--begin::Nav Wrapper-->
   <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
-      <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+      <div class="logo-mobile text-center pt-10">
+        <a href="/{{$local}}">
+          <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-30px" />
+        </a>
+      </div>
+      <div id="kt_aside_menu" class="aside-menu footer-fixed" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
           <!--begin::Nav-->
-        <ul class="menu-nav">
+        <ul class="menu-nav mb-25">
+            <li class="menu-section mb-5 border-bottom">
+				<h4 class="menu-text">SEO Tools</h4>
+			</li>
           <li class="menu-item mb-5 @yield('home')" aria-haspopup="true">
             <a href="/{{$local}}" class="menu-link">
               <span class="svg-icon menu-icon">
@@ -155,15 +163,8 @@
             </li>
           </ul>
           <!--end::Nav-->
-
-          </div>
+          @include('layouts.footer')
+      </div>
   </div>
   <!--end::Nav Wrapper-->
 </div>
-@push('style')
-<style media="screen">
-  .btn.btn-clean .svg-icon svg g [fill]:hover {
-    fill: #0095EB;
-  }
-</style>
-@endpush
