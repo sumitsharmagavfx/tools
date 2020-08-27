@@ -50,8 +50,8 @@ id/mobile-test
             </div>
           </div>
           <div class="col-lg-3 col-xl-2 mb-5">
-            <button type="button" class="btn btn btn-light-info  form-control" name="button" id="btn-check">
-            <i class="flaticon2-heart-rate-monitor"></i> @lang('mobiletest.btn-add')</button>
+            <button type="button" class="btn btn btn-light-info  form-control main-button" name="button" id="btn-check">
+            <i class="flaticon2-heart-rate-monitor main-button-icon"></i> @lang('mobiletest.btn-add')</button>
           </div>
         </div>
       </div>

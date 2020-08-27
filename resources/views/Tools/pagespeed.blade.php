@@ -38,8 +38,8 @@ id/page-speed
         </div>
       </div>
       <div class="col-lg-3 col-xl-2 mb-5">
-        <button type="button" class="btn btn btn-light-info form-control" name="button" id="analysis-button">
-        <i class="flaticon2-heart-rate-monitor"></i> @lang('pagespeed.btn-analysis')</button>
+        <button type="button" class="btn btn btn-light-info form-control main-button" name="button" id="analysis-button">
+        <i class="flaticon2-heart-rate-monitor main-button-icon"></i> @lang('pagespeed.btn-analysis')</button>
       </div>
     </div>
   </div>

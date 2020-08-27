@@ -7,7 +7,7 @@
 </style>
 @endpush
 
-<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto border-right" id="kt_aside">
   <!--begin::Brand-->
   <div class="brand flex-column-auto justify-content-center">
     <!--begin::Logo-->

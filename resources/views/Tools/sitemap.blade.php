@@ -38,8 +38,8 @@ id/sitemap-generator
         </div>
       </div>
       <div class="col-lg-3 col-xl-3 col-xxl-2 gutter-b">
-        <button type="button" class="btn btn btn-light-info  form-control" name="button" id="generate">
-        <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
+        <button type="button" class="btn btn btn-light-info  form-control main-button" name="button" id="generate">
+        <i class="flaticon2-heart-rate-monitor main-button-icon"></i> @lang('sitemap.btn-generate')</button>
       </div>
     </div>
     <center>
