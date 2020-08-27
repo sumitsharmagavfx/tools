@@ -85,7 +85,19 @@ id
                         <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control" style="background-color: #0095EB">Launch</button></a></td>
                       </tr>
                       <tr>
-                        <td><a href="{{'/'.$local.$datum['route']}}" class="mr-lg-8 mr-5 mb-lg-0 mb-2"  data-toggle="modal" data-target="#modaldetail" style="color:#0095EB">Lihat Detail</a></td>
+                        <td>
+                            <a
+                                href="#"
+                                class="mr-lg-8 mr-5 mb-lg-0 mb-2"
+                                data-toggle="modal"
+                                data-target="#modaldetail"
+                                data-title="{{$datum['title']}}"
+                                data-route="{{'/'.$local.$datum['route']}}"
+                                data-desc="@if(App::getLocale()=='id') {{$datum['description']}} @else {{$datum['description-en']}} @endif"
+                                style="color:#0095EB">
+                                @lang('home.detail-button')
+                            </a>
+                        </td>
                       </tr>
                     </table>
                     @endforeach
@@ -241,8 +253,12 @@ id
               </div>
             </div>
             <div class="card card-custom mb-5">
+                <div class="card-header border-0">
+                  <div class="card-title">
+                    <h2 class="card-label pt-4">@lang('home.title-4')</h2>
+                  </div>
+                </div>
               <div class="card-body">
-                  <h2>@lang('home.title-4')</h2>
                   <ul class="nav nav-tabs nav-tabs-line nav-bolder nav-tabs-line-2x justify-content-center mb-5">
                      <li class="nav-item">
                          <a class="nav-link mr-10 active" data-toggle="tab" href="#importantnotes">@lang('home.sub-title-4-1')</a>
@@ -403,7 +419,7 @@ id
                 </div>
               </div>
             </div>
-            <div class="card card-custom">
+            <div class="card card-custom mb-5">
               <div class="card-header border-0">
                 <div class="card-title">
                   <h2 class="card-label pt-4">@lang('home.title-5')</h2>
@@ -419,7 +435,11 @@ id
                   </div>
                   <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                    <div class="card-body">
-                    @lang('home.desc-5-1-1')
+                       <ul>
+                           <li>@lang('home.desc-5-1-1')</li>
+                           <li>@lang('home.desc-5-1-2')</li>
+                           <li>@lang('home.desc-5-1-3')</li>
+                       </ul>
                    </div>
                   </div>
                  </div>
@@ -431,7 +451,16 @@ id
                   </div>
                   <div id="collapseTwo2" class="collapse"  data-parent="#accordionExample2">
                    <div class="card-body">
-                    @lang('home.desc-5-2-1')
+                       <ul>
+                           <li>@lang('home.desc-5-2-1')</li>
+                           <li>@lang('home.desc-5-2-2')</li>
+                           <li>@lang('home.desc-5-2-3')</li>
+                           <li>@lang('home.desc-5-2-4')</li>
+                           <li>@lang('home.desc-5-2-5')</li>
+                           <li>@lang('home.desc-5-2-6')</li>
+                           <li>@lang('home.desc-5-2-7')</li>
+                       </ul>
+                       @lang('home.sub-sub-title-5-2')
                    </div>
                   </div>
                  </div>
@@ -443,7 +472,28 @@ id
                   </div>
                   <div id="collapseThree2" class="collapse" data-parent="#accordionExample2">
                    <div class="card-body">
-                    @lang('home.desc-5-3-1')
+                           <ul>
+                               <li>@lang('home.desc-5-3-1')</li>
+                               <li>@lang('home.desc-5-3-2')</li>
+                               <li>@lang('home.desc-5-3-3')</li>
+                           </ul>
+                   </div>
+                  </div>
+                 </div>
+                 <div class="card">
+                  <div class="card-header" id="headingFour2">
+                   <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour2">
+                    @lang('home.sub-title-5-4')
+                   </div>
+                  </div>
+                  <div id="collapseFour2" class="collapse" data-parent="#accordionExample2">
+                   <div class="card-body">
+                       <ul>
+                           <li>@lang('home.desc-5-4-1')</li>
+                           <li>@lang('home.desc-5-4-2')</li>
+                           <li>@lang('home.desc-5-4-3')</li>
+                           <li>@lang('home.desc-5-4-4')</li>
+                       </ul>
                    </div>
                   </div>
                  </div>
@@ -460,18 +510,18 @@ id
 <div class="modal fade" id="modaldetail" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdrop" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="exampleModalLabel"></h2>
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="modal-title"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
             </div>
             <div class="modal-body">
-
+                <p id="modal-content"></p>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary font-weight-bold">Launch</button>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal"style="background-color:#EBFAFF; color:#0095EB">Close</button>
+                <a id="modal-link" href=""><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control" style="background-color: #0095EB">Launch</button>
             </div>
         </div>
     </div>
@@ -484,8 +534,14 @@ id
 <script type="text/javascript">
     $(document).ready(function() {
       $('#modaldetail').on('show.bs.modal', function(e) {
-        var title = $('.tools-title').innerHTML;
-        $(".modal-title").innerHTML = title;
+          var target = $(e.relatedTarget);
+          var title = target.data('title');
+          var route = target.data('route');
+          var desc = target.data('desc');
+
+          $('#modal-title').text(title);
+          $('#modal-link').attr('href', route);
+          $('#modal-content').text(desc);
       });
 
       $('.contributor-slide').carousel({
