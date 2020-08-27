@@ -24,7 +24,7 @@
           <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="max-h-40px" />
         </a>
       </div>
-      <div id="kt_aside_menu" class="aside-menu footer-fixed" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+      <div id="kt_aside_menu" class="aside-menu" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
           <!--begin::Nav-->
         <ul class="menu-nav mb-25">
             <li class="menu-section mb-5 border-bottom">
@@ -172,7 +172,6 @@
             </li>
           </ul>
           <!--end::Nav-->
-          @include('layouts.footer')
       </div>
   </div>
   <!--end::Nav Wrapper-->

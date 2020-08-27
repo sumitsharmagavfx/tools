@@ -68,11 +68,6 @@
           border-right: 3px solid #0095EB;
           background: rgba(0, 149, 235, 0.7);
       }
-      .aside-menu-wrapper > .footer-fixed .footer {
-          left: 0;
-          bottom: 0;
-          width: 265px;
-      }
       @media only screen and (max-width: 991px) {
           .logo-mobile {
               display: block;
@@ -169,6 +164,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
+            @include('layouts.footer')
         </div>
         <!--end::Wrapper-->
     </div>

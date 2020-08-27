@@ -1,5 +1,5 @@
 <div class="col-lg-4">
-  <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="1024">
+  <div class="card card-custom sticky" data-sticky="true" data-margin-top="100" data-sticky-for="991">
     <!--begin::List Widget 4-->
     <div class="card card-custom card-stretch">
       <!--begin::Header-->
