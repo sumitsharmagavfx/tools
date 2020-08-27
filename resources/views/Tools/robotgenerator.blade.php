@@ -85,7 +85,7 @@
                     <input type="text" class="form-control directory" name="" placeholder="@lang('robot.drop4.2')" data-id="0"/>
                 </div>
                 <div class="col-lg-3 mb-5">
-                    <button type="button" class="btn btn-info btn-block" id="add-directive">@lang('robot.btn add')</button>
+                    <button type="button" class="btn btn-block second-button" id="add-directive">@lang('robot.btn add')</button>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
       <div class="card-footer">
           <div class="row">
               <div class="col-lg-12 text-center">
-                  <button type="button" class="btn btn-success btn-lg" id="create-robot">@lang('robot.btn create')</button>
+                  <button type="button" class="btn btn-lg main-button" id="create-robot">@lang('robot.btn create')</button>
               </div>
           </div>
       </div>

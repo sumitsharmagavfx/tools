@@ -38,8 +38,8 @@ id/ssl-checker
                     </div>
                 </div>
                 <div class="col-lg-3 col-xl-2 mb-5">
-                    <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control" name="button">
-                    <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
+                    <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control main-button" name="button">
+                    <i class="flaticon2-heart-rate-monitor main-button-icon"></i> @lang('sslchecker.copy-1')
                     </button>
                 </div>
             </div>

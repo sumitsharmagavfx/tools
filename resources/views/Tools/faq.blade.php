@@ -51,8 +51,8 @@ id/json-ld-faq-schema-generator
           <input type="text" name="" class="form-control mb-5 question" placeholder="@lang('faq.question') :" value="" data-id="0">
           <input type="text" name="" class="form-control mb-7 answer" placeholder="@lang('faq.answer') :" value="" data-id="0">
         </div>
-        <button type="button" class="btn btn btn-light-info" name="button" id="add">
-        <i class="flaticon2-plus"></i> @lang('faq.btn-add')
+        <button type="button" class="btn btn-md main-button" name="button" id="add">
+        <i class="flaticon2-plus main-button-icon"></i> @lang('faq.btn-add')
         </button>
       </div>
     </div>

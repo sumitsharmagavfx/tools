@@ -37,42 +37,56 @@
     <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     @stack('style')
     <style media="screen">
-    .menu-breadcrumb {
-      color: #ABABAB;
-    }
-    .menu-breadcrumb:hover {
-      color: #2F80ED;
-    }
-    a:hover {
-        color: #0095EB !important;
-    }
-      .logo-mobile {
-          display: none;
-      }
-      .analytic-links, .resource-links, .dropdown-toggle, .contributor-title {
-          color: black;
-      }
-      .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus, .contributor-title:hover {
-          color: #0095EB !important;
-      }
-      .analytic-icon:hover > .svg-icon.svg-menu-icon svg g [fill] {
-          fill: #0095EB !important;
-      }
-      .menu-item.menu-item-active > .menu-link .menu-text, .menu-item:hover > .menu-link .menu-text {
-          color: #0095EB !important;
-      }
-      .menu-item.menu-item-active > .menu-link .svg-icon.menu-icon svg g [fill], .menu-item:hover > .menu-link .svg-icon.menu-icon svg g [fill] {
-          fill: #0095EB !important;
-      }
-      .menu-item.menu-item-active, .menu-item:hover {
-          border-right: 3px solid #0095EB;
-          background: rgba(0, 149, 235, 0.7);
-      }
-      @media only screen and (max-width: 991px) {
-          .logo-mobile {
-              display: block;
-          }
-      }
+        /* Breadcrumb Style */
+        .menu-breadcrumb {
+          color: #ABABAB;
+        }
+        .menu-breadcrumb:hover {
+          color: #2F80ED;
+        }
+        /* Custom a href colour */
+        a:hover {
+            color: #0095EB !important;
+        }
+        .logo-mobile {
+            display: none;
+        }
+        .analytic-links, .resource-links, .dropdown-toggle, .contributor-title {
+            color: black;
+        }
+        .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus, .contributor-title:hover {
+            color: #0095EB !important;
+        }
+        .analytic-icon:hover > .svg-icon.svg-menu-icon svg g [fill] {
+            fill: #0095EB !important;
+        }
+        .menu-item.menu-item-active > .menu-link .menu-text, .menu-item:hover > .menu-link .menu-text {
+            color: #0095EB !important;
+        }
+        .menu-item.menu-item-active > .menu-link .svg-icon.menu-icon svg g [fill], .menu-item:hover > .menu-link .svg-icon.menu-icon svg g [fill] {
+            fill: #0095EB !important;
+        }
+        .menu-item.menu-item-active, .menu-item:hover {
+            border-right: 3px solid #0095EB;
+            background: rgba(0, 149, 235, 0.7);
+        }
+        .main-button, .main-button-icon {
+            color: #ffffff !important;
+            background-color: #0095eb !important;
+        }
+        .main-button:hover, .main-button:hover > .main-button-icon {
+            color: #0095eb !important;
+            background-color: #EBFAFF !important;
+        }
+        .second-button, .second-button-icon {
+            color: #ffffff !important;
+            background-color: #53f9ad !important;
+        }
+        @media only screen and (max-width: 991px) {
+            .logo-mobile {
+                display: block;
+            }
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--end::Global Theme Styles-->
