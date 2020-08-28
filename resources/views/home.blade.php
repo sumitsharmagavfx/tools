@@ -59,6 +59,14 @@ id
             <li class="breadcrumb-item active" style="color:#2F80ED"><b>Homepage</b></li>
           </ol>
         </nav>
+          <div class="card card-custom mb-5">
+            <div class="card-header">
+              <div class="card-title">
+                <h1 class="card-label">Free SEO Tools</h1>
+                <small>lorem ipsum dolor sit amet</small>
+              </div>
+            </div>
+        </div>
         <div class="row"  data-sticky-container>
             <div class="col-lg-8">
                 <div class="card card-custom mb-5">
@@ -125,7 +133,7 @@ id
                                              </div>
                                              <div class="col-lg-7 col-md-6 col-sm-12">
                                                  <div class="contributor-content">
-                                                     <a href="https://cmlabs.co/en/what-is-data-driven/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4></a>
+                                                     <a href="@lang('home.url-1')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-1')</h4></a>
                                                      <p>
                                                          @lang('home.desc-2-1-1')
                                                      </p>
@@ -144,7 +152,7 @@ id
                                            </div>
                                            <div class="col-lg-7 col-md-6 col-sm-12">
                                                <div class="contributor-content">
-                                                   <a href="https://cmlabs.co/en/seo-content-guideline/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4></a>
+                                                   <a href="@lang('home.url-2')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-2')</h4></a>
                                                    <p>
                                                        @lang('home.desc-2-2-1')
                                                    </p>
@@ -163,7 +171,7 @@ id
                                            </div>
                                            <div class="col-lg-7 col-md-6 col-sm-12">
                                                <div class="contributor-content">
-                                                   <a href="https://cmlabs.co/en/seo-for-sme-startup/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4></a>
+                                                   <a href="@lang('home.url-3')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-3')</h4></a>
                                                    <p>
                                                        @lang('home.desc-2-3-1')
                                                    </p>
@@ -182,7 +190,7 @@ id
                                              </div>
                                              <div class="col-lg-7 col-md-6 col-sm-12">
                                                  <div class="contributor-content">
-                                                     <a href="https://cmlabs.co/en/seo-content-guideline/" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4></a>
+                                                     <a href="@lang('home.url-5')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4></a>
                                                      <p>
                                                          @lang('home.desc-2-5-1')
                                                      </p>

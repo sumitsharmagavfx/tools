@@ -30,29 +30,33 @@ id/json-ld-faq-schema-generator
   }
 </style>
 @endpush
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
     <li class="breadcrumb-item active" style="color:#2F80ED"><b>JSON-LD FAQ Schema Generator</b></li>
   </ol>
 </nav>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+    <div class="card-title">
+      <h1 class="card-label">JSON-LD FAQ SCHEMA GENERATOR </h1>
+      <small>@lang('faq.subtitle')</small>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-6">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
-      <div class="card-header">
-        <div class="card-title">
-          <h1 class="card-label">JSON-LD FAQ SCHEMA GENERATOR </h1>
-          <small>@lang('faq.subtitle')</small>
-        </div>
-      </div>
       <div class="card-body">
         <div class="mb-5" id="form">
           <input type="text" name="" class="form-control mb-5 question" placeholder="@lang('faq.question') :" value="" data-id="0">
           <input type="text" name="" class="form-control mb-7 answer" placeholder="@lang('faq.answer') :" value="" data-id="0">
         </div>
-        <button type="button" class="btn btn-md main-button" name="button" id="add">
-        <i class="flaticon2-plus main-button-icon"></i> @lang('faq.btn-add')
+        <button type="button" class="btn btn-primary" name="button" id="add">
+        <i class="flaticon2-plus"></i> @lang('faq.btn-add')
         </button>
       </div>
     </div>
@@ -205,7 +209,8 @@ id/json-ld-faq-schema-generator
   </div>
   @include('layouts/stickybar')
 </div>
-
+</div>
+</div>
 
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
@@ -219,6 +224,7 @@ id/json-ld-faq-schema-generator
     </div>
   </div>
 </div>
+
 
 @endsection
 

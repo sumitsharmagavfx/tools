@@ -17,7 +17,7 @@ id/word-counter
 @endsection
 
 @push('style')
-  <style media="screen">  
+  <style media="screen">
   @media only screen and (max-width: 320px) {
     .tulisan {
       font-size: 60%;
@@ -26,19 +26,19 @@ id/word-counter
 
   @media only screen and (min-width: 320px) {
     .tulisan {
-      font-size: 65%;
+      font-size: 55%;
     }
   }
 
   @media only screen and (min-width: 375px) {
     .tulisan {
-      font-size: 80%;
+      font-size: 70%;
     }
   }
 
   @media only screen and (min-width: 425px) {
     .tulisan {
-      font-size: 90%;
+      font-size: 80%;
     }
   }
 
@@ -48,26 +48,36 @@ id/word-counter
     }
   }
 
+  @media only screen and (min-width: 992px) and (max-width: 1207px) {
+    .tulisan {
+      font-size: 86%;
+    }
+  }
+
   </style>
 @endpush
 
 @section('content')
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
     <li class="breadcrumb-item active" style="color:#2F80ED"><b>Word Counter</b></li>
   </ol>
 </nav>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+    <div class="card-title">
+      <h1 class="card-label">@lang('wordcounter.title') </h1>
+      <small>@lang('wordcounter.subtitle')</small>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-8">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
-      <div class="card-header">
-        <div class="card-title">
-          <h1 class="card-label">@lang('wordcounter.title') </h1>
-          <small>@lang('wordcounter.subtitle')</small>
-        </div>
-      </div>
       <div class="card-body">
         <div class="row justify-content-center">
           <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
@@ -409,7 +419,8 @@ id/word-counter
   </div>
   @include('layouts/stickybar')
 </div>
-
+</div>
+</div>
 @endsection
 
 @push('script')
