@@ -30,6 +30,8 @@ id/page-title-meta-description-checker
   }
 </style>
 @endpush
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
@@ -267,12 +269,14 @@ id/page-title-meta-description-checker
   @include('layouts/stickybar')
 </div>
 
-
+</div>
+</div>
 <br>
 <span id="titlesizer" class="pd-0"></span>
 <span id="titlesizertemp"></span>
 <span id="descsizer"></span>
 <span id="descsizertemp"></span>
+
 @endsection
 
 @push('script')

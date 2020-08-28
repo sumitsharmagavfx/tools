@@ -13,22 +13,26 @@
 @section('id-link','/id/robotstxt-generator')
 
 @section('content')
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
     <li class="breadcrumb-item active" style="color:#2F80ED"><b>Robots.txt Generator</b></li>
   </ol>
 </nav>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+    <div class="card-title">
+      <h1 class="card-label">ROBOTS TXT GENERATOR </h1>
+      <small>@lang('robot.subtitle')</small>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-12">
     <!--begin::Card-->
     <div class="card card-custom card-stretch gutter-b">
-      <div class="card-header">
-        <div class="card-title">
-          <h1 class="card-label">ROBOTS TXT GENERATOR </h1>
-          <small>@lang('robot.subtitle')</small>
-        </div>
-      </div>
       <div class="card-body">
         <div class="mb-5" id="form">
             <div class="row mb-5">
@@ -85,7 +89,7 @@
                     <input type="text" class="form-control directory" name="" placeholder="@lang('robot.drop4.2')" data-id="0"/>
                 </div>
                 <div class="col-lg-3 mb-5">
-                    <button type="button" class="btn btn-block second-button" id="add-directive">@lang('robot.btn add')</button>
+                    <button type="button" class="btn btn-success btn-block" id="add-directive">@lang('robot.btn add')</button>
                 </div>
             </div>
         </div>
@@ -93,7 +97,7 @@
       <div class="card-footer">
           <div class="row">
               <div class="col-lg-12 text-center">
-                  <button type="button" class="btn btn-lg main-button" id="create-robot">@lang('robot.btn create')</button>
+                  <button type="button" class="btn btn-primary" id="create-robot">@lang('robot.btn create')</button>
               </div>
           </div>
       </div>
@@ -151,6 +155,8 @@
     <!--end::Card-->
   </div>
   @include('layouts/stickybar')
+</div>
+</div>
 </div>
 
 @endsection

@@ -2,5 +2,5 @@
 return [
     "language" => "English",
     "paid-tools" => "Paid Tools",
-    "title" => "/seo-tools"
+    "title" => "Content Marketing Labs"
 ];

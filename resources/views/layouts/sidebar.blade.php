@@ -28,7 +28,7 @@
           <!--begin::Nav-->
         <ul class="menu-nav mb-25">
             <li class="menu-section mb-5 border-bottom">
-				<span class="h5 text-uppercase">SEO Tools</span>
+				<span class="h5 text-uppercase">CMLABS TOOLS</span>
 			</li>
           <li class="menu-item mb-5 @yield('home')" aria-haspopup="true">
             <a href="/{{$local}}" class="menu-link">
