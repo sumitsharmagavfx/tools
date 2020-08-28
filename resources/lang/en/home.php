@@ -22,7 +22,7 @@ return [
     "url-4" => "",
     "sub-title-2-5" => "My Theorem & Alibi for Google SEO in Indonesia",
     "desc-2-5-1" => "Read the following theorem and alibi about SEO marketing development, especially in Indonesia. By Rochman Maarif, SEO Specialist.",
-    "url-5" => "https://cmlabs.co/dalil-dalih-seo/",
+    "url-5" => "https://cmlabs.co/en/theorem-alibi-seo/",
     "sub-title-2-6" => "",
     "desc-2-6-1" => "She is an experienced SEO Specialist who has a deep understanding in digital marketing trend and SEO.",
     "url-6" => "",
