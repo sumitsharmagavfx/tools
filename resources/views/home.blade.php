@@ -90,7 +90,7 @@ id
                                 {!! $datum['img'] !!}
                             </span></th>
                             <td width="72%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3 tools-title">{{$datum['title']}}</span></td>
-                            <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control main-button">Launch</button></a></td>
+                            <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-primary btn-sm font-weight-bolder text-uppercase text-white form-control">Launch</button></a></td>
                           </tr>
                           <tr>
                             <td>
@@ -419,6 +419,12 @@ id
                                       <li>@lang('home.desc-4-2-8-1')</li>
                                       <li>@lang('home.desc-4-2-8-2')</li>
                                       <li>@lang('home.desc-4-2-8-3')</li>
+                                      <li>@lang('home.desc-4-2-8-4')</li>
+                                      <ul class="pl-5">
+                                        <li>@lang('home.desc-4-2-8-5')</li>
+                                        <li>@lang('home.desc-4-2-8-6')</li>
+                                      </ul>
+                                      <li>@lang('home.desc-4-2-8-7')</li>
                                     </ol>
                                 </td>
                               </tr>
@@ -521,7 +527,7 @@ id
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header border-0">
-                <h5 class="modal-title" id="modal-title"></h5>
+                <h2 class="modal-title" id="modal-title"></h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -530,8 +536,8 @@ id
                 <p id="modal-desc"></p>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal"style="background-color:#EBFAFF; color:#0095EB">Close</button>
-                <a id="modal-link" href=""><button class="button btn btn-sm font-weight-bolder text-uppercase text-white form-control" style="background-color: #0095EB">Launch</button></a>
+                <button type="button" class="btn btn-light-primary font-weight-bold px-5" data-dismiss="modal">Close</button>
+                <a id="modal-link" href=""><button class="button btn btn-primary btn-sm px-5 font-weight-bolder text-uppercase text-white form-control">Launch</button></a>
             </div>
         </div>
     </div>

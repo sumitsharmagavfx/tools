@@ -3,8 +3,10 @@
     <!--begin::List Widget 4-->
     <div class="card card-custom card-stretch">
       <!--begin::Header-->
-      <div class="card-header border-0">
-        <h2 class="card-title font-weight-bolder text-dark">Article from CMLABS</h2>
+      <div class="card-header">
+        <div class="card-title">
+            <h2 class="card-label font-weight-bolder text-dark">@lang('layout.title-3')</h2>
+        </div>
       </div>
       <!--end::Header-->
       <!--begin::Body-->
