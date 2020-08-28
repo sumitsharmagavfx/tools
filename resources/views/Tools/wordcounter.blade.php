@@ -236,7 +236,7 @@ id/word-counter
           <li>@lang('wordcounter.copy-li-6')</li>
           <li>@lang('wordcounter.copy-li-7')</li>
         </ol>
-        <h3 id="@lang('wordcounter.jumpto-link-1')" >@lang('wordcounter.copy-sub-title-2')</h3>
+        <h3 id="@lang('wordcounter.jumpto-link-1')" class="py-5">@lang('wordcounter.copy-sub-title-2')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -261,7 +261,7 @@ id/word-counter
             </tr>
           </tbody>
         </table>
-        <h3 id="@lang('wordcounter.jumpto-link-2')"> @lang('wordcounter.copy-sub-title-3')</h3>
+        <h3 id="@lang('wordcounter.jumpto-link-2')" class="py-5"> @lang('wordcounter.copy-sub-title-3')</h3>
         <p>@lang('wordcounter.copy-desc-4-1')</p>
         <p>@lang('wordcounter.copy-desc-4-2')</p>
         <table class="table">

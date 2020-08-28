@@ -41,7 +41,7 @@ id/page-speed
           <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('pagespeed.input-hint')">
         </div>
       </div>
-      <div class="col-lg-4 col-xl-3 mb-5">
+      <div class="col-lg-4 col-xl-3 col-xxl-2 mb-5">
         <button type="button" class="btn btn-primary form-control" name="button" id="analysis-button">
         <i class="flaticon2-heart-rate-monitor"></i> @lang('pagespeed.btn-analysis')</button>
       </div>

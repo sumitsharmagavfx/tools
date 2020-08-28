@@ -102,10 +102,6 @@ id/page-title-meta-description-checker
           <small id="alerturl"></small><br>
         <small id="urlcheck">eg. https://cmlabs.co/en/</small>
       </div>
-    </div>
-
-
-    <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
           <h2 class="card-label">@lang('metachecker.page-title')</h2>
@@ -117,10 +113,6 @@ id/page-title-meta-description-checker
           <small id="alerttitle"></small><br>
         <small id="titlecount"></small>
       </div>
-
-
-    </div>
-    <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
           <h2 class="card-label">@lang('metachecker.copy-6')</h2>
@@ -191,7 +183,7 @@ id/page-title-meta-description-checker
 
         <p>@lang('metachecker.copy-9')</p>
 
-        <h3>@lang('metachecker.copy-10')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-10')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -205,7 +197,7 @@ id/page-title-meta-description-checker
           </tbody>
         </table>
 
-        <h3>@lang('metachecker.copy-15')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-15')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -231,7 +223,7 @@ id/page-title-meta-description-checker
           </tbody>
         </table>
 
-        <h3>@lang('metachecker.copy-26')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-26')</h3>
         <table class="table">
           <tbody>
             <tr>

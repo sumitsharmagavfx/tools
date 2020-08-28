@@ -10,7 +10,7 @@
       </div>
       <!--end::Header-->
       <!--begin::Body-->
-      <div class="card-body pt-2">
+      <div class="card-body">
         @for ($i = 0; $i < count($dataEN); $i++)
         <!--begin::Item-->
         @if ($i == 0)
