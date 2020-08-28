@@ -419,6 +419,12 @@ id
                                       <li>@lang('home.desc-4-2-8-1')</li>
                                       <li>@lang('home.desc-4-2-8-2')</li>
                                       <li>@lang('home.desc-4-2-8-3')</li>
+                                      <li>@lang('home.desc-4-2-8-4')</li>
+                                      <ul class="pl-5">
+                                        <li>@lang('home.desc-4-2-8-5')</li>
+                                        <li>@lang('home.desc-4-2-8-6')</li>
+                                      </ul>
+                                      <li>@lang('home.desc-4-2-8-7')</li>
                                     </ol>
                                 </td>
                               </tr>
