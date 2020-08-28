@@ -26,10 +26,7 @@
       </div>
       <div id="kt_aside_menu" class="aside-menu" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
           <!--begin::Nav-->
-        <ul class="menu-nav mb-25">
-            <li class="menu-section mb-5 border-bottom">
-				<span class="h5 text-uppercase">CMLABS TOOLS</span>
-			</li>
+        <ul class="menu-nav mb-25">            
           <li class="menu-item mb-5 @yield('home')" aria-haspopup="true">
             <a href="/{{$local}}" class="menu-link">
               <span class="svg-icon menu-icon">

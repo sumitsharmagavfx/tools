@@ -62,8 +62,8 @@ id
           <div class="card card-custom mb-5">
             <div class="card-header">
               <div class="card-title">
-                <h1 class="card-label">Free SEO Tools</h1>
-                <small>lorem ipsum dolor sit amet</small>
+                <h1 class="card-label">@lang('home.title-0')</h1>
+                <small>@lang('home.sub-title-0')</small>
               </div>
             </div>
         </div>
@@ -71,9 +71,10 @@ id
             <div class="col-lg-8">
                 <div class="card card-custom mb-5">
                     <div class="card-body">
-                        <p class="pt-4">
-                            @lang('home.desc')
-                        </p>
+                        <p class="pt-4">@lang('home.desc-1')</p>
+                        <p>@lang('home.desc-2')</p>
+                        <p>@lang('home.desc-3')</p>
+                        <p>@lang('home.desc-4')</p>
                     </div>
                 </div>
                 <div class="card card-custom mb-5">
@@ -183,6 +184,25 @@ id
                                         <div class="row mb-5">
                                              <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
                                                  <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/udhi-vilanata-110x110.jpeg')"></div>
+                                                </div>
+                                                <h3 class="font-weight-bold my-2">UDHI S VILANATA</h3>
+                                                <div class="text-muted mb-2">SEO SPECIALIST</div>
+                                             </div>
+                                             <div class="col-lg-7 col-md-6 col-sm-12">
+                                                 <div class="contributor-content">
+                                                     <a href="@lang('home.url-4')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-4')</h4></a>
+                                                     <p>
+                                                         @lang('home.desc-2-4-1')
+                                                     </p>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row mb-5">
+                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
                                                     <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/06/foto-rochman-maarif-110x110.jpg')"></div>
                                                 </div>
                                                 <h3 class="font-weight-bold my-2">ROCHMAN</h3>
@@ -193,6 +213,25 @@ id
                                                      <a href="@lang('home.url-5')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-5')</h4></a>
                                                      <p>
                                                          @lang('home.desc-2-5-1')
+                                                     </p>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row mb-5">
+                                             <div class="col-lg-5 col-md-6 col-sm-12 text-center mb-5 contributor-profile">
+                                                 <div class="symbol symbol-60 symbol-circle symbol-xl-90 mb-5">
+                                                    <div class="symbol-label" style="background-image: url('https://cmlabs.co/wp-content/uploads/2020/08/photo6145300840353737129-1-110x110.jpg')"></div>
+                                                </div>
+                                                <h3 class="font-weight-bold my-2">SELENA</h3>
+                                                <div class="text-muted mb-2">SEO SPECIALIST</div>
+                                             </div>
+                                             <div class="col-lg-7 col-md-6 col-sm-12">
+                                                 <div class="contributor-content">
+                                                     <a href="@lang('home.url-6')" class="contributor-title" target="_blank"><h4 class="font-weight-bold my-2 mb-4">@lang('home.sub-title-2-6')</h4></a>
+                                                     <p>
+                                                         @lang('home.desc-2-6-1')
                                                      </p>
                                                  </div>
                                              </div>

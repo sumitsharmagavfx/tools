@@ -183,21 +183,21 @@ id/json-ld-faq-schema-generator
       <div class="card-body">
         <p>@lang('faq.desc-5-1')</p>
         <p>@lang('faq.desc-5-2')</p>
-        <h3 class="font-weight-bold">@lang('faq.title-6')</h3>
+        <h3 class="font-weight-bold py-5">@lang('faq.title-6')</h3>
         <p>@lang('faq.desc-6-1')</p>
         <p>@lang('faq.desc-6-2')</p>
         <p>@lang('faq.desc-6-3')</p>
-        <h3 class="font-weight-bold">@lang('faq.title-7')</h3>
+        <h3 class="font-weight-bold py-5">@lang('faq.title-7')</h3>
         <p>@lang('faq.desc-7-1')</p>
         <p>@lang('faq.desc-7-2')</p>
         <p>@lang('faq.desc-7-3')</p>
         <p>@lang('faq.desc-7-4')</p>
-        <h3 class="font-weight-bold">@lang('faq.title-8')</h3>
+        <h3 class="font-weight-bold py-5">@lang('faq.title-8')</h3>
         <p>@lang('faq.desc-8-1')</p>
         <p>@lang('faq.desc-8-2')</p>
         <p>@lang('faq.desc-8-3')</p>
         <p>@lang('faq.desc-8-4')</p>
-        <h3 class="font-weight-bold">@lang('faq.title-9')</h3>
+        <h3 class="font-weight-bold py-5">@lang('faq.title-9')</h3>
         <p>@lang('faq.desc-9-1')</p>
         <p>@lang('faq.desc-9-2')</p>
         <p>@lang('faq.desc-9-3')</p>

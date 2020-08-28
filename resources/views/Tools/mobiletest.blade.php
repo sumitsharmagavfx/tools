@@ -162,10 +162,10 @@ id/mobile-test
       <div class="card-body">
         <p>@lang('mobiletest.desc-3-1')</p>
         <p>@lang('mobiletest.desc-3-2')</p>
-        <h3>@lang('mobiletest.sub-title-3-1')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-1')</h3>
         <p>@lang('mobiletest.desc-3-3')</p>
         <p>@lang('mobiletest.desc-3-4')</p>
-        <h3>@lang('mobiletest.sub-title-3-2')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-2')</h3>
         <p>@lang('mobiletest.desc-3-5')</p>
         <ul>
           <li>@lang('mobiletest.desc-3-6')</li>
@@ -173,9 +173,9 @@ id/mobile-test
           <li>@lang('mobiletest.desc-3-8')</li>
           <li>@lang('mobiletest.desc-3-9')</li>
         </ul>
-        <h3>@lang('mobiletest.sub-title-3-3')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-3')</h3>
         <p>@lang('mobiletest.desc-3-10')</p>
-        <h3>@lang('mobiletest.sub-title-3-4')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-4')</h3>
         <p>@lang('mobiletest.desc-3-11')</p>
       </div>
       <div class="card-header">
@@ -185,17 +185,17 @@ id/mobile-test
       </div>
       <div class="card-body">
         <p>@lang('mobiletest.desc-4-1')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h3>
         <p>@lang('mobiletest.desc-4-2')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h3>
         <p>@lang('mobiletest.desc-4-3')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h3>
         <p>@lang('mobiletest.desc-4-4')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h3>
         <p>@lang('mobiletest.desc-4-5')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h3>
         <p>@lang('mobiletest.desc-4-6')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h3>
         <p>@lang('mobiletest.desc-4-7')</p>
       </div>
     </div>

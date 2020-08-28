@@ -4,7 +4,7 @@
         <!--begin::Left-->
         <div class="d-flex align-items-stretch mr-2">
             <!--begin::Page Title-->
-            <span class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0 h3">@lang('layout.title')</span>            
+            <span class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0 h3">@lang('layout.title')</span>
             <!--end::Page Title-->
         </div>
         <!--end::Left-->
@@ -16,86 +16,56 @@
             <div class="topbar-item">
 
                 <a href="/analytics" target="_blank">
-                    <div class="analytic-links ml-5 mr-5 font-weight-bold">@if($local == "id") Analitik @else Analytics @endif</div>
+                    <div class="analytic-links ml-5 mr-5 font-weight-bold"><span class="px-2" id="demo"></span>@if($local == "id") Analitik @else Analytics @endif</div>
                 </a>
-
-                @if($local == "id")
-                <!-- <a href="https://cmlabs.co/" class="mr-3"> -->
-                <div class="dropdown dropdown-inline">
-                    <a href="#"  class="resource-links ml-5 mr-5 font-weight-bold" data-toggle="dropdown" aria-expanded="false">
-                        Blog & Panduan
-                    </a>
+                <div class="dropdown mr-3">
+                    <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @lang('layout.blog')
+                    </button>
                     <div class="dropdown-menu dropdown-menu-md py-5">
                         <ul class="navi navi-hover">
                             <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/kamus-seo/">
+                                <a class="navi-link" href="@lang('layout.link-blog-1')">
                                 <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">Kamus SEO</span>
+                                    <span class="navi-text">@lang('layout.blog-1')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
                                 </a>
                             </li>
                             <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/panduan-seo/">
+                                <a class="navi-link" href="@lang('layout.link-blog-2')">
                                     <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">Panduan SEO</span>
+                                    <span class="navi-text">@lang('layout.blog-2')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
                                 </a>
                             </li>
                             <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/blog/">
+                                <a class="navi-link" href="@lang('layout.link-blog-3')">
                                 <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">Blog</span>
+                                    <span class="navi-text">@lang('layout.blog-3')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-                @else
-                <!-- <a href="https://cmlabs.co/en/" class="mr-3"> -->
-                <div class="dropdown dropdown-inline">
-                    <a href="#" class="resource-links ml-5 mr-5 font-weight-bold" data-toggle="dropdown" aria-expanded="false">
-                        Blog & Resource
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-md py-5">
-                        <ul class="navi navi-hover">
-                            <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/en/seo-terms/">
-                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">SEO Terms</span>
-                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/en/seo-guide/">
-                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">SEO Guide</span>
-                                    <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
-                                </a>
-                            </li>
-                            <li class="navi-item">
-                                <a class="navi-link" href="https://cmlabs.co/en/blog/">
-                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
-                                    <span class="navi-text">Blog's</span>
-                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                @endif
 
                 <div class="dropdown mr-3">
                     <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @lang('layout.language')
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="/en/version">
-                           <span class="ml-1">English</span>
-                         </a>
-                        <a class="dropdown-item" href="/id/version">
-                           <span class="ml-1">Indonesia</span>
-                        </a>
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                                <a class="navi-link" href="/en/version">
+                                    <span class="navi-text">English</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="/id/version">
+                                    <span class="navi-text">Indonesia</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                   <!-- <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
@@ -124,3 +94,27 @@
     </div>
     <!--end::Container-->
 </div>
+@push('script')
+  <script type="text/javascript">
+  var deadline = new Date("dec 1, 2020 12:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    @if($local == "id")
+    document.getElementById("demo").innerHTML = days + "h "
+    + hours + "j " + minutes + "m " + seconds + "d ";
+    @else
+    document.getElementById("demo").innerHTML = days + "d "
+    + hours + "h " + minutes + "m " + seconds + "s ";
+    @endif
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+  </script>
+@endpush
