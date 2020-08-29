@@ -488,11 +488,9 @@ id
                       </div>
                       <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                        <div class="card-body">
-                           <ul>
-                               <li>@lang('home.desc-5-1-1')</li>
-                               <li>@lang('home.desc-5-1-2')</li>
-                               <li>@lang('home.desc-5-1-3')</li>
-                           </ul>
+                           @lang('home.desc-5-1-1')<br/><br/>
+                           @lang('home.desc-5-1-2')<br/><br/>
+                           @lang('home.desc-5-1-3')
                        </div>
                       </div>
                      </div>
@@ -541,12 +539,10 @@ id
                       </div>
                       <div id="collapseFour2" class="collapse" data-parent="#accordionExample2">
                        <div class="card-body">
-                           <ul>
-                               <li>@lang('home.desc-5-4-1')</li>
-                               <li>@lang('home.desc-5-4-2')</li>
-                               <li>@lang('home.desc-5-4-3')</li>
-                               <li>@lang('home.desc-5-4-4')</li>
-                           </ul>
+                           @lang('home.desc-5-4-1')
+                           @lang('home.desc-5-4-2') <br/><br/>
+                           @lang('home.desc-5-4-3') <br/><br/>
+                           @lang('home.desc-5-4-4')
                        </div>
                       </div>
                      </div>
