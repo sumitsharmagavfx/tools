@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -14,20 +15,16 @@ class HomeController extends Controller
      */
     public function index($lang)
     {
-        // dd(App::getLocale());
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
-//        if (session()->exists('local')) {
-//            App::setLocale(session('local'));
-//            session()->put('local',App::getLocale());
-//            session()->save();
-//        }
         if ($lang==='en'){
             App::setLocale('en');
         }else{
             App::setLocale('id');
         }
         $local = App::getLocale();
-        return view('home', compact('data','local'));
+        return view('home', compact('data','local', 'dataID', 'dataEN'));
     }
 
     /**
@@ -94,5 +91,46 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getBlogWordpressId()
+    {
+        $client = new Client();
+        $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
+        $data = json_decode($response->getBody()->getContents(),true);
+        $data_fix = [];
+        foreach ($data as $datum){
+            array_push($data_fix,[
+                "link" => $datum['link'],
+                "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+                "date" => $this->parseDate($datum['date'])
+            ]);
+        }
+//        return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
+        return $data_fix;
+    }
+
+    public function getBlogWordpressEn()
+    {
+        $client = new Client();
+        $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
+        $data = json_decode($response->getBody()->getContents(),true);
+        $data2 = $response->getBody()->getContents();
+        $data_fix = [];
+        foreach ($data as $datum){
+            array_push($data_fix,[
+                "link" => $datum['link'],
+                "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+                "date" => $this->parseDate($datum['date'])
+            ]);
+        }
+        return $data_fix;
+//        return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')),true);
+    }
+
+    public function parseDate($date)
+    {
+        $date=date_create($date);
+        return date_format($date,"M d, Y - H:i");
     }
 }

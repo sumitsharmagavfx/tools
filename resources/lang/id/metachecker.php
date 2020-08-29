@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "JUDUL & META DESKRIPSI CHEKER",
+    "title" => "TITLE & META DESCRIPTION CHECKER",
     "sub-title" => "CEK PANJANG JUDUL DAN META",
     "desc-result" => "CMLABS mengkhususkan diri pada pekerjaan SEO Enterprise, Content Writing, Copywriting, dan Content Marketing. Cek penawaran 2020?",
     "copy" => "Salin ke clipboard!",

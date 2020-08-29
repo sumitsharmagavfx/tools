@@ -27,16 +27,25 @@ id/mobile-test
   }
 </style>
 @endpush
-
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Mobile Friendly Test</b></li>
+  </ol>
+</nav>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+    <div class="card-title">
+      <h1 class="card-label">@lang('mobiletest.title') </h1>
+      <small>@lang('mobiletest.subtitle')</small>
+    </div>
+  </div>
+</div>
 <div class="row">
   <div class="col-lg-12">
     <div class="card card-custom card-stretch gutter-b">
-      <div class="card-header">
-        <div class="card-title">
-          <h1 class="card-label">@lang('mobiletest.title') </h1>
-          <small>@lang('mobiletest.subtitle')</small>
-        </div>
-      </div>
       <div class="card-body">
         <div class="row">
           <div class="col-lg-5 mb-5">
@@ -44,8 +53,8 @@ id/mobile-test
               <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('mobiletest.question')">
             </div>
           </div>
-          <div class="col-lg-3 col-xl-2 mb-5">
-            <button type="button" class="btn btn btn-light-info  form-control" name="button" id="btn-check">
+          <div class="col-lg-3 col-xl-3 col-xxl-2 mb-5">
+            <button type="button" class="btn btn-primary form-control" name="button" id="btn-check">
             <i class="flaticon2-heart-rate-monitor"></i> @lang('mobiletest.btn-add')</button>
           </div>
         </div>
@@ -153,10 +162,10 @@ id/mobile-test
       <div class="card-body">
         <p>@lang('mobiletest.desc-3-1')</p>
         <p>@lang('mobiletest.desc-3-2')</p>
-        <h3>@lang('mobiletest.sub-title-3-1')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-1')</h3>
         <p>@lang('mobiletest.desc-3-3')</p>
         <p>@lang('mobiletest.desc-3-4')</p>
-        <h3>@lang('mobiletest.sub-title-3-2')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-2')</h3>
         <p>@lang('mobiletest.desc-3-5')</p>
         <ul>
           <li>@lang('mobiletest.desc-3-6')</li>
@@ -164,9 +173,9 @@ id/mobile-test
           <li>@lang('mobiletest.desc-3-8')</li>
           <li>@lang('mobiletest.desc-3-9')</li>
         </ul>
-        <h3>@lang('mobiletest.sub-title-3-3')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-3')</h3>
         <p>@lang('mobiletest.desc-3-10')</p>
-        <h3>@lang('mobiletest.sub-title-3-4')</h3>
+        <h3 class="py-5">@lang('mobiletest.sub-title-3-4')</h3>
         <p>@lang('mobiletest.desc-3-11')</p>
       </div>
       <div class="card-header">
@@ -176,24 +185,25 @@ id/mobile-test
       </div>
       <div class="card-body">
         <p>@lang('mobiletest.desc-4-1')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h3>
         <p>@lang('mobiletest.desc-4-2')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h3>
         <p>@lang('mobiletest.desc-4-3')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h3>
         <p>@lang('mobiletest.desc-4-4')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h3>
         <p>@lang('mobiletest.desc-4-5')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h3>
         <p>@lang('mobiletest.desc-4-6')</p>
-        <h3><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h3>
+        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h3>
         <p>@lang('mobiletest.desc-4-7')</p>
       </div>
     </div>
   </div>
   @include('layouts/stickybar')
 </div>
-
+</div>
+</div>
 
 @endsection
 
@@ -202,5 +212,5 @@ id/mobile-test
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')
-active
+menu-item-active
 @endsection

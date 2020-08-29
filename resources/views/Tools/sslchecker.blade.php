@@ -17,13 +17,24 @@ id/ssl-checker
 @endsection
 
 @section('content')
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>SSL Checker</b></li>
+  </ol>
+</nav>
+<div class="card card-custom mb-5">
+  <div class="card-header">
+      <div class="card-title">
+          <h1 class="card-label">@lang('sslchecker.title')</h1>
+          <small>@lang('sslchecker.subtitle')</small>
+      </div>
+  </div>
+</div>
     <div class="card card-custom mb-5">
-        <div class="card-header">
-            <div class="card-title">
-                <h1 class="card-label">@lang('sslchecker.title-2')</h1>
-                <small>@lang('sslchecker.subtitle')</small>
-            </div>
-        </div>
+
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-5 mb-5">
@@ -31,8 +42,8 @@ id/ssl-checker
                         <input id="url" type="text" name="" class="form-control" value="" placeholder="@lang('sslchecker.placeholder')">
                     </div>
                 </div>
-                <div class="col-lg-3 col-xl-2 mb-5">
-                    <button id="btn-ssl" type="button" class="btn btn btn-light-info form-control" name="button">
+                <div class="col-lg-3 col-xl-3 col-xxl-2 mb-5">
+                    <button id="btn-ssl" type="button" class="btn btn-primary form-control" name="button">
                     <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
                     </button>
                 </div>
@@ -117,6 +128,8 @@ id/ssl-checker
         </div>
         @include('layouts/stickybar')
     </div>
+    </div>
+    </div>
 @endsection
 
 @push('script')
@@ -124,7 +137,7 @@ id/ssl-checker
     <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 @endpush
 @section('ssl-checker')
-    active
+    menu-item-active
 @endsection
 
 {{--test--}}
