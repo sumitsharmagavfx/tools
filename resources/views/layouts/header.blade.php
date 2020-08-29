@@ -16,7 +16,11 @@
             <div class="topbar-item">
 
                 <a href="/analytics" target="_blank">
-                    <div class="analytic-links ml-5 mr-5 font-weight-bold"><span class="px-2" id="demo"></span>@if($local == "id") Analitik @else Analytics @endif</div>
+                    <!-- Analytic with Countdown -->
+                    <!-- <div class="analytic-links ml-5 mr-5 font-weight-bold"><span class="px-2" id="demo"></span>@if($local == "id") Analitik @else Analytics @endif</div> -->
+
+                    <!-- Analytic without Countdown -->
+                    <div class="analytic-links ml-5 mr-5 font-weight-bold">@if($local == "id") Analitik @else Analytics @endif</div>
                 </a>
                 <div class="dropdown mr-3">
                     <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -95,7 +99,8 @@
     <!--end::Container-->
 </div>
 @push('script')
-  <script type="text/javascript">
+    <!-- Countdown Script -->
+  <!-- <script type="text/javascript">
   var deadline = new Date("dec 1, 2020 12:00:00").getTime();
   var x = setInterval(function() {
     var now = new Date().getTime();
@@ -116,5 +121,5 @@
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 1000);
-  </script>
+  </script> -->
 @endpush
