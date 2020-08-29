@@ -317,9 +317,9 @@ id
                     <div class="tab-content mt-5" id="myTabContent">
                         <div class="tab-pane fade show active" id="importantnotes" role="tabpanel" aria-labelledby="importantnotes">
                             <table width="100%" class="mb-5">
-                              <tr>
+                              <tr valign="center">
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" valign="center">
                                     <p>@lang('home.desc-4-1-1')</p>
                                 </td>
                               </tr>
@@ -327,7 +327,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" valign="center">
                                     <p>@lang('home.desc-4-1-2')</p>
                                 </td>
                               </tr>
@@ -335,15 +335,15 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" valign="center">
                                     <p>@lang('home.desc-4-1-3')</p>
                                 </td>
                               </tr>
                             </table>
                             <table width="100%" class="mb-5">
                               <tr>
-                                <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <th rowspan="2" class="@if($local == 'id') pt-4 @else pt-1 @endif" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
+                                <td width="90%" valign="center">
                                     <p>@lang('home.desc-4-1-4')</p>
                                 </td>
                               </tr>
@@ -351,7 +351,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" valign="center">
                                     <p>@lang('home.desc-4-1-5')</p>
                                 </td>
                               </tr>
