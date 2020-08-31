@@ -59,7 +59,7 @@ background-size: auto 110%;">
         <div class="countdown styled"></div>
         <div class="heading text-center">
         <a href="https://cmlabs.co/en/" class="btn"><i class="fa fa-chain-broken"></i> cmlabs</a>
-        <a href="https://tools.comlabs.co/en/" class="btn"><i class="fa fa-code"></i> tools</a>
+        <a href="https://tools.cmlabs.co/en/" class="btn"><i class="fa fa-code"></i> tools</a>
         </div>
       </div>
     </div>

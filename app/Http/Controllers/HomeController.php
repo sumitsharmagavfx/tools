@@ -121,7 +121,6 @@ class HomeController extends Controller
             $client = new Client();
             $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
             $data = json_decode($response->getBody()->getContents(),true);
-            $data2 = $response->getBody()->getContents();
             $data_fix = [];
             foreach ($data as $datum){
                 array_push($data_fix,[

@@ -28,11 +28,67 @@
     <link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
     <!--end::Page Vendors Styles-->
     <!--begin::Global Theme Styles(used by all pages)-->
-    <link href="{{asset('plugins/global/plugins.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('css/style.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('css/themes/layout/aside/dark.css?v=7.0.6')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('plugins/global/plugins.bundle.css?v=7.0.9')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('plugins/custom/prismjs/prismjs.bundle.css?v=7.0.9')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/style.bundle.css?v=7.0.9')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/themes/layout/header/base/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/themes/layout/header/menu/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/themes/layout/aside/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     @stack('style')
+    <style media="screen">
+        /* Breadcrumb Style */
+        .menu-breadcrumb {
+          color: #ABABAB;
+        }
+        .menu-breadcrumb:hover {
+          color: #2F80ED;
+        }
+        /* Custom a href colour */
+        a:hover {
+            color: #0095EB !important;
+        }
+        .logo-mobile {
+            display: none;
+        }
+        .analytic-links, .resource-links, .dropdown-toggle, .contributor-title {
+            color: black;
+        }
+        .analytic-links:hover, .resource-links:hover, .dropdown-toggle:hover, .dropdown-item:hover, .burger-icon:focus, .contributor-title:hover {
+            color: #0095EB !important;
+        }
+        .analytic-icon:hover > .svg-icon.svg-menu-icon svg g [fill] {
+            fill: #0095EB !important;
+        }
+        .menu-item.menu-item-active > .menu-link .menu-text, .menu-item:hover > .menu-link .menu-text {
+            color: #0095EB !important;
+        }
+        .menu-item.menu-item-active > .menu-link .svg-icon.menu-icon svg g [fill], .menu-item:hover > .menu-link .svg-icon.menu-icon svg g [fill] {
+            fill: #0095EB !important;
+        }
+        .menu-item.menu-item-active, .menu-item:hover {
+            border-right: 3px solid #0095EB;
+            background: rgba(0, 149, 235, 0.7);
+        }
+        .main-button, .main-button-icon {
+            color: #ffffff !important;
+            background-color: #0095eb !important;
+        }
+        .main-button:hover, .main-button:hover > .main-button-icon {
+            color: #0095eb !important;
+            background-color: #EBFAFF !important;
+        }
+        .second-button, .second-button-icon {
+            color: #ffffff !important;
+            background-color: #53f9ad !important;
+        }
+        @media only screen and (max-width: 991px) {
+            .logo-mobile {
+                display: block;
+            }
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
@@ -41,28 +97,41 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 <!--begin::Main-->
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
     <!--begin::Logo-->
     <a href="/">
-        <img alt="Logo" src="{{asset('media/logos/logo-dark.png')}}" class="logo-default max-h-30px" />
+        <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="logo-default max-h-30px" />
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->
     <div class="d-flex align-items-center">
-        <div class="dropdown mr-3">
-            <button class="btn btn-bg-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-language"></i>
+        <a href="/analytics" class="analytic-icon mr-5" target="_blank">
+          <span id="countdown" class="text-dark text-hover-primary px-2 pt-1"></span>
+          <span class="svg-icon svg-menu-icon svg-icon-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <rect x="0" y="0" width="24" height="24" />
+                <path d="M20,12c-0.249,0-0.483,0.051-0.703,0.133l-2.398-1.963C16.958,9.956,17,9.734,17,9.5C17,8.114,15.886,7,14.5,7 S12,8.114,12,9.5c0,0.396,0.1,0.765,0.262,1.097l-2.909,3.438C9.237,14.015,9.121,14,9,14c-0.179,0-0.348,0.03-0.512,0.074 l-2.563-2.563C5.97,11.348,6,11.179,6,11c0-1.108-0.892-2-2-2s-2,0.892-2,2s0.892,2,2,2c0.179,0,0.348-0.03,0.512-0.074 l2.563,2.563C7.03,15.652,7,15.821,7,16c0,1.108,0.892,2,2,2s2-0.892,2-2c0-0.237-0.048-0.46-0.123-0.671l2.913-3.442 C14.017,11.953,14.252,12,14.5,12c0.411,0,0.792-0.107,1.133-0.281l2.399,1.963C18.016,13.786,18,13.891,18,14c0,1.108,0.892,2,2,2 s2-0.892,2-2S21.108,12,20,12z" fill="#727272"/>
+              </g>
+            </svg>
+          </span>
+        </a>
+        <div class="dropdown mr-5">
+            <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @if($local == "id")
+                ID
+                @else
+                EN
+                @endif
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <a class="dropdown-item" href="/en/version">
-                <img src="{{asset('media/logos/america.png')}}" height="20px" alt="america">
                  <span class="ml-1">English</span>
                </a>
               <a class="dropdown-item" href="/id/version">
-                <img src="{{asset('media/logos/indonesia.png')}}" height="20px" alt="indonesia">
                  <span class="ml-1">Indonesia</span>
               </a>
             </div>
@@ -71,33 +140,8 @@
         <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
             <span></span>
         </button>
+
         <!--end::Aside Mobile Toggle-->
-        <!--begin::Topbar Mobile Toggle-->
-        @if($local == "id")
-        <a href="https://cmlabs.co/" class="ml-7">
-        @else
-        <a href="https://cmlabs.co/en/" class="ml-7">
-        @endif
-          <img alt="Logo" src="{{asset('media/logos/logo-letter-11.png')}}" height="24px" />
-        </a>
-        <button class="btn btn-hover-text-primary p-0 ml-2" id="">
-					<span class="svg-icon svg-icon-xl">
-						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
-						<a href="/construction" class="icon-1x">
-                          <span class="svg-icon svg-icon-light svg-icon-2x">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                  <rect opacity="0.300000012" x="0" y="0" width="24" height="24"/>
-                                  <polygon fill="#000000" fill-rule="nonzero" opacity="0.3" points="7 4.89473684 7 21 5 21 5 3 11 3 11 4.89473684"/>
-                                  <path d="M10.1782982,2.24743315 L18.1782982,3.6970464 C18.6540619,3.78325557 19,4.19751166 19,4.68102291 L19,19.3190064 C19,19.8025177 18.6540619,20.2167738 18.1782982,20.3029829 L10.1782982,21.7525962 C9.63486295,21.8510675 9.11449486,21.4903531 9.0160235,20.9469179 C9.00536265,20.8880837 9,20.8284119 9,20.7686197 L9,3.23140966 C9,2.67912491 9.44771525,2.23140966 10,2.23140966 C10.0597922,2.23140966 10.119464,2.2367723 10.1782982,2.24743315 Z M11.9166667,12.9060229 C12.6070226,12.9060229 13.1666667,12.2975724 13.1666667,11.5470105 C13.1666667,10.7964487 12.6070226,10.1879981 11.9166667,10.1879981 C11.2263107,10.1879981 10.6666667,10.7964487 10.6666667,11.5470105 C10.6666667,12.2975724 11.2263107,12.9060229 11.9166667,12.9060229 Z" fill="#000000"/>
-                              </g>
-                            </svg>
-                          </span>
-                        </a>
-                        <!--end::Svg Icon-->
-					</span>
-        </button>
-        <!--end::Topbar Mobile Toggle-->
     </div>
     <!--end::Toolbar-->
 </div>
@@ -126,9 +170,7 @@
                 <!--end::Entry-->
             </div>
             <!--end::Content-->
-            <!--begin::Footer-->
             @include('layouts.footer')
-            <!--end::Footer-->
         </div>
         <!--end::Wrapper-->
     </div>
@@ -157,7 +199,7 @@
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="{{asset('plugins/global/plugins.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5')}}"></script>
-<script src="{{asset('js/scripts.bundle.js?v=7.0.5')}}"></script>
+<script src="{{asset('js/scripts.bundle.js?v=7.0.9')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
@@ -179,6 +221,28 @@
 $(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 });
+</script>
+<script type="text/javascript">
+  var deadline = new Date("dec 1, 2020 12:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    @if($local == "id")
+    document.getElementById("countdown").innerHTML = days + "h "
+    + hours + "j " + minutes + "m " + seconds + "d ";
+    @else
+    document.getElementById("countdown").innerHTML = days + "d "
+    + hours + "h " + minutes + "m " + seconds + "s ";
+    @endif
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
 </script>
 @stack('script')
 <!--end::Page Scripts-->

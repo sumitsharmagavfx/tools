@@ -30,6 +30,14 @@ id/page-title-meta-description-checker
   }
 </style>
 @endpush
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Title & Meta Description Checker</b></li>
+  </ol>
+</nav>
 <div class="card card-custom mb-5" id="kt_page_stretched_card">
   <div class="card-header">
     <div class="card-title">
@@ -94,10 +102,6 @@ id/page-title-meta-description-checker
           <small id="alerturl"></small><br>
         <small id="urlcheck">eg. https://cmlabs.co/en/</small>
       </div>
-    </div>
-
-
-    <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
         <div class="card-title">
           <h2 class="card-label">@lang('metachecker.page-title')</h2>
@@ -109,12 +113,8 @@ id/page-title-meta-description-checker
           <small id="alerttitle"></small><br>
         <small id="titlecount"></small>
       </div>
-
-
-    </div>
-    <div class="card card-custom mb-5 mt-5">
       <div class="card-header">
-        <div class="card-title">  
+        <div class="card-title">
           <h2 class="card-label">@lang('metachecker.copy-6')</h2>
         </div>
       </div>
@@ -183,7 +183,7 @@ id/page-title-meta-description-checker
 
         <p>@lang('metachecker.copy-9')</p>
 
-        <h3>@lang('metachecker.copy-10')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-10')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -197,7 +197,7 @@ id/page-title-meta-description-checker
           </tbody>
         </table>
 
-        <h3>@lang('metachecker.copy-15')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-15')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -223,7 +223,7 @@ id/page-title-meta-description-checker
           </tbody>
         </table>
 
-        <h3>@lang('metachecker.copy-26')</h3>
+        <h3 class="py-5">@lang('metachecker.copy-26')</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -261,13 +261,13 @@ id/page-title-meta-description-checker
   @include('layouts/stickybar')
 </div>
 
-
+</div>
+</div>
 <br>
 <span id="titlesizer" class="pd-0"></span>
 <span id="titlesizertemp"></span>
 <span id="descsizer"></span>
 <span id="descsizertemp"></span>
-
 
 @endsection
 
@@ -275,5 +275,5 @@ id/page-title-meta-description-checker
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 @endpush
 @section('title-checker')
-active
+menu-item-active
 @endsection

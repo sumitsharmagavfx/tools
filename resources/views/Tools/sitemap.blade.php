@@ -17,13 +17,23 @@ id/sitemap-generator
 @endsection
 
 @section('content')
-<div class="card card-custom gutter-b">
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Sitemap Generator</b></li>
+  </ol>
+</nav>
+<div class="card card-custom mb-5">
   <div class="card-header">
     <div class="card-title">
       <h1 class="card-label">SITEMAP GENERATOR </h1>
       <small>@lang('sitemap.sub-title')</small>
     </div>
   </div>
+</div>
+<div class="card card-custom gutter-b">
   <div class="card-body">
     <div class="row">
       <div class="col-lg-5 gutter-b">
@@ -31,8 +41,8 @@ id/sitemap-generator
           <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
         </div>
       </div>
-      <div class="col-lg-3 col-xl-3 col-xxl-2 gutter-b">
-        <button type="button" class="btn btn btn-light-info  form-control" name="button" id="generate">
+      <div class="col-lg-4 col-xl-3 col-xxl-2 gutter-b">
+        <button type="button" class="btn btn-primary  form-control" name="button" id="generate">
         <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
       </div>
     </div>
@@ -134,6 +144,8 @@ id/sitemap-generator
   </div>
   @include('layouts/stickybar')
 </div>
+</div>
+</div>
 
 
 @endsection
@@ -152,5 +164,5 @@ id/sitemap-generator
 @endpush
 
 @section('sitemap')
-active
+menu-item-active
 @endsection

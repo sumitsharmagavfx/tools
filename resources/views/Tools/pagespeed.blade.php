@@ -17,13 +17,23 @@ id/page-speed
 @endsection
 
 @section('content')
-<div class="card card-custom gutter-b">
+<div class="d-flex flex-column-fluid">
+    <div class="container-fluid">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Page Speed</b></li>
+  </ol>
+</nav>
+<div class="card card-custom mb-5">
   <div class="card-header">
     <div class="card-title">
       <h1 class="card-label">@lang('pagespeed.title') </h1>
       <small>@lang('pagespeed.subtitle')</small>
     </div>
   </div>
+</div>
+<div class="card card-custom gutter-b">
   <div class="card-body">
     <div class="row">
       <div class="col-lg-5 mb-5">
@@ -31,8 +41,8 @@ id/page-speed
           <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('pagespeed.input-hint')">
         </div>
       </div>
-      <div class="col-lg-3 col-xl-2 mb-5">
-        <button type="button" class="btn btn btn-light-info form-control" name="button" id="analysis-button">
+      <div class="col-lg-4 col-xl-3 col-xxl-2 mb-5">
+        <button type="button" class="btn btn-primary form-control" name="button" id="analysis-button">
         <i class="flaticon2-heart-rate-monitor"></i> @lang('pagespeed.btn-analysis')</button>
       </div>
     </div>
@@ -42,7 +52,7 @@ id/page-speed
   <div class="card-header p-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl">
           <a href="#result" id="nav-performance">
             <div class="progress performance" data-percentage="0">
               <span class="progress-left">
@@ -63,7 +73,7 @@ id/page-speed
 
 
 
-        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl">
           <a href="#result" id="nav-accessibility">
             <div class="progress accessibility" data-percentage="0">
               <span class="progress-left">
@@ -84,7 +94,7 @@ id/page-speed
 
 
 
-        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl">
           <a href="#result" id="nav-best-practices">
             <div class="progress best-practices" data-percentage="0">
               <span class="progress-left">
@@ -105,7 +115,7 @@ id/page-speed
 
 
 
-        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl">
           <a href="#result" id="nav-seo">
             <div class="progress seo" data-percentage="0">
               <span class="progress-left">
@@ -126,7 +136,7 @@ id/page-speed
 
 
 
-        <div class="col-12 col-sm-5 col-md-4 col-lg col-xl">
+        <div class="col-12 col-sm-5 col-md-4 col-lg-4 col-xl">
           <a href="#result" id="nav-pwa">
             <div class="progress pwa" data-percentage="0">
               <span class="progress-left">
@@ -567,6 +577,8 @@ id/page-speed
   </div>
   @include('layouts/stickybar')
 </div>
+</div>
+</div>
 
 @endsection
 
@@ -584,5 +596,5 @@ id/page-speed
 @endpush
 
 @section('page-speed')
-active
+menu-item-active
 @endsection
