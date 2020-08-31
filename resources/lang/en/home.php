@@ -111,5 +111,6 @@ return [
     "desc-5-4-2" => "At the research stage, marketers could see the competitor's keyword density by using the Word Counter tool.",
     "desc-5-4-3" => "At the development stage, the Product manager could create a FAQ schema on the SERP by using the JSON-LD Schema Generator FAQ. In addition, they could also optimize the appearance of the website on mobile devices using the Mobile Friendly Test. As well as adding robot.txt to the website to speed up crawling using the Robot.txt Generator. Developers at this stage can create an XML sitemap using the Sitemap Generator.",
     "desc-5-4-4" => "At the audit stage, content writers could check the length of the title and meta description using the Title & Meta Length Checker. SEO specialists and developers can check website performance using PageSpeed Test. At this stage the developer could also check the SSL certificate using the SSL Checker.",
-    "detail-button" => "See Detail"
+    "detail-button" => "See Detail",
+    "homepage" => "Homepage"
 ];

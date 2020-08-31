@@ -111,5 +111,6 @@ return [
     "desc-5-4-2" => "Pada tahap riset, marketer bisa melihat keyword density kompetitor dengan menggunakan Word Counter tool.",
     "desc-5-4-3" => "Pada tahap pengembangan, Product manager dapat membuat FAQ schema di SERP dengan menggunakan JSON-LD Schema Generator FAQ. Selain itu juga dapat mengoptimalkan tampilan website di perangkat seluler menggunakan Mobile Friendly Test. Serta menambahkan robot.txt pada website untuk mempercepat crawling dengan menggunakan Robot.txt Generator. Developer pada tahap ini dapat membuat XML sitemap menggunakan Sitemap Generator.",
     "desc-5-4-4" => "Pada tahap audit, Content writer dapat mengecek panjang judul dan meta description menggunakan Title & Meta Length Checker. SEO specialist dan developer dapat mengecek performa website menggunakan PageSpeed Test. Di tahap ini developer juga bisa mengecek SSL certificate menggunakan SSL Checker.",
-    "detail-button" => "Lihat Detail"
+    "detail-button" => "Lihat Detail",
+    "homepage" => "Beranda"
 ];

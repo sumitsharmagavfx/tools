@@ -21,7 +21,7 @@ id/page-speed
     <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">Homepage</a></li>
+    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
     <li class="breadcrumb-item active" style="color:#2F80ED"><b>Page Speed</b></li>
   </ol>
 </nav>
