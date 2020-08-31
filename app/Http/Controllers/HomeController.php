@@ -16,14 +16,14 @@ class HomeController extends Controller
      */
     public function index($lang)
     {
-        $dataID = $this->getBlogWordpressId();
-        $dataEN = $this->getBlogWordpressEn();
-        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
         if ($lang==='en'){
             App::setLocale('en');
         }else{
             App::setLocale('id');
         }
+        $dataID = $this->getBlogWordpressId();
+        $dataEN = $this->getBlogWordpressEn();
+        $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
         $local = App::getLocale();
         return view('home', compact('data','local', 'dataID', 'dataEN'));
     }
@@ -138,6 +138,50 @@ class HomeController extends Controller
     public function parseDate($date)
     {
         $date=date_create($date);
-        return date_format($date,"M d, Y - H:i");
+        if (App::getLocale() == 'en')
+            return date_format($date,"M d, Y - H:i");
+        else{
+            $month = date_format($date,"m");
+            $id = '';
+            switch ($month){
+                case 1:
+                    $id = 'Jan';
+                    break;
+                case 2:
+                    $id = 'Feb';
+                    break;
+                case 3:
+                    $id = 'Mar';
+                    break;
+                case 4:
+                    $id = 'Apr';
+                    break;
+                case 5:
+                    $id = 'Mei';
+                    break;
+                case 6:
+                    $id = 'Jun';
+                    break;
+                case 7:
+                    $id = 'Jul';
+                    break;
+                case 8:
+                    $id = 'Agu';
+                    break;
+                case 9:
+                    $id = 'Sep';
+                    break;
+                case 10:
+                    $id = 'Okt';
+                    break;
+                case 11:
+                    $id = 'Nov';
+                    break;
+                case 12:
+                    $id = 'Des';
+                    break;
+            }
+            return $id." ".date_format($date,"d, Y - H:i");
+        }
     }
 }
