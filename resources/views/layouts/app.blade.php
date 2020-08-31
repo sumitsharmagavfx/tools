@@ -109,7 +109,7 @@
     <!--begin::Toolbar-->
     <div class="d-flex align-items-center">
         <a href="/analytics" class="analytic-icon mr-5" target="_blank">
-          <span id="countdown" class="text-dark text-hover-primary px-2 pt-1"></span>
+          <!-- <span id="countdown" class="text-dark text-hover-primary px-2 pt-1"></span> -->
           <span class="svg-icon svg-menu-icon svg-icon-xl">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -223,26 +223,26 @@ $(document).ready(function(){
 });
 </script>
 <script type="text/javascript">
-  var deadline = new Date("dec 1, 2020 12:00:00").getTime();
-  var x = setInterval(function() {
-    var now = new Date().getTime();
-    var t = deadline - now;
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
-    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((t % (1000 * 60)) / 1000);
-    @if($local == "id")
-    document.getElementById("countdown").innerHTML = days + "h "
-    + hours + "j " + minutes + "m " + seconds + "d ";
-    @else
-    document.getElementById("countdown").innerHTML = days + "d "
-    + hours + "h " + minutes + "m " + seconds + "s ";
-    @endif
-        if (t < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "EXPIRED";
-        }
-    }, 1000);
+  // var deadline = new Date("dec 1, 2020 12:00:00").getTime();
+  // var x = setInterval(function() {
+  //   var now = new Date().getTime();
+  //   var t = deadline - now;
+  //   var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  //   var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+  //   var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  //   var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  //   @if($local == "id")
+  //   document.getElementById("countdown").innerHTML = days + "h "
+  //   + hours + "j " + minutes + "m " + seconds + "d ";
+  //   @else
+  //   document.getElementById("countdown").innerHTML = days + "d "
+  //   + hours + "h " + minutes + "m " + seconds + "s ";
+  //   @endif
+  //       if (t < 0) {
+  //           clearInterval(x);
+  //           document.getElementById("countdown").innerHTML = "EXPIRED";
+  //       }
+  //   }, 1000);
 </script>
 @stack('script')
 <!--end::Page Scripts-->
