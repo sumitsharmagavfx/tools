@@ -56,7 +56,7 @@ id
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-            <li class="breadcrumb-item active" style="color:#2F80ED"><b>Homepage</b></li>
+            <li class="breadcrumb-item active" style="color:#2F80ED"><b>@lang('home.homepage')</b></li>
           </ol>
         </nav>
           <div class="card card-custom mb-5">
