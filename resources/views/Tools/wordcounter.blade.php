@@ -446,7 +446,24 @@ function myFunction() {
 @push('script')
 <script src="{{asset('js/logic/word-counter.js')}}"></script>
 @endpush
-
+@push('script')
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "@lang('home.homepage')",
+      "item": "{{url('/')}}/{{$local}}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Word Counter"
+    }]
+  }
+</script>
+@endpush
 @section('word-counter')
 menu-item-active
 @endsection

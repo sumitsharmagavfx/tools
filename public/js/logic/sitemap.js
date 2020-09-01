@@ -48,6 +48,7 @@ $(document).ready(function () {
                 "    </div>\n" +
                 "    <center><span id=\"detail-progress\">"+progress+"</span></center>",
             showCancelButton:true,
+            cancelButtonColor: '#FE2151',
             showConfirmButton:false,
             allowOutsideClick: false,
             cancelButtonText : button
