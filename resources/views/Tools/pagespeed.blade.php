@@ -581,7 +581,24 @@ id/page-speed
 </div>
 
 @endsection
-
+@push('script')
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Homepage",
+      "item": "{{url('/')}}/{{$local}}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Page Speed"
+    }]
+  }
+</script>
+@endpush
 @push('style')
 <link rel="stylesheet" href="{{asset('css/pagespeed.css')}}">
 @endpush
