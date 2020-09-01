@@ -609,7 +609,7 @@ id
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
-      "name": "Homepage"
+      "name": "@lang('home.homepage')"
     }]
   }
 </script>
