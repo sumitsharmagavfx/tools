@@ -601,7 +601,19 @@ id
     });
 </script>
 @endpush
-
+@push('script')
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "@lang('home.homepage')"
+    }]
+  }
+</script>
+@endpush
 <!-- home -->
 @section('home')
 menu-item-active
