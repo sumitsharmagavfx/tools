@@ -29,21 +29,21 @@
                     <div class="dropdown-menu dropdown-menu-md py-5">
                         <ul class="navi navi-hover">
                             <li class="navi-item">
-                                <a class="navi-link" href="@lang('layout.link-blog-1')">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-1')">
                                 <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
                                     <span class="navi-text">@lang('layout.blog-1')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
                                 </a>
                             </li>
                             <li class="navi-item">
-                                <a class="navi-link" href="@lang('layout.link-blog-2')">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-2')">
                                     <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
                                     <span class="navi-text">@lang('layout.blog-2')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
                                 </a>
                             </li>
                             <li class="navi-item">
-                                <a class="navi-link" href="@lang('layout.link-blog-3')">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-3')">
                                 <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
                                     <span class="navi-text">@lang('layout.blog-3')</span>
                                     <span class="label label-dark-80 font-weight-bold label-inline">50+</span>

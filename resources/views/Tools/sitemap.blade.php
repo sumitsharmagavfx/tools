@@ -149,7 +149,24 @@ id/sitemap-generator
 
 
 @endsection
-
+@push('script')
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Homepage",
+      "item": "{{url('/')}}/{{$local}}"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sitemap Generator"
+    }]
+  }
+</script>
+@endpush
 @push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>

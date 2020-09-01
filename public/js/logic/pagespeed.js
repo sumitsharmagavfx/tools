@@ -101,7 +101,7 @@ jQuery('#analysis-button').click(function () {
             // console.log(response);
             if (response.statusText === 'abort'){
                 if (lang === 'en')
-                    toastr.error('Cencel button clicked','Cancel');
+                    toastr.error('Cancel button clicked','Cancel');
                 else toastr.error('Anda membatalkan proses','Batal');
             }else {
                 if (lang === 'en')
