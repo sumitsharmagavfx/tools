@@ -278,7 +278,7 @@ id/page-title-meta-description-checker
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
-      "name": "Homepage",
+      "name": "@lang('home.homepage')",
       "item": "{{url('/')}}/{{$local}}"
     },{
       "@type": "ListItem",
