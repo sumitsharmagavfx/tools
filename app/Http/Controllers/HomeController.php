@@ -97,18 +97,18 @@ class HomeController extends Controller
     public function getBlogWordpressId()
     {
         try{
-            $client = new Client();
-            $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
-            $data = json_decode($response->getBody()->getContents(),true);
-            $data_fix = [];
-            foreach ($data as $datum){
-                array_push($data_fix,[
-                    "link" => $datum['link'],
-                    "title" => $datum['title']['rendered'],
-                    "date" => $this->parseDate($datum['date'])
-                ]);
-            }
-            return $data_fix;
+          $client = new Client();
+          $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
+          $data = json_decode($response->getBody()->getContents(),true);
+          $data_fix = [];
+          foreach ($data as $datum){
+              array_push($data_fix,[
+                  "link" => $datum['link'],
+                  "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+                  "date" => $this->parseDate($datum['date'])
+              ]);
+          }
+          return $data_fix;
         }catch (RequestException $e){
             return json_decode(file_get_contents(base_path('resources/js/json/idBlog.json')),true);
         }
@@ -118,18 +118,18 @@ class HomeController extends Controller
     public function getBlogWordpressEn()
     {
         try {
-            $client = new Client();
-            $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
-            $data = json_decode($response->getBody()->getContents(),true);
-            $data_fix = [];
-            foreach ($data as $datum){
-                array_push($data_fix,[
-                    "link" => $datum['link'],
-                    "title" => $datum['title']['rendered'],
-                    "date" => $this->parseDate($datum['date'])
-                ]);
-            }
-            return $data_fix;
+          $client = new Client();
+          $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");
+          $data = json_decode($response->getBody()->getContents(),true);
+          $data_fix = [];
+          foreach ($data as $datum){
+              array_push($data_fix,[
+                  "link" => $datum['link'],
+                  "title" => str_replace('&#038;','&',$datum['title']['rendered']),
+                  "date" => $this->parseDate($datum['date'])
+              ]);
+          }
+          return $data_fix;
         }catch (RequestException $e){
             return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')),true);
         }
