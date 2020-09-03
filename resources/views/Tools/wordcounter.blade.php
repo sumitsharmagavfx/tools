@@ -111,7 +111,7 @@ id/word-counter
             data-autoresize name="name"
             rows="15" style="resize:none; overflow:hidden"
             class="form-control" id="textarea"
-            data-placement="bottom" data-trigger="click"
+            data-placement="top" data-trigger="click"
             data-toggle="popover" data-html="true"
             title="@lang('wordcounter.popover-title')"
             data-content="@lang('wordcounter.popover-content')"
@@ -422,7 +422,6 @@ id/word-counter
 </div>
 </div>
 @endsection
-
 @push('script')
 <script type="text/javascript">
   jQuery.each(jQuery('textarea[data-autoresize]'), function() {
@@ -439,6 +438,12 @@ id/word-counter
 <script>
 function myFunction() {
   document.getElementById("kd").style.borderBottom = "2px solid #24daff";
+
+  $('#textarea').popover().click(function () {
+    setTimeout(function () {
+        $('#textarea').popover('hide');
+    }, 5500);
+});
 }
 </script>
 @endpush
