@@ -1,4 +1,4 @@
-<div id="kt_header" class="header header-fixed" >
+<div id="kt_header" class="header header-fixed" style="z-index: 5;">
     <!--begin::Container-->
     <div class="container-fluid d-flex align-items-stretch justify-content-between">
         <!--begin::Left-->
