@@ -86,7 +86,7 @@
               </a>
             </li>
             <li class="menu-item mb-5 @yield('page-speed')">
-              <a href="/{{$local}}/page-speed" class="menu-link">
+              <a href="/{{$local}}/pagespeed-test" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -99,7 +99,7 @@
                   </svg>
                   <!--end::Svg Icon-->
                 </span>
-                <span class="menu-text">Page Speed</span>
+                <span class="menu-text">Page Speed Test</span>
               </a>
             </li>
             <li class="menu-item mb-5 @yield('sitemap')">
@@ -119,7 +119,7 @@
               </a>
             </li>
             <li class="menu-item mb-5 @yield('mobile-test')">
-              <a href="/{{$local}}/mobile-test" class="menu-link">
+              <a href="/{{$local}}/mobile-friendly-test" class="menu-link">
                 <span class="svg-icon menu-icon">
                   <!--begin::Svg Icon-->
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
