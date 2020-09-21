@@ -16,6 +16,17 @@
     <meta property="og:image" content="{{asset('media/logos/logo-letter-9.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
+    @if(env('APP_ENV')==='production')
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-156389913-2');
+            </script>
+        @endif
     @if(env('APP_ENV')==='development')
         <meta name="robots" content="noindex">
     @endif

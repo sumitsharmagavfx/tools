@@ -36,9 +36,9 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metachecker');
     Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
     Route::get('/{lang}/symbol-and-text-generator', 'ToolsController@symbolandtext');
-    Route::get('/{lang}/page-speed', 'ToolsController@pagespeed');
+    Route::get('/{lang}/pagespeed-test', 'ToolsController@pagespeed');
     Route::get('/{lang}/sitemap-generator', 'ToolsController@sitemap');
-    Route::get('/{lang}/mobile-test', 'ToolsController@mobiletest');
+    Route::get('/{lang}/mobile-friendly-test', 'ToolsController@mobiletest');
     Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
     Route::get('/{lang}/robotstxt-generator', 'ToolsController@robotgenerator');
     Route::get('/en/version', 'ToolsController@englishVersion');
