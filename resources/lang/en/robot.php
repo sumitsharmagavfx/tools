@@ -27,9 +27,9 @@ return [
     "export"    => "EXPORT ROBOTS.TXT",
     "copy"  => "COPY TEXT",
     "title" => "What is Robots.txt Generator?",
-    "desc1"    => "The robots exclusion standard, also known as the robots exclusion protocol or simply robots.txt, is a standard used by websites to communicate with web crawlers and other web robots. The standard specifies how to inform the web robot about which areas of the website should not be processed or scanned.",
-    "desc1-2"   => "In practice, robots.txt files indicate whether certain user agents (web-crawling software) can or cannot crawl parts of a website. These crawl instructions are specified by “disallowing” or “allowing” the behavior of certain (or all) user agents.",
+    "desc1"    => "The robots exclusion standard, also called the robots exclusion protocol or virtually robots.Txt, is a trendy used by websites to talk with web crawlers and other web robots. The popular specifies how to tell the web robotic approximately which areas of the internet site should now not be processed or scanned.",
+    "desc1-2"   => "In practice, robots.Txt files are the protocols that decide whether certain user agents (internet-crawling software) are allowed or prohibited to crawl elements of a website. These crawl commands are certain by “disallowing” or “allowing” the conduct of positive (or all) consumer agents.",
     "title-2"   =>  "Why Does Your Website Need Robots.txt?",
-    "desc2" =>  "Robots.txt files control crawler access to certain areas of your site. While this can be very dangerous if you accidentally disallow Googlebot from crawling your entire site (!!), there are some situations in which a robots.txt file can be very handy.",
-    "desc2-2"   => "If there are no areas on your site to which you want to control user-agent access, you may not need a robots.txt file at all."
+    "desc2" =>  "Robots.Txt documents manipulate crawler get entry to to certain areas of your web page. While this could be very dangerous in case you accidentally disallow Googlebot from crawling your whole web page (!!), there are some situations wherein a robots.Txt document can be very handy.",
+    "desc2-2"   => "If there are no areas to your web site to which you need to control consumer-agent access, you can now not want a robots.Txt record at all."
 ];
