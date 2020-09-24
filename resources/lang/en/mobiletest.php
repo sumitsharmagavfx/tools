@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "MOBILE FRIENDLY TEST",
+    "title" => "MOBILE-FRIENDLY TEST TOOL",
     "btn-add" => "Check URL",
     "question" => "Input Your URL",
     "title-2" => "Mobile Friendly Test Tool",
@@ -38,7 +38,7 @@ return [
     "meta-title" => "Mobile Friendly Test Tool – Site Preview Tool",
     "meta-desc" => "The Mobile Friendly Test Tool from CMLABS is a fast and easy way to test whether your site pages are mobile-friendly",
     "meta-keyword" => "google mobile friendly, mobile friendly, mobile test, google, mobile test tool, mobile friendly test, mobile friendly tool",
-    "subtitle" => "SITES PREVIEW ON MOBILE",
+    "subtitle" => "CMLABSDEV",
     "result-title" => "Test Result",
     "result-screenshot" => "Page Screenshot",
     "example-resultdate"    => "Tested on 04/08/2020 22.50",

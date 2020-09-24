@@ -1,6 +1,6 @@
 <?php
 return [
-    "title" => "PAGE SPEED",
+    "title" => "PAGESPEED TEST & INSIGHT",
     "input-hint" => "Masukkan URL Anda",
     "copy-0"=>"Tentang Page Speed Tool",
     "copy-1"=>"<p>Page Speed Tool melaporkan kinerja halaman pada perangkat mobile dan desktop, dan memberikan saran tentang bagaimana halaman tersebut dapat ditingkatkan.</p>
@@ -71,7 +71,7 @@ return [
     "meta-title" => "Page Speed Test - Site Analysis Tool",
     "meta-desc" => "Gunakan Page Speed Tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
-    "subtitle" => "PERIKSA KECEPATAN SITUS DAN MASALAH WEB",
+    "subtitle" => "CMLABSDEV",
     "btn-analysis" => "Analisa URL",
     "performance"   => "KINERJA",
     "accessibility"  => "AKSESIBILITAS",

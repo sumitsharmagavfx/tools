@@ -6,14 +6,14 @@
 
 @section('meta-keyword', Lang::get('pagespeed.meta-keyword'))
 
-@section('conical','/en/page-speed')
+@section('conical','/en/pagespeed-test')
 
 @section('en-link')
-en/page-speed
+en/pagespeed-test
 @endsection
 
 @section('id-link')
-id/page-speed
+id/pagespeed-test
 @endsection
 
 @section('content')
@@ -22,7 +22,7 @@ id/page-speed
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Page Speed</b></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Pagespeed Test & Insight</b></li>
   </ol>
 </nav>
 <div class="card card-custom mb-5">
