@@ -44,7 +44,7 @@ id/ssl-checker
                 </div>
                 <div class="col-lg-3 col-xl-3 col-xxl-2 mb-5">
                     <button id="btn-ssl" type="button" class="btn btn-primary form-control" name="button">
-                    <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-1')
+                    <i class="flaticon2-heart-rate-monitor"></i> @lang('sslchecker.copy-check')
                     </button>
                 </div>
             </div>
@@ -55,11 +55,11 @@ id/ssl-checker
             <div class="card card-custom mb-5" id="result" style="display: none">
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">@lang('sslchecker.copy-1')</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-check')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <h3 id="nothing" style="display: none"><i class="fa fa-times-circle text-danger mr-5"></i>@lang('sslchecker.copy-8')</h3>
+                    <h3 id="nothing" style="display: none"><i class="fa fa-times-circle text-danger mr-5"></i>@lang('sslchecker.not-ssl')</h3>
                     <div class="accordion accordion-light accordion-toggle-arrow" id="accordionExample5">
                         <div class="card">
                             <div class="card-header" id="headingTwo5">
@@ -108,22 +108,139 @@ id/ssl-checker
             <div class="card card-custom mb-5">
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">@lang('sslchecker.copy-2')</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-title-1')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>@lang('sslchecker.copy-3')</p>
-                    <p>@lang('sslchecker.copy-4')</p>
+                    <p>@lang('sslchecker.copy-desc-1-1')</p>
+                    <p>@lang('sslchecker.copy-desc-1-2')</p>
                 </div>
                 <div class="card-header">
                     <div class="card-title">
-                        <h2 class="card-label">@lang('sslchecker.copy-5')</h2>
+                        <h2 class="card-label">@lang('sslchecker.copy-title-2')</h2>
                     </div>
                 </div>
                 <div class="card-body">
-                    <p>@lang('sslchecker.copy-6')</p>
-                    <p>@lang('sslchecker.copy-7')</p>
+                    <p>@lang('sslchecker.copy-desc-2-1')</p>
+                    <p>@lang('sslchecker.copy-desc-2-2')</p>
                 </div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <h2 class="card-label">@lang('sslchecker.copy-title-3')</h2>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>@lang('sslchecker.copy-desc-3-1')</p>
+                    <p>@lang('sslchecker.copy-desc-3-2')</p>
+                    <p>@lang('sslchecker.copy-desc-3-3')</p>
+                    <p>@lang('sslchecker.copy-desc-3-4')</p>
+                    <ol>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-3-1')</p>
+                            <p>@lang('sslchecker.list-desc-3-1-1')</p>
+                            <p>@lang('sslchecker.list-desc-3-1-2')</p>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-3-2')</p>
+                            <p>@lang('sslchecker.list-desc-3-2-1')</p>
+                            <p>@lang('sslchecker.list-desc-3-2-2')</p>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-3-3')</p>
+                            <p>@lang('sslchecker.list-desc-3-3-1')</p>
+                            <p>@lang('sslchecker.list-desc-3-3-2')</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <h2 class="card-label">@lang('sslchecker.copy-title-4')</h2>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>@lang('sslchecker.copy-desc-4-1')</p>
+                    <p>@lang('sslchecker.copy-desc-4-2')</p>
+                    <ol>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-4-1')</p>
+                            <p>@lang('sslchecker.list-desc-4-1')</p>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-4-2')</p>
+                            <p>@lang('sslchecker.list-desc-4-2')</p>
+                        </li>
+                    </ol>
+                    <p>@lang('sslchecker.copy-desc-4-3')</p>
+                    <ol>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-4-2-1')</p>
+                            <p>@lang('sslchecker.list-desc-4-2-1')</p>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-4-2-2')</p>
+                            <p>@lang('sslchecker.list-desc-4-2-2')</p>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.list-title-4-2-3')</p>
+                            <p>@lang('sslchecker.list-desc-4-2-3')</p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <h2 class="card-label">@lang('sslchecker.copy-title-5')</h2>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>@lang('sslchecker.copy-desc-5-1')</p>
+                    <p>@lang('sslchecker.copy-desc-5-2')</p>
+                    <ol>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.ssl-type-1')</p>
+                            <p>@lang('sslchecker.ssl-type-desc-1')</p>
+                            <ol type="a">
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-1-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-1-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-1-2')</p>
+                                </li>
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-1-2')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-2-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-2-2')</p>
+                                </li>
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-1-3')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-3-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-1-3-2')</p>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p class="font-weight-bold">@lang('sslchecker.ssl-type-2')</p>
+                            <p>@lang('sslchecker.ssl-type-desc-2')</p>
+                            <ol type="a">
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-2-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-1-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-1-2')</p>
+                                </li>
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-2-2')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-2-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-2-2')</p>
+                                </li>
+                                <li>
+                                    <p class="font-weight-bolder">@lang('sslchecker.ssl-type-list-title-2-3')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-3-1')</p>
+                                    <p>@lang('sslchecker.ssl-type-list-desc-2-3-2')</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+                
+
             </div>
         </div>
         @include('layouts/stickybar')
