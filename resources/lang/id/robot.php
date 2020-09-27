@@ -59,7 +59,7 @@ return [
     "list-title-6-1-2" => "Feature Manager",
     "list-desc-6-1-2" => "Setelah selesai menginstall All in One SEO kemudian masuk pada bagian menu, aktifkan menu robots.txt yang ada didalam menu.",
     "list-title-6-1-3" => "Klik bagian Robots.txt",
-    "list-desc-6-1-3" => "Apabila pada menu robots.txt telah aktif maka kalian dapat melihat menu robots.txt pada panel pada bagian kanan. Pada menu ini kalian dapat menambahkan <b>user agent,rule</b> serta <b>directory path</b> dalam sebuah file.",
+    "list-desc-6-1-3" => "Apabila pada menu robots.txt telah aktif maka kalian dapat melihat menu robots.txt pada panel pada bagian kanan. Pada menu ini kalian dapat menambahkan <b>user agent, rule</b> serta <b>directory path</b> dalam sebuah file.",
     "list-title-6-1-4" => "Menambahkan rules",
     "list-desc-6-1-4" => "Setelah semua tahap telah dilakukan, maka kalian bisa menambahkan rule dalam plugin. Saat membuat rule kalian bisa menyesuaikan pengaturan yang kalian inginkan dan dapat menyesuaikannya dengan search engine.",
     "opt-2" => "Dengan mengunggah secara manual File Robots.txt",

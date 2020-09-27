@@ -115,7 +115,7 @@ id/page-title-meta-description-checker
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">@lang('metachecker.copy-6')</h2>
+          <h2 class="card-label">@lang('metachecker.copy-title-8')</h2>
         </div>
       </div>
       <div class="card-body">
@@ -129,17 +129,17 @@ id/page-title-meta-description-checker
     <div class="card card-custom">
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">@lang('metachecker.copy-0')</h2>
+          <h2 class="card-label">@lang('metachecker.copy-title-1')</h2>
         </div>
       </div>
       <div class="card-body">
-        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" target="_blank" style="color:blue" class="font-weight-bold">@lang('metachecker.copy-1')</p>
+        <p><a href="https://cmlabs.co/kamus-seo/apa-itu-serp/" target="_blank" style="color:blue" class="font-weight-bold">@lang('metachecker.copy-desc-1')</p>
         <table class="table" border="1px" bordercolor="#EBEDF3">
           <tbody>
             <tr>
               <th class="align-middle" style="text-align:center"> <i class="far fa-lightbulb icon-2x"></i> </th>
               <td class="align-middle">
-                <p class="font-weight-bold">@lang('metachecker.copy-2')</p>
+                <p class="font-weight-bold">@lang('metachecker.copy-subtitle-1')</p>
               </td>
             </tr>
           </tbody>
@@ -151,23 +151,132 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <p>@lang('metachecker.copy-3')</p>
+        <p>@lang('metachecker.copy-desc-2')</p>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">@lang('metachecker.copy-4')</h2>
+          <h2 class="card-label">@lang('metachecker.copy-title-3')</h2>
         </div>
       </div>
       <div class="card-body">
-        <p>@lang('metachecker.copy-5')</p>
+        <ol>
+          <li>@lang('metachecker.copy-list-3-1')</li>
+          <li>@lang('metachecker.copy-list-3-2')</li>
+          <li>@lang('metachecker.copy-list-3-3')</li>
+          <li>@lang('metachecker.copy-list-3-4')</li>
+        </ol>
       </div>
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">@lang('metachecker.copy-6')</h2>
+          <h2 class="card-label">@lang('metachecker.copy-title-4')</h2>
         </div>
       </div>
       <div class="card-body">
-        <p>@lang('metachecker.copy-7')</p>
+        <ol>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-4-1')</p>
+            <p>@lang('metachecker.copy-list-desc-4-1')</p>
+          </li>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-4-2')</p>
+            <p>@lang('metachecker.copy-list-desc-4-2')</p>
+          </li>
+        </ol>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-5')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>@lang('metachecker.copy-desc-5')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-6')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <ol>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-6-1')</p>
+            <p>@lang('metachecker.copy-list-desc-6-1-1')</p>
+            <p>@lang('metachecker.copy-list-desc-6-1-2')</p>
+          </li>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-6-2')</p>
+            <p>@lang('metachecker.copy-list-desc-6-2-1')</p>
+            <p>@lang('metachecker.copy-list-desc-6-2-2')</p>
+          </li>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-6-3')</p>
+            <p?>@lang('metachecker.copy-list-desc-6-3')</p>
+          </li>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-6-4')</p>
+            <p?>@lang('metachecker.copy-list-desc-6-4')</p>
+          </li>
+        </ol>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-7')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>@lang('metachecker.copy-desc-7')</p>
+        <ol>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-7-1')</p>
+            <p>@lang('metachecker.copy-list-desc-7-1')</p>
+          </li>
+          <li>
+            <p class="font-weight-bold">@lang('metachecker.copy-list-title-7-2')</p>
+            <p>@lang('metachecker.copy-list-desc-7-2')</p>
+          </li>
+        </ol>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-8')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+          <p>@lang('metachecker.copy-desc-8')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-9')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+          <p>@lang('metachecker.copy-desc-9')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('metachecker.copy-title-10')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+          <p>@lang('metachecker.copy-desc-10')</p>
+          <ol>
+            <li>
+              <p class="font-weight-bold">@lang('metachecker.copy-list-title-10-1')</p>
+              <p>@lang('metachecker.copy-list-desc-10-1')</p>
+            </li>
+            <li>
+              <p class="font-weight-bold">@lang('metachecker.copy-list-title-10-2')</p>
+              <p>@lang('metachecker.copy-list-desc-10-2')</p>
+            </li>
+            <li>
+              <p class="font-weight-bold">@lang('metachecker.copy-list-title-10-3')</p>
+              <p>@lang('metachecker.copy-list-desc-10-3')</p>
+            </li>
+            <li>
+              <p class="font-weight-bold">@lang('metachecker.copy-list-title-10-4')</p>
+              <p>@lang('metachecker.copy-list-desc-10-4')</p>
+            </li>
+          </ol>
       </div>
       <div class="card-header">
         <div class="card-title">
