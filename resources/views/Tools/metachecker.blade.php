@@ -19,6 +19,42 @@ id/page-title-meta-description-checker
 @section('content')
 @push('style')
 <style media="screen">
+  .custom-wrapper-desktop {
+    background-color:white;
+    border:1px solid #EEF0F8;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .custom-fixed-size {
+      width: 580px;
+    }
+  }
+
+  @media only screen and (max-width: 1300px) {
+    .custom-fixed-size {
+      width: 580px;
+      transform: scale(0.85);
+      margin-left: -37px;
+    }
+
+    .custom-fixed-size-1 {
+      transform: scale(0.9);
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .custom-fixed-size {
+      transform: scale(0.69);
+      margin-left: -87px;
+    }
+
+    .custom-fixed-size-1 {
+      transform: scale(0.8);
+      margin-left: -17px;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     #desktop {
       display: none;
@@ -56,10 +92,12 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
-          <span id="resulttitle">CMLABS / Content Marketing Labs Indonesia</span><br>
-          <span id="resulturl">https://cmlabs.co</span> <br>
-          <span id="resultdesc">@lang('metachecker.desc-result')</span>
+        <div class="custom-wrapper-desktop">
+          <div class="p-5 custom-fixed-size">
+            <span id="resulttitle">CMLABS / Content Marketing Labs Indonesia</span><br>
+            <span id="resulturl">https://cmlabs.co</span> <br>
+            <span id="resultdesc">@lang('metachecker.desc-result')</span>
+          </div>
         </div>
       </div>
     </div>
@@ -74,10 +112,12 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <div class="col-md-12 p-5" style="background-color:white; border:1px solid #EEF0F8; height:100%;">
-          <span id="resulturlmobile">https://cmlabs.co</span><br>
-          <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
-          <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
+        <div style="background-color:white; border:1px solid #EEF0F8; height:100%;">
+          <div class="p-5 custom-fixed-size-1">
+            <span id="resulturlmobile">https://cmlabs.co</span><br>
+            <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
+            <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
+          </div>
         </div>
       </div>
     </div>
@@ -90,7 +130,7 @@ id/page-title-meta-description-checker
     <div class="card card-custom mb-5">
       <div class="card-header">
         <div class="card-title">
-          <h2 class="card-label">URL's</h2>
+          <h2 class="card-label">URLs</h2>
         </div>
       </div>
       <div class="card-body">
@@ -119,7 +159,7 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <input id="desc" type="text" name="" class="form-control" value="@lang('metachecker.desc-result')"><br>
+        <textarea id="desc" type="text" name="" rows="3" class="form-control">@lang('metachecker.desc-result')</textarea><br>
         <a onclick="copy('desc')" style="cursor: pointer"> <small>@lang('metachecker.copy')</small></a>
           <small id="alertdesc"></small><br>
         <small id="desccount"></small>
