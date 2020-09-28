@@ -25,9 +25,24 @@ id/page-title-meta-description-checker
     width: 100%;
   }
 
+  .custom-wrapper-mobile {
+    border:1px solid #EEF0F8;
+    height:100%;
+    background: white;
+  }
+
+  .custom-fixed-size-1 {
+    height: 200px;
+    width: 253px;
+  }
+
   @media only screen and (min-width: 1400px) {
     .custom-fixed-size {
       width: 580px;
+    }
+
+    .custom-fixed-size-1 {
+      transform: scale(0.9);
     }
   }
 
@@ -39,7 +54,9 @@ id/page-title-meta-description-checker
     }
 
     .custom-fixed-size-1 {
-      transform: scale(0.9);
+      margin-top: -18px;
+      margin-left: -18px;
+      transform: scale(0.85);
     }
   }
 
@@ -50,8 +67,9 @@ id/page-title-meta-description-checker
     }
 
     .custom-fixed-size-1 {
-      transform: scale(0.8);
-      margin-left: -17px;
+      transform: scale(0.65);
+      margin-top: -33px;
+      margin-left: -43px;
     }
   }
 
@@ -112,7 +130,7 @@ id/page-title-meta-description-checker
         </div>
       </div>
       <div class="card-body">
-        <div style="background-color:white; border:1px solid #EEF0F8; height:100%;">
+        <div class="custom-wrapper-mobile">
           <div class="p-5 custom-fixed-size-1">
             <span id="resulturlmobile">https://cmlabs.co</span><br>
             <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
