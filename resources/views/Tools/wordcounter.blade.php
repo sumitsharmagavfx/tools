@@ -436,14 +436,28 @@ id/word-counter
   });
 </script>
 <script>
+var counter = 0;
 function myFunction() {
   document.getElementById("kd").style.borderBottom = "2px solid #24daff";
-
-  $('#textarea').popover().click(function () {
-    setTimeout(function () {
-        $('#textarea').popover('hide');
-    }, 5500);
-});
+  counter += 1;
+  // $('#textarea').popover().click(function () {
+  //   setTimeout(function () {
+  //       $('#textarea').popover('hide');
+  //   }, 2000);
+  // });
+  console.log(counter);
+  if (counter == 1) {
+    $('#textarea').popover().click(function () {
+      setTimeout(function () {
+          $('#textarea').popover('hide');
+      }, 3000);
+    });
+  }
+  else {
+    $('#textarea').popover().click(function () {
+      $('#textarea').popover('hide');
+    });
+  }
 }
 </script>
 @endpush
