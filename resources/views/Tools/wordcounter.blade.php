@@ -445,12 +445,11 @@ function myFunction() {
   //       $('#textarea').popover('hide');
   //   }, 2000);
   // });
-  console.log(counter);
   if (counter == 1) {
     $('#textarea').popover().click(function () {
       setTimeout(function () {
           $('#textarea').popover('hide');
-      }, 3000);
+      }, 24000);
     });
   }
   else {

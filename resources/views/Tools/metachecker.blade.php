@@ -19,19 +19,69 @@ id/page-title-meta-description-checker
 @section('content')
 @push('style')
 <style media="screen">
-  .custom-wrapper-desktop {
-    background-color:white;
-    border:1px solid #EEF0F8;
+  #mobile {
+    display: none;
+  }
+
+  #resulturlmobile {
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: none solid rgb(0,102,33);
+    color: #006621;
+  }
+
+  #resulttitlemobile {
+      font-size: 20px;
+      color: #1A0DAB;
+      line-height: 26px;
+      word-spacing: 0px;
+      text-decoration: none solid rgb(26,13,171);
+    }
+
+  #resultdescmobile {
+    font-size: 14px;
+    color: #3C4043;
+    line-height: 22.12px;
+    word-spacing: 0px;
+    text-decoration: none solid rgb(60,64,67);
+  }
+
+  table.table {
     width: 100%;
+  }
+  table tr th.meta-desktop,
+  table tr td.meta-desktop {
+    width: 60%;
+    /* background: red; */
+  }
+  table tr th.meta-mobile,
+  table tr td.meta-mobile {
+    width: 40%;
+    /* background: pink; */
+  }
+  .custom-wrapper-desktop {
+    background-color: white;
+    border: 1px solid #dadce6;
+    width: 44em;
+    height: 100%;
+    margin: 1.5rem 0 1.5rem 3rem;
   }
 
   .custom-wrapper-mobile {
-    border:1px solid #EEF0F8;
+    border:1px solid #dadce6;
+    width: 19em;
     height:100%;
     background: white;
+    margin: 1.5rem 1rem 1.5rem 1rem;
   }
 
+  .custom-fixed-size {
+    text-align: left;
+    width: 570px;
+    height: 100px;
+  }
   .custom-fixed-size-1 {
+    text-align: left;
     height: 200px;
     width: 253px;
   }
@@ -46,11 +96,16 @@ id/page-title-meta-description-checker
     }
   }
 
+  /* zoom 110% */
   @media only screen and (max-width: 1300px) {
     .custom-fixed-size {
       width: 580px;
-      transform: scale(0.85);
-      margin-left: -37px;
+      transform: scale(0.9);
+      margin-left: -27px;
+    }
+
+    .custom-wrapper-desktop { 
+      width: 40em;
     }
 
     .custom-fixed-size-1 {
@@ -58,29 +113,78 @@ id/page-title-meta-description-checker
       margin-left: -18px;
       transform: scale(0.85);
     }
+
+    .custom-wrapper-mobile {
+      width: 16em;
+      height: 13em;
+    }
   }
 
+  /* zoom 125% */
   @media only screen and (max-width: 1200px) {
     .custom-fixed-size {
-      transform: scale(0.69);
-      margin-left: -87px;
+      transform: scale(0.68);
+      margin-left: -90px;
+      margin-top: -13px;
+    }
+
+    .custom-wrapper-desktop { 
+      width: 30em;
+      height: 6em;
     }
 
     .custom-fixed-size-1 {
       transform: scale(0.65);
-      margin-top: -33px;
+      margin-top: -36px;
       margin-left: -43px;
+    }
+
+    .custom-wrapper-mobile {
+      width: 13em;
+      height: 10em;
     }
   }
 
   @media only screen and (max-width: 768px) {
-    #desktop {
-      display: none;
+      #desktop {
+        display: none;
+      }
+
+      #mobile {
+        display: block;
+        width: 100%;
+      }
+
+      .custom-wrapper-mobile {
+      border: 1px solid #dadce6;
+      background: white;
+      height: 100%;
+      margin: 0;
+      width: auto;
+      }
+
+      .custom-fixed-size-1 {
+        transform: scale(0.9);
+        margin: 0;
+        width: 280px;      
+      }
     }
 
-    #mobile {
-      width: 100%;
+    @media only screen and (max-width: 400px) {
+      .custom-fixed-size-1 {
+        transform: scale(0.8);
+        margin-left: -15px;
+      }
     }
+
+    @media only screen and (max-width: 320px) {
+      .custom-fixed-size-1 {
+        transform: scale(0.72);
+        margin-left: -35px;
+        width: 280px;      
+      }
+    }
+
   }
 </style>
 @endpush
@@ -100,29 +204,49 @@ id/page-title-meta-description-checker
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="col-lg-8 mb-5" id="desktop">
-    <!--begin::Card-->
+<div class="row" id="desktop">
+  <div class="col-lg-12 mb-5">
     <div class="card card-custom card-stretch">
-      <div class="card-header justify-content-center">
-        <div class="card-title">
-          <i class="fas fa-laptop icon-3x"></i>
-        </div>
-      </div>
-      <div class="card-body">
-        <div class="custom-wrapper-desktop">
-          <div class="p-5 custom-fixed-size">
-            <span id="resulttitle">CMLABS / Content Marketing Labs Indonesia</span><br>
-            <span id="resulturl">https://cmlabs.co</span> <br>
-            <span id="resultdesc">@lang('metachecker.desc-result')</span>
-          </div>
-        </div>
-      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" class="meta-desktop text-center"><i class="fas fa-laptop icon-3x"></i></th>
+            <th scope="col" class="meta-mobile text-center"><i class="fas fa-mobile icon-3x"></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="meta-desktop"> 
+              <center>
+                <div class="custom-wrapper-desktop">
+                  <div class="p-5 custom-fixed-size">
+                    <span id="resulttitle">CMLABS / Content Marketing Labs Indonesia</span><br>
+                    <span id="resulturl">https://cmlabs.co</span> <br>
+                    <span id="resultdesc">@lang('metachecker.desc-result')</span>
+                  </div>
+                </div>
+              </center>
+            </td>
+            <td class="meta-mobile">
+              <center>
+                <div class="custom-wrapper-mobile">
+                  <div class="p-5 custom-fixed-size-1">
+                    <span id="resulturlmobile">https://cmlabs.co</span><br>
+                    <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
+                    <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
+                  </div>
+                </div>
+              </center>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <!--end::Card-->
   </div>
-  <div class="col-lg-4 mb-5" id="mobile">
-    <!--begin::Card-->
+</div>
+
+<div class="row">
+  <div class="col-lg-12 mb-5" id="mobile">
     <div class="card card-custom card-stretch">
       <div class="card-header justify-content-center">
         <div class="card-title">
@@ -131,18 +255,19 @@ id/page-title-meta-description-checker
       </div>
       <div class="card-body">
         <div class="custom-wrapper-mobile">
-          <div class="p-5 custom-fixed-size-1">
-            <span id="resulturlmobile">https://cmlabs.co</span><br>
-            <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
-            <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
-          </div>
+          <center>
+            <div class="p-5 custom-fixed-size-1">
+              <span id="resulturlmobile">https://cmlabs.co</span><br>
+              <span id="resulttitlemobile">CMLABS / Content Marketing Labs Indonesia</span> <br>
+              <span id="resultdescmobile">@lang('metachecker.desc-result')</span>
+            </div>
+          </center>
         </div>
       </div>
     </div>
-    <!--end::Card-->
   </div>
-
 </div>
+
 <div class="row " data-sticky-container>
   <div class="col-lg-8 mb-5">
     <div class="card card-custom mb-5">
