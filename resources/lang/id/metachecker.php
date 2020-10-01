@@ -6,7 +6,7 @@ return [
     "copy" => "Salin ke clipboard!",
     "btn-get" => "Cek Judul dan Meta Deskripsi dari URL",
     "page-title" => "Judul Halaman",
-    "meta-title" => "Page Title and Meta Description Length Checker",
+    "meta-title" => "Pemeriksa Panjang Judul Halaman dan Meta Deskripsi Online",
     "meta-desc" => "Cek panjang Judul Halaman dan Meta Description website Anda di content writing Tools di website CMLABS. Tingkatkan skill menulis Anda!",
     "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
     "copy-title-1" => "Mengapa Anda membutuhkan Alat ini?",

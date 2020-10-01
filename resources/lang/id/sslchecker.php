@@ -65,6 +65,6 @@ return [
     'ssl-type-list-desc-2-3-2' => 'Sebagai contoh sederhana apabila website aku.com menggunakan sertifikat Single Domain dan memilih melindungi domain utama, maka website subdomain blog.aku.com tidak akan terlindungi. Begitu juga sebaliknya apabila memilih melindungi sub domain maka domain utama aku.com tidak akan terlindungi.',
     'not-ssl' => 'SSL Anda tidak terpasang',
     "meta-title" => "SSL Checker, Periksa Sertifikat SSL Website",
-    "meta-desc" => "Gunakan cmlabs SSL Checker untuk membantu anda identifikasi masalah pada instalasi sertifikat SSL website secara online.",
+    "meta-desc" => "Cek SSL untuk membantu Anda mengidentifikasi masalah pada instalasi sertifikat SSL situs web secara online, gratis, dan cepat",
     "meta-keyword" => "ssl, ssl tool, ssl checker, check ssl certificate, web ssl certificate",
 ];

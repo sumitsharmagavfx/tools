@@ -85,7 +85,7 @@ return [
     "copy-desc-6-25" => "tipe konten",
     "copy-desc-6-26" => "itu cukup banyak. Pada akhirnya pekerjan seorang penulis itu akan rumit jika dihadapkan ke kasus-kasus yang dihadapi. Lalu Alat ini tepat untuk siapa saja?",
     "meta-title" => "Penghitung Kata Online - Cek Jumlah kata Hingga Density",
-    "meta-desc" => "Penghitung katang online, Dapat menghitung jumlah kata, karakter, kalimat, hingga kepadatan kata kunci",
+    "meta-desc" => "Alat penghitung kata online. Masukan teks dan situs kami akan bekerja secara otomatis menghitung kata, karakter, kepadatan kata kunci & waktu baca.",
     "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
     "popover-title" => "Tulis atau tempel tulisan disini!",
     "popover-content" => "Sangat mudah! Silahkan mulai menulis atau tempel konten kamu di kolom atas. <br /><br /><strong>Informasi Penting</strong>: setelah itu, kamu dapat langsung cek hasil <a href='#kepadatan-kata-kunci'><u>kepadatan kata-kunci</u></a> pada bagian kanan (atau bagian bawah, ketika berada di versi-mobile web). <br /><br />Pelajari lebih lanjut perihal <a href='#spesifikasi-counter'><u>spesifikasi counter</u></a> disini. <br /><br /><a href='#apakah-saya-butuh-alat-ini' class='label label-inline font-weight-normal label-light-info' >Apakah saya butuh alat ini?</a>",

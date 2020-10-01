@@ -58,7 +58,7 @@ return [
     "desc-9-3" => "Anda juga dapat memanfaatkan halaman FAQ Anda untuk memasukkan long tail keyword yang dicari pelanggan. Karena Anda sudah memberikan informasi tentang bisnis Anda, Anda dapat menambahkan konten yang kaya kata kunci sehingga ketika seseorang mencari produk dan layanan terkait, mereka akan menemukan halaman FAQ.",
     "desc-9-4" => "Pertanyaan dan jawaban yang Anda sertakan pada halaman FAQ Anda harus mewakili pemikiran pelanggan. Ketika FAQ telah terisi banyak dan lengkap, halaman ini akan berperingkat tinggi di mesin pencari.",
     "desc-9-5" => "Inilah sebabnya Anda harus memasukkan pertanyaan spesifik dan terperinci di halaman FAQ Anda. Laman ini harus berisi informasi yang relevan tentang bisnis Anda sehingga dapat muncul di mesin pencari seperti Google dan Bing.",
-    "meta-title" => "FAQ Page — Realtime JSON-LD Schema Generator",
+    "meta-title" => "Buat Skema FAQ - JSON-LD Skema Generator",
     "meta-desc" => "Gunakan realtime JSON-LD Schema Generator (FAQ Page) dari CMLABS untuk membuat FAQ Schema dan aktifkan cuplikan kaya SERP di Google.",
     "meta-keyword" => "faq, faq schema, google rich result, schema generator, google serp"
 ];
