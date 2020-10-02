@@ -49,6 +49,127 @@ id
     width: 75%;
   }
 }
+
+@media only screen and (max-width: 414px) {
+  .button {
+    display: none;
+  }
+  .image{
+    width: 25%;
+  }
+  .title{
+    width: 100%;
+  }
+  .title-1{
+    width: 55%;
+  }
+  .title-2 {
+    width: 50%;
+  }
+  .title-2-0 {
+    width: 50%;
+  }
+  .adjust {
+    width: 80%;
+    padding-left: 7%;
+  }
+  .faq-title {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .button {
+    display: none;
+  }
+  .image{
+    width: 25%;
+  }
+  .title{
+    width: 100%;
+  }
+  .title-1{
+    width: 50%;
+  }
+  .title-2 {
+    width: 50%;
+  }
+  .title-2-0 {
+    width: 50%;
+    margin-left: 15px;
+  }
+  .adjust {
+    width: 80%;
+    padding-left: 7%;
+  }
+  .faq-title {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .button {
+    display: none;
+  }
+  .image{
+    width: 25%;
+  }
+  .title{
+    width: 100%;
+    padding-left: 5px;
+  }
+  .title-1{
+    width: 50%;
+  }
+  .title-2 {
+    width: 50%;
+  }
+  .adjust {
+    width: 80%;
+    padding-left: 7%;
+  }
+  .title-2-0 {
+    width: 50%;
+    margin-left: 15px;
+  }
+  /* .ol-content {
+    background: red;
+    width: 75%;
+  } */
+  .faq-title {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .button {
+    display: none;
+  }
+  .image{
+    width: 25%;
+  }
+  .title{
+    width: 50%;
+    padding-left: 10px;
+  }
+  .title-1{
+    width: 50%;
+  }
+  .title-2 {
+    width: 50%;
+  }
+  .title-2-0 {
+    width: 50%;
+    margin-left: 10px;
+  }
+  /* .ol-content {
+    background: red;
+    width: 75%;
+  } */
+  .faq-title {
+    width: 90%;
+  }
+} 
 </style>
 @endpush
 @section('content')
@@ -94,10 +215,10 @@ id
                             <td rowspan="2" width="15%"><a href="{{'/'.$local.$datum['route']}}"><button class="button btn btn-primary btn-sm font-weight-bolder text-uppercase text-white form-control">Launch</button></a></td>
                           </tr>
                           <tr>
-                            <td>
+                            <td width="72%">
                                 <a
                                     href="#"
-                                    class="mr-lg-8 mr-5 mb-lg-0 mb-2"
+                                    class="mr-lg-8 mr-5 mb-lg-0 mb-2 title"
                                     data-toggle="modal"
                                     data-target="#modaldetail"
                                     data-title="{{$datum['title']}}"
@@ -267,7 +388,7 @@ id
                         <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                             01
                         </span></th>
-                        <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
+                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-1')</span></td>
                       </tr>
                       <tr>
                         <td> <p>@lang('home.desc-3-1-1')</p> </td>
@@ -279,7 +400,7 @@ id
                         <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                             02
                         </span></th>
-                        <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
+                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-2')</span></td>
                       </tr>
                       <tr>
                         <td> <p>@lang('home.desc-3-2-1')</p> </td>
@@ -291,7 +412,7 @@ id
                         <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="svg-icon svg-icon-2x p-4" style="background-color:#EBFAFF; border-radius:5px; color:#0095EB">
                             03
                         </span></th>
-                        <td width="90%" class="title"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
+                        <td width="90%" class="title-1"><span class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">@lang('home.sub-title-3-3')</span></td>
                       </tr>
                       <tr>
                         <td> <p>@lang('home.desc-3-3-1')</p> </td>
@@ -319,7 +440,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr valign="center">
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center">
+                                <td width="90%" class="title-2" valign="center">
                                     <p>@lang('home.desc-4-1-1')</p>
                                 </td>
                               </tr>
@@ -327,7 +448,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center">
+                                <td width="90%" valign="center" class="title-2">
                                     <p>@lang('home.desc-4-1-2')</p>
                                 </td>
                               </tr>
@@ -335,7 +456,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center">
+                                <td width="90%" valign="center" class="title-2">
                                     <p>@lang('home.desc-4-1-3')</p>
                                 </td>
                               </tr>
@@ -343,7 +464,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="@if($local == 'id') pt-4 @else pt-1 @endif" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center">
+                                <td width="90%" valign="center" class="title-2">
                                     <p>@lang('home.desc-4-1-4')</p>
                                 </td>
                               </tr>
@@ -351,7 +472,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%" valign="center">
+                                <td width="90%" valign="center" class="title-2">
                                     <p>@lang('home.desc-4-1-5')</p>
                                 </td>
                               </tr>
@@ -361,7 +482,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-1')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-1-1')</li>
@@ -375,7 +496,7 @@ id
                             <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-2')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-2-1')</li>
@@ -386,10 +507,11 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-3')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-3-1')</li>
@@ -398,10 +520,11 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-4')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-4-1')</li>
@@ -411,10 +534,11 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-5')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-5-1')</li>
@@ -424,10 +548,11 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-6')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-6-1')</li>
@@ -437,10 +562,11 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-7')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-7-1')</li>
@@ -449,10 +575,12 @@ id
                                     </ol>
                                 </td>
                               </tr>
-                            </table><table width="100%" class="mb-5">
+                            </table>
+                            <table width="100%" class="mb-5">
                               <tr>
                                 <th rowspan="2" class="pt-4" valign="top" width="10%"><span class="flaticon2-check-mark pr-4 pl-4 pt-3 pb-3" style="background-color:#EBFAFF; border-radius:50%; color:#0095EB"></span></th>
-                                <td width="90%">
+                                <td width="90%" class="title-2-0">
+                                <div class="adjust">
                                     <span class="text-dark font-size-h5 font-weight-bold">@lang('home.sub-sub-title-4-2-8')</span>
                                     <ol class="pl-5">
                                       <li>@lang('home.desc-4-2-8-1')</li>
@@ -465,6 +593,7 @@ id
                                       </ul>
                                       <li>@lang('home.desc-4-2-8-7')</li>
                                     </ol>
+                                </div>
                                 </td>
                               </tr>
                             </table>
@@ -483,7 +612,9 @@ id
                      <div class="card">
                       <div class="card-header" id="headingOne2">
                        <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                       <div class="faq-title">
                         @lang('home.sub-title-5-1')
+                       </div>
                        </div>
                       </div>
                       <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -497,7 +628,9 @@ id
                      <div class="card">
                       <div class="card-header" id="headingTwo2">
                        <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo2">
+                       <div class="faq-title">
                         @lang('home.sub-title-5-2')
+                       </div>
                        </div>
                       </div>
                       <div id="collapseTwo2" class="collapse"  data-parent="#accordionExample2">
@@ -518,7 +651,9 @@ id
                      <div class="card">
                       <div class="card-header" id="headingThree2">
                        <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree2">
+                       <div class="faq-title">
                         @lang('home.sub-title-5-3')
+                       </div>
                        </div>
                       </div>
                       <div id="collapseThree2" class="collapse" data-parent="#accordionExample2">
@@ -534,7 +669,9 @@ id
                      <div class="card">
                       <div class="card-header" id="headingFour2">
                        <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour2">
+                       <div class="faq-title">
                         @lang('home.sub-title-5-4')
+                       </div>
                        </div>
                       </div>
                       <div id="collapseFour2" class="collapse" data-parent="#accordionExample2">
