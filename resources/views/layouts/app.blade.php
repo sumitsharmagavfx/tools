@@ -93,6 +93,9 @@
             color: #ffffff !important;
             background-color: #53f9ad !important;
         }
+        .borderless td {
+            border: 0 !important;
+        }
         @media only screen and (max-width: 991px) {
             .logo-mobile {
                 display: block;

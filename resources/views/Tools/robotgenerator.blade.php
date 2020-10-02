@@ -151,6 +151,131 @@
         <p>@lang('robot.desc2')</p>
         <p>@lang('robot.desc2-2')</p>
       </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('robot.title-3')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>@lang('robot.desc3')</p>
+        <p>@lang('robot.desc3-2')</p>
+        <p>@lang('robot.desc3-3')</p>
+        <p>@lang('robot.desc3-4')</p>
+        <p>@lang('robot.desc3-5')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('robot.title-4')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>@lang('robot.desc4')</p>
+        <p>@lang('robot.desc4-2')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('robot.title-5')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>@lang('robot.desc5')</p>
+        <table class="table border-0">
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Disallow: /admin/</td>
+                  <td style="text-align: center;">=</td>
+                  <td>@lang('robot.list-5-1')</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>Disallow: /config/</td>
+                  <td style="text-align: center;">=</td>
+                  <td>@lang('robot.list-5-2')</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>User-agent: *</td>
+                  <td style="text-align: center;">=</td>
+                  <td>@lang('robot.list-5-3')</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>Allow: /</td>
+                  <td style="text-align: center;">=</td>
+                  <td>@lang('robot.list-5-4')</td>
+              </tr>
+          </tbody>
+      </table>
+        <!-- <ol>
+          <li>@lang('robot.list-5-1')</li>
+          <li>@lang('robot.list-5-2')</li>
+          <li>@lang('robot.list-5-3')</li>
+          <li>@lang('robot.list-5-4')</li>
+        </ol> -->
+        <p>@lang('robot.desc5-2')</p>
+      </div>
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('robot.title-6')</h2>
+        </div>
+      </div>
+      <div class="card-body">
+        <ul style="list-style-type:disc">
+          <li>
+            <p class="font-weight-bolder">@lang('robot.opt-1')</p>
+            <p>@lang('robot.sub-opt-1')</p>
+            <ol>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-1-1')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-1-2')</p>
+                <p>@lang('robot.list-desc-6-1-2')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-1-3')</p>
+                <p>@lang('robot.list-desc-6-1-3')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-1-4')</p>
+                <p>@lang('robot.list-desc-6-1-4')</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p class="font-weight-bolder">@lang('robot.opt-2')</p>
+            <p>@lang('robot.sub-opt-2')</p>
+            <ol>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-2-1')</p>
+                <p>@lang('robot.list-desc-6-2-1')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-2-2')</p>
+                <p>@lang('robot.list-desc-6-2-2')</p>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <p class="font-weight-bolder">@lang('robot.opt-3')</p>
+            <ol>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-3-1')</p>
+                <p>@lang('robot.list-desc-6-3-1')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-3-2')</p>
+                <p>@lang('robot.list-desc-6-3-2')</p>
+              </li>
+              <li>
+                <p class="font-weight-bold">@lang('robot.list-title-6-3-3')</p>
+                <p>@lang('robot.list-desc-6-3-3')</p>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </div>
     </div>
     <!--end::Card-->
   </div>
@@ -160,6 +285,15 @@
 </div>
 
 @endsection
+
+<!-- @push('styles')
+<style>
+  .borderless td, .borderless th {
+    border: 0 !important;
+  }
+</style>
+@endpush -->
+
 @push('script')
 <script type="application/ld+json">
   {
