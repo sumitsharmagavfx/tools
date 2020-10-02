@@ -28,7 +28,10 @@
             </script>
         @endif
     @if(env('APP_ENV')==='development')
-        <meta name="robots" content="noindex">
+        <meta name="robots" content="noindex,nofollow">
+    @endif
+    @if(env('APP_ENV')==='production')
+        <meta name="robots" content="index,follow">
     @endif
     <link rel="alternate" hreflang="en-ID" href="https://tools.cmlabs.co/@yield('en-link')" />
     <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co/@yield('id-link')" />
