@@ -1,0 +1,125 @@
+<div id="kt_header" class="header header-fixed" style="z-index: 5;">
+    <!--begin::Container-->
+    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+        <!--begin::Left-->
+        <div class="d-flex align-items-stretch mr-2">
+            <!--begin::Page Title-->
+            <span class="d-none text-dark d-lg-flex align-items-center mr-10 mb-0 h3">@lang('layout.title')</span>
+            <!--end::Page Title-->
+        </div>
+        <!--end::Left-->
+        <!--begin::Topbar-->
+        <div class="topbar">
+
+            <!--begin::User-->
+
+            <div class="topbar-item">
+
+                <a href="/analytics" target="_blank">
+                    <!-- Analytic with Countdown -->
+                    <!-- <div class="analytic-links ml-5 mr-5 font-weight-bold"><span class="px-2" id="demo"></span>@if($local == "id") Analitik @else Analytics @endif</div> -->
+
+                    <!-- Analytic without Countdown -->
+                    <div class="analytic-links ml-5 mr-5 font-weight-bold">@if($local == "id") Analitik @else Analytics @endif</div>
+                </a>
+                <div class="dropdown mr-3">
+                    <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @lang('layout.blog')
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-md py-5">
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-1')">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">@lang('layout.blog-1')</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-2')">
+                                    <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">@lang('layout.blog-2')</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">20+</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" target="_blank" href="@lang('layout.link-blog-3')">
+                                <span class="navi-icon"><i class="fa fa-bookmark text-black-90"></i></span>
+                                    <span class="navi-text">@lang('layout.blog-3')</span>
+                                    <span class="label label-dark-80 font-weight-bold label-inline">50+</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dropdown mr-3">
+                    <button class="btn dropdown-toggle font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    @lang('layout.language')
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul class="navi navi-hover">
+                            <li class="navi-item">
+                                <a class="navi-link" href="/en/version">
+                                    <span class="navi-text">English</span>
+                                </a>
+                            </li>
+                            <li class="navi-item">
+                                <a class="navi-link" href="/id/version">
+                                    <span class="navi-text">Indonesia</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                  <!-- <button type="button" class="btn btn-fixed-height" name="button" style="background-color:#32D1FF; color:white">
+                    <img alt="Logo" src="{{asset('media/logos/logo-letter-10.png')}}" height="26px" class="mr-1" />
+                    cmlabs</button>
+                </a> -->
+                <!-- <a href="/construction" class="btn btn-info pulse pulse-light btn-fixed-height">
+                    <div class="pulse pulse-light">
+                        <span class="pulse-ring" style="margin: -7px;"></span>
+                      <span class="svg-icon svg-icon-light svg-icon-2x">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <rect opacity="0.300000012" x="0" y="0" width="24" height="24"/>
+                              <polygon fill="#000000" fill-rule="nonzero" opacity="0.3" points="7 4.89473684 7 21 5 21 5 3 11 3 11 4.89473684"/>
+                              <path d="M10.1782982,2.24743315 L18.1782982,3.6970464 C18.6540619,3.78325557 19,4.19751166 19,4.68102291 L19,19.3190064 C19,19.8025177 18.6540619,20.2167738 18.1782982,20.3029829 L10.1782982,21.7525962 C9.63486295,21.8510675 9.11449486,21.4903531 9.0160235,20.9469179 C9.00536265,20.8880837 9,20.8284119 9,20.7686197 L9,3.23140966 C9,2.67912491 9.44771525,2.23140966 10,2.23140966 C10.0597922,2.23140966 10.119464,2.2367723 10.1782982,2.24743315 Z M11.9166667,12.9060229 C12.6070226,12.9060229 13.1666667,12.2975724 13.1666667,11.5470105 C13.1666667,10.7964487 12.6070226,10.1879981 11.9166667,10.1879981 C11.2263107,10.1879981 10.6666667,10.7964487 10.6666667,11.5470105 C10.6666667,12.2975724 11.2263107,12.9060229 11.9166667,12.9060229 Z" fill="#000000"/>
+                          </g>
+                        </svg>
+                      </span>
+                        @lang('layout.paid-tools')
+                    </div>
+                </a> -->
+            </div>
+            <!--end::User-->
+        </div>
+        <!--end::Topbar-->
+    </div>
+    <!--end::Container-->
+</div>
+@push('script')
+    <!-- Countdown Script -->
+  <!-- <script type="text/javascript">
+  var deadline = new Date("dec 1, 2020 12:00:00").getTime();
+  var x = setInterval(function() {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    @if($local == "id")
+    document.getElementById("demo").innerHTML = days + "h "
+    + hours + "j " + minutes + "m " + seconds + "d ";
+    @else
+    document.getElementById("demo").innerHTML = days + "d "
+    + hours + "h " + minutes + "m " + seconds + "s ";
+    @endif
+        if (t < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+  </script> -->
+@endpush
