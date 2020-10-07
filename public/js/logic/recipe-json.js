@@ -7,7 +7,7 @@ let main =
         "@context": "https://schema.org",
         "@type": "recipe",
         "name": "",
-        "image": [],
+        "image": "",
         "description": "",
         "keywords": "",
         "author": {
@@ -23,6 +23,8 @@ let main =
         },
         "recipeInstructions": []
     };
+
+let imageSingle = true;
 
 jQuery(document).ready(function () {
     let deletes = lang ==='en'? 'Delete' : 'Hapus';
@@ -40,16 +42,25 @@ jQuery(document).ready(function () {
     
     print();
     jQuery('#add-imageUrl').click(function () {
-        
-        let index = parseInt(jQuery(this).data('id'));
-        main.mainEntity.imageUrl[index] = [""];
+        if (imageSingle) {
+            let getImageSingle = main.image;
+            console.log(getImageSingle);
+            main.image = [
+                getImageSingle,
+                ""
+            ];
+        } else {
+            main.image.push("");
+        }
         print();
-        jQuery('#image').append("<button type=\"button\" class=\"btn btn-danger mb-2 deleteImage\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 image\" placeholder=\""+imageUrl+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\">"
+        
+        jQuery('#image').append("<button type=\"button\" class=\"btn btn-danger mb-2 deleteImage\" name=\"button\" data-id=\""+(main.image.length-1)+"\">"+deletes+"</button>\n" +
+            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 image\" placeholder=\""+imageUrl+" :\" value=\"\" data-id=\""+(main.image.length-1)+"\">"
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
         sticky.update();
+        imageSingle = false;
     });
 });
 
@@ -145,8 +156,12 @@ jQuery(document).on('keyup', '.name', function () {
 jQuery(document).on('keyup', '.image', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
-    main.image = jQuery(this).val();
-    main.nutrition.thumbnailUrl =jQuery(this).val();
+    if (imageSingle) {
+        main.image = jQuery(this).val();
+    } else {
+        main.image[index] = jQuery(this).val();
+    }
+    
     print();
 });
 
@@ -380,15 +395,19 @@ jQuery(document).on('keyup', '.publisher', function () {
 jQuery(document).on('click', '.deleteImage', function () {
     let index = parseInt(jQuery(this).data('id'));
     if (index!==0){
-        main.mainEntity.splice(index, 1);
+        main.image.splice(index, 1);
         print();
-        for (let i = index + 1; i < main.mainEntity.length + 1; i++) {
-            jQuery('.image[data-id=' + (i - 1) + ']').val(jQuery('.image[data-id=' + (i) + ']').val())
+        for (let i = 1; i < main.image.length + 1; i++) {
+            jQuery('.image[data-id=' + i + ']').val(main.image[i])
         }
-        jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.image[data-id=' + main.mainEntity.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
+        jQuery('.deleteImage[data-id=' + main.image.length + ']').remove();
+        jQuery('.image[data-id=' + main.image.length + ']').remove();
+        
+        if (main.image.length == 1) {
+            imageSingle = true;
+            main.image = main.image[0]
+            print()
+        }
     }
     sticky.update();
 });
