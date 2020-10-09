@@ -29,6 +29,6 @@ return [
     "copy-6-1"=>"Situs web dibuat agar informasi yang dikandungnya dapat ditemukan oleh pengguna. Oleh karena itu impian setiap pemilik situs web adalah untuk mencapai peringkat tertinggi dalam SERP. Membuat, mengirim, dan memperbarui sitemap menggunakan sitemap generator akan sangat membantu memastikan Anda memperoleh peringkat yang lebih tinggi dalam SERP untuk kata kunci yang ditargetkan.",
     "copy-6-2"=>"Rahasia untuk mendapatkan hasil terbaik dari generator sitemap terletak pada kebutuhan spesifik Anda. Mungkin ada banyak tool di internet, tetapi tidak ada jaminan bahwa semuanya efektif. Karena itu Anda harus meluangkan waktu, memeriksa tools ini dan pilih satu yang menawarkan hasil nyata untuk Anda. Saat ini, Sitemap Generator adalah yang terbaik, cobalah tool ini dan bisnis Anda akan menigkat pesat dari sebelumnya. Membuat dan memperbarui sitemap kini mudah dan bermanfaat.",
     "meta-title" => "Buat Sitemap Website Anda Gratis , Mudah, dan Cepat",
-    "meta-desc" => "Sitemap generator adalah alat untuk membuat peta situs XML secara gratis dari CMLabs. Tingkatkan visibilitas situs web Anda di mesin pencari.",
+    "meta-desc" => "Buat peta situs atau sitemap XML gratis dengan Sitemap generator dari cmlabs. Pastikan website terdaftar di Google index.",
     "meta-keyword" => "sitemap generator, sitemap, sitemap check, seo tool, sitemap xml, download sitemap",
 ];

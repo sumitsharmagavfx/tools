@@ -69,7 +69,7 @@ return [
     "copy-60"=>"Chrome User Experience Report mengumpulkan data kecepatan real-time dari pengguna yang ikut serta dan mensyaratkan bahwa halaman root asal harus bersifat publik (dapat dijelajahi dan diindeks) dan memiliki jumlah sampel berbeda yang cukup yang memberikan pandangan yang representatif, anonim tentang kinerja asal di semua URL asal.",
     "copy-61"=>"Data Lab",
     "meta-title" => "Test Kecepatan Website Anda Dengan Page Speed Test",
-    "meta-desc" => "Gunakan Page Speed Tool dari CMLABS untuk melihat skor performa, aksesibilitas, SEO, dan PWA dari website Anda.",
+    "meta-desc" => "Cek skor performa, aksesibilitas, SEO, dan PWA dari website Anda menggunakan Pagespeed test tool gratis dan cepat.",
     "meta-keyword" => "google page speed, page speed test, page speed, pagespeed test, page speed tool",
     "subtitle" => "CMLABSDEV",
     "btn-analysis" => "Analisa URL",

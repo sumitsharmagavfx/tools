@@ -7,7 +7,7 @@ return [
     "btn-get" => "Cek Judul dan Meta Deskripsi dari URL",
     "page-title" => "Judul Halaman",
     "meta-title" => "Pemeriksa Panjang Judul Halaman dan Meta Deskripsi Online",
-    "meta-desc" => "Cek panjang Judul Halaman dan Meta Description website Anda di content writing Tools di website CMLABS. Tingkatkan skill menulis Anda!",
+    "meta-desc" => "Cek panjang Judul Halaman dan Meta Description di tampilan Google menggunakan tool meta length checker dari CMLABS.",
     "meta-keyword" => "seo, jasa seo, seo enterprise, content marketing, content writer, google",
     "copy-title-1" => "Mengapa Anda membutuhkan Alat ini?",
     "copy-desc-1"=>"SERP</a>, singkatan dari <i class=\"font-weight-bold\" style=\"color:black; font-size:1rem\">Search Engine Results Page</i> menjadi medium penting dari hasil aktifitas SEO (Search Engine Optimization). Pekerjaan ini menuntut perhatian khusus dari setiap pelaku marketers, dari junior hingga level senior. Tiga atribut paling penting untuk SERP adalah <b>URL</b>, <b>Judul Halaman</b>, dan <b>Meta Deskripsi</b>",

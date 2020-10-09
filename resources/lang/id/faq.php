@@ -59,6 +59,6 @@ return [
     "desc-9-4" => "Pertanyaan dan jawaban yang Anda sertakan pada halaman FAQ Anda harus mewakili pemikiran pelanggan. Ketika FAQ telah terisi banyak dan lengkap, halaman ini akan berperingkat tinggi di mesin pencari.",
     "desc-9-5" => "Inilah sebabnya Anda harus memasukkan pertanyaan spesifik dan terperinci di halaman FAQ Anda. Laman ini harus berisi informasi yang relevan tentang bisnis Anda sehingga dapat muncul di mesin pencari seperti Google dan Bing.",
     "meta-title" => "Buat Skema FAQ - JSON-LD Skema Generator",
-    "meta-desc" => "Gunakan realtime JSON-LD Schema Generator (FAQ Page) dari CMLABS untuk membuat FAQ Schema dan aktifkan cuplikan kaya SERP di Google.",
+    "meta-desc" => "Gunakan JSON-LD Schema Generator untuk membuat FAQ Schema website dan aktifkan cuplikan kaya SERP di Google.",
     "meta-keyword" => "faq, faq schema, google rich result, schema generator, google serp"
 ];
