@@ -1,7 +1,7 @@
 <?php
 return [
     "meta-title" => "Buat File Robots.txt Website Anda Dengan Generator Robots.txt",
-    "meta-desc" => "Alat Pembuat Txt Robot Gratis dari CMLABS untuk membantu mesin telusur mengindeks situs Anda dengan lebih tepat",
+    "meta-desc" => "Robots.txt Generator gratis dari CMLABS dikembangkan untuk membantu Google mengindeks situs web Anda dengan lebih tepat",
     "meta-keyword" => "robot, robot txt, generator txt robot, generator, generator robot",
     "subtitle"  => "PEMBUAT ROBOTS.txt ONLINE",
     "drop1" => "AKSES ROBOT DEFAULT",

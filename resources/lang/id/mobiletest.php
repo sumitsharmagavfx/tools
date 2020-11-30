@@ -36,7 +36,7 @@ return [
     "sub-title-4-6" => "Elemen yang dapat diklik terlalu berdekatan",
     "desc-4-7" => "Elemen yang dapat disentuh, seperti tombol dan link navigasi yang berdekatan akan membuat pengguna ponsel kesulitan untuk mengetuk elemen yang diinginkan dengan jari mereka tanpa terganggu elemen di sebelahnya. Untuk memperbaiki kesalahan ini, pastikan untuk mengukur dengan benar tombol spasi dan ruang serta link navigasi agar sesuai untuk pengunjung seluler.",
     "meta-title" => "Tes Keadaan Website Mobile Anda dengan Mobile Friendly Test",
-    "meta-desc" => "Alat Pengujian Ramah Seluler dari CMLABS adalah cara yang cepat dan mudah untuk menguji apakah laman situs Anda ramah seluler",
+    "meta-desc" => "Ingin tahu tampilan website di perangkat seluler? Gunakan Mobile Friendly Test tool, tersedia tampilan dengan berbagai rasio.",
     "meta-keyword" => "google mobile friendly, mobile friendly, mobile test, google, mobile test tool, mobile friendly test, mobile friendly tool",
     "subtitle" => "CMLABSDEV",
     "result-title" => "Hasil Tes",
