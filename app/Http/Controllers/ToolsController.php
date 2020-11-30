@@ -41,64 +41,6 @@ class ToolsController extends Controller
         $local = App::getLocale();
         return view('Tools/faq', compact('local', 'dataID', 'dataEN'));
     }
-    
-    public function article($lang)
-    {
-        App::setLocale($lang);
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/article', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function person($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/person', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function howto($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/howto', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function breadcrumb($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/breadcrumb', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function recipe($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/recipe', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function JobPosting($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/jobPosting', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function product($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/product', compact('local', 'dataID', 'dataEN'));
-    }
-
-    public function event($lang){
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
-        $local = App::getLocale();
-        return view('Tools/event', compact('local', 'dataID', 'dataEN'));
-    }
 
     public function wordcounter($lang)
     {
