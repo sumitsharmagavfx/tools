@@ -15,7 +15,7 @@
 
             <div class="topbar-item">
 
-                <a href="/analytics" target="_blank">
+                <a href="@if($local == "id") https://analytics.cmlabs.co/id @else https://analytics.cmlabs.co/en @endif" target="_blank">
                     <!-- Analytic with Countdown -->
                     <!-- <div class="analytic-links ml-5 mr-5 font-weight-bold"><span class="px-2" id="demo"></span>@if($local == "id") Analitik @else Analytics @endif</div> -->
 
