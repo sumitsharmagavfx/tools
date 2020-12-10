@@ -11,6 +11,7 @@ var input = document.querySelectorAll('textarea')[0],
     topKeywords5 = document.querySelector('#top5');
 
 input.innerHTML = sessionStorage.getItem("text");
+input.innerHTML = localStorage.getItem("text");
 characterCount.innerHTML = sessionStorage.getItem("char");
 characterCount.innerHTML = 0;
 wordCount.innerHTML = sessionStorage.getItem("words");
@@ -79,6 +80,7 @@ jQuery('#reset').click(function () {
 
 function start(){
     sessionStorage.setItem("text", input.value);
+    localStorage.setItem("text", input.value);
     console.clear();
 
     characterCount.innerHTML = input.value.length;
