@@ -80,7 +80,8 @@ jQuery('#reset').click(function () {
 
 function start(){
     sessionStorage.setItem("text", input.value);
-    // localStorage.setItem("text", input.value);
+    // localStorage.
+    // setItem("text", input.value);
     console.clear();
 
     characterCount.innerHTML = input.value.length;
