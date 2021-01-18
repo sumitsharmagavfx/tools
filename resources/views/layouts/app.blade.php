@@ -13,7 +13,7 @@
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('meta-desc')"/>
     <meta property="og:url" content="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>"/>
-    <meta property="og:image" content="{{asset('media/logos/logo-letter-9.png')}}" />
+    <meta property="og:image" content="{{asset('media/logos/new/new-logo-default.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
     @if(env('APP_ENV')==='production')
@@ -36,7 +36,7 @@
     <link rel="alternate" hreflang="en-ID" href="https://tools.cmlabs.co/@yield('en-link')" />
     <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co/@yield('id-link')" />
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
@@ -49,8 +49,22 @@
     <link href="{{asset('css/themes/layout/header/menu/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/themes/layout/aside/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
+
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css">
     @stack('style')
     <style media="screen">
+    :root {
+        --white: #ffffff;
+        --black: #000000;
+        --darkgrey: #2D393D;
+        --grey: #969c9e;
+        --lightgrey: #f4f4f4;
+        --primaryblue: #18a0fb;
+        --seablue: #2D60FF;
+        --darkblue: #2D3665;
+    }
         /* Breadcrumb Style */
         .menu-breadcrumb {
           color: #ABABAB;
@@ -104,23 +118,241 @@
                 display: block;
             }
         }
+
+        .title-logo-1 {
+            color: var(--primaryblue);
+        }
+        .title-logo-2 {
+            color: var(--grey);
+        }
+
+        .button-language, .button-language > span > i, .button-language-mobile, .button-language-mobile > span > i {
+            color: var(--darkgrey);
+        }
+        .button-language:hover {
+            background: #F4F4F4;
+            color: var(--darkgrey) !important;
+        }
+        .button-language, .button-language-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button-language {
+            width: 140px;
+        }
+        .button-language-mobile {
+            width: 100px;
+        }
+        .dropdown-language, .dropdown-language-mobile {
+            background: #ffffff;
+            border: 0.5px solid #D0D0D0;
+            border-radius: 0px;
+            box-shadow: 0 13px 16px 0 rgba(0, 0, 0, 0.1);
+            padding: 0;
+        }
+        .dropdown-language .navi .navi-item .navi-link:hover,
+        .dropdown-language-mobile .navi .navi-item .navi-link:hover {
+            background: transparent !important;
+            color: #2D60FF !important;
+        }
+        .dropdown-language {
+            width: 140px !important;
+        }
+        .dropdown-language-mobile {
+            width: 100px !important;
+        }
+        .slick-navbar {
+            text-align: right;
+            max-width: 450px !important;
+            color: var(--darkgrey);
+        }
+        .custom-nav .nav-item .nav-link {
+            padding: 15px 0px !important;
+            font-weight: bold;
+            color: var(--darkgrey);
+            transition: .3s;
+            border-bottom: 4px solid transparent;
+        }
+        .custom-nav .nav-item .nav-link.active {
+            border-bottom: 4px solid rgba(45, 57, 61, 0.2);
+        }
+        .custom-nav .nav-item .nav-link:hover {
+            color: var(--darkgrey) !important;
+            border-bottom: 4px solid rgba(45, 57, 61, 0.2);
+        }
+        .custom-nav, .subheader-logo {
+            transition: .3s;
+        }
+        .btn-custom-credit, .btn-custom-credit-1 {
+            background: var(--primaryblue);
+            color: var(--white) !important;
+            padding: 5px 20px !important;
+            border-radius: 50px;
+            transition: .3s;
+        }
+        .btn-custom-credit:hover, .btn-custom-credit-1:hover {
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .btn-custom-login {
+            background: var(--lightgrey);
+            color: var(--darkgrey);
+            padding: 5px 20px !important;
+            border-radius: 50px;
+            transition: .3s;
+        }
+        .btn-custom-login:hover {
+            box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        @media (min-width: 992px) and (max-width: 1009px) {
+            .btn-custom-credit {
+                display: none;
+            }
+            .btn-custom-credit-1 {
+                display: block !important;
+            }
+        }
+        .custom-header, .custom-header-mobile {
+            left: 0 !important;
+            transition: top 0.3s;
+        }
+        .custom-header, .brand-header {
+            border-bottom: 0.5px solid #cfcfcf;
+        }
+        .custom-subheader {
+            left: 0 !important;
+            transition: top 0.3s;
+            box-shadow: 0px 1px 6px 0px rgba(33, 33, 33, 0.3) !important;
+        }
+        .subheader.custom-subheader-desktop {
+            padding: 0px !important;
+            border-top: 0px !important;
+        }
+        @media (max-width: 991px) {
+            .custom-header, .custom-subheader-desktop {
+                display: none !important;
+            }
+            .custom-header-mobile {
+                box-shadow: none !important;
+            }
+            .custom-subheader-mobile {
+                display: block !important;
+                position: fixed;
+                width: 100%;
+                z-index: 1;
+                box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.3);
+            }
+            .custom-aside-mobile {
+                display: flex !important;
+            }
+            .custom-aside-menu {
+                height: calc(100vh - (220px + 2rem + 20px)) !important;
+            }
+            .aside-overlay {
+                background: rgba(0, 0, 0, 0.4);
+            }
+        }
+        .section-freetools {
+            padding: 100px 0px;
+        }
+
+        .card-freetools {
+            border: 1px solid rgba(45, 54, 101, 0.25) !important;
+            border-radius: 0px !important;
+            box-shadow: none !important;
+        }
+
+        .btn-freetools {
+            background: var(--primaryblue);
+            color: var(--white);
+            border-radius: 0px !important;
+            transition: .3s;
+        }
+        .btn-freetools:hover {
+            color: var(--white);
+            box-shadow: 0 12px 25px 0 rgba(0, 0, 0, 0.3);
+        }
+
+      .container-provide, .container-insight, .container-footer {
+            padding: 0px 100px;
+        }
+
+        .freetools-link i {
+          color:#46b3fc;
+        }
+
+        .freetools-link span, .freetools-link:hover > i {
+            color: #FFFFFF;
+        }
+        .freetools-link:hover span {
+            text-decoration: underline !important;
+        }
+        .freetools-link, .freetools-link > i, .freetools-link:hover {
+            font-weight: 500;
+        }
+
+        .section-insight {
+            background: var(--darkgrey);
+            padding: 100px 0px;
+        }
+
+        .custom-footer {
+            background: var(--darkgrey);
+            padding: 0px 0px 100px 0px;
+            margin-top: -1px;
+        }
+        .section-provide {
+            background: var(--primaryblue);
+            padding: 20px 0px;
+        }
+        .footer-title, .footer-link, .footer-link > i {
+            color: var(--white);
+        }
+        .footer-link {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .link-footer-blog {
+          color: white;
+          text-decoration: underline !important;
+        }
+        .link-footer-blog:hover {
+          color: white !important;
+        }
+        .footer-link:hover {
+            color: var(--white) !important;
+            text-decoration: underline !important;
+        }
+
+        .col-copyright {
+            margin-top: 100px;
+        }
+        .custom-copyright, .copyright-link {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .copyright-link:hover {
+            color: rgba(255, 255, 255, 0.3) !important;
+            text-decoration: underline !important;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{ asset('media/logos/new_logo_default.ico') }}"/>
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled page-loading">
 <!--begin::Main-->
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile header-mobile-fixed">
     <!--begin::Logo-->
     <a href="/">
-        <img alt="Logo" src="{{asset('media/logos/logo-letter-9.png')}}" class="logo-default max-h-30px" />
+        <img alt="Logo" src="{{asset('media/logos/new/new-logo-default.png')}}" class="logo-default max-h-30px" />
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->
@@ -167,15 +399,15 @@
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
-        @include('layouts.sidebar')
         <!--end::Aside-->
         <!--begin::Wrapper-->
-        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+        <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
             <!--begin::Header-->
             @include('layouts.header')
             <!--end::Header-->
             <!--begin::Content-->
-            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+            <div class="content d-flex flex-column flex-row-fluid custom-data-content" id="kt_content">
+              @include('layouts.subheader')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
@@ -211,13 +443,17 @@
 <!--end::Scrolltop-->
 <!--end::Demo Panel-->
 <!--begin::Global Config(global config for global JS scripts)-->
-<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Roboto" };</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="{{asset('plugins/global/plugins.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5')}}"></script>
 <script src="{{asset('js/scripts.bundle.js?v=7.0.9')}}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/js/splide.min.js"></script>
+
 <!--end::Global Theme Bundle-->
 <!--begin::Page Vendors(used by this page)-->
 <script src="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.js?v=7.0.5')}}"></script>
