@@ -31,7 +31,7 @@
         <!--end::Nav-->
 		<!--begin::Copyright-->
 		<div class="text-dark font-weight-bold">
-			<span class="text-muted font-weight-bold mr-2">©2020 - </span>
+			<span class="text-muted font-weight-bold mr-2">©2021 - </span>
 			@if($local == 'id')
 				<a href="https://cmlabs.co" target="_blank" class="text-dark-50">Content Marketing Labs</a>
 			@else
