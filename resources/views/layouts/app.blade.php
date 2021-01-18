@@ -65,6 +65,9 @@
         --seablue: #2D60FF;
         --darkblue: #2D3665;
     }
+    html, body {
+        font-family: 'Roboto', sans-serif !important;
+    }
         /* Breadcrumb Style */
         .menu-breadcrumb {
           color: #ABABAB;

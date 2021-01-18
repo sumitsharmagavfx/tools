@@ -10,17 +10,23 @@
                         <a class="nav-link active" href="#welcome">Home</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#pricing">Word Counter</a>
+                        <a class="nav-link" href="#pricing">JSON-LD Generator</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#features">Meta Description Checker</a>
-                    </li>
-                    <!-- <li class="nav-item ml-7">
-                        <a class="nav-link" href="#seo-tools">@lang('landing.main-menu-4')</a>
+                        <a class="nav-link" href="#features">Page Speed Test</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#insight">@lang('landing.main-menu-5')</a>
-                    </li> -->
+                        <a class="nav-link" href="#seo-tools">Sitemap.XML Generator</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link" href="#insight">Mobile Friendly Test</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link" href="#seo-tools">SSL Certificate Checker</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link" href="#insight">Robots.TXT Generator</a>
+                    </li>
                     <!-- Comment This ! -->
                     <!-- <li class="nav-item ml-7">
                         <a class="nav-link" href="{{ url('/references') }}" target="_blank">
