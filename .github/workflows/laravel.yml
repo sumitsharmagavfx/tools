@@ -33,5 +33,3 @@ jobs:
           key: ${{secrets.PRIVATE_KEY}}
           # Password for authentication.
           pass: ${{secrets.HOST_PASS}}
-          # SSH parameters for example: -tt.
-          args: # optional
