@@ -25,7 +25,7 @@ jobs:
             chmod 775 -R storage public bootstrap/cache
           # Hostname or IP address of the server.
           host: ${{secrets.HOST_ADDRESS}}
-          # Username for authentication.
+          # Username for authentication to server.
           user: ${{secrets.HOST_USER}}
           # Port number of the server.
           port: 22
