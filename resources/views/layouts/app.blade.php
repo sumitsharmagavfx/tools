@@ -13,7 +13,7 @@
     <meta property="og:title" content="@yield('title')"/>
     <meta property="og:description" content="@yield('meta-desc')"/>
     <meta property="og:url" content="https://tools.cmlabs.co<?php echo $_SERVER['REQUEST_URI'];?>"/>
-    <meta property="og:image" content="{{asset('media/logos/logo-letter-9.png')}}" />
+    <meta property="og:image" content="{{asset('media/logos/new/new-logo-default.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
     @if(env('APP_ENV')==='production')
@@ -36,7 +36,7 @@
     <link rel="alternate" hreflang="en-ID" href="https://tools.cmlabs.co/@yield('en-link')" />
     <link rel="alternate" hreflang="id-ID" href="https://tools.cmlabs.co/@yield('id-link')" />
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!--end::Fonts-->
     <!--begin::Page Vendors Styles(used by this page)-->
     <link href="{{asset('plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5')}}" rel="stylesheet" type="text/css" />
@@ -49,22 +49,26 @@
     <link href="{{asset('css/themes/layout/header/menu/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/themes/layout/aside/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('css/themes/layout/brand/light.css?v=7.0.9')}}" rel="stylesheet" type="text/css"/>
+
     <!-- Custom Page CSS -->
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" type="text/css"/>
+
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/css/splide.min.css">
     @stack('style')
+
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{asset('media/logos/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{ asset('media/logos/new_logo_default.ico') }}"/>
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
 <!--begin::Body-->
+
 <body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed">
 <!--begin::Main-->
 <!--begin::Header Mobile-->
@@ -74,15 +78,15 @@
     <!--begin::Page-->
     <div class="d-flex flex-row flex-column-fluid page">
         <!--begin::Aside-->
-        @include('layouts.sidebar')
         <!--end::Aside-->
         <!--begin::Wrapper-->
-        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+        <div class="d-flex flex-column flex-row-fluid wrapper custom-wrapper" id="kt_wrapper">
             <!--begin::Header-->
             @include('layouts.header')
             <!--end::Header-->
             <!--begin::Content-->
-            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+            <div class="content d-flex flex-column flex-row-fluid custom-data-content" id="kt_content">
+              @include('layouts.subheader')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
@@ -118,7 +122,7 @@
 <!--end::Scrolltop-->
 <!--end::Demo Panel-->
 <!--begin::Global Config(global config for global JS scripts)-->
-<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Poppins" };</script>
+<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1200 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#8950FC", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#F3F6F9", "dark": "#212121" }, "light": { "white": "#ffffff", "primary": "#E1E9FF", "secondary": "#ECF0F3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#212121", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#ECF0F3", "gray-300": "#E5EAEE", "gray-400": "#D6D6E0", "gray-500": "#B5B5C3", "gray-600": "#80808F", "gray-700": "#464E5F", "gray-800": "#1B283F", "gray-900": "#212121" } }, "font-family": "Roboto" };</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -129,6 +133,7 @@
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.14/dist/js/splide.min.js"></script>
+
 
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js?v=20210116213500')}}"></script>
