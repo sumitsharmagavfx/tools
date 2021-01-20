@@ -123,7 +123,7 @@ id/page-title-meta-description-checker
     }
 
     #metachecker .desktop-result {
-        width: 60%;
+        width: 58%;
     }
 
     #metachecker .mobile-result {
@@ -412,53 +412,59 @@ id/page-title-meta-description-checker
                             <!-- End Local Collection -->
                         </div>
                         <!-- Start Mobile Result -->
-                        <div class="card card-custom gutter-b mobile-result d-flex align-self-baseline">
-                            <div class="card-body px-0">
-                                <div class="d-flex flex-column px-10 py-3">
-                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                        <strong class="mr-2">Ad</strong>
-                                        <span class="d-flex align-items-center">visa-insurance.eu <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                        <div class="d-flex align-self-baseline mobile-result flex-column">
+                            <div class="card card-custom gutter-b mb-3">
+                                <div class="card-body px-0">
+                                    <div class="d-flex flex-column px-10 py-3">
+                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                            <strong class="mr-2">Ad</strong>
+                                            <span class="d-flex align-items-center">visa-insurance.eu <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                        </div>
+                                        <div class="title-meta mb-2">
+                                            Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                        </div>
+                                        <div class="desc-meta">
+                                            Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                        </div>
                                     </div>
-                                    <div class="title-meta mb-2">
-                                        Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                    <div class="d-flex flex-column px-10 py-3">
+                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                            <span class="d-flex align-items-center">www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                        </div>
+                                        <div class="title-meta mb-2">
+                                            Buy Your Schengen Visa Travel Insurance at Traveloka
+                                        </div>
+                                        <div class="desc-meta">
+                                            When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                                        </div>
                                     </div>
-                                    <div class="desc-meta">
-                                        Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                    <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
+                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                        </div>
+                                        <div class="title-meta mb-2 color-green">
+                                            Schengen Travel Visa Insurance – Europe Travel Insurance
+                                        </div>
+                                        <div class="desc-meta">
+                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column px-10 py-3">
+                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                        </div>
+                                        <div class="title-meta mb-2">
+                                            Schengen Travel Visa Insurance – Europe Travel Insurance
+                                        </div>
+                                        <div class="desc-meta">
+                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="d-flex flex-column px-10 py-3">
-                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                        <span class="d-flex align-items-center">www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
-                                    </div>
-                                    <div class="title-meta mb-2">
-                                        Buy Your Schengen Visa Travel Insurance at Traveloka
-                                    </div>
-                                    <div class="desc-meta">
-                                        When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
-                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                        <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
-                                    </div>
-                                    <div class="title-meta mb-2 color-green">
-                                        Schengen Travel Visa Insurance – Europe Travel Insurance
-                                    </div>
-                                    <div class="desc-meta">
-                                        Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column px-10 py-3">
-                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                        <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
-                                    </div>
-                                    <div class="title-meta mb-2">
-                                        Schengen Travel Visa Insurance – Europe Travel Insurance
-                                    </div>
-                                    <div class="desc-meta">
-                                        Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="version d-flex align-items-center">
+                                <span class="mr-2 text-darkgrey">Version 3.7</span>
+                                <i class='bx bx-chevron-down text-darkgrey'></i>
                             </div>
                         </div>
                         <!-- End Mobile Result -->
