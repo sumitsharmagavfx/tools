@@ -33,6 +33,28 @@ body {
   color: var(--white) !important;
 }
 
+.font-15px {
+    font-size: 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.for-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    /* .for-desktop {
+        display: none;
+    }
+
+    .for-mobile {
+        display: inline;
+    } */
+}
+
 /* Breadcrumb Style */
 .menu-breadcrumb {
     color: #ABABAB;
