@@ -18,7 +18,7 @@ id/word-counter
 
 @push('style')
   <style media="screen">
-  @media only screen and (max-width: 320px) {
+  /* @media only screen and (max-width: 320px) {
     .tulisan {
       font-size: 60%;
     }
@@ -52,7 +52,7 @@ id/word-counter
     .tulisan {
       font-size: 86%;
     }
-  }
+  } */
 
   </style>
 @endpush
@@ -60,6 +60,9 @@ id/word-counter
 @section('content')
 <div class="d-flex flex-column-fluid">
     <div class="container-fluid">
+      <h1>WORDS COUNTER</h1>
+      <p>Login to unlock all features here, 100% free!</p>
+      {{--
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
     <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
@@ -418,7 +421,7 @@ id/word-counter
     <!--end::Card-->
   </div>
   @include('layouts/stickybar')
-</div>
+</div>--}}
 </div>
 </div>
 @endsection

@@ -1,16 +1,38 @@
 :root {
-    --white: #ffffff;
-    --black: #000000;
-    --darkgrey: #2D393D;
-    --grey: #969c9e;
-    --lightgrey: #f4f4f4;
     --primaryblue: #18a0fb;
-    --seablue: #2D60FF;
-    --darkblue: #2D3665;
+    --black: #2A2F33;
+    --darkgrey: #66757F;
+    --grey: #CCD6DD;
+    --lightgrey: #E1E8ED;
+    --white: #ffffff;
+    --primaryred: #FB1818;
 }
 html, body {
     font-family: 'Roboto', sans-serif !important;
 }
+
+body {
+  background: #e1e8ed;
+}
+.text-primaryblue {
+  color: var(--primaryblue) !important;
+}
+.text-black {
+  color: var(--black) !important;
+}
+.text-darkgrey {
+  color: var(--darkgrey) !important;
+}
+.text-grey {
+  color: var(--grey) !important;
+}
+.text-lightgrey {
+  color: var(--lightgrey) !important;
+}
+.text-white {
+  color: var(--white) !important;
+}
+
 /* Breadcrumb Style */
 .menu-breadcrumb {
     color: #ABABAB;
@@ -204,7 +226,7 @@ a:hover {
     .custom-wrapper {
         padding-left: 0px !important;
     }
-    .container-freetools, .container-provide, 
+    .container-freetools, .container-provide,
     .container-insight, .container-footer {
         padding: 0px 100px;
     }
