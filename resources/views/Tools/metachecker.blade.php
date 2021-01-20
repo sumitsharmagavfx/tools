@@ -86,6 +86,26 @@ id/page-title-meta-description-checker
     width: 253px;
   }
 
+    #metachecker .title {
+        font-weight: 400;
+        font-size: 30px;
+        color: var(--grey-1);
+    }
+
+    #metachecker .subtitle {
+        font-weight: 400;
+        font-size: 20px;
+        color: var(--grey-1);
+    }
+
+    #metachecker .header-blue {
+        background: var(--primaryblue);
+    }
+
+    #metachecker .btn-group-darkgrey-1 {
+        background: var(--darkgrey-1) !important;
+    }
+
   @media only screen and (min-width: 1400px) {
     .custom-fixed-size {
       width: 580px;
@@ -188,7 +208,42 @@ id/page-title-meta-description-checker
   }
 </style>
 @endpush
-<div class="d-flex flex-column-fluid">
+
+<!-- START V2 VER -->
+<div id="metachecker">
+    <div class="d-flex flex-column-fluid">
+        <div class="container-fluid">
+            <!-- Start Title & Subtitle -->
+            <div class="row d-flex flex-column">
+                <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
+                <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
+            </div>
+            <!-- End Title & Subtitle -->
+
+            <!-- Start Blue Header Card -->
+            <div class="row d-flex flex-row align-items-center header-blue">
+                <div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-group-darkgrey-1 text-white"><i class='bx bx-cog'></i></button>
+                        <button type="button" class="btn btn-group-darkgrey-1 text-white">MANUAL</button>
+                        <button type="button" class="btn btn-group-darkgrey-1 text-white">BOT</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Blue Header Card -->
+        </div>
+    </div>
+</div>
+<!-- END v2 VER -->
+
+
+
+
+
+
+
+
+<!-- <div class="d-flex flex-column-fluid">
     <div class="container-fluid">
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
@@ -550,7 +605,7 @@ id/page-title-meta-description-checker
     </div>
   </div>
 
-  @include('layouts/stickybar')
+  
 </div>
 
 </div>
@@ -559,7 +614,7 @@ id/page-title-meta-description-checker
 <span id="titlesizer" class="pd-0"></span>
 <span id="titlesizertemp"></span>
 <span id="descsizer"></span>
-<span id="descsizertemp"></span>
+<span id="descsizertemp"></span> -->
 
 @endsection
 @push('script')
