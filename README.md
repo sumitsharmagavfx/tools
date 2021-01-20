@@ -1,4 +1,4 @@
-# cmlabs tools
+# cmlabs. tools
 Check your website with Free SEO tools cmlabs: Page Speed Test, Sitemap Generator, Word Counter, Title & Meta Desc Checker, etc.
 
 ## Installation
