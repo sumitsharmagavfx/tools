@@ -226,7 +226,7 @@ id/page-title-meta-description-checker
     }
 
     #metachecker .progress-bar_wrap {
-        width: 300px;
+        width: 150px;
         height: 11px;
         background: var(--primaryblue);
         display: inline-block;
@@ -236,7 +236,7 @@ id/page-title-meta-description-checker
     #metachecker .progress-bar_item {
         display: inline-block;
         height: 100%;
-        width: 11.5%;
+        width: 20%;
         margin-right: .8%;
         float: left;
     }
@@ -300,7 +300,7 @@ id/page-title-meta-description-checker
 
     @media only screen and (max-width: 600px) {
         #metachecker .meta-desc {
-            width: 41.5%;
+            width: 47.7%;
         }
     }
 
