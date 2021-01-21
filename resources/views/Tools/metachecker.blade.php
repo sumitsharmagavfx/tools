@@ -300,11 +300,15 @@ id/page-title-meta-description-checker
 
     @media only screen and (max-width: 600px) {
         #metachecker .meta-desc {
-            width: 47.7%;
+            width: 40.7%;
         }
     }
 
-  
+    @media only screen and (max-width: 400px) {
+        #metachecker .meta-desc {
+            width: 47.7%;
+        }
+    }
 
   /* zoom 110% */
   @media only screen and (max-width: 1300px) {
