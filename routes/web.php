@@ -25,6 +25,7 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     });
     Route::get('/url', 'ToolsController@loadssl');
     Route::get('/{lang}','HomeController@index');
+    Route::get('blog/data', 'HomeController@getBlogData');
 
 //Route::get('/test', function (){
 //    return view('/tools/strikethrough');

@@ -184,4 +184,15 @@ class HomeController extends Controller
             return $id." ".date_format($date,"d, Y - H:i");
         }
     }
+
+    public function getBlogData() {
+        try {
+            $client = new Client();
+            $response = $client->get("http://cmlabs.co/en/wp-json/wp/v2/posts?per_page=3");
+
+            return json_decode($response->getBody()->getContents(), true);
+        } catch (Exception $e){
+            return json_decode(file_get_contents(base_path('resources/js/json/enBlog.json')), true);
+        }
+    }
 }
