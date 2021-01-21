@@ -123,7 +123,7 @@ id/page-title-meta-description-checker
         background: var(--primaryblue);
         color: var(--white);
         border:none;
-        width: 50%;
+        width: 100%;
         text-transform: uppercase;
         outline: none;
     }
@@ -418,7 +418,9 @@ id/page-title-meta-description-checker
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
                             <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
                         </div>
-                        <input type="text" class="input-url text-center" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <div class="w-50">
+                          <input type="text" class="input-url text-center w-100" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        </div>
                         <div>
                             <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                         </div>
@@ -429,7 +431,9 @@ id/page-title-meta-description-checker
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
                             <button type="button" class="btn btn-group-black text-white">BOT</button>
                         </div>
-                        <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <div class="">
+                          <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        </div>
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
                     <!-- End Blue Header Card -->  
@@ -444,7 +448,7 @@ id/page-title-meta-description-checker
                                     <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
+                            <input type="text" class="form-control bg-primaryblue text-white px-0" id="meta-title" placeholder="Type or paste your text..">
                         </div>
                         <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
                             <div class="d-flex align-items-center flex-row">
@@ -455,7 +459,7 @@ id/page-title-meta-description-checker
                                     <div class="progress-bar_item progress-bar_item-3 active"></div>
                                 </div>
                             </div>
-                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white px-0" placeholder="Type or paste your text.."></textarea>
                         </div>
                     </div>
                     <!-- End Blue Input Text -->
@@ -675,7 +679,7 @@ id/page-title-meta-description-checker
                                     <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
+                            <input type="text" class="form-control bg-primaryblue text-white px-0 w-100" id="meta-title" placeholder="Type or paste your text..">
                         </div>
                         <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
                             <div class="d-inline-flex flex-row align-items-center">
@@ -688,7 +692,7 @@ id/page-title-meta-description-checker
                                     <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white px-0" placeholder="Type or paste your text.."></textarea>
                         </div>
                     </div>
                     <!-- End Blue Input Text -->
