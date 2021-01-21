@@ -201,6 +201,10 @@ id/page-title-meta-description-checker
         padding: 0 10em;
     }
 
+    #metachecker .custom-container-fluid {
+        padding: 0;
+    }
+
     #metachecker .meta-title {
         color: var(--white);
         font-weight: 700;
@@ -639,7 +643,7 @@ id/page-title-meta-description-checker
     </div>
     <div class="for-mobile">
         <div class="custom-container">
-            <div class="d-flex flex-column-fluid">
+            <div class="d-flex flex-column">
                 <div>
                     <!-- Start Title & Subtitle -->
                     <div class="row d-flex flex-column mx-0" style="margin-bottom: 15px;">
@@ -744,73 +748,71 @@ id/page-title-meta-description-checker
                 </div>
             </div>
         </div>
-        <!-- Start Local Collection -->
-        <div class="local-collection px-0 bg-white p-5">
-            <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
-                <div class="d-flex flex-row align-items-center">
-                    <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                    <span class="text-black font-15px">Your Local Collection</span>
-                </div>
-                <div>
-                    <span class="clear-all font-15px pointer">Clear All</span>
-                </div>
-            </div>
-            <div class="local-collection-body mt-3">
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>https://cmlabs.co/..</div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                            <i class='bx bxs-x-circle text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>https://cmlabs.co/..</div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                            <i class='bx bxs-x-circle text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>https://cmlabs.co/..</div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                            <i class='bx bxs-x-circle text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>https://cmlabs.co/..</div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                            <i class='bx bxs-x-circle text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div>https://cmlabs.co/..</div>
-                        <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                            <i class='bx bxs-x-circle text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="custom-container-fluid">
+          <!-- Start Local Collection -->
+          <div class="local-collection px-0 bg-white p-5">
+                  <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
+                      <div class="d-flex flex-row align-items-center">
+                          <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                          <span class="text-black font-15px">Your Local Collection</span>
+                      </div>
+                      <div>
+                          <span class="clear-all font-15px pointer">Clear All</span>
+                      </div>
+                  </div>
+                  <div class="local-collection-body mt-3">
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+          <!-- End Local Collection -->
         </div>
-        <!-- End Local Collection -->
     </div>
 </div>
 <!-- END v2 VER -->
-
-
-
-
 
 
 
