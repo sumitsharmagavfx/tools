@@ -8,7 +8,8 @@
                     <a href="/{{ $local }}" class="brand-logo d-flex justify-content-start align-items-center">
                         <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-45px"/>
                         <span class="h2 title-logo-1 font-weight-bolder ml-3 my-2">SEO Tools</span>&nbsp;&nbsp;
-                        <span class="h2 title-logo-2 font-weight-light my-2">for Writers</span>
+                        <span class="h2 title-logo-2 font-weight-light my-2" id="header_writer_title">for Writers</span>
+                        <span class="h2 title-logo-2 font-weight-light my-2 d-none" id="header_webmaster_title">for Webmaster</span>
                     </a>
                 </div>
             </div>
