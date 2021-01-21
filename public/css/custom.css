@@ -144,7 +144,7 @@ a:hover {
         display: flex !important;
     }
     .custom-aside-menu {
-        height: calc(100vh - (220px + 2rem + 20px)) !important;
+        height: calc(102vh - (220px + 2rem + 20px)) !important;
     }
     .aside-overlay {
         background: rgba(0, 0, 0, 0.4);
@@ -243,6 +243,18 @@ a:hover {
     }
 }
 
+/* Header and Subheader Tools Title Styling */
+#header_writer_title,
+#header_webmaster_title,
+#headermobile_writer_title,
+#headermobile_webmaster_title,
+#menu_tools_writer,
+#menu_tools_webmaster,
+#toggle_button_writer,
+#toggle_button_webmaster {
+    transition: .3s;
+}
+
 /* Main Content */
 @media (min-width: 992px) {
     .custom-wrapper {
@@ -284,11 +296,20 @@ a:hover {
     font-weight: 500;
 }
 .section-insight {
-    background: var(--darkgrey);
+    background: var(--black);
     padding: 100px 0px;
 }
+.card-insight {
+    background: #455559;
+    color: var(--white);
+    box-shadow: none !important;
+    transition: .3s;
+}
+.card-insight:hover {
+    background: #536D74;
+}
 .custom-footer {
-    background: var(--darkgrey);
+    background: var(--black);
     padding: 0px 0px 100px 0px;
     margin-top: -1px;
 }
