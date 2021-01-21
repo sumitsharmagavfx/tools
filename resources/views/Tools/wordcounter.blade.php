@@ -53,6 +53,29 @@ id/word-counter
       font-size: 86%;
     }
   } */
+  .wordcounter-background-text-size {
+    background: #66757F;
+    width: 45.16px;
+    height: 33.16px;
+  }
+
+  .wordcounter-background-text-size:hover {
+    background: #2A2F33;
+    cursor: pointer;
+  }
+  .wordcounter-background-text-size-left-edge {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .wordcounter-background-text-size-right-edge {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .wordcounter-background-text-size-active {
+    background: #2A2F33;
+  }
 
   </style>
 @endpush
@@ -60,8 +83,48 @@ id/word-counter
 @section('content')
 <div class="d-flex flex-column-fluid">
     <div class="container-fluid">
-      <h1>WORDS COUNTER</h1>
-      <p>Login to unlock all features here, 100% free!</p>
+      <h1 class="text-darkgrey">WORDS COUNTER</h1>
+      <span class="text-darkgrey h4 ">Login to unlock all features here, 100% free!</span>
+
+      <div class="row mt-10">
+        <div class="col-md-8">
+          <div class="card card-custom card-stretch">
+            <div class="card-body py-3 px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class='bx bxs-copy-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  <i class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-primaryblue' ></i>
+                  <div class="wordcounter-background-text-size wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
+                    <i class='bx bx-fullscreen bx-sm text-white' ></i>
+                  </div>
+                  <div class="wordcounter-background-text-size wordcounter-background-text-size-active text-white d-flex justify-content-center align-items-center p-2">
+                    10px
+                  </div>
+                  <div class="wordcounter-background-text-size text-white d-flex justify-content-center align-items-center p-2">
+                    12px
+                  </div>
+                  <div class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white d-flex justify-content-center align-items-center p-2">
+                    15px
+                  </div>
+                </div>
+                <div class="">
+                  <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue' ></i>
+                  <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is off"></i>
+                  <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is on"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom card-stretch">
+            <div class="card-body py-3 px-4">
+              it should be result
+            </div>
+          </div>
+        </div>
+      </div>
+
       {{--
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
@@ -439,6 +502,9 @@ id/word-counter
   });
 </script>
 <script>
+$(document).ready(function(){
+    $("#autoSave").tooltip();
+});
 var counter = 0;
 function myFunction() {
   document.getElementById("kd").style.borderBottom = "2px solid #24daff";
