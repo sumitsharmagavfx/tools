@@ -41,6 +41,14 @@ body {
     cursor: pointer;
 }
 
+.border-radius-5px {
+    border-radius: 5px !important;
+}
+
+.bg-primaryblue {
+    background: var(--primaryblue) !important;
+}
+
 .for-mobile {
     display: none;
 }

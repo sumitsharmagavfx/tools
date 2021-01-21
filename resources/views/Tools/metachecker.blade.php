@@ -192,6 +192,20 @@ id/page-title-meta-description-checker
         padding: 0 10em;
     }
 
+    #metachecker .meta-title, #metachecker .meta-desc {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #metachecker ::placeholder {
+        color: var(--white);
+    }
+
+    #metachecker input, #metachecker textarea {
+        border: none;
+    }
+
     #metachecker .for-mobile .custom-card {
         border-radius: 5px;
     }
@@ -344,7 +358,6 @@ id/page-title-meta-description-checker
                             <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                         </div>
                     </div>
-
                     <div class="row d-flex flex-column justify-content-center align-items-center header-blue-1024 py-4 mb-5">
                         <div class="btn-group mb-4" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
@@ -355,6 +368,18 @@ id/page-title-meta-description-checker
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
                     <!-- End Blue Header Card -->  
+                    <!-- Start Blue Input Text -->
+                    <div class="manual-mode" style="margin-bottom: 35px;">
+                        <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
+                            <div class="mb-2 meta-title">PAGE TITLE</div>
+                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
+                        </div>
+                        <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
+                            <div class="mb-2 meta-desc">META DESCRIPTION</div>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
+                        </div>
+                    </div>
+                    <!-- End Blue Input Text -->
                     <!-- Start Main Content -->
                     <div class="row">
                         <div class="d-flex justify-content-between flex-row">
@@ -558,6 +583,18 @@ id/page-title-meta-description-checker
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
                     <!-- End Blue Header Card -->
+                    <!-- Start Blue Input Text -->
+                    <div class="manual-mode" style="margin-bottom: 35px;">
+                        <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
+                            <div class="mb-2 meta-title">PAGE TITLE</div>
+                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
+                        </div>
+                        <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
+                            <div class="mb-2 meta-desc">META DESCRIPTION</div>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
+                        </div>
+                    </div>
+                    <!-- End Blue Input Text -->
                     <!-- Start Mobile Result -->
                     <div class="d-flex align-self-baseline mobile-result flex-column mb-5">
                         <div class="card card-custom gutter-b mb-3">
