@@ -88,7 +88,7 @@ id/word-counter
 
       <div class="row mt-10">
         <div class="col-md-8">
-          <div class="card card-custom card-stretch">
+          <div class="card card-custom mb-5">
             <div class="card-body py-3 px-4">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
@@ -110,14 +110,40 @@ id/word-counter
                 <div class="">
                   <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue' ></i>
                   <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is off"></i>
-                  <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is on"></i>
+                  <!-- <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is on"></i> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-custom">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg col-md-3 col-sm-4 col-4">
+                  <p class="mb-0">Characters</p>
+                  <p class="h4">999.999</p>
+                </div>
+                <div class="col-lg col-md-3 col-sm-4 col-4">
+                  <p class="mb-0">Words</p>
+                  <p class="h4">999.999</p>
+                </div>
+                <div class="col-lg col-md-3 col-sm-4 col-4">
+                  <p class="mb-0">Sentences</p>
+                  <p class="h4">999.999</p>
+                </div>
+                <div class="col-lg col-md-3 col-sm-4 col-4">
+                  <p class="mb-0">Paragraph</p>
+                  <p class="h4">999.999</p>
+                </div>
+                <div class="col-lg col-md-3 col-sm-4 col-4">
+                  <p class="mb-0">Reading Time</p>
+                  <p class="h4">99.999sec</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card card-custom card-stretch">
+          <div class="card card-custom">
             <div class="card-body py-3 px-4">
               it should be result
             </div>
