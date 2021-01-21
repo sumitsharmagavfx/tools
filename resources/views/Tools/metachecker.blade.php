@@ -189,8 +189,12 @@ id/page-title-meta-description-checker
         color: var(--white) !important;
     }
 
-    #metachecker .list-group-item-action i:hover {
-        color: var(--darkgrey) !important;
+    #metachecker .list-group-item-action:hover i {
+        color: rgba(42, 47, 51, 0.3) !important;
+    }
+    
+    #metachecker .list-group-item-action i {
+        color: var(--grey) !important;
     }
 
     #metachecker .custom-container {
