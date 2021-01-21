@@ -164,6 +164,16 @@ id/page-title-meta-description-checker
         color: var(--white);
     }
 
+    #metachecker .list-group-item-action i:hover {
+        color: var(--darkgrey) !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #metachecker .mobile-result {
+            width: 100%;
+        }
+    }
+
   @media only screen and (min-width: 1400px) {
     .custom-fixed-size {
       width: 580px;
@@ -271,7 +281,7 @@ id/page-title-meta-description-checker
 <div id="metachecker">
     <div class="for-desktop">
         <div class="d-flex flex-column-fluid">
-            <div class="container-fluid">
+            <div class="">
                 <!-- Start Title & Subtitle -->
                 <div class="row d-flex flex-column" style="margin-bottom: 35px;">
                     <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
@@ -279,12 +289,12 @@ id/page-title-meta-description-checker
                 </div>
                 <!-- End Title & Subtitle -->  
                 <!-- Start Blue Header Card -->
-                <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-2">
+                <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-5">
                     <div>
                         <div class="btn-group mr-8" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
-                            <button type="button" class="btn btn-group-black text-white">BOT</button>
+                            <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
                         </div>
                         <span class="text-white">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
                     </div>
@@ -303,7 +313,7 @@ id/page-title-meta-description-checker
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
                                             <strong class="mr-2">Ad</strong>
-                                            <span class="d-flex align-items-center">visa-insurance.eu <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
@@ -314,7 +324,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Buy Your Schengen Visa Travel Insurance at Traveloka
@@ -325,7 +335,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2 color-green">
                                             Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -336,7 +346,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -349,7 +359,7 @@ id/page-title-meta-description-checker
                             </div>
                             <!-- End Desktop Result -->
                             <!-- Start Local Collection -->
-                            <div>
+                            <div class="local-collection">
                                 <div class="d-flex justify-content-between px-2 mb-3">
                                     <div class="d-flex flex-row align-items-center">
                                         <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
@@ -366,7 +376,7 @@ id/page-title-meta-description-checker
                                                 <div>https://cmlabs.co</div>
                                                 <div class="d-flex align-items-center">
                                                     <span class="mr-2 text-grey">Created at 11.40 | 8, JAN 2021</span>
-                                                    <i class='bx bx-x-circle'></i>
+                                                    <i class='bx bxs-x-circle text-grey'></i>
                                                 </div>
                                             </div>
                                         </li>
@@ -375,7 +385,7 @@ id/page-title-meta-description-checker
                                                 <div>https://cmlabs.co/en/pricing</div>
                                                 <div class="d-flex align-items-center">
                                                     <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
-                                                    <i class='bx bx-x-circle'></i>
+                                                    <i class='bx bxs-x-circle text-grey'></i>
                                                 </div>
                                             </div>
                                         </li>
@@ -384,7 +394,7 @@ id/page-title-meta-description-checker
                                                 <div>https://analytics.cmlabs.co/en</div>
                                                 <div class="d-flex align-items-center">
                                                     <span class="mr-2 text-grey">Created at 08.05 | 7, JAN 2021</span>
-                                                    <i class='bx bx-x-circle'></i>
+                                                    <i class='bx bxs-x-circle text-grey'></i>
                                                 </div>
                                             </div>
                                         </li>
@@ -393,7 +403,7 @@ id/page-title-meta-description-checker
                                                 <div>https://analytics.cmlabs.co/en/login</div>
                                                 <div class="d-flex align-items-center">
                                                     <span class="mr-2 text-grey">Created at 11.21 | 5, JAN 2021</span>
-                                                    <i class='bx bx-x-circle'></i>
+                                                    <i class='bx bxs-x-circle text-grey'></i>
                                                 </div>
                                             </div>
                                         </li>
@@ -402,7 +412,7 @@ id/page-title-meta-description-checker
                                                 <div>https://analytics.cmlabs.co/en/member/dashboard</div>
                                                 <div class="d-flex align-items-center">
                                                     <span class="mr-2 text-grey">Created at 16.56 | 3, JAN 2021</span>
-                                                    <i class='bx bx-x-circle'></i>
+                                                    <i class='bx bxs-x-circle text-grey'></i>
                                                 </div>
                                             </div>
                                         </li>
@@ -416,9 +426,9 @@ id/page-title-meta-description-checker
                             <div class="card card-custom gutter-b mb-3">
                                 <div class="card-body px-0">
                                     <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                        <div class="link-meta d-flex align-items-center mb-2">
                                             <strong class="mr-2">Ad</strong>
-                                            <span class="d-flex align-items-center">visa-insurance.eu <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
@@ -429,7 +439,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Buy Your Schengen Visa Travel Insurance at Traveloka
@@ -440,7 +450,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2 color-green">
                                             Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -451,7 +461,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="d-flex flex-column px-10 py-3">
                                         <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span class="d-flex align-items-center">www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-2' style="color: #4D5156;"></i></span>
+                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                                         </div>
                                         <div class="title-meta mb-2">
                                             Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -462,7 +472,7 @@ id/page-title-meta-description-checker
                                     </div>
                                 </div>
                             </div>
-                            <div class="version d-flex align-items-center">
+                            <div class="version d-flex align-items-center pointer">
                                 <span class="mr-2 text-darkgrey">Version 3.7</span>
                                 <i class='bx bx-chevron-down text-darkgrey'></i>
                             </div>
@@ -475,7 +485,93 @@ id/page-title-meta-description-checker
         </div>
     </div>
     <div class="for-mobile">
-        <!-- for mobile -->
+        <div class="d-flex flex-column-fluid">
+            <div class="">
+                <!-- Start Title & Subtitle -->
+                <div class="row d-flex flex-column mx-0" style="margin-bottom: 15px;">
+                    <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
+                    <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
+                </div>
+                <!-- End Title & Subtitle -->
+                <!-- Start Blue Header Card -->
+                <div class="row d-flex flex-column justify-content-center align-items-center header-blue py-4 mb-5 mx-0">
+                    <div class="btn-group mb-4" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                        <button type="button" class="btn btn-group-black text-white">MANUAL</button>
+                        <button type="button" class="btn btn-group-black text-white">BOT</button>
+                    </div>
+                    <span class="text-white mb-4">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
+                    <button class="btn btn-rounded-white px-10">CRAWL URL</button>
+                </div>
+                <!-- End Blue Header Card -->
+                <!-- Start Mobile Result -->
+                <div class="d-flex align-self-baseline mobile-result flex-column mb-5">
+                    <div class="card card-custom gutter-b mb-3">
+                        <div class="card-body px-0">
+                            <div class="d-flex flex-column px-10 py-3">
+                                <div class="link-meta d-flex align-items-center mb-2">
+                                    <strong class="mr-2">Ad</strong>
+                                    <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2">
+                                    Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                </div>
+                                <div class="desc-meta">
+                                    Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-10 py-3">
+                                <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                    <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2">
+                                    Buy Your Schengen Visa Travel Insurance at Traveloka
+                                </div>
+                                <div class="desc-meta">
+                                    When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
+                                <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2 color-green">
+                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                </div>
+                                <div class="desc-meta">
+                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column px-10 py-3">
+                                <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                </div>
+                                <div class="title-meta mb-2">
+                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                </div>
+                                <div class="desc-meta">
+                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Mobile Result -->
+                <!-- Start Local Collection -->
+                <div class="row local-collection">
+                    <div class="d-flex justify-content-between px-2 mb-3">
+                        <div class="d-flex flex-row align-items-center">
+                            <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
+                            <span class="text-black font-15px">Your Local Collection</span>
+                        </div>
+                        <div>
+                            <span class="clear-all font-15px pointer">Clear All</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Local Collection -->
+            </div>
+        </div>
     </div>
 </div>
 <!-- END v2 VER -->
