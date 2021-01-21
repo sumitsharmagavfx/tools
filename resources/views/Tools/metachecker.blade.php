@@ -111,28 +111,30 @@ id/page-title-meta-description-checker
         display: none !important;
     }
 
-    @media only screen and (min-width: 801px) and (max-width: 1365px) {
-        #metachecker .header-blue-1024 {
-            display: flex !important;
-            background: var(--primaryblue);
-            border-radius: 5px;
-        }
-
-        #metachecker .custom-container {
-            padding: 0 8em;
-        }
-
-        #metachecker .header-blue {
-            display: none !important;
-        }
-    }
-
     #metachecker .btn-group-black {
         background: var(--black);
     }
 
     #metachecker .btn-group-black:focus, #metachecker .btn-group-black:hover {
         background: #DCAD05;
+    }
+
+    #metachecker .input-url, #metachecker .input-url:focus {
+        background: var(--primaryblue);
+        color: var(--white);
+        border:none;
+        width: 50%;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    #metachecker .for-mobile .input-url, #metachecker .input-url:focus {
+        background: var(--primaryblue);
+        color: var(--white);
+        border:none;
+        width: 95%;
+        text-transform: uppercase;
+        outline: none;
     }
 
     #metachecker .btn-rounded-white {
@@ -192,11 +194,20 @@ id/page-title-meta-description-checker
         padding: 0 10em;
     }
 
-    #metachecker .meta-title, #metachecker .meta-desc {
+    #metachecker .meta-title {
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
     }
+
+    #metachecker .meta-desc {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 15px;
+        /* width: 41.5%; */
+    }
+
+    
 
     #metachecker ::placeholder {
         color: var(--white);
@@ -204,6 +215,30 @@ id/page-title-meta-description-checker
 
     #metachecker input, #metachecker textarea {
         border: none;
+    }
+
+    #metachecker .progress-bar_wrap {
+        width: 300px;
+        height: 11px;
+        background: var(--primaryblue);
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    #metachecker .progress-bar_item {
+        display: inline-block;
+        height: 100%;
+        width: 11.5%;
+        margin-right: .8%;
+        float: left;
+    }
+
+    #metachecker .progress-bar_item-1.active, #metachecker .progress-bar_item-2.active, #metachecker .progress-bar_item-3.active {
+        background: #B1F25D;
+    }
+
+    #metachecker .progress-bar_item-1.blank, #metachecker .progress-bar_item-2.blank, #metachecker .progress-bar_item-3.blank {
+        background: var(--white);
     }
 
     #metachecker .for-mobile .custom-card {
@@ -219,6 +254,32 @@ id/page-title-meta-description-checker
         color: var(--darkgrey) !important;
     }
 
+    @media only screen and (min-width: 1400px) {
+        .custom-fixed-size {
+            width: 580px;
+        }
+
+        .custom-fixed-size-1 {
+            transform: scale(0.9);
+        }
+    }
+
+    @media only screen and (min-width: 801px) and (max-width: 1365px) {
+        #metachecker .header-blue-1024 {
+            display: flex !important;
+            background: var(--primaryblue);
+            border-radius: 5px;
+        }
+
+        #metachecker .custom-container {
+            padding: 0 8em;
+        }
+
+        #metachecker .header-blue {
+            display: none !important;
+        }
+    }
+
     @media only screen and (max-width: 800px) {
         #metachecker .mobile-result {
             width: 100%;
@@ -229,15 +290,13 @@ id/page-title-meta-description-checker
         }
     }
 
-  @media only screen and (min-width: 1400px) {
-    .custom-fixed-size {
-      width: 580px;
+    @media only screen and (max-width: 600px) {
+        #metachecker .meta-desc {
+            width: 41.5%;
+        }
     }
 
-    .custom-fixed-size-1 {
-      transform: scale(0.9);
-    }
-  }
+  
 
   /* zoom 110% */
   @media only screen and (max-width: 1300px) {
@@ -346,14 +405,12 @@ id/page-title-meta-description-checker
                     <!-- End Title & Subtitle -->  
                     <!-- Start Blue Header Card -->
                     <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-5">
-                        <div>
-                            <div class="btn-group mr-8" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
-                                <button type="button" class="btn btn-group-black text-white">MANUAL</button>
-                                <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
-                            </div>
-                            <span class="text-white">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
+                        <div class="btn-group mr-8" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                            <button type="button" class="btn btn-group-black text-white">MANUAL</button>
+                            <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
                         </div>
+                        <input type="text" class="input-url text-center" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                         <div>
                             <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                         </div>
@@ -364,18 +421,32 @@ id/page-title-meta-description-checker
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
                             <button type="button" class="btn btn-group-black text-white">BOT</button>
                         </div>
-                        <span class="text-white text-center mb-4">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
+                        <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
                     <!-- End Blue Header Card -->  
                     <!-- Start Blue Input Text -->
                     <div class="manual-mode" style="margin-bottom: 35px;">
                         <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
-                            <div class="mb-2 meta-title">PAGE TITLE</div>
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-title mr-5">PAGE TITLE</span>
+                                <div class="progress-bar_wrap">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
+                                </div>
+                            </div>
                             <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
                         </div>
                         <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
-                            <div class="mb-2 meta-desc">META DESCRIPTION</div>
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-desc mr-5">META DESCRIPTION</span>
+                                <div class="progress-bar_wrap">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 active"></div>
+                                </div>
+                            </div>
                             <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
                         </div>
                     </div>
@@ -579,18 +650,36 @@ id/page-title-meta-description-checker
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
                             <button type="button" class="btn btn-group-black text-white">BOT</button>
                         </div>
-                        <span class="text-white text-center mb-4">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
+                        <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
                     <!-- End Blue Header Card -->
                     <!-- Start Blue Input Text -->
                     <div class="manual-mode" style="margin-bottom: 35px;">
                         <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
-                            <div class="mb-2 meta-title">PAGE TITLE</div>
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-title">
+                                    PAGE TITLE
+                                </span>
+                                <div class="progress-bar_wrap ml-3">
+                                    <div class="progress-bar_item progress-bar_item-1 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
+                                </div>
+                            </div>
                             <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
                         </div>
                         <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
-                            <div class="mb-2 meta-desc">META DESCRIPTION</div>
+                            <div class="d-inline-flex flex-row align-items-center">
+                                <span class="meta-desc d-inline-flex">
+                                    META DESCRIPTION
+                                </span>
+                                <div class="progress-bar_wrap ml-3">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
+                                </div>
+                            </div>
                             <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
                         </div>
                     </div>
