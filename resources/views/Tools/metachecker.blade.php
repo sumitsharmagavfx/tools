@@ -177,7 +177,6 @@ id/page-title-meta-description-checker
     }
 
     #metachecker .clear-all:hover {
-        font-weight: 600;
         text-decoration: underline;
     }
 
@@ -520,7 +519,7 @@ id/page-title-meta-description-checker
                                     </div>
                                     <div class="local-collection-body">
                                         <ul class="list-group">
-                                            <li class="list-group-item list-group-item-action pointer mb-2">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://cmlabs.co</div>
                                                     <div class="d-flex align-items-center">
@@ -529,7 +528,7 @@ id/page-title-meta-description-checker
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item list-group-item-action pointer mb-2">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://cmlabs.co/en/pricing</div>
                                                     <div class="d-flex align-items-center">
@@ -538,7 +537,7 @@ id/page-title-meta-description-checker
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item list-group-item-action pointer mb-2">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en</div>
                                                     <div class="d-flex align-items-center">
@@ -547,7 +546,7 @@ id/page-title-meta-description-checker
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item list-group-item-action pointer mb-2">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en/login</div>
                                                     <div class="d-flex align-items-center">
@@ -556,7 +555,7 @@ id/page-title-meta-description-checker
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="list-group-item list-group-item-action pointer mb-2">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en/member/dashboard</div>
                                                     <div class="d-flex align-items-center">
