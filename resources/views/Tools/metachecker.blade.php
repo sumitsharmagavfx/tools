@@ -426,7 +426,7 @@ id/page-title-meta-description-checker
                     </div>
                     <!-- End Blue Header Card -->  
                     <!-- Start Blue Input Text -->
-                    <div class="manual-mode" style="margin-bottom: 35px;">
+                    <div class="manual-mode mb-5">
                         <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
                             <div class="d-flex align-items-center flex-row">
                                 <span class="meta-title mr-5">PAGE TITLE</span>
@@ -655,7 +655,7 @@ id/page-title-meta-description-checker
                     </div>
                     <!-- End Blue Header Card -->
                     <!-- Start Blue Input Text -->
-                    <div class="manual-mode" style="margin-bottom: 35px;">
+                    <div class="manual-mode mb-5">
                         <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
                             <div class="d-flex align-items-center flex-row">
                                 <span class="meta-title">
