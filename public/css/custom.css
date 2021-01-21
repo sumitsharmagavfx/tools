@@ -41,11 +41,19 @@ body {
     cursor: pointer;
 }
 
+.border-radius-5px {
+    border-radius: 5px !important;
+}
+
+.bg-primaryblue {
+    background: var(--primaryblue) !important;
+}
+
 .for-mobile {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .for-desktop {
         display: none;
     }
