@@ -186,6 +186,10 @@ id/page-title-meta-description-checker
         color: var(--white);
     }
 
+    #metachecker .list-group-item-action:hover .date-created {
+        color: var(--white) !important;
+    }
+
     #metachecker .list-group-item-action i:hover {
         color: var(--darkgrey) !important;
     }
@@ -204,10 +208,7 @@ id/page-title-meta-description-checker
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
-        /* width: 41.5%; */
     }
-
-    
 
     #metachecker ::placeholder {
         color: var(--white);
@@ -510,7 +511,7 @@ id/page-title-meta-description-checker
                                 <div class="local-collection">
                                     <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                                         <div class="d-flex flex-row align-items-center">
-                                            <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
+                                            <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                                             <span class="text-black font-15px">Your Local Collection</span>
                                         </div>
                                         <div>
@@ -523,7 +524,7 @@ id/page-title-meta-description-checker
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://cmlabs.co</div>
                                                     <div class="d-flex align-items-center">
-                                                        <span class="mr-2 text-grey">Created at 11.40 | 8, JAN 2021</span>
+                                                        <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
                                                         <i class='bx bxs-x-circle text-grey'></i>
                                                     </div>
                                                 </div>
@@ -532,7 +533,7 @@ id/page-title-meta-description-checker
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://cmlabs.co/en/pricing</div>
                                                     <div class="d-flex align-items-center">
-                                                        <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                                                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                                                         <i class='bx bxs-x-circle text-grey'></i>
                                                     </div>
                                                 </div>
@@ -541,7 +542,7 @@ id/page-title-meta-description-checker
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en</div>
                                                     <div class="d-flex align-items-center">
-                                                        <span class="mr-2 text-grey">Created at 08.05 | 7, JAN 2021</span>
+                                                        <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
                                                         <i class='bx bxs-x-circle text-grey'></i>
                                                     </div>
                                                 </div>
@@ -550,7 +551,7 @@ id/page-title-meta-description-checker
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en/login</div>
                                                     <div class="d-flex align-items-center">
-                                                        <span class="mr-2 text-grey">Created at 11.21 | 5, JAN 2021</span>
+                                                        <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
                                                         <i class='bx bxs-x-circle text-grey'></i>
                                                     </div>
                                                 </div>
@@ -559,7 +560,7 @@ id/page-title-meta-description-checker
                                                 <div class="d-flex justify-content-between">
                                                     <div>https://analytics.cmlabs.co/en/member/dashboard</div>
                                                     <div class="d-flex align-items-center">
-                                                        <span class="mr-2 text-grey">Created at 16.56 | 3, JAN 2021</span>
+                                                        <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
                                                         <i class='bx bxs-x-circle text-grey'></i>
                                                     </div>
                                                 </div>
@@ -744,7 +745,7 @@ id/page-title-meta-description-checker
         <div class="local-collection px-0 bg-white p-5">
             <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
                 <div class="d-flex flex-row align-items-center">
-                    <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
+                    <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                     <span class="text-black font-15px">Your Local Collection</span>
                 </div>
                 <div>
@@ -756,7 +757,7 @@ id/page-title-meta-description-checker
                     <div class="d-flex align-items-center justify-content-between">
                         <div>https://cmlabs.co/..</div>
                         <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                             <i class='bx bxs-x-circle text-grey'></i>
                         </div>
                     </div>
@@ -765,7 +766,7 @@ id/page-title-meta-description-checker
                     <div class="d-flex align-items-center justify-content-between">
                         <div>https://cmlabs.co/..</div>
                         <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                             <i class='bx bxs-x-circle text-grey'></i>
                         </div>
                     </div>
@@ -774,7 +775,7 @@ id/page-title-meta-description-checker
                     <div class="d-flex align-items-center justify-content-between">
                         <div>https://cmlabs.co/..</div>
                         <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                             <i class='bx bxs-x-circle text-grey'></i>
                         </div>
                     </div>
@@ -783,7 +784,7 @@ id/page-title-meta-description-checker
                     <div class="d-flex align-items-center justify-content-between">
                         <div>https://cmlabs.co/..</div>
                         <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                             <i class='bx bxs-x-circle text-grey'></i>
                         </div>
                     </div>
@@ -792,7 +793,7 @@ id/page-title-meta-description-checker
                     <div class="d-flex align-items-center justify-content-between">
                         <div>https://cmlabs.co/..</div>
                         <div class="d-flex align-items-center">
-                            <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
+                            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                             <i class='bx bxs-x-circle text-grey'></i>
                         </div>
                     </div>
