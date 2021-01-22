@@ -687,7 +687,7 @@ id
                   </div>
                 </div>
             </div>
-            <!-- @include('layouts/stickybar') -->
+            {{-- @include('layouts/stickybar') --}}
         </div>
     </div>
 </div>
