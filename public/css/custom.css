@@ -15,22 +15,22 @@ body {
   background: #e1e8ed;
 }
 .text-primaryblue {
-  color: var(--primaryblue) !important;
+  color: var(--primaryblue);
 }
 .text-black {
-  color: var(--black) !important;
+  color: var(--black);
 }
 .text-darkgrey {
-  color: var(--darkgrey) !important;
+  color: var(--darkgrey);
 }
 .text-grey {
-  color: var(--grey) !important;
+  color: var(--grey);
 }
 .text-lightgrey {
-  color: var(--lightgrey) !important;
+  color: var(--lightgrey);
 }
 .text-white {
-  color: var(--white) !important;
+  color: var(--white);
 }
 
 .text-hover-primaryblue:hover {
