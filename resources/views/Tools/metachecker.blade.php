@@ -107,12 +107,34 @@ id/page-title-meta-description-checker
         padding-right: 40px;
     }
 
+    #metachecker .header-blue-1024 {
+        display: none !important;
+    }
+
     #metachecker .btn-group-black {
         background: var(--black);
     }
 
     #metachecker .btn-group-black:focus, #metachecker .btn-group-black:hover {
         background: #DCAD05;
+    }
+
+    #metachecker .input-url, #metachecker .input-url:focus {
+        background: var(--primaryblue);
+        color: var(--white);
+        border:none;
+        width: 50%;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    #metachecker .for-mobile .input-url, #metachecker .input-url:focus {
+        background: var(--primaryblue);
+        color: var(--white);
+        border:none;
+        width: 95%;
+        text-transform: uppercase;
+        outline: none;
     }
 
     #metachecker .btn-rounded-white {
@@ -155,7 +177,6 @@ id/page-title-meta-description-checker
     }
 
     #metachecker .clear-all:hover {
-        font-weight: 600;
         text-decoration: underline;
     }
 
@@ -164,25 +185,126 @@ id/page-title-meta-description-checker
         color: var(--white);
     }
 
-    #metachecker .list-group-item-action i:hover {
+    #metachecker .list-group-item-action:hover .date-created {
+        color: var(--white) !important;
+    }
+
+    #metachecker .list-group-item-action:hover i {
+        color: rgba(42, 47, 51, 0.3) !important;
+    }
+    
+    #metachecker .list-group-item-action i {
+        color: var(--grey) !important;
+    }
+
+    #metachecker .custom-container {
+        padding: 0 10em;
+    }
+
+    #metachecker .custom-container-fluid {
+        padding: 0;
+    }
+
+    #metachecker .meta-title {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #metachecker .meta-desc {
+        color: var(--white);
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    #metachecker ::placeholder {
+        color: var(--white);
+    }
+
+    #metachecker input, #metachecker textarea {
+        border: none;
+    }
+
+    #metachecker .progress-bar_wrap {
+        width: 150px;
+        height: 11px;
+        background: var(--primaryblue);
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    #metachecker .progress-bar_item {
+        display: inline-block;
+        height: 100%;
+        width: 20%;
+        margin-right: .8%;
+        float: left;
+    }
+
+    #metachecker .progress-bar_item-1.active, #metachecker .progress-bar_item-2.active, #metachecker .progress-bar_item-3.active {
+        background: #B1F25D;
+    }
+
+    #metachecker .progress-bar_item-1.blank, #metachecker .progress-bar_item-2.blank, #metachecker .progress-bar_item-3.blank {
+        background: var(--white);
+    }
+
+    #metachecker .for-mobile .custom-card {
+        border-radius: 5px;
+    }
+
+    #metachecker .for-mobile .local-collection-body .custom-card:hover, #metachecker .for-mobile .local-collection-body .custom-card:focus {
+        background: var(--primaryblue);
+        color: var(--white);
+    }
+
+    #metachecker .for-mobile .local-collection-body .custom-card i:hover {
         color: var(--darkgrey) !important;
     }
 
-    @media only screen and (max-width: 600px) {
-        #metachecker .mobile-result {
-            width: 100%;
+    @media only screen and (min-width: 1400px) {
+        .custom-fixed-size {
+            width: 580px;
+        }
+
+        .custom-fixed-size-1 {
+            transform: scale(0.9);
         }
     }
 
-  @media only screen and (min-width: 1400px) {
-    .custom-fixed-size {
-      width: 580px;
+    @media only screen and (min-width: 801px) and (max-width: 1365px) {
+        #metachecker .header-blue-1024 {
+            display: flex !important;
+            background: var(--primaryblue);
+            border-radius: 5px;
+        }
+
+        #metachecker .custom-container {
+            padding: 0 8em;
+        }
+
+        #metachecker .header-blue {
+            display: none !important;
+        }
     }
 
-    .custom-fixed-size-1 {
-      transform: scale(0.9);
+    @media only screen and (max-width: 800px) {
+        #metachecker .mobile-result {
+            width: 100%;
+        }
+
+        #metachecker .custom-container {
+            padding: 0 1em;
+        }
     }
-  }
+
+    @media only screen and (max-width: 600px) {
+        #metachecker .meta-desc {
+            width: 47.7%;
+        }
+    }
+
+  
 
   /* zoom 110% */
   @media only screen and (max-width: 1300px) {
@@ -280,305 +402,417 @@ id/page-title-meta-description-checker
 <!-- START V2 VER -->
 <div id="metachecker">
     <div class="for-desktop">
-        <div class="d-flex flex-column-fluid">
-            <div class="">
-                <!-- Start Title & Subtitle -->
-                <div class="row d-flex flex-column" style="margin-bottom: 35px;">
-                    <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
-                    <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
-                </div>
-                <!-- End Title & Subtitle -->  
-                <!-- Start Blue Header Card -->
-                <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-5">
-                    <div>
+        <div class="custom-container">
+            <div class="d-flex flex-column-fluid">
+                <div>
+                    <!-- Start Title & Subtitle -->
+                    <div class="row d-flex flex-column" style="margin-bottom: 35px;">
+                        <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
+                        <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
+                    </div>
+                    <!-- End Title & Subtitle -->  
+                    <!-- Start Blue Header Card -->
+                    <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-5">
                         <div class="btn-group mr-8" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
                             <button type="button" class="btn btn-group-black text-white">MANUAL</button>
                             <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
                         </div>
-                        <span class="text-white">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
+                        <input type="text" class="input-url text-center" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <div>
+                            <button class="btn btn-rounded-white px-10">CRAWL URL</button>
+                        </div>
                     </div>
-                    <div>
+                    <div class="row d-flex flex-column justify-content-center align-items-center header-blue-1024 py-4 mb-5">
+                        <div class="btn-group mb-4" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                            <button type="button" class="btn btn-group-black text-white">MANUAL</button>
+                            <button type="button" class="btn btn-group-black text-white">BOT</button>
+                        </div>
+                        <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                         <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                     </div>
-                </div>
-                <!-- End Blue Header Card -->  
-                <!-- Start Main Content -->
-                <div class="row">
-                    <div class="d-flex justify-content-between flex-row">
-                        <div class="d-flex align-self-baseline desktop-result flex-column">
-                            <!-- Start Desktop Result -->
-                            <div class="card card-custom gutter-b">
-                                <div class="card-body px-0">
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
-                                            <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
-                                        </div>
-                                        <div class="desc-meta">
-                                            Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Buy Your Schengen Visa Travel Insurance at Traveloka
-                                        </div>
-                                        <div class="desc-meta">
-                                            When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2 color-green">
-                                            Schengen Travel Visa Insurance – Europe Travel Insurance
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Schengen Travel Visa Insurance – Europe Travel Insurance
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                        </div>
-                                    </div>
+                    <!-- End Blue Header Card -->  
+                    <!-- Start Blue Input Text -->
+                    <div class="manual-mode mb-5">
+                        <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-title mr-5">PAGE TITLE</span>
+                                <div class="progress-bar_wrap">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <!-- End Desktop Result -->
-                            <!-- Start Local Collection -->
-                            <div class="local-collection">
-                                <div class="d-flex justify-content-between px-2 mb-3">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
-                                        <span class="text-black font-15px">Your Local Collection</span>
-                                    </div>
-                                    <div>
-                                        <span class="clear-all font-15px pointer">Clear All</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <ul class="list-group">
-                                        <li class="list-group-item list-group-item-action pointer mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <div>https://cmlabs.co</div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2 text-grey">Created at 11.40 | 8, JAN 2021</span>
-                                                    <i class='bx bxs-x-circle text-grey'></i>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item list-group-item-action pointer mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <div>https://cmlabs.co/en/pricing</div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2 text-grey">Created at 09.17 | 8, JAN 2021</span>
-                                                    <i class='bx bxs-x-circle text-grey'></i>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item list-group-item-action pointer mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <div>https://analytics.cmlabs.co/en</div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2 text-grey">Created at 08.05 | 7, JAN 2021</span>
-                                                    <i class='bx bxs-x-circle text-grey'></i>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item list-group-item-action pointer mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <div>https://analytics.cmlabs.co/en/login</div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2 text-grey">Created at 11.21 | 5, JAN 2021</span>
-                                                    <i class='bx bxs-x-circle text-grey'></i>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item list-group-item-action pointer mb-2">
-                                            <div class="d-flex justify-content-between">
-                                                <div>https://analytics.cmlabs.co/en/member/dashboard</div>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="mr-2 text-grey">Created at 16.56 | 3, JAN 2021</span>
-                                                    <i class='bx bxs-x-circle text-grey'></i>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Local Collection -->
+                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
                         </div>
-                        <!-- Start Mobile Result -->
-                        <div class="d-flex align-self-baseline mobile-result flex-column">
-                            <div class="card card-custom gutter-b mb-3">
-                                <div class="card-body px-0">
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex align-items-center mb-2">
-                                            <strong class="mr-2">Ad</strong>
-                                            <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
-                                        </div>
-                                        <div class="desc-meta">
-                                            Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Buy Your Schengen Visa Travel Insurance at Traveloka
-                                        </div>
-                                        <div class="desc-meta">
-                                            When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2 color-green">
-                                            Schengen Travel Visa Insurance – Europe Travel Insurance
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                        </div>
-                                    </div>
-                                    <div class="d-flex flex-column px-10 py-3">
-                                        <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                            <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                        </div>
-                                        <div class="title-meta mb-2">
-                                            Schengen Travel Visa Insurance – Europe Travel Insurance
-                                        </div>
-                                        <div class="desc-meta">
-                                            Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
-                                        </div>
-                                    </div>
+                        <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px">
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-desc mr-5">META DESCRIPTION</span>
+                                <div class="progress-bar_wrap">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 active"></div>
                                 </div>
                             </div>
-                            <div class="version d-flex align-items-center pointer">
-                                <span class="mr-2 text-darkgrey">Version 3.7</span>
-                                <i class='bx bx-chevron-down text-darkgrey'></i>
-                            </div>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
                         </div>
-                        <!-- End Mobile Result -->
                     </div>
+                    <!-- End Blue Input Text -->
+                    <!-- Start Main Content -->
+                    <div class="row">
+                        <div class="d-flex justify-content-between flex-row">
+                            <div class="d-flex align-self-baseline desktop-result flex-column">
+                                <!-- Start Desktop Result -->
+                                <div class="card card-custom gutter-b">
+                                    <div class="card-body px-0">
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <strong class="mr-2">Ad</strong>
+                                                <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                            </div>
+                                            <div class="desc-meta">
+                                                Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Buy Your Schengen Visa Travel Insurance at Traveloka
+                                            </div>
+                                            <div class="desc-meta">
+                                                When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2 color-green">
+                                                Schengen Travel Visa Insurance – Europe Travel Insurance
+                                            </div>
+                                            <div class="desc-meta">
+                                                Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Schengen Travel Visa Insurance – Europe Travel Insurance
+                                            </div>
+                                            <div class="desc-meta">
+                                                Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Desktop Result -->
+                                <!-- Start Local Collection -->
+                                <div class="local-collection">
+                                    <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                                            <span class="text-black font-15px">Your Local Collection</span>
+                                        </div>
+                                        <div>
+                                            <span class="clear-all font-15px pointer">Clear All</span>
+                                        </div>
+                                    </div>
+                                    <div class="local-collection-body">
+                                        <ul class="list-group">
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>https://cmlabs.co</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
+                                                        <i class='bx bxs-x-circle text-grey'></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>https://cmlabs.co/en/pricing</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                                        <i class='bx bxs-x-circle text-grey'></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>https://analytics.cmlabs.co/en</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
+                                                        <i class='bx bxs-x-circle text-grey'></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>https://analytics.cmlabs.co/en/login</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
+                                                        <i class='bx bxs-x-circle text-grey'></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                                                <div class="d-flex justify-content-between">
+                                                    <div>https://analytics.cmlabs.co/en/member/dashboard</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
+                                                        <i class='bx bxs-x-circle text-grey'></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Local Collection -->
+                            </div>
+                            <!-- Start Mobile Result -->
+                            <div class="d-flex align-self-baseline mobile-result flex-column">
+                                <div class="card card-custom gutter-b mb-3">
+                                    <div class="card-body px-0">
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex align-items-center mb-2">
+                                                <strong class="mr-2">Ad</strong>
+                                                <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                            </div>
+                                            <div class="desc-meta">
+                                                Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Buy Your Schengen Visa Travel Insurance at Traveloka
+                                            </div>
+                                            <div class="desc-meta">
+                                                When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2 color-green">
+                                                Schengen Travel Visa Insurance – Europe Travel Insurance
+                                            </div>
+                                            <div class="desc-meta">
+                                                Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                            </div>
+                                        </div>
+                                        <div class="d-flex flex-column px-10 py-3">
+                                            <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                                <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                            </div>
+                                            <div class="title-meta mb-2">
+                                                Schengen Travel Visa Insurance – Europe Travel Insurance
+                                            </div>
+                                            <div class="desc-meta">
+                                                Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="version d-flex align-items-center pointer">
+                                    <span class="mr-2 text-darkgrey">Version 3.7</span>
+                                    <i class='bx bx-chevron-down text-darkgrey'></i>
+                                </div>
+                            </div>
+                            <!-- End Mobile Result -->
+                        </div>
+                    </div>
+                    <!-- End Main Content -->
                 </div>
-                <!-- End Main Content -->
             </div>
         </div>
     </div>
     <div class="for-mobile">
-        <div class="d-flex flex-column-fluid">
-            <div class="">
-                <!-- Start Title & Subtitle -->
-                <div class="row d-flex flex-column mx-0" style="margin-bottom: 15px;">
-                    <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
-                    <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
-                </div>
-                <!-- End Title & Subtitle -->
-                <!-- Start Blue Header Card -->
-                <div class="row d-flex flex-column justify-content-center align-items-center header-blue py-4 mb-5 mx-0">
-                    <div class="btn-group mb-4" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
-                        <button type="button" class="btn btn-group-black text-white">MANUAL</button>
-                        <button type="button" class="btn btn-group-black text-white">BOT</button>
+        <div class="custom-container">
+            <div class="d-flex flex-column">
+                <div>
+                    <!-- Start Title & Subtitle -->
+                    <div class="row d-flex flex-column mx-0" style="margin-bottom: 15px;">
+                        <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
+                        <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
                     </div>
-                    <span class="text-white mb-4">HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE</span>
-                    <button class="btn btn-rounded-white px-10">CRAWL URL</button>
-                </div>
-                <!-- End Blue Header Card -->
-                <!-- Start Mobile Result -->
-                <div class="d-flex align-self-baseline mobile-result flex-column mb-5">
-                    <div class="card card-custom gutter-b mb-3">
-                        <div class="card-body px-0">
-                            <div class="d-flex flex-column px-10 py-3">
-                                <div class="link-meta d-flex align-items-center mb-2">
-                                    <strong class="mr-2">Ad</strong>
-                                    <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                </div>
-                                <div class="title-meta mb-2">
-                                    Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
-                                </div>
-                                <div class="desc-meta">
-                                    Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column px-10 py-3">
-                                <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                </div>
-                                <div class="title-meta mb-2">
-                                    Buy Your Schengen Visa Travel Insurance at Traveloka
-                                </div>
-                                <div class="desc-meta">
-                                    When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                    <!-- End Title & Subtitle -->
+                    <!-- Start Blue Header Card -->
+                    <div class="row d-flex flex-column justify-content-center align-items-center header-blue py-4 mb-5 mx-0">
+                        <div class="btn-group mb-4" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                            <button type="button" class="btn btn-group-black text-white">MANUAL</button>
+                            <button type="button" class="btn btn-group-black text-white">BOT</button>
+                        </div>
+                        <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <button class="btn btn-rounded-white px-10">CRAWL URL</button>
+                    </div>
+                    <!-- End Blue Header Card -->
+                    <!-- Start Blue Input Text -->
+                    <div class="manual-mode mb-5">
+                        <div class="row mb-3 bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
+                            <div class="d-flex align-items-center flex-row">
+                                <span class="meta-title">
+                                    PAGE TITLE
+                                </span>
+                                <div class="progress-bar_wrap ml-3">
+                                    <div class="progress-bar_item progress-bar_item-1 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
-                                <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
-                                </div>
-                                <div class="title-meta mb-2 color-green">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
-                                </div>
-                                <div class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                            <input type="text" class="form-control bg-primaryblue text-white" id="meta-title" placeholder="Type or paste your text..">
+                        </div>
+                        <div class="row bg-info d-flex flex-column p-9 bg-primaryblue border-radius-5px mx-0">
+                            <div class="d-inline-flex flex-row align-items-center">
+                                <span class="meta-desc d-inline-flex">
+                                    META DESCRIPTION
+                                </span>
+                                <div class="progress-bar_wrap ml-3">
+                                    <div class="progress-bar_item progress-bar_item-1 active"></div>
+                                    <div class="progress-bar_item progress-bar_item-2 blank"></div>
+                                    <div class="progress-bar_item progress-bar_item-3 blank"></div>
                                 </div>
                             </div>
-                            <div class="d-flex flex-column px-10 py-3">
-                                <div class="link-meta d-flex flex-row align-items-center mb-2">
-                                    <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                            <textarea rows="1" class="form-control bg-primaryblue text-white" placeholder="Type or paste your text.."></textarea>
+                        </div>
+                    </div>
+                    <!-- End Blue Input Text -->
+                    <!-- Start Mobile Result -->
+                    <div class="d-flex align-self-baseline mobile-result flex-column mb-5">
+                        <div class="card card-custom gutter-b mb-3">
+                            <div class="card-body px-0">
+                                <div class="d-flex flex-column px-10 py-3">
+                                    <div class="link-meta d-flex align-items-center mb-2">
+                                        <strong class="mr-2">Ad</strong>
+                                        <span>visa-insurance.eu <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    </div>
+                                    <div class="title-meta mb-2">
+                                        Buy ‪Travel Insurance Schengen‬ - Officially accepted for visa
+                                    </div>
+                                    <div class="desc-meta">
+                                        Travel medical insurance to all Schengen Area. Refund if visa denied! Buy in 5 minutes. Pay with credit/deibt and get insurance documents instantly via email. No age limit.
+                                    </div>
                                 </div>
-                                <div class="title-meta mb-2">
-                                    Schengen Travel Visa Insurance – Europe Travel Insurance
+                                <div class="d-flex flex-column px-10 py-3">
+                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                        <span>www.traveloka.com › en-id › insurance › travel › visa-schengen <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    </div>
+                                    <div class="title-meta mb-2">
+                                        Buy Your Schengen Visa Travel Insurance at Traveloka
+                                    </div>
+                                    <div class="desc-meta">
+                                        When arranging a Schengen Visa, tourists must equip themselves with travel insurance. Travel insurance is very important to provide protection as long as you are in this country. Without adequate travel insurance, your Schengen Visa application will be refused.
+                                    </div>
                                 </div>
-                                <div class="desc-meta">
-                                    Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
+                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                        <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    </div>
+                                    <div class="title-meta mb-2 color-green">
+                                        Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    </div>
+                                    <div class="desc-meta">
+                                        Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column px-10 py-3">
+                                    <div class="link-meta d-flex flex-row align-items-center mb-2">
+                                        <span>www.schengenvisainfo.com › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                                    </div>
+                                    <div class="title-meta mb-2">
+                                        Schengen Travel Visa Insurance – Europe Travel Insurance
+                                    </div>
+                                    <div class="desc-meta">
+                                        Dec 10, 2020 — Schengen Visa Insurance Requirements · Minimum coverage of at least 30,000 EUR (equivalent to 34,000 USD). · It should cover all member ...
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- End Mobile Result -->
                 </div>
-                <!-- End Mobile Result -->
-                <!-- Start Local Collection -->
-                <div class="row local-collection">
-                    <div class="d-flex justify-content-between px-2 mb-3">
-                        <div class="d-flex flex-row align-items-center">
-                            <i class='bx bxs-collection mr-2' style="color: var(--black); font-size: 20px;"></i>
-                            <span class="text-black font-15px">Your Local Collection</span>
-                        </div>
-                        <div>
-                            <span class="clear-all font-15px pointer">Clear All</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Local Collection -->
             </div>
+        </div>
+        <div class="custom-container-fluid">
+          <!-- Start Local Collection -->
+          <div class="local-collection px-0 bg-white p-5">
+                  <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
+                      <div class="d-flex flex-row align-items-center">
+                          <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                          <span class="text-black font-15px">Your Local Collection</span>
+                      </div>
+                      <div>
+                          <span class="clear-all font-15px pointer">Clear All</span>
+                      </div>
+                  </div>
+                  <div class="local-collection-body mt-3">
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="custom-card py-5 px-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div>https://cmlabs.co/..</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+          <!-- End Local Collection -->
         </div>
     </div>
 </div>
 <!-- END v2 VER -->
-
-
-
-
 
 
 
