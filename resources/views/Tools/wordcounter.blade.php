@@ -146,15 +146,47 @@ id/word-counter
       font-weight: bold;
     }
 
+    .btn-explore:hover {
+      background: var(--lightgrey);
+      color: var(--black);
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
     .robo-img {
       width: 60%;
       vertical-align: middle;
     }
 
-    .robo-container {
-      display: flex;
-      justify-content: flex-end;
-      vertical-align: middle;
+    @media (min-width: 280px) and (max-width: 768px) {
+      .robo-container {
+        display: flex;
+        justify-content: center;
+        vertical-align: middle;
+      }
+
+      .robo-text-container {
+          text-align: center;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 768px) {
+      .robo-img {
+        width: 40%;
+        vertical-align: middle;
+      }
+      .robo-text-container {
+        padding: 0 50px;
+          text-align: center;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .robo-container {
+        display: flex;
+        justify-content: flex-end;
+        vertical-align: middle;
+      }
     }
 
     @media (min-width: 992px) {
@@ -166,6 +198,64 @@ id/word-counter
     .card-whats-new {
       background: var(--lightgrey);
       border-radius: 5px;
+    }
+
+    .label-tools-description {
+      background: var(--lightgrey);
+      color: var(--black);
+      font-weight: bold;
+    }
+
+    .label-tools-description-footer {
+      background: var(--darkgrey);
+      color: var(--white);
+      font-weight: bold;
+    }
+
+    .tools-description-points {
+      color: var(--primaryblue);
+    }
+
+    .tools-description-points:hover {
+      text-decoration: underline !important;
+      color: #0F90E7 !important;
+    }
+
+    .checkbox-features {
+        opacity: 1 !important;
+        margin-bottom: 10px !important;
+    }
+    .checkbox-features >  span::after  {
+        width: 5px !important;
+        height: 10px !important;
+    }
+    .checkbox-features > input:checked ~ span {
+        background: var(--black);
+    }
+
+    .checkbox-features.features-disabled bdi {
+        opacity: 0.6;
+    }
+
+    .label-whats-new {
+      background: #0FBC0C;
+    }
+
+    .button-close-whats-new {
+      color: var(--darkgrey);
+      cursor: pointer;
+    }
+
+    .button-close-whats-new:hover {
+      color: var(--black);
+    }
+
+    .view-all-release {
+      cursor: pointer;
+    }
+
+    .view-all-release:hover {
+      text-decoration: underline;
     }
 </style>
 @endpush
@@ -239,64 +329,64 @@ id/word-counter
             </div>
           </div>
           <div class="local-collection">
-            <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-              <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local Collection</span>
+              <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
+                  <div class="d-flex flex-row align-items-center">
+                      <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                      <span class="text-black font-15px">Your Local Collection</span>
+                  </div>
+                  <div>
+                      <span class="clear-all font-15px pointer">Clear All</span>
+                  </div>
               </div>
-              <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
+              <div class="local-collection-body">
+                  <ul class="list-group">
+                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                          <div class="d-flex justify-content-between">
+                              <div>https://cmlabs.co</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                          <div class="d-flex justify-content-between">
+                              <div>https://cmlabs.co/en/pricing</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                          <div class="d-flex justify-content-between">
+                              <div>https://analytics.cmlabs.co/en</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                          <div class="d-flex justify-content-between">
+                              <div>https://analytics.cmlabs.co/en/login</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                          <div class="d-flex justify-content-between">
+                              <div>https://analytics.cmlabs.co/en/member/dashboard</div>
+                              <div class="d-flex align-items-center">
+                                  <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
+                                  <i class='bx bxs-x-circle text-grey'></i>
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
               </div>
-            </div>
-            <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co/en/pricing</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/login</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/member/dashboard</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
         <div class="col-md-4">
@@ -685,15 +775,44 @@ id/word-counter
 </div>
 <div class="mt-10" style="background:white">
   <div class="container container-description py-20">
+    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
-      <div class="col-md-10">
-        <h2>Advance your writing</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="col-md-9">
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div class="col-md-2">
-        <p>Why does seo important</p>
+      <div class="col-md-3">
+        <div class="d-flex align-items-center mb-5">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">1</span>
+          </div>
+          <a href="#" class="tools-description-points">Why does SEO important for writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">2</span>
+          </div>
+          <a href="#" class="tools-description-points">How search engine works?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">3</span>
+          </div>
+          <a href="#" class="tools-description-points">The basic of writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">4</span>
+          </div>
+          <a href="#" class="tools-description-points">Measuring your writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description-footer">5</span>
+          </div>
+          <a href="#" class="tools-description-points">Hiring profesional content strategy and consultant?</a>
+        </div>
       </div>
     </div>
     <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
@@ -704,41 +823,61 @@ id/word-counter
           </div>
         </div>
         <div class="col-md-6 py-10 pr-10">
-          <h2 class="text-white">Writing Starter Guide</h2>
-          <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-          <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+          <div class="robo-text-container">
+            <h2 class="text-white">Writing Starter Guide</h2>
+            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
+            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+          </div>
         </div>
 
       </div>
     </div>
     <div class="row mb-10">
       <div class="col-md-6">
-        <h2>Available features</h2>
-        <p>Explore the full features of cmlabs WORD COUNTER</p>
-        <p>CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">Available features</h2>
+        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
+        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
       </div>
       <div class="col-md-6">
-        <p>cmlabs Word Counter</p>
+        <div class="d-flex align-items-center">
+            <span class="text-primaryblue">cmlabs Words Counter</span>
+            <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
+            <small class="text-grey">Updated 25 Dec, 2020</small>
+        </div>
+        <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13"/><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version 1.3</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2>What’s new on cmlabs Words Counter</h2>
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <div class="card-whats-new p-10">
-          <p>What's new</p>
-          <p>Last Update Dec 2, 2020</p>
+    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <div class="row">
+      <div class="col-md-6 mb-5">
+        <div class="card card-custom card-whats-new px-5 pb-5 pt-2 card-stretch">
+          <div class="d-flex justify-content-end">
+            <i class='bx bx-x bx-md button-close-whats-new'></i>
+          </div>
+          <p class="text-black font-weight-bold mb-3" style="font-size:1.3rem">What's new <span class="label label-dot label-lg label-whats-new mb-2 ml-1"></span></p>
+          <p class="font-weight-light mb-3">Last Update Dec 2, 2020</p>
           <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card-whats-new p-10">
-          <p>What's new</p>
-          <p>Last Update Dec 2, 2020</p>
+      <div class="col-md-6 mb-5">
+        <div class="card card-custom card-whats-new px-5 pb-5 pt-2 card-stretch">
+          <div class="d-flex justify-content-end">
+            <i class='bx bx-x bx-md button-close-whats-new'></i>
+          </div>
+          <p class="text-black font-weight-bold mb-3" style="font-size:1.3rem">What's new <span class="label label-dot label-lg label-whats-new mb-2 ml-1"></span></p>
+          <p class="font-weight-light mb-3">Last Update Dec 2, 2020</p>
           <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
         </div>
       </div>
     </div>
-    <p>View all web-release?</p>
+    <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
 @endsection
