@@ -467,6 +467,10 @@ id/page-title-meta-description-checker
         margin-left: -35px;
         width: 280px;
       }
+
+      #metachecker .progress-bar_wrap {
+        width: 100px !important;
+      }
     }
   }
 </style>
