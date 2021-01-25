@@ -138,13 +138,42 @@ id/word-counter
   .list-group-item-action i {
         color: var(--grey) !important;
     }
+
+    .btn-explore {
+      background: white;
+      color: var(--black);
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    .robo-img {
+      width: 60%;
+      vertical-align: middle;
+    }
+
+    .robo-container {
+      display: flex;
+      justify-content: flex-end;
+      vertical-align: middle;
+    }
+
+    @media (min-width: 992px) {
+      .container-description, .container-tools{
+        padding: 0px 100px;
+      }
+    }
+
+    .card-whats-new {
+      background: var(--lightgrey);
+      border-radius: 5px;
+    }
 </style>
 @endpush
 
 @section('content')
-<div class="container">
+<div class="container container-tools">
   <div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
+    <div class="container-fluid px-0">
       <h1 class="text-darkgrey">WORDS COUNTER</h1>
       <span class="text-darkgrey h4 ">Login to unlock all features here, 100% free!</span>
 
@@ -292,7 +321,6 @@ id/word-counter
           <div class="card card-custom">
             <div class="card-body">
               <div class="" id="topKeywords">
-
               </div>
             </div>
           </div>
@@ -653,6 +681,64 @@ id/word-counter
         @include('layouts/stickybar')
       </div>--}}
     </div>
+  </div>
+</div>
+<div class="mt-10" style="background:white">
+  <div class="container container-description py-20">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Advance your writing</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-2">
+        <p>SHALOM ALAIKOM</p>
+      </div>
+    </div>
+    <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
+      <div class="row">
+        <div class="col-md-6 py-5">
+          <div class="robo-container">
+            <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+          </div>
+        </div>
+        <div class="col-md-6 py-10 pr-10">
+          <h2 class="text-white">Writing Starter Guide</h2>
+          <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
+          <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="row mb-10">
+      <div class="col-md-6">
+        <h2>Available features</h2>
+        <p>Explore the full features of cmlabs WORD COUNTER</p>
+        <p>CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+      </div>
+      <div class="col-md-6">
+        <p>cmlabs Word Counter</p>
+      </div>
+    </div>
+    <h2>What’s new on cmlabs Words Counter</h2>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <div class="card-whats-new p-10">
+          <p>What's new</p>
+          <p>Last Update Dec 2, 2020</p>
+          <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card-whats-new p-10">
+          <p>What's new</p>
+          <p>Last Update Dec 2, 2020</p>
+          <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
+        </div>
+      </div>
+    </div>
+    <p>View all web-release?</p>
   </div>
 </div>
 @endsection
