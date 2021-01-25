@@ -48,7 +48,7 @@ id/page-title-meta-description-checker
   table tr th.meta-desktop,
   table tr td.meta-desktop {
     width: 60%;
-    /* background: red; */
+    /*  */
   }
   table tr th.meta-mobile,
   table tr td.meta-mobile {
@@ -225,7 +225,7 @@ id/page-title-meta-description-checker
         color: var(--darkgrey) !important;
     }
 
-    #metachecker .header-blue-mobile {
+    #metachecker .header-blue-mobile, #metachecker .local-collection-mobile {
       display: none !important;
     }
 
@@ -239,6 +239,32 @@ id/page-title-meta-description-checker
     }
 
     @media only screen and (max-width: 992px) {
+
+        #metachecker .local-collection-mobile {
+          display: block !important;
+        } 
+
+        #metachecker .custom-card:hover, #metachecker .custom-card:focus,
+        #metachecker .custom-card:hover .date-created, #metachecker .custom-card:focus .date-created {
+          background: var(--primaryblue);
+          color: var(--white);
+        }
+
+        #metachecker .custom-card:hover i {
+          color: var(--darkgrey)
+        }
+
+        #metachecker .local-collection-mobile .local-collection-title {  
+          max-width: 75%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        #metachecker .local-collection {
+          display: none !important;
+        }
+
         .version {
           display: none !important;
         }
@@ -272,15 +298,101 @@ id/page-title-meta-description-checker
         #metachecker .custom-container {
             padding: 0 1em;
         }
+
+        #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 70%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
     }
+    @media only screen and (max-width: 700px) {
+      #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 65%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+
+      #metachecker .date-created {
+          font-size: 10px !important;
+      }
+    }
+
     @media only screen and (max-width: 600px) {
         #metachecker .meta-desc {
             width: 40.7%;
         }
+
+        #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 60%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
     }
+    @media only screen and (max-width: 526px) {
+      #metachecker .local-collection-mobile .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    @media only screen and (max-width: 470px) {
+      #metachecker .local-collection-mobile .local-collection-title {
+        max-width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    @media only screen and (max-width: 420px) {
+      #metachecker .local-collection-mobile .local-collection-title {
+        
+        max-width: 45%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
     @media only screen and (max-width: 400px) {
         #metachecker .meta-desc {
             width: 47.7%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    }
+
+    @media only screen and (max-width: 390px) {
+        #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 40%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+
+    @media only screen and (max-width: 370px) {
+        #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 35%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+
+    @media only screen adn (max-width: 346px) {
+        #metachecker .local-collection-mobile .local-collection-title {
+          max-width: 30%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
     }
   /* zoom 110% */
@@ -364,18 +476,18 @@ id/page-title-meta-description-checker
 
 <!-- START V2 VER -->
 <div id="metachecker">
-  <div class="container">
+  <div class="container container-freetools">
       <div class="d-flex flex-column-fluid">
           <div>
               <!-- Start Title & Subtitle -->
-              <div class="row d-flex flex-column" style="margin-bottom: 35px;">
+              <div class="row d-flex flex-column custom-mb" style="margin-bottom: 35px;">
                   <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
                   <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
               </div>
               <!-- End Title & Subtitle -->  
               <!-- Start Blue Header Card -->
               <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-3 px-8">
-                  <div class="btn-group mr-8" role="group" aria-label="Basic example">
+                  <div class="btn-group" role="group" aria-label="Basic example">
                       <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
                       <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
                       <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
@@ -387,7 +499,7 @@ id/page-title-meta-description-checker
                       <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                   </div>
               </div>
-              <div class="row d-flex flex-column justify-content-center align-items-center header-blue-mobile py-4 mb-5">
+              <div class="row d-flex flex-column justify-content-center align-items-center header-blue-mobile py-4 mb-3">
                   <div class="btn-group mb-4" role="group" aria-label="Basic example">
                       <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
                       <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
@@ -424,7 +536,7 @@ id/page-title-meta-description-checker
               </div>
               <!-- End Blue Input Text -->
               <!-- Start Main Content -->
-              <div class="row">
+              <div class="row mb-5">
                   <div class="d-flex justify-content-between flex-row">
                       <div class="d-flex align-self-baseline desktop-result flex-column">
                           <!-- Start Desktop Result -->
@@ -598,11 +710,73 @@ id/page-title-meta-description-checker
                           </div>
                       </div>
                       <!-- End Mobile Result -->
-                  </div>
+                    </div>
               </div>
               <!-- End Main Content -->
           </div>
       </div>
+  </div>
+  <div class="w-100">
+      <!-- Start Local Collection -->
+      <div class="local-collection-mobile bg-white p-5">
+          <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
+              <div class="d-flex flex-row align-items-center">
+                  <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                  <span class="text-black font-15px">Your Local Collection</span>
+              </div>
+              <div>
+                  <span class="clear-all font-15px pointer">Clear All</span>
+              </div>
+          </div>
+          <div class="local-collection-body mt-3">
+              <div class="custom-card py-5 px-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="local-collection-title">https://cmlabs.co/..</div>
+                      <div class="d-flex align-items-center">
+                          <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                          <i class='bx bxs-x-circle text-grey'></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="custom-card py-5 px-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="local-collection-title">https://cmlabs.co/..</div>
+                      <div class="d-flex align-items-center">
+                          <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                          <i class='bx bxs-x-circle text-grey'></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="custom-card py-5 px-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="local-collection-title">https://cmlabs.co/..</div>
+                      <div class="d-flex align-items-center">
+                          <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                          <i class='bx bxs-x-circle text-grey'></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="custom-card py-5 px-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="local-collection-title">https://cmlabs.co/..</div>
+                      <div class="d-flex align-items-center">
+                          <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                          <i class='bx bxs-x-circle text-grey'></i>
+                      </div>
+                  </div>
+              </div>
+              <div class="custom-card py-5 px-3">
+                  <div class="d-flex align-items-center justify-content-between">
+                      <div class="local-collection-title">https://cmlabs.co/..</div>
+                      <div class="d-flex align-items-center">
+                          <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                          <i class='bx bxs-x-circle text-grey'></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- End Local Collection -->
   </div>
 </div>
 <!-- END v2 VER -->
