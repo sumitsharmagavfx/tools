@@ -22,14 +22,12 @@ id/page-title-meta-description-checker
   #mobile {
     display: none;
   }
-
   #resulturlmobile {
     font-size: 13px;
     line-height: 16px;
     text-decoration: none solid rgb(0,102,33);
     color: #006621;
   }
-
   #resulttitlemobile {
       font-size: 20px;
       color: #1A0DAB;
@@ -37,7 +35,6 @@ id/page-title-meta-description-checker
       word-spacing: 0px;
       text-decoration: none solid rgb(26,13,171);
     }
-
   #resultdescmobile {
     font-size: 14px;
     color: #3C4043;
@@ -45,7 +42,6 @@ id/page-title-meta-description-checker
     word-spacing: 0px;
     text-decoration: none solid rgb(60,64,67);
   }
-
   table.table {
     width: 100%;
   }
@@ -66,7 +62,6 @@ id/page-title-meta-description-checker
     height: 100%;
     margin: 1.5rem 0 1.5rem 3rem;
   }
-
   .custom-wrapper-mobile {
     border:1px solid #dadce6;
     width: 19em;
@@ -74,7 +69,6 @@ id/page-title-meta-description-checker
     background: white;
     margin: 1.5rem 1rem 1.5rem 1rem;
   }
-
   .custom-fixed-size {
     text-align: left;
     width: 570px;
@@ -85,36 +79,30 @@ id/page-title-meta-description-checker
     height: 200px;
     width: 253px;
   }
-
     #metachecker .title {
         font-weight: 400;
         font-size: 30px;
         color: var(--darkgrey);
         line-height: 35px;
     }
-
     #metachecker .subtitle {
         font-weight: 400;
         font-size: 20px;
         color: var(--darkgrey);
         line-height: 35px;
     }
-
     #metachecker .header-blue {
         background: var(--primaryblue);
         border-radius: 5px;
         padding-left: 40px;
         padding-right: 40px;
     }
-
     #metachecker .btn-group-black {
         background: var(--black);
     }
-
     #metachecker .btn-group-black:focus, #metachecker .btn-group-black:hover {
         background: #DCAD05;
     }
-
     #metachecker .input-url, #metachecker .input-url:focus {
         background: var(--primaryblue);
         color: var(--white);
@@ -123,7 +111,6 @@ id/page-title-meta-description-checker
         text-transform: uppercase;
         outline: none;
     }
-
     #metachecker .for-mobile .input-url, #metachecker .input-url:focus {
         background: var(--primaryblue);
         color: var(--white);
@@ -132,63 +119,51 @@ id/page-title-meta-description-checker
         text-transform: uppercase;
         outline: none;
     }
-
     #metachecker .btn-rounded-white {
         background: var(--white);
         color: var(--black);
         border-radius: 20px;
         font-weight: 700;
     }
-
     #metachecker .desktop-result {
         width: 58%;
     }
-
     #metachecker .mobile-result {
         width: 39%;
     }
-
     #metachecker .title-meta {
         color: #1A0DAB;
         font-size: 20px;
         line-height: 23px;
     }
-
     #metachecker .color-green {
         color: #009A0F !important;
     }
-
     #metachecker .bg-color-lightyellow {
         background: rgba(255, 222, 104, 0.15) !important;
     }
-
     #metachecker .desc-meta {
         color: #4D5156;
         font-size: 13px;
         line-height: 15px;
     }
-
     #metachecker .header-local-collection {
         background: var(--lightgrey);
     }
-
     #metachecker .clear-all:hover {
         text-decoration: underline;
     }
-
     #metachecker .list-group-item-action:hover, #metachecker .list-group-item-action:focus {
         background: var(--primaryblue);
         color: var(--white);
     }
-
     #metachecker .list-group-item-action:hover .date-created {
         color: var(--white) !important;
     }
-
     #metachecker .list-group-item-action:hover i {
         color: rgba(42, 47, 51, 0.3) !important;
     }
-    
+
     #metachecker .list-group-item-action i {
         color: var(--grey) !important;
     }
@@ -200,31 +175,25 @@ id/page-title-meta-description-checker
     #metachecker .custom-container {
         padding: 0 100px;
     }
-
     #metachecker .custom-container-fluid {
         padding: 0;
     }
-
     #metachecker .meta-title {
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
     }
-
     #metachecker .meta-desc {
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
     }
-
     #metachecker ::placeholder {
         color: var(--white);
     }
-
     #metachecker input, #metachecker textarea {
         border: none;
     }
-
     #metachecker .progress-bar_wrap {
         width: 150px;
         height: 11px;
@@ -232,7 +201,6 @@ id/page-title-meta-description-checker
         display: inline-block;
         overflow: hidden;
     }
-
     #metachecker .progress-bar_item {
         display: inline-block;
         height: 100%;
@@ -240,24 +208,19 @@ id/page-title-meta-description-checker
         margin-right: .8%;
         float: left;
     }
-
     #metachecker .progress-bar_item-1.active, #metachecker .progress-bar_item-2.active, #metachecker .progress-bar_item-3.active {
         background: #B1F25D;
     }
-
     #metachecker .progress-bar_item-1.blank, #metachecker .progress-bar_item-2.blank, #metachecker .progress-bar_item-3.blank {
         background: var(--white);
     }
-
     #metachecker .for-mobile .custom-card {
         border-radius: 5px;
     }
-
     #metachecker .for-mobile .local-collection-body .custom-card:hover, #metachecker .for-mobile .local-collection-body .custom-card:focus {
         background: var(--primaryblue);
         color: var(--white);
     }
-
     #metachecker .for-mobile .local-collection-body .custom-card i:hover {
         color: var(--darkgrey) !important;
     }
@@ -270,7 +233,6 @@ id/page-title-meta-description-checker
         .custom-fixed-size {
             width: 580px;
         }
-
         .custom-fixed-size-1 {
             transform: scale(0.9);
         }
@@ -306,26 +268,21 @@ id/page-title-meta-description-checker
             transform: scale(0.9);
         } */
     }
-
     @media only screen and (max-width: 800px) {
-
         #metachecker .custom-container {
             padding: 0 1em;
         }
     }
-
     @media only screen and (max-width: 600px) {
         #metachecker .meta-desc {
             width: 40.7%;
         }
     }
-
     @media only screen and (max-width: 400px) {
         #metachecker .meta-desc {
             width: 47.7%;
         }
     }
-
   /* zoom 110% */
   @media only screen and (max-width: 1300px) {
     .custom-fixed-size {
@@ -333,23 +290,19 @@ id/page-title-meta-description-checker
       transform: scale(0.9);
       margin-left: -27px;
     }
-
-    .custom-wrapper-desktop { 
+    .custom-wrapper-desktop {
       width: 40em;
     }
-
     .custom-fixed-size-1 {
       margin-top: -18px;
       margin-left: -18px;
       transform: scale(0.85);
     }
-
     .custom-wrapper-mobile {
       width: 16em;
       height: 13em;
     }
   }
-
   /* zoom 125% */
   @media only screen and (max-width: 1200px) {
     .custom-fixed-size {
@@ -357,34 +310,28 @@ id/page-title-meta-description-checker
       margin-left: -90px;
       margin-top: -13px;
     }
-
-    .custom-wrapper-desktop { 
+    .custom-wrapper-desktop {
       width: 30em;
       height: 6em;
     }
-
     .custom-fixed-size-1 {
       transform: scale(0.65);
       margin-top: -36px;
       margin-left: -43px;
     }
-
     .custom-wrapper-mobile {
       width: 13em;
       height: 10em;
     }
   }
-
   @media only screen and (max-width: 768px) {
       #desktop {
         display: none;
       }
-
       #mobile {
         display: block;
         width: 100%;
       }
-
       .custom-wrapper-mobile {
       border: 1px solid #dadce6;
       background: white;
@@ -392,29 +339,25 @@ id/page-title-meta-description-checker
       margin: 0;
       width: auto;
       }
-
       .custom-fixed-size-1 {
         transform: scale(0.9);
         margin: 0;
-        width: 280px;      
+        width: 280px;
       }
     }
-
     @media only screen and (max-width: 400px) {
       .custom-fixed-size-1 {
         transform: scale(0.8);
         margin-left: -15px;
       }
     }
-
     @media only screen and (max-width: 320px) {
       .custom-fixed-size-1 {
         transform: scale(0.72);
         margin-left: -35px;
-        width: 280px;      
+        width: 280px;
       }
     }
-
   }
 </style>
 @endpush
@@ -695,7 +638,7 @@ id/page-title-meta-description-checker
         </thead>
         <tbody>
           <tr>
-            <td class="meta-desktop"> 
+            <td class="meta-desktop">
               <center>
                 <div class="custom-wrapper-desktop">
                   <div class="p-5 custom-fixed-size">
@@ -723,7 +666,6 @@ id/page-title-meta-description-checker
     </div>
   </div>
 </div>
-
 <div class="row">
   <div class="col-lg-12 mb-5" id="mobile">
     <div class="card card-custom card-stretch">
@@ -746,7 +688,6 @@ id/page-title-meta-description-checker
     </div>
   </div>
 </div>
-
 <div class="row " data-sticky-container>
   <div class="col-lg-8 mb-5">
     <div class="card card-custom mb-5">
@@ -787,7 +728,6 @@ id/page-title-meta-description-checker
         <small id="desccount"></small>
       </div>
     </div>
-
     <div class="card card-custom">
       <div class="card-header">
         <div class="card-title">
@@ -951,9 +891,7 @@ id/page-title-meta-description-checker
             <img src="https://cmlabs.co/wp-content/uploads/2020/06/serp-google-cmlabs-1024x820.png" width="100%" alt="serp google cmlabs">
           </div>
         </center>
-
         <p>@lang('metachecker.copy-9')</p>
-
         <h3 class="py-5">@lang('metachecker.copy-10')</h3>
         <table class="table">
           <tbody>
@@ -967,7 +905,6 @@ id/page-title-meta-description-checker
             </tr>
           </tbody>
         </table>
-
         <h3 class="py-5">@lang('metachecker.copy-15')</h3>
         <table class="table">
           <tbody>
@@ -993,7 +930,6 @@ id/page-title-meta-description-checker
             </tr>
           </tbody>
         </table>
-
         <h3 class="py-5">@lang('metachecker.copy-26')</h3>
         <table class="table">
           <tbody>
@@ -1025,13 +961,10 @@ id/page-title-meta-description-checker
           </div>
         </center>
       </div>
-
     </div>
   </div>
 
-  
 </div>
-
 </div>
 </div>
 <br>
