@@ -10,9 +10,11 @@
 html, body {
     font-family: 'Roboto', sans-serif !important;
 }
-
 body {
   background: #e1e8ed;
+}
+.custom-mb {
+    margin-bottom: 35px;
 }
 .text-primaryblue {
   color: var(--primaryblue);
@@ -74,17 +76,9 @@ body {
     background: var(--primaryblue) !important;
 }
 
-.for-mobile {
-    display: none;
-}
-
-@media only screen and (max-width: 800px) {
-    .for-desktop {
-        display: none;
-    }
-
-    .for-mobile {
-        display: inline;
+@media only screen and (max-width: 992px) {
+    .custom-mb {
+        margin-bottom: 20px !important;
     }
 }
 
