@@ -86,12 +86,12 @@
             @include('layouts.header')
             <!--end::Header-->
             <!--begin::Content-->
-            <div class="content d-flex flex-column flex-row-fluid custom-data-content" id="kt_content">
+            <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
               @include('layouts.subheader')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div style="padding-top: 20px;">
+                    <div style="padding-top: 20px; width:100%">
                         @yield('content')
                     </div>
                     <!--end::Container-->

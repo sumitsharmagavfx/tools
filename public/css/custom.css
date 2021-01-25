@@ -15,21 +15,46 @@ body {
   background: #e1e8ed;
 }
 .text-primaryblue {
-  color: var(--primaryblue) !important;
+  color: var(--primaryblue);
 }
 .text-black {
-  color: var(--black) !important;
+  color: var(--black);
 }
 .text-darkgrey {
-  color: var(--darkgrey) !important;
+  color: var(--darkgrey);
 }
 .text-grey {
-  color: var(--grey) !important;
+  color: var(--grey);
 }
 .text-lightgrey {
-  color: var(--lightgrey) !important;
+  color: var(--lightgrey);
 }
 .text-white {
+  color: var(--white);
+}
+
+.text-hover-primaryblue:hover {
+  cursor: pointer;
+  color: var(--primaryblue) !important;
+}
+.text-hover-black:hover {
+  cursor: pointer;
+  color: var(--black) !important;
+}
+.text-hover-darkgrey:hover {
+  cursor: pointer;
+  color: var(--darkgrey) !important;
+}
+.text-hover-grey:hover {
+  cursor: pointer;
+  color: var(--grey) !important;
+}
+.text-hover-lightgrey:hover {
+  cursor: pointer;
+  color: var(--lightgrey) !important;
+}
+.text-hover-white:hover {
+  cursor: pointer;
   color: var(--white) !important;
 }
 
@@ -304,7 +329,7 @@ a:hover {
     font-weight: 500;
 }
 .section-insight {
-    background: var(--black);
+    background: #2D393D;
     padding: 100px 0px;
 }
 .card-insight {
@@ -317,7 +342,7 @@ a:hover {
     background: #536D74;
 }
 .custom-footer {
-    background: var(--black);
+    background: #2D393D;
     padding: 0px 0px 100px 0px;
     margin-top: -1px;
 }
