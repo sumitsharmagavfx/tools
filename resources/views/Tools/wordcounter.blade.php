@@ -74,7 +74,7 @@ id/word-counter
     border-bottom-right-radius: 5px;
   }
 
-  .wordcounter-background-text-size-active {
+  .wordcounter-background-text-size.active {
     background: #2A2F33;
   }
 
@@ -95,7 +95,7 @@ id/word-counter
     border-bottom-right-radius: 5px;
   }
 
-  .wordcounter-background-density-active {
+  .wordcounter-background-density.active {
     background: #CCD6DD;
   }
 
@@ -257,11 +257,145 @@ id/word-counter
     .view-all-release:hover {
       text-decoration: underline;
     }
+
+    .local-collection-mobile {
+      display: none !important;
+    }
+
+    .word-counter-result-card-mobile {
+      display: none !important;
+    }
+
+    .header-local-collection {
+        background: var(--lightgrey);
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+      .local-collection .local-collection-title {
+          max-width: 55%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+
+
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .local-collection .local-collection-title {
+            max-width: 55%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+      }
+
+
+    @media only screen and (max-width: 767px) {
+      .local-collection-mobile {
+        display: block !important;
+      }
+
+      .word-counter-result-card-mobile {
+        display: block !important;
+      }
+
+      .local-collection-mobile .local-collection-title {
+          max-width: 70%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      .local-collection {
+          display: none !important;
+        }
+
+        .word-counter-result-card-desktop {
+          display: none !important;
+        }
+
+    }
+    /* @media only screen and (max-width: 800px) {
+
+      .local-collection-mobile .local-collection-title {
+          max-width: 70%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    } */
+    @media only screen and (max-width: 700px) {
+       .local-collection-mobile .local-collection-title {
+          max-width: 65%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+      }
+
+    }
+    @media only screen and (max-width: 600px) {
+
+      .local-collection-mobile .local-collection-title {
+          max-width: 60%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+    @media only screen and (max-width: 526px) {
+      .local-collection-mobile .local-collection-title {
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    @media only screen and (max-width: 470px) {
+    .local-collection-mobile .local-collection-title {
+        max-width: 50%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+    .local-collection-mobile .local-collection-title {
+
+        max-width: 45%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    @media only screen and (max-width: 390px) {
+        .local-collection-mobile .local-collection-title {
+          max-width: 40%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+    @media only screen and (max-width: 370px) {
+      .local-collection-mobile .local-collection-title {
+          max-width: 35%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
+    @media only screen adn (max-width: 346px) {
+      .local-collection-mobile .local-collection-title {
+          max-width: 30%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+    }
 </style>
 @endpush
 
 @section('content')
-<div class="container container-tools">
+<div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
       <h1 class="text-darkgrey">WORDS COUNTER</h1>
@@ -278,10 +412,10 @@ id/word-counter
                   <div class="wordcounter-background-text-size wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                     <i class='bx bx-fullscreen bx-sm text-white'></i>
                   </div>
-                  <div class="wordcounter-background-text-size wordcounter-background-text-size-active text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                  <div class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
                     10px
                   </div>
-                  <div class="wordcounter-background-text-size text-white d-flex justify-content-center font-weight-bolder align-items-center p-2">
+                  <div class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2">
                     12px
                   </div>
                   <div class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
@@ -342,7 +476,7 @@ id/word-counter
                   <ul class="list-group">
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div>https://cmlabs.co</div>
+                              <div class="local-collection-title">https://cmlabs.co</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -351,7 +485,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div>https://cmlabs.co/en/pricing</div>
+                              <div class="local-collection-title">https://cmlabs.co/en/pricing</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -360,7 +494,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div>https://analytics.cmlabs.co/en</div>
+                              <div class="local-collection-title">https://analytics.cmlabs.co/en</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -369,7 +503,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div>https://analytics.cmlabs.co/en/login</div>
+                              <div class="local-collection-title">https://analytics.cmlabs.co/en/login</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -378,7 +512,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div>https://analytics.cmlabs.co/en/member/dashboard</div>
+                              <div class="local-collection-title">https://analytics.cmlabs.co/en/member/dashboard</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -387,16 +521,17 @@ id/word-counter
                       </li>
                   </ul>
               </div>
+
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 word-counter-result-card-desktop">
           <div class="card card-custom mb-5">
             <div class="card-body py-3 px-4">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
                   WORDS
                 </div>
-                <div class="wordcounter-background-density wordcounter-background-density-active font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                <div class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
                   1
                 </div>
                 <div class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
@@ -773,7 +908,85 @@ id/word-counter
     </div>
   </div>
 </div>
-<div class="mt-10" style="background:white">
+<div class="w-100">
+    <!-- Start Local Collection -->
+    <div class="local-collection-mobile bg-white p-5">
+        <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
+            <div class="d-flex flex-row align-items-center">
+                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                <span class="text-black font-15px">Your Local Collection</span>
+            </div>
+            <div>
+                <span class="clear-all font-15px pointer">Clear All</span>
+            </div>
+        </div>
+        <div class="local-collection-body mt-3">
+            <div class="custom-card py-5 px-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                        <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-card py-5 px-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                        <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-card py-5 px-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                        <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-card py-5 px-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                        <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-card py-5 px-3">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                        <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white p-5 word-counter-result-card-mobile">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+          WORDS
+        </div>
+        <div class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
+          1
+        </div>
+        <div class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+          2
+        </div>
+        <div class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+          3
+        </div>
+      </div>
+      <div class="" id="topKeywords">
+    </div>
+</div>
+<div class="" style="background:white">
   <div class="container container-description py-20">
     <h2 class="text-black">Advance your writing</h2>
     <div class="row">

@@ -163,15 +163,12 @@ id/page-title-meta-description-checker
     #metachecker .list-group-item-action:hover i {
         color: rgba(42, 47, 51, 0.3) !important;
     }
-
     #metachecker .list-group-item-action i {
         color: var(--grey) !important;
     }
-
     #metachecker .list-group-item-action i:hover {
         color: var(--darkgrey) !important;
     }
-
     #metachecker .custom-container {
         padding: 0 100px;
     }
@@ -224,11 +221,9 @@ id/page-title-meta-description-checker
     #metachecker .for-mobile .local-collection-body .custom-card i:hover {
         color: var(--darkgrey) !important;
     }
-
     #metachecker .header-blue-mobile, #metachecker .local-collection-mobile {
       display: none !important;
     }
-
     @media only screen and (min-width: 1400px) {
         .custom-fixed-size {
             width: 580px;
@@ -237,58 +232,47 @@ id/page-title-meta-description-checker
             transform: scale(0.9);
         }
     }
-
     @media only screen and (max-width: 992px) {
-
         #metachecker .local-collection-mobile {
           display: block !important;
         }
-
         #metachecker .custom-card:hover, #metachecker .custom-card:focus,
         #metachecker .custom-card:hover .date-created, #metachecker .custom-card:focus .date-created {
           background: var(--primaryblue);
           color: var(--white);
         }
-
         #metachecker .custom-card:hover i {
           color: var(--darkgrey)
         }
-
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 75%;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
-
         #metachecker .local-collection {
           display: none !important;
         }
-
         .version {
           display: none !important;
         }
         #metachecker .header-blue {
             display: none !important;
         }
-
         #metachecker .header-blue-mobile {
             display: flex !important;
             background: var(--primaryblue);
             border-radius: 5px;
         }
-
         #metachecker .mobile-result {
             width: 100%;
         }
-
         #metachecker .desktop-result {
           display: none !important;
         }
         /* .custom-fixed-size {
             width: 580px;
         }
-
         .custom-fixed-size-1 {
             transform: scale(0.9);
         } */
@@ -297,7 +281,6 @@ id/page-title-meta-description-checker
         #metachecker .custom-container {
             padding: 0 1em;
         }
-
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 70%;
           white-space: nowrap;
@@ -312,7 +295,6 @@ id/page-title-meta-description-checker
           overflow: hidden;
           text-overflow: ellipsis;
       }
-
       #metachecker .date-created {
           font-size: 10px !important;
       }
@@ -321,7 +303,6 @@ id/page-title-meta-description-checker
         #metachecker .meta-desc {
             width: 40.7%;
         }
-
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 60%;
           white-space: nowrap;
@@ -337,7 +318,6 @@ id/page-title-meta-description-checker
         text-overflow: ellipsis;
       }
     }
-
     @media only screen and (max-width: 470px) {
       #metachecker .local-collection-mobile .local-collection-title {
         max-width: 50%;
@@ -346,7 +326,6 @@ id/page-title-meta-description-checker
         text-overflow: ellipsis;
       }
     }
-
     @media only screen and (max-width: 420px) {
       #metachecker .local-collection-mobile .local-collection-title {
 
@@ -356,7 +335,6 @@ id/page-title-meta-description-checker
         text-overflow: ellipsis;
       }
     }
-
     @media only screen and (max-width: 400px) {
         #metachecker .meta-desc {
             width: 47.7%;
@@ -364,9 +342,7 @@ id/page-title-meta-description-checker
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
     }
-
     @media only screen and (max-width: 390px) {
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 40%;
@@ -375,7 +351,6 @@ id/page-title-meta-description-checker
           text-overflow: ellipsis;
         }
     }
-
     @media only screen and (max-width: 370px) {
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 35%;
@@ -384,7 +359,6 @@ id/page-title-meta-description-checker
           text-overflow: ellipsis;
         }
     }
-
     @media only screen adn (max-width: 346px) {
         #metachecker .local-collection-mobile .local-collection-title {
           max-width: 30%;
@@ -466,6 +440,9 @@ id/page-title-meta-description-checker
         transform: scale(0.72);
         margin-left: -35px;
         width: 280px;
+      }
+      #metachecker .progress-bar_wrap {
+        width: 100px !important;
       }
     }
   }
@@ -1135,7 +1112,6 @@ id/page-title-meta-description-checker
       </div>
     </div>
   </div>
-
 </div>
 </div>
 </div>
