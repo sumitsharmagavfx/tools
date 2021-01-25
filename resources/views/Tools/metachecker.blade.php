@@ -481,8 +481,8 @@ id/page-title-meta-description-checker
           <div>
               <!-- Start Title & Subtitle -->
               <div class="row d-flex flex-column custom-mb" style="margin-bottom: 35px;">
-                  <div class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</div>
-                  <div class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</div>
+                  <h1 class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</h1>
+                  <h4 class="font-weight-normal subtitle">Login to unlock all features here, 100% free!</h4>
               </div>
               <!-- End Title & Subtitle -->  
               <!-- Start Blue Header Card -->
