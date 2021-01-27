@@ -431,29 +431,24 @@ id/word-counter
 
     }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before, 
     .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-      border-top-color: red;
-    }
+      border-top-color: red; }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before, 
     .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-      border-right-color: red;
-    }
+      border-right-color: red/*rtl:ignore*/; }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before, 
     .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-      border-bottom-color: red;
-    }
+      border-bottom-color: red; }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before, 
     .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-      border-left-color: red;
-    }
-
-    .tooltip.tooltip-autosave-off .tooltip-inner {
-      background-color: red;
-    }
+      border-left-color: red/*rtl:ignore*/; }
+.tooltip.tooltip-autosave-off .tooltip-inner {
+    background-color: red;
+}
 
 </style>
 @endpush
@@ -490,7 +485,7 @@ id/word-counter
                 </div>
                 <div class="">
                   <i id="saveLocal" class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
-                  <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-toggle="tooltip" data-html="true" data-placement="top" title="Autosave is <b>OFF</b>"></i>
+                  <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="Autosave is <b>OFF</b>"></i>
                   <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-toggle="tooltip" data-html="true" data-placement="top" title="Autosave is <b>ON</b>"></i>
                 </div>
               </div>
@@ -1251,7 +1246,9 @@ id/word-counter
 <script type="text/javascript">
 
 $(document).ready(function() {
-  $('#autoSaveOff').tooltip({'template' : '<div class="tooltip tooltip-auto-save-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'});
+    $('#autoSaveOff').tooltip({
+      'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    });
     $("#top2").hide();
     $("#top3").hide();
     $("#top2Mobile").hide();
@@ -1396,6 +1393,8 @@ $(document).ready(function() {
       $("#top2Mobile").hide();
       $("#top3Mobile").show();
     });
+
+
 
 
 });
