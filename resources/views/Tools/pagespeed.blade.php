@@ -613,5 +613,5 @@ id/pagespeed-test
 @endpush
 
 @section('page-speed')
-menu-item-active
+active
 @endsection

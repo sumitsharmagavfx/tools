@@ -264,5 +264,5 @@ id/json-ld-person-schema-generator
 <script src="{{asset('js/logic/person-json.js')}}"></script>
 @endpush
 @section('json-ld-person')
-menu-item-active
+active
 @endsection

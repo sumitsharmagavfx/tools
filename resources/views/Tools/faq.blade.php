@@ -260,5 +260,5 @@ id/json-ld-faq-schema-generator
 <script src="{{asset('js/logic/faq-json-ld.js')}}"></script>
 @endpush
 @section('json-ld')
-menu-item-active
+active
 @endsection

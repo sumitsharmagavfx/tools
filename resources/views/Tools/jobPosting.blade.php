@@ -304,5 +304,5 @@ id/json-ld-jobPosting-schema-generator
 <script src="{{asset('js/logic/jobPosting-json.js')}}"></script>
 @endpush
 @section('json-ld-jobPosting')
-menu-item-active
+active
 @endsection

@@ -752,5 +752,5 @@ id
 @endpush
 <!-- home -->
 @section('home')
-menu-item-active
+active
 @endsection
