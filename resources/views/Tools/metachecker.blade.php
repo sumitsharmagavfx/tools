@@ -240,6 +240,12 @@ id/page-title-meta-description-checker
 
     @media only screen and (max-width: 992px) {
 
+        #metachecker .col-mobile {
+          text-align: center !important;
+          margin-bottom: 5px !important;
+          margin-top: 5px !important;
+        }
+
         #metachecker .local-collection-mobile {
           display: block !important;
         } 
@@ -269,7 +275,7 @@ id/page-title-meta-description-checker
           display: none !important;
         }
 
-        #metachecker .header-blue {
+        /* #metachecker .header-blue {
             display: none !important;
         }
 
@@ -277,7 +283,7 @@ id/page-title-meta-description-checker
             display: flex !important;
             background: var(--primaryblue);
             border-radius: 5px;
-        }
+        } */
 
         #metachecker .mobile-result {
             width: 100%;
@@ -490,20 +496,22 @@ id/page-title-meta-description-checker
               </div>
               <!-- End Title & Subtitle -->  
               <!-- Start Blue Header Card -->
-              <div class="row d-flex flex-row justify-content-between align-items-center header-blue py-3 mb-3 px-8">
-                  <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
-                      <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
-                      <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
+              <div class="row d-flex flex-row align-items-center header-blue py-3 mb-3 px-8">
+                  <div class="col-md-3 text-left pl-0 col-mobile">
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                          <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
+                          <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
+                      </div>
                   </div>
-                  <div class="w-50">
-                    <input type="text" class="input-url text-center w-100" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                  <div class="col-md-6 col-mobile">
+                      <input type="text" class="input-url text-center w-100" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                   </div>
-                  <div>
+                  <div class="col-md-3 text-right pr-0 col-mobile">
                       <button class="btn btn-rounded-white px-10">CRAWL URL</button>
                   </div>
               </div>
-              <div class="row d-flex flex-column justify-content-center align-items-center header-blue-mobile py-4 mb-3">
+              <!-- <div class="row d-flex flex-column justify-content-center align-items-center header-blue-mobile py-4 mb-3">
                   <div class="btn-group mb-4" role="group" aria-label="Basic example">
                       <button type="button" class="btn btn-group-black text-white"><i class='bx bx-cog' style='color:#ffffff'></i></button>
                       <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
@@ -511,7 +519,7 @@ id/page-title-meta-description-checker
                   </div>
                     <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                   <button class="btn btn-rounded-white px-10">CRAWL URL</button>
-              </div>
+              </div> -->
               <!-- End Blue Header Card -->  
               <!-- Start Blue Input Text -->
               <div class="manual-mode mb-5">
