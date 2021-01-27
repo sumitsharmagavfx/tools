@@ -1144,5 +1144,5 @@ id/page-title-meta-description-checker
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 @endpush
 @section('title-checker')
-menu-item-active
+active
 @endsection

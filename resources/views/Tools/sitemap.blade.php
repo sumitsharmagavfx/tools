@@ -181,5 +181,5 @@ id/sitemap-generator
 @endpush
 
 @section('sitemap')
-menu-item-active
+active
 @endsection

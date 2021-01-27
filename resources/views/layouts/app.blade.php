@@ -156,9 +156,7 @@
   };
 </script>
 <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+
 </script>
 <script type="text/javascript">
   // var deadline = new Date("dec 1, 2020 12:00:00").getTime();

@@ -60,15 +60,15 @@ id/json-ld-recipe-schema-generator
             <i class="flaticon2-plus"></i> @lang('recipe.btn-addImageUrl')
             </button>
           <input type="text" name="" class="form-control mb-7 description" placeholder="@lang('recipe.description') :" value="" data-id="0">
-          
+
           <input type="text" name="" class="form-control mb-7 videoContentUrl" placeholder="@lang('recipe.videoContentUrl') :" value="" data-id="0">
           <input type="text" name="" class="form-control mb-7 videoEmbedUrl" placeholder="@lang('recipe.videoEmbedUrl') :" value="" data-id="0">
           <input type="text" name="" class="form-control mb-7 creator" placeholder="@lang('recipe.creator') :" value="" data-id="0">
           <input type="date" name="" class="form-control mb-7 datePublished" placeholder="@lang('recipe.datePublished') :" value="" data-id="0">
-          
+
           <input type="number" min="0" name="" class="form-control mb-7 prepTime" placeholder="@lang('recipe.prepTime') :" value="" data-id="0">
           <input type="number" min="0" name="" class="form-control mb-7 cookTime" placeholder="@lang('recipe.cookTime') :" value="" data-id="0">
-          
+
           <select name="" id="" class="form-control mb-7 recipeCategory" data-id="0">
             <option value="">@lang('recipe.recipeCategory')</option>
             <option value="Appetizer">Appetizer</option>
@@ -308,5 +308,5 @@ id/json-ld-recipe-schema-generator
 <script src="{{asset('js/logic/recipe-json.js')}}"></script>
 @endpush
 @section('json-ld-recipe')
-menu-item-active
+active
 @endsection

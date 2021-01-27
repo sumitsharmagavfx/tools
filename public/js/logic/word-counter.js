@@ -7,20 +7,26 @@ var input = document.querySelectorAll('textarea')[0],
     topKeywords = document.querySelector('#topKeywords'),
     topKeywords2 = document.querySelector('#top2'),
     topKeywords3 = document.querySelector('#top3'),
-    topKeywords4 = document.querySelector('#top4'),
-    topKeywords5 = document.querySelector('#top5');
+    // topKeywords4 = document.querySelector('#top4'),
+    // topKeywords5 = document.querySelector('#top5'),
+    topKeywordsMobile = document.querySelector('#topKeywordsMobile'),
+    topKeywords2Mobile = document.querySelector('#top2Mobile'),
+    topKeywords3Mobile = document.querySelector('#top3Mobile');
+    // topKeywords4 = document.querySelector('#top4'),
+    // topKeywords5 = document.querySelector('#top5');
 
-input.innerHTML = sessionStorage.getItem("text");
+
+// input.innerHTML = sessionStorage.getItem("text");
 // input.innerHTML = localStorage.getItem("text");
-characterCount.innerHTML = sessionStorage.getItem("char");
+// characterCount.innerHTML = sessionStorage.getItem("char");
 characterCount.innerHTML = 0;
-wordCount.innerHTML = sessionStorage.getItem("words");
+// wordCount.innerHTML = sessionStorage.getItem("words");
 wordCount.innerHTML = 0;
-sentenceCount.innerHTML = sessionStorage.getItem("sentences");
+// sentenceCount.innerHTML = sessionStorage.getItem("sentences");
 sentenceCount.innerHTML = 0;
-paragraphCount.innerHTML = sessionStorage.getItem("paragraph");
+// paragraphCount.innerHTML = sessionStorage.getItem("paragraph");
 paragraphCount.innerHTML = 0;
-readingTime.innerHTML = sessionStorage.getItem("read");
+// readingTime.innerHTML = sessionStorage.getItem("read");
 readingTime.innerHTML = 0;
 
 let prefilled_en = '( text bellow is an example, you can change the example anytime )\n\nCommon Phases In Content Writing\n\nThen, what are the phases in developing a good content writing? Here we have seven common phases that can be applied for online writing. However, these steps must be firstly adjusted to the project objectives since different project may come with different scheme and approach, too. The seven phases are in the following :';
@@ -72,25 +78,28 @@ jQuery('#reset').click(function () {
     topKeywords.innerHTML = '';
     topKeywords2.innerHTML = '';
     topKeywords3.innerHTML = '';
-    topKeywords4.innerHTML = '';
-    topKeywords5.innerHTML = '';
+    // topKeywords4.innerHTML = '';
+    // topKeywords5.innerHTML = '';
+    topKeywordsMobile.innerHTML = '';
+    topKeywords2Mobile.innerHTML = '';
+    topKeywords3Mobile.innerHTML = '';
 
     sticky.update();
 });
 
 function start(){
-    sessionStorage.setItem("text", input.value);
+    // sessionStorage.setItem("text", input.value);
     // localStorage.
     // setItem("text", input.value);
     console.clear();
 
     characterCount.innerHTML = input.value.length;
-    sessionStorage.setItem("char", input.value.length);
+    // sessionStorage.setItem("char", input.value.length);
 
     var words = input.value.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
     if (words) {
         wordCount.innerHTML = words.length;
-        sessionStorage.setItem("words", words.length);
+        // sessionStorage.setItem("words", words.length);
     } else {
         wordCount.innerHTML = 0;
     }
@@ -98,7 +107,7 @@ function start(){
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
         sentenceCount.innerHTML = sentences.length;
-        sessionStorage.setItem("sentences", sentences.length);
+        // sessionStorage.setItem("sentences", sentences.length);
     } else {
         sentenceCount.innerHTML = 0;
     }
@@ -106,7 +115,7 @@ function start(){
     if (words) {
         var paragraphs = input.value.replace(/\n$/gm, '').split(/\n/);
         paragraphCount.innerHTML = paragraphs.length;
-        sessionStorage.setItem("paragraph", paragraphs.length);
+        // sessionStorage.setItem("paragraph", paragraphs.length);
     } else {
         paragraphCount.innerHTML = 0;
     }
@@ -116,10 +125,10 @@ function start(){
             var minutes = Math.floor(seconds / 60);
             seconds = seconds - minutes*60;
             readingTime.innerHTML = minutes + "m "+ seconds + "s";
-            sessionStorage.setItem("read", minutes + "m "+ seconds + "s");
+            // sessionStorage.setItem("read", minutes + "m "+ seconds + "s");
         } else {
             readingTime.innerHTML = seconds + "s";
-            sessionStorage.setItem("read", seconds + "s");
+            // sessionStorage.setItem("read", seconds + "s");
         }
     } else {
         readingTime.innerHTML = "0s";
@@ -148,10 +157,31 @@ function start(){
         }
         sortedKeywords.sort(function(a, b) {return b[1] - a[1]});
         topKeywords.innerHTML = "";
-        for (var i = 0; i < sortedKeywords.length && i < 15; i++) {
-            var li = document.createElement('li');
-            li.innerHTML = "<b>" + sortedKeywords[i][0] + "</b>: " + sortedKeywords[i][1]+" ("+((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%)";
-            topKeywords.appendChild(li);
+        for (var i = 0; i < sortedKeywords.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // "<b>" + sortedKeywords[i][0] + "</b>: " + sortedKeywords[i][1]+" ("+((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%)";
+            topKeywords.appendChild(div);
+        }
+
+        topKeywordsMobile.innerHTML = "";
+        for (var i = 0; i < sortedKeywords.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // div.innerHTML = "<b>" + sortedKeywords[i][0] + "</b>: " + sortedKeywords[i][1]+" ("+((sortedKeywords[i][1]/words.length)*100).toFixed(1)+"%)";
+            topKeywordsMobile.appendChild(div);
         }
         //2
         var keywords2 = {};
@@ -169,10 +199,31 @@ function start(){
         }
         sortedKeywords2.sort(function(a, b) {return b[1] - a[1]});
         topKeywords2.innerHTML = "";
-        for (var i = 0; i < sortedKeywords2.length && i < 15; i++) {
-            var li = document.createElement('li');
-            li.innerHTML = "<b>" + sortedKeywords2[i][0] + "</b>: " + sortedKeywords2[i][1]+" ("+((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%)";
-            topKeywords2.appendChild(li);
+        for (var i = 0; i < sortedKeywords2.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // li.innerHTML = "<b>" + sortedKeywords2[i][0] + "</b>: " + sortedKeywords2[i][1]+" ("+((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%)";
+            topKeywords2.appendChild(div);
+        }
+
+        topKeywords2Mobile.innerHTML = "";
+        for (var i = 0; i < sortedKeywords2.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords2[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords2[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // li.innerHTML = "<b>" + sortedKeywords2[i][0] + "</b>: " + sortedKeywords2[i][1]+" ("+((sortedKeywords2[i][1]/(words.length/3))*100).toFixed(1)+"%)";
+            topKeywords2Mobile.appendChild(div);
         }
         //3
         var keywords3 = {};
@@ -190,53 +241,74 @@ function start(){
         }
         sortedKeywords3.sort(function(a, b) {return b[1] - a[1]});
         topKeywords3.innerHTML = "";
-        for (var i = 0; i < sortedKeywords3.length && i < 15; i++) {
-            var li = document.createElement('li');
-            li.innerHTML = "<b>" + sortedKeywords3[i][0] + "</b>: " + sortedKeywords3[i][1]+" ("+((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%)";
-            topKeywords3.appendChild(li);
+        for (var i = 0; i < sortedKeywords3.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // li.innerHTML = "<b>" + sortedKeywords3[i][0] + "</b>: " + sortedKeywords3[i][1]+" ("+((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%)";
+            topKeywords3.appendChild(div);
+        }
+
+        topKeywords3Mobile.innerHTML = "";
+        for (var i = 0; i < sortedKeywords3.length && i < 10; i++) {
+            var div = document.createElement('div');
+            if (i == 9) {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div>"
+            } else if (i > 2) {
+                div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-non-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            } else {
+              div.innerHTML = "<div class='row'><div class='col-8'><div class='d-flex justify-content-start align-items-center'><div class='container-label-top-keywords mr-3'><span class='label label-lg label-top-3'>" + (i + 1) + "</span></div>" + sortedKeywords3[i][0] + "</div></div><div class='col-4 d-flex justify-content-end align-items-center'><div class='d-flex justify-content-end align-items-center'><span class='mr-3 font-weight-bolder mt-1'>" + sortedKeywords3[i][1] + "</span><span class='font-weight-bolder mt-1'>" + ((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%</span></div></div></div><hr class='my-2'>"
+            }
+            // li.innerHTML = "<b>" + sortedKeywords3[i][0] + "</b>: " + sortedKeywords3[i][1]+" ("+((sortedKeywords3[i][1]/(words.length/4))*100).toFixed(1)+"%)";
+            topKeywords3Mobile.appendChild(div);
         }
         //4
-        var keywords4 = {};
-        for (var i = 0; i < nonStopWords.length-3; i++) {
-            var key = nonStopWords[i]+" "+nonStopWords[i+1]+" "+nonStopWords[i+2]+" "+nonStopWords[i+3];
-            if(key in keywords4) {
-                keywords4[key] += 1;
-            } else {
-                keywords4[key] = 1;
-            }
-        }
-        var sortedKeywords4 = [];
-        for (var keyword in keywords4){
-            sortedKeywords4.push([keyword, keywords4[keyword]])
-        }
-        sortedKeywords4.sort(function(a, b) {return b[1] - a[1]});
-        topKeywords4.innerHTML = "";
-        for (var i = 0; i < sortedKeywords4.length && i < 15; i++) {
-            var li = document.createElement('li');
-            li.innerHTML = "<b>" + sortedKeywords4[i][0] + "</b>: " + sortedKeywords4[i][1]+" ("+((sortedKeywords4[i][1]/(words.length/5))*100).toFixed(1)+"%)";
-            topKeywords4.appendChild(li);
-        }
+        // var keywords4 = {};
+        // for (var i = 0; i < nonStopWords.length-3; i++) {
+        //     var key = nonStopWords[i]+" "+nonStopWords[i+1]+" "+nonStopWords[i+2]+" "+nonStopWords[i+3];
+        //     if(key in keywords4) {
+        //         keywords4[key] += 1;
+        //     } else {
+        //         keywords4[key] = 1;
+        //     }
+        // }
+        // var sortedKeywords4 = [];
+        // for (var keyword in keywords4){
+        //     sortedKeywords4.push([keyword, keywords4[keyword]])
+        // }
+        // sortedKeywords4.sort(function(a, b) {return b[1] - a[1]});
+        // topKeywords4.innerHTML = "";
+        // for (var i = 0; i < sortedKeywords4.length && i < 15; i++) {
+        //     var li = document.createElement('li');
+        //     li.innerHTML = "<b>" + sortedKeywords4[i][0] + "</b>: " + sortedKeywords4[i][1]+" ("+((sortedKeywords4[i][1]/(words.length/5))*100).toFixed(1)+"%)";
+        //     topKeywords4.appendChild(li);
+        // }
         //5
-        var keywords5 = {};
-        for (var i = 0; i < nonStopWords.length-4; i++) {
-            var key = nonStopWords[i]+" "+nonStopWords[i+1]+" "+nonStopWords[i+2]+" "+nonStopWords[i+3]+" "+nonStopWords[i+4];
-            if(key in keywords5) {
-                keywords5[key] += 1;
-            } else {
-                keywords5[key] = 1;
-            }
-        }
-        var sortedKeywords5 = [];
-        for (var keyword in keywords5){
-            sortedKeywords5.push([keyword, keywords5[keyword]])
-        }
-        sortedKeywords5.sort(function(a, b) {return b[1] - a[1]});
-        topKeywords5.innerHTML = "";
-        for (var i = 0; i < sortedKeywords5.length && i < 15; i++) {
-            var li = document.createElement('li');
-            li.innerHTML = "<b>" + sortedKeywords5[i][0] + "</b>: " + sortedKeywords5[i][1]+" ("+((sortedKeywords5[i][1]/(words.length/6))*100).toFixed(1)+"%)";
-            topKeywords5.appendChild(li);
-        }
+        // var keywords5 = {};
+        // for (var i = 0; i < nonStopWords.length-4; i++) {
+        //     var key = nonStopWords[i]+" "+nonStopWords[i+1]+" "+nonStopWords[i+2]+" "+nonStopWords[i+3]+" "+nonStopWords[i+4];
+        //     if(key in keywords5) {
+        //         keywords5[key] += 1;
+        //     } else {
+        //         keywords5[key] = 1;
+        //     }
+        // }
+        // var sortedKeywords5 = [];
+        // for (var keyword in keywords5){
+        //     sortedKeywords5.push([keyword, keywords5[keyword]])
+        // }
+        // sortedKeywords5.sort(function(a, b) {return b[1] - a[1]});
+        // topKeywords5.innerHTML = "";
+        // for (var i = 0; i < sortedKeywords5.length && i < 15; i++) {
+        //     var li = document.createElement('li');
+        //     li.innerHTML = "<b>" + sortedKeywords5[i][0] + "</b>: " + sortedKeywords5[i][1]+" ("+((sortedKeywords5[i][1]/(words.length/6))*100).toFixed(1)+"%)";
+        //     topKeywords5.appendChild(li);
+        // }
     }
     if (words){
         if (sentences.length >= 1){

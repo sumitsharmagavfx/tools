@@ -229,5 +229,5 @@ id/mobile-test
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')
-menu-item-active
+active
 @endsection

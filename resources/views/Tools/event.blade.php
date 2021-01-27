@@ -293,5 +293,5 @@ id/json-ld-event-schema-generator
 <script src="{{asset('js/logic/event-json.js')}}"></script>
 @endpush
 @section('json-ld-event')
-menu-item-active
+active
 @endsection

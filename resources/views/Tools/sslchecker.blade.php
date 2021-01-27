@@ -239,7 +239,7 @@ id/ssl-checker
                         </li>
                     </ol>
                 </div>
-                
+
 
             </div>
         </div>
@@ -271,7 +271,5 @@ id/ssl-checker
     <script src="{{asset('js/logic/sslchecker.js')}}"></script>
 @endpush
 @section('ssl-checker')
-    menu-item-active
+active
 @endsection
-
-{{--test--}}

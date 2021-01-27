@@ -56,14 +56,14 @@ id/json-ld-howto-schema-generator
           <input type="text" name="" class="form-control mb-5 description" placeholder="@lang('howto.description') :" value="" data-id="0">
           <input type="number" name="" class="form-control mb-5 totalTime" placeholder="@lang('howto.totalTime') :" value="" data-id="0">
           <input type="date" name="" class="form-control mb-5 estimated" placeholder="@lang('howto.estimated') :" value="" data-id="0">
-          
+
           <select name="" id="" class="form-control mb-5 currency">currency
             <option value="">currency</option>
             <option value="USD">United States Dollar</option>
             <option value="GBP">British Pound Sterling</option>
             <option value="CAD">Canadian Dollar</option>
           </select>
-          
+
           <input type="text" name="" class="form-control mb-5 imageUrl" placeholder="@lang('howto.imageUrl') :" value="" data-id="0">
           <div id="howto-supply">
 
@@ -291,5 +291,5 @@ id/json-ld-howto-schema-generator
 <script src="{{asset('js/logic/howto-json.js')}}"></script>
 @endpush
 @section('json-ld-howto')
-menu-item-active
+active
 @endsection
