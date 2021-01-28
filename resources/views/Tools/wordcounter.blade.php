@@ -65,6 +65,9 @@ id/word-counter
   }
 
   .wordcounter-background-text-size-left-edge {
+    background: #66757F;
+    width: 45.16px;
+    height: 33.16px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
@@ -222,6 +225,7 @@ id/word-counter
     }
 
     .checkbox-features {
+        cursor: auto !important;
         opacity: 1 !important;
         margin-bottom: 10px !important;
     }
@@ -391,6 +395,61 @@ id/word-counter
           text-overflow: ellipsis;
         }
     }
+
+    .container-label-top-keywords {
+      width: 24px !important;
+      height: 24px !important;
+
+    }
+
+    .label-top-3 {
+      background: var(--darkgrey);
+      color:white;
+      font-weight: bold;
+    }
+
+    .label-not-top-3 {
+      background: var(--lightgrey);
+      color:var(--black);
+      font-weight: bold;
+    }
+
+    .font-size-10px {
+      font-size: 10px !important;
+    }
+
+    .font-size-12px {
+      font-size: 12px !important;
+    }
+
+    .font-size-15px {
+      font-size: 15px !important;
+    }
+
+    .bg-red {
+      background: red !important;
+
+    }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before, 
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+      border-top-color: red; }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before, 
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+      border-right-color: red/*rtl:ignore*/; }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before, 
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+      border-bottom-color: red; }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before, 
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+      border-left-color: red/*rtl:ignore*/; }
+.tooltip.tooltip-autosave-off .tooltip-inner {
+    background-color: red;
+}
+
 </style>
 @endpush
 
@@ -407,25 +466,27 @@ id/word-counter
             <div class="card-body py-3 px-4">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
-                  <i class='bx bxs-copy-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
-                  <i class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
-                  <div class="wordcounter-background-text-size wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
-                    <i class='bx bx-fullscreen bx-sm text-white'></i>
+                  <i id="copy-text" class='bx bxs-copy-alt bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  <i id="reset" class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  <div class="wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M5 12L3 12 3 21 12 21 12 19 5 19zM12 5L19 5 19 12 21 12 21 3 12 3z" style="fill:white"></path></svg>
+                    </span>
                   </div>
-                  <div class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                  <div id="set-font-size-10px" class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
                     10px
                   </div>
-                  <div class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2">
+                  <div id="set-font-size-12px" class="wordcounter-background-text-size active text-white d-flex justify-content-center font-weight-bolder align-items-center p-2">
                     12px
                   </div>
-                  <div class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                  <div id="set-font-size-15px" class="wordcounter-background-text-size wordcounter-background-text-size-right-edge text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
                     15px
                   </div>
                 </div>
                 <div class="">
-                  <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
-                  <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is off"></i>
-                  <!-- <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue' data-toggle="tooltip" data-placement="top" title="Autosave is on"></i> -->
+                  <i id="saveLocal" class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="Autosave is <b>OFF</b>"></i>
+                  <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-toggle="tooltip" data-html="true" data-placement="top" title="Autosave is <b>ON</b>"></i>
                 </div>
               </div>
             </div>
@@ -459,7 +520,7 @@ id/word-counter
 
             </div>
             <div class="card-body p-0">
-              <textarea data-autoresize name="name" placeholder="Type or paste your text.." rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area" id="textarea"></textarea>
+              <textarea data-autoresize name="name" placeholder="Type or paste your text.." rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area font-size-12px" id="textarea"></textarea>
             </div>
           </div>
           <div class="local-collection">
@@ -476,7 +537,7 @@ id/word-counter
                   <ul class="list-group">
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">https://cmlabs.co</div>
+                              <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -485,7 +546,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">https://cmlabs.co/en/pricing</div>
+                              <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -494,7 +555,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">https://analytics.cmlabs.co/en</div>
+                              <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -503,7 +564,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">https://analytics.cmlabs.co/en/login</div>
+                              <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -512,7 +573,7 @@ id/word-counter
                       </li>
                       <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                           <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">https://analytics.cmlabs.co/en/member/dashboard</div>
+                              <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
                               <div class="d-flex align-items-center">
                                   <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
                                   <i class='bx bxs-x-circle text-grey'></i>
@@ -531,21 +592,45 @@ id/word-counter
                 <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
                   WORDS
                 </div>
-                <div class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                <div id="showWords1Desktop" class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
                   1
                 </div>
-                <div class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+                <div id="showWords2Desktop" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
                   2
                 </div>
-                <div class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+                <div id="showWords3Desktop" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
                   3
                 </div>
               </div>
             </div>
           </div>
           <div class="card card-custom">
-            <div class="card-body">
+            <div class="card-body p-5">
+
+              <!-- DON'T DELETE THIS !!! -->
+              <!-- <div class="row">
+                <div class="col-6">
+                  <div class="d-flex justify-content-start align-items-center">
+                    <div class="container-label-top-keywords mr-3">
+                      <span class="label label-lg label-top-3">1</span>
+                    </div>
+                    phases
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex justify-content-end align-items-center">
+                    <span class="mr-3 font-weight-bolder mt-1">12</span>
+                    <span class="font-weight-bolder mt-1">11.4%</span>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-2"> -->
+              <!-- DON'T DELETE THIS !!! -->
               <div class="" id="topKeywords">
+              </div>
+              <div class="" id="top2">
+              </div>
+              <div class="" id="top3">
               </div>
             </div>
           </div>
@@ -600,8 +685,6 @@ id/word-counter
                 </div>
               </div>
               <div class="col-md-12">
-                <textarea data-autoresize name="name" rows="15" style="resize:none; overflow:hidden" class="form-control" id="textarea" data-placement="top" data-trigger="click" data-toggle="popover" data-html="true"
-                  title="@lang('wordcounter.popover-title')" data-content="@lang('wordcounter.popover-content')" onclick="myFunction()"></textarea>
                 <div class="text-center mt-5">
                   <button type="button" class="btn btn-primary btn-sm" id="reset">@lang('wordcounter.btn-reset')</button>
                 </div>
@@ -910,8 +993,8 @@ id/word-counter
 </div>
 <div class="w-100">
     <!-- Start Local Collection -->
-    <div class="local-collection-mobile bg-white p-5">
-        <div class="local-collection-header d-flex justify-content-between mb-3 w-100">
+    <div class="local-collection-mobile bg-white py-5">
+        <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
             <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">Your Local Collection</span>
@@ -920,10 +1003,10 @@ id/word-counter
                 <span class="clear-all font-15px pointer">Clear All</span>
             </div>
         </div>
-        <div class="local-collection-body mt-3">
+        <div class="local-collection-body mt-3 px-5">
             <div class="custom-card py-5 px-3">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
                     <div class="d-flex align-items-center">
                         <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                         <i class='bx bxs-x-circle text-grey'></i>
@@ -932,7 +1015,7 @@ id/word-counter
             </div>
             <div class="custom-card py-5 px-3">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
                     <div class="d-flex align-items-center">
                         <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                         <i class='bx bxs-x-circle text-grey'></i>
@@ -941,7 +1024,7 @@ id/word-counter
             </div>
             <div class="custom-card py-5 px-3">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
                     <div class="d-flex align-items-center">
                         <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                         <i class='bx bxs-x-circle text-grey'></i>
@@ -950,7 +1033,7 @@ id/word-counter
             </div>
             <div class="custom-card py-5 px-3">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
                     <div class="d-flex align-items-center">
                         <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                         <i class='bx bxs-x-circle text-grey'></i>
@@ -959,7 +1042,7 @@ id/word-counter
             </div>
             <div class="custom-card py-5 px-3">
                 <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/..</div>
+                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
                     <div class="d-flex align-items-center">
                         <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                         <i class='bx bxs-x-circle text-grey'></i>
@@ -969,21 +1052,26 @@ id/word-counter
         </div>
     </div>
     <div class="bg-white p-5 word-counter-result-card-mobile">
-      <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center mb-5">
         <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
           WORDS
         </div>
-        <div class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
+        <div id="showWords1Mobile" class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
           1
         </div>
-        <div class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+        <div id="showWords2Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
           2
         </div>
-        <div class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+        <div id="showWords3Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
           3
         </div>
       </div>
-      <div class="" id="topKeywords">
+      <div class="" id="topKeywordsMobile">
+      </div>
+      <div class="" id="top2Mobile">
+      </div>
+      <div class="" id="top3Mobile">
+      </div>
     </div>
 </div>
 <div class="" style="background:white">
@@ -1108,9 +1196,7 @@ id/word-counter
   });
 </script>
 <script>
-  $(document).ready(function() {
-    $("#autoSave").tooltip();
-  });
+
   var counter = 0;
 
   function myFunction() {
@@ -1156,7 +1242,164 @@ id/word-counter
     }]
   }
 </script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('#autoSaveOff').tooltip({
+      'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    });
+    $("#top2").hide();
+    $("#top3").hide();
+    $("#top2Mobile").hide();
+    $("#top3Mobile").hide();
+    $("#autoSaveOn").hide();
+
+    $("#autoSaveOn").click(function() {
+      $("#autoSaveOn").hide();
+      $("#autoSaveOff").show();
+    });
+
+    $("#autoSaveOff").click(function() {
+      $("#autoSaveOn").show();
+      $("#autoSaveOff").hide();
+    });
+
+    $("#saveLocal").click(function() {
+      toastr.info('Saved to Local Collection', 'Information');
+    });
+
+    $("#copy-text").click(function(){
+      const textarea = $('#textarea');
+      textarea.select();
+      document.execCommand("copy");
+
+      toastr.info('Copied to Clipboard', 'Information');
+    });
+
+    $("#set-font-size-10px").click(function() {
+      $("#set-font-size-10px").addClass("active");
+      $("#set-font-size-12px").removeClass("active");
+      $("#set-font-size-15px").removeClass("active");
+      $("#textarea").addClass("font-size-10px");
+      $("#textarea").removeClass("font-size-12px");
+      $("#textarea").removeClass("font-size-15px");
+    });
+
+    $("#set-font-size-12px").click(function() {
+      $("#set-font-size-10px").removeClass("active");
+      $("#set-font-size-12px").addClass("active");
+      $("#set-font-size-15px").removeClass("active");
+      $("#textarea").removeClass("font-size-10px");
+      $("#textarea").addClass("font-size-12px");
+      $("#textarea").removeClass("font-size-15px");
+    });
+
+    $("#set-font-size-15px").click(function() {
+      $("#set-font-size-10px").removeClass("active");
+      $("#set-font-size-12px").removeClass("active");
+      $("#set-font-size-15px").addClass("active");
+      $("#textarea").removeClass("font-size-10px");
+      $("#textarea").removeClass("font-size-12px");
+      $("#textarea").addClass("font-size-15px");
+    });
+
+    $("#showWords1Desktop").click(function(){
+      $("#showWords1Desktop").addClass("active");
+      $("#showWords2Desktop").removeClass("active");
+      $("#showWords3Desktop").removeClass("active");
+      $("#showWords1Mobile").addClass("active");
+      $("#showWords2Mobile").removeClass("active");
+      $("#showWords3Mobile").removeClass("active");
+      $("#topKeywords").show();
+      $("#top2").hide();
+      $("#top3").hide();
+      $("#topKeywordsMobile").show();
+      $("#top2Mobile").hide();
+      $("#top3Mobile").hide();
+    });
+
+    $("#showWords2Desktop").click(function(){
+      $("#showWords1Desktop").removeClass("active");
+      $("#showWords2Desktop").addClass("active");
+      $("#showWords3Desktop").removeClass("active");
+      $("#showWords1Mobile").removeClass("active");
+      $("#showWords2Mobile").addClass("active");
+      $("#showWords3Mobile").removeClass("active");
+      $("#topKeywords").hide();
+      $("#top2").show();
+      $("#top3").hide();
+      $("#topKeywordsMobile").hide();
+      $("#top2Mobile").show();
+      $("#top3Mobile").hide();
+    });
+
+    $("#showWords3Desktop").click(function(){
+      $("#showWords1Desktop").removeClass("active");
+      $("#showWords2Desktop").removeClass("active");
+      $("#showWords3Desktop").addClass("active");
+      $("#showWords1Mobile").removeClass("active");
+      $("#showWords2Mobile").removeClass("active");
+      $("#showWords3Mobile").addClass("active");
+      $("#topKeywords").hide();
+      $("#top2").hide();
+      $("#top3").show();
+      $("#topKeywordsMobile").hide();
+      $("#top2Mobile").hide();
+      $("#top3Mobile").show();
+    });
+
+    $("#showWords1Mobile").click(function(){
+      $("#showWords1Desktop").addClass("active");
+      $("#showWords2Desktop").removeClass("active");
+      $("#showWords3Desktop").removeClass("active");
+      $("#showWords1Mobile").addClass("active");
+      $("#showWords2Mobile").removeClass("active");
+      $("#showWords3Mobile").removeClass("active");
+      $("#topKeywords").show();
+      $("#top2").hide();
+      $("#top3").hide();
+      $("#topKeywordsMobile").show();
+      $("#top2Mobile").hide();
+      $("#top3Mobile").hide();
+    });
+
+    $("#showWords2Mobile").click(function(){
+      $("#showWords1Desktop").removeClass("active");
+      $("#showWords2Desktop").addClass("active");
+      $("#showWords3Desktop").removeClass("active");
+      $("#showWords1Mobile").removeClass("active");
+      $("#showWords2Mobile").addClass("active");
+      $("#showWords3Mobile").removeClass("active");
+      $("#topKeywords").hide();
+      $("#top2").show();
+      $("#top3").hide();
+      $("#topKeywordsMobile").hide();
+      $("#top2Mobile").show();
+      $("#top3Mobile").hide();
+    });
+
+    $("#showWords3Mobile").click(function(){
+      $("#showWords1Desktop").removeClass("active");
+      $("#showWords2Desktop").removeClass("active");
+      $("#showWords3Desktop").addClass("active");
+      $("#showWords1Mobile").removeClass("active");
+      $("#showWords2Mobile").removeClass("active");
+      $("#showWords3Mobile").addClass("active");
+      $("#topKeywords").hide();
+      $("#top2").hide();
+      $("#top3").show();
+      $("#topKeywordsMobile").hide();
+      $("#top2Mobile").hide();
+      $("#top3Mobile").show();
+    });
+
+
+
+
+});
+</script>
 @endpush
 @section('word-counter')
-menu-item-active
+active
 @endsection

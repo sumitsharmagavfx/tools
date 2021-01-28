@@ -271,5 +271,5 @@ id/json-ld-article-schema-generator
 <script src="{{asset('js/logic/article-json.js')}}"></script>
 @endpush
 @section('json-ld-article')
-menu-item-active
+active
 @endsection
