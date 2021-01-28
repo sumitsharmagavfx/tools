@@ -120,7 +120,7 @@ id/word-counter
           text-decoration: underline;
           cursor: pointer;
       }
-.list-group-item-action:hover, .list-group-item-action:focus {
+    .list-group-item-action:hover, .list-group-item-action:focus {
         background: var(--primaryblue);
         color: var(--white);
         cursor: pointer;
@@ -426,29 +426,82 @@ id/word-counter
       font-size: 15px !important;
     }
 
-    .bg-red {
-      background: red !important;
 
+    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-top .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+      border-top-color: var(--primaryblue); }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-right .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+      border-right-color: var(--primaryblue)/*rtl:ignore*/; }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-bottom .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+      border-bottom-color: var(--primaryblue); }
+
+    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before,
+    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-left .arrow::before,
+    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+      border-left-color: var(--primaryblue)/*rtl:ignore*/; }
+
+    .tooltip.tooltip-autosave-off .tooltip-inner,
+    .tooltip.tooltip-autosave-on .tooltip-inner {
+        background-color: var(--primaryblue);
+        color: white;
     }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before, 
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-      border-top-color: red; }
+    /* .alert-features-new {
+        background: var(--lightgrey);
+        display: block !important;
+    } */
+    .alert-features-new .alert-text .alert-title {
+        color: var(--darkblue);
+    }
+    .alert-features-new .alert-text .label-alert-features {
+        background: #0FBC0C;
+        margin-bottom: 2px;
+    }
+    .alert-features-new .alert-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .alert-features-new .alert-close > button {
+        opacity: 1;
+    }
+    .alert-features-new .alert-close > button > span > .icon-alert-close {
+        color: var(--darkgrey) !important;
+        font-weight: bolder;
+    }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before, 
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-      border-right-color: red/*rtl:ignore*/; }
+    .local-collection-mobile .local-collection-body .custom-card {
+      border-radius: 5px;
+    }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before, 
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-      border-bottom-color: red; }
+    .local-collection-mobile .local-collection-body .custom-card:hover {
+      background: var(--primaryblue);
+      cursor: pointer;
+      color: white;
+    }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before, 
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-      border-left-color: red/*rtl:ignore*/; }
-.tooltip.tooltip-autosave-off .tooltip-inner {
-    background-color: red;
-}
+    .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
+      color:white !important;
+    }
+
+    .local-collection-mobile .local-collection-body .custom-card:hover i {
+      color:#1d7ebf !important;
+    }
+
+    .local-collection-mobile .local-collection-body .custom-card i:hover{
+      color:#66757f!important;
+    }
 
 </style>
 @endpush
@@ -484,9 +537,11 @@ id/word-counter
                   </div>
                 </div>
                 <div class="">
-                  <i id="saveLocal" class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  <a href="#local-collection-desktop">
+                    <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
+                  </a>
                   <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="Autosave is <b>OFF</b>"></i>
-                  <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-toggle="tooltip" data-html="true" data-placement="top" title="Autosave is <b>ON</b>"></i>
+                  <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-html="true" data-placement="top" title="Autosave is <b>ON</b>"></i>
                 </div>
               </div>
             </div>
@@ -523,7 +578,7 @@ id/word-counter
               <textarea data-autoresize name="name" placeholder="Type or paste your text.." rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area font-size-12px" id="textarea"></textarea>
             </div>
           </div>
-          <div class="local-collection">
+          <div id="local-collection-desktop" class="local-collection">
               <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                   <div class="d-flex flex-row align-items-center">
                       <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
@@ -1156,25 +1211,35 @@ id/word-counter
       </div>
     </div>
     <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
-    <div class="row">
-      <div class="col-md-6 mb-5">
-        <div class="card card-custom card-whats-new px-5 pb-5 pt-2 card-stretch">
-          <div class="d-flex justify-content-end">
-            <i class='bx bx-x bx-md button-close-whats-new'></i>
-          </div>
-          <p class="text-black font-weight-bold mb-3" style="font-size:1.3rem">What's new <span class="label label-dot label-lg label-whats-new mb-2 ml-1"></span></p>
-          <p class="font-weight-light mb-3">Last Update Dec 2, 2020</p>
-          <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
+    <div class="row my-5">
+      <div class="col-md-6">
+        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
+            <div class="alert-text mb-5">
+                <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+                <br/>
+                <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            </div>
+            <div class="alert-close pt-5 pr-5">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+                </button>
+            </div>
+            <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
         </div>
       </div>
-      <div class="col-md-6 mb-5">
-        <div class="card card-custom card-whats-new px-5 pb-5 pt-2 card-stretch">
-          <div class="d-flex justify-content-end">
-            <i class='bx bx-x bx-md button-close-whats-new'></i>
-          </div>
-          <p class="text-black font-weight-bold mb-3" style="font-size:1.3rem">What's new <span class="label label-dot label-lg label-whats-new mb-2 ml-1"></span></p>
-          <p class="font-weight-light mb-3">Last Update Dec 2, 2020</p>
-          <p>Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</p>
+      <div class="col-md-6">
+        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
+            <div class="alert-text mb-5">
+                <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+                <br/>
+                <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            </div>
+            <div class="alert-close pt-5 pr-5">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+                </button>
+            </div>
+            <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
         </div>
       </div>
     </div>
@@ -1249,11 +1314,15 @@ $(document).ready(function() {
     $('#autoSaveOff').tooltip({
       'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     });
+
+    $('#autoSaveOn').tooltip({
+      'template': '<div class="tooltip tooltip-autosave-on" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+    });
     $("#top2").hide();
     $("#top3").hide();
     $("#top2Mobile").hide();
     $("#top3Mobile").hide();
-    $("#autoSaveOn").hide();
+    $("#autoSaveOff").hide();
 
     $("#autoSaveOn").click(function() {
       $("#autoSaveOn").hide();
@@ -1265,9 +1334,6 @@ $(document).ready(function() {
       $("#autoSaveOff").hide();
     });
 
-    $("#saveLocal").click(function() {
-      toastr.info('Saved to Local Collection', 'Information');
-    });
 
     $("#copy-text").click(function(){
       const textarea = $('#textarea');
@@ -1395,6 +1461,20 @@ $(document).ready(function() {
     });
 
 
+
+    $('a[href*="#"]:not([href="#"])').click(function() {
+    var offset = -80; // <-- change the value here
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top + offset
+            }, 400);
+            return false;
+        }
+    }
+});
 
 
 });
