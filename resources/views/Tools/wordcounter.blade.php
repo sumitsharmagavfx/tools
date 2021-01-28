@@ -18,41 +18,165 @@ id/word-counter
 
 @push('style')
 <style media="screen">
-  /* @media only screen and (max-width: 320px) {
-    .tulisan {
-      font-size: 60%;
+  .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before,
+  .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-top .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="top"] .arrow::before {
+    border-top-color: var(--primaryblue);
+  }
+
+  .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before,
+  .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-right .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="right"] .arrow::before {
+    border-right-color: var(--primaryblue);
+  }
+
+  .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before,
+  .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-bottom .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: var(--primaryblue);
+  }
+
+  .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before,
+  .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-left .arrow::before,
+  .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="left"] .arrow::before {
+    border-left-color: var(--primaryblue);
+  }
+
+  .tooltip.tooltip-autosave-off .tooltip-inner,
+  .tooltip.tooltip-autosave-on .tooltip-inner {
+    background-color: var(--primaryblue);
+    color: white;
+  }
+
+  .local-collection-mobile .local-collection-body .custom-card {
+    border-radius: 5px;
+  }
+
+  .local-collection-mobile .local-collection-body .custom-card:hover {
+    background: var(--primaryblue);
+    cursor: pointer;
+    color: white;
+  }
+
+  .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
+    color: white !important;
+  }
+
+  .local-collection-mobile .local-collection-body .custom-card:hover i {
+    color: #1d7ebf !important;
+  }
+
+  .local-collection-mobile .local-collection-body .custom-card i:hover {
+    color: #66757f !important;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 60%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  @media only screen and (min-width: 320px) {
-    .tulisan {
-      font-size: 55%;
+  @media only screen and (max-width: 526px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 55%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  @media only screen and (min-width: 375px) {
-    .tulisan {
-      font-size: 70%;
+  @media only screen and (max-width: 470px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  @media only screen and (min-width: 425px) {
-    .tulisan {
-      font-size: 80%;
+  @media only screen and (max-width: 420px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 45%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    .tulisan {
-      font-size: 120%;
+  @media only screen and (max-width: 390px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 40%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
-  @media only screen and (min-width: 992px) and (max-width: 1207px) {
-    .tulisan {
-      font-size: 86%;
+  @media only screen and (max-width: 370px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 35%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-  } */
+  }
+
+  @media only screen adn (max-width: 346px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 30%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .container-label-top-keywords {
+    width: 24px !important;
+    height: 24px !important;
+
+  }
+
+  .label-top-3 {
+    background: var(--darkgrey);
+    color: white;
+    font-weight: bold;
+  }
+
+  .label-not-top-3 {
+    background: var(--lightgrey);
+    color: var(--black);
+    font-weight: bold;
+  }
+
+  .font-size-10px {
+    font-size: 10px !important;
+  }
+
+  .font-size-12px {
+    font-size: 12px !important;
+  }
+
+  .font-size-15px {
+    font-size: 15px !important;
+  }
+
   .wordcounter-background-text-size {
     background: #66757F;
     width: 45.16px;
@@ -116,392 +240,244 @@ id/word-counter
     border: none;
   }
 
-      .clear-all:hover {
-          text-decoration: underline;
-          cursor: pointer;
-      }
-    .list-group-item-action:hover, .list-group-item-action:focus {
-        background: var(--primaryblue);
-        color: var(--white);
-        cursor: pointer;
-    }
+  .clear-all:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
-  .list-group-item-action:hover .date-created {
-        color: var(--white) !important;
-    }
+  .local-collection-mobile {
+    display: none !important;
+  }
 
-  .list-group-item-action:hover i {
-        color: rgba(42, 47, 51, 0.3) !important;
-    }
+  .word-counter-result-card-mobile {
+    display: none !important;
+  }
 
-    .list-group-item-action:hover i:hover {
-          color: var(--black) !important;
-      }
+  .header-local-collection {
+    background: var(--lightgrey);
+  }
 
-  .list-group-item-action i {
-        color: var(--grey) !important;
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .local-collection .local-collection-title {
+      max-width: 55%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 
-    .btn-explore {
-      background: white;
-      color: var(--black);
-      border-radius: 20px;
-      font-weight: bold;
-    }
 
-    .btn-explore:hover {
-      background: var(--lightgrey);
-      color: var(--black);
-      border-radius: 20px;
-      font-weight: bold;
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .local-collection .local-collection-title {
+      max-width: 55%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+  }
 
-    .robo-img {
-      width: 60%;
-      vertical-align: middle;
-    }
 
-    @media (min-width: 280px) and (max-width: 768px) {
-      .robo-container {
-        display: flex;
-        justify-content: center;
-        vertical-align: middle;
-      }
-
-      .robo-text-container {
-          text-align: center;
-      }
-    }
-
-    @media (min-width: 576px) and (max-width: 768px) {
-      .robo-img {
-        width: 40%;
-        vertical-align: middle;
-      }
-      .robo-text-container {
-        padding: 0 50px;
-          text-align: center;
-      }
-    }
-
-    @media (min-width: 769px) {
-      .robo-container {
-        display: flex;
-        justify-content: flex-end;
-        vertical-align: middle;
-      }
-    }
-
-    @media (min-width: 992px) {
-      .container-description, .container-tools{
-        padding: 0px 100px;
-      }
-    }
-
-    .card-whats-new {
-      background: var(--lightgrey);
-      border-radius: 5px;
-    }
-
-    .label-tools-description {
-      background: var(--lightgrey);
-      color: var(--black);
-      font-weight: bold;
-    }
-
-    .label-tools-description-footer {
-      background: var(--darkgrey);
-      color: var(--white);
-      font-weight: bold;
-    }
-
-    .tools-description-points {
-      color: var(--primaryblue);
-    }
-
-    .tools-description-points:hover {
-      text-decoration: underline !important;
-      color: #0F90E7 !important;
-    }
-
-    .checkbox-features {
-        cursor: auto !important;
-        opacity: 1 !important;
-        margin-bottom: 10px !important;
-    }
-    .checkbox-features >  span::after  {
-        width: 5px !important;
-        height: 10px !important;
-    }
-    .checkbox-features > input:checked ~ span {
-        background: var(--black);
-    }
-
-    .checkbox-features.features-disabled bdi {
-        opacity: 0.6;
-    }
-
-    .label-whats-new {
-      background: #0FBC0C;
-    }
-
-    .button-close-whats-new {
-      color: var(--darkgrey);
-      cursor: pointer;
-    }
-
-    .button-close-whats-new:hover {
-      color: var(--black);
-    }
-
-    .view-all-release {
-      cursor: pointer;
-    }
-
-    .view-all-release:hover {
-      text-decoration: underline;
-    }
-
+  @media only screen and (max-width: 767px) {
     .local-collection-mobile {
-      display: none !important;
+      display: block !important;
     }
 
     .word-counter-result-card-mobile {
+      display: block !important;
+    }
+
+    .local-collection-mobile .local-collection-title {
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .local-collection {
       display: none !important;
     }
 
-    .header-local-collection {
-        background: var(--lightgrey);
+    .word-counter-result-card-desktop {
+      display: none !important;
     }
 
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .local-collection .local-collection-title {
-          max-width: 55%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+  }
+
+
+  /* DESCRIPTION TOOLS */
+  .alert-features-new .alert-text .alert-title {
+    color: var(--darkblue);
+  }
+
+  .alert-features-new .alert-text .label-alert-features {
+    background: #0FBC0C;
+    margin-bottom: 2px;
+  }
+
+  .alert-features-new .alert-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .alert-features-new .alert-close>button {
+    opacity: 1;
+  }
+
+  .alert-features-new .alert-close>button>span>.icon-alert-close {
+    color: var(--darkgrey) !important;
+    font-weight: bolder;
+  }
+
+
+  .list-group-item-action:hover,
+  .list-group-item-action:focus {
+    background: var(--primaryblue);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .list-group-item-action:hover .date-created {
+    color: var(--white) !important;
+  }
+
+  .list-group-item-action:hover i {
+    color: rgba(42, 47, 51, 0.3) !important;
+  }
+
+  .list-group-item-action:hover i:hover {
+    color: var(--black) !important;
+  }
+
+  .list-group-item-action i {
+    color: var(--grey) !important;
+  }
+
+  .btn-explore {
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .btn-explore:hover {
+    background: var(--lightgrey);
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .robo-img {
+    width: 60%;
+    vertical-align: middle;
+  }
+
+  @media (min-width: 280px) and (max-width: 768px) {
+    .robo-container {
+      display: flex;
+      justify-content: center;
+      vertical-align: middle;
     }
 
-
-      @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .local-collection .local-collection-title {
-            max-width: 55%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-      }
-
-
-    @media only screen and (max-width: 767px) {
-      .local-collection-mobile {
-        display: block !important;
-      }
-
-      .word-counter-result-card-mobile {
-        display: block !important;
-      }
-
-      .local-collection-mobile .local-collection-title {
-          max-width: 70%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      .local-collection {
-          display: none !important;
-        }
-
-        .word-counter-result-card-desktop {
-          display: none !important;
-        }
-
+    .robo-text-container {
+      text-align: center;
     }
-    /* @media only screen and (max-width: 800px) {
+  }
 
-      .local-collection-mobile .local-collection-title {
-          max-width: 70%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    } */
-    @media only screen and (max-width: 700px) {
-       .local-collection-mobile .local-collection-title {
-          max-width: 65%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-      }
-
-    }
-    @media only screen and (max-width: 600px) {
-
-      .local-collection-mobile .local-collection-title {
-          max-width: 60%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-    @media only screen and (max-width: 526px) {
-      .local-collection-mobile .local-collection-title {
-        max-width: 55%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-    @media only screen and (max-width: 470px) {
-    .local-collection-mobile .local-collection-title {
-        max-width: 50%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-    @media only screen and (max-width: 420px) {
-    .local-collection-mobile .local-collection-title {
-
-        max-width: 45%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
+  @media (min-width: 576px) and (max-width: 768px) {
+    .robo-img {
+      width: 40%;
+      vertical-align: middle;
     }
 
-    @media only screen and (max-width: 390px) {
-        .local-collection-mobile .local-collection-title {
-          max-width: 40%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+    .robo-text-container {
+      padding: 0 50px;
+      text-align: center;
     }
-    @media only screen and (max-width: 370px) {
-      .local-collection-mobile .local-collection-title {
-          max-width: 35%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-    @media only screen adn (max-width: 346px) {
-      .local-collection-mobile .local-collection-title {
-          max-width: 30%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
+  }
 
-    .container-label-top-keywords {
-      width: 24px !important;
-      height: 24px !important;
-
+  @media (min-width: 769px) {
+    .robo-container {
+      display: flex;
+      justify-content: flex-end;
+      vertical-align: middle;
     }
+  }
 
-    .label-top-3 {
-      background: var(--darkgrey);
-      color:white;
-      font-weight: bold;
+  @media (min-width: 992px) {
+
+    .container-description,
+    .container-tools {
+      padding: 0px 100px;
     }
+  }
 
-    .label-not-top-3 {
-      background: var(--lightgrey);
-      color:var(--black);
-      font-weight: bold;
-    }
+  .card-whats-new {
+    background: var(--lightgrey);
+    border-radius: 5px;
+  }
 
-    .font-size-10px {
-      font-size: 10px !important;
-    }
+  .label-tools-description {
+    background: var(--lightgrey);
+    color: var(--black);
+    font-weight: bold;
+  }
 
-    .font-size-12px {
-      font-size: 12px !important;
-    }
+  .label-tools-description-footer {
+    background: var(--darkgrey);
+    color: var(--white);
+    font-weight: bold;
+  }
 
-    .font-size-15px {
-      font-size: 15px !important;
-    }
+  .tools-description-points {
+    color: var(--primaryblue);
+  }
 
+  .tools-description-points:hover {
+    text-decoration: underline !important;
+    color: #0F90E7 !important;
+  }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-top .arrow::before,
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="top"] .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-top .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-      border-top-color: var(--primaryblue); }
+  .checkbox-features {
+    cursor: auto !important;
+    opacity: 1 !important;
+    margin-bottom: 10px !important;
+  }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-right .arrow::before,
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="right"] .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-right .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-      border-right-color: var(--primaryblue)/*rtl:ignore*/; }
+  .checkbox-features>span::after {
+    width: 5px !important;
+    height: 10px !important;
+  }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-bottom .arrow::before,
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-bottom .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-      border-bottom-color: var(--primaryblue); }
+  .checkbox-features>input:checked~span {
+    background: var(--black);
+  }
 
-    .tooltip.tooltip-autosave-off.bs-tooltip-left .arrow::before,
-    .tooltip.tooltip-autosave-off.bs-tooltip-auto[x-placement^="left"] .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-left .arrow::before,
-    .tooltip.tooltip-autosave-on.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-      border-left-color: var(--primaryblue)/*rtl:ignore*/; }
+  .checkbox-features.features-disabled bdi {
+    opacity: 0.6;
+  }
 
-    .tooltip.tooltip-autosave-off .tooltip-inner,
-    .tooltip.tooltip-autosave-on .tooltip-inner {
-        background-color: var(--primaryblue);
-        color: white;
-    }
+  .label-whats-new {
+    background: #0FBC0C;
+  }
 
-    /* .alert-features-new {
-        background: var(--lightgrey);
-        display: block !important;
-    } */
-    .alert-features-new .alert-text .alert-title {
-        color: var(--darkblue);
-    }
-    .alert-features-new .alert-text .label-alert-features {
-        background: #0FBC0C;
-        margin-bottom: 2px;
-    }
-    .alert-features-new .alert-close {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    .alert-features-new .alert-close > button {
-        opacity: 1;
-    }
-    .alert-features-new .alert-close > button > span > .icon-alert-close {
-        color: var(--darkgrey) !important;
-        font-weight: bolder;
-    }
+  .button-close-whats-new {
+    color: var(--darkgrey);
+    cursor: pointer;
+  }
 
-    .local-collection-mobile .local-collection-body .custom-card {
-      border-radius: 5px;
-    }
+  .button-close-whats-new:hover {
+    color: var(--black);
+  }
 
-    .local-collection-mobile .local-collection-body .custom-card:hover {
-      background: var(--primaryblue);
-      cursor: pointer;
-      color: white;
-    }
+  .view-all-release {
+    cursor: pointer;
+  }
 
-    .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
-      color:white !important;
-    }
-
-    .local-collection-mobile .local-collection-body .custom-card:hover i {
-      color:#1d7ebf !important;
-    }
-
-    .local-collection-mobile .local-collection-body .custom-card i:hover{
-      color:#66757f!important;
-    }
+  .view-all-release:hover {
+    text-decoration: underline;
+  }
+  /* END DESCRIPTION TOOLS */
 
 </style>
 @endpush
@@ -510,9 +486,8 @@ id/word-counter
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey">WORDS COUNTER</h1>
-      <span class="text-darkgrey h4 ">Login to unlock all features here, 100% free!</span>
-
+      <h1 class="text-darkgrey font-weight-normal">WORDS COUNTER</h1>
+      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
       <div class="row mt-10">
         <div class="col-md-8">
           <div class="card card-custom mb-5">
@@ -523,7 +498,9 @@ id/word-counter
                   <i id="reset" class='bx bxs-trash bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
                   <div class="wordcounter-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M5 12L3 12 3 21 12 21 12 19 5 19zM12 5L19 5 19 12 21 12 21 3 12 3z" style="fill:white"></path></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                        <path d="M5 12L3 12 3 21 12 21 12 19 5 19zM12 5L19 5 19 12 21 12 21 3 12 3z" style="fill:white"></path>
+                      </svg>
                     </span>
                   </div>
                   <div id="set-font-size-10px" class="wordcounter-background-text-size text-white font-weight-bolder d-flex justify-content-center align-items-center p-2">
@@ -572,72 +549,70 @@ id/word-counter
                   </div>
                 </div>
               </div>
-
             </div>
             <div class="card-body p-0">
               <textarea data-autoresize name="name" placeholder="Type or paste your text.." rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area font-size-12px" id="textarea"></textarea>
             </div>
           </div>
           <div id="local-collection-desktop" class="local-collection">
-              <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-                  <div class="d-flex flex-row align-items-center">
-                      <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                      <span class="text-black font-15px">Your Local Collection</span>
-                  </div>
-                  <div>
-                      <span class="clear-all font-15px pointer">Clear All</span>
-                  </div>
+            <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
+              <div class="d-flex flex-row align-items-center">
+                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                <span class="text-black font-15px">Your Local Collection</span>
               </div>
-              <div class="local-collection-body">
-                  <ul class="list-group">
-                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                          <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
-                              <div class="d-flex align-items-center">
-                                  <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                                  <i class='bx bxs-x-circle text-grey'></i>
-                              </div>
-                          </div>
-                      </li>
-                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                          <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-                              <div class="d-flex align-items-center">
-                                  <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                                  <i class='bx bxs-x-circle text-grey'></i>
-                              </div>
-                          </div>
-                      </li>
-                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                          <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-                              <div class="d-flex align-items-center">
-                                  <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                                  <i class='bx bxs-x-circle text-grey'></i>
-                              </div>
-                          </div>
-                      </li>
-                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                          <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-                              <div class="d-flex align-items-center">
-                                  <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                                  <i class='bx bxs-x-circle text-grey'></i>
-                              </div>
-                          </div>
-                      </li>
-                      <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                          <div class="d-flex justify-content-between">
-                              <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-                              <div class="d-flex align-items-center">
-                                  <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                                  <i class='bx bxs-x-circle text-grey'></i>
-                              </div>
-                          </div>
-                      </li>
-                  </ul>
+              <div>
+                <span class="clear-all font-15px pointer">Clear All</span>
               </div>
-
+            </div>
+            <div class="local-collection-body">
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
+                      <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+                      <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
+                      <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
+                      <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
+                      <i class='bx bxs-x-circle text-grey'></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col-md-4 word-counter-result-card-desktop">
@@ -661,7 +636,6 @@ id/word-counter
           </div>
           <div class="card card-custom">
             <div class="card-body p-5">
-
               <!-- DON'T DELETE THIS !!! -->
               <!-- <div class="row">
                 <div class="col-6">
@@ -691,452 +665,102 @@ id/word-counter
           </div>
         </div>
       </div>
-
-      {{--
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-      <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-      <li class="breadcrumb-item active" style="color:#2F80ED"><b>Word Counter</b></li>
-      </ol>
-      </nav>
-      <div class="card card-custom mb-5">
-        <div class="card-header">
-          <div class="card-title">
-            <h1 class="card-label">@lang('wordcounter.title') </h1>
-            <small>@lang('wordcounter.subtitle')</small>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <!--begin::Card-->
-          <div class="card card-custom card-stretch gutter-b">
-            <div class="card-body">
-              <div class="row justify-content-center">
-                <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
-                  <span class="tulisan">@lang('wordcounter.character')</span>
-                  <br>
-                  <span class="h1" id="characterCount">0</span>
-                </div>
-                <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
-                  <span class="tulisan">@lang('wordcounter.word')</span>
-                  <br>
-                  <span class="h1" id="wordCount">0</span>
-                </div>
-                <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
-                  <span class="tulisan">@lang('wordcounter.sentence')</span>
-                  <br>
-                  <span class="h1" id="sentenceCount">0</span>
-                </div>
-                <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
-                  <span class="tulisan">@lang('wordcounter.paragraph')</span>
-                  <br>
-                  <span class="h1" id="paragraphCount">0</span>
-                </div>
-                <div class="col col-sm col-md col-lg col-xl mb-10" style="padding:0" align="center">
-                  <span class="tulisan">@lang('wordcounter.reading-time')</span>
-                  <br>
-                  <span class="h1" id="readingTime">0</span>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="text-center mt-5">
-                  <button type="button" class="btn btn-primary btn-sm" id="reset">@lang('wordcounter.btn-reset')</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end::Card-->
-        </div>
-        <div class="col-lg-4">
-          <!--begin::Card-->
-          <div class="card card-custom card-stretch gutter-b">
-            <div class="card-header">
-              <div id="word1" class="card-title">
-                <h2 class="card-label">@lang('wordcounter.keyword-density')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="accordion accordion-toggle-arrow" id="accordionExample1">
-                <div class="card" id="kd">
-                  <div class="card-header">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseOne1">
-                      @lang('wordcounter.word-1')
-                    </div>
-                  </div>
-                  <div id="collapseOne1" class="collapse" data-parent="#accordionExample1">
-                    <div class="card-body" id="topKeywords">
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseTwo1">
-                      @lang('wordcounter.word-2')
-                    </div>
-                  </div>
-                  <div id="collapseTwo1" class="collapse" data-parent="#accordionExample1">
-                    <div class="card-body" id="top2">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseThree1">
-                      @lang('wordcounter.word-3')
-                    </div>
-                  </div>
-                  <div id="collapseThree1" class="collapse" data-parent="#accordionExample1">
-                    <div class="card-body" id="top3">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFour1">
-                      @lang('wordcounter.word-4')
-                    </div>
-                  </div>
-                  <div id="collapseFour1" class="collapse" data-parent="#accordionExample1">
-                    <div class="card-body" id="top4">
-
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <div class="card-title collapsed" data-toggle="collapse" data-target="#collapseFive1">
-                      @lang('wordcounter.word-5')
-                    </div>
-                  </div>
-                  <div id="collapseFive1" class="collapse" data-parent="#accordionExample1">
-                    <div class="card-body" id="top5">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end::Card-->
-        </div>
-        <!--end::Card-->
-      </div>
-      <div class="row" data-sticky-container>
-
-
-        <div class="col-lg-8 mb-5">
-          <!--begin::Card-->
-          <div class="card card-custom card-stretch-half">
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-title-1')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-1-1')</p>
-              <center>
-                <div class="col-12 col-md-9">
-                  <img class="" width="100%" src="https://cmlabs.co/wp-content/uploads/2020/06/cmlabs-word-counter.jpg" alt="cmlabs word counter">
-
-                </div>
-              </center>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-title-2')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p> @lang('wordcounter.copy-desc-2-1')</p>
-              <ol>
-                <li>@lang('wordcounter.copy-li-1')</li>
-                <li>@lang('wordcounter.copy-li-2')</li>
-                <li>@lang('wordcounter.copy-li-3')</li>
-                <li>@lang('wordcounter.copy-li-4')</li>
-                <li>@lang('wordcounter.copy-li-5')</li>
-                <li>@lang('wordcounter.copy-li-6')</li>
-                <li>@lang('wordcounter.copy-li-7')</li>
-              </ol>
-              <h3 id="@lang('wordcounter.jumpto-link-1')" class="py-5">@lang('wordcounter.copy-sub-title-2')</h3>
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <th scope="row">{{ucfirst(strtolower(__('wordcounter.character')))}}</th>
-                    <td>@lang('wordcounter.copy-desc-3-1')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">{{ucfirst(strtolower(__('wordcounter.word')))}}</th>
-                    <td>@lang('wordcounter.copy-desc-3-2')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">{{ucfirst(strtolower(__('wordcounter.sentence')))}}</th>
-                    <td>@lang('wordcounter.copy-desc-3-3')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">{{ucfirst(strtolower(__('wordcounter.paragraph')))}}</th>
-                    <td>@lang('wordcounter.copy-desc-3-4')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">{{ucfirst(strtolower(__('reading-time')))}}</th>
-                    <td>@lang('wordcounter.copy-desc-3-5')</td>
-                  </tr>
-                </tbody>
-              </table>
-              <h3 id="@lang('wordcounter.jumpto-link-2')" class="py-5"> @lang('wordcounter.copy-sub-title-3')</h3>
-              <p>@lang('wordcounter.copy-desc-4-1')</p>
-              <p>@lang('wordcounter.copy-desc-4-2')</p>
-              <table class="table">
-                <tbody>
-                  <tr>
-                    <th scope="row">@lang('wordcounter.word-1')</th>
-                    <td>@lang('wordcounter.copy-td-1')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">@lang('wordcounter.word-2')</th>
-                    <td>@lang('wordcounter.copy-td-2')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">@lang('wordcounter.word-3')</th>
-                    <td>@lang('wordcounter.copy-td-3')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">@lang('wordcounter.word-4')</th>
-                    <td>@lang('wordcounter.copy-td-4')</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">@lang('wordcounter.word-5')</th>
-                    <td>@lang('wordcounter.copy-td-5')</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-0')</h2>
-              </div>
-              <div class="card-body">
-                <p>@lang('wordcounter.copy-desc-6-1')</p>
-                <p>@lang('wordcounter.copy-desc-6-2')</p>
-                <div class="p-5" style="background-color: #F4F4F4">
-                  <h3 class="font-weight-bold">@lang('wordcounter.copy-desc-6-3')</h3>
-                </div>
-              </div>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-4')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-5')</p>
-              <table class="table" border="1px" bordercolor="#EBEDF3">
-                <tbody>
-                  <tr>
-                    <th class="align-middle" style="text-align:center"> <i class="far fa-lightbulb icon-2x"></i> </th>
-                    <td class="align-middle">
-                      <p>@lang('wordcounter.copy-desc-6-6')</p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              @lang('wordcounter.copy-desc-6-7')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-8')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              @lang('wordcounter.copy-desc-6-8-1')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-8-2')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              @lang('wordcounter.copy-desc-6-9')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-10')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              @lang('wordcounter.copy-desc-6-11')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-12')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-13')</p>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-14')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              @lang('wordcounter.copy-desc-6-15')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-16')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              @lang('wordcounter.copy-desc-6-17')
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-18')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-19')</p>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-20')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-21')</p>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 class="card-label">@lang('wordcounter.copy-desc-6-22')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-23')</p>
-            </div>
-            <div class="card-header">
-              <div class="card-title">
-                <h2 id="@lang('wordcounter.jumpto-link-3')" class="card-label">@lang('wordcounter.copy-title-5')</h2>
-              </div>
-            </div>
-            <div class="card-body">
-              <p>@lang('wordcounter.copy-desc-6-24') <a href="https://cmlabs.co/tipe-konten/" target="_blank"><u style="color:blue">@lang('wordcounter.copy-desc-6-25')</u></a> @lang('wordcounter.copy-desc-6-26')</p>
-              <div class="row">
-                <div class="col-md-6 mb-5">
-                  <div class="container p-10" style="background-color:#f2f2f2; border-radius: 7px;">
-                    <h3>@lang('wordcounter.copy-sub-title-5-1')</h3>
-                    <p>@lang('wordcounter.copy-desc-5-2')</p>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-5">
-                  <div class="container p-10" style="background-color:#f2f2f2; height:100%; border-radius: 7px;">
-                    <h3>@lang('wordcounter.copy-sub-title-5-2')</h3>
-                    <p>@lang('wordcounter.copy-desc-5-3')</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--end::Card-->
-        </div>
-        @include('layouts/stickybar')
-      </div>--}}
     </div>
   </div>
 </div>
 <div class="w-100">
-    <!-- Start Local Collection -->
-    <div class="local-collection-mobile bg-white py-5">
-        <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
-            <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local Collection</span>
-            </div>
-            <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
-            </div>
-        </div>
-        <div class="local-collection-body mt-3 px-5">
-            <div class="custom-card py-5 px-3">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
-                    <div class="d-flex align-items-center">
-                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                        <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-card py-5 px-3">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-                    <div class="d-flex align-items-center">
-                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                        <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-card py-5 px-3">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-                    <div class="d-flex align-items-center">
-                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                        <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-card py-5 px-3">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-                    <div class="d-flex align-items-center">
-                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                        <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                </div>
-            </div>
-            <div class="custom-card py-5 px-3">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-                    <div class="d-flex align-items-center">
-                        <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                        <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="bg-white p-5 word-counter-result-card-mobile">
-      <div class="d-flex justify-content-center align-items-center mb-5">
-        <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
-          WORDS
-        </div>
-        <div id="showWords1Mobile" class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
-          1
-        </div>
-        <div id="showWords2Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
-          2
-        </div>
-        <div id="showWords3Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
-          3
-        </div>
+  <div class="local-collection-mobile bg-white py-5">
+    <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
+      <div class="d-flex flex-row align-items-center">
+        <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+        <span class="text-black font-15px">Your Local Collection</span>
       </div>
-      <div class="" id="topKeywordsMobile">
-      </div>
-      <div class="" id="top2Mobile">
-      </div>
-      <div class="" id="top3Mobile">
+      <div>
+        <span class="clear-all font-15px pointer">Clear All</span>
       </div>
     </div>
+    <div class="local-collection-body mt-3 px-5">
+      <div class="custom-card py-5 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
+          <div class="d-flex align-items-center">
+            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+            <i class='bx bxs-x-circle text-grey'></i>
+          </div>
+        </div>
+      </div>
+      <div class="custom-card py-5 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
+          <div class="d-flex align-items-center">
+            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+            <i class='bx bxs-x-circle text-grey'></i>
+          </div>
+        </div>
+      </div>
+      <div class="custom-card py-5 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
+          <div class="d-flex align-items-center">
+            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+            <i class='bx bxs-x-circle text-grey'></i>
+          </div>
+        </div>
+      </div>
+      <div class="custom-card py-5 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
+          <div class="d-flex align-items-center">
+            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+            <i class='bx bxs-x-circle text-grey'></i>
+          </div>
+        </div>
+      </div>
+      <div class="custom-card py-5 px-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
+          <div class="d-flex align-items-center">
+            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
+            <i class='bx bxs-x-circle text-grey'></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white p-5 word-counter-result-card-mobile">
+    <div class="d-flex justify-content-center align-items-center mb-5">
+      <div class="wordcounter-background-density wordcounter-background-density-left-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+        WORDS
+      </div>
+      <div id="showWords1Mobile" class="wordcounter-background-density active font-weight-bolder d-flex justify-content-center align-items-center p-2">
+        1
+      </div>
+      <div id="showWords2Mobile" class="wordcounter-background-density d-flex justify-content-center font-weight-bolder align-items-center p-2">
+        2
+      </div>
+      <div id="showWords3Mobile" class="wordcounter-background-density wordcounter-background-density-right-edge font-weight-bolder d-flex justify-content-center align-items-center p-2">
+        3
+      </div>
+    </div>
+    <div class="" id="topKeywordsMobile">
+    </div>
+    <div class="" id="top2Mobile">
+    </div>
+    <div class="" id="top3Mobile">
+    </div>
+  </div>
 </div>
 <div class="" style="background:white">
   <div class="container container-description py-20">
     <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <div class="col-md-3">
         <div class="d-flex align-items-center mb-5">
@@ -1185,7 +809,6 @@ id/word-counter
             <button type="button" class="btn btn-explore " name="button">Explore today?</button>
           </div>
         </div>
-
       </div>
     </div>
     <div class="row mb-10">
@@ -1196,50 +819,53 @@ id/word-counter
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-            <span class="text-primaryblue">cmlabs Words Counter</span>
-            <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-            <small class="text-grey">Updated 25 Dec, 2020</small>
+          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
+          <small class="text-grey">Updated 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13"/><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version 1.3</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
+            1.3</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
     <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
     <div class="row my-5">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-            <div class="alert-text mb-5">
-                <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                <br/>
-                <span class="font-weight-light">Last Update Dec 2, 2020</span>
-            </div>
-            <div class="alert-close pt-5 pr-5">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                </button>
-            </div>
-            <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <div class="alert-text mb-5">
+            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <br />
+            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+          </div>
+          <div class="alert-close pt-5 pr-5">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+            </button>
+          </div>
+          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-            <div class="alert-text mb-5">
-                <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                <br/>
-                <span class="font-weight-light">Last Update Dec 2, 2020</span>
-            </div>
-            <div class="alert-close pt-5 pr-5">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                </button>
-            </div>
-            <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <div class="alert-text mb-5">
+            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <br />
+            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+          </div>
+          <div class="alert-close pt-5 pr-5">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+            </button>
+          </div>
+          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
         </div>
       </div>
     </div>
@@ -1261,17 +887,11 @@ id/word-counter
   });
 </script>
 <script>
-
   var counter = 0;
 
   function myFunction() {
     document.getElementById("kd").style.borderBottom = "2px solid #24daff";
     counter += 1;
-    // $('#textarea').popover().click(function () {
-    //   setTimeout(function () {
-    //       $('#textarea').popover('hide');
-    //   }, 2000);
-    // });
     if (counter == 1) {
       $('#textarea').popover().click(function() {
         setTimeout(function() {
@@ -1309,8 +929,7 @@ id/word-counter
 </script>
 
 <script type="text/javascript">
-
-$(document).ready(function() {
+  $(document).ready(function() {
     $('#autoSaveOff').tooltip({
       'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
     });
@@ -1335,11 +954,10 @@ $(document).ready(function() {
     });
 
 
-    $("#copy-text").click(function(){
+    $("#copy-text").click(function() {
       const textarea = $('#textarea');
       textarea.select();
       document.execCommand("copy");
-
       toastr.info('Copied to Clipboard', 'Information');
     });
 
@@ -1370,7 +988,7 @@ $(document).ready(function() {
       $("#textarea").addClass("font-size-15px");
     });
 
-    $("#showWords1Desktop").click(function(){
+    $("#showWords1Desktop").click(function() {
       $("#showWords1Desktop").addClass("active");
       $("#showWords2Desktop").removeClass("active");
       $("#showWords3Desktop").removeClass("active");
@@ -1385,7 +1003,7 @@ $(document).ready(function() {
       $("#top3Mobile").hide();
     });
 
-    $("#showWords2Desktop").click(function(){
+    $("#showWords2Desktop").click(function() {
       $("#showWords1Desktop").removeClass("active");
       $("#showWords2Desktop").addClass("active");
       $("#showWords3Desktop").removeClass("active");
@@ -1400,7 +1018,7 @@ $(document).ready(function() {
       $("#top3Mobile").hide();
     });
 
-    $("#showWords3Desktop").click(function(){
+    $("#showWords3Desktop").click(function() {
       $("#showWords1Desktop").removeClass("active");
       $("#showWords2Desktop").removeClass("active");
       $("#showWords3Desktop").addClass("active");
@@ -1415,7 +1033,7 @@ $(document).ready(function() {
       $("#top3Mobile").show();
     });
 
-    $("#showWords1Mobile").click(function(){
+    $("#showWords1Mobile").click(function() {
       $("#showWords1Desktop").addClass("active");
       $("#showWords2Desktop").removeClass("active");
       $("#showWords3Desktop").removeClass("active");
@@ -1430,7 +1048,7 @@ $(document).ready(function() {
       $("#top3Mobile").hide();
     });
 
-    $("#showWords2Mobile").click(function(){
+    $("#showWords2Mobile").click(function() {
       $("#showWords1Desktop").removeClass("active");
       $("#showWords2Desktop").addClass("active");
       $("#showWords3Desktop").removeClass("active");
@@ -1445,7 +1063,7 @@ $(document).ready(function() {
       $("#top3Mobile").hide();
     });
 
-    $("#showWords3Mobile").click(function(){
+    $("#showWords3Mobile").click(function() {
       $("#showWords1Desktop").removeClass("active");
       $("#showWords2Desktop").removeClass("active");
       $("#showWords3Desktop").addClass("active");
@@ -1459,25 +1077,21 @@ $(document).ready(function() {
       $("#top2Mobile").hide();
       $("#top3Mobile").show();
     });
-
-
 
     $('a[href*="#"]:not([href="#"])').click(function() {
-    var offset = -80; // <-- change the value here
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var offset = -80;
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top + offset
-            }, 400);
-            return false;
+          $('html, body').animate({
+            scrollTop: target.offset().top + offset
+          }, 400);
+          return false;
         }
-    }
-});
-
-
-});
+      }
+    });
+  });
 </script>
 @endpush
 @section('word-counter')

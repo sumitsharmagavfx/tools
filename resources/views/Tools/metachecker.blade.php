@@ -79,31 +79,31 @@ id/page-title-meta-description-checker
     height: 200px;
     width: 253px;
   }
-    #metachecker .title {
+  .title {
         font-weight: 400;
         font-size: 30px;
         color: var(--darkgrey);
         line-height: 35px;
     }
-    #metachecker .subtitle {
+  .subtitle {
         font-weight: 400;
         font-size: 20px;
         color: var(--darkgrey);
         line-height: 35px;
     }
-    #metachecker .header-blue {
+  .header-blue {
         background: var(--primaryblue);
         border-radius: 5px;
         padding-left: 40px;
         padding-right: 40px;
     }
-    #metachecker .btn-group-black {
+  .btn-group-black {
         background: var(--black);
     }
-    #metachecker .btn-group-black:focus, #metachecker .btn-group-black:hover {
+  .btn-group-black:focus,.btn-group-black:hover {
         background: #DCAD05;
     }
-    #metachecker .input-url, #metachecker .input-url:focus {
+  .input-url, .input-url:focus {
         background: var(--primaryblue);
         color: var(--white);
         border:none;
@@ -111,7 +111,7 @@ id/page-title-meta-description-checker
         text-transform: uppercase;
         outline: none;
     }
-    #metachecker .for-mobile .input-url, #metachecker .input-url:focus {
+  .for-mobile .input-url, .input-url:focus {
         background: var(--primaryblue);
         color: var(--white);
         border:none;
@@ -119,109 +119,107 @@ id/page-title-meta-description-checker
         text-transform: uppercase;
         outline: none;
     }
-    #metachecker .btn-rounded-white {
+  .btn-rounded-white {
         background: var(--white);
         color: var(--black);
         border-radius: 20px;
         font-weight: 700;
     }
-    #metachecker .desktop-result {
+    .desktop-result {
         width: 58%;
     }
-    #metachecker .mobile-result {
+  .mobile-result {
         width: 39%;
     }
-    #metachecker .title-meta {
+  .title-meta {
         color: #1A0DAB;
         font-size: 20px;
         line-height: 23px;
     }
-    #metachecker .color-green {
+    .color-green {
         color: #009A0F !important;
     }
-    #metachecker .bg-color-lightyellow {
+    .bg-color-lightyellow {
         background: rgba(255, 222, 104, 0.15) !important;
     }
-    #metachecker .desc-meta {
+    .desc-meta {
         color: #4D5156;
         font-size: 13px;
         line-height: 15px;
     }
-    #metachecker .header-local-collection {
+  .header-local-collection {
         background: var(--lightgrey);
     }
-    #metachecker .clear-all:hover {
+  .clear-all:hover {
         text-decoration: underline;
     }
-    #metachecker .list-group-item-action:hover, #metachecker .list-group-item-action:focus {
+  .list-group-item-action:hover, .list-group-item-action:focus {
         background: var(--primaryblue);
         color: var(--white);
     }
-    #metachecker .list-group-item-action:hover .date-created {
+  .list-group-item-action:hover .date-created {
         color: var(--white) !important;
     }
-    #metachecker .list-group-item-action:hover i {
+  .list-group-item-action:hover i {
         color: rgba(42, 47, 51, 0.3) !important;
     }
-    #metachecker .list-group-item-action i {
+    .list-group-item-action i {
         color: var(--grey) !important;
     }
-    #metachecker .list-group-item-action i:hover {
+  .list-group-item-action i:hover {
         color: var(--darkgrey) !important;
     }
-    #metachecker .custom-container {
+  .custom-container {
         padding: 0 100px;
     }
-    #metachecker .custom-container-fluid {
-        padding: 0;
-    }
-    #metachecker .meta-title {
+
+  .meta-title {
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
     }
-    #metachecker .meta-desc {
+  .meta-desc {
         color: var(--white);
         font-weight: 700;
         font-size: 15px;
     }
-    #metachecker ::placeholder {
+   .input-meta-title::placeholder, .input-meta-description::placeholder {
         color: var(--white);
     }
-    #metachecker input, #metachecker textarea {
+    input.input-meta-title, textarea.input-meta-description {
         border: none;
     }
-    #metachecker .progress-bar_wrap {
+  .progress-bar_wrap {
         width: 150px;
         height: 11px;
         background: var(--primaryblue);
         display: inline-block;
         overflow: hidden;
     }
-    #metachecker .progress-bar_item {
+  .progress-bar_item {
         display: inline-block;
         height: 100%;
         width: 20%;
         margin-right: .8%;
         float: left;
     }
-    #metachecker .progress-bar_item-1.active, #metachecker .progress-bar_item-2.active, #metachecker .progress-bar_item-3.active {
+    .progress-bar_item-1.active, .progress-bar_item-2.active, .progress-bar_item-3.active {
         background: #B1F25D;
     }
-    #metachecker .progress-bar_item-1.blank, #metachecker .progress-bar_item-2.blank, #metachecker .progress-bar_item-3.blank {
+  .progress-bar_item-1.blank, .progress-bar_item-2.blank, .progress-bar_item-3.blank {
         background: var(--white);
     }
-    #metachecker .for-mobile .custom-card {
+  .for-mobile .custom-card {
         border-radius: 5px;
     }
-    #metachecker .for-mobile .local-collection-body .custom-card:hover, #metachecker .for-mobile .local-collection-body .custom-card:focus {
+    .for-mobile .local-collection-body .custom-card:hover, .for-mobile .local-collection-body .custom-card:focus {
         background: var(--primaryblue);
         color: var(--white);
     }
-    #metachecker .for-mobile .local-collection-body .custom-card i:hover {
+    .for-mobile .local-collection-body .custom-card i:hover {
         color: var(--darkgrey) !important;
     }
-    #metachecker .header-blue-mobile, #metachecker .local-collection-mobile {
+    .header-blue-mobile, .local-collection-mobile {
       display: none !important;
     }
     @media only screen and (min-width: 1400px) {
@@ -234,149 +232,56 @@ id/page-title-meta-description-checker
     }
     @media only screen and (max-width: 992px) {
 
-        #metachecker .col-mobile {
+        .col-mobile {
           text-align: center !important;
           margin-bottom: 5px !important;
           margin-top: 5px !important;
         }
 
-        #metachecker .local-collection-mobile {
-          display: block !important;
-        }
-        #metachecker .custom-card:hover, #metachecker .custom-card:focus,
-        #metachecker .custom-card:hover .date-created, #metachecker .custom-card:focus .date-created {
+        .custom-card:hover, .custom-card:focus,
+        .custom-card:hover .date-created, .custom-card:focus .date-created {
           background: var(--primaryblue);
           color: var(--white);
         }
-        #metachecker .custom-card:hover i {
+        .custom-card:hover i {
           color: var(--darkgrey)
         }
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 75%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        #metachecker .local-collection {
+
+        .local-collection {
           display: none !important;
         }
         .version {
           display: none !important;
         }
 
-        /* #metachecker .header-blue {
-            display: none !important;
-        }
-        #metachecker .header-blue-mobile {
-            display: flex !important;
-            background: var(--primaryblue);
-            border-radius: 5px;
-        } */
 
-        #metachecker .mobile-result {
+        .mobile-result {
             width: 100%;
         }
-        #metachecker .desktop-result {
+      .desktop-result {
           display: none !important;
         }
-        /* .custom-fixed-size {
-            width: 580px;
-        }
-        .custom-fixed-size-1 {
-            transform: scale(0.9);
-        } */
+
     }
     @media only screen and (max-width: 800px) {
-        #metachecker .custom-container {
+      /* .custom-container {
             padding: 0 1em;
-        }
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 70%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+        } */
+
     }
     @media only screen and (max-width: 700px) {
-      #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 65%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-      }
-      #metachecker .date-created {
+
+    .date-created {
           font-size: 10px !important;
       }
     }
     @media only screen and (max-width: 600px) {
-        #metachecker .meta-desc {
+      .meta-desc {
             width: 40.7%;
         }
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 60%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-    @media only screen and (max-width: 526px) {
-      #metachecker .local-collection-mobile .local-collection-title {
-        max-width: 55%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-    @media only screen and (max-width: 470px) {
-      #metachecker .local-collection-mobile .local-collection-title {
-        max-width: 50%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-    @media only screen and (max-width: 420px) {
-      #metachecker .local-collection-mobile .local-collection-title {
 
-        max-width: 45%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
     }
-    @media only screen and (max-width: 400px) {
-        #metachecker .meta-desc {
-            width: 47.7%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    @media only screen and (max-width: 390px) {
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 40%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-    @media only screen and (max-width: 370px) {
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 35%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-    @media only screen adn (max-width: 346px) {
-        #metachecker .local-collection-mobile .local-collection-title {
-          max-width: 30%;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-    }
-  /* zoom 110% */
+
   @media only screen and (max-width: 1300px) {
     .custom-fixed-size {
       width: 580px;
@@ -450,7 +355,7 @@ id/page-title-meta-description-checker
         margin-left: -35px;
         width: 280px;
       }
-      #metachecker .progress-bar_wrap {
+      .progress-bar_wrap {
         width: 100px !important;
       }
     }
@@ -459,10 +364,9 @@ id/page-title-meta-description-checker
 @endpush
 
 <!-- START V2 VER -->
-<div id="metachecker">
   <div class="container container-freetools">
       <div class="d-flex flex-column-fluid">
-          <div>
+          <div class="container-fluid px-0">
               <!-- Start Title & Subtitle -->
               <div class="row d-flex flex-column custom-mb" style="margin-bottom: 35px;">
                   <h1 class="font-weight-normal title">PAGE TITLE & META DESCRIPTION CHECKER</h1>
@@ -494,7 +398,7 @@ id/page-title-meta-description-checker
                     <input type="text" class="input-url text-center mb-4" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                   <button class="btn btn-rounded-white px-10">CRAWL URL</button>
               </div> -->
-              <!-- End Blue Header Card -->  
+              <!-- End Blue Header Card -->
               <!-- Start Blue Input Text -->
               <div class="manual-mode mb-5">
                   <div class="row mb-3 bg-info d-flex flex-column px-9 py-5 bg-primaryblue border-radius-5px">
@@ -506,7 +410,7 @@ id/page-title-meta-description-checker
                               <div class="progress-bar_item progress-bar_item-3 blank"></div>
                           </div>
                       </div>
-                      <input type="text" class="form-control bg-primaryblue text-white px-0" id="meta-title" placeholder="Type or paste your text..">
+                      <input type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" placeholder="Type or paste your text..">
                   </div>
                   <div class="row bg-info d-flex flex-column py-5 px-9 bg-primaryblue border-radius-5px">
                       <div class="d-flex align-items-center flex-row">
@@ -517,7 +421,7 @@ id/page-title-meta-description-checker
                               <div class="progress-bar_item progress-bar_item-3 active"></div>
                           </div>
                       </div>
-                      <textarea rows="1" class="form-control bg-primaryblue text-white px-0" placeholder="Type or paste your text.."></textarea>
+                      <textarea rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="Type or paste your text.."></textarea>
                   </div>
               </div>
               <!-- End Blue Input Text -->
@@ -764,7 +668,6 @@ id/page-title-meta-description-checker
       </div>
       <!-- End Local Collection -->
   </div>
-</div>
 <!-- END v2 VER -->
 
 
