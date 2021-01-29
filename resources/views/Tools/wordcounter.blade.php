@@ -305,6 +305,13 @@ id/word-counter
 
 
   /* DESCRIPTION TOOLS */
+  @media (max-width:767px) {
+    .container-description {
+      padding-top: 1.25rem !important;
+      padding-bottom: 1.25rem !important;
+    }
+  }
+
   .alert-features-new .alert-text .alert-title {
     color: var(--darkblue);
   }
@@ -372,7 +379,7 @@ id/word-counter
     vertical-align: middle;
   }
 
-  @media (min-width: 280px) and (max-width: 768px) {
+  @media (min-width: 280px) and (max-width: 767px) {
     .robo-container {
       display: flex;
       justify-content: center;
@@ -384,7 +391,7 @@ id/word-counter
     }
   }
 
-  @media (min-width: 576px) and (max-width: 768px) {
+  @media (min-width: 576px) and (max-width: 767px) {
     .robo-img {
       width: 40%;
       vertical-align: middle;
@@ -396,7 +403,7 @@ id/word-counter
     }
   }
 
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .robo-container {
       display: flex;
       justify-content: flex-end;
@@ -423,19 +430,22 @@ id/word-counter
     font-weight: bold;
   }
 
-  .label-tools-description-footer {
+  .tools-description-points:hover .label-tools-description {
     background: var(--darkgrey);
     color: var(--white);
     font-weight: bold;
+    text-decoration: none !important;
   }
 
   .tools-description-points {
     color: var(--primaryblue);
+    cursor: pointer;
   }
 
-  .tools-description-points:hover {
+  .tools-description-points:hover a{
     text-decoration: underline !important;
     color: #0F90E7 !important;
+
   }
 
   .checkbox-features {
@@ -477,7 +487,32 @@ id/word-counter
   .view-all-release:hover {
     text-decoration: underline;
   }
+
+  .container-description {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .custom-features-accordion .card .card-header .card-title.collapsed,
+  .custom-features-accordion .card .card-header .card-title::after {
+      color: var(--darkgrey) !important;
+  }
+  .custom-features-accordion .card .card-header .card-title,
+  .custom-features-accordion .card .card-header .card-title.collapsed::after {
+      color: var(--darkgrey) !important;
+  }
+
+  .custom-features-accordion .card .card-header .card-title small {
+      color: var(--darkgrey) !important;
+  }
+  .custom-features-accordion .card .card-header .card-title.collapsed span,
+  .custom-features-accordion .card .card-header .card-title.collapsed small {
+      color: var(--darkgrey) !important;
+  }
   /* END DESCRIPTION TOOLS */
+
+
+
 
 </style>
 @endpush
@@ -634,7 +669,7 @@ id/word-counter
               </div>
             </div>
           </div>
-          <div class="card card-custom">
+          <div class="card card-custom mb-5">
             <div class="card-body p-5">
               <!-- DON'T DELETE THIS !!! -->
               <!-- <div class="row">
@@ -661,6 +696,26 @@ id/word-counter
               </div>
               <div class="" id="top3">
               </div>
+            </div>
+          </div>
+          <div class="word-counter-version-desktop">
+            <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+             <div class="card bg-transparent" style="">
+              <div class="card-header" id="headingOne2">
+               <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                Version 2.3
+               </div>
+              </div>
+              <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+               <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="d-flex align-items-center">
+                  <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
+                  <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                </div>
+               </div>
+              </div>
+             </div>
             </div>
           </div>
         </div>
@@ -746,12 +801,30 @@ id/word-counter
     </div>
     <div class="" id="top2Mobile">
     </div>
-    <div class="" id="top3Mobile">
+    <div class="mb-5" id="top3Mobile">
+    </div>
+    <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+     <div class="card bg-transparent" style="">
+      <div class="card-header" id="headingOne2">
+       <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+        Version 2.3
+       </div>
+      </div>
+      <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+       <div class="card-body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="d-flex align-items-center">
+          <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
+          <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+        </div>
+       </div>
+      </div>
+     </div>
     </div>
   </div>
 </div>
 <div class="" style="background:white">
-  <div class="container container-description py-20">
+  <div class="container container-description">
     <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
@@ -763,35 +836,35 @@ id/word-counter
           commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
             <span class="label label-lg label-tools-description">1</span>
           </div>
-          <a href="#" class="tools-description-points">Why does SEO important for writing?</a>
+          <a href="#" class="">Why does SEO important for writing?</a>
         </div>
-        <div class="d-flex align-items-center mb-5">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
             <span class="label label-lg label-tools-description">2</span>
           </div>
-          <a href="#" class="tools-description-points">How search engine works?</a>
+          <a href="#" class="">How search engine works?</a>
         </div>
-        <div class="d-flex align-items-center mb-5">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
             <span class="label label-lg label-tools-description">3</span>
           </div>
-          <a href="#" class="tools-description-points">The basic of writing?</a>
+          <a href="#" class="">The basic of writing?</a>
         </div>
-        <div class="d-flex align-items-center mb-5">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
             <span class="label label-lg label-tools-description">4</span>
           </div>
-          <a href="#" class="tools-description-points">Measuring your writing?</a>
+          <a href="#" class="">Measuring your writing?</a>
         </div>
-        <div class="d-flex align-items-center mb-5">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description-footer">5</span>
+            <span class="label label-lg label-tools-description">5</span>
           </div>
-          <a href="#" class="tools-description-points">Hiring profesional content strategy and consultant?</a>
+          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
         </div>
       </div>
     </div>
