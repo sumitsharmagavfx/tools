@@ -1,25 +1,53 @@
-// jQuery(document).ready(function () {
-//     jQuery('#execute').click(function(){
-//         jQuery(this).addClass('spinner spinner-white spinner-right')
-//         var matchreg =/^(https?|ftp):\/\//;
-//         let urls = jQuery('#url').val().replace(matchreg,"");
-//         jQuery.get({
-//             url: 'https://api.cmlabs.co/?url=https://' + urls,
-//             success: (res) => {
-//                 calculate(res.title, res.description);
-//                 jQuery('#execute').removeClass('spinner spinner-white spinner-right');
-//                 if (lang === 'en')
-//                     toastr.success("Title and meta title loaded", "Success");
-//                 else toastr.success("Title and meta title berhasil didapat", "Sukses");
-//             },
-//             fail: (res) => {
-//                 if (lang === 'en')
-//                     urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
-//                 else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
-//             }
-//         });
-//     })
-// });
+jQuery(document).ready(function () {
+    $("#manual-mode").hide();
+    jQuery('#crawlURL').click(function(){
+        var matchreg =/^(https?|ftp):\/\//;
+        let urls = jQuery('#url').val().replace(matchreg,"");
+        jQuery.get({
+            url: 'https://api.cmlabs.co/?url=https://' + urls,
+            success: (res) => {
+                $('#resulttitle').text(res.title);
+                $('#resultdesc').text(res.description);
+                $('#resulturl').text('https://' + urls);
+                $('#desc').val(res.description)
+                $('#title').val(res.title)
+                $("#manual-mode").show();
+                $('#desc').attr('disabled','disabled');
+                $('#title').attr('disabled','disabled');
+                // calculate(res.title, res.description);
+                // if (lang === 'en')
+                //     toastr.success("Title and meta title loaded", "Success");
+                // else toastr.success("Title and meta title berhasil didapat", "Sukses");
+            },
+            fail: (res) => {
+                // if (lang === 'en')
+                //     urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
+                // else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
+            }
+        });
+    })
+
+    $('#title').on('keyup',function(){
+        $('#resulttitle').text($(this).val())
+    })
+
+    $('#desc').on('keyup',function(){
+        $('#resultdesc').text($(this).val())
+    })
+
+    $('#url').on('keyup',function(){
+        $('#resulturl').text($(this).val())
+    })
+});
+
+const titleChecker = function(title){
+    var titleLength = title.length
+}
+
+const descChecker = function (desc){
+    var descLength = desc.length
+}
+
 // function copy(element){
 //     var copyText = document.getElementById(element);
 //     copyText.select();
