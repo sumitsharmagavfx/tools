@@ -19,7 +19,6 @@ id/technology-lookup
 @section('content')
 @push('style')
 <style media="screen">
-
   @media (min-width: 992px) {
 
     .container-description,
@@ -269,7 +268,7 @@ id/technology-lookup
     cursor: pointer;
   }
 
-  .tools-description-points:hover a{
+  .tools-description-points:hover a {
     text-decoration: underline !important;
     color: #0F90E7 !important;
 
@@ -322,20 +321,23 @@ id/technology-lookup
 
   .custom-features-accordion .card .card-header .card-title.collapsed,
   .custom-features-accordion .card .card-header .card-title::after {
-      color: var(--darkgrey) !important;
+    color: var(--darkgrey) !important;
   }
+
   .custom-features-accordion .card .card-header .card-title,
   .custom-features-accordion .card .card-header .card-title.collapsed::after {
-      color: var(--darkgrey) !important;
+    color: var(--darkgrey) !important;
   }
 
   .custom-features-accordion .card .card-header .card-title small {
-      color: var(--darkgrey) !important;
+    color: var(--darkgrey) !important;
   }
+
   .custom-features-accordion .card .card-header .card-title.collapsed span,
   .custom-features-accordion .card .card-header .card-title.collapsed small {
-      color: var(--darkgrey) !important;
+    color: var(--darkgrey) !important;
   }
+
   /* END DESCRIPTION TOOLS */
 
   .local-collection-mobile .local-collection-body .custom-card {
@@ -491,6 +493,34 @@ id/technology-lookup
     border: none;
     color: white;
   }
+
+  .what-is-this {
+    cursor: pointer;
+  }
+
+  .what-is-this:hover {
+    text-decoration: underline;
+  }
+
+  .links {
+    color: var(--primaryblue);
+    cursor: pointer;
+  }
+
+  .links:hover {
+    color: #037BCB;
+    cursor: pointer;
+    text-decoration: underline !important;
+  }
+
+  .label-primary-version {
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+  }
+
+  .clear-all:hover {
+    text-decoration: underline;
+  }
 </style>
 @endpush
 
@@ -502,12 +532,23 @@ id/technology-lookup
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <i class='bx bxs-shield text-white bx-md mr-3' ></i>
+          <div class="col-sm-8 col-md-9 col-lg-8 col-xl-9 d-flex align-items-center py-1">
+            <!-- BEFORE CRAWL -->
+            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+
+            <!-- HTTPS URL -->
+            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+
+            <!-- HTTP URL -->
+            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
             <input type="url" class="form-control lookup-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-            <button type="button" class="btn btn-crawl" name="button">LOOKUP URL</button>
+          <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
+            <!-- CRAWL BUTTON -->
+            <button id="crawlButton" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="You can only search 5 times in 1 hour">LOOKUP URL</button>
+
+            <!-- CRAWL BUTTON REACHED LIMIT -->
+            <button id="crawlButtonDisabled" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>
           </div>
         </div>
       </div>
@@ -515,37 +556,217 @@ id/technology-lookup
         <div class="col-md-8">
           <div class="px-2 mb-3">
             <span class="text-black font-15px">Technologies</span>
-            <span class="font-15px" style="color:#9A99A2">(37)</span>
+            <span class="font-15px" style="color:#9A99A2">(18)</span>
+            <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
           </div>
           <div class="card card-custom">
-            <div class="card-body py-2 px-0">
-              <div class="d-flex justify-content-between align-items-center mx-5">
-                <div class="">
-                  <span>Firebase</span>
-                </div>
-                <div class="">
-                  <span>Database</span>
-                </div>
-              </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center mx-5">
-                <div class="">
-                  <span>Firebase</span>
-                </div>
-                <div class="">
-                  <span>Database</span>
+            <div class="card-body py-4 px-0">
+
+              <!-- BEFORE CRAWL -->
+              <div class="" id="noCrawlResult">
+                <div class="text-center">
+                  <p class="d-block">No technology detected, please input your domain above!</p>
+                  <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center mx-5">
-                <div class="">
-                  <span>Firebase</span>
+
+              <!-- RESULT CRAWL -->
+              <div class="" id=result>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <!-- TECHNOLOGY ICON -->
+                    <img src="{{ asset('media/technologyLookup/icons/Google Analytics.svg') }}" alt="" width="20px">
+                    <!-- TECHNOLOGY NAME -->
+                    <span class="mx-3">Google Analytics</span>
+                  </div>
+                  <div class="">
+                    <!-- TECHNOLOGY CATEGORIES -->
+                    <span>Analytics</span>
+                  </div>
                 </div>
-                <div class="">
-                  <span>Database</span>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <!-- TECHNOLOGY ICON -->
+                    <img src="{{ asset('media/technologyLookup/icons/Handlebars.png') }}" alt="" width="20px" class="">
+                    <!-- TECHNOLOGY NAME -->
+                    <span class="mx-3">Handlebars</span>
+                    <!-- TECHNOLOGY VERSION -->
+                    <span class="label label-primary-version label-inline font-weight-normal">4.1.0</span>
+                  </div>
+                  <div class="">
+                    <!-- TECHNOLOGY CATEGORIES -->
+                    <span>JavaScript frameworks</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Google Font API.png') }}" alt="" width="20px">
+                    <span class="mx-3">Google Font API</span>
+                  </div>
+                  <div class="">
+                    <span>Font scripts</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Laravel.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Laravel</span>
+                  </div>
+                  <div class="">
+                    <span>Web frameworks</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Prism.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Prism</span>
+                  </div>
+                  <div class="">
+                    <span>Miscellaneous</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Apache.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Apache</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">2.4.29</span>
+                  </div>
+                  <div class="">
+                    <span>Web servers</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Quill.png') }}" alt="" width="20px">
+                    <span class="mx-3">Quill</span>
+                  </div>
+                  <div class="">
+                    <span>Rich text editors</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/PHP.svg') }}" alt="" width="20px">
+                    <span class="mx-3">PHP</span>
+                  </div>
+                  <div class="">
+                    <span>Programming languages</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Ubuntu.png') }}" alt="" width="20px">
+                    <span class="mx-3">Ubuntu</span>
+                  </div>
+                  <div class="">
+                    <span>Operating systems</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/jsdelivr-icon.svg') }}" alt="" width="20px">
+                    <span class="mx-3">jsDelivr</span>
+                  </div>
+                  <div class="">
+                    <span>CDN</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Google Tag Manager.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Google Tag Manager</span>
+                  </div>
+                  <div class="">
+                    <span>Tag managers</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/jQuery.svg') }}" alt="" width="20px">
+                    <span class="mx-3">jQuery Migrate</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">1.2.1</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/SweetAlert2.png') }}" alt="" width="20px">
+                    <span class="mx-3">SweetAlert2</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">10</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Select2.png') }}" alt="" width="20px">
+                    <span class="mx-3">Select2</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Moment.js.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Moment.js</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">2.26.0</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/jQuery.svg') }}" alt="" width="20px">
+                    <span class="mx-3">jQuery</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">1.11.0</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/default.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Slick</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">1.8.1</span>
+                  </div>
+                  <div class="">
+                    <span>JavaScript libraries</span>
+                  </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between align-items-center mx-5">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ asset('media/technologyLookup/icons/Bootstrap.svg') }}" alt="" width="20px">
+                    <span class="mx-3">Bootstrap</span>
+                    <span class="label label-primary-version label-inline font-weight-normal">4.5.0</span>
+                  </div>
+                  <div class="">
+                    <span>UI frameworks</span>
+                  </div>
                 </div>
               </div>
-              <hr>
             </div>
           </div>
         </div>
@@ -557,7 +778,7 @@ id/technology-lookup
                 <span class="text-black font-15px">Your Local Collection</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer mr-3">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
@@ -566,11 +787,11 @@ id/technology-lookup
                   <div class="d-flex justify-content-between">
                     <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' ></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
-                </li>
+                </li>                
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
                     <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
@@ -611,22 +832,23 @@ id/technology-lookup
             </div>
           </div>
           <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-           <div class="card bg-transparent" style="">
-            <div class="card-header" id="headingOne2">
-             <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-              Version 2.3
-             </div>
-            </div>
-            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-             <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <div class="d-flex align-items-center">
-                <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+            <div class="card bg-transparent" style="">
+              <div class="card-header" id="headingOne2">
+                <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                  Version 2.3
+                </div>
               </div>
-             </div>
+              <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                <div class="card-body">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <div class="d-flex align-items-center">
+                    <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                    <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                  </div>
+                </div>
+              </div>
             </div>
-           </div>
           </div>
 
         </div>
@@ -835,7 +1057,7 @@ id/technology-lookup
       "position": 1,
       "name": "@lang('home.homepage')",
       "item": "{{url('/')}}/{{$local}}"
-    },{
+    }, {
       "@type": "ListItem",
       "position": 2,
       "name": "JSON-LD FAQ Schema Generator"

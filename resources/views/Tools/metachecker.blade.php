@@ -836,7 +836,7 @@ id/page-title-meta-description-checker
               </div>
               <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                  <span id="resulturl">www.schengenvisainfo.com <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                  <span id="resulturl">www.schengenvisainfo.com</span><span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                 </div>
                 <div id="resulttitle" class="title-meta mb-2 color-green">
                   Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -1597,8 +1597,6 @@ $( document ).ready(function() {
       $('#botModeOff').show();
       $("#manual-mode").show();
       $("#crawlURL").attr("disabled", true);
-      $('#desc').removeAttr('disabled');
-      $('#title').removeAttr('disabled');
     });
 
     $('#botModeOff').click(function(){
