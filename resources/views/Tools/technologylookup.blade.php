@@ -1,33 +1,24 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('faq.meta-title'))
+@section('title', 'Technology Lookup')
 
-@section('meta-desc', Lang::get('faq.meta-desc'))
+@section('meta-desc', 'Technology Lookup')
 
-@section('meta-keyword', Lang::get('faq.meta-keyword'))
+@section('meta-keyword', 'Technology Lookup')
 
-@section('conical','/en/json-ld-faq-schema-generator')
+@section('conical','/en/technology-lookup')
 
 @section('en-link')
-en/json-ld-faq-schema-generator
+en/technology-lookup
 @endsection
 
 @section('id-link')
-id/json-ld-faq-schema-generator
+id/technology-lookup
 @endsection
 
 @section('content')
 @push('style')
 <style media="screen">
-  @media only screen and (max-width: 1200px) and (min-width: 992px) {
-    #copy {
-      height: 50px;
-    }
-
-    #test {
-      height: 50px;
-    }
-  }
 
   @media (min-width: 992px) {
 
@@ -37,49 +28,7 @@ id/json-ld-faq-schema-generator
     }
   }
 
-  .button-result span, .button-result i  {
-    color: var(--darkgrey);
-  }
 
-  .button-result:hover span {
-    color: var(--black);
-  }
-
-  .button-result:hover i {
-    color: var(--primaryblue);
-  }
-
-  .delete {
-    color:var(--darkgrey);
-    cursor: pointer;
-  }
-
-  .delete:hover {
-    color:var(--black);
-  }
-
-  .btn-add-question {
-    color: white;
-    background: var(--primaryblue);
-    border-radius: 20px;
-  }
-
-  .btn-add-question i {
-    color: white;
-  }
-
-  .btn-add-question:hover{
-    background: #1382CC;
-    color: white;
-  }
-
-  .btn-add-question:hover i {
-    color: white;
-  }
-
-  .btn-delete-disabled {
-    color: var(--grey);
-  }
 
   @media (max-width:767px) {
     .btn-add-question {
@@ -506,95 +455,101 @@ id/json-ld-faq-schema-generator
 
   }
 
+  .btn-crawl {
+    height: 60%;
+    width: 100%;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .btn-crawl:hover {
+    background: var(--lightgrey);
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .header-blue {
+    background: var(--primaryblue);
+    border-radius: 5px;
+  }
+
+  .lookup-url {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+  }
+
+  .lookup-url::placeholder {
+    color: white;
+  }
+
+  .lookup-url:focus {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+  }
 </style>
 @endpush
 
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">JSON-LD FAQ SCHEMA GENERATOR</h1>
+      <h1 class="text-darkgrey font-weight-normal">TECHNOLOGY LOOKUP</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
-      <div class="card card-custom mt-10 mb-5">
-        <div class="card-body py-5">
-          <div class="row">
-            <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option selected="selected">FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option>Product</option>
-                </select>
-              </div>
-            </div>
-            <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
-            </div>
+      <div class="header-blue mt-10 mb-5 px-5 py-1">
+        <div class="row d-flex align-items-center">
+          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
+            <i class='bx bxs-shield text-white bx-md mr-3' ></i>
+            <input type="url" class="form-control lookup-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
-        </div>
-      </div>
-
-      <div class="card card-custom mb-5">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-8 mb-5">
-              <p class="h6">FAQ Page Generator</p>
-              <div class="" id="form">
-                <div class="row">
-                  <div class="col-10 col-sm-11">
-                    <div class="form-group">
-                      <label for="question-1" class="font-weight-bold">Question 1</label>
-                      <input type="text" class="form-control question" name="" value="" data-id="0">
-                    </div>
-                    <div class="form-group">
-                      <label for="answer-1" class="font-weight-bold">Answer 1</label>
-                      <input type="text" class="form-control answer" name="" value="" data-id="0" height="50px">
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center mt-9">
-                      <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <button type="button" class="btn btn-add-question" name="button" id="add">
-              <i class='bx bx-plus'></i> ADD QUESTION
-              </button>
-            </div>
-            <div class="col-md-4 mb-5">
-              <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
-                <form class="" style="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
-                    <div class="row mb-2">
-                      <div class="col-4 d-flex justify-content-center px-0 button-result">
-                        <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>Copy</span></button>
-                      </div>
-                      <div class="col-4 d-flex justify-content-center px-0 button-result">
-                        <button type="submit" id="test" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-check-circle'></i> <span>Check</span></button>
-                      </div>
-                      <div class="col-4 d-flex justify-content-center px-0 button-result">
-                        <button type="button" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh' ></i> <span>Reset</span></button>
-                      </div>
-                    </div>
-                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
-                </form>
-              </div>
-
-            </div>
+          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
+            <button type="button" class="btn btn-crawl" name="button">LOOKUP URL</button>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
+          <div class="px-2 mb-3">
+            <span class="text-black font-15px">Technologies</span>
+            <span class="font-15px" style="color:#9A99A2">(37)</span>
+          </div>
+          <div class="card card-custom">
+            <div class="card-body py-2 px-0">
+              <div class="d-flex justify-content-between align-items-center mx-5">
+                <div class="">
+                  <span>Firebase</span>
+                </div>
+                <div class="">
+                  <span>Database</span>
+                </div>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between align-items-center mx-5">
+                <div class="">
+                  <span>Firebase</span>
+                </div>
+                <div class="">
+                  <span>Database</span>
+                </div>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between align-items-center mx-5">
+                <div class="">
+                  <span>Firebase</span>
+                </div>
+                <div class="">
+                  <span>Database</span>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
           <div id="local-collection-desktop" class="local-collection">
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
@@ -655,26 +610,25 @@ id/json-ld-faq-schema-generator
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
-            <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-             <div class="card bg-transparent" style="">
-              <div class="card-header" id="headingOne2">
-               <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                Version 2.3
-               </div>
-              </div>
-              <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-               <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <div class="d-flex align-items-center">
-                  <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
-                </div>
-               </div>
+          <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
+           <div class="card bg-transparent" style="">
+            <div class="card-header" id="headingOne2">
+             <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+              Version 2.3
+             </div>
+            </div>
+            <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+             <div class="card-body">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <div class="d-flex align-items-center">
+                <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
+                <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
               </div>
              </div>
             </div>
+           </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -863,201 +817,6 @@ id/json-ld-faq-schema-generator
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
-{{--<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-    <li class="breadcrumb-item active" style="color:#2F80ED"><b>JSON-LD FAQ Schema Generator</b></li>
-  </ol>
-</nav>
-<div class="card card-custom mb-5">
-  <div class="card-header">
-    <div class="card-title">
-      <h1 class="card-label">JSON-LD FAQ SCHEMA GENERATOR </h1>
-      <small>@lang('faq.subtitle')</small>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-6">
-    <!--begin::Card-->
-    <div class="card card-custom card-stretch gutter-b">
-      <div class="card-body">
-        <div class="mb-5" id="form">
-          <input type="text" name="" class="form-control mb-5 question" placeholder="@lang('faq.question') :" value="" data-id="0">
-          <input type="text" name="" class="form-control mb-7 answer" placeholder="@lang('faq.answer') :" value="" data-id="0">
-        </div>
-        <button type="button" class="btn btn-primary" name="button" id="add">
-        <i class="flaticon2-plus"></i> @lang('faq.btn-add')
-        </button>
-      </div>
-    </div>
-    <!--end::Card-->
-  </div>
-  <div class="col-lg-6">
-    <!--begin::Card-->
-    <div class="card card-custom card-stretch gutter-b">
-      <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <button type="button" id="copy" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
-              <i class="far fa-copy"></i> @lang('faq.btn-copy')
-              </button>
-            </div>
-            <div class="col-lg-6">
-              <button type="submit" id="test" class="btn btn-text-dark-50 btn-icon-primary font-weight-bold btn-hover-bg-light mr-3 form-control mb-5" name="button">
-              <i class="fas fa-circle"></i> @lang('faq.btn-test')</button>
-            </div>
-          </div>
-          <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
-        </div>
-      </form>
-    </div>
-    <!--end::Card-->
-  </div>
-  <!--end::Card-->
-</div>
-<div class="row" data-sticky-container>
-  <div class="col-lg-8 mb-5">
-    <!--begin::Card-->
-    <div class="card card-custom">
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('faq.title')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <table class="table table-striped">
-          <tbody>
-            <tr>
-              <td style="width:60%;" class="align-middle">
-                <p>@lang('faq.desc-1-1')</p>
-              </td>
-              <td class="align-middle"> <img id="1" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-1-min-1024x898.png" class="form-control" style="height:auto" alt="json 1 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('faq.desc-1-2')</p>
-              </td>
-              <td class="align-middle"> <img id="2" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-2-min-1024x509.png" class="form-control" style="height:auto" alt="json 2 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('faq.desc-1-3')</p>
-              </td>
-              <td class="align-middle"> <img id="3" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-3-min-1024x502.png" class="form-control" style="height:auto" alt="json 3 min"> </td>
-            </tr>
-            <tr>
-              <td class="align-middle">
-                <p>@lang('faq.desc-1-4')</p>
-                <p>@lang('faq.desc-1-5')</p>
-              </td>
-              <td class="align-middle"> <img id="4" data-toggle="modal" data-target="#myModal" src="https://cmlabs.co/wp-content/uploads/2020/06/json-4-min-1024x556.png" class="form-control" style="height:auto" alt="json 4 min"> </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('faq.title-2')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('faq.desc-2-1')</p>
-        <p>@lang('faq.desc-2-2')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('faq.title-3')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('faq.desc-3-1')</p>
-        <p>@lang('faq.desc-3-2')</p>
-        <table class="table" border="1px" bordercolor="#EBEDF3">
-          <tbody>
-            <tr>
-              <th class="align-middle"> <i class="far fa-lightbulb icon-2x"></i> </th>
-              <td>@lang('faq.desc-3-3')</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>@lang('faq.desc-3-4')</p>
-        <ul>
-          <li>@lang('faq.li-1')</li>
-          <li>@lang('faq.li-2')</li>
-          <li>@lang('faq.li-3')</li>
-        </ul>
-        <p>@lang('faq.desc-3-5')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('faq.title-4')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('faq.desc-4-1')</p>
-        <p>@lang('faq.desc-4-2')</p>
-        <p>@lang('faq.desc-4-3')</p>
-        <p>@lang('faq.desc-4-4')</p>
-        <p>@lang('faq.desc-4-5')</p>
-        <p>@lang('faq.desc-4-6')</p>
-        <p>@lang('faq.desc-4-7')</p>
-        <p>@lang('faq.desc-4-8')</p>
-        <p>@lang('faq.desc-4-9')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('faq.title-5')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('faq.desc-5-1')</p>
-        <p>@lang('faq.desc-5-2')</p>
-        <h3 class="font-weight-bold py-5">@lang('faq.title-6')</h3>
-        <p>@lang('faq.desc-6-1')</p>
-        <p>@lang('faq.desc-6-2')</p>
-        <p>@lang('faq.desc-6-3')</p>
-        <h3 class="font-weight-bold py-5">@lang('faq.title-7')</h3>
-        <p>@lang('faq.desc-7-1')</p>
-        <p>@lang('faq.desc-7-2')</p>
-        <p>@lang('faq.desc-7-3')</p>
-        <p>@lang('faq.desc-7-4')</p>
-        <h3 class="font-weight-bold py-5">@lang('faq.title-8')</h3>
-        <p>@lang('faq.desc-8-1')</p>
-        <p>@lang('faq.desc-8-2')</p>
-        <p>@lang('faq.desc-8-3')</p>
-        <p>@lang('faq.desc-8-4')</p>
-        <h3 class="font-weight-bold py-5">@lang('faq.title-9')</h3>
-        <p>@lang('faq.desc-9-1')</p>
-        <p>@lang('faq.desc-9-2')</p>
-        <p>@lang('faq.desc-9-3')</p>
-        <p>@lang('faq.desc-9-4')</p>
-        <p>@lang('faq.desc-9-5')</p>
-      </div>
-    </div>
-    <!--end::Card-->
-  </div>
-  @include('layouts/stickybar')
-</div>
-</div>
-</div>
-
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img class="img-responsive form-control" alt="image modal" style="height:auto;" src="" />
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
---}}
 
 @endsection
 
