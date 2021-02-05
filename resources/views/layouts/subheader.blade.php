@@ -27,6 +27,9 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots.TXT Generator</a>
                     </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                    </li>
                 </ul>
                 <ul class="nav custom-nav" id="menu_tools_writer">
                     <li class="nav-item">

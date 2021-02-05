@@ -599,7 +599,7 @@ id/json-ld-faq-schema-generator
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local Collection</span>
+                <span class="text-black font-15px">Your Local History</span>
               </div>
               <div>
                 <span class="clear-all font-15px pointer">Clear All</span>
@@ -686,7 +686,7 @@ id/json-ld-faq-schema-generator
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local Collection</span>
+        <span class="text-black font-15px">Your Local History</span>
       </div>
       <div>
         <span class="clear-all font-15px pointer">Clear All</span>
