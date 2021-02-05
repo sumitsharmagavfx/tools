@@ -25,11 +25,6 @@ id/technology-lookup
       padding: 0px 100px;
     }
   }
-  @media (max-width:767px) {
-    .btn-add-question {
-      width: 100%;
-    }
-  }
   @media only screen and (min-width: 768px) {
     #local-collection-desktop .local-collection-title {
       max-width: 70%;
@@ -404,7 +399,7 @@ id/technology-lookup
   .label-primary-version {
     background: var(--lightgrey);
     color: var(--darkgrey);
-  }  
+  }
   .technology-name {
     color: var(--darkgrey);
     font-weight: bold;
