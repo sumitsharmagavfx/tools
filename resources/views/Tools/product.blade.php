@@ -79,7 +79,7 @@ id/json-ld-product-schema-generator
         <input type="number" name="" class="form-control mb-5 bestRating" placeholder="@lang('product.bestRating') :" value="" data-id="0">
         <input type="number" name="" class="form-control mb-5 worstrating" placeholder="@lang('product.worstRating') :" value="" data-id="0">
         <input type="number" name="" class="form-control mb-5 ratingCount" placeholder="@lang('product.ratingCount') :" value="" data-id="0">
-        
+
         </div>
         <button type="button" class="btn btn-primary" name="button" id="add-product">
         <i class="flaticon2-plus"></i> @lang('product.btn-add')
@@ -286,5 +286,5 @@ id/json-ld-product-schema-generator
 <script src="{{asset('js/logic/product-json.js')}}"></script>
 @endpush
 @section('json-ld-product')
-menu-item-active
+active
 @endsection

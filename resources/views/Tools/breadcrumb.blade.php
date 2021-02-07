@@ -261,5 +261,5 @@ id/json-ld-breadcrumb-schema-generator
 <script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
 @endpush
 @section('json-ld-breadcrumb')
-menu-item-active
+active
 @endsection

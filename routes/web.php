@@ -25,6 +25,7 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     });
     Route::get('/url', 'ToolsController@loadssl');
     Route::get('/{lang}','HomeController@index');
+    Route::get('blog/data', 'HomeController@getBlogData');
 
 //Route::get('/test', function (){
 //    return view('/tools/strikethrough');
@@ -41,9 +42,7 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::get('/{lang}/mobile-friendly-test', 'ToolsController@mobiletest');
     Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
     Route::get('/{lang}/robotstxt-generator', 'ToolsController@robotgenerator');
+    Route::get('/{lang}/technology-lookup', 'ToolsController@technologylookup');
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
 });
-
-
-

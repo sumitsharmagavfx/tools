@@ -169,7 +169,7 @@ id
   .faq-title {
     width: 90%;
   }
-} 
+}
 </style>
 @endpush
 @section('content')
@@ -687,7 +687,6 @@ id
                   </div>
                 </div>
             </div>
-            @include('layouts/stickybar')
         </div>
     </div>
 </div>
@@ -753,5 +752,5 @@ id
 @endpush
 <!-- home -->
 @section('home')
-menu-item-active
+active
 @endsection

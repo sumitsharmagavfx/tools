@@ -316,5 +316,5 @@
 <script src="{{asset('js/logic/robotgenerator.js')}}"></script>
 @endpush
 @section('robotstxt-generator')
-menu-item-active
+active
 @endsection

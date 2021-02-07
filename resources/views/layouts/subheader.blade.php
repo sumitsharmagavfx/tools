@@ -5,42 +5,49 @@
                 <a href="/{{ $local }}" id="subheader_logo" class="d-none">
                     <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-30px mr-8"/>
                 </a>
-                <ul class="nav custom-nav">
+                <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#welcome">Home</a>
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#pricing">JSON-LD Generator</a>
+                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-faq-schema-generator">JSON-LD Generator</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#features">Page Speed Test</a>
+                        <a class="nav-link @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#seo-tools">Sitemap.XML Generator</a>
+                        <a class="nav-link @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap.XML Generator</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#insight">Mobile Friendly Test</a>
+                        <a class="nav-link @yield('mobile-test')" href="/{{ $local }}/mobile-friendly-test">Mobile Friendly Test</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#seo-tools">SSL Certificate Checker</a>
+                        <a class="nav-link @yield('ssl-checker')" href="/{{ $local }}/ssl-checker">SSL Certificate Checker</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="#insight">Robots.TXT Generator</a>
+                        <a class="nav-link @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots.TXT Generator</a>
                     </li>
-                    <!-- Comment This ! -->
-                    <!-- <li class="nav-item ml-7">
-                        <a class="nav-link" href="{{ url('/references') }}" target="_blank">
-                            <span class="label label-sm label-rounded ml-0 pl-4 pr-4" style="border-radius: 50px"><b>15</b></span>&nbsp;&nbsp;@lang('landing.main-menu-6')
-                        </a>
-                    </li> -->
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                    </li>
+                </ul>
+                <ul class="nav custom-nav" id="menu_tools_writer">
+                    <li class="nav-item">
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="d-flex align-items-center">
             Switch to
-                <a href="#">
-                    <button class="btn btn-custom-login ml-3"><b>SEO Tools for Webmaster</b></button>
-                </a>
+            <button class="btn btn-custom-login ml-3" id="toggle_button_webmaster"><b>SEO Tools for Webmaster</b></button>
+            <button class="btn btn-custom-login ml-3 d-none" id="toggle_button_writer"><b>SEO Tools for Writers</b></button>
         </div>
     </div>
 </div>
