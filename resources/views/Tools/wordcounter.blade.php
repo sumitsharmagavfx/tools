@@ -548,7 +548,7 @@ id/word-counter
                     15px
                   </div>
                 </div>
-                <div class="">
+                <div id="autosaveParam" data-autosave="on" class="">
                   <a href="#local-collection-desktop">
                     <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
                   </a>
@@ -595,7 +595,7 @@ id/word-counter
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">Your Local History</span>
               </div>
-              <div>
+              <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">Clear All</span>
               </div>
             </div>
@@ -931,11 +931,13 @@ id/word-counter
     $("#autoSaveOn").click(function() {
       $("#autoSaveOn").hide();
       $("#autoSaveOff").show();
+      $('#autosaveParam').data('autosave','off');
     });
 
     $("#autoSaveOff").click(function() {
       $("#autoSaveOn").show();
       $("#autoSaveOff").hide();
+      $('#autosaveParam').data('autosave','on');
     });
 
 
