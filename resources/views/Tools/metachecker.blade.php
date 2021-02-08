@@ -836,7 +836,7 @@ id/page-title-meta-description-checker
               </div>
               <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                  <span id="resulturl">www.schengenvisainfo.com <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                  <span id="resulturl">www.schengenvisainfo.com</span><span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                 </div>
                 <div id="resulttitle" class="title-meta mb-2 color-green">
                   Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -863,7 +863,7 @@ id/page-title-meta-description-checker
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local Collection</span>
+                <span class="text-black font-15px">Your Local History</span>
               </div>
               <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">Clear All</span>
@@ -956,7 +956,7 @@ id/page-title-meta-description-checker
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local Collection</span>
+        <span class="text-black font-15px">Your Local History</span>
       </div>
       <div onclick="clearAll()">
         <span class="clear-all font-15px pointer">Clear All</span>
@@ -1507,8 +1507,6 @@ $( document ).ready(function() {
       $('#botModeOff').show();
       $("#manual-mode").show();
       $("#crawlURL").attr("disabled", true);
-      $('#desc').removeAttr('disabled');
-      $('#title').removeAttr('disabled');
     });
 
     $('#botModeOff').click(function(){
