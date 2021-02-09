@@ -660,7 +660,7 @@ id/json-ld-faq-schema-generator
             <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
              <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
-               <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+               <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
                 Version 2.3
                </div>
               </div>

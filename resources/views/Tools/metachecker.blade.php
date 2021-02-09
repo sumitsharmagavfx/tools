@@ -713,6 +713,42 @@ id/page-title-meta-description-checker
     font-weight: bold;
   }
 
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .local-collection .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+  .local-collection .local-collection-title {
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1399px){
+  .local-collection .local-collection-title {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .local-collection .local-collection-title {
+    max-width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
   .local-collection-mobile .local-collection-body .custom-card {
     border-radius: 5px;
   }
