@@ -420,21 +420,21 @@ id/technology-lookup
         <div class="row d-flex align-items-center">
           <div class="col-sm-8 col-md-9 col-lg-8 col-xl-9 d-flex align-items-center py-1">
             <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+            <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
 
             <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+            <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
 
             <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control lookup-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
+            <input type="url" class="form-control lookup-url" name="" value="" placeholder="http://example.com" id="input-url">
           </div>
           <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="crawlButton" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="You can only search 5 times in 1 hour">LOOKUP URL</button>
+            <button id="crawl-btn" type="button" class="btn btn-crawl" name="button" data-toggle="tooltip" data-theme="dark" title="You can only search 5 times in 1 hour">LOOKUP URL</button>
 
             <!-- CRAWL BUTTON REACHED LIMIT -->
-            <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>
+{{--            <button id="crawlButtonDisabled" type="button" class="btn btn-crawl-disabled" name="button" data-toggle="tooltip" data-theme="dark" title="Currently your are reached the limit!">PLEASE WAIT 59:12</button>--}}
           </div>
         </div>
       </div>
@@ -442,14 +442,14 @@ id/technology-lookup
         <div class="col-md-8">
           <div class="px-2 mb-3">
             <span class="text-black font-15px font-weight-bolder">Technologies</span>
-            <span class="font-15px font-weight-bolder" style="color:#9A99A2">(18)</span>
+            <span class="font-15px font-weight-bolder" style="color:#9A99A2" id="technology-lookup-result-total"></span>
             <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
           </div>
-          <div class="card card-custom">
+          <div class="card card-custom" id="technology-lookup-result-container">
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
-              <div class="" id="noCrawlResult">
+              <div class="" id="technology-lookup-result-empty">
                 <div class="text-center">
                   <p class="d-block">No technology detected, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
@@ -457,7 +457,7 @@ id/technology-lookup
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="" id=result>
+              <div class="" id="technology-lookup-result-list" style="display: none">
                 <div class="d-flex justify-content-between align-items-center mx-5">
                   <div class="d-flex align-items-center">
                     <!-- TECHNOLOGY ICON -->
@@ -664,59 +664,14 @@ id/technology-lookup
                 <span class="text-black font-15px">Your Local History</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                <span class="clear-all font-15px pointer mr-3" onclick="deleteHistory()">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
+              <ul class="list-group" id="technology-lookup-histories">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -934,7 +889,7 @@ id/technology-lookup
           <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
             from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
         </div>
-      </div>
+      </div>asdasdasdasd
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
@@ -982,7 +937,16 @@ id/technology-lookup
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/technology-lookup.js')}}"></script>
+    <script>
+        const LOOKUP_API_URL = '{{ route('api.analyze-technology') }}';
+    </script>
+    <script src="{{asset('js/logic/technology-lookup.js')}}"></script>
+
+    <script>
+        $(document).ready(function(){
+            getHistories();
+        })
+    </script>
 @endpush
 @section('technology-lookup')
 active

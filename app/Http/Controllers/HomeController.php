@@ -25,7 +25,7 @@ class HomeController extends Controller
         $dataEN = $this->getBlogWordpressEn();
         $data = json_decode(file_get_contents(base_path('resources/js/json/tools.json')),true);
         $local = App::getLocale();
-        return view('home', compact('data','local', 'dataID', 'dataEN'));
+        return view('home', compact('data','local'));
     }
 
     /**
