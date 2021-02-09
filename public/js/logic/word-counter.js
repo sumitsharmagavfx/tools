@@ -9,12 +9,13 @@ const refreshLocalStorage = function(){
             '<div class="d-flex align-items-center justify-content-between">'+
                 '<div class="local-collection-title">'+temp+'</div>'+
                     '<div class="d-flex align-items-center">'+
-                        '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                        '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                    '<i class="bx bxs-info-circle text-grey bx-sm mr-2" data-toggle="tooltip" data-theme="dark" title="Created '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'"></i>'+
+                        // '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                        '<i class="bx bxs-x-circle bx-sm text-grey" onclick="removeData('+key+')"></i>'+
                     '</div>'+
                 '</div>'+
             '</div>'
-        
+
             let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
             '<div class="d-flex justify-content-between">'+
             '  <div class="local-collection-title">'+temp+'</div>'+
@@ -24,7 +25,7 @@ const refreshLocalStorage = function(){
             '  </div>'+
             '</div>'+
             '</li>'
-            
+
             $('#localsavemobile').append(div)
             $('#localsavedesktop').append(div2)
         }
@@ -129,7 +130,7 @@ const getData = function(key){
         $('#textarea').data('key',key)
         start();
     }
-    
+
 }
 
 const removeData = function(key){
@@ -194,7 +195,7 @@ jQuery('#reset').click(function () {
     topKeywords3Mobile.innerHTML = '';
 
     // sticky.update();
-});  
+});
 
 function start(){
     // sessionStorage.setItem("text", input.value);
@@ -216,14 +217,14 @@ function start(){
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
         if (!sentences){
-            sentenceCount.innerHTML = 0;   
+            sentenceCount.innerHTML = 0;
         }else{
             sentenceCount.innerHTML = sentences.length;
         }
         // sessionStorage.setItem("sentences", sentences.length);
     } else {
         sentenceCount.innerHTML = 0;
-    }                                                                                                     
+    }
 
     if (words) {
         var paragraphs = input.value.replace(/\n$/gm, '').split(/\n/);

@@ -98,17 +98,6 @@ id/mobile-test
   }
 }
 
-
-  @media only screen and (min-width: 768px) {
-    #local-collection-desktop .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-  }
-
   .btn-cancel {
     line-height: 1;
     width: 100px;
@@ -142,6 +131,42 @@ id/mobile-test
   }
 
   /* DESCRIPTION TOOLS */
+
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .local-collection .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+  .local-collection .local-collection-title {
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1399px){
+  .local-collection .local-collection-title {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .local-collection .local-collection-title {
+    max-width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
   @media only screen and (max-width: 767px) {
     .desktop-version {
       display: none;
@@ -480,7 +505,7 @@ id/mobile-test
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No URL tested, please input your domain above!</p>
+                  <p class="d-block text-black">No URL tested, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
@@ -537,7 +562,7 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co</div>
+                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana</div>
                     <div class="d-flex align-items-center">
                       <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
                       <i class='bx bxs-x-circle text-grey'></i>
@@ -546,7 +571,7 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co/en/pricing</div>
+                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
                     <div class="d-flex align-items-center">
                       <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
                       <i class='bx bxs-x-circle text-grey'></i>
@@ -555,7 +580,7 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en</div>
+                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
                     <div class="d-flex align-items-center">
                       <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
                       <i class='bx bxs-x-circle text-grey'></i>
@@ -564,7 +589,7 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/login</div>
+                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
                     <div class="d-flex align-items-center">
                       <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
                       <i class='bx bxs-x-circle text-grey'></i>
@@ -573,7 +598,7 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/member/dashboard</div>
+                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
                     <div class="d-flex align-items-center">
                       <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
                       <i class='bx bxs-x-circle text-grey'></i>
