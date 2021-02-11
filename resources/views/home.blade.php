@@ -170,9 +170,475 @@ id
     width: 90%;
   }
 }
+
+
+@media (min-width: 992px) {
+
+  .container-description,
+  .container-tools {
+    padding: 0px 100px;
+  }
+}
+
+.bx-lg {
+  font-size: 3rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.btn-launch {
+  background: white;
+  font-weight: bold;
+  border: 1px solid var(--darkgrey);
+  color: var(--darkgrey);
+}
+
+.btn-launch:hover {
+  background: white !important;
+  border: 1px solid white !important;
+  color: var(--primaryblue) !important;
+}
+
+.card-home{
+  transition: 0.2s;
+}
+
+.card-home:hover {
+  transition: 0.2s;
+  background: var(--primaryblue);
+}
+
+.card-home:hover i, .card-home:hover h2, .card-home:hover p  {
+  color :white;
+}
+
+.card-home:hover .btn-launch {
+  background: var(--primaryblue);
+  color:white;
+  border: 1px solid white;
+}
+
+/* DESCRIPTION TOOLS */
+@media (max-width:767px) {
+  .container-description {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+}
+.alert-features-new .alert-text .alert-title {
+  color: var(--darkblue);
+}
+.alert-features-new .alert-text .label-alert-features {
+  background: #0FBC0C;
+  margin-bottom: 2px;
+}
+.alert-features-new .alert-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.alert-features-new .alert-close>button {
+  opacity: 1;
+}
+.alert-features-new .alert-close>button>span>.icon-alert-close {
+  color: var(--darkgrey) !important;
+  font-weight: bolder;
+}
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background: var(--primaryblue);
+  color: var(--white);
+  cursor: pointer;
+}
+.list-group-item-action:hover .date-created {
+  color: var(--white) !important;
+}
+.list-group-item-action:hover i {
+  color: rgba(42, 47, 51, 0.3) !important;
+}
+.list-group-item-action:hover i:hover {
+  color: var(--black) !important;
+}
+.list-group-item-action i {
+  color: var(--grey) !important;
+}
+.btn-explore {
+  background: white;
+  color: var(--black);
+  border-radius: 20px;
+  font-weight: bold;
+}
+.btn-explore:hover {
+  background: var(--lightgrey);
+  color: var(--black);
+  border-radius: 20px;
+  font-weight: bold;
+}
+.robo-img {
+  width: 60%;
+  vertical-align: middle;
+}
+@media (min-width: 280px) and (max-width: 767px) {
+  .robo-container {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+  }
+  .robo-text-container {
+    text-align: center;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .robo-img {
+    width: 40%;
+    vertical-align: middle;
+  }
+  .robo-text-container {
+    padding: 0 50px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .robo-container {
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 992px) {
+  .container-description,
+  .container-tools {
+    padding: 0px 100px;
+  }
+}
+.card-whats-new {
+  background: var(--lightgrey);
+  border-radius: 5px;
+}
+.label-tools-description {
+  background: var(--lightgrey);
+  color: var(--black);
+  font-weight: bold;
+}
+.tools-description-points:hover .label-tools-description {
+  background: var(--darkgrey);
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.tools-description-points {
+  color: var(--primaryblue);
+  cursor: pointer;
+}
+.tools-description-points:hover a {
+  text-decoration: underline !important;
+  color: #0F90E7 !important;
+}
+.checkbox-features {
+  cursor: auto !important;
+  opacity: 1 !important;
+  margin-bottom: 10px !important;
+}
+.checkbox-features>span::after {
+  width: 5px !important;
+  height: 10px !important;
+}
+.checkbox-features>input:checked~span {
+  background: var(--black);
+}
+.checkbox-features.features-disabled bdi {
+  opacity: 0.6;
+}
+.label-whats-new {
+  background: #0FBC0C;
+}
+.button-close-whats-new {
+  color: var(--darkgrey);
+  cursor: pointer;
+}
+.button-close-whats-new:hover {
+  color: var(--black);
+}
+.view-all-release {
+  cursor: pointer;
+}
+.view-all-release:hover {
+  text-decoration: underline;
+}
+.container-description {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.custom-features-accordion .card .card-header .card-title.collapsed,
+.custom-features-accordion .card .card-header .card-title::after {
+  color: var(--darkgrey) !important;
+}
+.custom-features-accordion .card .card-header .card-title,
+.custom-features-accordion .card .card-header .card-title.collapsed::after {
+  color: var(--darkgrey) !important;
+}
+.custom-features-accordion .card .card-header .card-title small {
+  color: var(--darkgrey) !important;
+}
+.custom-features-accordion .card .card-header .card-title.collapsed span,
+.custom-features-accordion .card .card-header .card-title.collapsed small {
+  color: var(--darkgrey) !important;
+}
+/* END DESCRIPTION TOOLS */
 </style>
 @endpush
 @section('content')
+
+<div class="container container-tools mb-10">
+  <div class="d-flex flex-column-fluid">
+    <div class="container-fluid px-0">
+      <div class="text-center">
+        <h1 class="text-black font-weight-bolder">SEO TOOLS by CMLABS</h1>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <p class="text-black ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nibh mauris imperdiet est tincidunt libero. Pellentesque eget lacus, congue in aliquet luctus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 row">
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-calculator bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">Word Counter</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-text bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">Title & Lengths Checker</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-code-curly bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">JSON-LD Generator</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-timer bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">Page Speed Test</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-code-block bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">Sitemap Generator</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
+                <h2 class="h6 text-darkgrey">Mobile Friendly Test</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-check-shield bx-lg' ></i>
+                <h2 class="h6 text-darkgrey">SSL Checker</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <div class="col-6 col-md-3 mb-8">
+                  <div class="card card-custom card-stretch card-home">
+                    <div class="card-body p-7">
+                      <div class="text-center">
+                        <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                        <h2 class="h6 text-darkgrey">Robot.txt Generator</h2>
+                        <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                        <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+      </div>
+      <div class="d-flex align-items-center">
+        <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
+        <span class="text-darkgrey">Last update 1 Nov, 2020   |   Version 1.7</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="" style="background:white">
+  <div class="container container-description">
+    <h2 class="text-black">Advance your writing</h2>
+    <div class="row">
+      <div class="col-md-9">
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex align-items-center mb-5 tools-description-points">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">1</span>
+          </div>
+          <a href="#" class="">Why does SEO important for writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5 tools-description-points">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">2</span>
+          </div>
+          <a href="#" class="">How search engine works?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5 tools-description-points">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">3</span>
+          </div>
+          <a href="#" class="">The basic of writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5 tools-description-points">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">4</span>
+          </div>
+          <a href="#" class="">Measuring your writing?</a>
+        </div>
+        <div class="d-flex align-items-center mb-5 tools-description-points">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description">5</span>
+          </div>
+          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+        </div>
+      </div>
+    </div>
+    <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
+      <div class="row">
+        <div class="col-md-6 py-5">
+          <div class="robo-container">
+            <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+          </div>
+        </div>
+        <div class="col-md-6 py-10 pr-10">
+          <div class="robo-text-container">
+            <h2 class="text-white">Writing Starter Guide</h2>
+            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
+            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-10">
+      <div class="col-md-6">
+        <h2 class="text-black">Available features</h2>
+        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
+        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
+          <small class="text-grey">Updated 25 Dec, 2020</small>
+        </div>
+        <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
+            1.3</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
+      </div>
+    </div>
+    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <div class="row my-5">
+      <div class="col-md-6 mb-5">
+        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
+          <div class="alert-text mb-5">
+            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <br />
+            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+          </div>
+          <div class="alert-close pt-5 pr-5">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+            </button>
+          </div>
+          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+        </div>
+      </div>
+      <div class="col-md-6 mb-5">
+        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
+          <div class="alert-text mb-5">
+            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <br />
+            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+          </div>
+          <div class="alert-close pt-5 pr-5">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+            </button>
+          </div>
+          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+        </div>
+      </div>
+    </div>
+    <p class="text-black view-all-release">View all web-release?</p>
+  </div>
+</div>
+
+{{--
 <div class="d-flex flex-column-fluid">
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
@@ -713,6 +1179,8 @@ id
         </div>
     </div>
 </div>
+
+--}}
 @endsection
 
 @push('script')
