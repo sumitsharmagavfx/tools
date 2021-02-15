@@ -130,7 +130,7 @@ const getData = function(key){
         $('#textarea').data('key',key)
         start();
     }
-    
+
 }
 
 const removeData = function(key){
@@ -195,7 +195,7 @@ jQuery('#reset').click(function () {
     topKeywords3Mobile.innerHTML = '';
 
     // sticky.update();
-});  
+});
 
 function start(){
     // sessionStorage.setItem("text", input.value);
@@ -217,14 +217,14 @@ function start(){
     if (words) {
         var sentences = input.value.match(/\w([^.?!;\u2026]+[.?!;\u2026]+)/g);
         if (!sentences){
-            sentenceCount.innerHTML = 0;   
+            sentenceCount.innerHTML = 0;
         }else{
             sentenceCount.innerHTML = sentences.length;
         }
         // sessionStorage.setItem("sentences", sentences.length);
     } else {
         sentenceCount.innerHTML = 0;
-    }                                                                                                     
+    }
 
     if (words) {
         var paragraphs = input.value.replace(/\n$/gm, '').split(/\n/);

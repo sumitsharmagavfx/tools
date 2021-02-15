@@ -74,6 +74,51 @@ id/word-counter
     color: #66757f !important;
   }
 
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .local-collection .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+  .local-collection .local-collection-title {
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1399px){
+  .local-collection .local-collection-title {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .local-collection .local-collection-title {
+    max-width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+  @media only screen and (min-width: 701px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   @media only screen and (max-width: 700px) {
     .local-collection-mobile .local-collection-title {
       max-width: 65%;
