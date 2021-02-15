@@ -1,32 +1,33 @@
 const refreshLocalStorage = function(){
     try{
         const keys = JSON.parse(localStorage.getItem('keys'))
-        for (let key of keys){
-            console.log(key)
-            let temp = localStorage.getItem(key).slice(0,45)
-            let date = new Date(key*1000)
-            let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
-            '<div class="d-flex align-items-center justify-content-between">'+
-                '<div class="local-collection-title">'+temp+'</div>'+
-                    '<div class="d-flex align-items-center">'+
-                        '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                        '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+        if(keys.wc){
+            for (let key of keys.wc){
+                let temp = localStorage.getItem(key).slice(0,45)
+                let date = new Date(key*1000)
+                let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
+                '<div class="d-flex align-items-center justify-content-between">'+
+                    '<div class="local-collection-title">'+temp+'</div>'+
+                        '<div class="d-flex align-items-center">'+
+                            '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                            '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                        '</div>'+
                     '</div>'+
-                '</div>'+
-            '</div>'
-        
-            let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
-            '<div class="d-flex justify-content-between">'+
-            '  <div class="local-collection-title">'+temp+'</div>'+
-            '  <div class="d-flex align-items-center">'+
-                '<span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-            '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
-            '  </div>'+
-            '</div>'+
-            '</li>'
+                '</div>'
             
-            $('#localsavemobile').append(div)
-            $('#localsavedesktop').append(div2)
+                let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
+                '<div class="d-flex justify-content-between">'+
+                '  <div class="local-collection-title">'+temp+'</div>'+
+                '  <div class="d-flex align-items-center">'+
+                    '<span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                '  </div>'+
+                '</div>'+
+                '</li>'
+                
+                $('#localsavemobile').append(div)
+                $('#localsavedesktop').append(div2)
+            }
         }
     }catch(e){
         console.log(e)
@@ -96,24 +97,24 @@ $('#textarea').on('input', function(){
         if($(this).val()){
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
-            var temp = []
-            if (keys){
+            var temp = define();
+            if (keys){  
                 temp = JSON.parse(keys)
             }
-            if (!temp.includes(key)){
-                temp.push(key)
+            if (!temp.wc.includes(key)){
+                temp.wc.push(key)
             }
             window.localStorage.setItem('keys', JSON.stringify(temp));
             window.localStorage.setItem(key, $('#textarea').val());
         }else{
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
-            var temp = []
+            var temp = define();
             if (keys){
                 temp = JSON.parse(keys)
-                let index = temp.indexOf(key)
+                let index = temp.wc.indexOf(key)
                 if (index > 0){
-                    temp.splice(index, 1)
+                    temp.wc.splice(index, 1)
                 }
                 window.localStorage.setItem('keys', JSON.stringify(temp));
                 window.localStorage.removeItem(key);
@@ -140,9 +141,9 @@ const removeData = function(key){
         start();
     }
     let keys = JSON.parse(localStorage.getItem('keys'));
-    for(var i in keys){
-        if(keys[i] === key){
-            keys.splice(i,1)
+    for(var i in keys.wc){
+        if(keys.wc[i] === key){
+            keys.wc.splice(i,1)
             break;
         }
     }

@@ -580,12 +580,12 @@ id/json-ld-faq-schema-generator
                         <button type="submit" id="test" class="btn font-weight-bold " name="button">
                         <i class='bx bx-check-circle'></i> <span>Check</span></button>
                       </div>
-                      <div class="col-4 d-flex justify-content-center px-0 button-result">
+                      <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" class="btn font-weight-bold" name="button">
                         <i class='bx bx-refresh' ></i> <span>Reset</span></button>
                       </div>
                     </div>
-                    <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
+                  <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
                 </form>
               </div>
 
@@ -601,58 +601,12 @@ id/json-ld-faq-schema-generator
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">Your Local History</span>
               </div>
-              <div>
+              <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <ul class="list-group" id="localsavedesktop"></ul>
             </div>
           </div>
         </div>
@@ -692,53 +646,7 @@ id/json-ld-faq-schema-generator
         <span class="clear-all font-15px pointer">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
   </div>
 </div>
 <div class="" style="background:white">
@@ -1085,6 +993,7 @@ id/json-ld-faq-schema-generator
 </script>
 @endpush
 @push('script')
+<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/faq-json-ld.js')}}"></script>
 @endpush
 @section('json-ld')

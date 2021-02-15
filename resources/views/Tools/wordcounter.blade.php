@@ -893,6 +893,7 @@ id/word-counter
 @endpush
 
 @push('script')
+<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/word-counter.js')}}"></script>
 @endpush
 @push('script')
