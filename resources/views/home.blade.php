@@ -407,7 +407,7 @@ id
                 <i class='text-darkgrey bx bx-calculator bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">Word Counter</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -420,7 +420,7 @@ id
                 <i class='text-darkgrey bx bx-text bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">Title & Lengths Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -433,7 +433,7 @@ id
                 <i class='text-darkgrey bx bx-code-curly bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">JSON-LD Generator</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/json-ld-faq-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -446,7 +446,7 @@ id
                 <i class='text-darkgrey bx bx-timer bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">Page Speed Test</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -459,7 +459,7 @@ id
                 <i class='text-darkgrey bx bx-code-block bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">Sitemap Generator</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -472,7 +472,7 @@ id
                 <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
                 <h2 class="h6 text-darkgrey">Mobile Friendly Test</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -485,7 +485,7 @@ id
                 <i class='text-darkgrey bx bx-check-shield bx-lg' ></i>
                 <h2 class="h6 text-darkgrey">SSL Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
               </div>
             </div>
           </div>
@@ -498,7 +498,7 @@ id
                         <i class='text-darkgrey bx bx-mask bx-lg' ></i>
                         <h2 class="h6 text-darkgrey">Robot.txt Generator</h2>
                         <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                        <button type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                        <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                       </div>
                     </div>
                   </div>
