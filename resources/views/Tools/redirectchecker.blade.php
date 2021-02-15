@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('sitemap.meta-title'))
+@section('title', 'Redirect Checker')
 
-@section('meta-desc', Lang::get('sitemap.meta-desc'))
+@section('meta-desc', 'Redirect Checker')
 
-@section('meta-keyword', Lang::get('sitemap.meta-keyword'))
+@section('meta-keyword', 'Redirect Checker')
 
-@section('conical','/en/sitemap-generator')
+@section('conical','/en/redirect-checker')
 
 @section('en-link')
-en/sitemap-generator
+en/redirect-checker
 @endsection
 
 @section('id-link')
-id/sitemap-generator
+id/redirect-checker
 @endsection
 
 @push('style')
@@ -39,17 +39,17 @@ id/sitemap-generator
     border-radius: 5px;
   }
 
-  .sitemap-url {
+  .redirect-url {
     background: var(--primaryblue);
     border: none;
     color: white;
   }
 
-  .sitemap-url::placeholder {
+  .redirect-url::placeholder {
     color: white;
   }
 
-  .sitemap-url:focus {
+  .redirect-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -83,7 +83,7 @@ id/sitemap-generator
     text-decoration: underline;
   }
 
-  .sitemap-url-result {
+  .redirect-url-result {
     color: var(--darkgrey);
     font-weight: bold;
   }
@@ -148,7 +148,7 @@ id/sitemap-generator
     cursor: not-allowed;
   }
 
-  .btn-download-sitemap {
+  .btn-download-redirect {
     line-height: 1;
     width: 137px;
     background: var(--darkgrey);
@@ -156,12 +156,12 @@ id/sitemap-generator
     border-radius: 20px;
   }
 
-  .btn-download-sitemap:hover {
+  .btn-download-redirect:hover {
     background: var(--black);
     color: white;
   }
 
-  .btn-download-sitemap-disabled {
+  .btn-download-redirect-disabled {
     line-height: 1;
     width: 137px;
     background: var(--grey);
@@ -170,29 +170,29 @@ id/sitemap-generator
     cursor: not-allowed;
   }
 
-  .btn-download-sitemap-disabled:hover {
+  .btn-download-redirect-disabled:hover {
     background: var(--grey);
     color: white;
     cursor: not-allowed;
   }
 
-  .label-sitemap {
+  .label-redirect {
     width: 40px;
     font-weight: 400;
     background: var(--lightgrey);
     color: var(--darkgrey);
   }
 
-  .sitemap-show-more {
+  .redirect-show-more {
     color:var(--darkgrey);
   }
 
-  .result-row:hover .label-sitemap {
+  .result-row:hover .label-redirect {
     background: var(--primaryblue);
     color: white;
   }
 
-  .result-row:hover .sitemap-url-result {
+  .result-row:hover .redirect-url-result {
     color: var(--black);
   }
 
@@ -200,12 +200,12 @@ id/sitemap-generator
     cursor: pointer;
   }
 
-  .result-row-show-more:hover .label-sitemap {
+  .result-row-show-more:hover .label-redirect {
     background: var(--primaryblue);
     color: white;
   }
 
-  .result-row-show-more:hover .sitemap-url-result, .result-row-show-more:hover .sitemap-show-more {
+  .result-row-show-more:hover .redirect-url-result, .result-row-show-more:hover .redirect-show-more {
     color: var(--black);
   }
 
@@ -507,6 +507,39 @@ id/sitemap-generator
     text-decoration: underline;
   }
   /* END DESCRIPTION TOOLS */
+
+  .user-agent {
+    border: 1px solid white;
+    background: var(--primaryblue);
+    color: white;
+    border-radius: 20px
+
+  }
+
+  /* .user-agent:focus {
+    border: 1px solid white;
+    background: var(--primaryblue);
+    color: white;
+  } */
+
+  .redirect-url-result-link {
+    color: var(--primaryblue);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .redirect-url-result-link:hover {
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  /* @media only screen and (min-width:768px) and (max-width:991px) {
+    .redirect-url-result-link {
+
+    }
+  } */
 </style>
 @endpush
 
@@ -514,12 +547,12 @@ id/sitemap-generator
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">SITEMAP GENERATOR</h1>
+      <h1 class="text-darkgrey font-weight-normal">REDIRECT CHECKER</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
+          <div class="col-sm-6 col-md-7 col-lg-6 col-xl-7 d-flex align-items-center py-1">
             <!-- BEFORE CRAWL -->
             <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
 
@@ -528,127 +561,149 @@ id/sitemap-generator
 
             <!-- HTTP URL -->
             <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <input type="url" class="form-control redirect-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
+          <div class="col-sm-6 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">GENERATE</button>
+
+                <select class="form-control user-agent mx-1" name="">
+                  <option value="" disabled selected>Select user agent</option>
+                  <option value="*">All</option>
+                  <option value="NinjaBot">NinjaBot</option>
+                  <option value="Googlebot">Googlebot</option>
+                  <option value="Googlebot-Mobile">Googlebot-Mobile</option>
+                  <option value="Googlebot-Image">Googlebot-Image</option>
+                  <option value="Mediapartners-Google">Mediapartners-Google</option>
+                  <option value="Adsbot-Google">Adsbot-Google</option>
+                  <option value="Bingbot">Bingbot</option>
+                  <option value="Slurp">Slurp</option>
+                  <option value="msnbot">msnbot</option>
+                  <option value="msnbot-media">msnbot-media</option>
+                  <option value="Teoma">Teoma</option>
+                  <option value="twiceler">twiceler</option>
+                  <option value="Gigabot">Gigabot</option>
+                  <option value="Scrubby">Scrubby</option>
+                  <option value="Robozilla">Robozilla</option>
+                  <option value="ia_archiver">ia_archiver</option>
+                  <option value="baiduspider">baiduspider</option>
+                  <option value="naverbot">naverbot</option>
+                  <option value="yeti">yeti</option>
+                  <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
+                  <option value="psbot">psbot</option>
+                  <option value="asterias">asterias</option>
+                  <option value="yahoo-blogs">yahoo-blogs</option>
+                  <option value="Yandex">Yandex</option>
+                  <option value="Specify">Specify</option>
+                </select>
+
+                <button id="generateButton" type="button" class="btn btn-crawl mx-1" name="button">CHECK URL</button>
+
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <div class="d-flex justify-content-between align-items-center">
             <div class="px-2 mb-3">
               <span class="text-black font-15px font-weight-bolder">Results</span>
-              <span class="font-15px font-weight-bolder" style="color:#9A99A2">(18)</span>
               <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
             </div>
-            <div class="mb-3">
-              <button type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</button>
-              <button type="button" class="btn btn-download-sitemap-disabled" disabled name="button">Download Sitemap</button>
-            </div>
-          </div>
-          <div class="card card-custom mb-5">
+          <div class="card card-custom">
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No sitemap generated, please input your domain above!</p>
+                  <p class="d-block">No URL tested, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
 
               <!-- RESULT CRAWL -->
               <div class="" id=result>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">1</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">2</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">3</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">4</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">5</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">6</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">7</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">8</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">9</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
-                  <span class="label label-square label-sitemap">10</span>
-                  <!-- TECHNOLOGY NAME -->
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
-                  <div class="">
-                    <!-- TECHNOLOGY ICON -->
-                    <span class="label label-square label-sitemap">...</span>
-                    <!-- TECHNOLOGY NAME -->
-                    <span class="mx-3 sitemap-url-result">Show More</span>
+                <div class="row px-5 mb-5">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <p class="font-weight-bolder text-black h6">URL</p>
+                    </div>
                   </div>
-                  <div class="">
-                    <i class='bx bxs-chevron-down sitemap-show-more'></i>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <p class="font-weight-bolder text-black h6">Status codes</p>
+                      <p class="font-weight-bolder text-black h6">Date</p>
+                    </div>
                   </div>
                 </div>
+
+                <div class="row px-5">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
+                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
+                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="row px-5">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
+                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
+                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="row px-5">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
+                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
+                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="row px-5">
+                  <div class="col-6">
+                    <div class="d-flex align-items-center">
+                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
+                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
+                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-3">
+
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="px-2 mb-3 d-flex align-items-center" style="height:31.88px">
+          <div class="px-2 mb-3 d-flex align-items-center">
             <span class="text-black font-15px font-weight-bolder">Progress</span>
           </div>
           <div class="card card-custom mb-5">
@@ -660,7 +715,6 @@ id/sitemap-generator
                 <div class="progress my-3">
                   <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                 </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
                 <button type="button" class="btn btn-cancel" name="button">Cancel</button>
                 <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
               </div>
@@ -966,133 +1020,6 @@ id/sitemap-generator
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
-{{--
-<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-<li class="breadcrumb-item active" style="color:#2F80ED"><b>Sitemap Generator</b></li>
-</ol>
-</nav>
-<div class="card card-custom mb-5">
-  <div class="card-header">
-    <div class="card-title">
-      <h1 class="card-label">SITEMAP GENERATOR </h1>
-      <small>@lang('sitemap.sub-title')</small>
-    </div>
-  </div>
-</div>
-<div class="card card-custom gutter-b">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-lg-5 gutter-b">
-        <div class="" id="spin">
-          <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
-        </div>
-      </div>
-      <div class="col-lg-4 col-xl-3 col-xxl-2 gutter-b">
-        <button type="button" class="btn btn-primary  form-control" name="button" id="generate">
-          <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
-      </div>
-    </div>
-    <center>
-      <div class="col-sm-12 col-md-6 col-lg-5" id="add" style="display:none">
-        <img id="screeshoot" src="https://cmlabs.co/wp-content/uploads/2020/06/mural-cmlabs.jpg" width="100%" class="gutter-b" alt="mural cmlabs">
-      </div>
-    </center>
-  </div>
-</div>
-<div class="card card-custom gutter-b" id="table" style="display:none">
-  <div class="card-header">
-    <div class="card-title">
-      <h2 class="card-label">@lang('sitemap.result-title')</h2>
-    </div>
-  </div>
-  <div class="card-body">
-    <button id="download" type="button" class="btn btn-info" name="button">@lang('sitemap.btn-download')</button>
-    <table class="table table-striped" id="url-table">
-      <thead>
-        <tr>
-          <th scope="col" width="70px">Page #</th>
-          <th scope="col">URL</th>
-        </tr>
-      </thead>
-      <tbody>
-
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row" data-sticky-container>
-  <div class="col-lg-8 mb-5">
-    <div class="card card-custom">
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-1')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-1-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-2')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-2-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-3')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-3-1')</p>
-        <p>@lang('sitemap.copy-3-2')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-4')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-4-1')</p>
-        <p>@lang('sitemap.copy-4-2')</p>
-        <p>@lang('sitemap.copy-4-3')</p>
-        <p>@lang('sitemap.copy-4-4')</p>
-        <p>@lang('sitemap.copy-4-5')</p>
-        <p>@lang('sitemap.copy-4-6')</p>
-        <p>@lang('sitemap.copy-4-7')</p>
-        <p>@lang('sitemap.copy-4-8')</p>
-        <p>@lang('sitemap.copy-4-9')</p>
-        <p>@lang('sitemap.copy-4-10')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-5')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-5-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-6')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-6-1')</p>
-        <p>@lang('sitemap.copy-6-2')</p>
-      </div>
-    </div>
-  </div>
-  @include('layouts/stickybar')
-</div>
-</div>
-</div>
---}}
 
 @endsection
 @push('script')
@@ -1108,24 +1035,29 @@ id/sitemap-generator
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "Sitemap Generator"
+      "name": "Redirect Checker"
     }]
   }
 </script>
 @endpush
 @push('script')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script>
-  const token = "{{csrf_token()}}"
+function myFunction(x) {
+  if (x.matches) { // If media query matches
+    $('.desktopDate').hide();
+    $('.mobileDate').show();
+  } else {
+    $('.desktopDate').show();
+    $('.mobileDate').hide();
+  }
+}
+
+var x = window.matchMedia("(max-width: 767px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
 </script>
-<script src="{{asset('js/logic/download.js')}}"></script>
-<script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
-<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
-<script src="{{asset('js/logic/sitemap.js')}}"></script>
 @endpush
 
-@section('sitemap')
+@section('redirect')
 active
 @endsection
