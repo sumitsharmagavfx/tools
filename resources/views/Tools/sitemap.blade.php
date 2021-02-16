@@ -562,87 +562,91 @@ id/sitemap-generator
 
               <!-- RESULT CRAWL -->
               <div class="" id=result>
+
+                <!-- DUMMY RESULT DATA START -->
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">1</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">2</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">3</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">4</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">5</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">6</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">7</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">8</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">9</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+
+
                 <div class="d-flex align-items-center mx-5 result-row">
-                  <!-- TECHNOLOGY ICON -->
                   <span class="label label-square label-sitemap">10</span>
-                  <!-- TECHNOLOGY NAME -->
                   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
                 </div>
                 <hr>
+                <!-- DUMMY RESULT DATA END -->
+
+                <!-- SHOW MORE BUTTON START -->
                 <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
                   <div class="">
-                    <!-- TECHNOLOGY ICON -->
                     <span class="label label-square label-sitemap">...</span>
-                    <!-- TECHNOLOGY NAME -->
                     <span class="mx-3 sitemap-url-result">Show More</span>
                   </div>
-                  <div class="">
+                  <div class="d-flex align-items-center">
                     <i class='bx bxs-chevron-down sitemap-show-more'></i>
                   </div>
                 </div>
+                <!-- SHOW MORE BUTTON END -->
+
+
               </div>
             </div>
           </div>

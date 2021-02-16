@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Redirect Checker')
+@section('title', 'Hreflang Checker')
 
-@section('meta-desc', 'Redirect Checker')
+@section('meta-desc', 'Hreflang Checker')
 
-@section('meta-keyword', 'Redirect Checker')
+@section('meta-keyword', 'Hreflang Checker')
 
-@section('conical','/en/redirect-checker')
+@section('conical','/en/hreflang-checker')
 
 @section('en-link')
-en/redirect-checker
+en/hreflang-checker
 @endsection
 
 @section('id-link')
-id/redirect-checker
+id/hreflang-checker
 @endsection
 
 @push('style')
@@ -39,17 +39,17 @@ id/redirect-checker
     border-radius: 5px;
   }
 
-  .redirect-url {
+  .hreflang-url {
     background: var(--primaryblue);
     border: none;
     color: white;
   }
 
-  .redirect-url::placeholder {
+  .hreflang-url::placeholder {
     color: white;
   }
 
-  .redirect-url:focus {
+  .hreflang-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -83,7 +83,7 @@ id/redirect-checker
     text-decoration: underline;
   }
 
-  .redirect-url-result {
+  .hreflang-url-result {
     color: var(--darkgrey);
     font-weight: bold;
   }
@@ -148,7 +148,7 @@ id/redirect-checker
     cursor: not-allowed;
   }
 
-  .btn-download-redirect {
+  .btn-download-hreflang {
     line-height: 1;
     width: 137px;
     background: var(--darkgrey);
@@ -156,12 +156,12 @@ id/redirect-checker
     border-radius: 20px;
   }
 
-  .btn-download-redirect:hover {
+  .btn-download-hreflang:hover {
     background: var(--black);
     color: white;
   }
 
-  .btn-download-redirect-disabled {
+  .btn-download-hreflang-disabled {
     line-height: 1;
     width: 137px;
     background: var(--grey);
@@ -170,29 +170,30 @@ id/redirect-checker
     cursor: not-allowed;
   }
 
-  .btn-download-redirect-disabled:hover {
+  .btn-download-hreflang-disabled:hover {
     background: var(--grey);
     color: white;
     cursor: not-allowed;
   }
 
-  .label-redirect {
-    width: 40px;
+  .label-hreflang {
+    width: 25px;
     font-weight: 400;
     background: var(--lightgrey);
     color: var(--darkgrey);
   }
 
-  .redirect-show-more {
+  .hreflang-show-more {
     color:var(--darkgrey);
   }
 
-  .result-row:hover .label-redirect {
+
+  .result-row:hover .label-hreflang {
     background: var(--primaryblue);
     color: white;
   }
 
-  .result-row:hover .redirect-url-result {
+  .result-row:hover .hreflang-url-result {
     color: var(--black);
   }
 
@@ -200,12 +201,12 @@ id/redirect-checker
     cursor: pointer;
   }
 
-  .result-row-show-more:hover .label-redirect {
+  .result-row-show-more:hover .label-hreflang {
     background: var(--primaryblue);
     color: white;
   }
 
-  .result-row-show-more:hover .redirect-url-result, .result-row-show-more:hover .redirect-show-more {
+  .result-row-show-more:hover .hreflang-url-result, .result-row-show-more:hover .hreflang-show-more {
     color: var(--black);
   }
 
@@ -508,38 +509,180 @@ id/redirect-checker
   }
   /* END DESCRIPTION TOOLS */
 
-  .user-agent {
-    border: 1px solid white;
-    background: var(--primaryblue);
-    color: white;
-    border-radius: 20px
+  @media only screen and (max-width:575px){
+    .number {
+      min-width: 12%;
+      width: 12%;
+    }
 
+    .url {
+      min-width: 30%;
+      width: 30%;
+    }
+
+    .hreflang {
+      min-width: 20%;
+      width: 20%;
+    }
+
+    .language {
+      min-width: 22%;
+      width: 22%;
+    }
+
+    .region {
+      min-width: 16%;
+      width: 16%;
+    }
   }
 
-  /* .user-agent:focus {
-    border: 1px solid white;
-    background: var(--primaryblue);
-    color: white;
-  } */
+  @media only screen and (min-width:576px) and (max-width: 767px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
 
-  .redirect-url-result-link {
-    color: var(--primaryblue);
-    max-width: 100%;
+    .url {
+      min-width: 50%;
+      width: 50%;
+    }
+
+    .hreflang {
+      min-width: 12%;
+      width: 12%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:768px) and (max-width: 991px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
+
+    .url {
+      min-width: 50%;
+      width: 50%;
+    }
+
+    .hreflang {
+      min-width: 12%;
+      width: 12%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:992px) and (max-width: 1199px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
+
+    .url {
+      min-width: 49%;
+      width: 49%;
+    }
+
+    .hreflang {
+      min-width: 13%;
+      width: 13;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:1200px) and (max-width: 1399px) {
+    .number {
+      min-width: 6%;
+      width: 6%;
+    }
+
+    .url {
+      min-width: 43%;
+      width: 43%;
+    }
+
+    .hreflang {
+      min-width: 11%;
+      width: 11%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 25%;
+      width: 25%;
+    }
+  }
+
+  @media only screen and (min-width:1400px){
+    .number {
+      min-width: 6%;
+      width: 6%;
+    }
+
+    .url {
+      min-width: 45%;
+      width: 45%;
+    }
+
+    .hreflang {
+      min-width: 9%;
+      width: 9%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 25%;
+      width: 25%;
+    }
+  }
+
+  .result-row .number p, .result-row .url p, .result-row .hreflang p, .result-row .language p, .result-row .region p {
+    max-width: 99%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color : var(--darkgrey);
   }
 
-  .redirect-url-result-link:hover {
-    font-weight: 500;
-    text-decoration: underline;
+  .result-row:hover .number p, .result-row:hover .url p, .result-row:hover .hreflang p, .result-row:hover .language p, .result-row:hover .region p {
+    color: var(--black);
+    font-weight: bold
   }
-
-  /* @media only screen and (min-width:768px) and (max-width:991px) {
-    .redirect-url-result-link {
-
-    }
-  } */
 </style>
 @endpush
 
@@ -547,12 +690,12 @@ id/redirect-checker
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">REDIRECT CHECKER</h1>
+      <h1 class="text-darkgrey font-weight-normal">HREFLANG CHECKER</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-6 col-md-7 col-lg-6 col-xl-7 d-flex align-items-center py-1">
+          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
             <!-- BEFORE CRAWL -->
             <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
 
@@ -561,43 +704,11 @@ id/redirect-checker
 
             <!-- HTTP URL -->
             <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control redirect-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <input type="url" class="form-control hreflang-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
-          <div class="col-sm-6 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center py-1">
+          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-
-                <select class="form-control user-agent mx-1" name="">
-                  <option value="" disabled selected>Select user agent</option>
-                  <option value="*">All</option>
-                  <option value="NinjaBot">NinjaBot</option>
-                  <option value="Googlebot">Googlebot</option>
-                  <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                  <option value="Googlebot-Image">Googlebot-Image</option>
-                  <option value="Mediapartners-Google">Mediapartners-Google</option>
-                  <option value="Adsbot-Google">Adsbot-Google</option>
-                  <option value="Bingbot">Bingbot</option>
-                  <option value="Slurp">Slurp</option>
-                  <option value="msnbot">msnbot</option>
-                  <option value="msnbot-media">msnbot-media</option>
-                  <option value="Teoma">Teoma</option>
-                  <option value="twiceler">twiceler</option>
-                  <option value="Gigabot">Gigabot</option>
-                  <option value="Scrubby">Scrubby</option>
-                  <option value="Robozilla">Robozilla</option>
-                  <option value="ia_archiver">ia_archiver</option>
-                  <option value="baiduspider">baiduspider</option>
-                  <option value="naverbot">naverbot</option>
-                  <option value="yeti">yeti</option>
-                  <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                  <option value="psbot">psbot</option>
-                  <option value="asterias">asterias</option>
-                  <option value="yahoo-blogs">yahoo-blogs</option>
-                  <option value="Yandex">Yandex</option>
-                  <option value="Specify">Specify</option>
-                </select>
-
-                <button id="generateButton" type="button" class="btn btn-crawl mx-1" name="button">CHECK URL</button>
-
+            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK URL</button>
           </div>
         </div>
       </div>
@@ -607,96 +718,240 @@ id/redirect-checker
               <span class="text-black font-15px font-weight-bolder">Results</span>
               <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
             </div>
-          <div class="card card-custom">
+          <div class="card card-custom mb-5">
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No URL tested, please input your domain above!</p>
+                  <p class="d-block">No URL checked, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
 
               <!-- RESULT CRAWL -->
               <div class="" id=result>
-                <div class="row px-5 mb-5">
-                  <div class="col-6">
-                    <div class="d-flex align-items-center">
-                      <p class="font-weight-bolder text-black h6">URL</p>
-                    </div>
+                <div class="d-flex mx-5 mb-5">
+                  <div class="number font-weight-bolder text-black">
+                    <p class="mb-0">No.</p>
                   </div>
-                  <div class="col-6">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <p class="font-weight-bolder text-black h6">Status codes</p>
-                      <p class="font-weight-bolder text-black h6">Date</p>
-                    </div>
+                  <div class="url font-weight-bolder text-black">
+                    <p class="mb-0">URL</p>
+                  </div>
+                  <div class="hreflang font-weight-bolder text-black">
+                    <p class="mb-0">Hreflang</p>
+                  </div>
+                  <div class="language font-weight-bolder text-black">
+                    <p class="mb-0">Language</p>
+                  </div>
+                  <div class="region font-weight-bolder text-black">
+                    <p class="mb-0">Region</p>
                   </div>
                 </div>
 
-                <div class="row px-5">
-                  <div class="col-6">
-                    <div class="d-flex align-items-center">
-                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                    </div>
+                <!-- DUMMY RESULT DATA START -->
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">1</span>
                   </div>
-                  <div class="col-6">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
-                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
-                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
-                    </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
                   </div>
                 </div>
                 <hr class="my-3">
 
-                <div class="row px-5">
-                  <div class="col-6">
-                    <div class="d-flex align-items-center">
-                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                    </div>
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">2</span>
                   </div>
-                  <div class="col-6">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
-                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
-                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
-                    </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
                   </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="row px-5">
-                  <div class="col-6">
-                    <div class="d-flex align-items-center">
-                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                    </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
                   </div>
-                  <div class="col-6">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
-                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
-                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
-                    </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
                   </div>
                 </div>
                 <hr class="my-3">
 
-                <div class="row px-5">
-                  <div class="col-6">
-                    <div class="d-flex align-items-center">
-                      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                    </div>
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">3</span>
                   </div>
-                  <div class="col-6">
-                    <div class="d-flex align-items-center justify-content-between">
-                      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">302</span>
-                      <p id="" class="text-black mb-0 desktopDate"><em>2021-01-26 00:55:32 GMT</em></p>
-                      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="2021-01-26 00:55:32 GMT"></i>
-                    </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
                   </div>
                 </div>
                 <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">4</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">5</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">6</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">7</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">8</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">9</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">10</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <!-- DUMMY RESULT DATA END -->
+
+                <!-- SHOW MORE BUTTON START -->
+                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
+                  <div class="">
+                    <span class="label label-square label-hreflang">...</span>
+                    <span class="mx-3 hreflang-url-result">Show More</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class='bx bxs-chevron-down hreflang-show-more'></i>
+                  </div>
+                </div>
+                <!-- SHOW MORE BUTTON END -->
 
               </div>
             </div>
@@ -715,6 +970,7 @@ id/redirect-checker
                 <div class="progress my-3">
                   <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
                 </div>
+                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
                 <button type="button" class="btn btn-cancel" name="button">Cancel</button>
                 <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
               </div>
@@ -1020,7 +1276,6 @@ id/redirect-checker
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
-
 @endsection
 @push('script')
 <script type="application/ld+json">
@@ -1035,29 +1290,17 @@ id/redirect-checker
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "Redirect Checker"
+      "name": "Hreflang Checker"
     }]
   }
 </script>
 @endpush
 @push('script')
-<script>
-function myFunction(x) {
-  if (x.matches) { // If media query matches
-    $('.desktopDate').hide();
-    $('.mobileDate').show();
-  } else {
-    $('.desktopDate').show();
-    $('.mobileDate').hide();
-  }
-}
+<script type="text/javascript">
 
-var x = window.matchMedia("(max-width: 767px)")
-myFunction(x) // Call listener function at run time
-x.addListener(myFunction) // Attach listener function on state changes
 </script>
 @endpush
 
-@section('redirectchecker')
+@section('hreflangchecker')
 active
 @endsection
