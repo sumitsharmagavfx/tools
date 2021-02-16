@@ -121,6 +121,42 @@ class ToolsController extends Controller
         return view('Tools/technologylookup', compact('local', 'dataID', 'dataEN'));
     }
 
+    public function redirectchecker($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+        return view('Tools/redirectchecker', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function hreflangchecker($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+        return view('Tools/hreflangchecker', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function linkanalyzer($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+        return view('Tools/linkanalyzer', compact('local', 'dataID', 'dataEN'));
+    }
+
+    public function keywordresearch($lang)
+    {
+        App::setLocale($lang);
+        $dataID = $this->HomeController->getBlogWordpressId();
+        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $local = App::getLocale();
+        return view('Tools/keywordresearch', compact('local', 'dataID', 'dataEN'));
+    }
+
     public function englishVersion()
     {
         $previous = url()->previous();

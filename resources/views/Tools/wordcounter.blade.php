@@ -74,6 +74,51 @@ id/word-counter
     color: #66757f !important;
   }
 
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .local-collection .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+  .local-collection .local-collection-title {
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1399px){
+  .local-collection .local-collection-title {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .local-collection .local-collection-title {
+    max-width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+  @media only screen and (min-width: 701px) {
+    .local-collection-mobile .local-collection-title {
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   @media only screen and (max-width: 700px) {
     .local-collection-mobile .local-collection-title {
       max-width: 65%;
@@ -548,7 +593,7 @@ id/word-counter
                     15px
                   </div>
                 </div>
-                <div class="">
+                <div id="autosaveParam" data-autosave="on" class="">
                   <a href="#local-collection-desktop">
                     <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
                   </a>
@@ -595,7 +640,7 @@ id/word-counter
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">Your Local History</span>
               </div>
-              <div>
+              <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">Clear All</span>
               </div>
             </div>
@@ -931,11 +976,13 @@ id/word-counter
     $("#autoSaveOn").click(function() {
       $("#autoSaveOn").hide();
       $("#autoSaveOff").show();
+      $('#autosaveParam').data('autosave','off');
     });
 
     $("#autoSaveOff").click(function() {
       $("#autoSaveOn").show();
       $("#autoSaveOff").hide();
+      $('#autosaveParam').data('autosave','on');
     });
 
 

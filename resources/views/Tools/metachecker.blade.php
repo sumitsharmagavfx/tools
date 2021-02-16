@@ -713,6 +713,42 @@ id/page-title-meta-description-checker
     font-weight: bold;
   }
 
+  @media only screen and (min-width: 768px) and (max-width:991px) {
+    .local-collection .local-collection-title {
+      max-width: 50%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width:1199px) {
+  .local-collection .local-collection-title {
+    max-width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width:1399px){
+  .local-collection .local-collection-title {
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .local-collection .local-collection-title {
+    max-width: 63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
   .local-collection-mobile .local-collection-body .custom-card {
     border-radius: 5px;
   }
@@ -782,9 +818,9 @@ id/page-title-meta-description-checker
             <div class="d-flex align-items-center flex-row">
               <span class="meta-title mr-5">PAGE TITLE</span>
               <div class="progress-bar_wrap">
-                <div class="progress-bar_item progress-bar_item-1 active"></div>
-                <div class="progress-bar_item progress-bar_item-2 active"></div>
-                <div class="progress-bar_item progress-bar_item-3 blank"></div>
+                <div id="titlebar1" class="progress-bar_item progress-bar_item-1 blank"></div>
+                <div id="titlebar2" class="progress-bar_item progress-bar_item-2 blank"></div>
+                <div id="titlebar3" class="progress-bar_item progress-bar_item-3 blank"></div>
               </div>
             </div>
             <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" placeholder="Type or paste your text..">
@@ -795,9 +831,9 @@ id/page-title-meta-description-checker
             <div class="d-flex align-items-center flex-row">
               <span class="meta-desc mr-5">META DESCRIPTION</span>
               <div class="progress-bar_wrap">
-                <div class="progress-bar_item progress-bar_item-1 active"></div>
-                <div class="progress-bar_item progress-bar_item-2 active"></div>
-                <div class="progress-bar_item progress-bar_item-3 active"></div>
+                <div id="descbar1" class="progress-bar_item progress-bar_item-1 blank"></div>
+                <div id="descbar2" class="progress-bar_item progress-bar_item-2 blank"></div>
+                <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
               </div>
             </div>
             <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="Type or paste your text.." style="resize:none; overflow:hidden"></textarea>
@@ -865,57 +901,12 @@ id/page-title-meta-description-checker
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">Your Local History</span>
               </div>
-              <div>
+              <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://cmlabs.co/en/pricing</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/login</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div>https://analytics.cmlabs.co/en/member/dashboard</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
+              <ul class="list-group" id="localsavedesktop">
               </ul>
             </div>
           </div>
@@ -1003,57 +994,11 @@ id/page-title-meta-description-checker
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
         <span class="text-black font-15px">Your Local History</span>
       </div>
-      <div>
+      <div onclick="clearAll()">
         <span class="clear-all font-15px pointer">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-          <div class="d-flex align-items-center">
-            <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-            <i class='bx bxs-x-circle text-grey'></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="localsavemobile`"  class="local-collection-body mt-3 px-5"></div>
     <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion px-5" id="accordionExample2">
       <div class="card bg-transparent" style="">
         <div class="card-header" id="headingOne2">
@@ -1562,7 +1507,8 @@ id/page-title-meta-description-checker
 <span id="titlesizertemp"></span>
 <span id="descsizer"></span>
 <span id="descsizertemp"></span> -->
-
+<span id="titlesizer"></span>
+<span id="descsizer"></span>
 @endsection
 @push('script')
 <script type="application/ld+json">

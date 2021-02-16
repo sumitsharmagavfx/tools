@@ -1,102 +1,120 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('mobiletest.meta-title'))
+@section('title', 'Hreflang Checker')
 
-@section('meta-desc', Lang::get('mobiletest.meta-desc'))
+@section('meta-desc', 'Hreflang Checker')
 
-@section('meta-keyword', Lang::get('mobiletest.meta-keyword'))
+@section('meta-keyword', 'Hreflang Checker')
 
-@section('conical','/en/mobile-test')
+@section('conical','/en/hreflang-checker')
 
 @section('en-link')
-en/mobile-test
+en/hreflang-checker
 @endsection
 
 @section('id-link')
-id/mobile-test
+id/hreflang-checker
 @endsection
-
-@section('content')
 
 @push('style')
 <style media="screen">
-.btn-crawl {
-  height: 60%;
-  width: 100%;
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.btn-crawl:hover {
-  background: var(--lightgrey);
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.header-blue {
-  background: var(--primaryblue);
-  border-radius: 5px;
-}
-
-.sitemap-url {
-  background: var(--primaryblue);
-  border: none;
-  color: white;
-}
-
-.sitemap-url::placeholder {
-  color: white;
-}
-
-.sitemap-url:focus {
-  background: var(--primaryblue);
-  border: none;
-  color: white;
-}
-
-.what-is-this {
-  cursor: pointer;
-}
-
-.what-is-this:hover {
-  text-decoration: underline;
-}
-
-.links {
-  color: var(--primaryblue);
-  cursor: pointer;
-}
-
-.links:hover {
-  color: #037BCB;
-  cursor: pointer;
-  text-decoration: underline !important;
-}
-
-.label-primary-version {
-  background: var(--lightgrey);
-  color: var(--darkgrey);
-}
-
-.clear-all:hover {
-  text-decoration: underline;
-}
-
-.sitemap-url-result {
-  color: var(--darkgrey);
-  font-weight: bold;
-}
-
-@media (min-width: 992px) {
-
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
+  .btn-crawl {
+    height: 60%;
+    width: 100%;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
   }
-}
+
+  .btn-crawl:hover {
+    background: var(--lightgrey);
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+  }
+
+  .header-blue {
+    background: var(--primaryblue);
+    border-radius: 5px;
+  }
+
+  .hreflang-url {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+  }
+
+  .hreflang-url::placeholder {
+    color: white;
+  }
+
+  .hreflang-url:focus {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+  }
+
+  .what-is-this {
+    cursor: pointer;
+  }
+
+  .what-is-this:hover {
+    text-decoration: underline;
+  }
+
+  .links {
+    color: var(--primaryblue);
+    cursor: pointer;
+  }
+
+  .links:hover {
+    color: #037BCB;
+    cursor: pointer;
+    text-decoration: underline !important;
+  }
+
+  .label-primary-version {
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+  }
+
+  .clear-all:hover {
+    text-decoration: underline;
+  }
+
+  .hreflang-url-result {
+    color: var(--darkgrey);
+    font-weight: bold;
+  }
+
+  @media (min-width: 992px) {
+
+    .container-description,
+    .container-tools {
+      padding: 0px 100px;
+    }
+  }
+
+
+
+  @media (max-width:767px) {
+    .btn-add-question {
+      width: 100%;
+    }
+  }
+
+
+
+  @media only screen and (min-width: 768px) {
+    #local-collection-desktop .local-collection-title {
+      max-width: 70%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
 
   .btn-cancel {
     line-height: 1;
@@ -130,43 +148,69 @@ id/mobile-test
     cursor: not-allowed;
   }
 
+  .btn-download-hreflang {
+    line-height: 1;
+    width: 137px;
+    background: var(--darkgrey);
+    color: white;
+    border-radius: 20px;
+  }
+
+  .btn-download-hreflang:hover {
+    background: var(--black);
+    color: white;
+  }
+
+  .btn-download-hreflang-disabled {
+    line-height: 1;
+    width: 137px;
+    background: var(--grey);
+    color: white;
+    border-radius: 20px;
+    cursor: not-allowed;
+  }
+
+  .btn-download-hreflang-disabled:hover {
+    background: var(--grey);
+    color: white;
+    cursor: not-allowed;
+  }
+
+  .label-hreflang {
+    width: 25px;
+    font-weight: 400;
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+  }
+
+  .hreflang-show-more {
+    color:var(--darkgrey);
+  }
+
+
+  .result-row:hover .label-hreflang {
+    background: var(--primaryblue);
+    color: white;
+  }
+
+  .result-row:hover .hreflang-url-result {
+    color: var(--black);
+  }
+
+  .result-row-show-more {
+    cursor: pointer;
+  }
+
+  .result-row-show-more:hover .label-hreflang {
+    background: var(--primaryblue);
+    color: white;
+  }
+
+  .result-row-show-more:hover .hreflang-url-result, .result-row-show-more:hover .hreflang-show-more {
+    color: var(--black);
+  }
+
   /* DESCRIPTION TOOLS */
-
-  @media only screen and (min-width: 768px) and (max-width:991px) {
-    .local-collection .local-collection-title {
-      max-width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-@media only screen and (min-width: 992px) and (max-width:1199px) {
-  .local-collection .local-collection-title {
-    max-width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width:1399px){
-  .local-collection .local-collection-title {
-    max-width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .local-collection .local-collection-title {
-    max-width: 63%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
   @media only screen and (max-width: 767px) {
     .desktop-version {
       display: none;
@@ -465,13 +509,188 @@ id/mobile-test
   }
   /* END DESCRIPTION TOOLS */
 
+  @media only screen and (max-width:575px){
+    .number {
+      min-width: 12%;
+      width: 12%;
+    }
+
+    .url {
+      min-width: 30%;
+      width: 30%;
+    }
+
+    .hreflang {
+      min-width: 20%;
+      width: 20%;
+    }
+
+    .language {
+      min-width: 22%;
+      width: 22%;
+    }
+
+    .region {
+      min-width: 16%;
+      width: 16%;
+    }
+  }
+
+  @media only screen and (min-width:576px) and (max-width: 767px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
+
+    .url {
+      min-width: 50%;
+      width: 50%;
+    }
+
+    .hreflang {
+      min-width: 12%;
+      width: 12%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:768px) and (max-width: 991px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
+
+    .url {
+      min-width: 50%;
+      width: 50%;
+    }
+
+    .hreflang {
+      min-width: 12%;
+      width: 12%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:992px) and (max-width: 1199px) {
+    .number {
+      min-width: 8%;
+      width: 8%;
+    }
+
+    .url {
+      min-width: 49%;
+      width: 49%;
+    }
+
+    .hreflang {
+      min-width: 13%;
+      width: 13;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 15%;
+      width: 15%;
+    }
+  }
+
+  @media only screen and (min-width:1200px) and (max-width: 1399px) {
+    .number {
+      min-width: 6%;
+      width: 6%;
+    }
+
+    .url {
+      min-width: 43%;
+      width: 43%;
+    }
+
+    .hreflang {
+      min-width: 11%;
+      width: 11%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 25%;
+      width: 25%;
+    }
+  }
+
+  @media only screen and (min-width:1400px){
+    .number {
+      min-width: 6%;
+      width: 6%;
+    }
+
+    .url {
+      min-width: 45%;
+      width: 45%;
+    }
+
+    .hreflang {
+      min-width: 9%;
+      width: 9%;
+    }
+
+    .language {
+      min-width: 15%;
+      width: 15%;
+    }
+
+    .region {
+      min-width: 25%;
+      width: 25%;
+    }
+  }
+
+  .result-row .number p, .result-row .url p, .result-row .hreflang p, .result-row .language p, .result-row .region p {
+    max-width: 99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color : var(--darkgrey);
+  }
+
+  .result-row:hover .number p, .result-row:hover .url p, .result-row:hover .hreflang p, .result-row:hover .language p, .result-row:hover .region p {
+    color: var(--black);
+    font-weight: bold
+  }
 </style>
 @endpush
 
+@section('content')
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">MOBILE FRIENDLY TEST</h1>
+      <h1 class="text-darkgrey font-weight-normal">HREFLANG CHECKER</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
@@ -485,7 +704,7 @@ id/mobile-test
 
             <!-- HTTP URL -->
             <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <input type="url" class="form-control hreflang-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
@@ -494,55 +713,269 @@ id/mobile-test
         </div>
       </div>
       <div class="row">
-        <div class="col-md-7">
-          <div class="px-2 mb-3">
-            <span class="text-black font-15px font-weight-bolder">Results</span>
-            <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
-          </div>
+        <div class="col-md-8">
+            <div class="px-2 mb-3">
+              <span class="text-black font-15px font-weight-bolder">Results</span>
+              <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
+            </div>
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block text-black">No URL tested, please input your domain above!</p>
+                  <p class="d-block">No URL checked, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
 
-              <div id="crawlResult" class="d-flex justify-content-between align-items-center px-5 mb-5">
-                <div class="">
-                  <p class="text-darkgrey">Tested on Feb 4, 2021 at 09.50 AM</p>
-                  <p class="h3 text-black">Page is mobile friendly</p>
-                  <p class="mb-0 text-darkgrey">This page is easy to use on  a mobile device</p>
+              <!-- RESULT CRAWL -->
+              <div class="" id=result>
+                <div class="d-flex mx-5 mb-5">
+                  <div class="number font-weight-bolder text-black">
+                    <p class="mb-0">No.</p>
+                  </div>
+                  <div class="url font-weight-bolder text-black">
+                    <p class="mb-0">URL</p>
+                  </div>
+                  <div class="hreflang font-weight-bolder text-black">
+                    <p class="mb-0">Hreflang</p>
+                  </div>
+                  <div class="language font-weight-bolder text-black">
+                    <p class="mb-0">Language</p>
+                  </div>
+                  <div class="region font-weight-bolder text-black">
+                    <p class="mb-0">Region</p>
+                  </div>
                 </div>
-                <div class="">
-                  <img id="mobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
-                  <img id="notMobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobilered.png')}}" alt="Not Mobile Friendly Icon">
+
+                <!-- DUMMY RESULT DATA START -->
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">1</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
                 </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">2</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">3</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">4</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">5</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">6</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">7</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">8</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">9</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+
+                <div class="d-flex mx-5 result-row">
+                  <div class="number">
+                    <span class="label label-square label-hreflang">10</span>
+                  </div>
+                  <div class="url">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                  </div>
+                  <div class="hreflang">
+                    <p class="mb-0">es-419</p>
+                  </div>
+                  <div class="language">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
+                  </div>
+                  <div class="region">
+                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                  </div>
+                </div>
+                <hr class="my-3">
+                <!-- DUMMY RESULT DATA END -->
+
+                <!-- SHOW MORE BUTTON START -->
+                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
+                  <div class="">
+                    <span class="label label-square label-hreflang">...</span>
+                    <span class="mx-3 hreflang-url-result">Show More</span>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <i class='bx bxs-chevron-down hreflang-show-more'></i>
+                  </div>
+                </div>
+                <!-- SHOW MORE BUTTON END -->
+
               </div>
-
-              <div id="pageIssues" class="px-5">
-                <p class="font-weight-boldest text-black">Page loading issues</p>
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918;"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
-
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=87513</span>
-                </div>
-
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
-              </div>
-
             </div>
           </div>
-
+        </div>
+        <div class="col-md-4">
+          <div class="px-2 mb-3 d-flex align-items-center">
+            <span class="text-black font-15px font-weight-bolder">Progress</span>
+          </div>
+          <div class="card card-custom mb-5">
+            <div class="card-body py-4 px-5">
+              <div class="text-center">
+                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
+                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
+                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
+                <div class="progress my-3">
+                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
+                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
+                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+              </div>
+            </div>
+          </div>
           <div id="local-collection-desktop" class="local-collection">
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
@@ -562,53 +995,52 @@ id/mobile-test
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana</div>
+                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
+                    <div class="local-collection-title">https://cmlabs.co/karir</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
+                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
+                    <div class="local-collection-title">https://cmlabs.co/blog</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
+                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
                     <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
                     </div>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
-
           <div class="desktop-version">
             <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
               <div class="card bg-transparent" style="">
@@ -630,43 +1062,7 @@ id/mobile-test
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-5">
-          <div class="px-2 mb-3 d-flex align-items-center">
-            <span class="text-black font-15px font-weight-bolder">Progress</span>
-          </div>
-          <div class="card card-custom mb-5">
-            <div class="card-body py-4 px-5">
-              <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
-                <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                </div>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div class="px-2 mb-3 d-flex align-items-center">
-            <span class="text-black font-15px font-weight-bolder">Mobile Preview</span>
-          </div>
-          <div class="card card-custom">
-            <div class="card-body">
 
-              <div class="" id="noCrawlResultPreview">
-                <div class="text-center">
-                  <p class="d-block">No URL tested, please input your domain above!</p>
-                  <a href="#" class="links">Learn how to use this tools?</a>
-                </div>
-              </div>
-
-              <div class="" id="CrawlResultPreview">
-                <img src="{{asset('/media/images/mobilePreviewResult.png')}}" alt="Mobile Test Preview" width="100%">
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -880,186 +1276,6 @@ id/mobile-test
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
-
-{{--
-<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Mobile Friendly Test</b></li>
-  </ol>
-</nav>
-<div class="card card-custom mb-5">
-  <div class="card-header">
-    <div class="card-title">
-      <h1 class="card-label">@lang('mobiletest.title') </h1>
-      <small>@lang('mobiletest.subtitle')</small>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12">
-    <div class="card card-custom card-stretch gutter-b">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-lg-5 mb-5">
-            <div id="spinner">
-              <input type="text" name="" class="form-control" value="" id="url" placeholder="@lang('mobiletest.question')">
-            </div>
-          </div>
-          <div class="col-lg-3 col-xl-3 col-xxl-2 mb-5">
-            <button type="button" class="btn btn-primary form-control" name="button" id="btn-check">
-            <i class="flaticon2-heart-rate-monitor"></i> @lang('mobiletest.btn-add')</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="result-section" style="display: block">
-  <div class="row">
-    <div class="col-lg-7 mb-5">
-      <div class="card card-custom card-stretch">
-        <div class="card-header">
-          <div class="card-title">
-            <h2 class="card-label">@lang('mobiletest.result-title')</h2>
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card card-custom mb-5">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-12 col-sm-8 col-md-10 col-lg-8">
-                  <p class="mb-3 text-secondary" id="date-now">@lang('mobiletest.example-resultdate')</p>
-                  <span class="h1" id="result-title">@lang('mobiletest.example-resulttitle')</span>
-                  <p class="mt-3 text-black" id="result-subtitle">@lang('mobiletest.example-resultdesc')</p>
-                </div>
-                <div class="col-12 col-sm-4 col-md-2 col-lg-4" id="icon">
-                  <div class="success-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" width="100%">
-                      <g>
-                        <g>
-                          <g>
-                            <g>
-                              <circle cx="150.001" cy="226.085" r="11.718" data-original="#000000" class="active-path" data-old_color="#000000" fill="#36D153" />
-                              <path d="M182.691,68.248h-65.382c-3.665,0-6.647,2.843-6.647,6.331v123.592c0,3.491,2.98,6.331,6.647,6.331h65.382     c3.665,0,6.647-2.843,6.647-6.331V74.579C189.336,71.088,186.356,68.248,182.691,68.248z"
-                                data-original="#000000" class="active-path" data-old_color="#000000" fill="#36D153" />
-                              <path
-                                d="M149.996,0C67.157,0,0.001,67.161,0.001,149.997S67.157,300,149.996,300s150.003-67.163,150.003-150.003     S232.835,0,149.996,0z M208.354,224.021c0,11.458-9.29,20.749-20.749,20.749h-75.214c-11.458,0-20.749-9.29-20.749-20.749V75.323     c0-11.458,9.29-20.749,20.749-20.749h75.214c11.458,0,20.749,9.29,20.749,20.749V224.021z"
-                                data-original="#000000" class="active-path" data-old_color="#000000" fill="#36D153" />
-                            </g>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="error-icon" style="display: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 510 510" viewBox="0 0 510 510" width="100%">
-                      <g>
-                        <g>
-                          <path d="m326.671 315h3.329v-135h-137.737z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525" />
-                          <path d="m317.763 120h-125.525c-6.748 0-12.238 5.49-12.238 12.238v17.762h150v-17.762c0-6.748-5.489-12.238-12.237-12.238z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525" />
-                          <path
-                            d="m150 137.551v-5.313c0-23.29 18.948-42.238 42.238-42.238h125.525c23.29 0 42.237 18.948 42.237 42.238v216.238l80.802 81.158c44.678-47.462 69.198-109.161 69.198-174.634 0-68.113-26.524-132.149-74.688-180.312-48.163-48.164-112.199-74.688-180.312-74.688-65.098 0-126.461 24.244-173.813 68.435z"
-                            data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525" />
-                          <path d="m284.337 315-104.337-104.796v104.796z" data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525" />
-                          <path
-                            d="m358.369 389.357c-5.053 17.668-21.338 30.643-40.606 30.643h-125.525c-23.29 0-42.238-18.948-42.238-42.238v-197.69l-89.541-89.936c-39.123 46.013-60.459 103.795-60.459 164.864 0 68.113 26.524 132.149 74.688 180.312 48.163 48.164 112.199 74.688 180.312 74.688 60.691 0 118.135-21.075 164.007-59.737z"
-                            data-original="#000000" class="active-path" data-old_color="#000000" fill="#E82525" />
-                          <path d="m192.238 390h125.525c6.748 0 12.237-5.49 12.237-12.238v-16.898l-15.794-15.864h-134.206v32.762c0 6.748 5.49 12.238 12.238 12.238z" data-original="#000000" class="active-path" data-old_color="#000000"
-                            fill="#E82525" />
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="mobile-issues"></div>
-          <div id="resource-issues"></div>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-5 mb-5">
-      <div class="card card-custom card-stretch">
-        <div class="card-header">
-          <div class="card-title">
-            <h2 class="card-label">@lang('mobiletest.result-screenshot')</h2>
-          </div>
-        </div>
-        <div class="card-body">
-          <img id="result-image" src="{{asset('media/images/ss.jpg')}}" width="100%" height="auto" alt="mobile preview small">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row" data-sticky-container>
-  <div class="col-lg-8">
-    <div class="card card-custom mb-4 mb-5">
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('mobiletest.title-2')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('mobiletest.desc-2-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('mobiletest.title-3')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('mobiletest.desc-3-1')</p>
-        <p>@lang('mobiletest.desc-3-2')</p>
-        <h3 class="py-5">@lang('mobiletest.sub-title-3-1')</h3>
-        <p>@lang('mobiletest.desc-3-3')</p>
-        <p>@lang('mobiletest.desc-3-4')</p>
-        <h3 class="py-5">@lang('mobiletest.sub-title-3-2')</h3>
-        <p>@lang('mobiletest.desc-3-5')</p>
-        <ul>
-          <li>@lang('mobiletest.desc-3-6')</li>
-          <li>@lang('mobiletest.desc-3-7')</li>
-          <li>@lang('mobiletest.desc-3-8')</li>
-          <li>@lang('mobiletest.desc-3-9')</li>
-        </ul>
-        <h3 class="py-5">@lang('mobiletest.sub-title-3-3')</h3>
-        <p>@lang('mobiletest.desc-3-10')</p>
-        <h3 class="py-5">@lang('mobiletest.sub-title-3-4')</h3>
-        <p>@lang('mobiletest.desc-3-11')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('mobiletest.title-4')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('mobiletest.desc-4-1')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-1')</h3>
-        <p>@lang('mobiletest.desc-4-2')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-2')</h3>
-        <p>@lang('mobiletest.desc-4-3')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-3')</h3>
-        <p>@lang('mobiletest.desc-4-4')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-4')</h3>
-        <p>@lang('mobiletest.desc-4-5')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-5')</h3>
-        <p>@lang('mobiletest.desc-4-6')</p>
-        <h3 class="py-5"><i class="fa fa-times-circle text-danger"></i> @lang('mobiletest.sub-title-4-6')</h3>
-        <p>@lang('mobiletest.desc-4-7')</p>
-      </div>
-    </div>
-  </div>
-  @include('layouts/stickybar')
-</div>
-</div>
-</div>
---}}
 @endsection
 @push('script')
 <script type="application/ld+json">
@@ -1071,18 +1287,20 @@ id/mobile-test
       "position": 1,
       "name": "@lang('home.homepage')",
       "item": "{{url('/')}}/{{$local}}"
-    },{
+    }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "Mobile Friendly Test"
+      "name": "Hreflang Checker"
     }]
   }
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
-<script src="{{asset('js/logic/mobiletest.js')}}"></script>
+<script type="text/javascript">
+
+</script>
 @endpush
-@section('mobile-test')
+
+@section('hreflangchecker')
 active
 @endsection
