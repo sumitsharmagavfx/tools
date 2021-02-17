@@ -60,12 +60,12 @@ const save = function(url, title, description){
         description: description
     }
     const keys = window.localStorage.getItem('keys')
-    var temp = []
+    var temp = define()
     if (keys){
         temp = JSON.parse(keys)
     }
-    if (!temp.includes(key)){
-        temp.push(key)
+    if (!temp.meta.includes(key)){
+        temp.meta.push(key)
     }
     localStorage.setItem('keys',JSON.stringify(temp));
     localStorage.setItem(key,JSON.stringify(datum));
@@ -73,9 +73,9 @@ const save = function(url, title, description){
 
 const removeData = function(key){
     let keys = JSON.parse(localStorage.getItem('keys'));
-    for(var i in keys){
-        if(keys[i] === key){
-            keys.splice(i,1)
+    for(var i in keys.meta){
+        if(keys.meta[i] === key){
+            keys.meta.splice(i,1)
             break;
         }
     }
@@ -95,32 +95,34 @@ const refreshLocalStorage = function(){
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('keys'))
-        for (let key of keys){
-            // console.log(key)
-            let temp = JSON.parse(localStorage.getItem(key)).url
-            let date = new Date(key)
-            let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
-            '<div class="d-flex align-items-center justify-content-between">'+
-                '<div class="local-collection-title">'+temp+'</div>'+
-                    '<div class="d-flex align-items-center">'+
-                        '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                        '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+        if(keys){
+            for (let key of keys.meta){
+                // console.log(key)
+                let temp = JSON.parse(localStorage.getItem(key)).url
+                let date = new Date(key)
+                let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
+                '<div class="d-flex align-items-center justify-content-between">'+
+                    '<div class="local-collection-title">'+temp+'</div>'+
+                        '<div class="d-flex align-items-center">'+
+                            '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                            '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                        '</div>'+
                     '</div>'+
-                '</div>'+
-            '</div>'
-        
-            let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
-            '<div class="d-flex justify-content-between">'+
-            '  <div class="local-collection-title">'+temp+'</div>'+
-            '  <div class="d-flex align-items-center">'+
-            '    <span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-            '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
-            '  </div>'+
-            '</div>'+
-            '</li>'
+                '</div>'
             
-            $('#localsavemobile').append(div)
-            $('#localsavedesktop').append(div2)
+                let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
+                '<div class="d-flex justify-content-between">'+
+                '  <div class="local-collection-title">'+temp+'</div>'+
+                '  <div class="d-flex align-items-center">'+
+                '    <span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                '  </div>'+
+                '</div>'+
+                '</li>'
+                
+                $('#localsavemobile').append(div)
+                $('#localsavedesktop').append(div2)
+            }   
         }
     }catch(e){
         console.log(e)
@@ -149,7 +151,12 @@ const getData = function(key){
 }
 
 const clearAll = function(){
-    localStorage.clear();
+    var res = JSON.parse(localStorage.getItem('keys'));
+    for(let i of res.meta){
+        localStorage.removeItem(i);
+    }
+    res.meta = [];
+    localStorage.setItem('keys',JSON.stringify(res))
     $('#localsavemobile').empty();
     $('#localsavedesktop').empty();
 }
