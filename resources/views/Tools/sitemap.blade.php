@@ -528,11 +528,11 @@ id/sitemap-generator
 
             <!-- HTTP URL -->
             <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <input id="url" type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">GENERATE</button>
+            <button id="generate" type="button" class="btn btn-crawl" name="button">GENERATE</button>
           </div>
         </div>
       </div>

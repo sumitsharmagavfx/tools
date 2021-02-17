@@ -17,7 +17,7 @@ toastr.options = {
 };
 let DATA_FINAL;
 $(document).ready(function () {
-    const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    const socket = io('http://127.0.0.1:3000', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
     triggerEnter('#generate','#url');
     $('#generate').click(function () {
         // $('#spin').addClass("spinner spinner-success spinner-right");
@@ -27,7 +27,7 @@ $(document).ready(function () {
         if (url.substr(url.length-1)==='/')
             socket.emit('crawl',"https://"+url.slice(0,-1));
         else socket.emit('crawl',"https://"+url);
-        socket.emit('image',url);
+        // socket.emit('image',url);
         let title = '';
         let button = '';
         let progress = '';
