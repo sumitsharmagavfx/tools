@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Link Analyzer')
+@section('title', 'Keyword Research')
 
-@section('meta-desc', 'Link Analyzer')
+@section('meta-desc', 'Keyword Research')
 
-@section('meta-keyword', 'Link Analyzer')
+@section('meta-keyword', 'Keyword Research')
 
-@section('conical','/en/link-analyzer')
+@section('conical','/en/keyword-research')
 
 @section('en-link')
-en/link-analyzer
+en/keyword-research
 @endsection
 
 @section('id-link')
-id/link-analyzer
+id/keyword-research
 @endsection
 
 @push('style')
@@ -39,17 +39,17 @@ id/link-analyzer
     border-radius: 5px;
   }
 
-  .analyzer-url {
+  .kwresearch-url {
     background: var(--primaryblue);
     border: none;
     color: white;
   }
 
-  .analyzer-url::placeholder {
+  .kwresearch-url::placeholder {
     color: white;
   }
 
-  .analyzer-url:focus {
+  .kwresearch-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -83,7 +83,7 @@ id/link-analyzer
     text-decoration: underline;
   }
 
-  .analyzer-url-result {
+  .kwresearch-url-result {
     color: var(--darkgrey);
     font-weight: bold;
   }
@@ -148,7 +148,7 @@ id/link-analyzer
     cursor: not-allowed;
   }
 
-  .btn-download-analyzer {
+  .btn-download-kwresearch {
     line-height: 1;
     width: 137px;
     background: var(--darkgrey);
@@ -156,12 +156,12 @@ id/link-analyzer
     border-radius: 20px;
   }
 
-  .btn-download-analyzer:hover {
+  .btn-download-kwresearch:hover {
     background: var(--black);
     color: white;
   }
 
-  .btn-download-analyzer-disabled {
+  .btn-download-kwresearch-disabled {
     line-height: 1;
     width: 137px;
     background: var(--grey);
@@ -170,30 +170,30 @@ id/link-analyzer
     cursor: not-allowed;
   }
 
-  .btn-download-analyzer-disabled:hover {
+  .btn-download-kwresearch-disabled:hover {
     background: var(--grey);
     color: white;
     cursor: not-allowed;
   }
 
-  .label-analyzer {
+  .label-kwresearch {
     width: 25px;
     font-weight: 400;
     background: var(--lightgrey);
     color: var(--darkgrey);
   }
 
-  .analyzer-show-more {
+  .kwresearch-show-more {
     color:var(--darkgrey);
   }
 
 
-  .result-row:hover .label-analyzer {
+  .result-row:hover .label-kwresearch {
     background: var(--primaryblue);
     color: white;
   }
 
-  .result-row:hover .analyzer-url-result {
+  .result-row:hover .kwresearch-url-result {
     color: var(--black);
   }
 
@@ -201,7 +201,7 @@ id/link-analyzer
     cursor: pointer;
   }
 
-  .result-row-show-more:hover .label-analyzer {
+  .result-row-show-more:hover .label-kwresearch {
     background: var(--primaryblue);
     color: white;
   }
@@ -215,7 +215,7 @@ id/link-analyzer
     font-weight: 500;
   }
 
-  .result-row-show-more:hover .analyzer-url-result, .result-row-show-more:hover .analyzer-show-more {
+  .result-row-show-more:hover .kwresearch-url-result, .result-row-show-more:hover .kwresearch-show-more {
     color: var(--black);
   }
 
@@ -737,25 +737,17 @@ id/link-analyzer
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">LINK ANALYZER</h1>
+      <h1 class="text-darkgrey font-weight-normal">KEYWORD RESEARCH</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
-
-            <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
-
-            <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control analyzer-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+          <div class="col-sm-8 col-md-9 col-lg-8 col-xl-9 d-flex align-items-center py-1">
+            <input type="text" class="form-control kwresearch-url" name="" value="" placeholder="INPUT / PASTE YOUR KEYWORD">
           </div>
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
+          <div class="col-sm-4 col-md-3 col-lg-4 col-xl-3 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">ANALYZE URL</button>
+            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK KEYWORD</button>
           </div>
         </div>
       </div>
@@ -771,61 +763,13 @@ id/link-analyzer
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No URL analyzed, please input your domain above!</p>
+                  <p class="d-block">No keyword checked, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="mt-7" id=result>
-                <div class="row">
-                  <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
-                    <canvas id="myChart" width="150" height="150"></canvas>
-                  </div>
-                  <div class="col-lg-7 col-md-7 d-flex align-items-center resultTable mb-5">
-                      <table>
-                        <thead>
-                          <tr height="25px">
-                            <th></th>
-                            <th style="width:120px" class="font-weight-bolder">Total Links</th>
-                            <th style="width:60px" class="font-weight-bolder">101</th>
-                            <th class="font-weight-normal">100%</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr height="25px">
-                            <td><span class="label label-dot label-internal label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">Internal Links</td>
-                            <td class="font-weight-bolder">88</td>
-                            <td class="font-weight-normal">87.1%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-external label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">External Links</td>
-                            <td class="font-weight-bolder">13</td>
-                            <td class="font-weight-normal">12.8%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-nofollow label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">No-follow</td>
-                            <td class="font-weight-bolder">8</td>
-                            <td class="font-weight-normal">7.92%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-dofollow label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">Do-follow</td>
-                            <td class="font-weight-bolder">93</td>
-                            <td class="font-weight-normal">92.0%</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                </div>
-
-                <hr>
+              <div class="" id=result>
                 <nav class="mb-5">
                   <div class="nav d-flex justify-content-center" id="nav-tab" role="tablist">
                     <a class="btn btn-result-link active mx-2" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Internal Links (10)</a>
@@ -834,199 +778,9 @@ id/link-analyzer
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
-                    <!-- INTERNAL LINKS START -->
-                    <div class="d-flex mx-5 mb-5">
-                      <div class="number font-weight-bolder text-black">
-                        <p class="mb-0">No.</p>
-                      </div>
-                      <div class="url font-weight-bolder text-black">
-                        <p class="mb-0">URL</p>
-                      </div>
-                      <div class="link-rel font-weight-bolder text-black">
-                        <p class="mb-0">Link rel</p>
-                      </div>
-                      <div class="anchor font-weight-bolder text-black">
-                        <p class="mb-0">Anchor text</p>
-                      </div>
+                    <div class="px-5">
+                      <canvas id="myChart" width="100%" height="150"></canvas>
                     </div>
-
-                    <!-- DUMMY RESULT DATA START -->
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">1</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">No Anchor Text</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">2</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/">https://cmlabs.co/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Beranda</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">3</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/jasa-seo">https://cmlabs.co/jasa-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Jasa SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">4</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog & Panduan</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">5</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/blog">https://cmlabs.co/blog/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">6</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/kamus-seo">https://cmlabs.co/kamus-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Kamus SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">7</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/panduan-seo">https://cmlabs.co/panduan-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Panduan SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">8</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/word-counter">https://cmlabs.co/word-counter</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Word Counter & Kepadatan Keyword</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">9</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-title-meta-checker">https://cmlabs.co/page-title-meta-checker</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Panjang Judul Laman & Meta Deskripsi</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">10</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-speed">https://cmlabs.co/page-speed</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Page Speed (Lighthouse)</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <!-- DUMMY RESULT DATA END -->
-
-                    <!-- SHOW MORE BUTTON START -->
-                    <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more" style="padding-left: 5px; padding-right: 5px;">
-                      <div class="">
-                        <span class="label label-square label-analyzer">...</span>
-                        <span class="mx-3 analyzer-url-result">Show More</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
-                      </div>
-                    </div>
-                    <!-- SHOW MORE BUTTON END -->
-                    <!-- INTERNAL LINKS END -->
-
                   </div>
                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 
@@ -1049,7 +803,7 @@ id/link-analyzer
                     <!-- DUMMY RESULT DATA START -->
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">1</span>
+                        <span class="label label-square label-kwresearch">1</span>
                       </div>
                       <div class="url d-flex align-items-center">
                         <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
@@ -1063,160 +817,16 @@ id/link-analyzer
                     </div>
                     <hr class="my-3">
 
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">2</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/">https://cmlabs.co/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Beranda</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">3</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/jasa-seo">https://cmlabs.co/jasa-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Jasa SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">4</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog & Panduan</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">5</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/blog">https://cmlabs.co/blog/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">6</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/kamus-seo">https://cmlabs.co/kamus-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Kamus SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">7</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/panduan-seo">https://cmlabs.co/panduan-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Panduan SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">8</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/word-counter">https://cmlabs.co/word-counter</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Word Counter & Kepadatan Keyword</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">9</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-title-meta-checker">https://cmlabs.co/page-title-meta-checker</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Panjang Judul Laman & Meta Deskripsi</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">10</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-speed">https://cmlabs.co/page-speed</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Page Speed (Lighthouse)</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
                     <!-- DUMMY RESULT DATA END -->
 
                     <!-- SHOW MORE BUTTON START -->
                     <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more" style="padding-left: 5px; padding-right: 5px;">
                       <div class="">
-                        <span class="label label-square label-analyzer">...</span>
-                        <span class="mx-3 analyzer-url-result">Show More</span>
+                        <span class="label label-square label-kwresearch">...</span>
+                        <span class="mx-3 kwresearch-url-result">Show More</span>
                       </div>
                       <div class="d-flex align-items-center">
-                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
+                        <i class='bx bxs-chevron-down kwresearch-show-more'></i>
                       </div>
                     </div>
                     <!-- SHOW MORE BUTTON END -->
@@ -1224,6 +834,10 @@ id/link-analyzer
 
                   </div>
                 </div>
+
+
+                <hr>
+
 
 
               </div>
@@ -1563,7 +1177,7 @@ id/link-analyzer
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "analyzer Checker"
+      "name": "kwresearch Checker"
     }]
   }
 </script>
@@ -1573,25 +1187,20 @@ id/link-analyzer
 <script type="text/javascript">
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'line',
   data: {
-      labels: ['Internal Links', 'External Links', 'No-Follow', 'Do-Follow'],
+      labels: ["Feb 20", "Mar 20", "Apr 20", "May 20", "Jun 20", "Jul 20", "Aug 20", "Sep 20", "Oct 20", "Nov 20", "Dec 20", "Jan 21"],
       datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5],
-          backgroundColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderWidth: 1
+          label: 'Search Volume',
+          data: [1600, 1900, 1600, 1000, 880, 1000, 2400, 1900, 1600, 1300, 1600, 1600],
+          borderColor: '#18A0FB',
+          backgroundColor: '#18A0FB',
+          pointBackgroundColor: '#fff',
+          pointBorderColor: '#18A0FB',
+          fill: false,
+          lineTension: 0,
+          borderWidth: 1,
+          hidden: false
       }]
   },
   options: {
@@ -1604,10 +1213,13 @@ var myChart = new Chart(ctx, {
     },
     scales: {
         xAxes: [{
-            display: false,
+            display: true,
         }],
         yAxes: [ {
-            display:false,
+            display:true,
+            ticks: {
+              maxTicksLimit: 7,
+            },
         }]
     },
     tooltips: {
@@ -1626,6 +1238,6 @@ var myChart = new Chart(ctx, {
 </script>
 @endpush
 
-@section('analyzerchecker')
+@section('kwresearchchecker')
 active
 @endsection
