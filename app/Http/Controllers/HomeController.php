@@ -96,6 +96,8 @@ class HomeController extends Controller
 
     public function getBlogWordpressId()
     {
+        // TODO : Delete this
+        return [];
         try{
           $client = new Client();
           $response = $client->get("https://cmlabs.co/wp-json/wp/v2/posts?per_page=4");
@@ -117,6 +119,8 @@ class HomeController extends Controller
 
     public function getBlogWordpressEn()
     {
+        // TODO : Delete this
+        return [];
         try {
           $client = new Client();
           $response = $client->get("https://cmlabs.co/en/wp-json/wp/v2/posts?per_page=4");

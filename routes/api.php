@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/analyze-technology', 'Tool\ApiController@analyzeTechnology')->name('api.analyze-technology');
+Route::post('/analyze-hreflang', 'Tool\ApiController@analyzeHreflang')->name('api.analyze-hreflang');

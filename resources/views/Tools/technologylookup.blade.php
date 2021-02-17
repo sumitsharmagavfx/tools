@@ -668,7 +668,7 @@ id/technology-lookup
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group" id="technology-lookup-histories">
+              <ul class="list-group" id="local-history">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>This is your first impressions, no history yet!</span>

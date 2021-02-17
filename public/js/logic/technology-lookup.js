@@ -33,15 +33,15 @@ const EmptyHistoryTemplate = () => `
 </li>`;
 
 function getHistories() {
-    $('#technology-lookup-histories').empty();
+    $('#local-history').empty();
     let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
-        $('#technology-lookup-histories').append(EmptyHistoryTemplate());
+        $('#local-history').append(EmptyHistoryTemplate());
         return;
     }
     for (let history of histories.reverse()) {
-        $('#technology-lookup-histories').append(
+        $('#local-history').append(
             HistoryTemplate(history)
         );
     }
@@ -160,7 +160,7 @@ $('#input-url').keyup(function () {
     }
 });
 
-$('#technology-lookup-histories').on('click', '.delete-history--btn', function(){
+$('#local-history').on('click', '.delete-history--btn', function(){
     deleteHistory($(this).data('url'))
 }).on('click', '.history--list', function(e){
     if(e.target.classList.contains('delete-history--btn')) return;

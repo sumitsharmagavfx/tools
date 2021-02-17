@@ -48,8 +48,20 @@ class ApiController extends Controller
             }
 
             return new BaseApiResource($response['data'], $response['message'], $response['statusCode']);
-        } catch (\Exception $exception){
+        } catch (\Exception $exception) {
             return new BaseApiResource(null, 'Please Install Redis on your server', 500);
         }
+    }
+
+    protected function analyzeHreflang(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+
+        $response = $this->requestHreflangChecker($url);
+        return new BaseApiResource($response['data'], $response['statusText'], $response['statusCode']);
     }
 }

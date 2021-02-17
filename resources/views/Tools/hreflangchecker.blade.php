@@ -696,19 +696,19 @@ id/hreflang-checker
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
           <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+              <!-- BEFORE CRAWL -->
+              <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
 
-            <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+              <!-- HTTPS URL -->
+              <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
 
-            <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control hreflang-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+              <!-- HTTP URL -->
+              <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
+              <input type="url" class="form-control hreflang-url" name="" value="" placeholder="http://example.com" id="input-url">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK URL</button>
+            <button id="check-btn" type="button" class="btn btn-crawl" name="button">CHECK URL</button>
           </div>
         </div>
       </div>
@@ -724,13 +724,12 @@ id/hreflang-checker
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No URL checked, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="" id=result>
+              <div class="" id=>
                 <div class="d-flex mx-5 mb-5">
                   <div class="number font-weight-bolder text-black">
                     <p class="mb-0">No.</p>
@@ -749,208 +748,20 @@ id/hreflang-checker
                   </div>
                 </div>
 
-                <!-- DUMMY RESULT DATA START -->
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">1</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
+                <div id="hreflang-result-list">
+                    <p class="text-center d-block">No URL checked, please input your domain above!</p>
                 </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">2</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">3</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">4</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">5</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">6</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">7</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">8</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">9</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-hreflang">10</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="hreflang">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-                <!-- DUMMY RESULT DATA END -->
 
                 <!-- SHOW MORE BUTTON START -->
-                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
-                  <div class="">
-                    <span class="label label-square label-hreflang">...</span>
-                    <span class="mx-3 hreflang-url-result">Show More</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class='bx bxs-chevron-down hreflang-show-more'></i>
-                  </div>
-                </div>
+{{--                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">--}}
+{{--                  <div class="">--}}
+{{--                    <span class="label label-square label-hreflang">...</span>--}}
+{{--                    <span class="mx-3 hreflang-url-result">Show More</span>--}}
+{{--                  </div>--}}
+{{--                  <div class="d-flex align-items-center">--}}
+{{--                    <i class='bx bxs-chevron-down hreflang-show-more'></i>--}}
+{{--                  </div>--}}
+{{--                </div>--}}
                 <!-- SHOW MORE BUTTON END -->
 
               </div>
@@ -968,11 +779,12 @@ id/hreflang-checker
                 <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
                 <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
                 <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar-loader">
+
+                  </div>
                 </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+{{--                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>--}}
+                <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">Cancel</button>
               </div>
             </div>
           </div>
@@ -987,58 +799,13 @@ id/hreflang-checker
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                <ul class="list-group" id="local-history">
+                    <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                        <div class="d-flex justify-content-center text-center">
+                            <span>This is your first impressions, no history yet!</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
           </div>
           <div class="desktop-version">
@@ -1297,7 +1064,11 @@ id/hreflang-checker
 @endpush
 @push('script')
 <script type="text/javascript">
-
+    const HREFLANG_API_URL = '{{ route('api.analyze-hreflang') }}';
+</script>
+<script src="{{ asset('js/logic/hreflang-checker.js') }}"></script>
+<script>
+    getHistories();
 </script>
 @endpush
 
