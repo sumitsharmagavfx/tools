@@ -1529,6 +1529,7 @@ id/page-title-meta-description-checker
 </script>
 @endpush
 @push('script')
+<script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
