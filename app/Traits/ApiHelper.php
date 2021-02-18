@@ -33,7 +33,7 @@ trait ApiHelper
 
     protected function requestAnalyzeApi($url)
     {
-        $response = $this->client->get(env('TECHNOLOGY_LOOKUP_API_URL') . "api/analyze?url=$url");
+        $response = $this->client->get(env('TECHNOLOGY_LOOKUP_API_URL') . "api/tech-lookup?url=$url");
         return \GuzzleHttp\json_decode($response->getBody(), 1);
     }
 
