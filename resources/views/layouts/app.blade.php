@@ -16,6 +16,7 @@
     <meta property="og:image" content="{{asset('media/logos/new/new-logo-default.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(env('APP_ENV')==='production')
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>

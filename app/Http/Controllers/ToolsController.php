@@ -113,8 +113,10 @@ class ToolsController extends Controller
     public function technologylookup($lang)
     {
         App::setLocale($lang);
-        $dataID = $this->HomeController->getBlogWordpressId();
-        $dataEN = $this->HomeController->getBlogWordpressEn();
+        $dataID = [];
+        $dataEN = [];
+//        $dataID = $this->HomeController->getBlogWordpressId();
+//        $dataEN = $this->HomeController->getBlogWordpressEn();
         $local = App::getLocale();
         return view('Tools/technologylookup', compact('local', 'dataID', 'dataEN'));
     }
