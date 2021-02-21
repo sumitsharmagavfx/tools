@@ -13,12 +13,12 @@ const TechnologyTemplate = (title, icon, category, version) => `
 </div>
 <hr>`;
 
-const HistoryTemplate = (url) => `
+const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
-      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"></i>
+      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at ${date}"></i>
       <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
     </div>
   </div>
@@ -42,9 +42,21 @@ function getHistories() {
     }
     for (let history of histories.reverse()) {
         $('#local-history').append(
-            HistoryTemplate(history)
+            HistoryTemplate(history.url, history.date)
         );
     }
+}
+
+function addHistory(url){
+    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
+    histories = histories ? JSON.parse(histories) : [];
+    if(histories.find(history => {return history.url === url;})) return;
+    histories.push({
+        url: url,
+        date: formatDate(new Date())
+    })
+    localStorage.setItem(TECH_LOOKUP_LOCAL_STORAGE_KEY, JSON.stringify(histories));
+    getHistories();
 }
 
 function convertSecond(seconds){
@@ -65,6 +77,13 @@ function analyzeUrl(_url) {
                 _token: $('meta[name=csrf-token]').attr('content'),
                 url: _url
             },
+            beforeSend: () => {
+                KTApp.block('#technology-lookup-result-container', {
+                    overlayColor: 'gray',
+                    opacity: 0.1,
+                    state: 'primary'
+                });
+            },
             success: (res) => {
                 if (res.statusCode === 200) {
                     $('#technology-lookup-result-empty').hide();
@@ -77,17 +96,12 @@ function analyzeUrl(_url) {
                         )
                     }
 
-                    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY) || [];
-                    if (typeof (histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
-                    if (!histories.includes(_url)) histories.push(_url);
-                    localStorage.setItem(TECH_LOOKUP_LOCAL_STORAGE_KEY, JSON.stringify(histories));
-                    KTApp.unblock('#technology-lookup-result-container');
+                    addHistory(_url);
                     getHistories();
                 } else {
                     $('#technology-lookup-result-list').hide();
                     $('#technology-lookup-result-empty').show();
                     toastr.error(res.message, 'Error')
-                    KTApp.unblock('#technology-lookup-result-container');
                 }
             },
             error: (err) => {
@@ -99,6 +113,8 @@ function analyzeUrl(_url) {
                 }
                 $('#technology-lookup-result-list').hide();
                 $('#technology-lookup-result-empty').show();
+            },
+            complete: () => {
                 KTApp.unblock('#technology-lookup-result-container');
             }
         })
@@ -122,6 +138,11 @@ function deleteHistory(_url = null) {
 
     localStorage.setItem(TECH_LOOKUP_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
+}
+
+function formatDate(date){
+    // Format should be : DD/MM/YYYY HH:ii
+    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 function checkUrl(url) {
@@ -169,11 +190,6 @@ $('#local-history').on('click', '.delete-history--btn', function(){
 })
 
 $('#crawl-btn').click(function(){
-    KTApp.block('#technology-lookup-result-container', {
-        overlayColor: 'red',
-        opacity: 0.1,
-        state: 'primary'
-    });
     analyzeUrl($('#input-url').val());
 })
 
