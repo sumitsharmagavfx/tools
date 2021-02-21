@@ -5,7 +5,7 @@ const TechnologyTemplate = (title, icon, category, version) => `
   <div class="d-flex align-items-center">
     <img src="/media/technologyLookup/icons/${icon}" alt="" width="20px">
     <span class="mx-3 technology-name">${title}</span>
-    <span class="label label-primary-version label-inline font-weight-normal px-2">${version ?? 'Unknown Version'}</span>
+    ${version}
   </div>
   <div class="">
     <span>${category}</span>
@@ -71,8 +71,9 @@ function analyzeUrl(_url) {
                     $('#technology-lookup-result-list').empty().show();
                     $('#technology-lookup-result-total').text(`(${res.data.technologies.length})`)
                     for (let technology of res.data.technologies) {
+                        let _versionLabel = technology.version != null ? `<span class="label label-primary-version label-inline font-weight-normal px-2">${technology.version}</span>` : '';
                         $('#technology-lookup-result-list').append(
-                            TechnologyTemplate(technology.name, technology.icon, technology.categories[0].name, technology.version)
+                            TechnologyTemplate(technology.name, technology.icon, technology.categories[0].name, _versionLabel)
                         )
                     }
 
