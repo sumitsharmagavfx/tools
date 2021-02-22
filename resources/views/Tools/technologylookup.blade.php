@@ -889,7 +889,7 @@ id/technology-lookup
           <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
             from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
         </div>
-      </div>asdasdasdasd
+      </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
