@@ -17,6 +17,7 @@ trait ApiHelper
     private function request($path, $method = 'GET', $data = [])
     {
         $options = [];
+        $key = env('TOOLS_API_KEY', 'secret');
         try {
             if ($method === 'GET') {
                 $options['query'] = $data;
@@ -24,7 +25,7 @@ trait ApiHelper
                 $options['form_params'] = $data;
             }
 
-            $response = $this->client->request($method, env('TOOLS_API_URL') . $path, $options);
+            $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
 
             return $response->getBody()->getContents();
         } catch (ClientException $exception) {
@@ -46,11 +47,7 @@ trait ApiHelper
 
     protected function requestLinkAnalyzer($url)
     {
-        try {
-            $response = $this->request("api/link-analyzer/analyze", 'POST', compact('url'));
-            return \GuzzleHttp\json_decode($response, 1);
-        } catch (\Exception $exception){
-            dd($exception);
-        }
+        $response = $this->request("api/link-analyzer/analyze", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
     }
 }

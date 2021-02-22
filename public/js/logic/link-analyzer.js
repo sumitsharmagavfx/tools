@@ -135,7 +135,8 @@ function analyze(_url) {
                     addHistory(_url, res.data)
                     renderAllData(res.data);
                 } else {
-                    toastr.err(res.message, 'Error API');
+                    console.log(res);
+                    toastr.error(res.message, 'Error API');
                 }
             },
             error: (err) => {
