@@ -99,6 +99,7 @@ function analyze(_url) {
                 updateProgressBar(10);
                 $('#no-crawl-result').hide();
                 $('#progress-stop-message').hide();
+                $('#progress-finish-message').hide();
                 $('#progress-start-message').show();
             },
             success: (res) => {
@@ -209,4 +210,8 @@ $('#cancel-request-btn').click(function () {
         .removeClass('btn-cancel')
         .addClass('btn-cancel-disabled')
         .attr('disabled', 'disabled')
+})
+
+$('#clear-history-btn').click(function(){
+    deleteHistory();
 })
