@@ -1,3 +1,5 @@
+const { take } = require("lodash");
+
 toastr.options = {
     "closeButton": true,
     "debug": false,
@@ -17,6 +19,10 @@ toastr.options = {
 };
 let DATA_FINAL;
 let isCanceled = false;
+let rendering = {
+    skip : 0,
+    take : 10
+}
 $(document).ready(function () {
     $('#noCrawl').show()
     $('#crawlHttps').hide()
@@ -59,8 +65,8 @@ $(document).ready(function () {
     socket.on('update queue', data =>{
         console.log(isCanceled);
         if (!isCanceled){
-            $('#detail-progress').html(data.site_length+' of '+(parseInt(data.queue_length))+' pages')
-            updateProgressBar((data.site_length/data.queue_length*100).toFixed(2));
+            $('#detail-progress').html(data.site_length+' Has been crawld')
+            // updateProgressBar((data.site_length/data.queue_length*100).toFixed(2));
         }
     });
 
@@ -70,10 +76,14 @@ $(document).ready(function () {
         $('#info').html("Our robot is already finished your task.")
         clearTable();
         $('#table').css('display','block');
-        for (let datum in response.url){
-            addData(response.url[datum],parseInt(datum)+1);
+        $('#noCrawlResult').hide();
+        $("#downloadOff").hide();
+        $("#downloadOn").show();
+        $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+response.url);
+        for (let datum in response.data){
+            addData(response.data[datum],parseInt(datum)+1);
         }
-        DATA_FINAL = response;
+        DATA_FINAL = response.data;
         sticky.update();
         Swal.close();
     });
@@ -118,8 +128,8 @@ $('#download').click(function () {
 
 function addData(data, i) {
     $("#result").append('<div class="d-flex align-items-center mx-5 result-row">'+
-    '   <span class="label label-square label-sitemap">1</span>'+
-    '   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>'+
+    '   <span class="label label-square label-sitemap">'+i+'</span>'+
+    '   <span class="mx-3 sitemap-url-result">'+data.url+'</span>'+
     '</div>'+
     '<hr>');
 }
@@ -149,4 +159,16 @@ function regexHttps(url){
     }else{
         return 'none'
     }
+}
+
+let renderData = function(data) {
+    for (let i = skip ; i < data.length; i++){
+        addData(data[i],i+1)
+        if((i% rendering.take)==0) 
+            break;
+    }
+    if(i < data.length){
+        $("#result").append();
+    }
+    rensering.skip += take;
 }

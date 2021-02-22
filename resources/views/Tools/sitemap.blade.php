@@ -545,7 +545,7 @@ id/sitemap-generator
               <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
             </div>
             <div class="mb-3">
-              <button id="downloadOn" type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</button>
+              <a href="#" id="downloadOn" type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</a>
               <button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled" disabled name="button">Download Sitemap</button>
             </div>
           </div>
@@ -669,9 +669,12 @@ id/sitemap-generator
                 <p id="info" class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
                 {{-- <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
                 <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p> --}}
-                <div class="progress my-3">
+                {{-- <div class="progress my-3">
                   <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-                </div>
+                </div> --}}
+                {{-- <div class="">
+                  <div class="spinner spinner-primary spinner-lg "></div>
+                </div> --}}
                 <p id="detail-progress" class="text-black font-weight-bold mb-3"></p>
                 <button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel</button>
                 <button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
