@@ -769,7 +769,7 @@
                             <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3'
                                style="display: none"></i>
                             <input type="url" class="form-control hreflang-url" name="" value=""
-                                   placeholder="http://example.com" id="input-url">
+                                   placeholder="http://example.com" id="input-url" autocomplete="off">
                         </div>
                         <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                             <!-- CRAWL BUTTON -->
@@ -868,7 +868,7 @@
                                     <span class="text-black font-15px">Your Local History</span>
                                 </div>
                                 <div>
-                                    <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                                    <span class="clear-all font-15px pointer mr-3 clear-history--btn">Clear All</span>
                                 </div>
                             </div>
                             <div class="local-collection-body">
@@ -924,10 +924,10 @@
                     <span class="text-black font-15px">Your Local History</span>
                 </div>
                 <div>
-                    <span class="clear-all font-15px pointer" id="clear-history-btn">Clear All</span>
+                    <span class="clear-all font-15px pointer clear-history--btn">Clear All</span>
                 </div>
             </div>
-            <div class="local-collection-body mt-3 px-5">
+            <div class="local-collection-body mt-3 px-5" id="local-history-mobile">
                 <div class="custom-card py-5 px-3">
                     <div class="d-flex justify-content-center text-center">
                         <span>This is your first impressions, no history yet!</span>
