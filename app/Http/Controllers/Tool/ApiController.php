@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Traits\ApiHelper;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
+use Mockery\Exception;
 
 class ApiController extends Controller
 {
@@ -26,7 +27,7 @@ class ApiController extends Controller
         try {
             $response = Redis::get($cacheKey);
             if (!$response) {
-                $response = $this->requestAnalyzeApi($url);
+                $response = $this->requestTechLookup($url);
                 if ($response['statusCode'] === 429) {
                     // get latest key remaining time
                     $keys = Redis::keys("*$ipAddress*");
@@ -53,7 +54,7 @@ class ApiController extends Controller
         }
     }
 
-    protected function analyzeHreflang(Request $request)
+    public function analyzeHreflang(Request $request)
     {
         $url = $request->get('url');
 
@@ -63,5 +64,22 @@ class ApiController extends Controller
 
         $response = $this->requestHreflangChecker($url);
         return new BaseApiResource($response['data'], $response['statusText'], $response['statusCode']);
+    }
+
+    public function analyzeLink(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+
+        try {
+            $response = $this->requestLinkAnalyzer($url);
+            return new BaseApiResource($response['data'], $response['message'], $response['statusCode']);
+        } catch (Exception $exception){
+            dd($exception);
+            return new BaseApiResource($response['data'], $response['message'], $response['statusCode']);
+        }
     }
 }

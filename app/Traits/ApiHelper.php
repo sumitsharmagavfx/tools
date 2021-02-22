@@ -14,24 +14,25 @@ trait ApiHelper
         $this->client = new Client();
     }
 
-    private function request($path, $method = 'GET', $data = []){
+    private function request($path, $method = 'GET', $data = [])
+    {
         $options = [];
         try {
-            if($method === 'GET'){
+            if ($method === 'GET') {
                 $options['query'] = $data;
-            } else if($method === 'POST'){
+            } else if ($method === 'POST') {
                 $options['form_params'] = $data;
             }
 
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path, $options);
 
             return $response->getBody()->getContents();
-        } catch (ClientException $exception){
+        } catch (ClientException $exception) {
             return $exception->getResponse()->getBody()->getContents();
         }
     }
 
-    protected function requestAnalyzeApi($url)
+    protected function requestTechLookup($url)
     {
         $response = $this->client->get(env('TECHNOLOGY_LOOKUP_API_URL') . "api/tech-lookup?url=$url");
         return \GuzzleHttp\json_decode($response->getBody(), 1);
@@ -41,5 +42,15 @@ trait ApiHelper
     {
         $response = $this->request("api/hreflang-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestLinkAnalyzer($url)
+    {
+        try {
+            $response = $this->request("api/link-analyzer/analyze", 'POST', compact('url'));
+            return \GuzzleHttp\json_decode($response, 1);
+        } catch (\Exception $exception){
+            dd($exception);
+        }
     }
 }

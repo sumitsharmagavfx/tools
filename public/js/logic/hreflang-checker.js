@@ -2,12 +2,12 @@ const HREFLANG_CHECKER_LOCAL_STORAGE_KEY = 'hreflang-checker-history';
 
 var jqueryRequest = null;
 
-const HistoryTemplate = (url) => `
+const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
     <div class="local-collection-title">${url}</div>
     <div class="d-flex align-items-center">
-      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"></i>
+      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at ${date}"></i>
       <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
     </div>
   </div>
@@ -51,7 +51,7 @@ function getHistories() {
     }
     for (let history of histories.reverse()) {
         $('#local-history').append(
-            HistoryTemplate(history.url)
+            HistoryTemplate(history.url, history.date)
         );
     }
 }
@@ -62,7 +62,7 @@ function addHistory(url){
     if(histories.find(history => {return history.url === url;})) return;
     histories.push({
         url: url,
-        date: (new Date()).toLocaleDateString('en-GB')
+        date: formatDate(new Date())
     })
     localStorage.setItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
@@ -97,6 +97,10 @@ function analyze(_url) {
                     .addClass('btn-cancel')
                     .removeAttr('disabled');
                 updateProgressBar(10);
+                $('#no-crawl-result').hide();
+                $('#progress-stop-message').hide();
+                $('#progress-finish-message').hide();
+                $('#progress-start-message').show();
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -122,9 +126,13 @@ function analyze(_url) {
                 } else {
                     toastr.error('Canceled', 'Error');
                 }
+
+                $('#no-crawl-result').show();
             },
             complete: () => {
                 updateProgressBar(100);
+                $('#progress-start-message').hide();
+                $('#progress-finish-message').show();
                 $('#cancel-request-btn')
                     .removeClass('btn-cancel')
                     .addClass('btn-cancel-disabled')
@@ -134,6 +142,11 @@ function analyze(_url) {
     } else {
         toastr.error('URL Format is not valid', 'Error')
     }
+}
+
+function formatDate(date){
+    // Format should be : DD/MM/YYYY HH:ii
+    return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
 function checkUrl(url) {
@@ -197,4 +210,8 @@ $('#cancel-request-btn').click(function () {
         .removeClass('btn-cancel')
         .addClass('btn-cancel-disabled')
         .attr('disabled', 'disabled')
+})
+
+$('#clear-history-btn').click(function(){
+    deleteHistory();
 })
