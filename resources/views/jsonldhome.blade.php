@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('home.meta-title'))
+@section('title', 'JSON-LD Schema Generator')
 
-@section('meta-desc', Lang::get('home.meta-desc'))
+@section('meta-desc', 'JSON-LD Schema Generator')
 
-@section('meta-keyword', Lang::get('home.meta-keyword'))
+@section('meta-keyword', 'JSON-LD Schema Generator')
 
 @section('en-link')
-en
+en/json-ld-schema-generator
 @endsection
 @section('id-link')
-id
+id/json-ld-schema-generator
 @endsection
 @push('style')
 <style media="screen">
@@ -392,10 +392,10 @@ id
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
       <div class="text-center">
-        <h1 class="text-black font-weight-bolder">SEO TOOLS by CMLABS</h1>
+        <h1 class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR</h1>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <p class="text-black ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nibh mauris imperdiet est tincidunt libero. Pellentesque eget lacus, congue in aliquet luctus.</p>
+            <p class="text-black font-weight-light">JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.</p>
           </div>
         </div>
       </div>
@@ -403,107 +403,107 @@ id
         <div class="col-6 col-md-3 mb-8">
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-calculator bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">Word Counter</h2>
+              <div class="">
+                <i class='bx bxs-chevron-right-square bx-lg text-darkgrey'></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Breadcrumb</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-text bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">Title & Lengths Checker</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-code-curly bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">JSON-LD Generator</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/json-ld-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-timer bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">Page Speed Test</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-code-block bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">Sitemap Generator</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">Mobile Friendly Test</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-6 col-md-3 mb-8">
-          <div class="card card-custom card-stretch card-home">
-            <div class="card-body p-7">
-              <div class="text-center">
-                <i class='text-darkgrey bx bx-check-shield bx-lg' ></i>
-                <h2 class="h6 text-darkgrey font-weight-bolder">SSL Checker</h2>
-                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-                <div class="col-6 col-md-3 mb-8">
-                  <div class="card card-custom card-stretch card-home">
-                    <div class="card-body p-7">
-                      <div class="text-center">
-                        <i class='text-darkgrey bx bx-mask bx-lg' ></i>
-                        <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
-                        <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                        <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-                      </div>
-                    </div>
-                  </div>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-breadcrumb-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bxs-help-circle text-darkgrey bx-lg'></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">FAQ Page</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-faq-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bx-list-check text-darkgrey bx-lg'></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">How-to</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-how-to-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bxs-briefcase text-darkgrey bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Job Posting</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-job-posting-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bxs-user text-darkgrey bx-lg'></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Person</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-person-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bxs-purchase-tag text-darkgrey bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Product</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-product-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="">
+                <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Recipe</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <div class="text-right">
+                  <a href="/{{ $local }}/json-ld-recipe-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
       <div class="d-flex align-items-center">
@@ -1219,6 +1219,6 @@ id
 </script>
 @endpush
 <!-- home -->
-@section('home')
+@section('json-ld')
 active
 @endsection

@@ -206,6 +206,15 @@ id/link-analyzer
     color: white;
   }
 
+  .result-row .url, .result-row .link-rel, .result-row .anchor {
+    color: var(--darkgrey);
+  }
+
+  .result-row:hover .url, .result-row:hover .link-rel, .result-row:hover .anchor {
+    color: var(--black);
+    font-weight: 500;
+  }
+
   .result-row-show-more:hover .analyzer-url-result, .result-row-show-more:hover .analyzer-show-more {
     color: var(--black);
   }
@@ -512,163 +521,213 @@ id/link-analyzer
   @media only screen and (max-width:575px){
     .number {
       min-width: 12%;
+      max-width: 12%;
       width: 12%;
     }
 
     .url {
-      min-width: 30%;
-      width: 30%;
+      min-width: 35%;
+      max-width: 35%;
+      width: 35%;
     }
 
-    .analyzer {
-      min-width: 20%;
-      width: 20%;
+    .link-rel {
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
     }
 
-    .language {
-      min-width: 22%;
-      width: 22%;
+    .anchor {
+      min-width: 28%;
+      max-width: 28%;
+      width: 28%;
     }
 
-    .region {
-      min-width: 16%;
-      width: 16%;
-    }
   }
 
   @media only screen and (min-width:576px) and (max-width: 767px) {
     .number {
       min-width: 8%;
+      max-width: 8%;
       width: 8%;
     }
 
     .url {
-      min-width: 50%;
-      width: 50%;
+      min-width: 40%;
+      max-width: 40%;
+      width: 40%;
     }
 
-    .analyzer {
-      min-width: 12%;
-      width: 12%;
+    .link-rel {
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
     }
 
-    .language {
-      min-width: 15%;
-      width: 15%;
+    .anchor {
+      min-width: 27%;
+      max-width: 27%;
+      width: 27%;
     }
 
-    .region {
-      min-width: 15%;
-      width: 15%;
-    }
   }
 
   @media only screen and (min-width:768px) and (max-width: 991px) {
     .number {
       min-width: 8%;
+      max-width: 8%;
       width: 8%;
     }
 
     .url {
-      min-width: 50%;
-      width: 50%;
+      min-width: 40%;
+      max-width: 40%;
+      width: 40%;
     }
 
-    .analyzer {
-      min-width: 12%;
-      width: 12%;
+    .link-rel {
+      min-width: 27%;
+      max-width: 27%;
+      width: 27%;
     }
 
-    .language {
-      min-width: 15%;
-      width: 15%;
+    .anchor {
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
     }
 
-    .region {
-      min-width: 15%;
-      width: 15%;
-    }
   }
 
   @media only screen and (min-width:992px) and (max-width: 1199px) {
     .number {
       min-width: 8%;
+      max-width: 8%;
       width: 8%;
     }
 
     .url {
-      min-width: 49%;
-      width: 49%;
+      min-width: 40%;
+      max-width: 40%;
+      width: 40%;
     }
 
-    .analyzer {
-      min-width: 13%;
-      width: 13;
+    .link-rel {
+      min-width: 27%;
+      max-width: 27%;
+      width: 27;
     }
 
-    .language {
-      min-width: 15%;
-      width: 15%;
-    }
-
-    .region {
-      min-width: 15%;
-      width: 15%;
+    .anchor {
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
     }
   }
 
   @media only screen and (min-width:1200px) and (max-width: 1399px) {
     .number {
       min-width: 6%;
+      max-width: 6%;
       width: 6%;
     }
 
     .url {
-      min-width: 43%;
-      width: 43%;
+      min-width: 44%;
+      max-width: 44%;
+      width: 44%;
     }
 
-    .analyzer {
-      min-width: 11%;
-      width: 11%;
-    }
-
-    .language {
-      min-width: 15%;
-      width: 15%;
-    }
-
-    .region {
+    .link-rel {
       min-width: 25%;
+      max-width: 25%;
       width: 25%;
     }
+
+    .anchor {
+      min-width: 25%;
+      max-width: 25%;
+      width: 25%;
+    }
+
   }
 
   @media only screen and (min-width:1400px){
     .number {
       min-width: 6%;
+      max-width: 6%;
       width: 6%;
     }
 
     .url {
-      min-width: 45%;
-      width: 45%;
+      min-width: 54%;
+      max-width: 54%;
+      width: 54%;
     }
 
-    .analyzer {
-      min-width: 9%;
-      width: 9%;
+    .link-rel {
+      min-width: 20%;
+      max-width: 20%;
+      width: 20%;
     }
 
-    .language {
-      min-width: 15%;
-      width: 15%;
+    .anchor {
+      min-width: 20%;
+      max-width: 20%;
+      width: 20%;
     }
 
-    .region {
-      min-width: 25%;
-      width: 25%;
+  }
+  .number, .url, .link-rel, .anchor {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .url {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+  .label-internal {
+    background-color: #18A0FB;
+  }
+
+  .label-external {
+    background-color: #FBC918;
+  }
+
+  .label-nofollow{
+    background-color: #9718FB;
+  }
+
+  .label-dofollow {
+    background-color: #FF5656;
+  }
+
+  @media only screen and (max-width:767px) {
+    .resultTable {
+      justify-content: center;
     }
+  }
+
+  .btn-result-link {
+    color:var(--darkgrey);
+    font-weight: 500;
+    border-radius: 20px;
+  }
+
+  .btn-result-link:hover {
+    background-color: var(--lightgrey);
+    border-radius: 20px;
+    color:var(--black) !important;
+  }
+
+  .btn-result-link.active {
+    background-color: var(--lightgrey);
+    border-radius: 20px;
+    color:var(--black);
   }
 
 </style>
@@ -684,19 +743,22 @@ id/link-analyzer
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
           <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+              <!-- BEFORE CRAWL -->
+              <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
 
-            <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+              <!-- HTTPS URL -->
+              <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3'
+                 style="display: none"></i>
 
-            <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control analyzer-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+              <!-- HTTP URL -->
+              <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3'
+                 style="display: none"></i>
+              <input type="url" class="form-control analyzer-url" name="" value=""
+                     placeholder="http://example.com" id="input-url">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">ANALYZE URL</button>
+            <button id="analyze-btn" type="button" class="btn btn-crawl" name="button">Analyze</button>
           </div>
         </div>
       </div>
@@ -718,274 +780,137 @@ id/link-analyzer
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="" id=result>
-                <div class="row px-35">
-                  <div class="col-lg-4 col-md-6">
-                    <canvas id="myChart" width="115" height="115"></canvas>
+              <div class="mt-7" id=result>
+                <div class="row">
+                  <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
+                    <canvas id="myChart" width="150" height="150"></canvas>
                   </div>
-                  <div class="col-lg-8 col-md-6 d-flex align-items-center">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th style="width:120px" class="font-weight-bolder">Total Links</th>
-                          <th style="width:60px" class="font-weight-bolder">101</th>
-                          <th class="font-weight-normal">100%</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td></td>
-                          <td class="font-weight-bolder">Internal Links</td>
-                          <td class="font-weight-bolder">88</td>
-                          <td class="font-weight-normal">87.1%</td>
-                        </tr>
+                  <div class="col-lg-7 col-md-7 d-flex align-items-center resultTable mb-5">
+                      <table>
+                        <thead>
+                          <tr height="25px">
+                            <th></th>
+                            <th style="width:120px" class="font-weight-bolder">Total Links</th>
+                            <th style="width:60px" class="font-weight-bolder" id="total-links-value">0</th>
+                            <th class="font-weight-normal" id="percentage-links-value">100%</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr height="25px">
+                            <td><span class="label label-dot label-internal label-xl mr-1"></span></td>
+                            <td class="font-weight-bolder">Internal Links</td>
+                            <td class="font-weight-bolder" id="internal-links-value">0</td>
+                            <td class="font-weight-normal" id="internal-links-percentage">0%</td>
+                          </tr>
 
-                        <tr>
-                          <td></td>
-                          <td class="font-weight-bolder">External Links</td>
-                          <td class="font-weight-bolder">13</td>
-                          <td class="font-weight-normal">12.8%</td>
-                        </tr>
+                          <tr height="25px">
+                            <td><span class="label label-dot label-external label-xl mr-1"></span></td>
+                            <td class="font-weight-bolder">External Links</td>
+                            <td class="font-weight-bolder" id="external-links-value">0</td>
+                            <td class="font-weight-normal" id="external-links-percentage">0%</td>
+                          </tr>
 
-                        <tr>
-                          <td></td>
-                          <td class="font-weight-bolder">No-follow</td>
-                          <td class="font-weight-bolder">8</td>
-                          <td class="font-weight-normal">7.92%</td>
-                        </tr>
+                          <tr height="25px">
+                            <td><span class="label label-dot label-nofollow label-xl mr-1"></span></td>
+                            <td class="font-weight-bolder">No-follow</td>
+                            <td class="font-weight-bolder" id="nofollow-links-value">0</td>
+                            <td class="font-weight-normal" id="nofollow-links-percentage">0%</td>
+                          </tr>
 
-                        <tr>
-                          <td></td>
-                          <td class="font-weight-bolder">Do-follow</td>
-                          <td class="font-weight-bolder">93</td>
-                          <td class="font-weight-normal">92.0%</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          <tr height="25px">
+                            <td><span class="label label-dot label-dofollow label-xl mr-1"></span></td>
+                            <td class="font-weight-bolder">Do-follow</td>
+                            <td class="font-weight-bolder" id="dofollow-links-value">0</td>
+                            <td class="font-weight-normal" id="dofollow-links-percentage">0%</td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
                 </div>
-                <!-- <div class="d-flex mx-5 mb-5">
-                  <div class="number font-weight-bolder text-black">
-                    <p class="mb-0">No.</p>
-                  </div>
-                  <div class="url font-weight-bolder text-black">
-                    <p class="mb-0">URL</p>
-                  </div>
-                  <div class="analyzer font-weight-bolder text-black">
-                    <p class="mb-0">analyzer</p>
-                  </div>
-                  <div class="language font-weight-bolder text-black">
-                    <p class="mb-0">Language</p>
-                  </div>
-                  <div class="region font-weight-bolder text-black">
-                    <p class="mb-0">Region</p>
-                  </div>
-                </div> -->
 
-                <!-- DUMMY RESULT DATA START -->
-                <!-- <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">1</span>
+                <hr>
+                <nav class="mb-5">
+                  <div class="nav d-flex justify-content-center" id="nav-tab" role="tablist">
+                    <a class="btn btn-result-link active mx-2" data-toggle="tab" href="#internal-link-tab" role="tab" aria-controls="nav-home" aria-selected="true" id="internal-links-value-tab">Internal Links</a>
+                    <a class="btn btn-result-link mx-2" data-toggle="tab" href="#external-link-tab" role="tab" aria-controls="nav-profile" aria-selected="false" id="external-links-value-tab">External Links</a>
                   </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- Tab Internal Links -->
+                  <div class="tab-pane fade show active" id="internal-link-tab" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                    <!-- INTERNAL LINKS START -->
+                    <div class="d-flex mx-5 mb-5">
+                      <div class="number font-weight-bolder text-black">
+                        <p class="mb-0">No.</p>
+                      </div>
+                      <div class="url font-weight-bolder text-black">
+                        <p class="mb-0">URL</p>
+                      </div>
+                      <div class="link-rel font-weight-bolder text-black">
+                        <p class="mb-0">Link rel</p>
+                      </div>
+                      <div class="anchor font-weight-bolder text-black">
+                        <p class="mb-0">Anchor text</p>
+                      </div>
+                    </div>
+
+                      <div id="internal-link-list">
+
+                      </div>
+                    <!-- SHOW MORE BUTTON START -->
+                    <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more show-more--btn" style="padding-left: 5px; padding-right: 5px;" id="show-more-internal">
+                      <div class="">
+                        <span class="label label-square label-analyzer">...</span>
+                        <span class="mx-3 analyzer-url-result">Show More</span>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
+                      </div>
+                    </div>
+                    <!-- SHOW MORE BUTTON END -->
+                    <!-- INTERNAL LINKS END -->
+
                   </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
+                    <!-- Tab External Links -->
+                  <div class="tab-pane fade" id="external-link-tab" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                    <!-- EXTERNAL LINKS START -->
+                    <div class="d-flex mx-5 mb-5">
+                      <div class="number font-weight-bolder text-black">
+                        <p class="mb-0">No.</p>
+                      </div>
+                      <div class="url font-weight-bolder text-black">
+                        <p class="mb-0">URL</p>
+                      </div>
+                      <div class="link-rel font-weight-bolder text-black">
+                        <p class="mb-0">Link rel</p>
+                      </div>
+                      <div class="anchor font-weight-bolder text-black">
+                        <p class="mb-0">Anchor text</p>
+                      </div>
+                    </div>
+
+                    <div id="external-link-list">
+
+                    </div>
+
+                    <!-- SHOW MORE BUTTON START -->
+                    <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more show-more--btn" style="padding-left: 5px; padding-right: 5px;" id="show-more-external">
+                      <div class="">
+                        <span class="label label-square label-analyzer">...</span>
+                        <span class="mx-3 analyzer-url-result">Show More</span>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
+                      </div>
+                    </div>
+                    <!-- SHOW MORE BUTTON END -->
+                    <!-- EXTERNAL LINKS END -->
+
                   </div>
                 </div>
-                <hr class="my-3">
 
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">2</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">3</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">4</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">5</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">6</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">7</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">8</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">9</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3">
-
-                <div class="d-flex mx-5 result-row">
-                  <div class="number">
-                    <span class="label label-square label-analyzer">10</span>
-                  </div>
-                  <div class="url">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://v2-staging-analytics.cmlabs.co/member/domain-management">https://v2-staging-analytics.cmlabs.co/member/domain-management</p>
-                  </div>
-                  <div class="analyzer">
-                    <p class="mb-0">es-419</p>
-                  </div>
-                  <div class="language">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Espanol (Latinoamerica)">Espanol (Latinoamerica)</p>
-                  </div>
-                  <div class="region">
-                    <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</p>
-                  </div>
-                </div>
-                <hr class="my-3"> -->
-                <!-- DUMMY RESULT DATA END -->
-
-                <!-- SHOW MORE BUTTON START -->
-                <!-- <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
-                  <div class="">
-                    <span class="label label-square label-analyzer">...</span>
-                    <span class="mx-3 analyzer-url-result">Show More</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class='bx bxs-chevron-down analyzer-show-more'></i>
-                  </div>
-                </div> -->
-                <!-- SHOW MORE BUTTON END -->
 
               </div>
             </div>
@@ -998,15 +923,22 @@ id/link-analyzer
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
-                <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+                  <p class="text-black font-weight-bold mb-0" id="progress-stop-message">Our robot is sleeping right now. Give
+                      him a task!</p>
+                  <p class="text-black font-weight-bold mb-0" id="progress-start-message" style="display: none">Our robot is excecuting your task..</p>
+                  <p class="text-black font-weight-bold mb-0" id="progress-finish-message" style="display: none">Our robot is already finished your
+                      task.</p>
+                  <div class="progress my-3">
+                      <div class="progress-bar" role="progressbar" style="width: 0%;"
+                           aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                           id="progress-bar-loader">
+
+                      </div>
+                  </div>
+                  {{--                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>--}}
+                  <button type="button" class="btn btn-cancel-disabled" disabled name="button"
+                          id="cancel-request-btn">Cancel
+                  </button>
               </div>
             </div>
           </div>
@@ -1017,59 +949,14 @@ id/link-analyzer
                 <span class="text-black font-15px">Your Local History</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                <span class="clear-all font-15px pointer mr-3 clear-history--btn">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
+                <ul class="list-group" id="local-history">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -1111,60 +998,11 @@ id/link-analyzer
         <span class="text-black font-15px">Your Local History</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer clear-history--btn">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
+    <div class="local-collection-body mt-3 px-5" id="local-history-mobile">
+
     </div>
     <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
       <div class="card bg-transparent" style="">
@@ -1331,48 +1169,14 @@ id/link-analyzer
 @endpush
 @push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
-<script type="text/javascript">
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: {
-      labels: ['Internal Links', 'External Links', 'No-Follow', 'Do-Follow'],
-      datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5],
-          backgroundColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderWidth: 1
-      }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    legend: {
-        display: false,
-        align: 'start',
-        padding: 20
-    },
-    scales: {
-        xAxes: [{
-            display: false,
-        }],
-        yAxes: [ {
-            display:false,
-        }]
-    },
-  }
-});
+<script>
+    const LINK_ANALYZER_API_URL = '{{ route('api.analyze-link') }}';
+</script>
+<script src="{{ asset('js/logic/link-analyzer.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        getHistories();
+    })
 </script>
 @endpush
 
