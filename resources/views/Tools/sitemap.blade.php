@@ -545,8 +545,8 @@ id/sitemap-generator
               <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
             </div>
             <div class="mb-3">
-              <button type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</button>
-              <button type="button" class="btn btn-download-sitemap-disabled" disabled name="button">Download Sitemap</button>
+              <button id="downloadOn" type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</button>
+              <button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled" disabled name="button">Download Sitemap</button>
             </div>
           </div>
           <div class="card card-custom mb-5">
@@ -557,6 +557,14 @@ id/sitemap-generator
                 <div class="text-center">
                   <p class="d-block">No sitemap generated, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
+                </div>
+              </div>
+
+              <!-- WHEN CRAWL -->
+              <div class="" id="generateCrawlResult">
+                <div class="text-center">
+                  <p class="d-block">Generating your sitemap...</p>
+                  {{-- <a href="#" class="links">Learn how to use this tools?</a> --}}
                 </div>
               </div>
 
@@ -658,15 +666,15 @@ id/sitemap-generator
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
+                <p id="info" class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
+                {{-- <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
+                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p> --}}
                 <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                 </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+                <p id="detail-progress" class="text-black font-weight-bold mb-3"></p>
+                <button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel</button>
+                <button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
               </div>
             </div>
           </div>

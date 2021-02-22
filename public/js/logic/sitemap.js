@@ -16,65 +16,58 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 let DATA_FINAL;
+let isCanceled = false;
 $(document).ready(function () {
+    $('#noCrawl').show()
+    $('#crawlHttps').hide()
+    $('#crawlHttp').hide()
+    $('#cancelOff').show()
+    $('#cancelOn').hide()
+    clearTable();
     const socket = io('http://127.0.0.1:3000', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
     triggerEnter('#generate','#url');
     $('#generate').click(function () {
-        // $('#spin').addClass("spinner spinner-success spinner-right");
         clearTable();
         let match =/^(http(s)?|ftp):\/\//;
         let url = $('#url').val().replace(match,"");
         if (url.substr(url.length-1)==='/')
             socket.emit('crawl',"https://"+url.slice(0,-1));
         else socket.emit('crawl',"https://"+url);
-        // socket.emit('image',url);
-        let title = '';
-        let button = '';
-        let progress = '';
-        if (lang === 'en'){
-            title = 'The crawling process will take some time';
-            button = 'Cancel';
-            progress = '0 of 0 Pages Crawled'
-        }
-        else {
-            title = 'Proses crawling akan memakan waktu';
-            button = 'Batal';
-            progress = '0 dari 0 Halaman'
-        }
-        Swal.fire({
-            title: title,
-            html:"<div class=\"progress mb-2\" style=\"height:20px\">\n" +
-                "      <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 0%;\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progress-bar\">0%</div>\n" +
-                "    </div>\n" +
-                "    <center><span id=\"detail-progress\">"+progress+"</span></center>",
-            showCancelButton:true,
-            cancelButtonColor: '#FE2151',
-            showConfirmButton:false,
-            allowOutsideClick: false,
-            cancelButtonText : button
-        }).then((result)=>{
-            if (result.dismiss === 'cancel'){
-                socket.emit('stop','abort');
-                if (lang === 'en')
-                    toastr.error('Site Crawling Canceled','Cancel');
-                else toastr.error('Proses Crawling Dibatalkan','Batal');
-            }
-        })
+        $('#info').html("Our robot is excecuting your task..")
+        $('#cancelOff').hide()
+        $('#cancelOn').show()
+        $("#noCrawlResult").hide();
+        $("#generateCrawlResult").show();
+        $("#downloadOff").show();
+        $("#downloadOn").hide();
+        $("#result").empty();
+    });
+
+    $('#cancelOn').on('click',function(){
+        socket.emit('stop');
+        $(this).hide();
+        $('#cancelOff').show();
+        $("#noCrawlResult").show();
+        $("#generateCrawlResult").hide();
+        $('#info').html("Our robot is sleeping right now. Give him a task!")
+        $('#detail-progress').empty();
+        isCanceled = true;
+        updateProgressBar(0)
+        toastr.error('Cancel your task')
     });
 
     socket.on('update queue', data =>{
-        // console.log(data);
-        updateProgressBar(data);
-    });
-
-    socket.on('image_url',url=>{
-        $('#screenshot').attr('src','https://api.cmlabs.co/'+url.url);
-        $('#add').css('display','block');
+        console.log(isCanceled);
+        if (!isCanceled){
+            $('#detail-progress').html(data.site_length+' of '+(parseInt(data.queue_length))+' pages')
+            updateProgressBar((data.site_length/data.queue_length*100).toFixed(2));
+        }
     });
 
     socket.on('result', response => {
         // $('#spin').removeClass("spinner spinner-success spinner-right");
         // console.log(response);
+        $('#info').html("Our robot is already finished your task.")
         clearTable();
         $('#table').css('display','block');
         for (let datum in response.url){
@@ -86,10 +79,27 @@ $(document).ready(function () {
     });
 
     socket.on('notfound', msg =>{
-        $('#spin').removeClass("spinner spinner-success spinner-right");
+        // $('#spin').removeClass("spinner spinner-success spinner-right");
         toastr.error('Error', msg)
     })
 });
+
+$('#url').on('input',function(){
+    let check = regexHttps($(this).val());
+    if(check === 'https'){
+        $('#noCrawl').hide()
+        $('#crawlHttps').show()
+        $('#crawlHttp').hide()
+    }else if (check === 'http'){
+        $('#noCrawl').hide()
+        $('#crawlHttps').hide()
+        $('#crawlHttp').show()
+    }else{
+        $('#noCrawl').show()
+        $('#crawlHttps').hide()
+        $('#crawlHttp').hide()
+    }
+})
 
 $('#download').click(function () {
     let parse = new X2JS();
@@ -107,30 +117,36 @@ $('#download').click(function () {
 });
 
 function addData(data, i) {
-    $("#url-table tbody").append("<tr>\n" +
-        "              <td scope=\"col\" width=\"70px\">#"+i+"</td>\n" +
-        "              <td scope=\"col\">"+data.loc+"</td>\n" +
-        "            </tr>");
+    $("#result").append('<div class="d-flex align-items-center mx-5 result-row">'+
+    '   <span class="label label-square label-sitemap">1</span>'+
+    '   <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>'+
+    '</div>'+
+    '<hr>');
 }
 
-function updateProgressBar(data) {
-    let of = '';
-    let pages = '';
-    if (lang === 'en'){
-        of = ' of ';
-        pages = ' Pages Crawled';
-    }else {
-        of = ' dari ';
-        pages = ' Halaman';
-    }
-    let percentage = (data.site_length/(parseInt(data.site_length)+parseInt(data.queue_length))*100).toFixed(1);
+function updateProgressBar(percentage) {
     $('#progress-bar')
         .attr('aria-valuenow',percentage)
         .css('width',percentage+'%')
         .html(percentage+'%');
-    $('#detail-progress').html(data.site_length+of+(parseInt(data.site_length)+parseInt(data.queue_length))+pages)
 }
 
 function clearTable() {
-    $("#table tbody tr").remove();
+    $("#noCrawlResult").show();
+    $("#generateCrawlResult").hide();
+    $("#downloadOff").show();
+    $("#downloadOn").hide();
+    $("#result").empty();
+}
+
+function regexHttps(url){
+    let httpsPattern = new RegExp("^https:\/\/")
+    let httpPattern = new RegExp("^http:\/\/")
+    if (httpsPattern.test(url)){
+        return 'https'
+    }else if (httpPattern.test(url)){
+        return 'http'
+    }else{
+        return 'none'
+    }
 }
