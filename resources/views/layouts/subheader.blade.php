@@ -10,7 +10,7 @@
                         <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-faq-schema-generator">JSON-LD Generator</a>
+                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD Generator</a>
                     </li>
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>

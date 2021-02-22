@@ -1,19 +1,19 @@
 @extends('layouts.app')
 
-@section('title', 'Link Analyzer')
+@section('title', 'Keyword Research')
 
-@section('meta-desc', 'Link Analyzer')
+@section('meta-desc', 'Keyword Research')
 
-@section('meta-keyword', 'Link Analyzer')
+@section('meta-keyword', 'Keyword Research')
 
-@section('conical','/en/link-analyzer')
+@section('conical','/en/keyword-research')
 
 @section('en-link')
-en/link-analyzer
+en/keyword-research
 @endsection
 
 @section('id-link')
-id/link-analyzer
+id/keyword-research
 @endsection
 
 @push('style')
@@ -39,17 +39,17 @@ id/link-analyzer
     border-radius: 5px;
   }
 
-  .analyzer-url {
+  .kwresearch-url {
     background: var(--primaryblue);
     border: none;
     color: white;
   }
 
-  .analyzer-url::placeholder {
+  .kwresearch-url::placeholder {
     color: white;
   }
 
-  .analyzer-url:focus {
+  .kwresearch-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -83,7 +83,7 @@ id/link-analyzer
     text-decoration: underline;
   }
 
-  .analyzer-url-result {
+  .kwresearch-url-result {
     color: var(--darkgrey);
     font-weight: bold;
   }
@@ -148,7 +148,7 @@ id/link-analyzer
     cursor: not-allowed;
   }
 
-  .btn-download-analyzer {
+  .btn-download-kwresearch {
     line-height: 1;
     width: 137px;
     background: var(--darkgrey);
@@ -156,12 +156,12 @@ id/link-analyzer
     border-radius: 20px;
   }
 
-  .btn-download-analyzer:hover {
+  .btn-download-kwresearch:hover {
     background: var(--black);
     color: white;
   }
 
-  .btn-download-analyzer-disabled {
+  .btn-download-kwresearch-disabled {
     line-height: 1;
     width: 137px;
     background: var(--grey);
@@ -170,30 +170,17 @@ id/link-analyzer
     cursor: not-allowed;
   }
 
-  .btn-download-analyzer-disabled:hover {
+  .btn-download-kwresearch-disabled:hover {
     background: var(--grey);
     color: white;
     cursor: not-allowed;
   }
 
-  .label-analyzer {
-    width: 25px;
-    font-weight: 400;
-    background: var(--lightgrey);
-    color: var(--darkgrey);
-  }
-
-  .analyzer-show-more {
+  .kwresearch-show-more {
     color:var(--darkgrey);
   }
 
-
-  .result-row:hover .label-analyzer {
-    background: var(--primaryblue);
-    color: white;
-  }
-
-  .result-row:hover .analyzer-url-result {
+  .result-row:hover .kwresearch-url-result {
     color: var(--black);
   }
 
@@ -201,21 +188,16 @@ id/link-analyzer
     cursor: pointer;
   }
 
-  .result-row-show-more:hover .label-analyzer {
-    background: var(--primaryblue);
-    color: white;
-  }
-
-  .result-row .url, .result-row .link-rel, .result-row .anchor {
+  .result-row .keyword, .result-row .vol, .result-row .cpc, .result-row .pd, .result-row .sd, .result-row .content-ideas{
     color: var(--darkgrey);
   }
 
-  .result-row:hover .url, .result-row:hover .link-rel, .result-row:hover .anchor {
+  .result-row:hover .keyword, .result-row:hover .vol, .result-row:hover .cpc, .result-row:hover .pd, .result-row:hover .sd, .result-row:hover .content-ideas {
     color: var(--black);
     font-weight: 500;
   }
 
-  .result-row-show-more:hover .analyzer-url-result, .result-row-show-more:hover .analyzer-show-more {
+  .result-row-show-more:hover .kwresearch-url-result, .result-row-show-more:hover .kwresearch-show-more {
     color: var(--black);
   }
 
@@ -520,170 +502,279 @@ id/link-analyzer
 
   @media only screen and (max-width:575px){
     .number {
-      min-width: 12%;
-      max-width: 12%;
-      width: 12%;
+      min-width: 10%;
+      max-width: 10%;
+      width: 10%;
     }
 
-    .url {
-      min-width: 35%;
-      max-width: 35%;
-      width: 35%;
+    .content-ideas {
+      min-width: 90%;
+      max-width: 90%;
+      width: 90%;
     }
 
-    .link-rel {
+    .keyword {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
     }
 
-    .anchor {
-      min-width: 28%;
-      max-width: 28%;
-      width: 28%;
+    .vol {
+      min-width: 23%;
+      max-width: 23%;
+      width: 23%;
+    }
+
+    .cpc {
+      min-width: 18%;
+      max-width: 18%;
+      width: 18%;
+    }
+
+    .pd {
+      min-width: 12%;
+      max-width: 12%;
+      width: 12%;
+    }
+
+    .sd{
+      min-width: 12%;
+      max-width: 12%;
+      width: 12%;
     }
 
   }
 
   @media only screen and (min-width:576px) and (max-width: 767px) {
     .number {
+      min-width: 6%;
+      max-width: 6%;
+      width: 6%;
+    }
+
+    .content-ideas {
+      min-width: 94%;
+      max-width: 94%;
+      width: 94%;
+    }
+
+    .keyword {
+      min-width: 53%;
+      max-width: 53%;
+      width: 53%;
+    }
+
+    .vol {
+      min-width: 15%;
+      max-width: 15%;
+      width: 15%;
+    }
+
+    .cpc {
+      min-width: 10%;
+      max-width: 10%;
+      width: 10%;
+    }
+
+    .pd {
       min-width: 8%;
       max-width: 8%;
       width: 8%;
     }
 
-    .url {
-      min-width: 40%;
-      max-width: 40%;
-      width: 40%;
-    }
-
-    .link-rel {
-      min-width: 25%;
-      max-width: 25%;
-      width: 25%;
-    }
-
-    .anchor {
-      min-width: 27%;
-      max-width: 27%;
-      width: 27%;
+    .sd{
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
     }
 
   }
 
   @media only screen and (min-width:768px) and (max-width: 991px) {
     .number {
+      min-width: 6%;
+      max-width: 6%;
+      width: 6%;
+    }
+
+    .content-ideas {
+      min-width: 94%;
+      max-width: 94%;
+      width: 94%;
+    }
+
+    .keyword {
+      min-width: 53%;
+      max-width: 53%;
+      width: 53%;
+    }
+
+    .vol {
+      min-width: 15%;
+      max-width: 15%;
+      width: 15%;
+    }
+
+    .cpc {
+      min-width: 10%;
+      max-width: 10%;
+      width: 10%;
+    }
+
+    .pd {
       min-width: 8%;
       max-width: 8%;
       width: 8%;
     }
 
-    .url {
-      min-width: 40%;
-      max-width: 40%;
-      width: 40%;
-    }
-
-    .link-rel {
-      min-width: 27%;
-      max-width: 27%;
-      width: 27%;
-    }
-
-    .anchor {
-      min-width: 25%;
-      max-width: 25%;
-      width: 25%;
+    .sd{
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
     }
 
   }
 
   @media only screen and (min-width:992px) and (max-width: 1199px) {
     .number {
-      min-width: 8%;
-      max-width: 8%;
-      width: 8%;
-    }
-
-    .url {
-      min-width: 40%;
-      max-width: 40%;
-      width: 40%;
-    }
-
-    .link-rel {
-      min-width: 27%;
-      max-width: 27%;
-      width: 27;
-    }
-
-    .anchor {
-      min-width: 25%;
-      max-width: 25%;
-      width: 25%;
-    }
-  }
-
-  @media only screen and (min-width:1200px) and (max-width: 1399px) {
-    .number {
       min-width: 6%;
       max-width: 6%;
       width: 6%;
     }
 
-    .url {
-      min-width: 44%;
-      max-width: 44%;
-      width: 44%;
+    .content-ideas {
+      min-width: 94%;
+      max-width: 94%;
+      width: 94%;
     }
 
-    .link-rel {
-      min-width: 25%;
-      max-width: 25%;
-      width: 25%;
+    .keyword {
+      min-width: 53%;
+      max-width: 53%;
+      width: 53%;
     }
 
-    .anchor {
-      min-width: 25%;
-      max-width: 25%;
-      width: 25%;
+    .vol {
+      min-width: 15%;
+      max-width: 15%;
+      width: 15%;
+    }
+
+    .cpc {
+      min-width: 10%;
+      max-width: 10%;
+      width: 10%;
+    }
+
+    .pd {
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
+    }
+
+    .sd{
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
+    }
+
+  }
+
+  @media only screen and (min-width:1200px) and (max-width: 1399px) {
+    .number {
+      min-width: 4%;
+      max-width: 4%;
+      width: 4%;
+    }
+
+    .content-ideas {
+      min-width: 96%;
+      max-width: 96%;
+      width: 96%;
+    }
+
+    .keyword {
+      min-width: 66%;
+      max-width: 66%;
+      width: 66%;
+    }
+
+    .vol {
+      min-width: 12%;
+      max-width: 12%;
+      width: 12%;
+    }
+
+    .cpc {
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
+    }
+
+    .pd {
+      min-width: 5%;
+      max-width: 5%;
+      width: 5%;
+    }
+
+    .sd{
+      min-width: 5%;
+      max-width: 5%;
+      width: 5%;
     }
 
   }
 
   @media only screen and (min-width:1400px){
     .number {
-      min-width: 6%;
-      max-width: 6%;
-      width: 6%;
+      min-width: 4%;
+      max-width: 4%;
+      width: 4%;
     }
 
-    .url {
-      min-width: 54%;
-      max-width: 54%;
-      width: 54%;
+    .content-ideas {
+      min-width: 96%;
+      max-width: 96%;
+      width: 96%;
     }
 
-    .link-rel {
-      min-width: 20%;
-      max-width: 20%;
-      width: 20%;
+    .keyword {
+      min-width: 68%;
+      max-width: 68%;
+      width: 68%;
     }
 
-    .anchor {
-      min-width: 20%;
-      max-width: 20%;
-      width: 20%;
+    .vol {
+      min-width: 10%;
+      max-width: 10%;
+      width: 10%;
+    }
+
+    .cpc {
+      min-width: 8%;
+      max-width: 8%;
+      width: 8%;
+    }
+
+    .pd {
+      min-width: 5%;
+      max-width: 5%;
+      width: 5%;
+    }
+
+    .sd{
+      min-width: 5%;
+      max-width: 5%;
+      width: 5%;
     }
 
   }
-  .number, .url, .link-rel, .anchor {
+  .number, .keyword, .vol, .cpc, .pd, .sd, .content-ideas{
     padding-left: 5px;
     padding-right: 5px;
   }
 
-  .url {
+  .keyword {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -730,6 +821,52 @@ id/link-analyzer
     color:var(--black);
   }
 
+  .overview-label p {
+    color:var(--grey);
+  }
+
+  .overview-label:hover p {
+    color:var(--black);
+  }
+
+  .btn-export {
+    color: white;
+    background-color: var(--primaryblue);
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .btn-export:hover {
+    color: white;
+    background-color: #0F90E7;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .btn-copy {
+    color: var(--primaryblue);
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid var(--primaryblue);
+    font-weight: 500;
+  }
+
+  .btn-copy:hover {
+    color: white;
+    background-color: var(--primaryblue);
+    border: 1px solid var(--primaryblue);
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .market {
+    border: 1px solid white;
+    background: var(--primaryblue);
+    color: white;
+    border-radius: 20px
+
+  }
+
 </style>
 @endpush
 
@@ -737,25 +874,24 @@ id/link-analyzer
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">LINK ANALYZER</h1>
+      <h1 class="text-darkgrey font-weight-normal">KEYWORD RESEARCH</h1>
       <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
-          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
-
-            <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
-
-            <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control analyzer-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+          <div class="col-sm-7 col-md-8 col-lg-7 col-xl-8 d-flex align-items-center py-1">
+            <input type="text" class="form-control kwresearch-url" name="" value="" placeholder="INPUT / PASTE YOUR KEYWORD">
           </div>
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
+          <div class="col-sm-5 col-md-4 col-lg-5 col-xl-4 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">ANALYZE URL</button>
+            <select class="form-control market mx-1" name="">
+              <option value="" disabled selected>Select market</option>
+              <option value="">Indonesia, id-ID</option>
+              <option value="">Indonesia, en-ID</option>
+              <option value="">Singapore, en-SG</option>
+            </select>
+
+            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK KEYWORD</button>
           </div>
         </div>
       </div>
@@ -769,463 +905,416 @@ id/link-analyzer
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
-              <div class="" id="noCrawlResult">
+              <!-- <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block">No URL analyzed, please input your domain above!</p>
+                  <p class="d-block">No keyword checked, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
                 </div>
-              </div>
+              </div> -->
 
               <!-- RESULT CRAWL -->
-              <div class="mt-7" id=result>
-                <div class="row">
-                  <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
-                    <canvas id="myChart" width="150" height="150"></canvas>
-                  </div>
-                  <div class="col-lg-7 col-md-7 d-flex align-items-center resultTable mb-5">
-                      <table>
-                        <thead>
-                          <tr height="25px">
-                            <th></th>
-                            <th style="width:120px" class="font-weight-bolder">Total Links</th>
-                            <th style="width:60px" class="font-weight-bolder">101</th>
-                            <th class="font-weight-normal">100%</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr height="25px">
-                            <td><span class="label label-dot label-internal label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">Internal Links</td>
-                            <td class="font-weight-bolder">88</td>
-                            <td class="font-weight-normal">87.1%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-external label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">External Links</td>
-                            <td class="font-weight-bolder">13</td>
-                            <td class="font-weight-normal">12.8%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-nofollow label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">No-follow</td>
-                            <td class="font-weight-bolder">8</td>
-                            <td class="font-weight-normal">7.92%</td>
-                          </tr>
-
-                          <tr height="25px">
-                            <td><span class="label label-dot label-dofollow label-xl mr-1"></span></td>
-                            <td class="font-weight-bolder">Do-follow</td>
-                            <td class="font-weight-bolder">93</td>
-                            <td class="font-weight-normal">92.0%</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                </div>
-
-                <hr>
+              <div class="" id=result>
                 <nav class="mb-5">
                   <div class="nav d-flex justify-content-center" id="nav-tab" role="tablist">
-                    <a class="btn btn-result-link active mx-2" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Internal Links (10)</a>
-                    <a class="btn btn-result-link mx-2" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">External Links</a>
+                    <a class="btn btn-result-link active py-1 d-flex align-items-center" style="height:25px" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Overview</a>
+                    <a class="btn btn-result-link mx-1 py-1 d-flex align-items-center" style="height:25px" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Keyword Ideas</a>
+                    <a class="btn btn-result-link py-1 d-flex align-items-center" style="height:25px" id="nav-content-tab" data-toggle="tab" href="#nav-content" role="tab" aria-controls="nav-content" aria-selected="false">Content Ideas</a>
                   </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
-                    <!-- INTERNAL LINKS START -->
-                    <div class="d-flex mx-5 mb-5">
-                      <div class="number font-weight-bolder text-black">
-                        <p class="mb-0">No.</p>
-                      </div>
-                      <div class="url font-weight-bolder text-black">
-                        <p class="mb-0">URL</p>
-                      </div>
-                      <div class="link-rel font-weight-bolder text-black">
-                        <p class="mb-0">Link rel</p>
-                      </div>
-                      <div class="anchor font-weight-bolder text-black">
-                        <p class="mb-0">Anchor text</p>
+                    <div class="px-5 mb-7">
+                      <p><b>Keyword: </b>tiket pesawat murah</p>
+                    </div>
+                    <div class="px-5 mb-5">
+                      <div class="row">
+                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Search Volume</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                          <p class="h1 mb-0 font-weight-bolder">9.999.999</p>
+                          <p>Search Volume</p>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Keyword Difficulty</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                          <p class="h1 mb-0 font-weight-bolder">999</p>
+                          <p>Keyword Difficulty</p>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Paid Difficulty</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                          <p class="h1 mb-0 font-weight-bolder">999</p>
+                          <p>Paid Difficulty</p>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Cost Per Click (CPC)</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                          <p class="h1 mb-0 font-weight-bolder">$99.99</p>
+                          <p>Cost Per Click (CPC)</p>
+                        </div>
                       </div>
                     </div>
-
-                    <!-- DUMMY RESULT DATA START -->
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">1</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">No Anchor Text</p>
-                      </div>
+                    <div class="px-5 mb-5">
+                      <canvas id="myChart" width="100%" height="150"></canvas>
                     </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">2</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/">https://cmlabs.co/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Beranda</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">3</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/jasa-seo">https://cmlabs.co/jasa-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Jasa SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">4</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog & Panduan</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">5</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/blog">https://cmlabs.co/blog/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">6</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/kamus-seo">https://cmlabs.co/kamus-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Kamus SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">7</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/panduan-seo">https://cmlabs.co/panduan-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Panduan SEO</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">8</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/word-counter">https://cmlabs.co/word-counter</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Word Counter & Kepadatan Keyword</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">9</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-title-meta-checker">https://cmlabs.co/page-title-meta-checker</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Panjang Judul Laman & Meta Deskripsi</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">10</span>
-                      </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-speed">https://cmlabs.co/page-speed</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Page Speed (Lighthouse)</p>
-                      </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <!-- DUMMY RESULT DATA END -->
-
-                    <!-- SHOW MORE BUTTON START -->
-                    <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more" style="padding-left: 5px; padding-right: 5px;">
-                      <div class="">
-                        <span class="label label-square label-analyzer">...</span>
-                        <span class="mx-3 analyzer-url-result">Show More</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
-                      </div>
-                    </div>
-                    <!-- SHOW MORE BUTTON END -->
-                    <!-- INTERNAL LINKS END -->
-
                   </div>
                   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <div class="px-5 mb-5">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="mb-0"><b>Keyword Ideas</b>(10)</p>
+                        <select class="form-control" style="width:150px!important;" name="">
+                          <option value="" selected disabled>Select category</option>
+                          <option value="">Suggestion (240)</option>
+                          <option value="">Related (327)</option>
+                          <option value="">Questions (0)</option>
+                          <option value="">Prepositions (0)</option>
+                          <option value="">Comparisons (2)</option>
+                        </select>
+                      </div>
 
-                    <!-- EXTERNAL LINKS START -->
+                    </div>
+
                     <div class="d-flex mx-5 mb-5">
-                      <div class="number font-weight-bolder text-black">
-                        <p class="mb-0">No.</p>
+                      <div class="number">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          </div>
                       </div>
-                      <div class="url font-weight-bolder text-black">
-                        <p class="mb-0">URL</p>
+                      <div class="keyword font-weight-bolder text-black">
+                        <p class="mb-0">KEYWORD</p>
                       </div>
-                      <div class="link-rel font-weight-bolder text-black">
-                        <p class="mb-0">Link rel</p>
+                      <div class="vol font-weight-bolder text-black">
+                        <p class="mb-0">VOL</p>
                       </div>
-                      <div class="anchor font-weight-bolder text-black">
-                        <p class="mb-0">Anchor text</p>
+                      <div class="cpc font-weight-bolder text-black">
+                        <p class="mb-0">CPC</p>
+                      </div>
+
+                      <div class="pd font-weight-bolder text-black">
+                        <p class="mb-0">PD</p>
+                      </div>
+
+                      <div class="sd font-weight-bolder text-black">
+                        <p class="mb-0">SD</p>
                       </div>
                     </div>
 
                     <!-- DUMMY RESULT DATA START -->
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">1</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah">tiket pesawat murah</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">No Anchor Text</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
                       </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">2</span>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/">https://cmlabs.co/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Beranda</p>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">3</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/jasa-seo">https://cmlabs.co/jasa-seo/</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="promo tiket pesawat murah 2020">promo tiket pesawat murah 2020</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Jasa SEO</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
                       </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">4</span>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co">https://cmlabs.co</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog & Panduan</p>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">5</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/blog">https://cmlabs.co/blog/</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah ke new zealand">tiket pesawat murah ke new zealand</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Blog</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
                       </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">6</span>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/kamus-seo">https://cmlabs.co/kamus-seo/</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Kamus SEO</p>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">7</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/panduan-seo">https://cmlabs.co/panduan-seo/</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah medan jakarta">tiket pesawat murah medan jakarta</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Panduan SEO</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
                       </div>
-                    </div>
-                    <hr class="my-3">
-
-                    <div class="d-flex mx-5 result-row">
-                      <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">8</span>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/word-counter">https://cmlabs.co/word-counter</p>
-                      </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
-                      </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Word Counter & Kepadatan Keyword</p>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">9</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-title-meta-checker">https://cmlabs.co/page-title-meta-checker</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah 2019">tiket pesawat murah 2019</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Panjang Judul Laman & Meta Deskripsi</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <div class="d-flex mx-5 result-row">
                       <div class="number d-flex align-items-center">
-                        <span class="label label-square label-analyzer">10</span>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
                       </div>
-                      <div class="url d-flex align-items-center">
-                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="https://cmlabs.co/page-speed">https://cmlabs.co/page-speed</p>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat bisnis class murah">tiket pesawat bisnis class murah</p>
                       </div>
-                      <div class="link-rel d-flex align-items-center">
-                        <p class="mb-0">Noopener, noreferrer, nofollow, external</p>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
                       </div>
-                      <div class="anchor d-flex align-items-center">
-                        <p class="mb-0">Cek Page Speed (Lighthouse)</p>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah ke medan">tiket pesawat murah ke medan</p>
+                      </div>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
+                      </div>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah jakarta surabaya">tiket pesawat murah jakarta surabaya</p>
+                      </div>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
+                      </div>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="keyword d-flex align-items-center" >
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="harga tiket pesawat murah online">harga tiket pesawat murah online</p>
+                      </div>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
+                      </div>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="keyword d-flex align-items-center">
+                        <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="tiket pesawat murah pekanbaru jakarta">tiket pesawat murah pekanbaru jakarta</p>
+                      </div>
+                      <div class="vol d-flex align-items-center">
+                        <p class="mb-0">9.999.999</p>
+                      </div>
+                      <div class="cpc d-flex align-items-center">
+                        <p class="mb-0">$99.99</p>
+                      </div>
+                      <div class="pd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                      <div class="sd d-flex align-items-center">
+                        <p class="mb-0">999</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+                    <!-- DUMMY RESULT DATA END -->
+
+                    <div class="px-5">
+                      <button type="button" class="btn btn-copy mr-2" name="button">COPY TO CLIPBOARD</button>
+                      <button type="button" class="btn btn-export" name="button">EXPORT TO CSV</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-content" role="tabpanel" aria-labelledby="nav-content-tab">
+                    <div class="px-5 mb-5">
+                        <p class="mb-0"><b>Content Ideas</b>(10)</p>
+                    </div>
+
+                    <div class="d-flex mx-5 mb-5">
+                      <div class="number">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          </div>
+                      </div>
+                      <div class="content-ideas font-weight-bolder text-black">
+                        <p class="mb-0">PAGE TITLE & URL</p>
+                      </div>
+                    </div>
+
+                    <!-- DUMMY RESULT DATA START -->
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="content-ideas ">
+                        <p class="mb-0">JADI AGEN <b>TIKET PESAWAT MURAH</b> SEKARANG BANYAK KEMUDAHAN</p>
+                        <p class="mb-0">fjb.kaskus.co.id</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="content-ideas ">
+                        <p class="mb-0">JADI AGEN <b>TIKET PESAWAT MURAH</b> SEKARANG BANYAK KEMUDAHAN</p>
+                        <p class="mb-0">fjb.kaskus.co.id</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="content-ideas ">
+                        <p class="mb-0">JADI AGEN <b>TIKET PESAWAT MURAH</b> SEKARANG BANYAK KEMUDAHAN</p>
+                        <p class="mb-0">fjb.kaskus.co.id</p>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+
+                    <div class="d-flex mx-5 result-row">
+                      <div class="number d-flex align-items-center">
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        </div>
+                      </div>
+                      <div class="content-ideas ">
+                        <p class="mb-0">JADI AGEN <b>TIKET PESAWAT MURAH</b> SEKARANG BANYAK KEMUDAHAN</p>
+                        <p class="mb-0">fjb.kaskus.co.id</p>
                       </div>
                     </div>
                     <hr class="my-3">
 
                     <!-- DUMMY RESULT DATA END -->
 
-                    <!-- SHOW MORE BUTTON START -->
-                    <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more" style="padding-left: 5px; padding-right: 5px;">
-                      <div class="">
-                        <span class="label label-square label-analyzer">...</span>
-                        <span class="mx-3 analyzer-url-result">Show More</span>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <i class='bx bxs-chevron-down analyzer-show-more'></i>
-                      </div>
+                    <div class="px-5">
+                      <button type="button" class="btn btn-copy mr-2" name="button">COPY TO CLIPBOARD</button>
+                      <button type="button" class="btn btn-export" name="button">EXPORT TO CSV</button>
                     </div>
-                    <!-- SHOW MORE BUTTON END -->
-                    <!-- EXTERNAL LINKS END -->
-
                   </div>
                 </div>
-
-
               </div>
             </div>
           </div>
@@ -1563,7 +1652,7 @@ id/link-analyzer
     }, {
       "@type": "ListItem",
       "position": 2,
-      "name": "analyzer Checker"
+      "name": "kwresearch Checker"
     }]
   }
 </script>
@@ -1573,25 +1662,20 @@ id/link-analyzer
 <script type="text/javascript">
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'line',
   data: {
-      labels: ['Internal Links', 'External Links', 'No-Follow', 'Do-Follow'],
+      labels: ["Feb 20", "Mar 20", "Apr 20", "May 20", "Jun 20", "Jul 20", "Aug 20", "Sep 20", "Oct 20", "Nov 20", "Dec 20", "Jan 21"],
       datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5],
-          backgroundColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderColor: [
-              'rgba(24,160,251,1)',
-              'rgb(251,201,24,1)',
-              'rgba(151,24,251,1)',
-              'rgba(255,86,86,1)'
-          ],
-          borderWidth: 1
+          label: 'Search Volume',
+          data: [1600, 1900, 1600, 1000, 880, 1000, 2400, 1900, 1600, 1300, 1600, 1600],
+          borderColor: '#18A0FB',
+          backgroundColor: '#18A0FB',
+          pointBackgroundColor: '#fff',
+          pointBorderColor: '#18A0FB',
+          fill: false,
+          lineTension: 0,
+          borderWidth: 1,
+          hidden: false
       }]
   },
   options: {
@@ -1604,10 +1688,13 @@ var myChart = new Chart(ctx, {
     },
     scales: {
         xAxes: [{
-            display: false,
+            display: true,
         }],
         yAxes: [ {
-            display:false,
+            display:true,
+            ticks: {
+              maxTicksLimit: 7,
+            },
         }]
     },
     tooltips: {
@@ -1620,12 +1707,14 @@ var myChart = new Chart(ctx, {
         bodyFontFamily: "'Roboto', sans-serif",
         bodyFontColor: '#2A2F33',
         bodyFontStyle: 'normal',
+        position: 'average',
+        intersect: false,
     }
   }
 });
 </script>
 @endpush
 
-@section('analyzerchecker')
+@section('kwresearchchecker')
 active
 @endsection
