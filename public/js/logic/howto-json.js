@@ -40,8 +40,11 @@ jQuery('#add-howto-supply').click(function () {
         
     });
     print();
-    jQuery('#howto-supply').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteSupply\" name=\"button\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"+deletes+"</button>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 supplyName\" placeholder=\""+supplyName+" :\" value=\"\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"
+    // jQuery('#howto-supply').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteSupply\" name=\"button\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"+deletes+"</button>\n" +
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 supplyName\" placeholder=\""+supplyName+" :\" value=\"\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"
+    // );
+    jQuery('#howto-supply').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.supply.length-1)+"\"><div class=\"col-10\" data-id=\""+(main.mainEntity.supply.length-1)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(main.mainEntity.supply.length-1)+"\">Supply #"+(main.mainEntity.supply.length)+"</label>\n" +
+    "                <input type=\"text\" name=\"\" class=\"form-control supplyName\" placeholder=\""+supplyName+"\" value=\"\" data-id=\""+(main.mainEntity.supply.length-1)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md deleteSupply\' data-id=\""+(main.mainEntity.supply.length-1)+"\"></i></div></div>"
     );
     console.log("INDEX",main.mainEntity.supply.length-1)
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
@@ -58,14 +61,16 @@ jQuery('#add-howto-tool').click(function () {
         "name": "",
     });
     print();
-    jQuery('#howto-tool').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteTool\" name=\"button\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"+deletes+"</button>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 tool\" placeholder=\""+tool+" :\" value=\"\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"
+    // jQuery('#howto-tool').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteTool\" name=\"button\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"+deletes+"</button>\n" +
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 tool\" placeholder=\""+tool+" :\" value=\"\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"
+    // );
+    jQuery('#howto-tool').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.tool.length-1)+"\"><div class=\"col-10\" data-id=\""+(main.mainEntity.tool.length-1)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(main.mainEntity.tool.length-1)+"\">Tool #"+(main.mainEntity.tool.length)+"</label>\n" +
+    "                <input type=\"text\" name=\"\" class=\"form-control tool\" placeholder=\""+tool+"\" value=\"\" data-id=\""+(main.mainEntity.tool.length-1)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md deleteTool\' data-id=\""+(main.mainEntity.tool.length-1)+"\"></i></div></div>"
     );
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
     jQuery('#json-format').attr('rows',row);
     sticky.update();
 });
-
 
 jQuery('#add-howto-step').click(function () {
     let deletes = lang==='en'?'Delete Step':'Hapus Step';
@@ -76,17 +81,23 @@ jQuery('#add-howto-step').click(function () {
         "text": "",
     });
     print();
-    jQuery('#howto-step').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteStep\" name=\"button\" data-id=\""+(main.mainEntity.step.length-1)+"\">"+deletes+"</button>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 mt-5 instructions\" placeholder=\"@lang('howto.instructions') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n"+
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 imageStep\" placeholder=\"@lang('howto.imageStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 nameStep\" placeholder=\"@lang('howto.nameStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
-        "                <input type=\"text\" name=\"\" class=\"form-control mb-5 url\" placeholder=\"@lang('howto.urlStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "
+    // jQuery('#howto-step').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteStep\" name=\"button\" data-id=\""+(main.mainEntity.step.length-1)+"\">"+deletes+"</button>\n" +
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 mt-5 instructions\" placeholder=\"@lang('howto.instructions') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n"+
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 imageStep\" placeholder=\"@lang('howto.imageStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 nameStep\" placeholder=\"@lang('howto.nameStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
+    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 url\" placeholder=\"@lang('howto.urlStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "
+    // );
+    jQuery('#howto-step').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.step.length-1)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(main.mainEntity.step.length-1)+"\">Step #"+(main.mainEntity.step.length)+": instruction</label>\n" +
+    "                <input type=\"text\" name=\"\" class=\"form-control instructions mb-5\" placeholder=\"Type your instruction here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md deleteStep\' data-id=\""+(main.mainEntity.step.length-1)+"\"></i></div></div></div>\n" +
+    "                <div class=\"row\" data-id=\""+(main.mainEntity.step.length-1)+"\"><div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.mainEntity.step.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep mb-5\" placeholder=\"Type image URL here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div>" + 
+    "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.mainEntity.step.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div>" + 
+    "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.mainEntity.step.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url mb-5\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div></div>"
+
     );
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
     jQuery('#json-format').attr('rows',row);
     sticky.update();
 });
-
 
 jQuery(document).on('keyup', '.name', function () {
     let index = parseInt(jQuery(this).data('id'));
@@ -175,10 +186,11 @@ jQuery(document).on('click', '.deleteSupply', function () {
         for (let i = index + 1; i < main.mainEntity.supply.length + 1; i++) {
             jQuery('.supplyName[data-id=' + (i - 1) + ']').val(jQuery('.supplyName[data-id=' + (i) + ']').val())
         }
-        jQuery('label[data-id=' + main.mainEntity.supply.length + ']').remove();
-        jQuery('.supplyName[data-id=' + main.mainEntity.supply.length + ']').remove();
+        // jQuery('label[data-id=' + main.mainEntity.supply.length + ']').remove();
+        // jQuery('.supplyName[data-id=' + main.mainEntity.supply.length + ']').remove();
         
-        jQuery('.deleteSupply[data-id=' + main.mainEntity.supply.length + ']').remove();
+        // jQuery('.deleteSupply[data-id=' + main.mainEntity.supply.length + ']').remove();
+        jQuery('.row[data-id=' + main.mainEntity.supply.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
     }
@@ -194,10 +206,11 @@ jQuery(document).on('click', '.deleteTool', function () {
         for (let i = index + 1; i < main.mainEntity.tool.length + 1; i++) {
             jQuery('.tool[data-id=' + (i - 1) + ']').val(jQuery('.tool[data-id=' + (i) + ']').val())
         }
-        jQuery('label[data-id=' + main.mainEntity.tool.length + ']').remove();
-        jQuery('.tool[data-id=' + main.mainEntity.tool.length + ']').remove();
-        
-        jQuery('.deleteTool[data-id=' + main.mainEntity.tool.length + ']').remove();
+        // jQuery('label[data-id=' + main.mainEntity.tool.length + ']').remove();
+        // jQuery('.tool[data-id=' + main.mainEntity.tool.length + ']').remove();
+
+        // jQuery('.deleteTool[data-id=' + main.mainEntity.tool.length + ']').remove();
+        jQuery('.row[data-id=' + main.mainEntity.tool.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
     }
@@ -225,6 +238,7 @@ jQuery(document).on('click', '.deleteStep', function () {
         jQuery('.url[data-id=' + main.mainEntity.step.length + ']').remove();
         
         jQuery('.deleteTool[data-id=' + main.mainEntity.step.length + ']').remove();
+        jQuery('.row[data-id=' + main.mainEntity.step.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
     }
