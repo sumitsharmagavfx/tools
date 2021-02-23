@@ -77,7 +77,6 @@ function getHistories() {
             HistoryTemplateMobile(history.url, history.date)
         )
     }
-
 }
 
 function addHistory(url, data) {
