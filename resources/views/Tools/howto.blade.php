@@ -71,10 +71,6 @@ color: white;
 color: var(--grey);
 }
 
-.deleteSupply, .deleteTool, .deleteStep {
-color: var(--darkgrey);
-}
-
 .deleteSupply:hover, .deleteTool:hover, .deleteStep:hover {
 color: var(--black);
 cursor: pointer;
@@ -468,7 +464,7 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">How-to</p>
+              <p class="h6 text-black">How-to Generator</p>
               <div class="mb-5" id="formhowto">
                 <div class="row">
                   <div class="col-12 col-xl-7 col-xxl-6">
