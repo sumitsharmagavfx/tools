@@ -772,7 +772,7 @@ id/link-analyzer
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
-              <div class="" id="noCrawlResult">
+              <div class="" id="empty-container">
                 <div class="text-center">
                   <p class="d-block">No URL analyzed, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
@@ -780,7 +780,7 @@ id/link-analyzer
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="mt-7" id=result>
+              <div class="mt-7" id="analyzer-container" style="display: none">
                 <div class="row">
                   <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
                     <canvas id="myChart" width="150" height="150"></canvas>
