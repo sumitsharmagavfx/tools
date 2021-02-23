@@ -76,8 +76,7 @@ class ApiController extends Controller
 
         try {
             $response = $this->requestLinkAnalyzer($url);
-            return $response;
-            return new BaseApiResource($response['data'], $response['message'], $response['statusCode']);
+            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         } catch (Exception $exception){
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }

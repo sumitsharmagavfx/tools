@@ -26,7 +26,7 @@ trait ApiHelper
             }
 
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
-
+//            dd($response->getBody()->getContents());
             return $response->getBody()->getContents();
         } catch (ClientException $exception) {
             return $exception->getResponse()->getBody()->getContents();

@@ -118,6 +118,7 @@ function analyze(_url) {
                 'url': _url
             },
             beforeSend: () => {
+                updateProgressBar(50);
                 $('#progress-stop-message').hide();
                 $('#progress-start-message').show();
                 $('#progress-finish-message').hide();
@@ -125,7 +126,7 @@ function analyze(_url) {
                     .removeClass('btn-cancel-disabled')
                     .addClass('btn-cancel')
                     .removeAttr('disabled');
-                updateProgressBar(10);
+                updateProgressBar(20);
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -166,6 +167,8 @@ function renderAllData(data){
     $('#internal-link-list').empty();
     $('#show-more-internal').addClass('d-flex').show();
     $('#show-more-external').addClass('d-flex').show();
+    $('#empty-container').hide();
+    $('#analyzer-container').show();
 
     createChart(
         data.internal_links.value,
