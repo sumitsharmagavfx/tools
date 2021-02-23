@@ -80,6 +80,10 @@ cursor: pointer;
   color: var(--black);
 }
 
+.form-control:focus {
+  border-color: var(--primaryblue);
+}
+
 .form-control.description {
   resize: none;
   height: 82%;
@@ -442,7 +446,7 @@ text-decoration: underline;
             <div class="col-md-4 mb-5">
               <div class="form-group mb-0">
                 <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control" id="schema-json-ld">
+                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
                   <option>Home</option>
                   <option>Breadcrumb</option>
                   <option>FAQ Page</option>
@@ -464,12 +468,12 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">How-to Generator</p>
+              <p class="h6 text-black">How-to</p>
               <div class="mb-5" id="formhowto">
                 <div class="row">
                   <div class="col-12 col-xl-7 col-xxl-6">
                     <label class="text-black font-weight-bold" for="name">Name</label>
-                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('howto.name') :" value="" data-id="0">
+                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('howto.name')" value="" data-id="0">
                     <div class="row">
                       <div class="col-12 col-md-4">
                         <label class="text-black font-weight-bold" for="totalTime">Total time</label>
@@ -477,7 +481,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-6 col-md-4">
                         <label class="text-black font-weight-bold" for="estimated">Estimated Cost</label>
-                        <input type="text" name="" class="form-control estimated mb-5" placeholder="@lang('howto.estimated') :" value="" data-id="0">
+                        <input type="text" name="" class="form-control estimated mb-5" placeholder="@lang('howto.estimated')" value="" data-id="0">
                       </div>
                       <div class="col-6 col-md-4">
                         <label for="currency" class="text-black font-weight-bold">Currency</label>
@@ -497,7 +501,7 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-md-12">
                     <label class="text-black font-weight-bold mt-3 mt-xl-0" for="imageUrl">Image URL</label>
-                    <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.imageUrl') :" value="" data-id="0">
+                    <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.imageUrl')" value="" data-id="0">
                   </div>
                 </div>
               </div>
@@ -505,20 +509,20 @@ text-decoration: underline;
                 <div class="col-12 col-md-6">
                   <div id="howto-supply"></div>
                   <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-supply">
-                    <i class='bx bx-plus'></i> ADD SUPPLY
+                    <i class='bx bx-plus'></i> @lang('howto.btn-add-supply')
                   </button>
                 </div>
                 <div class="col-12 col-md-6">
                   <div id="howto-tool"></div>
                   <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-tool">
-                    <i class='bx bx-plus'></i> ADD TOOL
+                    <i class='bx bx-plus'></i> @lang('howto.btn-add-tool')
                   </button>
                 </div>
               </div>
               <div class="row mt-5">
                 <div class="col-10 col-sm-11">
                   <label class="text-black font-weight-bold" for="instructions">Step #1: instruction</label>
-                  <input type="text" name="" class="form-control instructions mb-5" placeholder="Type your instruction here.." value="" data-id="0">
+                  <input type="text" name="" class="form-control instructions mb-5" placeholder="@lang('howto.instructions')" value="" data-id="0">
                 </div>
                 <div class="col-2 col-sm-1">
                   <div class="d-flex justify-content-center mt-9">
@@ -529,15 +533,15 @@ text-decoration: underline;
               <div class="row">
                 <div class="col-12 col-md-4">
                   <label class="text-black font-weight-bold" for="imageStep">Image URL</label>
-                  <input type="text" name="" class="form-control imageStep mb-5" placeholder="Type image URL here.." value="" data-id="0">
+                  <input type="text" name="" class="form-control imageStep mb-5" placeholder="@lang('howto.imageStep')" value="" data-id="0">
                 </div>
                 <div class="col-12 col-md-4">
                   <label class="text-black font-weight-bold" for="nameStep">Name</label>
-                  <input type="text" name="" class="form-control nameStep mb-5" placeholder="Type name here.." value="" data-id="0">
+                  <input type="text" name="" class="form-control nameStep mb-5" placeholder="@lang('howto.nameStep')" value="" data-id="0">
                 </div>
                 <div class="col-12 col-md-4">
                   <label class="text-black font-weight-bold" for="url">URL</label>
-                  <input type="text" name="" class="form-control url mb-5" placeholder="Type URL here.." value="" data-id="0">
+                  <input type="text" name="" class="form-control url mb-5" placeholder="@lang('howto.urlStep')" value="" data-id="0">
                 </div>
               </div>
               <div class="row">
@@ -546,7 +550,7 @@ text-decoration: underline;
                 </div>
                 <div class="col-12 col-md-4">
                   <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-howto-step">
-                    <i class='bx bx-plus'></i> ADD URL
+                    <i class='bx bx-plus'></i> @lang('howto.btn-add-step')
                   </button>
                 </div>
               </div>

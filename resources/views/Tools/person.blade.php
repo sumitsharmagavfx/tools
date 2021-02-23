@@ -71,6 +71,10 @@ color: white;
 color: var(--grey);
 }
 
+.form-control:focus {
+  border-color: var(--primaryblue);
+}
+
 @media (max-width:767px) {
 .btn-add-question {
   width: 100%;
@@ -404,7 +408,7 @@ text-decoration: underline;
             <div class="col-md-4 mb-5">
               <div class="form-group mb-0">
                 <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control" id="schema-json-ld">
+                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
                   <option>Home</option>
                   <option>Breadcrumb</option>
                   <option>FAQ Page</option>
@@ -426,23 +430,23 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">Person Generator</p>
+              <p class="h6 text-black">Person</p>
               <div class="mb-5" id="formbreadcrumb">
                 <div class="mb-5" id="formperson">
                   <div class="row">
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="name">Name</label>
-                      <input type="text" name="" class="form-control name mb-5" placeholder="@lang('person.name') :" value="" data-id="0">
+                      <input type="text" name="" class="form-control name mb-5" placeholder="@lang('person.name')" value="" data-id="0">
                     </div>
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="url">URL</label>
-                      <input type="text" name="" class="form-control url mb-5" placeholder="@lang('person.url') :" value="" data-id="0">
+                      <input type="text" name="" class="form-control url mb-5" placeholder="@lang('person.url')" value="" data-id="0">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="pictureUrl">Image URL</label>
-                      <input type="text" name="" class="form-control pictureUrl mb-5" placeholder="@lang('person.pictureUrl') :" value="" data-id="0">
+                      <input type="text" name="" class="form-control pictureUrl mb-5" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
                     </div>
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
@@ -466,7 +470,7 @@ text-decoration: underline;
                   <div class="row">
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="jobTitle">Job title</label>
-                      <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.jobTitle') :" value="" data-id="0">
+                      <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.jobTitle')" value="" data-id="0">
                     </div>
                     <div class="col-12 col-md-6">
                       <label class="text-black font-weight-bold" for="company">Company</label>
