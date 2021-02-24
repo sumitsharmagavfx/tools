@@ -754,7 +754,7 @@ id/link-analyzer
               <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3'
                  style="display: none"></i>
               <input type="url" class="form-control analyzer-url" name="" value=""
-                     placeholder="http://example.com" id="input-url">
+                     placeholder="http://example.com" id="input-url" autocomplete="off">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
