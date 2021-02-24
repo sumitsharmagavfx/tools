@@ -8,6 +8,16 @@
     position: relative;
 }
 
+.progress.result {
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+
 .progress-red:after {
     content: "";
     width: 100%;
@@ -125,6 +135,18 @@
     display: flex;
     border-radius: 50%;
     font-size: 24px;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
+}
+
+.progress.result .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 35px;
     text-align: center;
     line-height: 20px;
     align-items: center;

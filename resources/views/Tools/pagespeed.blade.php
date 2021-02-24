@@ -543,11 +543,11 @@ id/pagespeed-test
 
                         <!-- HTTP URL -->
                         <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-                        <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+                        <input type="url" id="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         <!-- CRAWL BUTTON -->
-                        <button id="generateButton" type="button" class="btn btn-crawl" name="button">GENERATE</button>
+                        <button id="analysis-button" type="button" class="btn btn-crawl" name="button">GENERATE</button>
                     </div>
                 </div>
             </div>
@@ -563,7 +563,7 @@ id/pagespeed-test
 
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
-                                            <a href="#performance">
+                                            <!-- <a href="#performance"> -->
                                             <div class="circleProgressBar active" id="performancePB" data-toggle="tab" href="#internal-link-tab" role="tab" aria-controls="nav-home" aria-selected="true" id="internal-links-value-tab">
                                                 <div class="progress progress-red performance" data-percentage="30">
                                                     <span class="progress-left">
@@ -580,13 +580,13 @@ id/pagespeed-test
                                                 </div>
                                                 <h2 class="font-weight-bold text-center mb-4 h6 text-black">Peformance</h2>
                                             </div>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
 
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
-                                            <a href="#accessibility">
+                                            <!-- <a href="#accessibility"> -->
                                             <div class="circleProgressBar" id="accessibilityPB">
                                                 <div class="progress progress-orange accessibility" data-percentage="75">
                                                     <span class="progress-left">
@@ -603,13 +603,13 @@ id/pagespeed-test
                                                 </div>
                                                 <h2 class="font-weight-bold text-center mb-4 h6 text-black">Accesibility</h2>
                                             </div>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
 
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
-                                            <a href="#best-practice" id="nav-best-practices">
+                                            <!-- <a href="#best-practice" id="nav-best-practices"> -->
                                             <div class="circleProgressBar" id="practicePB">
                                                 <div class="progress progress-green best-practices" data-percentage="80">
                                                     <span class="progress-left">
@@ -626,13 +626,13 @@ id/pagespeed-test
                                                 </div>
                                                 <h2 class=" font-weight-bold text-center mb-4 h6 text-black">Best Practies</h2>
                                             </div>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
 
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
-                                            <a href="#seo">
+                                            <!-- <a href="#seo"> -->
                                             <div class="circleProgressBar" id="seoPB">
                                                 <div class="progress progress-red seo" data-percentage="4">
                                                     <span class="progress-left">
@@ -649,13 +649,13 @@ id/pagespeed-test
                                                 </div>
                                                 <h2 class=" font-weight-bold text-center mb-4 h6 text-black">SEO</h2>
                                             </div>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
 
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
-                                            <a href="#pwa">
+                                            <!-- <a href="#pwa"> -->
                                             <div class="circleProgressBar" id="pwaPB">
                                                 <div class="progress progress-green pwa" data-percentage="100">
                                                     <span class="progress-left">
@@ -673,7 +673,7 @@ id/pagespeed-test
                                                 </div>
                                                 <h2 class=" font-weight-bold text-center mb-4 h6 text-black">PWA</h2>
                                             </div>
-                                            </a>
+                                            <!-- </a> -->
                                         </div>
 
                                     </div>
@@ -693,27 +693,149 @@ id/pagespeed-test
                                     <span>90-100</span>
                                 </div>
                             </div>
+                            <hr>
+                            <div class="" id="performance">
+                                <div class="mx-5">
+                                    <p class="h4">Performance</p>
+                                    <div class="col">
+                                        <div class="">
+                                            <div class="progress progress-red performance result" data-percentage="30">
+                                                <span class="progress-left">
+                                                    <span class="progress-bar progress-bar-performance"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar progress-bar-performance"></span>
+                                                </span>
+                                                <div class="progress-value" style="width:100%">
+                                                    <div class="value-performance value-red">
+                                                        30
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="performance">
-                                    aaaaaa
+                                    <div class="">
+                                        <div class="accordion accordion-light accordion-toggle-arrow performance-audit" id="performance-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-performance-audit" id="pass-performance-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-performance-audit" id="not-app-performance-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-performance-audit" id="manual-performance-audit"></div>
+                                    </div>
                                 </div>
-                                <div class="tab-pane fade" id="accessibility">
-                                    bbbbb
-                                </div>
-                                <div class="tab-pane fade" id="best-practice">
-                                    cccccc
-                                </div>
-                                <div class="tab-pane fade" id="seo">
-                                    ddddddd
-                                </div>
-                                <div class="tab-pane fade" id="pwa">
-                                    eeeee
-                                </div>
-
                             </div>
+                            <div class="d-none" id="accessibility">
+                                <div class="mx-5">
+                                    <p class="h4">Accesibility</p>
+                                    <div class="col">
+                                        <div class="">
+                                            <div class="progress progress-orange accessibility result" data-percentage="75">
+                                                <span class="progress-left">
+                                                    <span class="progress-bar progress-bar-accessibility"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar progress-bar-accessibility"></span>
+                                                </span>
+                                                <div class="progress-value" style="width:100%">
+                                                    <div class="value-accessibility value-orange">
+                                                        75
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-
+                                    <div class="">
+                                        <div class="accordion accordion-light accordion-toggle-arrow accessibility-audit" id="accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-accessibility-audit" id="pass-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-accessibility-audit" id="not-app-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-accessibility-audit" id="manual-accessibility-audit"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none" id="best-practices">
+                                <div class="mx-5">
+                                    <p class="h4">Best Practies</p>
+                                    <div class="col">
+                                        <div class="">
+                                            <div class="progress progress-green practices result" data-percentage="80">
+                                                <span class="progress-left">
+                                                    <span class="progress-bar progress-bar-practices"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar progress-bar-practices"></span>
+                                                </span>
+                                                <div class="progress-value" style="width:100%">
+                                                    <div class="value-practices value-green">
+                                                        80
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="accordion accordion-light accordion-toggle-arrow best-practices-audit" id="best-practices-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-best-practices-audit" id="pass-best-practices-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-best-practices-audit" id="not-app-best-practices-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-best-practices-audit" id="manual-best-practices-audit"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none" id="seo">
+                                <div class="mx-5">
+                                    <p class="h4">SEO</p>
+                                    <div class="col">
+                                        <div class="">
+                                            <div class="progress progress-red seo result" data-percentage="4">
+                                                <span class="progress-left">
+                                                    <span class="progress-bar progress-bar-seo"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar progress-bar-seo"></span>
+                                                </span>
+                                                <div class="progress-value" style="width:100%">
+                                                    <div class="value-seo value-red">
+                                                        4
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="accordion accordion-light accordion-toggle-arrow seo-audit" id="seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-pwa-audit" id="pass-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-pwa-audit" id="not-app-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-pwa-audit" id="manual-seo-audit"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none" id="pwa">
+                                <div class="mx-5">
+                                    <p class="h4">PWA</p>
+                                    <div class="col">
+                                        <div class="">
+                                            <div class="progress progress-green pwa result" data-percentage="100">
+                                                <span class="progress-left">
+                                                    <span class="progress-bar progress-bar-pwa"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                    <span class="progress-bar progress-bar-pwa"></span>
+                                                </span>
+                                                <div class="progress-value" style="width:100%">
+                                                    <div class="value-pwa value-green">
+                                                        100
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="accordion accordion-light accordion-toggle-arrow accessibility-audit" id="accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-accessibility-audit" id="pass-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-accessibility-audit" id="not-app-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-accessibility-audit" id="manual-accessibility-audit"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1431,12 +1553,75 @@ id/pagespeed-test
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-    $("#pagespeed-tab a").click(function() {
-        $(this).tab('show');
+    $("#performancePB").click(function () {
+        $("#performance").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").addClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
     });
-    $('#pagespeed-tab a').on('shown.bs.tab', function(event) {
-        var x = $(event.target).text(); // active tab
-        var y = $(event.relatedTarget).text(); // previous tab
+
+    $("#accessibilityPB").click(function () {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").addClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#practicePB").click(function () {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").addClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#seoPB").click(function () {
+
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").addClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#pwaPB").click(function () {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").fadeIn().removeClass("d-none").addClass("d-block");
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").addClass("active");
     });
 });
 </script>
