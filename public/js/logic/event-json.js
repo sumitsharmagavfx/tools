@@ -75,7 +75,7 @@ jQuery(document).on('change', '.startDate', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
     main.mainEntity[index].startDate = jQuery(this).val();
-    
+
     print();
 });
 
@@ -83,7 +83,7 @@ jQuery(document).on('change', '.starttime', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
     main.mainEntity[index].starttime = jQuery(this).val();
-    
+
     print();
 });
 
@@ -122,7 +122,7 @@ jQuery(document).on('change', '.attendance', function () {
                         "addressLocality": "",
                         "postalCode": "",
                         "addressCountry": ""
-                    }  
+                    }
         };
         let nameEvent = lang ==='en'?'NameEvent':'NamaEvent';
         let streetAddress = lang ==='en'?'StreetAddress':'AlamatJalan';
@@ -155,7 +155,7 @@ jQuery(document).on('change', '.attendance', function () {
         jQuery('#json-format').attr('rows',row);
         sticky.update();
         console.log("INDEX :",index)
-    
+
     } else if (jQuery(this).val() == 'mixed') {
         main.mainEntity[index].eventAttendanceMode = jQuery(this).val();
         main.mainEntity[index].location ={
@@ -167,7 +167,7 @@ jQuery(document).on('change', '.attendance', function () {
                         "addressLocality": "",
                         "postalCode": "",
                         "addressCountry": ""
-                    }  
+                    }
         };
         main.mainEntity[index].performer ={
                 "@type": "Person",
@@ -299,7 +299,7 @@ jQuery(document).on('click', '.delete', function () {
             jQuery('.validFrom[data-id=' + (i - 1) + ']').val(jQuery('.validFrom[data-id=' + (i) + ']').val())
             jQuery('.url[data-id=' + (i - 1) + ']').val(jQuery('.url[data-id=' + (i) + ']').val())
             jQuery('.availability[data-id=' + (i - 1) + ']').val(jQuery('.availability[data-id=' + (i) + ']').val())
-            
+
         }
         jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
         jQuery('.nameOffer[data-id=' + main.mainEntity.length + ']').remove();
@@ -307,7 +307,7 @@ jQuery(document).on('click', '.delete', function () {
         jQuery('.validFrom[data-id=' + main.mainEntity.length + ']').remove();
         jQuery('.url[data-id=' + main.mainEntity.length + ']').remove();
         jQuery('.availability[data-id=' + main.mainEntity.length + ']').remove();
-        
+
 
         jQuery('.delete[data-id=' + main.mainEntity.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
