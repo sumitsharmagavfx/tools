@@ -783,7 +783,7 @@ id/link-analyzer
               <div class="mt-7" id="analyzer-container" style="display: none">
                 <div class="row">
                   <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
-                    <canvas id="myChart" width="150" height="150"></canvas>
+                    <canvas id="analyzer-chart" width="150" height="150"></canvas>
                   </div>
                   <div class="col-lg-7 col-md-7 d-flex align-items-center resultTable mb-5">
                       <table>
