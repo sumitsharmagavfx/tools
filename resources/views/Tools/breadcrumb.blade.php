@@ -427,14 +427,56 @@ id/json-ld-breadcrumb-schema-generator
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6">Breadcrumb Generator</p>
-              <div class="mb-5" id="formbreadcrumb">
+              <p class="h6 mb-5">Breadcrumb Generator</p>
+              <div class="" id="formbreadcrumb">
+              <div class="row">
+                  <div class="col-10 col-sm-11">
+                      <div class="row">
+                          <div class="col-sm-5">
+                              <label for="pageName" class="font-weight-bold">Page #1 name</label>
+                              <input type="text" id="pageName" class="form-control mb-5 pageName" name="" placeholder="Type your name here.." value="" data-id="0">
+                          </div>
+                          <div class="col-sm-7">
+                              <label for="url" class="font-weight-bold">URL #1</label>
+                              <input type="text" id="url" class="form-control mb-5 url" name="" placeholder="Type your URL here.." value="" data-id="0">
+                          </div>
+                      </div>
+                  </div>
+                 <div class="col-2 col-sm-1">
+                     <div class="d-flex justify-content-center mt-9">
+                       <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                     </div>
+                 </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-10 col-sm-11">
+                      <div class="row">
+                          <div class="col-sm-5">
+                              <label for="pageName" class="font-weight-bold">Page #2 name</label>
+                              <input type="text" id="pageName" class="form-control mb-5 pageName" name="" placeholder="Type your name here.." value="" data-id="1">
+                          </div>
+                          <div class="col-sm-7">
+                              <label for="url" class="font-weight-bold">URL #2</label>
+                              <input type="text" id="url" class="form-control mb-5 url" name="" placeholder="Type your URL here.." value="" data-id="1">
+                          </div>
+                      </div>
+                  </div>
+                 <div class="col-2 col-sm-1">
+                     <div class="d-flex justify-content-center mt-9">
+                       <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
+                     </div>
+                 </div>
+              </div>
+
+              </div>
+              <!-- <div class="mb-5" id="formbreadcrumb">
                 <input type="text" name="" class="form-control mb-5 pageName" placeholder="@lang('breadcrumb.pageName') :" value="" data-id="0">
                 <input type="text" name="" class="form-control mb-5 url" placeholder="@lang('breadcrumb.url') :" value="" data-id="0">
 
-              </div>
+              </div> -->
               <button type="button" class="btn btn-add-question" name="button" id="add-breadcrumb">
-              <i class='bx bx-plus'></i> ADD URL
+                  <i class='bx bx-plus'></i> ADD URL
               </button>
 
             </div>

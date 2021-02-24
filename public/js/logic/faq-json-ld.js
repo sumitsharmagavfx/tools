@@ -19,7 +19,7 @@ const refreshLocalStorage = function(){
                         '</div>'+
                     '</div>'+
                 '</div>'
-            
+
                 let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
                 '<div class="d-flex justify-content-between">'+
                 '  <div class="local-collection-title">'+temp.mainEntity[0].name+'</div>'+
@@ -29,7 +29,7 @@ const refreshLocalStorage = function(){
                 '  </div>'+
                 '</div>'+
                 '</li>'
-                
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
@@ -124,7 +124,7 @@ const save = function(){
         var temp = define();
         if (keys){
             temp = JSON.parse(keys)
-        }
+        }        
         if (!temp.faq.includes(key)){
             temp.faq.push(key)
         }
@@ -144,7 +144,7 @@ const save = function(){
             window.localStorage.setItem('keys', JSON.stringify(temp));
             window.localStorage.removeItem(key);
         }
-    }    
+    }
 }
 
 let main =
