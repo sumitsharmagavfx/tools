@@ -33,10 +33,24 @@ trait ApiHelper
         }
     }
 
+    protected function keywordResearchOverview($data = [])
+    {
+        $options = [];
+
+        try {
+            $options['form_params'] = $data;
+            $response = $this->client->get(env('KEYWORD_RESEARCH_API_URL') . 'overview' . "?key=".env('KEYWORD_RESEARCH_KEY') , $options);
+            return \GuzzleHttp\json_decode($response->getBody(), 1);
+        }catch (ClientException $exception){
+            return $exception->getResponse()->getBody()->getContents();
+        }
+
+
+    }
+
     protected function requestTechLookup($url)
     {
         $response = $this->client->get(env('TECHNOLOGY_LOOKUP_API_URL') . "api/tech-lookup?url=$url");
-        return \GuzzleHttp\json_decode($response->getBody(), 1);
     }
 
     protected function requestHreflangChecker($url)

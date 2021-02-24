@@ -880,18 +880,18 @@ id/keyword-research
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
           <div class="col-sm-7 col-md-8 col-lg-7 col-xl-8 d-flex align-items-center py-1">
-            <input type="text" class="form-control kwresearch-url" name="" value="" placeholder="INPUT / PASTE YOUR KEYWORD">
+            <input type="text" class="form-control kwresearch-url" id="kwsearch" name="" value="" placeholder="INPUT / PASTE YOUR KEYWORD">
           </div>
           <div class="col-sm-5 col-md-4 col-lg-5 col-xl-4 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <select class="form-control market mx-1" name="">
+            <select class="form-control market mx-2 selectpicker" data-size="3" data-live-search="true" name="" id="market">
               <option value="" disabled selected>Select market</option>
-              <option value="">Indonesia, id-ID</option>
-              <option value="">Indonesia, en-ID</option>
-              <option value="">Singapore, en-SG</option>
+              <option value="2360:id">Indonesia, id-ID</option>
+{{--              <option value="">Indonesia, en-ID</option>--}}
+{{--              <option value="">Singapore, en-SG</option>--}}
             </select>
 
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK KEYWORD</button>
+            <button id="goResearch" type="button" class="btn btn-crawl" name="button">CHECK KEYWORD</button>
           </div>
         </div>
       </div>
@@ -928,19 +928,15 @@ id/keyword-research
                     </div>
                     <div class="px-5 mb-5">
                       <div class="row">
-                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Search Volume</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                        <div class="col-xl-4 col-sm-4 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Search Volume</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
                           <p class="h1 mb-0 font-weight-bolder">9.999.999</p>
                           <p>Search Volume</p>
                         </div>
-                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Keyword Difficulty</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
-                          <p class="h1 mb-0 font-weight-bolder">999</p>
-                          <p>Keyword Difficulty</p>
-                        </div>
-                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Paid Difficulty</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                        <div class="col-xl-4 col-sm-4 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Paid Difficulty</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
                           <p class="h1 mb-0 font-weight-bolder">999</p>
                           <p>Paid Difficulty</p>
                         </div>
-                        <div class="col-xl-3 col-sm-6 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Cost Per Click (CPC)</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
+                        <div class="col-xl-4 col-sm-4 text-center overview-label" data-toggle="tooltip" data-theme="dark" data-html="true" title="<b>Cost Per Click (CPC)</b> is Lorem Ipsum Dolor Sit Amet Kontekstural Explicit">
                           <p class="h1 mb-0 font-weight-bolder">$99.99</p>
                           <p>Cost Per Click (CPC)</p>
                         </div>
@@ -1323,21 +1319,28 @@ id/keyword-research
           <div class="px-2 mb-3 d-flex align-items-center">
             <span class="text-black font-15px font-weight-bolder">Progress</span>
           </div>
-          <div class="card card-custom mb-5">
-            <div class="card-body py-4 px-5">
-              <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
-                <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+            <div class="card card-custom mb-5">
+                <div class="card-body py-4 px-5">
+                    <div class="text-center">
+                        <p class="text-black font-weight-bold mb-0" id="progress-stop-message">Our robot is sleeping right now. Give
+                            him a task!</p>
+                        <p class="text-black font-weight-bold mb-0" id="progress-start-message" style="display: none">Our robot is excecuting your task..</p>
+                        <p class="text-black font-weight-bold mb-0" id="progress-finish-message" style="display: none">Our robot is already finished your
+                            task.</p>
+                        <div class="progress my-3">
+                            <div class="progress-bar" role="progressbar" style="width: 0%;"
+                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                                 id="progress-bar-loader">
+
+                            </div>
+                        </div>
+                        {{--                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>--}}
+                        <button type="button" class="btn btn-cancel-disabled" disabled name="button"
+                                id="cancel-request-btn">Cancel
+                        </button>
+                    </div>
                 </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
-              </div>
             </div>
-          </div>
           <div id="local-collection-desktop" class="local-collection">
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
@@ -1349,55 +1352,10 @@ id/keyword-research
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
+              <ul class="list-group" id="history-desktop">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
                     <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
                   </div>
                 </li>
               </ul>
@@ -1442,57 +1400,9 @@ id/keyword-research
         <span class="clear-all font-15px pointer">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
+    <div class="local-collection-body mt-3 px-5" id="history-mobile">
+
+
     </div>
     <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
       <div class="card bg-transparent" style="">
@@ -1659,59 +1569,12 @@ id/keyword-research
 @endpush
 @push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
+<script>
+    const KEYWORD_RESEARCH_API_URL = '{{ route('api.keyword-research') }}';
+</script>
+<script src="{{ asset('js/logic/keyword-research.js') }}"></script>
 <script type="text/javascript">
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-      labels: ["Feb 20", "Mar 20", "Apr 20", "May 20", "Jun 20", "Jul 20", "Aug 20", "Sep 20", "Oct 20", "Nov 20", "Dec 20", "Jan 21"],
-      datasets: [{
-          label: 'Search Volume',
-          data: [1600, 1900, 1600, 1000, 880, 1000, 2400, 1900, 1600, 1300, 1600, 1600],
-          borderColor: '#18A0FB',
-          backgroundColor: '#18A0FB',
-          pointBackgroundColor: '#fff',
-          pointBorderColor: '#18A0FB',
-          fill: false,
-          lineTension: 0,
-          borderWidth: 1,
-          hidden: false
-      }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: false,
-    legend: {
-        display: false,
-        align: 'start',
-        padding: 20
-    },
-    scales: {
-        xAxes: [{
-            display: true,
-        }],
-        yAxes: [ {
-            display:true,
-            ticks: {
-              maxTicksLimit: 7,
-            },
-        }]
-    },
-    tooltips: {
-        backgroundColor: '#fff',
-        cornerRadius: 0,
-        displayColors: false,
-        titleFontFamily: "'Roboto', sans-serif",
-        titleFontColor: '#2A2F33',
-        bodyAlign: 'center',
-        bodyFontFamily: "'Roboto', sans-serif",
-        bodyFontColor: '#2A2F33',
-        bodyFontStyle: 'normal',
-        position: 'average',
-        intersect: false,
-    }
-  }
-});
+
 </script>
 @endpush
 

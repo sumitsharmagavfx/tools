@@ -81,4 +81,23 @@ class ApiController extends Controller
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }
     }
+
+    public function keywordResearch(Request $request){
+
+        $params = [
+            'keyword' => $request->get('keyword'),
+            'location_code' => $request->get('location_code'),
+            'language_code' => $request->get('language_code')
+        ];
+
+//        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+//            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+//        }
+
+        $response = $this->keywordResearchOverview($params);
+
+        return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+
+
+    }
 }
