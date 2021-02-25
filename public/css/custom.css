@@ -326,7 +326,7 @@ a:hover {
         padding-left: 0px !important;
     }
     .container-provide,
-    .container-insight, 
+    .container-insight,
     .container-footer {
         padding: 0px 100px;
     }
@@ -428,7 +428,7 @@ a:hover {
 /* Custom New Footer */
 .custom-footer-new {
     background: var(--white);
-    padding: 50px 0;
+    padding-bottom: 50px;
 }
 .footer-new-logo {
     width: fit-content;

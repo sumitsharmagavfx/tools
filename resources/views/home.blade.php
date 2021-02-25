@@ -508,7 +508,7 @@ id
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
               <div class="text-center">
-                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <i class='text-darkgrey bx bx-link bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Redirect Chain Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                 <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
@@ -521,7 +521,7 @@ id
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
               <div class="text-center">
-                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <i class='text-darkgrey bx bx-bot bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Technology Lookup</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                 <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
@@ -534,7 +534,7 @@ id
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
               <div class="text-center">
-                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <i class='text-darkgrey bx bx-lg bx-globe' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Link Analyzer</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                 <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
@@ -547,7 +547,7 @@ id
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
               <div class="text-center">
-                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <i class='text-darkgrey bx bx-file-find bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Hreflang Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                 <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
@@ -560,7 +560,7 @@ id
           <div class="card card-custom card-stretch card-home">
             <div class="card-body p-7">
               <div class="text-center">
-                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <i class='text-darkgrey bx bx-test-tube bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                 <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
