@@ -392,10 +392,10 @@ id
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
       <div class="text-center">
-        <h1 class="text-black font-weight-bolder">SEO TOOLS by CMLABS</h1>
+        <h1 class="text-black font-weight-bold display-4">SEO TOOLS by CMLABS</h1>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <p class="text-black ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nibh mauris imperdiet est tincidunt libero. Pellentesque eget lacus, congue in aliquet luctus.</p>
+            <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nibh mauris imperdiet est tincidunt libero. Pellentesque eget lacus, congue in aliquet luctus.</p>
           </div>
         </div>
       </div>
@@ -491,18 +491,83 @@ id
           </div>
         </div>
 
-                <div class="col-6 col-md-3 mb-8">
-                  <div class="card card-custom card-stretch card-home">
-                    <div class="card-body p-7">
-                      <div class="text-center">
-                        <i class='text-darkgrey bx bx-mask bx-lg' ></i>
-                        <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
-                        <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                        <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Redirect Chain Checker</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Technology Lookup</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Link Analyzer</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Hreflang Checker</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 mb-8">
+          <div class="card card-custom card-stretch card-home">
+            <div class="card-body p-7">
+              <div class="text-center">
+                <i class='text-darkgrey bx bx-mask bx-lg' ></i>
+                <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
+                <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
+                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
       </div>
