@@ -88,6 +88,36 @@
                         <span class="menu-text">Title and Meta Checker</span>
                     </a>
                 </li>
+                <li class="menu-item menu-item-submenu" aria-haspopup="true">
+                    <a href="" class="menu-link menu-toggle">
+                        <span class="menu-text">Menu Dropdown</span>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li class="menu-item menu-item-parent" aria-haspopup="true">
+								<span class="menu-link">
+									<span class="menu-text">Menu Dropdown</span>
+								</span>
+							</li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+								<a href="#" class="menu-link">
+									<span class="menu-text">Menu Text 1</span>
+								</a>
+							</li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+								<a href="#" class="menu-link">
+									<span class="menu-text">Menu Text 2</span>
+								</a>
+							</li>
+                            <li class="menu-item menu-item-children" aria-haspopup="true">
+								<a href="#" class="menu-link">
+									<span class="menu-text">Menu Text 3</span>
+								</a>
+							</li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
         <div class="aside-footer d-flex flex-column flex-column-auto">
