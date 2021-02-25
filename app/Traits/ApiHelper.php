@@ -50,4 +50,9 @@ trait ApiHelper
         $response = $this->request("api/link-analyzer/analyze", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
+
+    protected function requestRedirectChainChecker($url){
+        $response = $this->request("api/redirect-chain-checker/check", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
 }

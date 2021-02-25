@@ -77,7 +77,23 @@ class ApiController extends Controller
         try {
             $response = $this->requestLinkAnalyzer($url);
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
-        } catch (Exception $exception){
+        } catch (Exception $exception) {
+            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+        }
+    }
+
+    public function analyzeRedirectChain(Request $request)
+    {
+        $url = $request->get('url');
+
+        if (!filter_var($url, FILTER_VALIDATE_URL)) {
+            return new BaseApiResource(null, 'URL is not valid', 422, 'danger');
+        }
+
+        try {
+            $response = $this->requestRedirectChainChecker($url);
+            return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
+        } catch (Exception $exception) {
             return new BaseApiResource($response['data'] ?? null, $response['message'], $response['statusCode']);
         }
     }
