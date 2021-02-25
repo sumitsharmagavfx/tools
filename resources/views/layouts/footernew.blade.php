@@ -2,7 +2,7 @@
     <div class="container container-footer-new">
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="h3 text-darkgrey mb-5">SEO Tools</div>
+                <div class="h3 text-black mb-5">SEO Tools</div>
                 <div class="splide splide-footer-seo mb-7">
                     <div class="splide__track custom_splide_track">
                         <ul class="splide__list">
@@ -81,7 +81,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="h3 text-custom-darkgrey mb-5">Company</div>
+                <div class="h3 text-custom-black mb-5">Company</div>
                 <div class="d-flex mb-10">
                     <a href="">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
@@ -120,7 +120,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="h3 text-custom-darkgrey mb-5">@lang('layouts.footer-resource-title')</div>
+                <div class="h3 text-custom-black mb-5">Resources</div>
                 <div class="mb-10">
                     <a href="">
                         <div class="card card-custom footer-resource-list mb-2">
@@ -162,9 +162,9 @@
                     <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-45px mr-3"/>
                     <span class="h1 text-black mb-2">cmlabs</span>
                 </a>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Jakarta <b>(021) 666 044 70</b></div>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4">Malang <b>(0341) 475 665</b></div>
-                <div class="h5 text-custom-darkgrey font-weight-light mb-4"><b>business</b>@cmlabs.co</div>
+                <div class="h5 text-custom-black font-weight-light mb-4">Jakarta <b>(021) 666 044 70</b></div>
+                <div class="h5 text-custom-black font-weight-light mb-4">Malang <b>(0341) 475 665</b></div>
+                <div class="h5 text-custom-black font-weight-light mb-4"><b>business</b>@cmlabs.co</div>
                 <div class="d-flex align-items-center justify-content-start mt-7 mb-10">
                     <a rel="noopener noreferrer nofollow" href="https://www.linkedin.com/company/cmlabs/" class="footer-new-icon mr-3" target="_blank"><i class="bx bxl-linkedin-square icon-xl"></i></a>
                     <a rel="noopener noreferrer nofollow" href="https://medium.com/cmlabs" class="footer-new-icon mr-3"><i class="bx bxl-medium icon-xl"></i></a>

@@ -456,14 +456,6 @@ id/word-counter
     }
   }
 
-  @media (min-width: 992px) {
-
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;

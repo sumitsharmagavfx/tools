@@ -17,7 +17,7 @@ jQuery('#crawlURL').click(function(){
             $('#resulturlmobile').text('https://' + urls);
             $('#desc').val(res.description)
             $('#title').val(res.title)
-            $("#manual-mode").show();
+            $("#manual-mode").removeClass("d-none").addClass("d-block").slideDown();
             $('#desc').attr('disabled','disabled');
             $('#title').attr('disabled','disabled');
             var rateTitle = titleChecker(res.title);
@@ -109,7 +109,7 @@ const refreshLocalStorage = function(){
                         '</div>'+
                     '</div>'+
                 '</div>'
-            
+
                 let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
                 '<div class="d-flex justify-content-between">'+
                 '  <div class="local-collection-title">'+temp+'</div>'+
@@ -119,10 +119,10 @@ const refreshLocalStorage = function(){
                 '  </div>'+
                 '</div>'+
                 '</li>'
-                
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
-            }   
+            }
         }
     }catch(e){
         console.log(e)
@@ -216,4 +216,3 @@ const fillDescBar = function(param){
         $('#descbar'+i).addClass("blank")
     }
 }
-

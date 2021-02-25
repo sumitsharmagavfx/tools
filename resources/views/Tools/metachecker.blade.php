@@ -548,14 +548,6 @@ id/page-title-meta-description-checker
     }
   }
 
-  @media (min-width: 992px) {
-
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;
@@ -784,24 +776,19 @@ id/page-title-meta-description-checker
               <div class="metachecker-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                 <i class='bx bxs-cog text-white'></i>
               </div>
-              <div id="manualModeOff" class="metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is OFF">
+              <div id="manualModeOff" class="d-block metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is OFF">
                 MANUAL
               </div>
-              <div id="manualModeOn" class="metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">
+              <div id="manualModeOn" class="d-none metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">
                 MANUAL
               </div>
-              <div id="botModeOff" class="metachecker-background-text-size metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="BOT mode is OFF">
+              <div id="botModeOff" class="d-none metachecker-background-text-size metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="BOT mode is OFF">
                 BOT
               </div>
-              <div id="botModeOn" class="metachecker-background-text-size active metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">
+              <div id="botModeOn" class="d-block metachecker-background-text-size active metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">
                 BOT
               </div>
             </div>
-            <!-- <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-group-black text-white"><i class='bx bxs-cog' style='color:#ffffff'></i></button>
-              <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="MANUAL mode is ON">MANUAL</button>
-              <button type="button" class="btn btn-group-black text-white" data-toggle="tooltip" data-theme="dark" title="BOT mode is ON">BOT</button>
-            </div> -->
           </div>
           <div class="col-md-6 col-mobile">
             <input id="url" type="text" class="input-url text-center w-100" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
@@ -812,7 +799,7 @@ id/page-title-meta-description-checker
         </div>
       </div>
 
-      <div id="manual-mode" class="mb-5">
+      <div id="manual-mode" class="mb-5 d-none">
         <div class="bg-info bg-primaryblue border-radius-5px mb-5 px-9 py-5">
           <div class="row d-flex flex-column ">
             <div class="d-flex align-items-center flex-row">
@@ -872,7 +859,7 @@ id/page-title-meta-description-checker
               </div>
               <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                  <span id="resulturl">www.schengenvisainfo.com</span><span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                  <span><span id="resulturl">www.schengenvisainfo.com</span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                 </div>
                 <div id="resulttitle" class="title-meta mb-2 color-green">
                   Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -940,7 +927,7 @@ id/page-title-meta-description-checker
               </div>
               <div class="d-flex flex-column px-10 py-3 bg-color-lightyellow">
                 <div class="link-meta d-flex flex-row align-items-center mb-2">
-                  <span id="resulturlmobile">www.schengenvisainfo.com</span><span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+                  <span><span id="resulturlmobile">www.schengenvisainfo.com</span> › schengen-visa-insurance <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
                 </div>
                 <div id="resulttitlemobile" class="title-meta mb-2 color-green">
                   Schengen Travel Visa Insurance – Europe Travel Insurance
@@ -1533,26 +1520,22 @@ id/page-title-meta-description-checker
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 <script type="text/javascript">
 $( document ).ready(function() {
-    $("#manualModeOn").hide();
-    $("#botModeOff").hide();
-    $("#manual-mode").hide();
-
     $('#manualModeOff').click(function(){
-      $('#manualModeOn').show();
-      $('#manualModeOff').hide();
-      $('#botModeOn').hide();
-      $('#botModeOff').show();
-      $("#manual-mode").show();
-      $("#crawlURL").attr("disabled", true);
+        $('#manualModeOn').removeClass("d-none").addClass("d-block");
+        $('#botModeOff').removeClass("d-none").addClass("d-block");
+        $('#manual-mode').removeClass("d-none").addClass("d-block").slideDown();
+        $('#manualModeOff').removeClass("d-block").addClass("d-none");
+        $('#botModeOn').removeClass("d-block").addClass("d-none");
+        $("#crawlURL").attr("disabled", true);
     });
 
     $('#botModeOff').click(function(){
-      $('#manualModeOn').hide();
-      $('#manualModeOff').show();
-      $('#botModeOn').show();
-      $('#botModeOff').hide();
-      $("#manual-mode").hide();
-      $("#crawlURL").attr("disabled", false);
+        $('#botModeOn').removeClass("d-none").addClass("d-block");
+        $('#manualModeOff').removeClass("d-none").addClass("d-block");
+        $('#manual-mode').slideUp().removeClass("d-block");
+        $('#botModeOff').removeClass("d-block").addClass("d-none");
+        $('#manualModeOn').removeClass("d-block").addClass("d-none");
+        $("#crawlURL").attr("disabled", false);
     });
 });
 jQuery.each(jQuery('textarea[data-autoresize]'), function() {

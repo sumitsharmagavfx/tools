@@ -1,6 +1,6 @@
 :root {
     --primaryblue: #18a0fb;
-    --black: #2A2F33;
+    --black: #2D393D;
     --darkgrey: #66757F;
     --grey: #CCD6DD;
     --lightgrey: #E1E8ED;
@@ -13,6 +13,15 @@ html, body {
 body {
   background: #e1e8ed;
 }
+
+@media (min-width: 992px) {
+
+  .container-description,
+  .container-tools {
+    padding: 0px 50px;
+  }
+}
+
 .custom-mb {
     margin-bottom: 35px;
 }

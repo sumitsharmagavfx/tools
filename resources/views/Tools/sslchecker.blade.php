@@ -18,12 +18,6 @@ id/ssl-checker
 
 @push('style')
 <style media="screen">
-@media (min-width: 992px) {
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
-  }
-}
 @media only screen and (min-width: 768px) {
   #local-collection-desktop .local-collection-title {
     max-width: 70%;
@@ -215,12 +209,7 @@ id/ssl-checker
     vertical-align: middle;
   }
 }
-@media (min-width: 992px) {
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
-  }
-}
+
 .card-whats-new {
   background: var(--lightgrey);
   border-radius: 5px;

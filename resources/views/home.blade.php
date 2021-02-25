@@ -171,15 +171,6 @@ id
   }
 }
 
-
-@media (min-width: 992px) {
-
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
-  }
-}
-
 .bx-lg {
   font-size: 3rem !important;
   margin-bottom: 0.5rem;
@@ -304,12 +295,7 @@ id
     vertical-align: middle;
   }
 }
-@media (min-width: 992px) {
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
-  }
-}
+
 .card-whats-new {
   background: var(--lightgrey);
   border-radius: 5px;
