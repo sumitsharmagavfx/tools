@@ -109,7 +109,7 @@ jQuery(document).on('keyup', '.jobTitle', function () {
 jQuery(document).on('keyup', '.identifier', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
-    main.mainEntity[index].identifier.value = jQuery(this).val();
+    main.mainEntity[index].identifier = jQuery(this).val();
     print();
 });
 
@@ -130,7 +130,7 @@ jQuery(document).on('keyup', '.name', function () {
 jQuery(document).on('change', '.employmentType', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
-    main.mainEntity[index].employmentType = jQuery(this).val();
+    main.mainEntity[index].employmentType = jQuery(this).find(":selected").text();
     print();
 });
 
@@ -148,7 +148,7 @@ jQuery(document).on('keyup', '.industry', function () {
     print();
 });
 
-jQuery(document).on('change', '.workHours', function () {
+jQuery(document).on('keyup', '.workHours', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
     main.mainEntity[index].workHours = jQuery(this).val();
@@ -276,7 +276,7 @@ jQuery(document).on('click', '.delete', function () {
         print();
         for (let i = index + 1; i < main.mainEntity.length + 1; i++) {
             jQuery('.jobTitle[data-id=' + (i - 1) + ']').val(jQuery('.jobTitle[data-id=' + (i) + ']').val())
-            jQuery('.identifierrl[data-id=' + (i - 1) + ']').val(jQuery('.identifier[data-id=' + (i) + ']').val())
+            jQuery('.identifier[data-id=' + (i - 1) + ']').val(jQuery('.identifier[data-id=' + (i) + ']').val())
             jQuery('.employmentType[data-id=' + (i - 1) + ']').val(jQuery('.employmentType[data-id=' + (i) + ']').val())
             jQuery('.description[data-id=' + (i - 1) + ']').val(jQuery('.description[data-id=' + (i) + ']').val())
             jQuery('.name[data-id=' + (i - 1) + ']').val(jQuery('.name[data-id=' + (i) + ']').val())
