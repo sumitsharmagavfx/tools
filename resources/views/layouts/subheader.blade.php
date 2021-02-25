@@ -41,6 +41,16 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
                     </li>
+                    <li class="nav-item dropdown ml-7">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Menu text 1</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Menu text 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Menu text 3</a>                            
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
