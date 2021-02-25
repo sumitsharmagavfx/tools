@@ -32,7 +32,14 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
 //});
 
     Route::get('/{lang}/strikethrough', 'ToolsController@strikethrough');
+    Route::get('/{lang}/json-ld-schema-generator', 'ToolsController@jsonld');
     Route::get('/{lang}/json-ld-faq-schema-generator', 'ToolsController@FAQ');
+    Route::get('/{lang}/json-ld-breadcrumb-schema-generator', 'ToolsController@breadcrumb');
+    Route::get('/{lang}/json-ld-how-to-schema-generator', 'ToolsController@howto');
+    Route::get('/{lang}/json-ld-job-posting-schema-generator', 'ToolsController@jobposting');
+    Route::get('/{lang}/json-ld-person-schema-generator', 'ToolsController@person');
+    Route::get('/{lang}/json-ld-product-schema-generator', 'ToolsController@product');
+    Route::get('/{lang}/json-ld-recipe-schema-generator', 'ToolsController@recipe');
     Route::get('/{lang}/word-counter', 'ToolsController@wordcounter');
     Route::get('/{lang}/page-title-meta-description-checker', 'ToolsController@metachecker');
     Route::get('/{lang}/dummy-credit-card-generator', 'ToolsController@creditcard');
@@ -42,9 +49,11 @@ Route::middleware([\App\Http\Middleware\ManualAuth::class])->group(function (){
     Route::get('/{lang}/mobile-friendly-test', 'ToolsController@mobiletest');
     Route::get('/{lang}/ssl-checker', 'ToolsController@sslchecker');
     Route::get('/{lang}/robotstxt-generator', 'ToolsController@robotgenerator');
+    Route::get('/{lang}/technology-lookup', 'ToolsController@technologylookup');
+    Route::get('/{lang}/redirect-checker', 'ToolsController@redirectchecker');
+    Route::get('/{lang}/hreflang-checker', 'ToolsController@hreflangchecker');
+    Route::get('/{lang}/link-analyzer', 'ToolsController@linkanalyzer');
+    Route::get('/{lang}/keyword-research', 'ToolsController@keywordresearch');
     Route::get('/en/version', 'ToolsController@englishVersion');
     Route::get('/id/version', 'ToolsController@indonesiaVersion');
 });
-
-
-

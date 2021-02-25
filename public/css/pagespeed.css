@@ -1,22 +1,66 @@
 .progress {
-    width: 150px;
-    height: 150px;
-    line-height: 150px;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
     background: none;
     margin: 0 auto;
     box-shadow: none;
     position: relative;
 }
 
-.progress:after {
+.progress.result {
+    width: 100px !important;
+    height: 100px !important;
+    line-height: 100px !important;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+
+.progress-red:after {
     content: "";
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 7px solid #eee;
+    border: 7px solid #ffdddd;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.progress-orange:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid #fef4d1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-green:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid #e6f8d0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.value-red {
+    color:#FF5656;
+}
+
+.value-orange {
+    color:#FBC918;
+}
+
+.value-green {
+    color:#84DB15;
 }
 
 .progress > span {
@@ -32,7 +76,7 @@
     left: 0;
 }
 
-.progress .progress-bar {
+.progress-red .progress-bar {
     width: 100%;
     height: 100%;
     background: none;
@@ -40,7 +84,29 @@
     border-style: solid;
     position: absolute;
     top: 0;
-    border-color: #ffb43e;
+    border-color: #FF5656;
+}
+
+.progress-orange .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 7px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: #FBC918;
+}
+
+.progress-green .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 7px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    border-color: #84DB15;
 }
 
 .progress .progress-left .progress-bar {
@@ -68,18 +134,30 @@
 .progress .progress-value {
     display: flex;
     border-radius: 50%;
-    font-size: 36px;
+    font-size: 24px;
     text-align: center;
     line-height: 20px;
     align-items: center;
     justify-content: center;
     height: 100%;
-    font-weight: 300;
+    font-weight: 500;
 }
 
-.progress .progress-value div {
-    margin-top: 10px;
+.progress.result .progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 35px;
+    text-align: center;
+    line-height: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
 }
+
+/* .progress .progress-value div {
+    margin-top: 10px;
+} */
 
 .progress .progress-value span {
     font-size: 12px;

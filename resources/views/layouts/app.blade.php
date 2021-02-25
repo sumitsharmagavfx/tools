@@ -16,6 +16,7 @@
     <meta property="og:image" content="{{asset('media/logos/new/new-logo-default.png')}}" />
     <meta property="og:image:width" content="1142" />
     <meta property="og:image:height" content="1142" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     @if(env('APP_ENV')==='production')
         <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156389913-2"></script>
@@ -86,12 +87,12 @@
             @include('layouts.header')
             <!--end::Header-->
             <!--begin::Content-->
-            <div class="content d-flex flex-column flex-row-fluid custom-data-content" id="kt_content">
+            <div class="content d-flex flex-column flex-row-fluid custom-data-content pb-0" id="kt_content">
               @include('layouts.subheader')
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div style="padding-top: 20px;">
+                    <div style="padding-top: 20px; width:100%">
                         @yield('content')
                     </div>
                     <!--end::Container-->
@@ -156,9 +157,7 @@
   };
 </script>
 <script>
-$(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-});
+
 </script>
 <script type="text/javascript">
   // var deadline = new Date("dec 1, 2020 12:00:00").getTime();

@@ -7,36 +7,39 @@
                 </a>
                 <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
                     <li class="nav-item">
-                        <a class="nav-link active" href="">Home</a>
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">JSON-LD Generator</a>
+                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD Generator</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Page Speed Test</a>
+                        <a class="nav-link @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Sitemap.XML Generator</a>
+                        <a class="nav-link @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap.XML Generator</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Mobile Friendly Test</a>
+                        <a class="nav-link @yield('mobile-test')" href="/{{ $local }}/mobile-friendly-test">Mobile Friendly Test</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">SSL Certificate Checker</a>
+                        <a class="nav-link @yield('ssl-checker')" href="/{{ $local }}/ssl-checker">SSL Certificate Checker</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Robots.TXT Generator</a>
+                        <a class="nav-link @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots.TXT Generator</a>
                     </li>
+                    <!-- <li class="nav-item ml-7">
+                        <a class="nav-link @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                    </li> -->
                 </ul>
                 <ul class="nav custom-nav" id="menu_tools_writer">
                     <li class="nav-item">
-                        <a class="nav-link active" href="">Home</a>
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Word Counter</a>
+                        <a class="nav-link @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
                     </li>
                     <li class="nav-item ml-7">
-                        <a class="nav-link" href="">Title and Meta Checker</a>
+                        <a class="nav-link @yield('title-checker')" href="/{{ $local }}/page-title-meta-description-checker">Title and Meta Checker</a>
                     </li>
                 </ul>
             </div>

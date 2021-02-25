@@ -10,26 +10,53 @@
 html, body {
     font-family: 'Roboto', sans-serif !important;
 }
-
 body {
   background: #e1e8ed;
 }
+.custom-mb {
+    margin-bottom: 35px;
+}
 .text-primaryblue {
-  color: var(--primaryblue) !important;
+  color: var(--primaryblue);
 }
 .text-black {
-  color: var(--black) !important;
+  color: var(--black);
 }
 .text-darkgrey {
-  color: var(--darkgrey) !important;
+  color: var(--darkgrey);
 }
 .text-grey {
-  color: var(--grey) !important;
+  color: var(--grey);
 }
 .text-lightgrey {
-  color: var(--lightgrey) !important;
+  color: var(--lightgrey);
 }
 .text-white {
+  color: var(--white);
+}
+
+.text-hover-primaryblue:hover {
+  cursor: pointer;
+  color: var(--primaryblue) !important;
+}
+.text-hover-black:hover {
+  cursor: pointer;
+  color: var(--black) !important;
+}
+.text-hover-darkgrey:hover {
+  cursor: pointer;
+  color: var(--darkgrey) !important;
+}
+.text-hover-grey:hover {
+  cursor: pointer;
+  color: var(--grey) !important;
+}
+.text-hover-lightgrey:hover {
+  cursor: pointer;
+  color: var(--lightgrey) !important;
+}
+.text-hover-white:hover {
+  cursor: pointer;
   color: var(--white) !important;
 }
 
@@ -49,17 +76,9 @@ body {
     background: var(--primaryblue) !important;
 }
 
-.for-mobile {
-    display: none;
-}
-
-@media only screen and (max-width: 800px) {
-    .for-desktop {
-        display: none;
-    }
-
-    .for-mobile {
-        display: inline;
+@media only screen and (max-width: 992px) {
+    .custom-mb {
+        margin-bottom: 20px !important;
     }
 }
 
@@ -268,7 +287,7 @@ a:hover {
     .custom-wrapper {
         padding-left: 0px !important;
     }
-    .container-freetools, .container-provide,
+    .container-provide,
     .container-insight, .container-footer {
         padding: 0px 100px;
     }
@@ -304,7 +323,7 @@ a:hover {
     font-weight: 500;
 }
 .section-insight {
-    background: var(--black);
+    background: #2D393D;
     padding: 100px 0px;
 }
 .card-insight {
@@ -317,7 +336,7 @@ a:hover {
     background: #536D74;
 }
 .custom-footer {
-    background: var(--black);
+    background: #2D393D;
     padding: 0px 0px 100px 0px;
     margin-top: -1px;
 }

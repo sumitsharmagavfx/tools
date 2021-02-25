@@ -1,395 +1,219 @@
 jQuery(document).ready(function () {
-    jQuery('#execute').click(function(){
-        jQuery(this).addClass('spinner spinner-white spinner-right')
-        var matchreg =/^(https?|ftp):\/\//;
-        let urls = jQuery('#url').val().replace(matchreg,"");
-        jQuery.get({
-            url: 'https://api.cmlabs.co/?url=https://' + urls,
-            success: (res) => {
-                calculate(res.title, res.description);
-                jQuery('#execute').removeClass('spinner spinner-white spinner-right');
-                if (lang === 'en')
-                    toastr.success("Title and meta title loaded", "Success");
-                else toastr.success("Title and meta title berhasil didapat", "Sukses");
-            },
-            fail: (res) => {
-                if (lang === 'en')
-                    urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
-                else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
-            }
-        });
-    })
+    $("#manual-mode").hide();
+    refreshLocalStorage();
 });
-function copy(element){
-    var copyText = document.getElementById(element);
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    var alerttitle = document.getElementById("alerttitle");
-    var alertdesc = document.getElementById("alertdesc");
-    var alerturl = document.getElementById("alerturl");
-    if(element==='title'){
-        alerttitle.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
-        alerttitle.innerHTML = "Copied";
-        setTimeout(function(){jQuery('#alerttitle').hide()}, 3000);
-    }else if(element === 'desc'){
-        alertdesc.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
-        alertdesc.innerHTML = "Copied";
-        setTimeout(function(){jQuery('#alertdesc').hide()}, 3000);
-    }else if(element === 'url'){
-        alerturl.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px;  margin-right:5px; line-height: 16px;";
-        alerturl.innerHTML = "Copied";
-        setTimeout(function(){jQuery('#alerturl').hide()}, 3000);
-    }
 
+jQuery('#crawlURL').click(function(){
+    var matchreg =/^(https?|ftp):\/\//;
+    let urls = jQuery('#url').val().replace(matchreg,"");
+    jQuery.get({
+        url: 'https://api.cmlabs.co/?url=https://' + urls,
+        success: (res) => {
+            $('#resulttitle').text(res.title);
+            $('#resultdesc').text(res.description);
+            $('#resulturl').text('https://' + urls);
+            $('#resulttitlemobile').text(res.title);
+            $('#resultdescmobile').text(res.description);
+            $('#resulturlmobile').text('https://' + urls);
+            $('#desc').val(res.description)
+            $('#title').val(res.title)
+            $("#manual-mode").show();
+            $('#desc').attr('disabled','disabled');
+            $('#title').attr('disabled','disabled');
+            var rateTitle = titleChecker(res.title);
+            fillTitleBar(rateTitle);
+            var rateDesc = descChecker(res.description);
+            fillDescBar(rateDesc);
+            save('https://' + urls,res.title,res.description)
+            refreshLocalStorage();
+        },
+        fail: (res) => {
+            toastr.error("Your URL not valid")
+        }
+    });
+})
+
+$('#title').on('keyup',function(){
+    var rateTitle = titleChecker($(this).val());
+    fillTitleBar(rateTitle)
+    $('#resulttitle').text($(this).val())
+    $('#resulttitlemobile').text($(this).val())
+})
+
+$('#desc').on('keyup',function(){
+    var rateDesc = descChecker($(this).val());
+    fillDescBar(rateDesc);
+    $('#resultdesc').text($(this).val());
+    $('#resultdescmobile').text($(this).val());
+})
+
+$('#url').on('keyup',function(){
+    $('#resulturl').text($(this).val())
+    $('#resulturlmobile').text($(this).val())
+})
+
+const save = function(url, title, description){
+    let key = new Date().getTime();
+    let datum = {
+        url : url,
+        title: title,
+        description: description
+    }
+    const keys = window.localStorage.getItem('keys')
+    var temp = define()
+    if (keys){
+        temp = JSON.parse(keys)
+    }
+    if (!temp.meta.includes(key)){
+        temp.meta.push(key)
+    }
+    localStorage.setItem('keys',JSON.stringify(temp));
+    localStorage.setItem(key,JSON.stringify(datum));
 }
-const desc = document.getElementById('desc');
-const url = document.getElementById('url');
-const title = document.getElementById('title');
-const resulttitle = document.getElementById('resulttitle');
-const resultdesc = document.getElementById('resultdesc');
-const resulturl = document.getElementById('resulturl');
-const resulttitlemobile = document.getElementById('resulttitlemobile');
-const resultdescmobile = document.getElementById('resultdescmobile');
-const resulturlmobile = document.getElementById('resulturlmobile');
-var titlecount = document.getElementById('titlecount');
-var desccount = document.getElementById('desccount');
-var urlcheck = document.getElementById('urlcheck');
-var titlesizer = document.getElementById('titlesizer');
-var titlesizertemp = document.getElementById('titlesizertemp');
-var descsizer = document.getElementById('descsizer');
-var descsizertemp = document.getElementById('descsizertemp');
-resulttitle.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;";
-titlesizer.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif";
-titlesizertemp.style = "display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden;";
-resulttitlemobile.style = "display: inline-block; text-decoration: none; color: #1558d6; font-size: 18px !important; line-height: 24px !important;";
-resulturl.style = "padding: 4px 0px 2px; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
-resulturlmobile.style = "padding: 4px 0px 2px 0; color: rgb(0, 102, 33); margin-bottom: 1px; font-size: 13px; line-height: 16px;";
-resultdesc.style = "display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;";
-resultdescmobile.style = "display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #3c4043;line-height: 20px;white-space: pre-wrap;word-wrap: break-word;filter: none!important;";
-descsizer.style = "display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;"
-descsizertemp.style = "display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;"
 
-
-function calculate(title, desc) {
-    resulttitlemobile.innerHTML = title;
-    resulttitle.innerHTML = title;
-    titlesizer.innerHTML = title;
-    document.getElementById("title").value = title;
-    if (resulttitle.value != '') {
-        // console.clear();
-        // console.log(resulttitle.clientWidth);
-        counttitle();
-    }
-    resultdescmobile.innerHTML = desc;
-    resultdesc.innerHTML = desc;
-    descsizer.innerHTML = desc;
-    document.getElementById("desc").value = desc;
-    if (resultdesc.value != '') {
-        // console.clear();
-        // console.log(resultdesc.clientWidth);
-        let l = descsizer.clientWidth;
-        if (l >= 0 && l < 400) {
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >membutuhkan " + (400 - l) + " pixel lebih panjang</span><br>";
-            }
-        } else if (l >= 400 && l <= 750) {
-            if (lang ==='en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-            }
-        } else if (l > 750) {
-            var rawDescription = jQuery.trim(jQuery("#desc").val());
-            var description = rawDescription;
-            jQuery("#descsizer").html(description);
-            jQuery("#descsizertemp").html(description);
-            var lastWord = new RegExp("\\S+$");
-            while (jQuery("#descsizertemp").width() > 750) {
-                description = jQuery.trim(description.replace(" <b>...</b>", ""));
-                var newDescription = description;
-                newDescription = jQuery.trim(newDescription.replace(lastWord, ""));
-                rawDescription = jQuery.trim(rawDescription.replace(lastWord, ""));
-                if (newDescription.length >= description.length) {
-                    newDescription = newDescription.substring(0, newDescription.length - 1);
-                    rawDescription = rawDescription.substring(0, rawDescription.length - 1)
-                }
-                description = newDescription + " <b>...</b>";
-                jQuery("#descsizertemp").html(description)
-            }
-            resultdesc.innerHTML = description;
-            resultdescmobile.innerHTML = description;
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 750) + " pixel</span><br>";
-            }
-        } else {
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, Meta Description Tag : :(<br>"
-            }
-        }
-        l = desc.length;
-        if (l >= 0 && l < 65) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color: #d6564f' >butuh " + (65 - l) + " karakter lagi</span><br>";
-            }
-
-        } else if (l >= 65 && l <= 160) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-            } else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-            }
-        } else if (l > 160) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 160) + " karakter</span><br>";
-            }
-        } else {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + desc.length + " character(s) long, Meta Description Tag : :("
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + desc.length + " karakter, Meta Description Tag : :("
-            }
-        }
-        var w = descsizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
-        if (w) {
-            if (lang ==='en'){
-                desccount.innerHTML += "Words Length is " + w.length;
-            }else {
-                desccount.innerHTML += "Panjang Kata is " + w.length;
-            }
-        } else {
-            if (lang ==='en'){
-                desccount.innerHTML += "Words Length is " + 0;
-            }else {
-                desccount.innerHTML += "Panjang Kata is " + 0;
-            }
+const removeData = function(key){
+    let keys = JSON.parse(localStorage.getItem('keys'));
+    for(var i in keys.meta){
+        if(keys.meta[i] === key){
+            keys.meta.splice(i,1)
+            break;
         }
     }
+    localStorage.setItem('keys',JSON.stringify(keys))
+    localStorage.removeItem(key)
+    refreshLocalStorage();
 }
-const titleInputHandler = function (t) {
-    resulttitlemobile.innerHTML = t.target.value;
-    resulttitle.innerHTML = t.target.value;
-    titlesizer.innerHTML = t.target.value;
-    if (resulttitle.value != '') {
-        // console.clear();
-        // console.log(resulttitle.clientWidth);
-        counttitle();
-    }
-};
-const urlInputHandler = function (u) {
-    var tempurl = resulturl.innerHTML = u.target.value;
-    resulturl.innerHTML = u.target.value + "<span class='urlgreenarrow'>";
-    resulturlmobile.innerHTML = u.target.value + "<span class='urlgreenarrow'>";
-    if (resulturl.value != '') {
-        var check = new RegExp("^(http:\\/\\/www\\.|https:\\/\\/www\\.|http:\\/\\/|https:\\/\\/)?[a-z0-9]+([\\-\\.]{1}[a-z0-9]+)*\\.[a-z]{2,5}(:[0-9]{1,5})?(\\/.*)?$");
-        var checkurl = tempurl.match(check);
-        if (checkurl) {
-            if (lang === 'en')
-                urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Your Url Is Valid</span><br>";
-            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif;; font-size:12px; font-weight: 400; color:rgb(0, 102, 33)' >Url Anda Sah</span><br>";
-        } else {
-            if (lang === 'en')
-                urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Your Url Is Not Valid</span><br>";
-            else urlcheck.innerHTML = "<span style='font-family: Arial, Arial, Tahoma, sans-serif; font-size:12px; font-weight: 400; color: #d6564f' >Url Anda Tidak Sah</span><br>";
-        }
-    }
-};
-const descInputHandler = function (d) {
-    resultdescmobile.innerHTML = d.target.value;
-    resultdesc.innerHTML = d.target.value;
-    descsizer.innerHTML = d.target.value;
-    if (resultdesc.value != '') {
-        // console.clear();
-        // console.log(resultdesc.clientWidth);
-        let l = descsizer.clientWidth;
-        if (l >= 0 && l < 400) {
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >need more " + (400 - l) + " pixel(s)</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >membutuhkan " + (400 - l) + " pixel lebih panjang</span><br>";
-            }
-        } else if (l >= 400 && l <= 750) {
-            if (lang ==='en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-            }
-        } else if (l > 750) {
-            var rawDescription = jQuery.trim(jQuery("#desc").val());
-            var description = rawDescription;
-            jQuery("#descsizer").html(description);
-            jQuery("#descsizertemp").html(description);
-            var lastWord = new RegExp("\\S+$");
-            while (jQuery("#descsizertemp").width() > 750) {
-                description = jQuery.trim(description.replace(" <b>...</b>", ""));
-                var newDescription = description;
-                newDescription = jQuery.trim(newDescription.replace(lastWord, ""));
-                rawDescription = jQuery.trim(rawDescription.replace(lastWord, ""));
-                if (newDescription.length >= description.length) {
-                    newDescription = newDescription.substring(0, newDescription.length - 1);
-                    rawDescription = rawDescription.substring(0, rawDescription.length - 1)
-                }
-                description = newDescription + " <b>...</b>";
-                jQuery("#descsizertemp").html(description)
-            }
-            resultdesc.innerHTML = description;
-            resultdescmobile.innerHTML = description;
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, <span style='color: #d6564f' >too much " + (l - 750) + " pixel(s)</span><br>";
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 750) + " pixel</span><br>";
-            }
-        } else {
-            if (lang === 'en'){
-                desccount.innerHTML = "Meta Description is " + l + " pixel(s) long, Meta Description Tag : :(<br>"
-            }else {
-                desccount.innerHTML = "Panjang Meta Description adalah " + l + " pixel, Meta Description Tag : :(<br>"
-            }
-        }
-        l = desc.value.length;
-        if (l >= 0 && l < 65) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color: #d6564f' >need more " + (65 - l) + " character(s)</span><br>";
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color: #d6564f' >butuh " + (65 - l) + " karakter lagi</span><br>";
-            }
 
-        } else if (l >= 65 && l <= 160) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-            } else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-            }
-        } else if (l > 160) {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + l + " character(s) long, <span style='color: #d6564f' >too much " + (l - 160) + " character(s)</span><br>";
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 160) + " karakter</span><br>";
-            }
-        } else {
-            if (lang === 'en'){
-                desccount.innerHTML += "Meta Description is " + l + " character(s) long, Meta Description Tag : :("
-            }else {
-                desccount.innerHTML += "Panjang Meta Description adalah " + l + " karakter, Meta Description Tag : :("
-            }
+const getMonth = function(index){
+    const month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL",
+        "AUG", "SEP", "OCT", "NOV", "DES"]
+    return month[index]
+}
+
+const refreshLocalStorage = function(){
+    try{
+        $('#localsavemobile').empty();
+        $('#localsavedesktop').empty();
+        const keys = JSON.parse(localStorage.getItem('keys'))
+        if(keys){
+            for (let key of keys.meta){
+                // console.log(key)
+                let temp = JSON.parse(localStorage.getItem(key)).url
+                let date = new Date(key)
+                let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
+                '<div class="d-flex align-items-center justify-content-between">'+
+                    '<div class="local-collection-title">'+temp+'</div>'+
+                        '<div class="d-flex align-items-center">'+
+                            '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                            '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'
+            
+                let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
+                '<div class="d-flex justify-content-between">'+
+                '  <div class="local-collection-title">'+temp+'</div>'+
+                '  <div class="d-flex align-items-center">'+
+                '    <span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                '  </div>'+
+                '</div>'+
+                '</li>'
+                
+                $('#localsavemobile').append(div)
+                $('#localsavedesktop').append(div2)
+            }   
         }
-        var w = descsizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
-        // console.log(w);
-        if (w) {
-            if (lang ==='en'){
-                desccount.innerHTML += "Words Length is " + w.length;
-            }else {
-                desccount.innerHTML += "Panjang Kata is " + w.length;
-            }
-        } else {
-            if (lang ==='en'){
-                desccount.innerHTML += "Words Length is " + 0;
-            }else {
-                desccount.innerHTML += "Panjang Kata is " + 0;
-            }
-        }
-    }
-};
-function counttitle(){
-    let l = titlesizer.clientWidth;
-    if (l >= 0 && l < 250) {
-        if (lang === 'en'){
-            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color: #d6564f' > need more " + (250 - l) + " pixel(s)</span><br>";
-        }else {
-            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, <span style='color: #d6564f' > membutuhkan " + (250 - l) + " pixel lebih panjang</span><br>";
-        }
-    } else if (l >= 250 && l <= 470) {
-        if (lang === 'en'){
-            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-        }else {
-            titlecount.innerHTML = "Panjang Judul Halaman adalah  " + titlesizer.clientWidth + " pixel, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-        }
-    } else if (l > 470) {
-        var rawTitle = jQuery.trim(jQuery("#title").val());
-        var titles = rawTitle;
-        jQuery("#titlesizer").html(titles);
-        jQuery("#titlesizertemp").html(titles);
-        var lastWord = new RegExp("\\S+$");
-        while (jQuery("#titlesizertemp").width() > 470) {
-            titles = jQuery.trim(titles.replace(" <b>...</b>", ""));
-            var newTitle = titles;
-            newTitle = jQuery.trim(newTitle.replace(lastWord, ""));
-            if (newTitle.length >= titles.length) {
-                newTitle = newTitle.substring(0, newTitle.length - 1)
-            }
-            titles = newTitle + " <b>...</b>";
-            jQuery("#titlesizertemp").html(titles)
-        }
-        resulttitle.innerHTML = titles;
-        resulttitlemobile.innerHTML = titles;
-        if (lang === 'en'){
-            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, <span style='color: #d6564f' >too much " + (l - 470) + " pixel(s)</span><br>";
-        }else {
-            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, <span style='color: #d6564f' >terlalu panjang " + (l - 470) + " pixel</span><br>";
-        }
-    } else {
-        if (lang === 'en'){
-            titlecount.innerHTML = "Page Title is " + titlesizer.clientWidth + " pixel(s) Long, Title tag : :(<br>"
-        }else {
-            titlecount.innerHTML = "Panjang Judul Halaman adalah " + titlesizer.clientWidth + " pixel, Title tag : :(<br>"
-        }
-    }
-    l = title.value.length;
-    if (l >= 0 && l < 30) {
-        if (lang === 'en'){
-            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >need more " + (30 - l) + " character(s)</span><br>";
-        }else {
-            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color: #d6564f' >butuh " + (30 - l) + " karakter lagi</span><br>";
-        }
-    } else if (l >= 30 && l <= 55) {
-        if (lang === 'en'){
-            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color:rgb(0, 102, 33)' > — an acceptable length</span><br>";
-        }else {
-            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color:rgb(0, 102, 33)' > — panjang sudah sesuai</span><br>";
-        }
-    } else if (l > 55) {
-        if (lang === 'en'){
-            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, <span style='color: #d6564f' >too much " + (l - 55) + " character(s)</span><br>";
-        }else {
-            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, <span style='color: #d6564f' >terlalu panjang " + (l - 55) + " karakter</span><br>";
-        }
-    } else {
-        if (lang === 'en'){
-            titlecount.innerHTML += "Page Title is " + title.value.length + " character(s) long, Title Tag : :("
-        }else {
-            titlecount.innerHTML += "Panjang Judul Halaman adalah " + title.value.length + " karakter, Title Tag : :("
-        }
-    }
-    var w = titlesizer.innerHTML.replace(/['";:,.?\xbf\-!\xa1]+/g, "").match(/\S+/g);
-    // console.log(w);
-    if (w) {
-        if (lang ==='en'){
-            titlecount.innerHTML += "Words Length is " + w.length;
-        }else {
-            titlecount.innerHTML += "Panjang Kata is " + w.length;
-        }
-    } else {
-        if (lang ==='en'){
-            titlecount.innerHTML += "Words Length is " + 0;
-        }else {
-            titlecount.innerHTML += "Panjang Kata is " + 0;
-        }
+    }catch(e){
+        console.log(e)
     }
 }
 
-title.addEventListener('input', titleInputHandler);
-title.addEventListener('propertychange', titleInputHandler);
-desc.addEventListener('input', descInputHandler);
-desc.addEventListener('propertychange', descInputHandler);
-url.addEventListener('input', urlInputHandler);
-url.addEventListener('propertychange', urlInputHandler);
+const getData = function(key){
+    if(localStorage.getItem(key)){
+        var res = JSON.parse(localStorage.getItem(key));
+        $('#resulttitle').text(res.title);
+        $('#resultdesc').text(res.description);
+        $('#resulturl').text(res.url);
+        $('#resulttitlemobile').text(res.title);
+        $('#resultdescmobile').text(res.description);
+        $('#resulturlmobile').text(res.url);
+        $('#desc').val(res.description)
+        $('#title').val(res.title)
+        $("#manual-mode").show();
+        $('#desc').attr('disabled','disabled');
+        $('#title').attr('disabled','disabled');
+        var rateTitle = titleChecker(res.title);
+        fillTitleBar(rateTitle);
+        var rateDesc = descChecker(res.description);
+        fillDescBar(rateDesc);
+    }
+}
+
+const clearAll = function(){
+    var res = JSON.parse(localStorage.getItem('keys'));
+    for(let i of res.meta){
+        localStorage.removeItem(i);
+    }
+    res.meta = [];
+    localStorage.setItem('keys',JSON.stringify(res))
+    $('#localsavemobile').empty();
+    $('#localsavedesktop').empty();
+}
+
+const titleChecker = function(title){
+    var titlesizer = $('#titlesizer');
+    var rate = 0;
+    var l = title.length;
+    if (l > 30 && l < 55) {
+        rate++;
+    }
+    titlesizer.css("display: inline-block; text-decoration: none; color: #1e0fbe; font-size: 18px !important; line-height: 18px !important;white-space:nowrap;visibility:hidden; font-family: Arial,Arial, Tahoma, Sans Serif")
+    titlesizer.append(title);
+    var pixel = titlesizer.innerWidth();
+    if (pixel >= 250 && pixel <= 470){
+        rate += 2;
+    }
+    titlesizer.empty();
+    return rate;
+}
+
+const descChecker = function (desc){
+    var descsizer = $('#descsizer');
+    var rate = 0;
+    var l = desc.length;
+    if (l > 65 && l < 160) {
+        rate++;
+    }
+    descsizer.css("display: inline-block; font-family: arial, sans-serif; font-size: 13px;color: #545454;line-height: 1.4;white-space: pre-wrap;word-wrap: break-word;filter: none!important;white-space:nowrap;visibility:hidden;");
+    descsizer.append(desc)
+    var pixel = descsizer.innerWidth();
+    if (pixel >= 400 && pixel <= 750){
+        rate+=2;
+    }
+    descsizer.empty()
+    return rate;
+}
+
+const fillTitleBar = function(param){
+    for (let i = 1 ; i < param+1 ; i++){
+        $('#titlebar'+i).removeClass("blank")
+        $('#titlebar'+i).addClass("active")
+    }
+    for (let i = param+1 ; i < 4 ; i++){
+        $('#titlebar'+i).removeClass("active")
+        $('#titlebar'+i).addClass("blank")
+    }
+}
+
+const fillDescBar = function(param){
+    for (let i = 1 ; i < param+1 ; i++){
+        $('#descbar'+i).removeClass("blank")
+        $('#descbar'+i).addClass("active")
+    }
+    for (let i = param+1 ; i < 4 ; i++){
+        $('#descbar'+i).removeClass("active")
+        $('#descbar'+i).addClass("blank")
+    }
+}
+

@@ -1,82 +1,124 @@
-function print() {
-    jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
-}
 
-let main =
-    {
+    // declare counter for data-id
+    var counter = 2;
+
+    // declare first two json-ld breadcrumbs component
+    var main = {
         "@context": "https://schema.org",
-        "@type": "breadcrumb",
-        "itemListElement": []
-    };
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "",
+                "item": "",
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "",
+                "item": "",
+            }
+        ]
+    }
 
-jQuery(document).ready(function () {
+    function jsonFormat() {
+        $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
+    }
+
     let deletes = lang ==='en'? 'Delete' : 'Hapus';
     let pageName = lang ==='en'? 'PageName': 'Nama Halaman';
     let url = lang === 'en'?'Url':'Url';
-    main.itemListElement.push({
-        "@type": "breadcrumbList",
-        "pageName": "",
-        'url':"",
-    });
-    print();
-    jQuery('#add-breadcrumb').click(function () {
 
+    // call JsonFormat for showing json-ld script
+    jsonFormat();
+
+    function addBreadcrumb(){
+        counter++;
         main.itemListElement.push({
-            "@type": "breadcrumb",
-            "pageName": "",
-            'url':"",
+            "@type": "ListItem",
+            "position": counter,
+            "name": "",
+            "item": "",
         });
-        print();
-        jQuery('#formbreadcrumb').append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.itemListElement.length-1)+"\">"+deletes+"</button>\n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 pageName\" placeholder=\""+pageName+" :\" value=\"\" data-id=\""+(main.itemListElement.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-7 url\" placeholder=\""+url+" :\" value=\"\" data-id=\""+(main.itemListElement.length-1)+"\">"
-        );
+        jsonFormat();
+        $('#formbreadcrumb').append("<div class='row form-cotainer' data-id='"+(counter)+"'><input type='hidden' id='itemListLength' value='"+(main.itemListElement.length)+"'><div class='col-10 col-sm-11'><div class='row'><div class='col-sm-5'><label for='pageName' class='font-weight-bold'>Page #"+(counter)+" name</label><input type='text' id='pageName' class='form-control  mb-5 pageName' name='' placeholder='Type your name here..' value='' data-id='"+(counter)+"'></div><div class='col-sm-7'><label for='url' class='font-weight-bold'>URL #"+(counter)+"</label><input type='text' id='url' class='form-control mb-5 url' name='' placeholder='Type your URL here..' value='' data-id='"+(counter)+"'></div></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(counter)+"'></i></div></div></div>");
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
+        $('#json-format').attr('rows',row);
         sticky.update();
+    }
+
+    function deleteBreadcrumb(index){
+        if(index > 2){
+            main.itemListElement.splice($('#itemListLength').val() - 1, 1);
+            jsonFormat();
+            $('.form-cotainer[data-id=' + (counter) + ']').remove();
+            let row = parseInt(jQuery('#json-format').val().split('\n').length);
+            $('#json-format').attr('rows',row);
+            counter--;
+        }
+        sticky.update();
+    }
+
+    function updateJSON_item(index, url){
+
+        /*
+        *
+        * Adding regex url
+        * */
+
+        var expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+        var regex = new RegExp(expression);
+
+        if(counter > 2){
+            if (url.match(regex)) {
+                main.itemListElement[index-1].item = url;
+                jsonFormat();
+            } else {
+                console.log('no match')
+                // alert("No match");
+            }
+        }else{
+            if (url.match(regex)) {
+                main.itemListElement[index].item = url;
+                jsonFormat();
+            } else {
+                console.log('no match')
+                // alert("No match");
+            }
+        }
+    }
+
+    function updateJSON_name(index, value){
+        if(counter > 2){
+            main.itemListElement[index-1].name = value;
+            jsonFormat();
+        }else{
+            main.itemListElement[index].name = value;
+            jsonFormat();
+        }
+
+    }
+
+
+    $('#add-breadcrumb').click(function () {
+        addBreadcrumb();
     });
 
+    $(document).on('click', '.delete', function () {
+        deleteBreadcrumb(parseInt($(this).data('id')));
+    });
 
+    $(document).on('keyup', '.url', function () {
+        updateJSON_item(parseInt($(this).data('id')), $(this).val());
+    });
 
-});
+    $(document).on('keyup', '.pageName', function () {
+        updateJSON_name(parseInt($(this).data('id')), $(this).val());
+    });
 
-jQuery(document).on('keyup', '.pageName', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.itemListElement[index].pageName = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.url', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.itemListElement[index].url = jQuery(this).val();
-    print();
-});
-
-
-jQuery(document).on('click', '.delete', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index!==0){
-        main.itemListElement.splice(index, 1);
-        print();
-        for (let i = index + 1; i < main.itemListElement.length + 1; i++) {
-            jQuery('.pageName[data-id=' + (i - 1) + ']').val(jQuery('.pageName[data-id=' + (i) + ']').val())
-            jQuery('.url[data-id=' + (i - 1) + ']').val(jQuery('.url[data-id=' + (i) + ']').val())
-        }
-        jQuery('label[data-id=' + main.itemListElement.length + ']').remove();
-        jQuery('.pageName[data-id=' + main.itemListElement.length + ']').remove();
-        jQuery('.url[data-id=' + main.itemListElement.length + ']').remove();
-        jQuery('.delete[data-id=' + main.itemListElement.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
-
-jQuery('#copy').click(function () {
-    const copyText = jQuery('#json-format');
-    copyText.select();
-    // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
-    document.execCommand("copy");
-});
+    $('#copy').click(function () {
+        var copyText = jQuery('#json-format');
+        copyText.select();
+        document.execCommand("copy");
+    });
