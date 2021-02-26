@@ -1,248 +1,274 @@
-function print() {
-    jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
-}
+    var _supplyCounter = 0;
+    var _toolsCounter = 0;
+    var _stepCounter = 0;
 
-let main =
-    {
-        "@context": "https://schema.org",
-        "@type": "how-to",
-        "mainEntity": {
-            "name": "",
-            "step":[ {
-                "@type": "HowToStep",
-                "text": "",
-        }],
-            "supply":[],
-            "tool":[],
+    const jsonSchema = class  {
+        constructor() {
+            this.name = '';
+            this.description = undefined;
+            this.image = undefined;
+            this.totalTime = undefined;
+            this.supplyItem = [];
+            this.tools = [];
+            this.step = [];
+            this.costEstimate = undefined;
+            this.currency = undefined;
+            this.estimate = {
+                "@type": "MonetaryAmount",
+                "currency": "",
+                "value": ""
+            };
+
+        }
+
+        render(){
+
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": "how-to",
+                name:this.name,
+            };
+
+            obj.name = this.name;
+
+            if(this.description) obj.description = this.description;
+
+            if(this.image) obj.image = this.image;
+
+            if(this.totalTime) obj.totalTime = "PT"+this.totalTime+"M";
+
+            if(this.supplyItem.length > 0) {
+                if (this.supplyItem.length === 1) {
+                    obj.supply = this.supplyItem[0];
+                } else {
+                    obj.supply = this.supplyItem;
+                }
+            }
+
+            if(this.tools.length > 0) {
+                if (this.tools.length === 1) {
+                    obj.tools = this.tools[0];
+                } else {
+                    obj.tools = this.tools;
+                }
+            }
+
+            if(this.estimate.currency || this.estimate.value) obj.estimateCost = this.estimate;
+
+            if(this.step.length > 0){
+                if(this.step.length === 1){
+                    obj.step = this.step[0];
+                } else {
+                    obj.step = this.step;
+                }
+            }
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
+        }
     }
-    };
 
-jQuery(document).ready(function () {
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let name = lang ==='en'? 'Name' : 'Nama';
-    let imageUrl = lang ==='en'? 'ImageUrl':'UrlGambar';
-
-
-    // main.mainEntity.supply.push({
-    //     "@type": "HowToSupply",
-    //             "name": ""
-    // });
-    print();
-});
-
-jQuery('#add-howto-supply').click(function () {
-    let deletes = lang==='en'?'Delete Supply':'Hapus Supply';
-    let supplyName = lang==='en'?'Supply Name':'Supply';
-    main.mainEntity.supply.push({
-        
-            "@type": "HowToSupply",
-            "name": ""
-        
-    });
-    print();
-    // jQuery('#howto-supply').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteSupply\" name=\"button\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"+deletes+"</button>\n" +
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 supplyName\" placeholder=\""+supplyName+" :\" value=\"\" data-id=\""+(main.mainEntity.supply.length-1)+"\">"
-    // );
-    jQuery('#howto-supply').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.supply.length-1)+"\"><div class=\"col-10\" data-id=\""+(main.mainEntity.supply.length-1)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(main.mainEntity.supply.length-1)+"\">Supply #"+(main.mainEntity.supply.length)+"</label>\n" +
-    "                <input type=\"text\" name=\"\" class=\"form-control supplyName\" placeholder=\""+supplyName+"\" value=\"\" data-id=\""+(main.mainEntity.supply.length-1)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteSupply\' data-id=\""+(main.mainEntity.supply.length-1)+"\"></i></div></div>"
-    );
-    console.log("INDEX",main.mainEntity.supply.length-1)
-    let row = parseInt(jQuery('#json-format').val().split('\n').length);
-    jQuery('#json-format').attr('rows',row);
-    sticky.update();
-});
-
-jQuery('#add-howto-tool').click(function () {
-    let deletes = lang==='en'?'Delete Tool':'Hapus Tool';
-    let tool = lang==='en'?'Tool Name':'Alat';
-    main.mainEntity.tool.push({
-        
-        "@type": "HowToTool",
-        "name": "",
-    });
-    print();
-    // jQuery('#howto-tool').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteTool\" name=\"button\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"+deletes+"</button>\n" +
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 tool\" placeholder=\""+tool+" :\" value=\"\" data-id=\""+(main.mainEntity.tool.length-1)+"\">"
-    // );
-    jQuery('#howto-tool').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.tool.length-1)+"\"><div class=\"col-10\" data-id=\""+(main.mainEntity.tool.length-1)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(main.mainEntity.tool.length-1)+"\">Tool #"+(main.mainEntity.tool.length)+"</label>\n" +
-    "                <input type=\"text\" name=\"\" class=\"form-control tool\" placeholder=\""+tool+"\" value=\"\" data-id=\""+(main.mainEntity.tool.length-1)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteTool\' data-id=\""+(main.mainEntity.tool.length-1)+"\"></i></div></div>"
-    );
-    let row = parseInt(jQuery('#json-format').val().split('\n').length);
-    jQuery('#json-format').attr('rows',row);
-    sticky.update();
-});
-
-jQuery('#add-howto-step').click(function () {
-    let deletes = lang==='en'?'Delete Step':'Hapus Step';
-    let tool = lang==='en'?'Tool Name':'Alat';
-    main.mainEntity.step.push({
-        
+    let jsonFormat = new jsonSchema();
+    jsonFormat.step.push({
         "@type": "HowToStep",
         "text": "",
+    })
+    jsonFormat.render();
+
+
+    jQuery(document).ready(function () {
+        let deletes = lang ==='en'? 'Delete' : 'Hapus';
+        let name = lang ==='en'? 'Name' : 'Nama';
+        let imageUrl = lang ==='en'? 'ImageUrl':'UrlGambar';
+        // jsonFormat();
+
     });
-    print();
-    // jQuery('#howto-step').append("<button type=\"button\" class=\"btn btn-danger mb-2 mt-3 deleteStep\" name=\"button\" data-id=\""+(main.mainEntity.step.length-1)+"\">"+deletes+"</button>\n" +
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 mt-5 instructions\" placeholder=\"@lang('howto.instructions') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n"+
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 imageStep\" placeholder=\"@lang('howto.imageStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 nameStep\" placeholder=\"@lang('howto.nameStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "+
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 url\" placeholder=\"@lang('howto.urlStep') :\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"> \n "
-    // );
-    jQuery('#howto-step').append("<div class=\"row mt-5\" data-id=\""+(main.mainEntity.step.length-1)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(main.mainEntity.step.length-1)+"\">Step #"+(main.mainEntity.step.length)+": instruction</label>\n" +
-    "                <input type=\"text\" name=\"\" class=\"form-control instructions mb-5\" placeholder=\"Type your instruction here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteStep\' data-id=\""+(main.mainEntity.step.length-1)+"\"></i></div></div></div>\n" +
-    "                <div class=\"row\" data-id=\""+(main.mainEntity.step.length-1)+"\"><div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.mainEntity.step.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep mb-5\" placeholder=\"Type image URL here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div>" + 
-    "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.mainEntity.step.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div>" + 
-    "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.mainEntity.step.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url mb-5\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.mainEntity.step.length-1)+"\"></div></div>"
 
-    );
-    let row = parseInt(jQuery('#json-format').val().split('\n').length);
-    jQuery('#json-format').attr('rows',row);
-    sticky.update();
-});
+    $('#add-howto-supply').click(function () {
+        if(jsonFormat.supplyItem.length > 0) _supplyCounter++;
+        let deletes = lang==='en'?'Delete Supply':'Hapus Supply';
+        let supplyName = lang==='en'?'Supply Name':'Supply';
+        jsonFormat.supplyItem.push({
+            "@type": "HowToSupply",
+            "name": ""
+        })
 
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.name = jQuery(this).val();
-    print();
-});
+        jsonFormat.render();
+        jQuery('#howto-supply').append("<input type='hidden' id='supplyCounter' value='"+(_supplyCounter)+"'><div class=\"row mt-5\" data-id=\""+(_supplyCounter)+"\"><div class=\"col-10\" data-id=\""+(_supplyCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_supplyCounter)+"\">Supply #"+(_supplyCounter+1)+"</label>\n" +
+        "                <input type=\"text\" name=\"\" class=\"form-control supplyName\" placeholder=\""+supplyName+"\" value=\"\" data-id=\""+(_supplyCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteSupply\' data-id=\""+(_supplyCounter)+"\"></i></div></div>"
+        );
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
+        sticky.update();
+    });
 
-jQuery(document).on('keyup', '.description', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.description = jQuery(this).val();
-    print();
-});
+    $('#add-howto-tool').click(function () {
+        if(jsonFormat.tools.length > 0) _toolsCounter++;
 
-jQuery(document).on('keyup', '.totalTime', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.totalTime = jQuery(this).val();
-    print();
-});
+        let deletes = lang==='en'?'Delete Tool':'Hapus Tool';
+        let tool = lang==='en'?'Tool Name':'Alat';
 
+        jsonFormat.tools.push({
+            "@type": "HowToTool",
+            "name": "",
+        })
 
-jQuery(document).on('keyup', '.estimated', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.estimated = jQuery(this).val();
-    print();
-});
+        jsonFormat.render();
 
-jQuery(document).on('change', '.currency', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.currency = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.imageUrl', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity.imageUrl = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.supplyName', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.supply[index].name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.tool', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.tool[index].name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.instructions', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.step[index].text = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.imageStep', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.step[index].image = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.nameStep', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.step[index].name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.url', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    main.mainEntity.step[index].url = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('click', '.deleteSupply', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index>=0){
-        main.mainEntity.supply.splice(index, 1);
-        print();
-        for (let i = index + 1; i < main.mainEntity.supply.length + 1; i++) {
-            jQuery('.supplyName[data-id=' + (i - 1) + ']').val(jQuery('.supplyName[data-id=' + (i) + ']').val())
-        }
-        // jQuery('label[data-id=' + main.mainEntity.supply.length + ']').remove();
-        // jQuery('.supplyName[data-id=' + main.mainEntity.supply.length + ']').remove();
-        
-        // jQuery('.deleteSupply[data-id=' + main.mainEntity.supply.length + ']').remove();
-        jQuery('.row[data-id=' + main.mainEntity.supply.length + ']').remove();
+        $('#howto-tool').append("<input type='hidden' id='toolsCounter' value='"+(_toolsCounter)+"'><div class=\"row mt-5\" data-id=\""+(_toolsCounter)+"\"><div class=\"col-10\" data-id=\""+(_toolsCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_toolsCounter)+"\">Tool #"+(_toolsCounter+1)+"</label>\n" +
+        "                <input type=\"text\" name=\"\" class=\"form-control tool\" placeholder=\""+tool+"\" value=\"\" data-id=\""+(_toolsCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteTool\' data-id=\""+(_toolsCounter)+"\"></i></div></div>"
+        );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
+        $('#json-format').attr('rows',row);
+        sticky.update();
+    });
 
-jQuery(document).on('click', '.deleteTool', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index>=0){
-        main.mainEntity.tool.splice(index, 1);
-        print();
-        console.log("Length :",main.mainEntity.tool.length)
-        for (let i = index + 1; i < main.mainEntity.tool.length + 1; i++) {
-            jQuery('.tool[data-id=' + (i - 1) + ']').val(jQuery('.tool[data-id=' + (i) + ']').val())
+    $('#add-howto-step').click(function () {
+        _stepCounter++;
+        let deletes = lang==='en'?'Delete Step':'Hapus Step';
+        let tool = lang==='en'?'Tool Name':'Alat';
+        jsonFormat.step.push({
+            "@type": "HowToStep",
+            "text": "",
+        });
+
+        jsonFormat.render();
+
+        jQuery('#howto-step').append("<div class='loopStep' data-id='"+(_stepCounter)+"'><input type='hidden' id='stepCounter' value='"+(_stepCounter)+"'><div class=\"row mt-5\" data-id=\""+(_stepCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(_stepCounter)+"\">Step #"+(_stepCounter+1)+": instruction</label>\n" +
+            "                <input type=\"text\" name=\"\" class=\"form-control instructions mb-5\" placeholder=\"Type your instruction here..\" value=\"\" data-id=\""+(_stepCounter)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteStep\' data-id=\""+(_stepCounter)+"\"></i></div></div></div>\n" +
+            "                <div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(_stepCounter)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep mb-5\" placeholder=\"Type image URL here..\" value=\"\" data-id=\""+(_stepCounter)+"\"></div>" +
+            "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(_stepCounter)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(_stepCounter)+"\"></div>" +
+            "                <div class=\"col-12 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(_stepCounter)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url mb-5\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(_stepCounter)+"\"></div></div></div>");
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
+        sticky.update();
+    });
+
+    $('.name').keyup(function(event){
+        jsonFormat.name = $(this).val();
+        jsonFormat.render();
+    });
+
+    $('.description').keyup(function(event){
+        jsonFormat.description = $(this).val();
+        jsonFormat.render();
+    });
+
+    $('.totalTime').keyup(function(event){
+        jsonFormat.totalTime = $(this).val();
+        jsonFormat.render();
+    });
+
+    $('.imageUrl').keyup(function (event) {
+        jsonFormat.image = $(this).val();
+        jsonFormat.render();
+    })
+
+    $('.estimated').keyup(function(event){
+        // let index = parseInt($(this).data('id'));
+        jsonFormat.estimate.value = $(this).val();
+        jsonFormat.render();
+    });
+
+    $('.currency').on('change', function() {
+        // let index = parseInt($(this).data('id'));
+        // console.log('index:' + index);
+        jsonFormat.estimate.currency = $(this).val();
+        jsonFormat.render();
+    });
+
+
+    $(document).on('keyup', '.supplyName', function () {
+        let index = parseInt($(this).data('id'));
+        // console.log(index)
+        jsonFormat.supplyItem[index].name = $(this).val();
+        jsonFormat.render();
+    });
+
+    $(document).on('keyup', '.tool', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.tools[index].name = $(this).val();
+        jsonFormat.render();
+    });
+
+    $(document).on('click', '.deleteSupply', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.supplyItem.splice(index, 1);
+        jsonFormat.render();
+
+        for(let i = index+1; i < jsonFormat.supplyItem.length + 1; i++){
+            $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
-        // jQuery('label[data-id=' + main.mainEntity.tool.length + ']').remove();
-        // jQuery('.tool[data-id=' + main.mainEntity.tool.length + ']').remove();
 
-        // jQuery('.deleteTool[data-id=' + main.mainEntity.tool.length + ']').remove();
-        jQuery('.row[data-id=' + main.mainEntity.tool.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
+        $('.row[data-id=' + jsonFormat.supplyItem.length + ']').remove();
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
+
+        sticky.update();
+        if(jsonFormat.supplyItem.length > 0) _supplyCounter--;
+    });
+
+    $(document).on('keyup', '.instructions', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.step[index].text = jQuery(this).val();
+        jsonFormat.render();
+    });
+
+    jQuery(document).on('keyup', '.imageStep', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.step[index].image = jQuery(this).val();
+        jsonFormat.render();
+    });
+
+    jQuery(document).on('keyup', '.nameStep', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.step[index].name = jQuery(this).val();
+        jsonFormat.render();
+    });
+
+    jQuery(document).on('keyup', '.url', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        jsonFormat.step[index].url = jQuery(this).val();
+        jsonFormat.render();
+    });
+
+
+
+    jQuery(document).on('click', '.deleteTool', function () {
+        let index = parseInt(jQuery(this).data('id'));
+
+            jsonFormat.tools.splice(index, 1);
+            jsonFormat.render();
+
+            for (let i = index + 1; i < jsonFormat.tools.length + 1; i++) {
+                $('.tool[data-id=' + (i - 1) + ']').val($('.tool[data-id=' + (i) + ']').val())
+            }
+
+            $('.row[data-id=' + jsonFormat.tools.length + ']').remove();
+            let row = parseInt($('#json-format').val().split('\n').length);
+            $('#json-format').attr('rows',row);
+
+        sticky.update();
+        if(jsonFormat.tools.length > 0) _toolsCounter--;
+    });
 
 
 jQuery(document).on('click', '.deleteStep', function () {
     let index = parseInt(jQuery(this).data('id'));
-    if (index>=0){
-        main.mainEntity.step.splice(index, 1);
-        print();
-        console.log("Length :",main.mainEntity.tool.length)
-        for (let i = index + 1; i < main.mainEntity.step.length + 1; i++) {
-            jQuery('.instructions[data-id=' + (i - 1) + ']').val(jQuery('.instructions[data-id=' + (i) + ']').val())
-            jQuery('.imageStep[data-id=' + (i - 1) + ']').val(jQuery('.imageStep[data-id=' + (i) + ']').val())
-            jQuery('.nameStep[data-id=' + (i - 1) + ']').val(jQuery('.nameStep[data-id=' + (i) + ']').val())
-            jQuery('.url[data-id=' + (i - 1) + ']').val(jQuery('.imageStep[data-id=' + (i) + ']').val())
+
+        jsonFormat.step.splice(index, 1);
+        jsonFormat.render();
+
+        for (let i = index + 1; i < jsonFormat.step.length + 1; i++) {
+            $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
         }
-        jQuery('label[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.deleteStep[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.instructions[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.imageStep[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.nameStep[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.url[data-id=' + main.mainEntity.step.length + ']').remove();
-        
-        jQuery('.deleteTool[data-id=' + main.mainEntity.step.length + ']').remove();
-        jQuery('.row[data-id=' + main.mainEntity.step.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
+
+        $('.deleteTool[data-id=' + jsonFormat.step.length + ']').remove();
+        $('.row[data-id=' + jsonFormat.step.length + ']').remove();
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
     sticky.update();
+    if(jsonFormat.step.length > 0) _stepCounter--;
 });
 
 jQuery('#copy').click(function () {
