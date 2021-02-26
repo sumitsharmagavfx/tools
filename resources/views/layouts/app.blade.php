@@ -65,7 +65,7 @@
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{ asset('media/logos/new_logo_default.ico') }}"/>
+    <link rel="shortcut icon" href="{{ asset('media/logos/cmlabs.ico') }}"/>
     <meta name="google-site-verification" content="YCopEocQW4s_qTQ_Vqle_cfHtfpqK5__es6PHei4ooY" />
 </head>
 <!--end::Head-->
