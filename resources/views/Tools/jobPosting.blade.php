@@ -100,6 +100,10 @@ color: var(--grey);
   margin: 0;
 }
 
+.bootstrap-select .dropdown-menu.inner > li.active:not(.selected) > a {
+  background: var(--primaryblue);
+}
+
 .input-group-text {
   background-color: transparent;
   border-right-style: none; 
@@ -459,6 +463,7 @@ text-decoration: underline;
                   <option selected="selected">Job Posting</option>
                   <option>Person</option>
                   <option>Product</option>
+                  <option>Recipe</option>
                 </select>
               </div>
             </div>

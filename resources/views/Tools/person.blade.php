@@ -416,6 +416,7 @@ text-decoration: underline;
                   <option>Job Posting</option>
                   <option selected="selected">Person</option>
                   <option>Product</option>
+                  <option>Recipe</option>
                 </select>
               </div>
             </div>
