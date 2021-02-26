@@ -73,9 +73,6 @@ function getHistories() {
 function addHistory(url, data) {
     let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
-    if (histories.find(history => {
-        return history.url === url;
-    })) return;
     histories.push({
         url: url,
         data: data,

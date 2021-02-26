@@ -454,6 +454,7 @@ text-decoration: underline;
                   <option>Job Posting</option>
                   <option>Person</option>
                   <option>Product</option>
+                  <option>Recipe</option>
                 </select>
               </div>
             </div>
@@ -477,18 +478,17 @@ text-decoration: underline;
                     <div class="row">
                       <div class="col-12 col-md-4">
                         <label class="text-black font-weight-bold" for="totalTime">Total time</label>
-                        <input type="text" name="" class="form-control totalTime mb-5" placeholder="@lang('howto.totalTime')" value="" data-id="0">
+                        <input type="number" name="" class="form-control totalTime mb-5" placeholder="@lang('howto.totalTime')" value="" min="0" data-id="0">
                       </div>
                       <div class="col-6 col-md-4">
                         <label class="text-black font-weight-bold" for="estimated">Estimated Cost</label>
-                        <input type="text" name="" class="form-control estimated mb-5" placeholder="@lang('howto.estimated')" value="" data-id="0">
+                        <input type="number" name="" class="form-control estimated mb-5" placeholder="@lang('howto.estimated')" value="" data-id="0">
                       </div>
                       <div class="col-6 col-md-4">
                         <label for="currency" class="text-black font-weight-bold">Currency</label>
-                        <select class="form-control selectpicker currency mb-5" id="currency" data-size="3" data-live-search="true">
-                          <option value="USD" selected="selected">USD</option>
-                          <option value="GBP">GBP</option>
-                          <option value="CAD">CAD</option>
+                        <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true">
+                          <option value="null">null</option>
+                          {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
                         </select>
                       </div>
                     </div>

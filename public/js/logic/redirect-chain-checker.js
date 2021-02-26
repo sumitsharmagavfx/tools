@@ -10,8 +10,8 @@ const RedirectResultTemplate = (url, status_code, date) => `
   <div class="col-6">
     <div class="d-flex align-items-center justify-content-between">
       <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">${status_code}</span>
-      <p id="" class="text-black mb-0 desktopDate"><em>${date}</em></p>
-      <i id="" class='bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate' data-toggle="tooltip" data-theme="dark" title="${date}"></i>
+      <p id="" class="text-black mb-0 desktopDate d-xs-none d-md-block"><em>${date}</em></p>
+      <i id="" class="bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate d-md-none" data-toggle="tooltip" data-theme="dark" title="${date}"></i>
     </div>
   </div>
 </div>
@@ -77,9 +77,6 @@ function getHistories() {
 function addHistory(url, data) {
     let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
-    if (histories.find(history => {
-        return history.url === url;
-    })) return;
     histories.push({
         url: url,
         data: data,

@@ -11,5 +11,7 @@ return [
     "paid-tools" => "Paid Tools",
     "title" => "Content Marketing Labs",
     "title-2" => "Press Release",
-    "title-3" => "Article from CMLABS"
+    "title-3" => "Article from CMLABS",
+    "footer-resource-title" => "Resources"
+
 ];

@@ -570,12 +570,27 @@
 
         /* END DESCRIPTION TOOLS */
 
-        .user-agent {
-            border: 1px solid white;
-            background: var(--primaryblue);
-            color: white;
-            border-radius: 20px
+        .user-agent button{
+            /* border: 1px solid white !important;
+            background: var(--primaryblue) !important;
+            color: white !important; */
+            border-radius: 20px !important
 
+        }
+
+        .user-agent {
+            border-radius: 20px !important;
+
+        }
+
+        .bootstrap-select.user-agent .dropdown-menu.inner > li.selected > a, .bootstrap-select.user-agent .dropdown-menu.inner > li:hover > a {
+            background: var(--primaryblue) !important;
+            color: white !important;
+        }
+
+        .bootstrap-select.user-agent .dropdown-menu.inner.show li.selected > a > .text, .bootstrap-select.user-agent .dropdown-menu.inner.show li:hover > a > .text{
+            color: white;
+            transition: 0.15s !important
         }
 
         /* .user-agent:focus {
@@ -631,7 +646,7 @@
                         <div class="col-sm-6 col-md-5 col-lg-6 col-xl-5 d-flex align-items-center py-1">
                             <!-- CRAWL BUTTON -->
 
-                            <select class="form-control user-agent mx-1" id="user-agent-select">
+                            <select class="form-control selectpicker user-agent mx-2" id="user-agent-select">
                                 <option value="" disabled selected>Select user agent</option>
                                 <option value="*">All</option>
                                 <option value="NinjaBot">NinjaBot</option>

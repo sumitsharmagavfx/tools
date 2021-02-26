@@ -88,15 +88,6 @@ id/sitemap-generator
     font-weight: bold;
   }
 
-  @media (min-width: 992px) {
-
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-
-
 
   @media (max-width:767px) {
     .btn-add-question {
@@ -390,12 +381,7 @@ id/sitemap-generator
       vertical-align: middle;
     }
   }
-  @media (min-width: 992px) {
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
+  
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;
