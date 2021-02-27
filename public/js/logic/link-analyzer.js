@@ -2,6 +2,7 @@ const LINK_ANALYZER_LOCAL_STORAGE_KEY = 'link-analyzer-history'
 var jqueryRequest = undefined;
 var dataResult = undefined;
 var counter = 1;
+var analyzeChart = undefined;
 
 const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
@@ -77,15 +78,11 @@ function getHistories() {
             HistoryTemplateMobile(history.url, history.date)
         )
     }
-
 }
 
 function addHistory(url, data) {
     let histories = localStorage.getItem(LINK_ANALYZER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
-    if (histories.find(history => {
-        return history.url === url;
-    })) return;
     histories.push({
         url: url,
         data: data,
@@ -111,13 +108,14 @@ function deleteHistory(_url = null) {
 
 function analyze(_url) {
     if (checkUrl(_url)) {
-        jqueryRequest = $.get({
+        jqueryRequest = $.post({
             url: LINK_ANALYZER_API_URL,
             data: {
                 '_token': $('meta[name="csrf-token"]').attr('content'),
                 'url': _url
             },
             beforeSend: () => {
+                updateProgressBar(50);
                 $('#progress-stop-message').hide();
                 $('#progress-start-message').show();
                 $('#progress-finish-message').hide();
@@ -125,7 +123,7 @@ function analyze(_url) {
                     .removeClass('btn-cancel-disabled')
                     .addClass('btn-cancel')
                     .removeAttr('disabled');
-                updateProgressBar(10);
+                updateProgressBar(20);
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -161,11 +159,13 @@ function analyze(_url) {
     }
 }
 
-function renderAllData(data){
+function renderAllData(data) {
     $('#external-link-list').empty();
     $('#internal-link-list').empty();
     $('#show-more-internal').addClass('d-flex').show();
     $('#show-more-external').addClass('d-flex').show();
+    $('#empty-container').hide();
+    $('#analyzer-container').show();
 
     createChart(
         data.internal_links.value,
@@ -177,7 +177,7 @@ function renderAllData(data){
     $('#external-links-value-tab').text(`External Links (${data.external_links.value})`);
     $('#internal-links-value-tab').text(`Internal Links (${data.internal_links.value})`);
     counter = 1;
-    renderListOfLinks( 10);
+    renderListOfLinks(10);
 }
 
 function renderStatsValue(data) {
@@ -200,11 +200,11 @@ function renderListOfLinks(amount = 10) {
     dataResult.internal_links.links = dataResult.internal_links.links.slice(amount);
     dataResult.external_links.links = dataResult.external_links.links.slice(amount);
 
-    if(dataResult.internal_links.links.length === 0){
+    if (dataResult.internal_links.links.length === 0) {
         $('#show-more-internal').removeClass('d-flex').hide();
     }
 
-    if(dataResult.external_links.links.length === 0){
+    if (dataResult.external_links.links.length === 0) {
         $('#show-more-external').removeClass('d-flex').hide();
     }
 
@@ -225,7 +225,7 @@ function renderListOfLinks(amount = 10) {
     counter += amount;
 }
 
-function formatDate(date){
+function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
@@ -256,58 +256,63 @@ function updateProgressBar(value) {
 }
 
 function createChart(internal_link_value, external_link_value, nofollow_link_value, dofollow_link_value) {
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Internal Links', 'External Links', 'No-Follow', 'Do-Follow'],
-            datasets: [{
-                label: '# of Votes',
-                data: [internal_link_value, external_link_value, nofollow_link_value, dofollow_link_value],
-                backgroundColor: [
-                    'rgba(24,160,251,1)',
-                    'rgb(251,201,24,1)',
-                    'rgba(151,24,251,1)',
-                    'rgba(255,86,86,1)'
-                ],
-                borderColor: [
-                    'rgba(24,160,251,1)',
-                    'rgb(251,201,24,1)',
-                    'rgba(151,24,251,1)',
-                    'rgba(255,86,86,1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                display: false,
-                align: 'start',
-                padding: 20
-            },
-            scales: {
-                xAxes: [{
-                    display: false,
-                }],
-                yAxes: [{
-                    display: false,
+    var ctx = document.getElementById('analyzer-chart').getContext('2d');
+    if (analyzeChart != null) {
+        analyzeChart.data.datasets[0].data = [internal_link_value, external_link_value, nofollow_link_value, dofollow_link_value];
+        analyzeChart.update();
+    } else {
+        analyzeChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Internal Links', 'External Links', 'No-Follow', 'Do-Follow'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [internal_link_value, external_link_value, nofollow_link_value, dofollow_link_value],
+                    backgroundColor: [
+                        'rgba(24,160,251,1)',
+                        'rgb(251,201,24,1)',
+                        'rgba(151,24,251,1)',
+                        'rgba(255,86,86,1)'
+                    ],
+                    borderColor: [
+                        'rgba(24,160,251,1)',
+                        'rgb(251,201,24,1)',
+                        'rgba(151,24,251,1)',
+                        'rgba(255,86,86,1)'
+                    ],
+                    borderWidth: 1
                 }]
             },
-            tooltips: {
-                backgroundColor: '#fff',
-                cornerRadius: 0,
-                displayColors: false,
-                titleFontFamily: "'Roboto', sans-serif",
-                titleFontColor: '#2A2F33',
-                bodyAlign: 'center',
-                bodyFontFamily: "'Roboto', sans-serif",
-                bodyFontColor: '#2A2F33',
-                bodyFontStyle: 'normal',
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    display: false,
+                    align: 'start',
+                    padding: 20
+                },
+                scales: {
+                    xAxes: [{
+                        display: false,
+                    }],
+                    yAxes: [{
+                        display: false,
+                    }]
+                },
+                tooltips: {
+                    backgroundColor: '#fff',
+                    cornerRadius: 0,
+                    displayColors: false,
+                    titleFontFamily: "'Roboto', sans-serif",
+                    titleFontColor: '#2A2F33',
+                    bodyAlign: 'center',
+                    bodyFontFamily: "'Roboto', sans-serif",
+                    bodyFontColor: '#2A2F33',
+                    bodyFontStyle: 'normal',
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 $('#input-url').keyup(function () {
@@ -369,7 +374,7 @@ $('#analyze-btn').click(function () {
 })
 
 $('.show-more--btn').click(function () {
-    renderListOfLinks( 10);
+    renderListOfLinks(10);
 });
 
 $('#cancel-request-btn').click(function () {
@@ -381,8 +386,6 @@ $('#cancel-request-btn').click(function () {
         .attr('disabled', 'disabled')
 })
 
-$('.clear-history--btn').click(function(){
+$('.clear-history--btn').click(function () {
     deleteHistory();
 });
-
-createChart(0, 0, 0, 0);

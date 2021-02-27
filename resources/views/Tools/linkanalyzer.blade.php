@@ -754,7 +754,7 @@ id/link-analyzer
               <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3'
                  style="display: none"></i>
               <input type="url" class="form-control analyzer-url" name="" value=""
-                     placeholder="http://example.com" id="input-url">
+                     placeholder="http://example.com" id="input-url" autocomplete="off">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
@@ -772,7 +772,7 @@ id/link-analyzer
             <div class="card-body py-4 px-0">
 
               <!-- BEFORE CRAWL -->
-              <div class="" id="noCrawlResult">
+              <div class="" id="empty-container">
                 <div class="text-center">
                   <p class="d-block">No URL analyzed, please input your domain above!</p>
                   <a href="#" class="links">Learn how to use this tools?</a>
@@ -780,10 +780,10 @@ id/link-analyzer
               </div>
 
               <!-- RESULT CRAWL -->
-              <div class="mt-7" id=result>
+              <div class="mt-7" id="analyzer-container" style="display: none">
                 <div class="row">
                   <div class="col-lg-5 col-md-5 resultChart d-flex justify-content-end mb-5">
-                    <canvas id="myChart" width="150" height="150"></canvas>
+                    <canvas id="analyzer-chart" width="150" height="150"></canvas>
                   </div>
                   <div class="col-lg-7 col-md-7 d-flex align-items-center resultTable mb-5">
                       <table>

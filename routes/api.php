@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/analyze-technology', 'Tool\ApiController@analyzeTechnology')->name('api.analyze-technology');
 Route::post('/analyze-hreflang', 'Tool\ApiController@analyzeHreflang')->name('api.analyze-hreflang');
-Route::get('/analyze-link', 'Tool\ApiController@analyzeLink')->name('api.analyze-link');
+Route::post('/analyze-link', 'Tool\ApiController@analyzeLink')->name('api.analyze-link');
+Route::post('/analyze-redirect-chain', 'Tool\ApiController@analyzeRedirectChain')->name('api.analyze-redirect-chain');

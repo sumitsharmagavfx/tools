@@ -9,6 +9,14 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
+                    <li class="nav-item dropdown ml-7">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generator</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item active" href="/{{ $local }}/sitemap-generator">Sitemap .XML Generator</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/{{ $local }}/robotstxt-generator">Robots .TXT Generator</a>
+                        </div>
+                    </li>
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD Generator</a>
                     </li>

@@ -1,17 +1,21 @@
-const TECH_LOOKUP_LOCAL_STORAGE_KEY = 'tech-lookup-history';
+const REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY = 'redirect-chain-checker-history';
 
-const TechnologyTemplate = (title, icon, category, version) => `
-<div class="d-flex justify-content-between align-items-center mx-5">
-  <div class="d-flex align-items-center">
-    <img src="/media/technologyLookup/icons/${icon}" alt="" width="20px">
-    <span class="mx-3 technology-name">${title}</span>
-    ${version}
+const RedirectResultTemplate = (url, status_code, date) => `
+<div class="row px-5">
+  <div class="col-6">
+    <div class="d-flex align-items-center">
+      <p class="mb-0 redirect-url-result-link" data-toggle="tooltip" data-theme="dark" title="${url}">${url}</p>
+    </div>
   </div>
-  <div class="">
-    <span>${category}</span>
+  <div class="col-6">
+    <div class="d-flex align-items-center justify-content-between">
+      <span class="label label-primary label-inline font-weight-normal ml-8" data-toggle="tooltip" data-theme="dark" title="Redirect">${status_code}</span>
+      <p id="" class="text-black mb-0 desktopDate d-xs-none d-md-block"><em>${date}</em></p>
+      <i id="" class="bx bxs-info-circle bx-sm text-darkgrey mr-2 mobileDate d-md-none" data-toggle="tooltip" data-theme="dark" title="${date}"></i>
+    </div>
   </div>
 </div>
-<hr>`;
+<hr class="my-3">`;
 
 const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
@@ -53,7 +57,7 @@ const EmptyHistoryTemplateMobile = () => `
 function getHistories() {
     $('#local-history').empty();
     $('#local-history-mobile').empty();
-    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
         $('#local-history').append(EmptyHistoryTemplate());
@@ -71,57 +75,49 @@ function getHistories() {
 }
 
 function addHistory(url, data) {
-    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     histories.push({
         url: url,
         data: data,
         date: (new Date()).toLocaleDateString('en-GB')
     })
-    localStorage.setItem(TECH_LOOKUP_LOCAL_STORAGE_KEY, JSON.stringify(histories));
+    localStorage.setItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
 }
 
 function deleteHistory(_url = null) {
     let histories = [];
     if (_url) {
-        histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY) || [];
+        histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY) || [];
         if (typeof (histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
         histories = histories.filter((history) => {
             return history.url !== _url;
         });
     }
 
-    localStorage.setItem(TECH_LOOKUP_LOCAL_STORAGE_KEY, JSON.stringify(histories));
+    localStorage.setItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
 }
 
-
-
-function convertSecond(seconds){
-    let minute = (seconds / 60).toFixed(0);
-    let second = seconds % 60;
-    return {
-        minute,
-        second
-    }
-}
-
-function analyzeUrl(_url) {
+function analyze(_url) {
     if (checkUrl(_url)) {
-        $('#technology-lookup-result-total').text("")
         $.post({
-            url: LOOKUP_API_URL,
+            url: REDIRECT_CHAIN_CHECKER_API_URL,
             data: {
                 _token: $('meta[name=csrf-token]').attr('content'),
-                url: _url
+                url: _url,
+                user_agent: $('#user-agent-select').val()
             },
             beforeSend: () => {
-                KTApp.block('#technology-lookup-result-container', {
-                    overlayColor: 'gray',
-                    opacity: 0.1,
-                    state: 'primary'
-                });
+                $('#cancel-request-btn')
+                    .removeClass('btn-cancel-disabled')
+                    .addClass('btn-cancel')
+                    .removeAttr('disabled');
+                updateProgressBar(20);
+                $('#progress-stop-message').hide();
+                $('#progress-finish-message').hide();
+                $('#progress-start-message').show();
             },
             success: (res) => {
                 if (res.statusCode === 200) {
@@ -129,8 +125,8 @@ function analyzeUrl(_url) {
                     addHistory(_url, res.data);
                     getHistories();
                 } else {
-                    $('#technology-lookup-result-list').hide();
-                    $('#technology-lookup-result-empty').show();
+                    $('#redirect-result').hide();
+                    $('#redirect-result-empty').show();
                     toastr.error(res.message, 'Error')
                 }
             },
@@ -141,29 +137,33 @@ function analyzeUrl(_url) {
                 } else {
                     toastr.error(err.responseJSON.message, 'Error')
                 }
-                $('#technology-lookup-result-list').hide();
-                $('#technology-lookup-result-empty').show();
+                $('#redirect-result').hide();
+                $('#redirect-result-empty').show();
             },
             complete: () => {
-                KTApp.unblock('#technology-lookup-result-container');
+                updateProgressBar(100);
+                $('#progress-start-message').hide();
+                $('#progress-finish-message').show();
+                $('#cancel-request-btn')
+                    .removeClass('btn-cancel')
+                    .addClass('btn-cancel-disabled')
+                    .attr('disabled', 'disabled')
             }
         })
     } else {
-        $('#technology-lookup-result-list').hide();
-        $('#technology-lookup-result-empty').show();
+        $('#redirect-result').hide();
+        $('#redirect-result-empty').show();
         toastr.error('URL Format is not valid', 'Error')
-        KTApp.unblock('#technology-lookup-result-container');
     }
 }
 
 function renderAllData(data){
-    $('#technology-lookup-result-empty').hide();
-    $('#technology-lookup-result-list').empty().show();
-    $('#technology-lookup-result-total').text(`(${data.technologies.length})`)
-    for (let technology of data.technologies) {
-        let _versionLabel = technology.version != null ? `<span class="label label-primary-version label-inline font-weight-normal px-2">${technology.version}</span>` : '';
-        $('#technology-lookup-result-list').append(
-            TechnologyTemplate(technology.name, technology.icon, technology.categories[0].name, _versionLabel)
+    $('#redirect-result-container').show();
+    $('#redirect-result-empty').hide();
+    $('#redirect-result').empty().show();
+    for (let redirect of data.redirects) {
+        $('#redirect-result').append(
+            RedirectResultTemplate(redirect.url, redirect.status, redirect.date)
         )
     }
 }
@@ -191,6 +191,12 @@ function getProtocol(url){
     }
 }
 
+function updateProgressBar(value) {
+    $('#progress-bar-loader')
+        .css('width', `${value}%`)
+        .attr('aria-valuenow', value);
+}
+
 $('#input-url').keyup(function () {
     const _url = $(this).val();
     if(checkUrl(_url)){
@@ -216,7 +222,7 @@ $('#local-history').on('click', '.delete-history--btn', function () {
     if (e.target.classList.contains('delete-history--btn')) return;
     const _url = $(this).data('url');
 
-    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     const history = histories.find(history => {
         return history.url === _url;
@@ -234,7 +240,7 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function () {
     // analyze($(this).data('url'));
     const _url = $(this).data('url');
 
-    let histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY);
+    let histories = localStorage.getItem(REDIRECT_CHAIN_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     const history = histories.find(history => {
         return history.url === _url;
@@ -249,7 +255,7 @@ $('.clear-history--btn').click(function(){
     deleteHistory();
 });
 
-$('#crawl-btn').click(function(){
-    analyzeUrl($('#input-url').val());
+$('#analyze-btn').click(function(){
+    analyze($('#input-url').val());
 })
 

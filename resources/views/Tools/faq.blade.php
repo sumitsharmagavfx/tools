@@ -521,7 +521,7 @@ id/json-ld-faq-schema-generator
             <div class="col-md-4 mb-5">
               <div class="form-group mb-0">
                 <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control" id="schema-json-ld">
+                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
                   <option>Home</option>
                   <option>Breadcrumb</option>
                   <option selected="selected">FAQ Page</option>

@@ -21,6 +21,24 @@ const EmptyHistoryTemplate = () => `
   </div>
 </li>`;
 
+const HistoryTemplateMobile = (url, date) => `
+<div class="custom-card py-5 px-3 history--list" data-url="${url}">
+<div class="d-flex align-items-center justify-content-between">
+  <div class="local-collection-title">${url}</div>
+  <div class="d-flex align-items-center">
+    <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${date}"></i>
+    <i class='bx bxs-x-circle bx-sm text-grey delete-history--btn' data-url="${url}"></i>
+  </div>
+</div>
+</div>`;
+
+const EmptyHistoryTemplateMobile = () => `
+<div class="custom-card py-5 px-3">
+<div class="d-flex justify-content-center text-center">
+  <span>This is your first impressions, no history yet!</span>
+</div>
+</div>`;
+
 const HreflangResultTemplate = (no, url, hreflang, language, region) => `
 <div class="d-flex mx-5 result-row">
   <div class="number">
@@ -43,26 +61,31 @@ const HreflangResultTemplate = (no, url, hreflang, language, region) => `
 
 function getHistories() {
     $('#local-history').empty();
+    $('#local-history-mobile').empty();
     let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
     if (!histories || histories.length === 0) {
         $('#local-history').append(EmptyHistoryTemplate());
+        $('#local-history-mobile').append(EmptyHistoryTemplateMobile());
         return;
     }
     for (let history of histories.reverse()) {
         $('#local-history').append(
             HistoryTemplate(history.url, history.date)
         );
+        $('#local-history-mobile').append(
+            HistoryTemplateMobile(history.url, history.date)
+        )
     }
 }
 
-function addHistory(url){
+function addHistory(url, data) {
     let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
-    if(histories.find(history => {return history.url === url;})) return;
     histories.push({
         url: url,
-        date: formatDate(new Date())
+        data: data,
+        date: (new Date()).toLocaleDateString('en-GB')
     })
     localStorage.setItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
@@ -91,12 +114,11 @@ function analyze(_url) {
                 'url': _url
             },
             beforeSend: () => {
-                $("#hreflang-result-list").empty();
                 $('#cancel-request-btn')
                     .removeClass('btn-cancel-disabled')
                     .addClass('btn-cancel')
                     .removeAttr('disabled');
-                updateProgressBar(10);
+                updateProgressBar(20);
                 $('#no-crawl-result').hide();
                 $('#progress-stop-message').hide();
                 $('#progress-finish-message').hide();
@@ -104,20 +126,11 @@ function analyze(_url) {
             },
             success: (res) => {
                 if (res.statusCode === 200) {
-                    let _counter = 1;
-                    for (let _data of res.data) {
-                        $("#hreflang-result-list")
-                            .append(
-                                HreflangResultTemplate(_counter++,
-                                    _data.url,
-                                    _data.hreflang,
-                                    _data.language ? _data.language.name : 'undefined',
-                                    _data.location ? _data.location.name : 'undefined')
-                            )
-                    }
-                    addHistory(_url);
+                    updateProgressBar(50);
+                    addHistory(_url, res.data);
+                    renderAllData(res.data);
                 } else {
-                    toastr.err(res.message, 'Error API');
+                    toastr.error(res.message, 'Error API');
                 }
             },
             error: (err) => {
@@ -141,6 +154,21 @@ function analyze(_url) {
         })
     } else {
         toastr.error('URL Format is not valid', 'Error')
+    }
+}
+
+function renderAllData(data){
+    $("#hreflang-result-list").empty();
+    let _counter = 1;
+    for (let _data of data) {
+        $("#hreflang-result-list")
+            .append(
+                HreflangResultTemplate(_counter++,
+                    _data.url,
+                    _data.hreflang,
+                    _data.language ? _data.language.name : 'undefined',
+                    _data.location ? _data.location.name : 'undefined')
+            )
     }
 }
 
@@ -196,7 +224,35 @@ $('#local-history').on('click', '.delete-history--btn', function () {
     deleteHistory($(this).data('url'))
 }).on('click', '.history--list', function (e) {
     if (e.target.classList.contains('delete-history--btn')) return;
-    analyze($(this).data('url'));
+    const _url = $(this).data('url');
+
+    let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
+    histories = histories ? JSON.parse(histories) : [];
+    const history = histories.find(history => {
+        return history.url === _url;
+    });
+
+    dataResult = history.data;
+
+    renderAllData(history.data);
+})
+
+$('#local-history-mobile').on('click', '.delete-history--btn', function () {
+    deleteHistory($(this).data('url'))
+}).on('click', '.history--list', function (e) {
+    if (e.target.classList.contains('delete-history--btn')) return;
+    // analyze($(this).data('url'));
+    const _url = $(this).data('url');
+
+    let histories = localStorage.getItem(HREFLANG_CHECKER_LOCAL_STORAGE_KEY);
+    histories = histories ? JSON.parse(histories) : [];
+    const history = histories.find(history => {
+        return history.url === _url;
+    });
+
+    dataResult = history.data;
+
+    renderAllData(history.data);
 })
 
 $('#check-btn').click(function () {
@@ -212,6 +268,6 @@ $('#cancel-request-btn').click(function () {
         .attr('disabled', 'disabled')
 })
 
-$('#clear-history-btn').click(function(){
+$('.clear-history--btn').click(function(){
     deleteHistory();
 })

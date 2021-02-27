@@ -11,25 +11,25 @@ const refreshLocalStorage = function(){
                 let temp = JSON.parse(sleceFirstLastLine(localStorage.getItem(key)))
                 let date = new Date(key*1000)
                 let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
-                '<div class="d-flex align-items-center justify-content-between">'+
+                    '<div class="d-flex align-items-center justify-content-between">'+
                     '<div class="local-collection-title">'+temp.mainEntity[0].name+'</div>'+
-                        '<div class="d-flex align-items-center">'+
-                            '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                            '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
-                        '</div>'+
+                    '<div class="d-flex align-items-center">'+
+                    '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                    '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
                     '</div>'+
-                '</div>'
-            
+                    '</div>'+
+                    '</div>'
+
                 let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
-                '<div class="d-flex justify-content-between">'+
-                '  <div class="local-collection-title">'+temp.mainEntity[0].name+'</div>'+
-                '  <div class="d-flex align-items-center">'+
+                    '<div class="d-flex justify-content-between">'+
+                    '  <div class="local-collection-title">'+temp.mainEntity[0].name+'</div>'+
+                    '  <div class="d-flex align-items-center">'+
                     '<span class="mr-2 text-grey date-created">Created at '+(date.getHours() < 10 ? ('0'+date.getHours()):date.getHours())+'.'+(date.getMinutes() < 10 ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
-                '  </div>'+
-                '</div>'+
-                '</li>'
-                
+                    '    <i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                    '  </div>'+
+                    '</div>'+
+                    '</li>'
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
@@ -144,7 +144,7 @@ const save = function(){
             window.localStorage.setItem('keys', JSON.stringify(temp));
             window.localStorage.removeItem(key);
         }
-    }    
+    }
 }
 
 let main =
@@ -182,7 +182,7 @@ jQuery('#add').click(function () {
     });
     print(data);
     jQuery('#form').append(
-      "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
+        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
     );
 
     // append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +

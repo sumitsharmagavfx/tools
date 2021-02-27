@@ -26,7 +26,7 @@ trait ApiHelper
             }
 
             $response = $this->client->request($method, env('TOOLS_API_URL') . $path . "?key=$key" , $options);
-
+//            dd($response->getBody()->getContents());
             return $response->getBody()->getContents();
         } catch (ClientException $exception) {
             return $exception->getResponse()->getBody()->getContents();
@@ -48,6 +48,11 @@ trait ApiHelper
     protected function requestLinkAnalyzer($url)
     {
         $response = $this->request("api/link-analyzer/analyze", 'POST', compact('url'));
+        return \GuzzleHttp\json_decode($response, 1);
+    }
+
+    protected function requestRedirectChainChecker($url){
+        $response = $this->request("api/redirect-chain-checker/check", 'POST', compact('url'));
         return \GuzzleHttp\json_decode($response, 1);
     }
 }
