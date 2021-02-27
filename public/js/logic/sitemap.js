@@ -1,4 +1,4 @@
-const { take } = require("lodash");
+// const { take } = require("lodash");
 
 toastr.options = {
     "closeButton": true,
@@ -29,11 +29,14 @@ $(document).ready(function () {
     $('#crawlHttp').hide()
     $('#cancelOff').show()
     $('#cancelOn').hide()
+    refreshLocalStorage()
     clearTable();
     const socket = io('http://127.0.0.1:3000', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
     triggerEnter('#generate','#url');
     $('#generate').click(function () {
+        $(this).prop('disabled',true)
         clearTable();
+        rendering.skip = 0;
         let match =/^(http(s)?|ftp):\/\//;
         let url = $('#url').val().replace(match,"");
         if (url.substr(url.length-1)==='/')
@@ -47,6 +50,7 @@ $(document).ready(function () {
         $("#downloadOff").show();
         $("#downloadOn").hide();
         $("#result").empty();
+        isCanceled = false;
     });
 
     $('#cancelOn').on('click',function(){
@@ -60,36 +64,33 @@ $(document).ready(function () {
         isCanceled = true;
         updateProgressBar(0)
         toastr.error('Cancel your task')
+        $('#generate').prop('disabled',false)
     });
 
     socket.on('update queue', data =>{
-        console.log(isCanceled);
         if (!isCanceled){
-            $('#detail-progress').html(data.site_length+' Has been crawld')
-            // updateProgressBar((data.site_length/data.queue_length*100).toFixed(2));
+            $('#detail-progress').html(data.site_length+' Has been crawled')
         }
     });
 
     socket.on('result', response => {
-        // $('#spin').removeClass("spinner spinner-success spinner-right");
-        // console.log(response);
-        $('#info').html("Our robot is already finished your task.")
         clearTable();
-        $('#table').css('display','block');
+        $('#length-result').html(`(${response.data.length})`)
+        $('#detail-progress').empty()
+        $('#info').html("Our robot is already finished your task.")
         $('#noCrawlResult').hide();
         $("#downloadOff").hide();
         $("#downloadOn").show();
-        $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+response.url);
-        for (let datum in response.data){
-            addData(response.data[datum],parseInt(datum)+1);
-        }
+        $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+response.hash);
         DATA_FINAL = response.data;
-        sticky.update();
-        Swal.close();
+        removeShowMore()
+        renderData()
+        $('#generate').prop('disabled',false)
+        saveData(response)
+        refreshLocalStorage()
     });
 
     socket.on('notfound', msg =>{
-        // $('#spin').removeClass("spinner spinner-success spinner-right");
         toastr.error('Error', msg)
     })
 });
@@ -110,21 +111,6 @@ $('#url').on('input',function(){
         $('#crawlHttp').hide()
     }
 })
-
-$('#download').click(function () {
-    let parse = new X2JS();
-    let text= "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        "<urlset\n" +
-        "      xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"\n" +
-        "      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-        "      xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9\n" +
-        "            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n" +
-        "<!-- created with Free Online Sitemap Generator https://tools.cmlabs.co -->"+
-        parse.json2xml_str(DATA_FINAL)+
-        "</urlset>";
-    download(vkbeautify.xml(text),"sitemap.xml","text/xml");
-    // console.log(parse.json2xml_str(DATA_FINAL))
-});
 
 function addData(data, i) {
     $("#result").append('<div class="d-flex align-items-center mx-5 result-row">'+
@@ -161,14 +147,109 @@ function regexHttps(url){
     }
 }
 
-let renderData = function(data) {
-    for (let i = skip ; i < data.length; i++){
-        addData(data[i],i+1)
-        if((i% rendering.take)==0) 
+let renderData = function() {
+    for (let i = rendering.skip ; i < DATA_FINAL.length; i++){
+        addData(DATA_FINAL[i],i+1)
+        if(i === rendering.skip + rendering.take){
+            $("#result").append('<div id="show-more" onclick="showMore()" class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">\n' +
+                '                  <div class="">\n' +
+                '                    <span class="label label-square label-sitemap">...</span>\n' +
+                '                    <span class="mx-3 sitemap-url-result">Show More</span>\n' +
+                '                  </div>\n' +
+                '                  <div class="d-flex align-items-center">\n' +
+                '                    <i class=\'bx bxs-chevron-down sitemap-show-more\'></i>\n' +
+                '                  </div>\n' +
+                '                </div>');
             break;
+        }
     }
-    if(i < data.length){
-        $("#result").append();
+    rendering.skip += rendering.take+1;
+}
+
+let removeShowMore = function (){
+    $('#show-more').remove();
+}
+
+let showMore = function (){
+    removeShowMore()
+    renderData()
+}
+
+let saveData = function (data) {
+    let dataFromLocal = localStorage.getItem('sitemap-generator')
+    let storage = []
+    if (dataFromLocal){
+        storage = JSON.parse(dataFromLocal)
     }
-    rensering.skip += take;
+    storage.push(data)
+    localStorage.setItem('sitemap-generator',JSON.stringify(storage))
+}
+
+const refreshLocalStorage = function(){
+    try{
+        const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
+        $('#localsavemobile').empty();
+        $('#localsavedesktop').empty();
+        const keys = JSON.parse(localStorage.getItem('sitemap-generator'))
+        if(keys){
+            let index = 0;
+            for (let key of keys){
+                let date = new Date(key.date)
+                let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="local-collection-title">${key.url}
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
+                               title="${formatDate}"></i>
+                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
+                        </div>
+                    </div>
+                </div>`
+
+                let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">${key.url}</div>
+                    <div class="d-flex align-items-center">
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${formatDate}"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
+                    </div>
+                  </div>`
+                index++
+                $('#localsavemobile').append(div)
+                $('#localsavedesktop').append(div2)
+            }
+        }else {
+            let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>This is your first impressions, no history yet!</span>
+                  </div>
+                </li>`
+            let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>This is your first impressions, no history yet!</span>
+                    </div>
+                </div>`
+
+            $('#localsavemobile').append(div)
+            $('#localsavedesktop').append(div2)
+        }
+    }catch(e){
+        console.log(e)
+    }
+}
+
+let getData = function (index) {
+    $("#result").empty();
+    $('#noCrawlResult').hide();
+    let local = JSON.parse(localStorage.getItem('sitemap-generator'))
+    $('#url').val(local[index].url)
+    $("#downloadOff").hide();
+    $("#downloadOn").show();
+    $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+local[index].hash);
+    DATA_FINAL = local[index].data
+    $('#length-result').html(`(${DATA_FINAL.length})`)
+    rendering.skip = 0
+    renderData()
 }
