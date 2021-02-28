@@ -196,7 +196,7 @@ const refreshLocalStorage = function(){
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
                                title="${formatDate}"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
+                            <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
                         </div>
                     </div>
                 </div>`
@@ -206,7 +206,7 @@ const refreshLocalStorage = function(){
                     <div class="local-collection-title">${key.url}</div>
                     <div class="d-flex align-items-center">
                       <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${formatDate}"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
                     </div>
                   </div>`
                 index++
@@ -231,6 +231,13 @@ const refreshLocalStorage = function(){
     }catch(e){
         console.log(e)
     }
+}
+
+let removeLocal = function (index){
+    const keys = JSON.parse(localStorage.getItem('ssl-checker'))
+    keys.splice(index,1)
+    localStorage.setItem('ssl-checker',JSON.stringify(keys))
+    refreshLocalStorage()
 }
 
 let getData = function (index) {
