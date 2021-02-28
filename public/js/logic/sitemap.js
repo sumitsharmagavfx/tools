@@ -1,5 +1,4 @@
 // const { take } = require("lodash");
-
 toastr.options = {
     "closeButton": true,
     "debug": false,
@@ -27,11 +26,10 @@ $(document).ready(function () {
     $('#noCrawl').show()
     $('#crawlHttps').hide()
     $('#crawlHttp').hide()
-    $('#cancelOff').show()
-    $('#cancelOn').hide()
+    cancel(false)
     refreshLocalStorage()
     clearTable();
-    const socket = io('http://127.0.0.1:3000', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    const socket = io(URL_API, {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
     triggerEnter('#generate','#url');
     $('#generate').click(function () {
         $(this).prop('disabled',true)
@@ -43,20 +41,17 @@ $(document).ready(function () {
             socket.emit('crawl',"https://"+url.slice(0,-1));
         else socket.emit('crawl',"https://"+url);
         $('#info').html("Our robot is excecuting your task..")
-        $('#cancelOff').hide()
-        $('#cancelOn').show()
+        cancel(true)
         $("#noCrawlResult").hide();
         $("#generateCrawlResult").show();
-        $("#downloadOff").show();
-        $("#downloadOn").hide();
+        buttonOn(false)
         $("#result").empty();
         isCanceled = false;
     });
 
     $('#cancelOn').on('click',function(){
         socket.emit('stop');
-        $(this).hide();
-        $('#cancelOff').show();
+        cancel(false)
         $("#noCrawlResult").show();
         $("#generateCrawlResult").hide();
         $('#info').html("Our robot is sleeping right now. Give him a task!")
@@ -79,12 +74,11 @@ $(document).ready(function () {
         $('#detail-progress').empty()
         $('#info').html("Our robot is already finished your task.")
         $('#noCrawlResult').hide();
-        $("#downloadOff").hide();
-        $("#downloadOn").show();
-        $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+response.hash);
+        buttonOn(true, response.hash)
         DATA_FINAL = response.data;
         removeShowMore()
         renderData()
+        cancel(false)
         $('#generate').prop('disabled',false)
         saveData(response)
         refreshLocalStorage()
@@ -130,8 +124,7 @@ function updateProgressBar(percentage) {
 function clearTable() {
     $("#noCrawlResult").show();
     $("#generateCrawlResult").hide();
-    $("#downloadOff").show();
-    $("#downloadOn").hide();
+    buttonOn(false)
     $("#result").empty();
 }
 
@@ -245,11 +238,34 @@ let getData = function (index) {
     $('#noCrawlResult').hide();
     let local = JSON.parse(localStorage.getItem('sitemap-generator'))
     $('#url').val(local[index].url)
-    $("#downloadOff").hide();
-    $("#downloadOn").show();
-    $("#downloadOn").attr('href','http://127.0.0.1:3000/download/'+local[index].hash);
+    buttonOn(true,local[index].hash)
     DATA_FINAL = local[index].data
     $('#length-result').html(`(${DATA_FINAL.length})`)
     rendering.skip = 0
     renderData()
+}
+
+let buttonOn = function (param, hash = null) {
+    let download = $('#download-button')
+    download.empty()
+    if (param){
+        download.append(`<a href="${URL_API+'/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">Download Sitemap</a>`)
+    }else {
+        download.append(`<button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
+                                        disabled name="button">Download Sitemap
+                                </button>`)
+    }
+}
+
+let cancel = function (param) {
+    let cancel = $('#cancel-button')
+    cancel.empty()
+    if (param){
+        cancel.append(`<button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel
+                                    </button>`)
+    }else {
+        cancel.append(`<button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled
+                                name="button">Cancel
+                        </button>`)
+    }
 }

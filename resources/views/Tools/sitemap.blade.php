@@ -381,7 +381,7 @@
       vertical-align: middle;
     }
   }
-  
+
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;
@@ -532,12 +532,7 @@
                                       style="color:#9A99A2">(0)</span>
                                 <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
                             </div>
-                            <div class="mb-3">
-                                <a href="#" id="downloadOn" type="button" class="btn btn-download-sitemap"
-                                   name="button">Download Sitemap</a>
-                                <button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
-                                        disabled name="button">Download Sitemap
-                                </button>
+                            <div id="download-button" class="mb-3">
                             </div>
                         </div>
                         <div class="card card-custom mb-5">
@@ -555,99 +550,11 @@
                                 <div class="" id="generateCrawlResult">
                                     <div class="text-center">
                                         <p class="d-block">Generating your sitemap...</p>
-                                        {{-- <a href="#" class="links">Learn how to use this tools?</a> --}}
                                     </div>
                                 </div>
 
                                 <!-- RESULT CRAWL -->
-                                <div class="" id=result>
-
-                                    <!-- DUMMY RESULT DATA START -->
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">1</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">2</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">3</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">4</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">5</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">6</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">7</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">8</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">9</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-
-
-                                    <div class="d-flex align-items-center mx-5 result-row">
-                                        <span class="label label-square label-sitemap">10</span>
-                                        <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                                    </div>
-                                    <hr>
-                                    <!-- DUMMY RESULT DATA END -->
-
-                                    <!-- SHOW MORE BUTTON START -->
-                                    <div
-                                        class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
-                                        <div class="">
-                                            <span class="label label-square label-sitemap">...</span>
-                                            <span class="mx-3 sitemap-url-result">Show More</span>
-                                        </div>
-                                        <div class="d-flex align-items-center">
-                                            <i class='bx bxs-chevron-down sitemap-show-more'></i>
-                                        </div>
-                                    </div>
-                                    <!-- SHOW MORE BUTTON END -->
-
-
-                                </div>
+                                <div class="" id=result></div>
                             </div>
                         </div>
                     </div>
@@ -669,11 +576,7 @@
                                       <div class="spinner spinner-primary spinner-lg "></div>
                                     </div> --}}
                                     <p id="detail-progress" class="text-black font-weight-bold mb-3"></p>
-                                    <button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel
-                                    </button>
-                                    <button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled
-                                            name="button">Cancel
-                                    </button>
+                                    <span id="cancel-button"></span>
                                 </div>
                             </div>
                         </div>
@@ -1155,6 +1058,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script>
         const token = "{{csrf_token()}}"
+        const URL_API = '{{env('URL_API')}}'
     </script>
     <script src="{{asset('js/logic/download.js')}}"></script>
     <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
