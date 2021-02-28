@@ -71,6 +71,10 @@ color: white;
 color: var(--grey);
 }
 
+.form-group label {
+  color: var(--black);
+}
+
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -1079,22 +1083,6 @@ text-decoration: underline;
     $('#myModal').on('show.bs.modal', function(e) {
       var image = $(e.relatedTarget).attr('src');
       $(".img-responsive").attr("src", image);
-    });
-    $("#remoteJob").change(function() {
-      if (this.checked) {
-        $(".street, .city, div.province > button, .zipCode").attr("disabled", true);
-      } else {
-        $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
-      }
-    });
-    $(".salary").keyup(function() {
-      if (this.value.length > 0) {
-        $(".maxSalary, .currency, .unitText").removeAttr("disabled");
-        $(".currency, .unitText").selectpicker("refresh");
-      } else {
-        $(".maxSalary, .currency, .unitText").attr("disabled", true);
-        $(".currency, .unitText").selectpicker("refresh");
-      }
     });
   });
 </script>

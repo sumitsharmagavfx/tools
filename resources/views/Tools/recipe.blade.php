@@ -115,10 +115,6 @@ cursor: pointer;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-button > i.bx {
-  color: white;
-}
-
 #kt_datepicker_2 {
   border-left-style: none;
 }
@@ -492,7 +488,7 @@ text-decoration: underline;
                     <div class="row">
                       <div class="col-12">
                         <label class="text-black font-weight-bold" for="keywords">Keywords</label>
-                        <input type="number" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.keywords')" value="" min="0" data-id="0">
+                        <input type="text" name="" class="form-control keywords mb-5" placeholder="@lang('recipe.keywords')" value="" min="0" data-id="0">
                       </div>
                     </div>
                   </div>

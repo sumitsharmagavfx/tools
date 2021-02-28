@@ -71,6 +71,10 @@ color: white;
 color: var(--grey);
 }
 
+.form-group label {
+  color: var(--black);
+}
+
 .form-control:focus {
   border-color: var(--primaryblue);
 }

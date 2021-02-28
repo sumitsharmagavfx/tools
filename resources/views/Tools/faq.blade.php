@@ -81,6 +81,14 @@ id/json-ld-faq-schema-generator
     color: var(--grey);
   }
 
+.form-group label {
+  color: var(--black);
+}
+
+.form-control:focus {
+  border-color: var(--primaryblue);
+}
+
   @media (max-width:767px) {
     .btn-add-question {
       width: 100%;
