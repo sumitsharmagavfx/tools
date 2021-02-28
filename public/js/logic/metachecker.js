@@ -48,8 +48,8 @@ $('#desc').on('keyup',function(){
 })
 
 $('#url').on('keyup',function(){
-    $('#resulturl').text($(this).val())
-    $('#resulturlmobile').text($(this).val())
+    $('#resulturl').text($(this).val().toLowerCase())
+    $('#resulturlmobile').text($(this).val().toLowerCase())
 })
 
 const save = function(url, title, description){
