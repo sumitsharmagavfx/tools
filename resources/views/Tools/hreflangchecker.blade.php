@@ -789,7 +789,7 @@
 
                                 <!-- RESULT CRAWL -->
                                 <div class="" id=>
-                                    <div class="d-flex mx-5 mb-5">
+                                    <div class="d-flex mx-5 mb-5" id="hreflang-result-header" style="display: none !important;">
                                         <div class="number font-weight-bolder text-black">
                                             <p class="mb-0">No.</p>
                                         </div>

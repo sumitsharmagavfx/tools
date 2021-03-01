@@ -49,14 +49,19 @@
     }
 
     function deleteBreadcrumb(index){
-        if(index > 2){
-            main.itemListElement.splice($('#itemListLength').val() - 1, 1);
+        // if(index > 2){
+            main.itemListElement.splice(index-1, 1);
+
+            for (let i = index-1; i < main.itemListElement.length; i++) {
+                    main.itemListElement[i]['position'] = main.itemListElement[i]['position'] - 1;
+            }
+
             jsonFormat();
             $('.form-cotainer[data-id=' + (counter) + ']').remove();
             let row = parseInt(jQuery('#json-format').val().split('\n').length);
             $('#json-format').attr('rows',row);
             counter--;
-        }
+        // }
         sticky.update();
     }
 
