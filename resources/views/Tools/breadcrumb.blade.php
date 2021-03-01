@@ -71,6 +71,14 @@ id/json-ld-breadcrumb-schema-generator
   color: var(--grey);
 }
 
+.bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue);
+}
+
+.bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+}
+
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -409,14 +417,14 @@ id/json-ld-breadcrumb-schema-generator
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
               <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option selected="selected">Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option>Person</option>
-                <option>Product</option>
-                <option>Recipe</option>
+                <option value="home">Home</option>
+                <option value="breadcrumb" selected="selected">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -442,7 +450,8 @@ id/json-ld-breadcrumb-schema-generator
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #1</label>
                               <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="0">
-                          </div>
+                              <div class="invalid-feedback">Invalid URL</div>
+                            </div>
                       </div>
                   </div>
                  <div class="col-2 col-sm-1">
@@ -462,6 +471,7 @@ id/json-ld-breadcrumb-schema-generator
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #2</label>
                               <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="1">
+                              <div class="invalid-feedback">Invalid URL</div>
                           </div>
                       </div>
                   </div>

@@ -71,6 +71,14 @@ color: white;
 color: var(--grey);
 }
 
+.bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue);
+}
+
+.bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+}
+
 .deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
 color: var(--black);
 cursor: pointer;
@@ -452,14 +460,14 @@ text-decoration: underline;
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
               <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option>Person</option>
-                <option>Product</option>
-                <option selected="selected">Recipe</option>
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe" selected="selected">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -495,6 +503,7 @@ text-decoration: underline;
                   <div class="col-10 col-sm-11">
                     <label class="text-black font-weight-bold" for="image">Image URL #1</label>
                     <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                   <div class="col-2 col-sm-1">
                     <div class="d-flex justify-content-center mt-9">
@@ -517,10 +526,12 @@ text-decoration: underline;
                 <div class="col-12 col-md-6 mb-5 mb-md-0">
                   <label class="text-black font-weight-bold" for="videoContent">Video: Content URL</label>
                   <input type="text" name="" class="form-control videoContent" placeholder="@lang('recipe.videoContent')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
                 <div class="col-12 col-md-6">
                   <label class="text-black font-weight-bold" for="videoEmbed">Video: Embed URL</label>
                   <input type="text" name="" class="form-control videoEmbed" placeholder="@lang('recipe.videoEmbed')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -542,10 +553,12 @@ text-decoration: underline;
                 <div class="col-6 col-md-3 col-xl-2">
                   <label class="text-black font-weight-bold" for="prepTime">Prep time</label>
                   <input type="number" name="" class="form-control prepTime" placeholder="@lang('recipe.prepTime')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
                 <div class="col-6 col-md-3 col-xl-2">
                   <label class="text-black font-weight-bold" for="cookTime">Cook time</label>
                   <input type="number" name="" class="form-control cookTime" placeholder="@lang('recipe.cookTime')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -565,6 +578,7 @@ text-decoration: underline;
                 <div class="col-12 col-md-4">
                   <label class="text-black font-weight-bold" for="recipeServings">Servings</label>
                   <input type="number" name="" class="form-control recipeServings" placeholder="@lang('recipe.recipeServings')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -585,10 +599,12 @@ text-decoration: underline;
                 <div class="col-6 col-md-4">
                   <label class="text-black font-weight-bold" for="calories">Nutrition: Calories</label>
                   <input type="number" name="" class="form-control calories" placeholder="@lang('recipe.calories')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
                 <div class="col-6 col-md-4">
                   <label class="text-black font-weight-bold" for="fat">Nutrition: Fat</label>
                   <input type="number" name="" class="form-control fat" placeholder="@lang('recipe.fat')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -602,21 +618,25 @@ text-decoration: underline;
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="aggregate">Aggregate ratings</label>
-                  <input type="number" name="" class="form-control aggregate mb-5" placeholder="@lang('recipe.aggregate')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control aggregate" placeholder="@lang('recipe.aggregate')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="ratings">Number of ratings</label>
-                  <input type="number" name="" class="form-control ratings mb-5" placeholder="@lang('recipe.ratings')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control ratings" placeholder="@lang('recipe.ratings')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="highest">Highest value allowed</label>
-                  <input type="number" name="" class="form-control highest mb-5" placeholder="@lang('recipe.highest')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control highest" placeholder="@lang('recipe.highest')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="lowest">Lowest value allowed</label>
-                  <input type="number" name="" class="form-control lowest mb-5" placeholder="@lang('recipe.lowest')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control lowest" placeholder="@lang('recipe.lowest')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row">

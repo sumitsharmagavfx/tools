@@ -251,6 +251,14 @@ $(document).on('click', '.deleteReview', function () {
     $('#addReview > .row').remove();
 });
 
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
+});
+
 jQuery('#copy').click(function () {
     const copyText = jQuery('#json-format');
     copyText.select();
@@ -274,12 +282,18 @@ jQuery('#copy').click(function () {
 $(document).on("change", ".offerType", function() {
     var selectedItem = $(this).val();
     if(selectedItem === "Aggregate Offer") {
+        $(".url, .price, .priceCurrency").removeAttr("disabled");
+        $(".priceCurrency").selectpicker("refresh");
         $("#ag_offer").css('display', 'flex');
         $("#offer").hide(); 
     }else if(selectedItem === "Offer") {
+        $(".url, .price, .priceCurrency").removeAttr("disabled");
+        $(".priceCurrency").selectpicker("refresh");
         $("#offer").css('display', 'flex');
         $("#ag_offer").hide();        
     }else if(selectedItem === "None"){
+        $(".url, .price, .priceCurrency").attr("disabled", true);
+        $(".priceCurrency").selectpicker("refresh");
         $("#ag_offer").hide();
         $("#offer").hide(); 
     }

@@ -96,9 +96,9 @@ jQuery(document).on('click', '#add-recipe-step', function () {
 
     // );
     jQuery('#step').append("<div class=\"row\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(main.recipeInstructions.length-1)+"\">Step #"+(main.recipeInstructions.length)+": Text</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\"Type step here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-2\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-5 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
+    "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
+    "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
+    "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
     "                <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteStep\' data-id=\""+(main.recipeInstructions.length-1)+"\"></i></div></div>"
 
     );
@@ -443,6 +443,14 @@ $(document).on('click', '.deleteStep', function () {
 
 $(document).on('click', '.deleteReview', function () {
     $('#addReview > .row').remove();
+});
+
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
 });
 
 jQuery('#copy').click(function () {

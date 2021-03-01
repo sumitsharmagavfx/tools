@@ -71,6 +71,14 @@ color: white;
 color: var(--grey);
 }
 
+.bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue);
+}
+
+.bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+}
+
 .deleteSupply:hover, .deleteTool:hover, .deleteStep:hover {
 color: var(--black);
 cursor: pointer;
@@ -442,14 +450,14 @@ text-decoration: underline;
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
                 <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option>FAQ Page</option>
-                  <option selected="selected">How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option>Product</option>
-                  <option>Recipe</option>
+                  <option value="home">Home</option>
+                  <option value="breadcrumb">Breadcrumb</option>
+                  <option value="faq">FAQ Page</option>
+                  <option value="how-to" selected="selected">How-to</option>
+                  <option value="job-posting">Job Posting</option>
+                  <option value="person">Person</option>
+                  <option value="product">Product</option>
+                  <option value="recipe">Recipe</option>
                 </select>
               </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -473,6 +481,7 @@ text-decoration: underline;
                       <div class="col-12 col-md-4 mb-5">
                         <label class="text-black font-weight-bold" for="totalTime">Total time</label>
                         <input type="number" name="" class="form-control totalTime" placeholder="@lang('howto.totalTime')" value="" min="0" data-id="0">
+                        <div class="invalid-feedback">Value should be more than 0</div>
                       </div>
                       <div class="col-6 col-md-4">
                         <label class="text-black font-weight-bold" for="estimated">Estimated Cost</label>
@@ -496,6 +505,7 @@ text-decoration: underline;
                   <div class="col-md-12">
                     <label class="text-black font-weight-bold mt-3 mt-xl-0" for="imageUrl">Image URL</label>
                     <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.imageUrl')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                 </div>
               </div>
@@ -528,6 +538,7 @@ text-decoration: underline;
                 <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="imageStep">Image URL</label>
                   <input type="text" name="" class="form-control imageStep" placeholder="@lang('howto.imageStep')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
                 <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="nameStep">Name</label>
@@ -536,6 +547,7 @@ text-decoration: underline;
                 <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="url">URL</label>
                   <input type="text" name="" class="form-control url" placeholder="@lang('howto.urlStep')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
               </div>
               <div class="row">

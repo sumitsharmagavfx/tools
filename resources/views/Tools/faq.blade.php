@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', Lang::get('faq.meta-title'))
+@section('title', "JSON-LD FAQ Page Schema Generator")
 
-@section('meta-desc', Lang::get('faq.meta-desc'))
+@section('meta-desc', "JSON-LD FAQ Page Schema Generator")
 
-@section('meta-keyword', Lang::get('faq.meta-keyword'))
+@section('meta-keyword', "JSON-LD FAQ Page Schema Generator")
 
 @section('conical','/en/json-ld-faq-schema-generator')
 
@@ -79,6 +79,14 @@ id/json-ld-faq-schema-generator
 
   .btn-delete-disabled {
     color: var(--grey);
+  }
+
+  .bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue);
+  }
+
+  .bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+    color: white;
   }
 
   .form-control:focus {
@@ -525,14 +533,14 @@ id/json-ld-faq-schema-generator
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
               <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option selected="selected">FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option>Person</option>
-                <option>Product</option>
-                <option>Recipe</option>
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq" selected="selected">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">

@@ -71,6 +71,14 @@ color: white;
 color: var(--grey);
 }
 
+.bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue);
+}
+
+.bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+}
+
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -408,14 +416,14 @@ text-decoration: underline;
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
               <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option selected="selected">Person</option>
-                <option>Product</option>
-                <option>Recipe</option>
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person" selected="selected">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -442,9 +450,10 @@ text-decoration: underline;
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="pictureUrl">Image URL</label>
-                    <input type="text" name="" class="form-control pictureUrl mb-5" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
+                    <input type="text" name="" class="form-control pictureUrl" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                   <div class="col-12 col-md-6">
                     <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
@@ -486,6 +495,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your twitter URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -496,6 +506,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your facebook URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -506,6 +517,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your instagram URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -516,6 +528,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your youtube URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -526,6 +539,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your linkedin URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -536,6 +550,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your pinterest URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -546,6 +561,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your soundcloud URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -556,6 +572,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your tumblr URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -566,6 +583,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your wikipedia URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -576,6 +594,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your github URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                     <div class="row mb-5">
@@ -586,6 +605,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-10 col-sm-11 pl-0">
                         <input type="text" name="" class="form-control sosmedName" placeholder="Type your website URL here.." value="" data-id="0">
+                        <div class="invalid-feedback">Invalid URL</div>
                       </div>
                     </div>
                   </div>
