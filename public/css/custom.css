@@ -253,9 +253,9 @@ a:hover {
 }
 
 /* Dropdown Menu Subheader */
-.custom-nav .nav-item .nav-link.dropdown-toggle::after {
+/* .custom-nav .nav-item .nav-link.dropdown-toggle::after {
     display: none;
-}
+} */
 .custom-nav .nav-item.dropdown .dropdown-menu {
     border-radius: 0;
     padding: 0.5rem;
@@ -270,6 +270,11 @@ a:hover {
     padding: 0.75rem 0.5rem;
 }
 .custom-nav .nav-item.dropdown .dropdown-item:hover {
+    background-color: transparent;
+    color: var(--primaryblue) !important;
+}
+
+.custom-nav .dropdown-item.active, .dropdown-item:active {
     background-color: transparent;
     color: var(--primaryblue) !important;
 }

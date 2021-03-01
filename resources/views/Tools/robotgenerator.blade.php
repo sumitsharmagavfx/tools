@@ -1278,3 +1278,7 @@
 @section('robotstxt-generator')
 active
 @endsection
+
+@section('generator')
+active
+@endsection

@@ -1630,3 +1630,7 @@ $(document).ready(function() {
 @section('page-speed')
 active
 @endsection
+
+@section('test-n-checker')
+active
+@endsection

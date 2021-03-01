@@ -88,15 +88,6 @@
             font-weight: bold;
         }
 
-        @media (min-width: 992px) {
-
-            .container-description,
-            .container-tools {
-                padding: 0px 100px;
-            }
-        }
-
-
         @media (max-width: 767px) {
             .btn-add-question {
                 width: 100%;
@@ -419,13 +410,6 @@
                 display: flex;
                 justify-content: flex-end;
                 vertical-align: middle;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .container-description,
-            .container-tools {
-                padding: 0px 100px;
             }
         }
 
@@ -1062,6 +1046,10 @@
     </script>
 @endpush
 
-@section('redirectchecker')
+@section('redirect-checker')
     active
+@endsection
+
+@section('test-n-checker')
+active
 @endsection

@@ -381,7 +381,7 @@ id/sitemap-generator
       vertical-align: middle;
     }
   }
-  
+
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;
@@ -1117,5 +1117,9 @@ id/sitemap-generator
 @endpush
 
 @section('sitemap')
+active
+@endsection
+
+@section('generator')
 active
 @endsection

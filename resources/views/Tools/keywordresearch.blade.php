@@ -1715,6 +1715,6 @@ var myChart = new Chart(ctx, {
 </script>
 @endpush
 
-@section('kwresearchchecker')
+@section('keyword-research')
 active
 @endsection

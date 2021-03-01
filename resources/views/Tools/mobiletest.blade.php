@@ -1086,3 +1086,7 @@ id/mobile-test
 @section('mobile-test')
 active
 @endsection
+
+@section('test-n-checker')
+active
+@endsection
