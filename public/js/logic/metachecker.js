@@ -11,10 +11,10 @@ jQuery('#crawlURL').click(function(){
         success: (res) => {
             $('#resulttitle').text(res.title);
             $('#resultdesc').text(res.description);
-            $('#resulturl').text('https://' + urls);
+            $('#resulturl').text('https://' + urls.toLowerCase());
             $('#resulttitlemobile').text(res.title);
             $('#resultdescmobile').text(res.description);
-            $('#resulturlmobile').text('https://' + urls);
+            $('#resulturlmobile').text('https://' + urls.toLowerCase());
             $('#desc').val(res.description)
             $('#title').val(res.title)
             $("#manual-mode").removeClass("d-none").addClass("d-block").slideDown();
