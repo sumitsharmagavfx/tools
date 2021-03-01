@@ -71,12 +71,13 @@ color: white;
 color: var(--grey);
 }
 
-.bootstrap-select .dropdown-menu.inner > li.selected > a, .bootstrap-select .dropdown-menu.inner > li:hover > a {
-    background: var(--primaryblue);
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
 }
 
-.bootstrap-select .dropdown-menu.inner > li.selected > a .text, .bootstrap-select .dropdown-menu.inner > li:hover > a .text {
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
     color: white;
+    transition: 0.15s !important;
 }
 
 .deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
@@ -459,7 +460,7 @@ text-decoration: underline;
           <div class="row">
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
-              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
+              <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
                 <option value="home">Home</option>
                 <option value="breadcrumb">Breadcrumb</option>
                 <option value="faq">FAQ Page</option>
