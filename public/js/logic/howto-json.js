@@ -94,7 +94,7 @@
         })
 
         jsonFormat.render();
-        jQuery('#howto-supply').append("<input type='hidden' id='supplyCounter' value='"+(_supplyCounter)+"'><div class=\"row mt-5\" data-id=\""+(_supplyCounter)+"\"><div class=\"col-10\" data-id=\""+(_supplyCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_supplyCounter)+"\">Supply #"+(_supplyCounter+1)+"</label>\n" +
+        jQuery('#howto-supply').append("<input type='hidden' id='supplyCounter' value='"+(_supplyCounter)+"'><div class=\"row mt-5 supply-name\" data-id=\""+(_supplyCounter)+"\"><div class=\"col-10\" data-id=\""+(_supplyCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_supplyCounter)+"\">Supply #"+(_supplyCounter+1)+"</label>\n" +
         "                <input type=\"text\" name=\"\" class=\"form-control supplyName\" placeholder=\""+supplyName+"\" value=\"\" data-id=\""+(_supplyCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteSupply\' data-id=\""+(_supplyCounter)+"\"></i></div></div>"
         );
         let row = parseInt($('#json-format').val().split('\n').length);
@@ -115,7 +115,7 @@
 
         jsonFormat.render();
 
-        $('#howto-tool').append("<input type='hidden' id='toolsCounter' value='"+(_toolsCounter)+"'><div class=\"row mt-5\" data-id=\""+(_toolsCounter)+"\"><div class=\"col-10\" data-id=\""+(_toolsCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_toolsCounter)+"\">Tool #"+(_toolsCounter+1)+"</label>\n" +
+        $('#howto-tool').append("<input type='hidden' id='toolsCounter' value='"+(_toolsCounter)+"'><div class=\"row mt-5 tools-name\" data-id=\""+(_toolsCounter)+"\"><div class=\"col-10\" data-id=\""+(_toolsCounter)+"\"><label class=\"text-black font-weight-bold\" for=\"tool\" data-id=\""+(_toolsCounter)+"\">Tool #"+(_toolsCounter+1)+"</label>\n" +
         "                <input type=\"text\" name=\"\" class=\"form-control tool\" placeholder=\""+tool+"\" value=\"\" data-id=\""+(_toolsCounter)+"\"></div><div class=\"col-2\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteTool\' data-id=\""+(_toolsCounter)+"\"></i></div></div>"
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
@@ -200,7 +200,7 @@
             $('.supplyName[data-id=' + (i - 1) + ']').val($('.supplyName[data-id=' + (i) + ']').val())
         }
 
-        $('.row[data-id=' + jsonFormat.supplyItem.length + ']').remove();
+        $('.supply-name[data-id=' + jsonFormat.supplyItem.length + ']').remove();
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
 
@@ -244,7 +244,7 @@
                 $('.tool[data-id=' + (i - 1) + ']').val($('.tool[data-id=' + (i) + ']').val())
             }
 
-            $('.row[data-id=' + jsonFormat.tools.length + ']').remove();
+            $('.tools-name[data-id=' + jsonFormat.tools.length + ']').remove();
             let row = parseInt($('#json-format').val().split('\n').length);
             $('#json-format').attr('rows',row);
 
