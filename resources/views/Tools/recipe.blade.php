@@ -76,10 +76,6 @@ color: var(--black);
 cursor: pointer;
 }
 
-.form-group label {
-  color: var(--black);
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -454,19 +450,17 @@ text-decoration: underline;
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option>FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option>Product</option>
-                  <option selected="selected">Recipe</option>
-                </select>
-              </div>
+              <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
+              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
+                <option>Home</option>
+                <option>Breadcrumb</option>
+                <option>FAQ Page</option>
+                <option>How-to</option>
+                <option>Job Posting</option>
+                <option>Person</option>
+                <option>Product</option>
+                <option selected="selected">Recipe</option>
+              </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
               <p class="mb-0 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
@@ -479,8 +473,8 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">Recipe</p>
-              <div class="mb-5" id="formhowto">
+              <p class="h6 text-black mb-5">Recipe</p>
+              <div class="" id="formrecipe">
                 <div class="row">
                   <div class="col-12 col-lg-6">
                     <label class="text-black font-weight-bold" for="name">Name</label>

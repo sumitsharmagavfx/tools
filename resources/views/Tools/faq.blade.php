@@ -81,13 +81,9 @@ id/json-ld-faq-schema-generator
     color: var(--grey);
   }
 
-.form-group label {
-  color: var(--black);
-}
-
-.form-control:focus {
-  border-color: var(--primaryblue);
-}
+  .form-control:focus {
+    border-color: var(--primaryblue);
+  }
 
   @media (max-width:767px) {
     .btn-add-question {
@@ -527,21 +523,20 @@ id/json-ld-faq-schema-generator
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option selected="selected">FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option>Product</option>
-                </select>
-              </div>
+              <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
+              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
+                <option>Home</option>
+                <option>Breadcrumb</option>
+                <option selected="selected">FAQ Page</option>
+                <option>How-to</option>
+                <option>Job Posting</option>
+                <option>Person</option>
+                <option>Product</option>
+                <option>Recipe</option>
+              </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+              <p class="text-black mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
           </div>
         </div>
@@ -551,16 +546,16 @@ id/json-ld-faq-schema-generator
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6">FAQ Page Generator</p>
+              <p class="h6 text-black mb-5">FAQ Page Generator</p>
               <div class="" id="form">
                 <div class="row">
                   <div class="col-10 col-sm-11">
-                    <div class="form-group">
-                      <label for="question-1" class="font-weight-bold">Question 1</label>
+                    <div class="form-group mb-5">
+                      <label for="question-1" class="font-weight-bold text-black">Question 1</label>
                       <input type="text" class="form-control question" name="" value="" data-id="0">
                     </div>
-                    <div class="form-group">
-                      <label for="answer-1" class="font-weight-bold">Answer 1</label>
+                    <div class="form-group mb-5">
+                      <label for="answer-1" class="font-weight-bold text-black">Answer 1</label>
                       <input type="text" class="form-control answer" name="" value="" data-id="0" height="50px">
                     </div>
                   </div>
@@ -572,7 +567,7 @@ id/json-ld-faq-schema-generator
                 </div>
               </div>
 
-              <button type="button" class="btn btn-add-question" name="button" id="add">
+              <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add">
               <i class='bx bx-plus'></i> ADD QUESTION
               </button>
             </div>

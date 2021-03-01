@@ -76,10 +76,6 @@ color: var(--black);
 cursor: pointer;
 }
 
-.form-group label {
-  color: var(--black);
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -462,22 +458,20 @@ text-decoration: underline;
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option>FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option selected="selected">Product</option>
-                  <option>Recipe</option>
-                </select>
-              </div>
+              <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
+              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
+                <option>Home</option>
+                <option>Breadcrumb</option>
+                <option>FAQ Page</option>
+                <option>How-to</option>
+                <option>Job Posting</option>
+                <option>Person</option>
+                <option selected="selected">Product</option>
+                <option>Recipe</option>
+              </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+              <p class="text-black mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
           </div>
         </div>
@@ -487,165 +481,163 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">Product</p>
-              <div class="mb-5" id="formbreadcrumb">
-                <div class="mb-5" id="formproduct">
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="name">Name</label>
-                      <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.name')" value="" data-id="0">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="image">Image URL</label>
-                      <input type="text" name="" class="form-control image mb-5" placeholder="@lang('product.image')" value="" data-id="0">
-                    </div>
+              <p class="h6 text-black mb-5">Product</p>
+              <div class="" id="formproduct">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="name">Name</label>
+                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.name')" value="" data-id="0">
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-lg-6">
-                      <label class="text-black font-weight-bold" for="productBrand">Brand</label>
-                      <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.productBrand')" value="" data-id="0">
-                      <div class="row">
-                        <div class="col-12 mb-5">
-                          <label class="text-black font-weight-bold" for="identifier">Identification properties</label>
-                          <div class="dropdown bootstrap-select show-tick form-control">
-                            <select class="form-control selectpicker identifier" multiple="multiple" data-actions-box="false" tabindex="null">
-                              <option value="sku">sku</option>
-                              <option value="gtin8">gtin8</option>
-                              <option value="gtin13">gtin13</option>
-                              <option value="gtin14">gtin14</option>
-                              <option value="mpn">mpn</option>
-                            </select>
-                          </div>
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="image">Image URL</label>
+                    <input type="text" name="" class="form-control image mb-5" placeholder="@lang('product.image')" value="" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-lg-6">
+                    <label class="text-black font-weight-bold" for="productBrand">Brand</label>
+                    <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.productBrand')" value="" data-id="0">
+                    <div class="row">
+                      <div class="col-12 mb-5">
+                        <label class="text-black font-weight-bold" for="identifier">Identification properties</label>
+                        <div class="dropdown bootstrap-select show-tick form-control">
+                          <select class="form-control selectpicker identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                            <option value="sku">sku</option>
+                            <option value="gtin8">gtin8</option>
+                            <option value="gtin13">gtin13</option>
+                            <option value="gtin14">gtin14</option>
+                            <option value="mpn">mpn</option>
+                          </select>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                      <label class="text-black font-weight-bold" for="description">Product’s description</label>
-                      <textarea name="" class="form-control description" placeholder="@lang('product.description')" data-id="0"></textarea>
-                    </div>
                   </div>
-                  <div class="row">
-                    <div class="col-4 col-md-4" id="sku">
-                      <label class="text-black font-weight-bold" for="sku">sku</label>
-                      <input type="text" name="" class="form-control sku mb-5" placeholder="@lang('product.sku')" value="" data-id="0">
-                    </div>
-                    <div class="col-4 col-md-4" id="gtin8">
-                      <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
-                      <input type="text" name="" class="form-control gtin8 mb-5" placeholder="@lang('product.gtin8')" value="" data-id="0">
-                    </div>
-                    <div class="col-4 col-md-4" id="gtin13">
-                      <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
-                      <input type="text" name="" class="form-control gtin13 mb-5" placeholder="@lang('product.gtin13')" value="" data-id="0">
-                    </div>
-                    <div class="col-6 col-md-4" id="gtin14">
-                      <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
-                      <input type="text" name="" class="form-control gtin14 mb-5" placeholder="@lang('product.gtin14')" value="" data-id="0">
-                    </div>
-                    <div class="col-6 col-md-4" id="mpn">
-                      <label class="text-black font-weight-bold" for="mpn">mpn</label>
-                      <input type="text" name="" class="form-control mpn mb-5" placeholder="@lang('product.mpn')" value="" data-id="0">
-                    </div>
+                  <div class="col-12 col-lg-6 mb-8 mb-lg-5">
+                    <label class="text-black font-weight-bold" for="description">Product’s description</label>
+                    <textarea name="" class="form-control description" placeholder="@lang('product.description')" data-id="0"></textarea>
                   </div>
-                  <div class="row">
-                    <div class="col-6 col-md-3">
-                      <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
-                      <select class="form-control selectpicker offerType mb-5">
-                        <option value="Offer">Offer</option>
-                        <option value="Aggregate Offer">Aggregate Offer</option>
-                        <option selected="selected" value="None">None</option>
-                      </select>
-                    </div>
-                    <div class="col-6 col-md-3">
-                      <label class="text-black font-weight-bold" for="url">URL</label>
-                      <input type="text" name="" class="form-control url mb-5" placeholder="@lang('product.url')" value="" data-id="0">
-                    </div>
-                    <div class="col-6 col-md-3">
-                      <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
-                      <select class="form-control selectpicker priceCurrency mb-5" data-size="4" data-live-search="true">
-                        <option value="null">null</option>
-                        {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
-                      </select>
-                    </div>
-                    <div class="col-6 col-md-3">
-                      <label class="text-black font-weight-bold" for="price">Price</label>
-                      <input type="number" name="" class="form-control price mb-5" placeholder="@lang('product.price')" value="" data-id="0">
-                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-4 col-md-4" id="sku">
+                    <label class="text-black font-weight-bold" for="sku">sku</label>
+                    <input type="text" name="" class="form-control sku mb-5" placeholder="@lang('product.sku')" value="" data-id="0">
                   </div>
-                  <div id="ag_offer" class="row">
-                    <div class="col-md-4">
-                      <label class="text-black font-weight-bold" for="validThrough">Price valid until</label>
-                      <div class="input-group date mb-5">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <i class="bx bx-calendar"></i>
-                          </span>
-                        </div>
-                        <input type="text" id="kt_datepicker_2" name="" class="form-control validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                  <div class="col-4 col-md-4" id="gtin8">
+                    <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
+                    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="@lang('product.gtin8')" value="" data-id="0">
+                  </div>
+                  <div class="col-4 col-md-4" id="gtin13">
+                    <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
+                    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="@lang('product.gtin13')" value="" data-id="0">
+                  </div>
+                  <div class="col-6 col-md-4" id="gtin14">
+                    <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
+                    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="@lang('product.gtin14')" value="" data-id="0">
+                  </div>
+                  <div class="col-6 col-md-4" id="mpn">
+                    <label class="text-black font-weight-bold" for="mpn">mpn</label>
+                    <input type="text" name="" class="form-control mpn mb-5" placeholder="@lang('product.mpn')" value="" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-md-3">
+                    <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
+                    <select class="form-control selectpicker offerType mb-5">
+                      <option value="Offer">Offer</option>
+                      <option value="Aggregate Offer">Aggregate Offer</option>
+                      <option selected="selected" value="None">None</option>
+                    </select>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <label class="text-black font-weight-bold" for="url">URL</label>
+                    <input type="text" name="" class="form-control url mb-5" placeholder="@lang('product.url')" value="" data-id="0">
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
+                    <select class="form-control selectpicker priceCurrency mb-5" data-size="4" data-live-search="true">
+                      <option value="null">null</option>
+                      {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                    </select>
+                  </div>
+                  <div class="col-6 col-md-3">
+                    <label class="text-black font-weight-bold" for="price">Price</label>
+                    <input type="number" name="" class="form-control price mb-5" placeholder="@lang('product.price')" value="" data-id="0">
+                  </div>
+                </div>
+                <div id="ag_offer" class="row">
+                  <div class="col-md-4">
+                    <label class="text-black font-weight-bold" for="validThrough">Price valid until</label>
+                    <div class="input-group date mb-5">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="bx bx-calendar"></i>
+                        </span>
                       </div>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="text-black font-weight-bold" for="availability">Availability</label>
-                      <select class="form-control selectpicker availability mb-5">
-                        <option selected="selected" value="In stock">In stock</option>
-                        <option value="Out of stock">Out of stock</option>
-                        <option value="Online only">Online only</option>
-                        <option value="In store only">In store only</option>
-                        <option value="Pre-order">Pre-order</option>
-                        <option value="Pre-sale">Pre-sale</option>
-                        <option value="Limited availability">Limited availability</option>
-                        <option value="Sold out">Sold out</option>
-                        <option value="Discontinued">Discontinued</option>
-                        <option class="font-italic" value="Not specified">Not specified</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4">
-                      <label class="text-black font-weight-bold" for="condition">Item condition</label>
-                      <select class="form-control selectpicker condition mb-5">
-                        <option selected="selected" value="New">New</option>
-                        <option value="Used">Used</option>
-                        <option value="Refurbished">Refurbished</option>
-                        <option value="Damaged">Damaged</option>
-                        <option value="Pre-order">Pre-order</option>
-                      </select>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
                     </div>
                   </div>
-                  <div id="offer" class="row">
-                    <div class="col-md-6">
-                      <label class="text-black font-weight-bold" for="highPrice">High price</label>
-                      <input type="number" name="" class="form-control highPrice mb-5" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">
-                    </div>
-                    <div class="col-md-6">
-                      <label class="text-black font-weight-bold" for="offer">Number of offers</label>
-                      <input type="number" name="" class="form-control offer mb-5" placeholder="@lang('product.offer')" value="" min="0" data-id="0">
-                    </div>
+                  <div class="col-md-4">
+                    <label class="text-black font-weight-bold" for="availability">Availability</label>
+                    <select class="form-control selectpicker availability mb-5">
+                      <option selected="selected" value="In stock">In stock</option>
+                      <option value="Out of stock">Out of stock</option>
+                      <option value="Online only">Online only</option>
+                      <option value="In store only">In store only</option>
+                      <option value="Pre-order">Pre-order</option>
+                      <option value="Pre-sale">Pre-sale</option>
+                      <option value="Limited availability">Limited availability</option>
+                      <option value="Sold out">Sold out</option>
+                      <option value="Discontinued">Discontinued</option>
+                      <option class="font-italic" value="Not specified">Not specified</option>
+                    </select>
                   </div>
-                  <div class="row">
-                    <div class="col-6 col-xxl-3">
-                      <label class="text-black font-weight-bold" for="ratingValue">Aggregate ratings</label>
-                      <input type="number" name="" class="form-control ratingValue mb-5" placeholder="@lang('product.ratingValue')" value="" min="0" data-id="0">
-                    </div>
-                    <div class="col-6 col-xxl-3">
-                      <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
-                      <input type="number" name="" class="form-control ratingCount mb-5" placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
-                    </div>
-                    <div class="col-6 col-xxl-3">
-                      <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
-                      <input type="number" name="" class="form-control bestRating mb-5" placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
-                    </div>
-                    <div class="col-6 col-xxl-3">
-                      <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
-                      <input type="number" name="" class="form-control worstRating mb-5" placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
-                    </div>
+                  <div class="col-md-4">
+                    <label class="text-black font-weight-bold" for="condition">Item condition</label>
+                    <select class="form-control selectpicker condition mb-5">
+                      <option selected="selected" value="New">New</option>
+                      <option value="Used">Used</option>
+                      <option value="Refurbished">Refurbished</option>
+                      <option value="Damaged">Damaged</option>
+                      <option value="Pre-order">Pre-order</option>
+                    </select>
                   </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <div id="addReview"></div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                      <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-product-review">
-                        <i class='bx bx-plus'></i> @lang('product.btn-addReview')
-                      </button>
-                    </div>
+                </div>
+                <div id="offer" class="row">
+                  <div class="col-md-6">
+                    <label class="text-black font-weight-bold" for="highPrice">High price</label>
+                    <input type="number" name="" class="form-control highPrice mb-5" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="text-black font-weight-bold" for="offer">Number of offers</label>
+                    <input type="number" name="" class="form-control offer mb-5" placeholder="@lang('product.offer')" value="" min="0" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6 col-xxl-3">
+                    <label class="text-black font-weight-bold" for="ratingValue">Aggregate ratings</label>
+                    <input type="number" name="" class="form-control ratingValue mb-5" placeholder="@lang('product.ratingValue')" value="" min="0" data-id="0">
+                  </div>
+                  <div class="col-6 col-xxl-3">
+                    <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
+                    <input type="number" name="" class="form-control ratingCount mb-5" placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
+                  </div>
+                  <div class="col-6 col-xxl-3">
+                    <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
+                    <input type="number" name="" class="form-control bestRating mb-5" placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
+                  </div>
+                  <div class="col-6 col-xxl-3">
+                    <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
+                    <input type="number" name="" class="form-control worstRating mb-5" placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div id="addReview"></div>
+                  </div>
+                  <div class="col-12 col-md-4">
+                    <button type="button" class="btn btn-block btn-add-question mt-5 mb-5" name="button" id="add-product-review">
+                      <i class='bx bx-plus'></i> @lang('product.btn-addReview')
+                    </button>
                   </div>
                 </div>
               </div>
