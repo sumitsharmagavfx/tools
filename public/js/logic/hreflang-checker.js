@@ -1,3 +1,4 @@
+
 const HREFLANG_CHECKER_LOCAL_STORAGE_KEY = 'hreflang-checker-history';
 
 var jqueryRequest = null;
@@ -130,6 +131,7 @@ function analyze(_url) {
                     addHistory(_url, res.data);
                     renderAllData(res.data);
                 } else {
+                    $('#hreflang-result-header').attr('style', 'display: none !important;');
                     toastr.error(res.message, 'Error API');
                 }
             },
@@ -158,6 +160,7 @@ function analyze(_url) {
 }
 
 function renderAllData(data){
+    $('#hreflang-result-header').removeAttr('style');
     $("#hreflang-result-list").empty();
     let _counter = 1;
     for (let _data of data) {
