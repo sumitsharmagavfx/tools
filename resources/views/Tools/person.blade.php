@@ -406,22 +406,20 @@ text-decoration: underline;
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option>Breadcrumb</option>
-                  <option>FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option selected="selected">Person</option>
-                  <option>Product</option>
-                  <option>Recipe</option>
-                </select>
-              </div>
+              <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
+              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
+                <option>Home</option>
+                <option>Breadcrumb</option>
+                <option>FAQ Page</option>
+                <option>How-to</option>
+                <option>Job Posting</option>
+                <option selected="selected">Person</option>
+                <option>Product</option>
+                <option>Recipe</option>
+              </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+              <p class="text-black mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
           </div>
         </div>
@@ -431,65 +429,163 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">Person</p>
-              <div class="mb-5" id="formbreadcrumb">
-                <div class="mb-5" id="formperson">
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="name">Name</label>
-                      <input type="text" name="" class="form-control name mb-5" placeholder="@lang('person.name')" value="" data-id="0">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="url">URL</label>
-                      <input type="text" name="" class="form-control url mb-5" placeholder="@lang('person.url')" value="" data-id="0">
+              <p class="h6 text-black mb-5">Person</p>
+              <div class="" id="formperson">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="name">Name</label>
+                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('person.name')" value="" data-id="0">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="url">URL</label>
+                    <input type="text" name="" class="form-control url mb-5" placeholder="@lang('person.url')" value="" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="pictureUrl">Image URL</label>
+                    <input type="text" name="" class="form-control pictureUrl mb-5" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
+                    <div class="dropdown bootstrap-select show-tick form-control">
+                      <select class="form-control selectpicker mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
+                        <option value="Twitter">Twitter</option>
+                        <option value="Facebook" selected="selected">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Youtube">Youtube</option>
+                        <option value="Linkedin">Linkedin</option>
+                        <option value="Pinterest">Pinterest</option>
+                        <option value="Soundcloud">Soundcloud</option>
+                        <option value="Tumblr">Tumblr</option>
+                        <option value="Wikipedia">Wikipedia</option>
+                        <option value="Github">Github</option>
+                        <option value="Website">Website</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="pictureUrl">Image URL</label>
-                      <input type="text" name="" class="form-control pictureUrl mb-5" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
-                      <div class="dropdown bootstrap-select show-tick form-control">
-                        <select class="form-control selectpicker" multiple="multiple" data-actions-box="false" tabindex="null">
-                          <option value="Twitter">Twitter</option>
-                          <option value="Facebook" selected="selected">Facebook</option>
-                          <option value="Instagram">Instagram</option>
-                          <option value="Youtube">Youtube</option>
-                          <option value="Linkedin">Linkedin</option>
-                          <option value="Pinterest">Pinterest</option>
-                          <option value="Soundcloud">Soundcloud</option>
-                          <option value="Tumblr">Tumblr</option>
-                          <option value="Wikipedia">Wikipedia</option>
-                          <option value="Github">Github</option>
-                          <option value="Website">Website</option>
-                        </select>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="jobTitle">Job title</label>
+                    <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.jobTitle')" value="" data-id="0">
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="company">Company</label>
+                    <input type="text" name="" class="form-control company mb-5" placeholder="Type your company here.." value="" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-5">
+                    <label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-twitter bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your twitter URL here.." value="" data-id="0">
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="jobTitle">Job title</label>
-                      <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.jobTitle')" value="" data-id="0">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="company">Company</label>
-                      <input type="text" name="" class="form-control company mb-5" placeholder="Type your company here.." value="" data-id="0">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>
-                      <div class="row">
-                        <div class="col-1 my-auto">
-                          <div class="d-flex justify-content-center">
-                            <i class='bx bxl-facebook-square bx-md text-black'></i>
-                          </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-facebook-square bx-md text-black'></i>
                         </div>
-                        <div class="col-11 pl-0">
-                          <input type="text" name="" class="form-control sosmedName" placeholder="Type your facebook URL here.." value="" data-id="0">
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your facebook URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-instagram-alt bx-md text-black'></i>
                         </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your instagram URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-youtube bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your youtube URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-linkedin-square bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your linkedin URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-pinterest bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your pinterest URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-soundcloud bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your soundcloud URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-tumblr bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your tumblr URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-wikipedia bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your wikipedia URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bxl-github bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your github URL here.." value="" data-id="0">
+                      </div>
+                    </div>
+                    <div class="row mb-5">
+                      <div class="col-2 col-sm-1 my-auto">
+                        <div class="d-flex justify-content-center">
+                          <i class='bx bx-world bx-md text-black'></i>
+                        </div>
+                      </div>
+                      <div class="col-10 col-sm-11 pl-0">
+                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your website URL here.." value="" data-id="0">
                       </div>
                     </div>
                   </div>

@@ -304,3 +304,21 @@ jQuery('#copy').click(function () {
     // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
     document.execCommand("copy");
 });
+
+$(document).on("change", "#remoteJob", function() {
+    if (this.checked) {
+      $(".street, .city, div.province > button, .zipCode").attr("disabled", true);
+    } else {
+      $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
+    }
+  });
+  
+$(document).on("keyup", ".salary", function() {
+    if (this.value.length > 0) {
+      $(".maxSalary, .currency, .unitText").removeAttr("disabled");
+      $(".currency, .unitText").selectpicker("refresh");
+    } else {
+      $(".maxSalary, .currency, .unitText").attr("disabled", true);
+      $(".currency, .unitText").selectpicker("refresh");
+    }
+});
