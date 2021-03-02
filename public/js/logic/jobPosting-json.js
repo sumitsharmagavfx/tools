@@ -298,6 +298,14 @@ jQuery(document).on('click', '.delete', function () {
     sticky.update();
 });
 
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
+});
+
 jQuery('#copy').click(function () {
     const copyText = jQuery('#json-format');
     copyText.select();
