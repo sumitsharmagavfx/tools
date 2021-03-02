@@ -76,7 +76,7 @@
     jsonFormat.render();
 
 
-    jQuery(document).ready(function () {
+    $ (document).ready(function () {
         let deletes = lang ==='en'? 'Delete' : 'Hapus';
         let name = lang ==='en'? 'Name' : 'Nama';
         let imageUrl = lang ==='en'? 'ImageUrl':'UrlGambar';
@@ -214,19 +214,19 @@
         jsonFormat.render();
     });
 
-    jQuery(document).on('keyup', '.imageStep', function () {
+    $(document).on('keyup', '.imageStep', function () {
         let index = parseInt(jQuery(this).data('id'));
         jsonFormat.step[index].image = jQuery(this).val();
         jsonFormat.render();
     });
 
-    jQuery(document).on('keyup', '.nameStep', function () {
+    $(document).on('keyup', '.nameStep', function () {
         let index = parseInt(jQuery(this).data('id'));
         jsonFormat.step[index].name = jQuery(this).val();
         jsonFormat.render();
     });
 
-    jQuery(document).on('keyup', '.url', function () {
+    $(document).on('keyup', '.url', function () {
         let index = parseInt(jQuery(this).data('id'));
         jsonFormat.step[index].url = jQuery(this).val();
         jsonFormat.render();
@@ -234,7 +234,7 @@
 
 
 
-    jQuery(document).on('click', '.deleteTool', function () {
+    $(document).on('click', '.deleteTool', function () {
         let index = parseInt(jQuery(this).data('id'));
 
             jsonFormat.tools.splice(index, 1);
@@ -253,15 +253,15 @@
     });
 
 
-jQuery(document).on('click', '.deleteStep', function () {
-    let index = parseInt(jQuery(this).data('id'));
+    $(document).on('click', '.deleteStep', function () {
+        let index = parseInt(jQuery(this).data('id'));
 
-        jsonFormat.step.splice(index, 1);
-        jsonFormat.render();
+            jsonFormat.step.splice(index, 1);
+            jsonFormat.render();
 
-        for (let i = index + 1; i < jsonFormat.step.length + 1; i++) {
-            $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
-        }
+            for (let i = index + 1; i < jsonFormat.step.length + 1; i++) {
+                $('.loopStep[data-id=' + (i - 1) + ']').val($('.loopStep[data-id=' + (i) + ']').val())
+            }
 
         $('.deleteTool[data-id=' + jsonFormat.step.length + ']').remove();
         $('.row[data-id=' + jsonFormat.step.length + ']').remove();
