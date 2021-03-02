@@ -1,3 +1,5 @@
+
+
 function print() {
     jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
 }

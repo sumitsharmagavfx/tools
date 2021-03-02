@@ -106,7 +106,7 @@ color: var(--grey);
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none; 
+  border-right-style: none;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
@@ -500,7 +500,7 @@ text-decoration: underline;
                   <div class="row">
                     <div class="col-12 col-xl-4">
                       <label class="text-black font-weight-bold" for="name">Company</label>
-                      <input type="text" name="" class="form-control name mb-5" placeholder="@lang('jobPosting.name')" value="" data-id="0">
+                      <input type="text" name="" class="form-control company-name mb-5" placeholder="@lang('jobPosting.name')" value="" data-id="0">
                     </div>
                     <div class="col-12 col-md-6 col-xl-4">
                       <label class="text-black font-weight-bold" for="companyUrl">Company URL</label>
@@ -514,12 +514,16 @@ text-decoration: underline;
                   <div class="row">
                     <div class="col-12 col-xl-6">
                       <label class="text-black font-weight-bold" for="employmentType">Employment type</label>
-                      <select class="form-control selectpicker employmentType mb-5">
-                        <option value="Full time">Full time</option>
-                        <option value="Part time">Part time</option>
-                        <option value="Contractor">Contractor</option>
-                        <option value="Temporary">Temporary</option>
-                        <option value="Intern">Intern</option>
+                      <select class="form-control selectpicker employment-type mb-5">
+                        <option value="none">Employment type</option>
+                        <option value="FULL_TIME">Full time</option>
+                        <option value="PART_TIME">Part time</option>
+                        <option value="CONTRACTOR">Contractor</option>
+                        <option value="TEMPORARY">Temporary</option>
+                        <option value="INTERN">Intern</option>
+                        <option value="VOLUNTEER">Volunteer</option>
+                        <option value="PER_DIEM">Per diem</option>
+                        <option value="OTHER">Other</option>
                       </select>
                     </div>
                     <div class="col-12 col-xl-6">
@@ -529,7 +533,7 @@ text-decoration: underline;
                   </div>
                   <div class="row">
                     <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="datePosted">Date posted</label>                      
+                      <label class="text-black font-weight-bold" for="datePosted">Date posted</label>
                       <div class="input-group date mb-5">
                         <div class="input-group-append">
                           <span class="input-group-text">
@@ -571,9 +575,19 @@ text-decoration: underline;
                   <div class="row">
                     <div class="col-12 col-md-8 col-xl-5">
                       <label class="text-black font-weight-bold" for="province">State/Province/Region</label>
-                      <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
-                        <option value="null">null</option>
-                      </select>
+                        <div id="hide-province">
+                            <select class="form-control selectpicker province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
+                                <option value="none">Choose Province</option>
+                            </select>
+                        </div>
+                        <div id="province-show">
+                            <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
+                                <option value="none">Choose Province</option>
+                                @foreach($province as $p)
+                                    <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
                     <div class="col-4 col-xl-2">
                       <label class="text-black font-weight-bold" for="zipCode">Zip code</label>
@@ -582,8 +596,10 @@ text-decoration: underline;
                     <div class="col-8 col-md-12 col-xl-5">
                       <label class="text-black font-weight-bold" for="country">Country</label>
                       <select class="form-control selectpicker country mb-5" data-size="4" data-live-search="true" tabindex="null">
-                        <option value="null">null</option>
-                        {{-- use api from https://technicalseo.com/tools/assets/data/regions.json --}}
+                        <option value="none">Choose Country</option>
+                          @foreach($region as $r)
+                        <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
+                          @endforeach
                       </select>
                     </div>
                   </div>
@@ -599,7 +615,10 @@ text-decoration: underline;
                     <div class="col-6 col-xl-3">
                       <label class="text-black font-weight-bold" for="currency">Currency</label>
                       <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
-                        <option value="null">null</option>
+                        <option value="none">Choose Currency</option>
+                          @foreach($currencies as $c)
+                          <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                          @endforeach
                         {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
                       </select>
                     </div>
@@ -1076,27 +1095,19 @@ text-decoration: underline;
 @push('script')
 <script type="text/javascript">
   $(document).ready(function() {
+
+      $('.datePosted').datepicker({
+          format: 'yyyy-mm-dd',
+      });
+
+      $('.expiredDate').datepicker({
+          format: 'yyyy-mm-dd',
+      });
     $('#myModal').on('show.bs.modal', function(e) {
       var image = $(e.relatedTarget).attr('src');
       $(".img-responsive").attr("src", image);
     });
-    $("#remoteJob").change(function() {
-      if (this.checked) {
-        $(".street, .city, div.province > button, .zipCode").attr("disabled", true);
-      } else {
-        $(".street, .city, div.province > button, .zipCode").removeAttr("disabled");
-      }
     });
-    $(".salary").keyup(function() {
-      if (this.value.length > 0) {
-        $(".maxSalary, .currency, .unitText").removeAttr("disabled");
-        $(".currency, .unitText").selectpicker("refresh");
-      } else {
-        $(".maxSalary, .currency, .unitText").attr("disabled", true);
-        $(".currency, .unitText").selectpicker("refresh");
-      }
-    });
-  });
 </script>
 @endpush
 @push('script')

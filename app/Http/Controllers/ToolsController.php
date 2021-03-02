@@ -74,8 +74,21 @@ class ToolsController extends Controller
         App::setLocale($lang);
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
+
+        // country
+        $path = public_path('json/regions.json');
+        $region = json_decode(file_get_contents($path), true);
+
+        // province
+        $path_province = public_path('json/province-id.json');
+        $province = json_decode(file_get_contents($path_province), true);
+
+        // currencies
+        $path_currencies = public_path('json/currencies.json');
+        $currencies = json_decode(file_get_contents($path_currencies), true);
+
         $local = App::getLocale();
-        return view('Tools/jobposting', compact('local', 'dataID', 'dataEN'));
+        return view('Tools/jobposting', compact('local', 'dataID', 'dataEN','region','province','currencies'));
     }
 
     public function person($lang)
