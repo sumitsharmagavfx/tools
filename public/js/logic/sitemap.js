@@ -1,3 +1,4 @@
+// const { take } = require("lodash");
 toastr.options = {
     "closeButton": true,
     "debug": false,
@@ -16,121 +17,262 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 let DATA_FINAL;
+let isCanceled = false;
+let rendering = {
+    skip : 0,
+    take : 10
+}
 $(document).ready(function () {
-    const socket = io('https://api.cmlabs.co', {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
+    $('#noCrawl').show()
+    $('#crawlHttps').hide()
+    $('#crawlHttp').hide()
+    cancel(false)
+    refreshLocalStorage()
+    clearTable();
+    const socket = io(URL_API, {transports: ['websocket', 'polling', 'flashsocket'], secure: true});
     triggerEnter('#generate','#url');
     $('#generate').click(function () {
-        // $('#spin').addClass("spinner spinner-success spinner-right");
+        $(this).prop('disabled',true)
         clearTable();
+        rendering.skip = 0;
         let match =/^(http(s)?|ftp):\/\//;
         let url = $('#url').val().replace(match,"");
         if (url.substr(url.length-1)==='/')
             socket.emit('crawl',"https://"+url.slice(0,-1));
         else socket.emit('crawl',"https://"+url);
-        socket.emit('image',url);
-        let title = '';
-        let button = '';
-        let progress = '';
-        if (lang === 'en'){
-            title = 'The crawling process will take some time';
-            button = 'Cancel';
-            progress = '0 of 0 Pages Crawled'
-        }
-        else {
-            title = 'Proses crawling akan memakan waktu';
-            button = 'Batal';
-            progress = '0 dari 0 Halaman'
-        }
-        Swal.fire({
-            title: title,
-            html:"<div class=\"progress mb-2\" style=\"height:20px\">\n" +
-                "      <div class=\"progress-bar bg-success\" role=\"progressbar\" style=\"width: 0%;\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" id=\"progress-bar\">0%</div>\n" +
-                "    </div>\n" +
-                "    <center><span id=\"detail-progress\">"+progress+"</span></center>",
-            showCancelButton:true,
-            cancelButtonColor: '#FE2151',
-            showConfirmButton:false,
-            allowOutsideClick: false,
-            cancelButtonText : button
-        }).then((result)=>{
-            if (result.dismiss === 'cancel'){
-                socket.emit('stop','abort');
-                if (lang === 'en')
-                    toastr.error('Site Crawling Canceled','Cancel');
-                else toastr.error('Proses Crawling Dibatalkan','Batal');
-            }
-        })
+        $('#info').html("Our robot is excecuting your task..")
+        cancel(true)
+        $("#noCrawlResult").hide();
+        $("#generateCrawlResult").show();
+        buttonOn(false)
+        $("#result").empty();
+        isCanceled = false;
+    });
+
+    $('#cancelOn').on('click',function(){
+        socket.emit('stop');
+        cancel(false)
+        $("#noCrawlResult").show();
+        $("#generateCrawlResult").hide();
+        $('#info').html("Our robot is sleeping right now. Give him a task!")
+        $('#detail-progress').empty();
+        isCanceled = true;
+        updateProgressBar(0)
+        toastr.error('Cancel your task')
+        $('#generate').prop('disabled',false)
     });
 
     socket.on('update queue', data =>{
-        // console.log(data);
-        updateProgressBar(data);
-    });
-
-    socket.on('image_url',url=>{
-        $('#screenshot').attr('src','https://api.cmlabs.co/'+url.url);
-        $('#add').css('display','block');
+        if (!isCanceled){
+            $('#detail-progress').html(data.site_length+' Has been crawled')
+        }
     });
 
     socket.on('result', response => {
-        // $('#spin').removeClass("spinner spinner-success spinner-right");
-        // console.log(response);
         clearTable();
-        $('#table').css('display','block');
-        for (let datum in response.url){
-            addData(response.url[datum],parseInt(datum)+1);
-        }
-        DATA_FINAL = response;
-        sticky.update();
-        Swal.close();
+        $('#length-result').html(`(${response.data.length})`)
+        $('#detail-progress').empty()
+        $('#info').html("Our robot is already finished your task.")
+        $('#noCrawlResult').hide();
+        buttonOn(true, response.hash)
+        DATA_FINAL = response.data;
+        removeShowMore()
+        renderData()
+        cancel(false)
+        $('#generate').prop('disabled',false)
+        saveData(response)
+        refreshLocalStorage()
     });
 
     socket.on('notfound', msg =>{
-        $('#spin').removeClass("spinner spinner-success spinner-right");
         toastr.error('Error', msg)
     })
 });
 
-$('#download').click(function () {
-    let parse = new X2JS();
-    let text= "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
-        "<urlset\n" +
-        "      xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"\n" +
-        "      xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" +
-        "      xsi:schemaLocation=\"http://www.sitemaps.org/schemas/sitemap/0.9\n" +
-        "            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd\">\n" +
-        "<!-- created with Free Online Sitemap Generator https://tools.cmlabs.co -->"+
-        parse.json2xml_str(DATA_FINAL)+
-        "</urlset>";
-    download(vkbeautify.xml(text),"sitemap.xml","text/xml");
-    // console.log(parse.json2xml_str(DATA_FINAL))
-});
+$('#url').on('input',function(){
+    let check = regexHttps($(this).val());
+    if(check === 'https'){
+        $('#noCrawl').hide()
+        $('#crawlHttps').show()
+        $('#crawlHttp').hide()
+    }else if (check === 'http'){
+        $('#noCrawl').hide()
+        $('#crawlHttps').hide()
+        $('#crawlHttp').show()
+    }else{
+        $('#noCrawl').show()
+        $('#crawlHttps').hide()
+        $('#crawlHttp').hide()
+    }
+})
 
 function addData(data, i) {
-    $("#url-table tbody").append("<tr>\n" +
-        "              <td scope=\"col\" width=\"70px\">#"+i+"</td>\n" +
-        "              <td scope=\"col\">"+data.loc+"</td>\n" +
-        "            </tr>");
+    $("#result").append('<div class="d-flex align-items-center mx-5 result-row">'+
+    '   <span class="label label-square label-sitemap">'+i+'</span>'+
+    '   <span class="mx-3 sitemap-url-result">'+data.url+'</span>'+
+    '</div>'+
+    '<hr>');
 }
 
-function updateProgressBar(data) {
-    let of = '';
-    let pages = '';
-    if (lang === 'en'){
-        of = ' of ';
-        pages = ' Pages Crawled';
-    }else {
-        of = ' dari ';
-        pages = ' Halaman';
-    }
-    let percentage = (data.site_length/(parseInt(data.site_length)+parseInt(data.queue_length))*100).toFixed(1);
+function updateProgressBar(percentage) {
     $('#progress-bar')
         .attr('aria-valuenow',percentage)
         .css('width',percentage+'%')
         .html(percentage+'%');
-    $('#detail-progress').html(data.site_length+of+(parseInt(data.site_length)+parseInt(data.queue_length))+pages)
 }
 
 function clearTable() {
-    $("#table tbody tr").remove();
+    $("#noCrawlResult").show();
+    $("#generateCrawlResult").hide();
+    buttonOn(false)
+    $("#result").empty();
+}
+
+function regexHttps(url){
+    let httpsPattern = new RegExp("^https:\/\/")
+    let httpPattern = new RegExp("^http:\/\/")
+    if (httpsPattern.test(url)){
+        return 'https'
+    }else if (httpPattern.test(url)){
+        return 'http'
+    }else{
+        return 'none'
+    }
+}
+
+let renderData = function() {
+    for (let i = rendering.skip ; i < DATA_FINAL.length; i++){
+        addData(DATA_FINAL[i],i+1)
+        if(i === rendering.skip + rendering.take){
+            $("#result").append('<div id="show-more" onclick="showMore()" class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">\n' +
+                '                  <div class="">\n' +
+                '                    <span class="label label-square label-sitemap">...</span>\n' +
+                '                    <span class="mx-3 sitemap-url-result">Show More</span>\n' +
+                '                  </div>\n' +
+                '                  <div class="d-flex align-items-center">\n' +
+                '                    <i class=\'bx bxs-chevron-down sitemap-show-more\'></i>\n' +
+                '                  </div>\n' +
+                '                </div>');
+            break;
+        }
+    }
+    rendering.skip += rendering.take+1;
+}
+
+let removeShowMore = function (){
+    $('#show-more').remove();
+}
+
+let showMore = function (){
+    removeShowMore()
+    renderData()
+}
+
+let saveData = function (data) {
+    let dataFromLocal = localStorage.getItem('sitemap-generator')
+    let storage = []
+    if (dataFromLocal){
+        storage = JSON.parse(dataFromLocal)
+    }
+    storage.push(data)
+    localStorage.setItem('sitemap-generator',JSON.stringify(storage))
+}
+
+const refreshLocalStorage = function(){
+    try{
+        const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
+        $('#localsavemobile').empty();
+        $('#localsavedesktop').empty();
+        const keys = JSON.parse(localStorage.getItem('sitemap-generator'))
+        if(keys){
+            let index = 0;
+            for (let key of keys){
+                let date = new Date(key.date)
+                let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="local-collection-title">${key.url}
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
+                               title="${formatDate}"></i>
+                            <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
+                        </div>
+                    </div>
+                </div>`
+
+                let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
+                  <div class="d-flex justify-content-between">
+                    <div class="local-collection-title">${key.url}</div>
+                    <div class="d-flex align-items-center">
+                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${formatDate}"></i>
+                      <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
+                    </div>
+                  </div>`
+                index++
+                $('#localsavemobile').append(div)
+                $('#localsavedesktop').append(div2)
+            }
+        }else {
+            let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>This is your first impressions, no history yet!</span>
+                  </div>
+                </li>`
+            let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>This is your first impressions, no history yet!</span>
+                    </div>
+                </div>`
+
+            $('#localsavemobile').append(div)
+            $('#localsavedesktop').append(div2)
+        }
+    }catch(e){
+        console.log(e)
+    }
+}
+
+let removeLocal = function (index){
+    const keys = JSON.parse(localStorage.getItem('ssl-checker'))
+    keys.splice(index,1)
+    localStorage.setItem('ssl-checker',JSON.stringify(keys))
+    refreshLocalStorage()
+}
+
+let getData = function (index) {
+    $("#result").empty();
+    $('#noCrawlResult').hide();
+    let local = JSON.parse(localStorage.getItem('sitemap-generator'))
+    $('#url').val(local[index].url)
+    buttonOn(true,local[index].hash)
+    DATA_FINAL = local[index].data
+    $('#length-result').html(`(${DATA_FINAL.length})`)
+    rendering.skip = 0
+    renderData()
+}
+
+let buttonOn = function (param, hash = null) {
+    let download = $('#download-button')
+    download.empty()
+    if (param){
+        download.append(`<a href="${URL_API+'/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">Download Sitemap</a>`)
+    }else {
+        download.append(`<button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
+                                        disabled name="button">Download Sitemap
+                                </button>`)
+    }
+}
+
+let cancel = function (param) {
+    let cancel = $('#cancel-button')
+    cancel.empty()
+    if (param){
+        cancel.append(`<button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel
+                                    </button>`)
+    }else {
+        cancel.append(`<button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled
+                                name="button">Cancel
+                        </button>`)
+    }
 }

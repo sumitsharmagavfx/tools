@@ -71,6 +71,19 @@ id/json-ld-breadcrumb-schema-generator
   color: var(--grey);
 }
 
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+    transition: 0.15s !important;
+}
+
+.form-control:focus {
+  border-color: var(--primaryblue);
+}
+
 @media (max-width:767px) {
   .btn-add-question {
     width: 100%;
@@ -403,21 +416,20 @@ id/json-ld-breadcrumb-schema-generator
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="font-weight-bold h6">Which Schema would you like to create?</label>
-                <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                  <option>Home</option>
-                  <option selected="selected">Breadcrumb</option>
-                  <option>FAQ Page</option>
-                  <option>How-to</option>
-                  <option>Job Posting</option>
-                  <option>Person</option>
-                  <option>Product</option>
-                </select>
-              </div>
+              <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
+              <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                <option value="home">Home</option>
+                <option value="breadcrumb" selected="selected">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe">Recipe</option>
+              </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+              <p class="text-black mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
           </div>
         </div>
@@ -427,19 +439,20 @@ id/json-ld-breadcrumb-schema-generator
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 mb-5">Breadcrumb Generator</p>
+              <p class="h6 text-black mb-5">Breadcrumb Generator</p>
               <div class="" id="formbreadcrumb">
               <div class="row">
                   <div class="col-10 col-sm-11">
                       <div class="row">
-                          <div class="col-sm-5">
-                              <label for="pageName" class="font-weight-bold">Page #1 name</label>
-                              <input type="text" id="pageName" class="form-control mb-5 pageName" name="" placeholder="Type your name here.." value="" data-id="0">
+                          <div class="col-sm-5 mb-5">
+                              <label for="pageName" class="font-weight-bold text-black">Page #1 name</label>
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="Type your name here.." value="" data-id="0">
                           </div>
-                          <div class="col-sm-7">
-                              <label for="url" class="font-weight-bold">URL #1</label>
-                              <input type="text" id="url" class="form-control mb-5 url" name="" placeholder="Type your URL here.." value="" data-id="0">
-                          </div>
+                          <div class="col-sm-7 mb-5">
+                              <label for="url" class="font-weight-bold text-black">URL #1</label>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="0">
+                              <div class="invalid-feedback">Invalid URL</div>
+                            </div>
                       </div>
                   </div>
                  <div class="col-2 col-sm-1">
@@ -452,13 +465,14 @@ id/json-ld-breadcrumb-schema-generator
               <div class="row">
                   <div class="col-10 col-sm-11">
                       <div class="row">
-                          <div class="col-sm-5">
-                              <label for="pageName" class="font-weight-bold">Page #2 name</label>
-                              <input type="text" id="pageName" class="form-control mb-5 pageName" name="" placeholder="Type your name here.." value="" data-id="1">
+                          <div class="col-sm-5 mb-5">
+                              <label for="pageName" class="font-weight-bold text-black">Page #2 name</label>
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="Type your name here.." value="" data-id="1">
                           </div>
-                          <div class="col-sm-7">
-                              <label for="url" class="font-weight-bold">URL #2</label>
-                              <input type="text" id="url" class="form-control mb-5 url" name="" placeholder="Type your URL here.." value="" data-id="1">
+                          <div class="col-sm-7 mb-5">
+                              <label for="url" class="font-weight-bold text-black">URL #2</label>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="1">
+                              <div class="invalid-feedback">Invalid URL</div>
                           </div>
                       </div>
                   </div>
@@ -475,7 +489,7 @@ id/json-ld-breadcrumb-schema-generator
                 <input type="text" name="" class="form-control mb-5 url" placeholder="@lang('breadcrumb.url') :" value="" data-id="0">
 
               </div> -->
-              <button type="button" class="btn btn-add-question" name="button" id="add-breadcrumb">
+              <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-breadcrumb">
                   <i class='bx bx-plus'></i> ADD URL
               </button>
 
