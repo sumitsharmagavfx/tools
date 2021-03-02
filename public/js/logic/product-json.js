@@ -1,3 +1,10 @@
+
+    const productSchema = class {
+        constructor() {
+
+        }
+    }
+
 function print() {
     jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
 }
@@ -286,16 +293,16 @@ $(document).on("change", ".offerType", function() {
         $(".url, .price, .priceCurrency").removeAttr("disabled");
         $(".priceCurrency").selectpicker("refresh");
         $("#ag_offer").css('display', 'flex');
-        $("#offer").hide(); 
+        $("#offer").hide();
     }else if(selectedItem === "Offer") {
         $(".url, .price, .priceCurrency").removeAttr("disabled");
         $(".priceCurrency").selectpicker("refresh");
         $("#offer").css('display', 'flex');
-        $("#ag_offer").hide();        
+        $("#ag_offer").hide();
     }else if(selectedItem === "None"){
         $(".url, .price, .priceCurrency").attr("disabled", true);
         $(".priceCurrency").selectpicker("refresh");
         $("#ag_offer").hide();
-        $("#offer").hide(); 
+        $("#offer").hide();
     }
 });
