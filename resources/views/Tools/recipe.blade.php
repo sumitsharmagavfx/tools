@@ -80,16 +80,11 @@ color: var(--grey);
     transition: 0.15s !important;
 }
 
-.deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
-color: var(--black);
-cursor: pointer;
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description, .form-control.reviewBody {
+.form-control.custom-textarea-82 {
   resize: none;
   height: 82%;
 }
@@ -120,11 +115,11 @@ cursor: pointer;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
@@ -497,7 +492,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-12 col-lg-6 mb-8 mb-lg-5">
                     <label class="text-black font-weight-bold" for="description">Recipe’s description</label>
-                    <textarea name="" class="form-control description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row mb-5">
@@ -548,7 +543,7 @@ text-decoration: underline;
                         <i class="bx bx-calendar"></i>
                       </span>
                     </div>
-                    <input type="text" id="kt_datepicker_2" name="" class="form-control publishedDate" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                    <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date publishedDate" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
                   </div>
                 </div>
                 <div class="col-6 col-md-3 col-xl-2">

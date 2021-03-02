@@ -80,23 +80,14 @@ color: var(--grey);
     transition: 0.15s !important;
 }
 
-.deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
-color: var(--black);
-cursor: pointer;
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description, .form-control.reviewBody {
+.form-control.custom-textarea-82 {
   resize: none;
   height: 82%;
 }
-
-/* #sku, #gtin8, #gtin13, #gtin14, #mpn {
-  display: none;
-} */
 
 .bootstrap-select .bs-searchbox {
   padding: 0;
@@ -124,15 +115,15 @@ cursor: pointer;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
-#ag_offer, #offer {
+.hide-div {
   display: none;
 }
 
@@ -524,7 +515,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-12 col-lg-6 mb-8 mb-lg-5">
                     <label class="text-black font-weight-bold" for="description">Product’s description</label>
-                    <textarea name="" class="form-control description" placeholder="@lang('product.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -576,7 +567,7 @@ text-decoration: underline;
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
-                <div id="ag_offer" class="row">
+                <div id="ag_offer" class="row hide-div">
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="validThrough">Price valid until</label>
                     <div class="input-group date mb-5">
@@ -585,7 +576,7 @@ text-decoration: underline;
                           <i class="bx bx-calendar"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
                     </div>
                   </div>
                   <div class="col-md-4">
@@ -614,7 +605,7 @@ text-decoration: underline;
                     </select>
                   </div>
                 </div>
-                <div id="offer" class="row">
+                <div id="offer" class="row hide-div">
                   <div class="col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="highPrice">High price</label>
                     <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">

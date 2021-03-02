@@ -80,16 +80,11 @@ color: var(--grey);
     transition: 0.15s !important;
 }
 
-.deleteSupply:hover, .deleteTool:hover, .deleteStep:hover {
-color: var(--black);
-cursor: pointer;
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description {
+.form-control.custom-textarea-82 {
   resize: none;
   height: 82%;
 }
@@ -499,7 +494,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-12 col-xl-5 col-xxl-6 mb-5">
                     <label class="text-black font-weight-bold" for="description">Description</label>
-                    <textarea name="" class="form-control description" placeholder="@lang('howto.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('howto.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row mb-5">

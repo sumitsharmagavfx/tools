@@ -84,7 +84,7 @@ color: var(--grey);
   border-color: var(--primaryblue);
 }
 
-.form-control.description {
+.form-control.custom-textarea-100px {
   resize: none;
   height: 100px;
 }
@@ -119,15 +119,11 @@ color: var(--grey);
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-i.bx {
-  color: var(--darkgrey);
-}
-
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
@@ -500,7 +496,7 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-12">
                     <label class="text-black font-weight-bold" for="description">Job description (in HTML)</label>
-                    <textarea name="" class="form-control description mb-5" placeholder="@lang('jobPosting.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-100px description mb-5" placeholder="@lang('jobPosting.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -540,10 +536,10 @@ text-decoration: underline;
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
@@ -551,10 +547,10 @@ text-decoration: underline;
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
                     </div>
                   </div>
                 </div>
