@@ -230,15 +230,7 @@ function formatDate(date) {
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
-function checkUrl(url) {
-    try {
-        let _url = new URL(url)
-        return _url.protocol === 'https:' || _url.protocol === 'http:';
-    } catch (e) {
-        console.log(e)
-        return false
-    }
-}
+
 
 function getProtocol(url) {
     try {

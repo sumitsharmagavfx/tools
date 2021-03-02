@@ -39,59 +39,59 @@ $(document).ready(function() {
     });
 
     // Get data for insight slider with ajax
-    $.ajax({
-        url: '/blog/data',
-        header: {
-            "Access-Control-Allow-Origin": "*",
-        },
-        type: 'GET',
-        cache: false,
-        dataType: 'json',
-        success: function (dataResult) {
-            // console.log(dataResult)
-            // var dataDesktop = ''
-            var dataSlide = ''
+    // $.ajax({
+    //     url: '/blog/data',
+    //     header: {
+    //         "Access-Control-Allow-Origin": "*",
+    //     },
+    //     type: 'GET',
+    //     cache: false,
+    //     dataType: 'json',
+    //     success: function (dataResult) {
+    //         // console.log(dataResult)
+    //         // var dataDesktop = ''
+    //         var dataSlide = ''
 
-            $.each(dataResult, function (index, data) {
-                var content = data.content.rendered
-                content = content.replace('<span style="font-weight: 400;">', '')
-                content = content.replace('<span style="font-weight: 400;" >', '')
-                content = content.replace('<span style="font-weight: 400;"  >', '')
-                content = content.replace('</span>', '')
-                content = content.replace('[vc_row][vc_column][vc_column_text]', '')
-                content = content.replace('<p>', '')
-                content = content.replace('</p>', '')
-                content = content.replace('<i>', '')
-                content = content.replace('</i>', '')
+    //         $.each(dataResult, function (index, data) {
+    //             var content = data.content.rendered
+    //             content = content.replace('<span style="font-weight: 400;">', '')
+    //             content = content.replace('<span style="font-weight: 400;" >', '')
+    //             content = content.replace('<span style="font-weight: 400;"  >', '')
+    //             content = content.replace('</span>', '')
+    //             content = content.replace('[vc_row][vc_column][vc_column_text]', '')
+    //             content = content.replace('<p>', '')
+    //             content = content.replace('</p>', '')
+    //             content = content.replace('<i>', '')
+    //             content = content.replace('</i>', '')
 
-                var newString = content
-                var maxLength = 150
-                var trimmedString = newString.substr(0, maxLength);
+    //             var newString = content
+    //             var maxLength = 150
+    //             var trimmedString = newString.substr(0, maxLength);
 
-                if(newString.length > trimmedString.length){
-                    trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-                }
+    //             if(newString.length > trimmedString.length){
+    //                 trimmedString = trimmedString.substr(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+    //             }
 
-                var blogdate = new Date(data.date)
-                let formattedDate = blogdate.getDate() + "/" + (blogdate.getMonth() + 1) + "/" + blogdate.getFullYear()
+    //             var blogdate = new Date(data.date)
+    //             let formattedDate = blogdate.getDate() + "/" + (blogdate.getMonth() + 1) + "/" + blogdate.getFullYear()
 
-                dataSlide += '<li class="splide__slide">'
-                dataSlide += '<a href="' +data.link+ '">'
-                dataSlide += '<div class="card card-custom card-stretch card-insight mr-3 ml-3"><div class="card-body pt-8 pl-5 pr-5 pb-5">'
-                dataSlide += '<span class="h6 font-weight-bolder">' +data.title.rendered+ '</span>'
-                dataSlide += '<p class="mt-3 font-weight-light">' +trimmedString+ ' ...</p></div>'
-                dataSlide += '<div class="card-footer pt-0 pl-5 pr-5 pb-5 d-flex justify-content-start align-items-center border-0">'
-                dataSlide += '<span>Posted on ' +formattedDate+ '</span>'
-                dataSlide += '</div>'
-                dataSlide += '</div>'
-                dataSlide += '</a>'
-                dataSlide += '</li>'
-            })
+    //             dataSlide += '<li class="splide__slide">'
+    //             dataSlide += '<a href="' +data.link+ '">'
+    //             dataSlide += '<div class="card card-custom card-stretch card-insight mr-3 ml-3"><div class="card-body pt-8 pl-5 pr-5 pb-5">'
+    //             dataSlide += '<span class="h6 font-weight-bolder">' +data.title.rendered+ '</span>'
+    //             dataSlide += '<p class="mt-3 font-weight-light">' +trimmedString+ ' ...</p></div>'
+    //             dataSlide += '<div class="card-footer pt-0 pl-5 pr-5 pb-5 d-flex justify-content-start align-items-center border-0">'
+    //             dataSlide += '<span>Posted on ' +formattedDate+ '</span>'
+    //             dataSlide += '</div>'
+    //             dataSlide += '</div>'
+    //             dataSlide += '</a>'
+    //             dataSlide += '</li>'
+    //         })
 
-            insightSlide.innerHTML = dataSlide
-            new Splide( '.splide-insight', insightopts).mount();
-        }
-    })
+    //         insightSlide.innerHTML = dataSlide
+    //         new Splide( '.splide-insight', insightopts).mount();
+    //     }
+    // })
 })
 
 // Custom Show Hide Tools Title and Menu
