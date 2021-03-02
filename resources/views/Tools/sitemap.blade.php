@@ -510,10 +510,10 @@
                             <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
 
                             <!-- HTTPS URL -->
-                            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+                            <i id="crawlHttps" style="display: none;" class='bx bxs-check-shield text-white bx-md mr-3'></i>
 
                             <!-- HTTP URL -->
-                            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
+                            <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
                             <input id="url" type="url" class="form-control sitemap-url" name="" value=""
                                    placeholder="INPUT / PASTE YOUR DOMAIN">
                         </div>
@@ -547,7 +547,7 @@
                                 </div>
 
                                 <!-- WHEN CRAWL -->
-                                <div class="" id="generateCrawlResult">
+                                <div style="display: none;" id="generateCrawlResult">
                                     <div class="text-center">
                                         <p class="d-block">Generating your sitemap...</p>
                                     </div>
@@ -575,7 +575,7 @@
                                     {{-- <div class="">
                                       <div class="spinner spinner-primary spinner-lg "></div>
                                     </div> --}}
-                                    <p id="detail-progress" class="text-black font-weight-bold mb-3"></p>
+                                    <p id="detail-progress" style="display: none;" class="text-black font-weight-bold mb-3"></p>
                                     <span id="cancel-button"></span>
                                 </div>
                             </div>
@@ -641,66 +641,7 @@
                 </div>
             </div>
             <div class="local-collection-body mt-3 px-5" id="localsavemobile">
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex justify-content-center text-center">
-                        <span>This is your first impressions, no history yet!</span>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
-                               title="Created at 09.17 | 8, JAN 2021"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
-                               title="Created at 09.17 | 8, JAN 2021"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
-                               title="Created at 09.17 | 8, JAN 2021"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
-                               title="Created at 09.17 | 8, JAN 2021"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-card py-5 px-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
-                               title="Created at 09.17 | 8, JAN 2021"></i>
-                            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div id="mobile-version"
                  class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion"

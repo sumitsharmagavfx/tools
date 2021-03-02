@@ -76,10 +76,6 @@ color: var(--black);
 cursor: pointer;
 }
 
-.form-group label {
-  color: var(--black);
-}
-
 .form-control:focus {
   border-color: var(--primaryblue);
 }
@@ -444,8 +440,7 @@ text-decoration: underline;
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <div class="form-group mb-0">
-                <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
+              <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
                 <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
                   <option>Home</option>
                   <option>Breadcrumb</option>
@@ -457,7 +452,6 @@ text-decoration: underline;
                   <option>Recipe</option>
                 </select>
               </div>
-            </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
               <p class="mb-0 text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
@@ -469,16 +463,16 @@ text-decoration: underline;
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
-              <p class="h6 text-black">How-to</p>
-              <div class="mb-5" id="formhowto">
+              <p class="h6 text-black mb-5">How-to</p>
+              <div id="formhowto">
                 <div class="row">
                   <div class="col-12 col-xl-7 col-xxl-6">
                     <label class="text-black font-weight-bold" for="name">Name</label>
                     <input type="text" name="" class="form-control name mb-5" placeholder="@lang('howto.name')" value="" data-id="0">
                     <div class="row">
-                      <div class="col-12 col-md-4">
+                      <div class="col-12 col-md-4 mb-5">
                         <label class="text-black font-weight-bold" for="totalTime">Total time</label>
-                        <input type="number" name="" class="form-control totalTime mb-5" placeholder="@lang('howto.totalTime')" value="" min="0" data-id="0">
+                        <input type="number" name="" class="form-control totalTime" placeholder="@lang('howto.totalTime')" value="" min="0" data-id="0">
                       </div>
                       <div class="col-6 col-md-4">
                         <label class="text-black font-weight-bold" for="estimated">Estimated Cost</label>
@@ -498,7 +492,7 @@ text-decoration: underline;
                     <textarea name="" class="form-control description" placeholder="@lang('howto.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                   <div class="col-md-12">
                     <label class="text-black font-weight-bold mt-3 mt-xl-0" for="imageUrl">Image URL</label>
                     <input type="text" name="" class="form-control imageUrl" placeholder="@lang('howto.imageUrl')" value="" data-id="0">
@@ -531,17 +525,17 @@ text-decoration: underline;
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="imageStep">Image URL</label>
-                  <input type="text" name="" class="form-control imageStep mb-5" placeholder="@lang('howto.imageStep')" value="" data-id="0">
+                  <input type="text" name="" class="form-control imageStep" placeholder="@lang('howto.imageStep')" value="" data-id="0">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="nameStep">Name</label>
-                  <input type="text" name="" class="form-control nameStep mb-5" placeholder="@lang('howto.nameStep')" value="" data-id="0">
+                  <input type="text" name="" class="form-control nameStep" placeholder="@lang('howto.nameStep')" value="" data-id="0">
                 </div>
-                <div class="col-12 col-md-4">
+                <div class="col-12 col-md-4 mb-5">
                   <label class="text-black font-weight-bold" for="url">URL</label>
-                  <input type="text" name="" class="form-control url mb-5" placeholder="@lang('howto.urlStep')" value="" data-id="0">
+                  <input type="text" name="" class="form-control url" placeholder="@lang('howto.urlStep')" value="" data-id="0">
                 </div>
               </div>
               <div class="row">
