@@ -111,7 +111,7 @@ color: var(--grey);
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none; 
+  border-right-style: none;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
@@ -518,27 +518,8 @@ text-decoration: underline;
                     <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-md-4" id="sku">
-                    <label class="text-black font-weight-bold" for="sku">sku</label>
-                    <input type="text" name="" class="form-control sku mb-5" placeholder="@lang('product.sku')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin8">
-                    <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
-                    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="@lang('product.gtin8')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin13">
-                    <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
-                    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="@lang('product.gtin13')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin14">
-                    <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
-                    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="@lang('product.gtin14')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="mpn">
-                    <label class="text-black font-weight-bold" for="mpn">mpn</label>
-                    <input type="text" name="" class="form-control mpn mb-5" placeholder="@lang('product.mpn')" value="" data-id="0">
-                  </div>
+                <div class="row product-description">
+
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-3">
@@ -854,6 +835,8 @@ text-decoration: underline;
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
+
+
 
 {{-- <div class="d-flex flex-column-fluid">
     <div class="container-fluid">

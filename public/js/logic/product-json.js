@@ -1,13 +1,79 @@
 
-    const productSchema = class {
-        constructor() {
+    const sku = (id) => `<div class="col-12 col-md-4" id="sku">
+        <label class="text-black font-weight-bold" for="sku">sku</label>
+        <input type="text" name="" class="form-control sku mb-5" placeholder="${$('#skulang').val()}" value="" data-id="${id}">
+      </div>`;
 
-        }
+    const gtin = (id) => `<div class="col-12 col-md-4" id="gtin8">
+    <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
+    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="${$('#gtin8lang').val()}" value="" data-id="${id}">
+  </div>`;
+
+    const Secondgtin = (id) => `<div class="col-12 col-md-4" id="gtin13">
+    <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
+    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="${$('#gtin13lang').val()}" value="" data-id="${id}">
+  </div>`;
+
+    const Thirdgtin = (id) => `<div class="col-12 col-md-4" id="gtin14">
+    <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
+    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="${$('#gtin14lang').val()}" value="" data-id="${id}">
+  </div>`;
+
+    const mpm = (id) => ` <div class="col-12 col-md-4" id="mpn">
+    <label class="text-black font-weight-bold" for="mpn">mpn</label>
+    <input type="text" name="" class="form-control mpn mb-5" placeholder="${$('#mpnlang').val()}" value="" data-id="${id}">
+  </div>`;
+
+    const productDescription = {
+        sku:sku,
+        gtin:gtin,
+        gtin8:Secondgtin,
+        gtin13:Thirdgtin,
+        mpm:mpm,
     }
 
-function print() {
-    jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
-}
+    const productSchema = class {
+        constructor() {
+            this.name = '';
+            this.image = '';
+            this.description = undefined;
+            this.brand = undefined;
+            this.sku = undefined;
+            this.gtin8 = undefined;
+            this.gtin13 = undefined;
+            this.gtin14 = undefined;
+            this.mpn = undefined;
+
+            this.tempIdentify = [];
+        }
+
+        render(){
+
+            const obj = {
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": this.name,
+                "image": this.image,
+            };
+
+            obj.name = this.name;
+            obj.image = this.image;
+
+            if(this.description) obj.description = this.description;
+
+            if(this.brand) obj.brand = this.brand;
+
+            if(this.sku) obj.sku = this.sku;
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
+
+        }
+
+    }
+
+    let productFormat = new productSchema();
+    productFormat.render();
 
 let main =
     {
@@ -26,109 +92,37 @@ jQuery(document).ready(function () {
     let industry = lang==='en'?'Industry':'Industry';
     let employmentType = lang==='en'?'EmploymentType':'TipePegawai';
 
+});
 
+    $('.name').keyup(function (e) {
+        productFormat.name = $(this).val();
+        productFormat.render();
+    });
 
-    main.mainEntity.push({
-        "name": "",
-        "image": "",
-        "description": "",
-        "brand": "",
-        "gtin8": "",
-        "gtin14": "",
-        "mpn": "",
-        "gtin13": "",
-        "sku": "",
-        "offers": {
-            "@type": "",
-            "url": "",
-            "priceCurrency": "",
-            "lowPrice": "",
-            "highPrice": "",
-            "offerCount": ""
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "",
-            "bestRating": "",
-            "worstRating": "",
-            "ratingCount": ""
+    $('.image').keyup(function (e) {
+        productFormat.image = $(this).val();
+        productFormat.render();
+    });
+
+    $('.description').keyup(function (e) {
+        productFormat.description = $(this).val();
+        productFormat.render();
+    });
+
+    $('.productBrand').keyup(function (e) {
+        productFormat.brand = $(this).val();
+        productFormat.render();
+    });
+
+    $('.identifier').change(function (e) {
+        for (let i=0;i< $(this).val().length; i++){
+            if($.inArray($(this).val()[i], productFormat.tempIdentify) == -1) {
+                // counterSocial++;
+                $('.product-description').append(eval('productDescription.'+$(this).val()[i]+'('+i+')'));
+                // productFormat['productDescription'] = $(this).val()[i];
+            }
         }
     });
-    print();
-    jQuery('#add-product').click(function () {
-        main.mainEntity.push({
-            "title": "",
-            "description": "",
-            "hiringOrganization" : {
-              "@type": "Organization",
-              "name": ""
-            },
-            "datePosted": "",
-            "validThrough": "",
-            "jobLocation": {
-              "@type": "Place",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "",
-                "addressLocality": "",
-                "postalCode": "",
-                "addressCountry": ""
-              }
-            },
-            "baseSalary": {
-                "@type": "MonetaryAmount",
-                "currency": "",
-                "value": {
-                  "@type": "",
-                  "minValue": "",
-                  "maxValue": "",
-                  "unitText": ""
-                }
-              },
-        });
-        print();
-        jQuery('#formjobPosting').append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+jobTitle+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+identifier+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+description+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+name+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+companyUrl+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+industry+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 headline\" placeholder=\""+employmentType+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\">"
-        );
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-        sticky.update();
-    });
-});
-
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.image', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].image = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.description', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].description = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.brand', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].brand = jQuery(this).val();
-    print();
-});
 
 jQuery(document).on('keyup', '.gtin8', function () {
     let index = parseInt(jQuery(this).data('id'));
