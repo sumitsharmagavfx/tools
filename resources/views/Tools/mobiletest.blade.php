@@ -119,14 +119,14 @@ id/mobile-test
         <div class="row d-flex align-items-center">
           <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
             <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3 d-none'></i>
 
             <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3 d-none'></i>
 
             <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3 d-none'></i>
+            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN" id="tested_url">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
@@ -151,34 +151,26 @@ id/mobile-test
                 </div>
               </div>
 
-              <div id="crawlResult" class="d-flex justify-content-between align-items-center px-5 mb-5">
+              <div id="crawlResult" class="d-none justify-content-between align-items-center px-5 mb-5">
                 <div class="">
-                  <p class="text-darkgrey">Tested on Feb 4, 2021 at 09.50 AM</p>
-                  <p class="h3 text-black">Page is mobile friendly</p>
-                  <p class="mb-0 text-darkgrey">This page is easy to use on  a mobile device</p>
+                  <p class="text-darkgrey" id="result-date">Tested on Feb 4, 2021 at 09.50 AM</p>
+                  <p class="h3 text-black" id="result-title">Page is mobile friendly</p>
+                  <p class="mb-0 text-darkgrey" id="result-subtitle">This page is easy to use on  a mobile device</p>
                 </div>
                 <div class="">
-                  <img id="mobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
-                  <img id="notMobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobilered.png')}}" alt="Not Mobile Friendly Icon">
+                  <img id="mobileFriendlyIcon" class="d-none" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
+                  <img id="notMobileFriendlyIcon" class="d-none" src="{{asset('/media/images/bx_bx-mobilered.png')}}" alt="Not Mobile Friendly Icon">
                 </div>
               </div>
 
-              <div id="pageIssues" class="px-5">
+              <div id="pageIssues" class="d-none px-5">
                 <p class="font-weight-boldest text-black">Page loading issues</p>
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918;"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
+                <div id="page-issues-content"></div>
+              </div>
 
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=87513</span>
-                </div>
-
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
+              <div id="mobileIssues" class="d-none px-5">
+                <p class="font-weight-boldest text-black">Please resolve the issues below</p>
+                <div id="mobile-issues-content"></div>
               </div>
 
             </div>
@@ -279,14 +271,13 @@ id/mobile-test
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
+                <p class="text-black font-weight-bold mb-0" id="task-sleeping">Our robot is sleeping right now. Give him a task!</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-progress">Our robot is excecuting your task..</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-done">Our robot is already finished your task.</p>
                 <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  <div class="progress-bar" role="progressbar" id="progress-bar-loader" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+                <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">Cancel</button>
               </div>
             </div>
           </div>
@@ -303,8 +294,8 @@ id/mobile-test
                 </div>
               </div>
 
-              <div class="" id="CrawlResultPreview">
-                <img src="{{asset('/media/images/mobilePreviewResult.png')}}" alt="Mobile Test Preview" width="100%">
+              <div class="d-none" id="CrawlResultPreview">
+                <img src="" id="mobile-image-preview" alt="Mobile Test Preview" width="100%">
               </div>
             </div>
           </div>

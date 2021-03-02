@@ -88,8 +88,8 @@
                       <label for="robotAccess" class="text-black font-weight-bold">Default robot access</label>
                       <select class="form-control" name="" id="robotAccess">
                         <option value="" disabled selected>Select access</option>
-                        <option value="allow">Allow</option>
-                        <option value="disallow">Disallow</option>
+                        <option value="Allow">Allow</option>
+                        <option value="Disallow">Disallow</option>
                       </select>
                     </div>
                   </div>
@@ -119,185 +119,15 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <label class="text-black font-weight-bold" for="">Directive</label>
+                    <label class="d-none text-black font-weight-bold" for="" id="directive-title">Directive</label>
                     <span ></span>
-                  </div>
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md delete'></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md delete'></i>
-                    </div>
                   </div>
                 </div>
               </div>
               <button type="button" class="btn btn-add-question d-flex align-items-center justify-content-center" name="button" id="add">
-                <i class='bx bx-plus'></i> ADD DIRECTIVE
+                <i class='bx bx-plus'></i>
+                <span id="add-directive">ADD DIRECTIVE</span>
+                <span class="d-none" id="add-more-directive">ADD MORE DIRECTIVE</span>
               </button>
             </div>
             <div class="col-md-4 mb-5">
@@ -309,15 +139,15 @@
                         <i class='bx bx-copy'></i> <span>Copy</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
-                      <button type="submit" id="test" class="btn font-weight-bold " name="button">
+                      <button type="button" id="export" class="btn font-weight-bold " name="button">
                         <i class='bx bx-download'></i> <span>Export</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
-                      <button type="button" class="btn font-weight-bold" name="button">
+                      <button type="button" id="reset" class="btn font-weight-bold" name="button">
                         <i class='bx bx-refresh'></i> <span>Reset</span></button>
                     </div>
                   </div>
-                  <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
+                  <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" readonly></textarea>
                 </form>
               </div>
 
