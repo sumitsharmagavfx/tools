@@ -60,7 +60,7 @@ const getData = function(key){
                 continue;
             }
             jQuery('#form').append(
-                `<div class='row parent' data-id='${i}'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-${i}' data-id='${i}' class='font-weight-bold question'>Question ${parseInt(i)+1}</label><input type='text' class='form-control question' name='' value='${data.mainEntity[i].name}' data-id='${i}'></div><div class='form-group'><label for='answer-${i}' data-id='${i}' class='font-weight-bold answer'>Answer ${parseInt(i)+1}</label><input type='text' class='form-control answer' name='' value='${data.mainEntity[i].acceptedAnswer.text}' data-id='${i}'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='${i}'></i></div></div></div>`
+                `<div class='row parent' data-id='${i}'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-${i}' data-id='${i}' class='font-weight-bold question'>Question ${parseInt(i)+1}</label><input type='text' class='form-control question' name='' value='${data.mainEntity[i].name}' data-id='${i}'></div><div class='form-group mb-5'><label for='answer-${i}' data-id='${i}' class='font-weight-bold answer'>Answer ${parseInt(i)+1}</label><input type='text' class='form-control answer' name='' value='${data.mainEntity[i].acceptedAnswer.text}' data-id='${i}'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='${i}'></i></div></div></div>`
             );
         }
     }
@@ -187,7 +187,7 @@ jQuery('#add').click(function () {
     });
     print(data);
     jQuery('#form').append(
-        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
+        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group mb-5'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
     );
 
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
@@ -229,6 +229,14 @@ jQuery(document).on('click', '.delete', function () {
         save()
     }
     sticky.update();
+});
+
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
 });
 
 jQuery('#copy').click(function () {

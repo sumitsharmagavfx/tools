@@ -71,11 +71,20 @@ color: white;
 color: var(--grey);
 }
 
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+    transition: 0.15s !important;
+}
+
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description {
+.form-control.custom-textarea-100px {
   resize: none;
   height: 100px;
 }
@@ -110,15 +119,11 @@ color: var(--grey);
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-i.bx {
-  color: var(--darkgrey);
-}
-
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
@@ -454,15 +459,15 @@ text-decoration: underline;
           <div class="row">
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
-              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option selected="selected">Job Posting</option>
-                <option>Person</option>
-                <option>Product</option>
-                <option>Recipe</option>
+              <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting" selected="selected">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -491,7 +496,7 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-12">
                     <label class="text-black font-weight-bold" for="description">Job description (in HTML)</label>
-                    <textarea name="" class="form-control description mb-5" placeholder="@lang('jobPosting.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-100px description mb-5" placeholder="@lang('jobPosting.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row">
@@ -499,9 +504,10 @@ text-decoration: underline;
                     <label class="text-black font-weight-bold" for="name">Company</label>
                     <input type="text" name="" class="form-control name mb-5" placeholder="@lang('jobPosting.name')" value="" data-id="0">
                   </div>
-                  <div class="col-12 col-md-6 col-xl-4">
+                  <div class="col-12 col-md-6 col-xl-4  mb-5">
                     <label class="text-black font-weight-bold" for="companyUrl">Company URL</label>
-                    <input type="text" name="" class="form-control companyUrl mb-5" placeholder="@lang('jobPosting.companyUrl')" value="" data-id="0">
+                    <input type="text" name="" class="form-control companyUrl" placeholder="@lang('jobPosting.companyUrl')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                   <div class="col-12 col-md-6 col-xl-4">
                     <label class="text-black font-weight-bold" for="industry">Industry</label>
@@ -530,10 +536,10 @@ text-decoration: underline;
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
@@ -541,10 +547,10 @@ text-decoration: underline;
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
                     </div>
                   </div>
                 </div>
@@ -585,13 +591,15 @@ text-decoration: underline;
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-6 col-xl-4">
+                  <div class="col-6 col-xl-4 mb-5">
                     <label class="text-black font-weight-bold" for="salary">Salary</label>
-                    <input type="number" name="" class="form-control salary mb-5" placeholder="@lang('jobPosting.salary')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control salary" placeholder="@lang('jobPosting.salary')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
-                  <div class="col-6 col-xl-3">
+                  <div class="col-6 col-xl-3 mb-5">
                     <label class="text-black font-weight-bold" for="maxSalary">Max. Salary</label>
-                    <input type="number" name="" class="form-control maxSalary mb-5" placeholder="@lang('jobPosting.maxSalary')" value="" min="0" data-id="0" disabled="disabled">
+                    <input type="number" name="" class="form-control maxSalary" placeholder="@lang('jobPosting.maxSalary')" value="" min="0" data-id="0" disabled="disabled">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                   <div class="col-6 col-xl-3">
                     <label class="text-black font-weight-bold" for="currency">Currency</label>

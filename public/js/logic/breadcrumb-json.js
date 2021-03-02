@@ -42,7 +42,7 @@
             "item": "",
         });
         jsonFormat();
-        $('#formbreadcrumb').append("<div class='row form-cotainer' data-id='"+(counter)+"'><input type='hidden' id='itemListLength' value='"+(main.itemListElement.length)+"'><div class='col-10 col-sm-11'><div class='row'><div class='col-sm-5'><label for='pageName' class='font-weight-bold'>Page #"+(counter)+" name</label><input type='text' id='pageName' class='form-control  mb-5 pageName' name='' placeholder='Type your name here..' value='' data-id='"+(counter)+"'></div><div class='col-sm-7'><label for='url' class='font-weight-bold'>URL #"+(counter)+"</label><input type='text' id='url' class='form-control mb-5 url' name='' placeholder='Type your URL here..' value='' data-id='"+(counter)+"'></div></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(counter)+"'></i></div></div></div>");
+        $('#formbreadcrumb').append("<div class='row form-cotainer' data-id='"+(counter)+"'><input type='hidden' id='itemListLength' value='"+(main.itemListElement.length)+"'><div class='col-10 col-sm-11'><div class='row'><div class='col-sm-5 mb-5'><label for='pageName' class='font-weight-bold'>Page #"+(counter)+" name</label><input type='text' id='pageName' class='form-control pageName' name='' placeholder='Type your name here..' value='' data-id='"+(counter)+"'></div><div class='col-sm-7 mb-5'><label for='url' class='font-weight-bold'>URL #"+(counter)+"</label><input type='text' id='url' class='form-control url' name='' placeholder='Type your URL here..' value='' data-id='"+(counter)+"'><div class='invalid-feedback'>Invalid URL</div></div></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(counter)+"'></i></div></div></div>");
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
         sticky.update();
@@ -81,7 +81,8 @@
                 jsonFormat();
             } else {
                 console.log('no match')
-                // alert("No match");
+                $('#url').addClass('is-invalid');
+                $('.invalid-feedback').show();
             }
         }else{
             if (url.match(regex)) {
@@ -89,7 +90,8 @@
                 jsonFormat();
             } else {
                 console.log('no match')
-                // alert("No match");
+                $('#url').addClass('is-invalid');
+                $('.invalid-feedback').show();
             }
         }
     }
@@ -120,6 +122,14 @@
 
     $(document).on('keyup', '.pageName', function () {
         updateJSON_name(parseInt($(this).data('id')), $(this).val());
+    });
+
+    $(document).on('change', '#schema-json-ld', function() {
+        if($(this).val() !== 'home') {
+            window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+        }else{
+            window.location = 'json-ld-schema-generator'
+        }
     });
 
     $('#copy').click(function () {
