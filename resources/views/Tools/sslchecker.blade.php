@@ -388,11 +388,11 @@ id/ssl-checker
             <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
 
             <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+            <i id="crawlHttps" style="display: none;" class='bx bxs-check-shield text-white bx-md mr-3'></i>
 
             <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control lookup-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
+            <input id="url" type="url" class="form-control lookup-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
@@ -419,37 +419,7 @@ id/ssl-checker
 
               <!-- RESULT CRAWL -->
               <div class="" id=result>
-                <div class="d-flex align-items-center mx-5">
-                    <i class='bx bxs-check-circle bx-md' style="color:#67B405"></i>
-                    <i class='bx bxs-x-circle bx-md' style="color:#D60404"></i>
-                    <span class="mx-3 technology-name h5 mb-0 text-darkgrey">TLS Certificate</span>
-                </div>
-                <hr>
-                <div class="mx-5 text-black font-weight-bold">
-                  <p>Common Name = *.cmlabs.co</p>
-                  <p>Subject Alternative Names = DNS:*.cmlabs.co, DNS:cmlabs.co</p>
-                  <p>Issuer = R3</p>
-                  <p>Serial Number = 03479CC85A692E8048C830141C9D5C8002D0</p>
-                  <p>SHA1 Thumbprint = 6B:1D:B7:A3:86:6B:F9:74:F5:E9:26:AE:C3:AE:B9:C5:19:04:6A:A1</p>
-                </div>
-                <div class="d-flex align-items-center mx-5 mt-10">
-                    <i class='bx bxs-check-circle bx-md' style="color:#67B405"></i>
-                    <i class='bx bxs-x-circle bx-md' style="color:#D60404"></i>
-                    <span class="mx-3 technology-name h5 mb-0 text-darkgrey">TLS Certificate Expiration Date</span>
-                </div>
-                <hr>
-                <div class="mx-5 text-black font-weight-bold">
-                  <p>SSL Certificate expired on 9th, March 2021 (65 days from now).</p>
-                </div>
-                <div class="d-flex align-items-center mx-5 mt-10">
-                    <i class='bx bxs-check-circle bx-md' style="color:#67B405"></i>
-                    <i class='bx bxs-x-circle bx-md' style="color:#D60404"></i>
-                    <span class="mx-3 technology-name h5 mb-0 text-darkgrey">TLS Certificate Installation Status</span>
-                </div>
-                <hr>
-                <div class="mx-5 text-black font-weight-bold">
-                  <p>TLS Certificate is installed well.</p>
-                </div>
+
               </div>
             </div>
           </div>
@@ -466,57 +436,7 @@ id/ssl-checker
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
+              <ul class="list-group" id="localsavedesktop">
               </ul>
             </div>
           </div>
@@ -558,76 +478,7 @@ id/ssl-checker
         <span class="clear-all font-15px pointer">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-      <div class="card bg-transparent" style="">
-        <div class="card-header" id="headingOne2">
-          <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-            Version 2.3
-          </div>
-        </div>
-        <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-          <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="d-flex align-items-center">
-              <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-              <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="local-collection-body mt-3 px-5" id="localsavemobile">
     </div>
   </div>
 </div>

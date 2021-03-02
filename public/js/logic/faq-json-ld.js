@@ -60,7 +60,7 @@ const getData = function(key){
                 continue;
             }
             jQuery('#form').append(
-                `<div class='row parent' data-id='${i}'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-${i}' data-id='${i}' class='font-weight-bold question'>Question ${parseInt(i)+1}</label><input type='text' class='form-control question' name='' value='${data.mainEntity[i].name}' data-id='${i}'></div><div class='form-group'><label for='answer-${i}' data-id='${i}' class='font-weight-bold answer'>Answer ${parseInt(i)+1}</label><input type='text' class='form-control answer' name='' value='${data.mainEntity[i].acceptedAnswer.text}' data-id='${i}'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='${i}'></i></div></div></div>`
+                `<div class='row parent' data-id='${i}'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-${i}' data-id='${i}' class='font-weight-bold question'>Question ${parseInt(i)+1}</label><input type='text' class='form-control question' name='' value='${data.mainEntity[i].name}' data-id='${i}'></div><div class='form-group mb-5'><label for='answer-${i}' data-id='${i}' class='font-weight-bold answer'>Answer ${parseInt(i)+1}</label><input type='text' class='form-control answer' name='' value='${data.mainEntity[i].acceptedAnswer.text}' data-id='${i}'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='${i}'></i></div></div></div>`
             );
         }
     }
@@ -72,7 +72,7 @@ const removeData = function(key){
         for (let i = 1; i < main.mainEntity.length; i++) {
             jQuery('.row[data-id=' + i + ']').remove();
         }
-        data = getDataFromText()
+        let data = getDataFromText()
         data.mainEntity.splice(1, main.mainEntity.length - 1);
         data.mainEntity[0].name = '';
         data.mainEntity[0].acceptedAnswer.text = '';
@@ -97,7 +97,12 @@ const removeData = function(key){
 }
 
 const clearAll = function(){
-    localStorage.clear();
+    var res = JSON.parse(localStorage.getItem('keys'));
+    for(let i of res.faq){
+        localStorage.removeItem(i);
+    }
+    res.faq = [];
+    localStorage.setItem('keys',JSON.stringify(res))
     $('#localsavemobile').empty();
     $('#localsavedesktop').empty();
 }
@@ -182,13 +187,9 @@ jQuery('#add').click(function () {
     });
     print(data);
     jQuery('#form').append(
-        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
+        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group mb-5'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
     );
 
-    // append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 question\" placeholder=\""+question+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-    //     "                <input type=\"text\" name=\"\" class=\"form-control mb-7 answer\" placeholder=\""+answer+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\">"
-    // );
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
     jQuery('#json-format').attr('rows',row);
     save();
@@ -206,8 +207,7 @@ jQuery(document).on('keyup', '.question', function () {
 
 jQuery(document).on('keyup', '.answer', function () {
     let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    data = getDataFromText()
+    let data = getDataFromText()
     data.mainEntity[index].acceptedAnswer.text = jQuery(this).val();
     print(data);
     save();
@@ -216,22 +216,27 @@ jQuery(document).on('keyup', '.answer', function () {
 jQuery(document).on('click', '.delete', function () {
     let index = parseInt(jQuery(this).data('id'));
     if (index!==0){
-        data = getDataFromText()
+        let data = getDataFromText()
         data.mainEntity.splice(index, 1);
         print(data);
         for (let i = 0; i < main.mainEntity.length; i++) {
             jQuery('.question[data-id=' + i + ']').val(main.mainEntity[i].name)
             jQuery('.answer[data-id=' + i + ']').val(main.mainEntity[i].acceptedAnswer.text)
         }
-        // jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
-        // jQuery('.question[data-id=' + main.mainEntity.length + ']').remove();
-        // jQuery('.answer[data-id=' + main.mainEntity.length + ']').remove();
-        // jQuery('.delete[data-id=' + main.mainEntity.length + ']').remove();
         jQuery('.row[data-id=' + main.mainEntity.length + ']').remove();
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
+        save()
     }
     sticky.update();
+});
+
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
 });
 
 jQuery('#copy').click(function () {

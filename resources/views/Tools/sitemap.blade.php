@@ -9,11 +9,11 @@
 @section('conical','/en/sitemap-generator')
 
 @section('en-link')
-en/sitemap-generator
+    en/sitemap-generator
 @endsection
 
 @section('id-link')
-id/sitemap-generator
+    id/sitemap-generator
 @endsection
 
 @push('style')
@@ -381,7 +381,7 @@ id/sitemap-generator
       vertical-align: middle;
     }
   }
-  
+
   .card-whats-new {
     background: var(--lightgrey);
     border-radius: 5px;
@@ -497,596 +497,485 @@ id/sitemap-generator
 @endpush
 
 @section('content')
-<div class="container container-tools mb-10">
-  <div class="d-flex flex-column-fluid">
-    <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">SITEMAP GENERATOR</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+    <div class="container container-tools mb-10">
+        <div class="d-flex flex-column-fluid">
+            <div class="container-fluid px-0">
+                <h1 class="text-darkgrey font-weight-normal">SITEMAP GENERATOR</h1>
+                <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
 
-      <div class="header-blue mt-10 mb-5 px-5 py-1">
-        <div class="row d-flex align-items-center">
-          <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-            <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+                <div class="header-blue mt-10 mb-5 px-5 py-1">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
+                            <!-- BEFORE CRAWL -->
+                            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
 
-            <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+                            <!-- HTTPS URL -->
+                            <i id="crawlHttps" style="display: none;" class='bx bxs-check-shield text-white bx-md mr-3'></i>
 
-            <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
-          </div>
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-            <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">GENERATE</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="px-2 mb-3">
-              <span class="text-black font-15px font-weight-bolder">Results</span>
-              <span class="font-15px font-weight-bolder" style="color:#9A99A2">(18)</span>
-              <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
-            </div>
-            <div class="mb-3">
-              <button type="button" class="btn btn-download-sitemap" name="button">Download Sitemap</button>
-              <button type="button" class="btn btn-download-sitemap-disabled" disabled name="button">Download Sitemap</button>
-            </div>
-          </div>
-          <div class="card card-custom mb-5">
-            <div class="card-body py-4 px-0">
-
-              <!-- BEFORE CRAWL -->
-              <div class="" id="noCrawlResult">
-                <div class="text-center">
-                  <p class="d-block">No sitemap generated, please input your domain above!</p>
-                  <a href="#" class="links">Learn how to use this tools?</a>
-                </div>
-              </div>
-
-              <!-- RESULT CRAWL -->
-              <div class="" id=result>
-
-                <!-- DUMMY RESULT DATA START -->
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">1</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">2</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">3</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">4</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">5</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">6</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">7</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">8</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">9</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-
-
-                <div class="d-flex align-items-center mx-5 result-row">
-                  <span class="label label-square label-sitemap">10</span>
-                  <span class="mx-3 sitemap-url-result">https://cmlabs.co</span>
-                </div>
-                <hr>
-                <!-- DUMMY RESULT DATA END -->
-
-                <!-- SHOW MORE BUTTON START -->
-                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">
-                  <div class="">
-                    <span class="label label-square label-sitemap">...</span>
-                    <span class="mx-3 sitemap-url-result">Show More</span>
-                  </div>
-                  <div class="d-flex align-items-center">
-                    <i class='bx bxs-chevron-down sitemap-show-more'></i>
-                  </div>
-                </div>
-                <!-- SHOW MORE BUTTON END -->
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="px-2 mb-3 d-flex align-items-center" style="height:31.88px">
-            <span class="text-black font-15px font-weight-bolder">Progress</span>
-          </div>
-          <div class="card card-custom mb-5">
-            <div class="card-body py-4 px-5">
-              <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
-                <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                </div>
-                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
-              </div>
-            </div>
-          </div>
-          <div id="local-collection-desktop" class="local-collection">
-            <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-              <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
-              </div>
-              <div>
-                <span class="clear-all font-15px pointer mr-3">Clear All</span>
-              </div>
-            </div>
-            <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
+                            <!-- HTTP URL -->
+                            <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
+                            <input id="url" type="url" class="form-control sitemap-url" name="" value=""
+                                   placeholder="INPUT / PASTE YOUR DOMAIN">
+                        </div>
+                        <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
+                            <!-- CRAWL BUTTON -->
+                            <button id="generate" type="button" class="btn btn-crawl" name="button">GENERATE</button>
+                        </div>
                     </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/karir</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/tentang-kami</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/blog</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">https://cmlabs.co/en/about-us</div>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-                      <i class='bx bxs-x-circle bx-sm text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="desktop-version">
-            <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-              <div class="card bg-transparent" style="">
-                <div class="card-header" id="headingOne2">
-                  <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                    Version 2.3
-                  </div>
                 </div>
-                <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-                  <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <div class="d-flex align-items-center">
-                      <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                      <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="px-2 mb-3">
+                                <span class="text-black font-15px font-weight-bolder">Results</span>
+                                <span id="length-result" class="font-15px font-weight-bolder"
+                                      style="color:#9A99A2">(0)</span>
+                                <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
+                            </div>
+                            <div id="download-button" class="mb-3">
+                            </div>
+                        </div>
+                        <div class="card card-custom mb-5">
+                            <div class="card-body py-4 px-0">
+
+                                <!-- BEFORE CRAWL -->
+                                <div class="" id="noCrawlResult">
+                                    <div class="text-center">
+                                        <p class="d-block">No sitemap generated, please input your domain above!</p>
+                                        <a href="#" class="links">Learn how to use this tools?</a>
+                                    </div>
+                                </div>
+
+                                <!-- WHEN CRAWL -->
+                                <div style="display: none;" id="generateCrawlResult">
+                                    <div class="text-center">
+                                        <p class="d-block">Generating your sitemap...</p>
+                                    </div>
+                                </div>
+
+                                <!-- RESULT CRAWL -->
+                                <div class="" id=result></div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <div class="col-md-4">
+                        <div class="px-2 mb-3 d-flex align-items-center" style="height:31.88px">
+                            <span class="text-black font-15px font-weight-bolder">Progress</span>
+                        </div>
+                        <div class="card card-custom mb-5">
+                            <div class="card-body py-4 px-5">
+                                <div class="text-center">
+                                    <p id="info" class="text-black font-weight-bold mb-0">Our robot is sleeping right
+                                        now. Give him a task!</p>
+                                    {{-- <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
+                                    <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p> --}}
+                                    {{-- <div class="progress my-3">
+                                      <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                                    </div> --}}
+                                    {{-- <div class="">
+                                      <div class="spinner spinner-primary spinner-lg "></div>
+                                    </div> --}}
+                                    <p id="detail-progress" style="display: none;" class="text-black font-weight-bold mb-3"></p>
+                                    <span id="cancel-button"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="local-collection-desktop" class="local-collection">
+                            <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
+                                <div class="d-flex flex-row align-items-center">
+                                    <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                                    <span class="text-black font-15px">Your Local History</span>
+                                </div>
+                                <div>
+                                    <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                                </div>
+                            </div>
+                            <div class="local-collection-body">
+                                <ul class="list-group" id="localsavedesktop"></ul>
+                            </div>
+                        </div>
+                        <div class="desktop-version">
+                            <div class="accordion accordion-light accordion-toggle-arrow custom-features-accordion"
+                                 id="accordionExample2">
+                                <div class="card bg-transparent" style="">
+                                    <div class="card-header" id="headingOne2">
+                                        <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                                            Version 2.3
+                                        </div>
+                                    </div>
+                                    <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                                        <div class="card-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                commodo
+                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                                                id est laborum.</p>
+                                            <div class="d-flex align-items-center">
+                                                <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                                <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
+    </div>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="w-100">
-  <div class="local-collection-mobile bg-white py-5">
-    <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
-      <div class="d-flex flex-row align-items-center">
-        <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
-      </div>
-      <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
-      </div>
-    </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
-      <div class="card bg-transparent" style="">
-        <div class="card-header" id="headingOne2">
-          <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-            Version 2.3
-          </div>
-        </div>
-        <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
-          <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="d-flex align-items-center">
-              <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-              <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+    <div class="w-100">
+        <div class="local-collection-mobile bg-white py-5">
+            <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
+                <div class="d-flex flex-row align-items-center">
+                    <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
+                    <span class="text-black font-15px">Your Local History</span>
+                </div>
+                <div>
+                    <span class="clear-all font-15px pointer">Clear All</span>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="local-collection-body mt-3 px-5" id="localsavemobile">
 
-<div class="" style="background:white">
-  <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
-    <div class="row">
-      <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-      <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
-          </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
+            </div>
+            <div id="mobile-version"
+                 class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion"
+                 id="accordionExample2">
+                <div class="card bg-transparent" style="">
+                    <div class="card-header" id="headingOne2">
+                        <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
+                            Version 2.3
+                        </div>
+                    </div>
+                    <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                                qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="d-flex align-items-center">
+                                <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                                <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
-          </div>
-          <a href="#" class="">How search engine works?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
-          </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
-          </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
-        </div>
-      </div>
     </div>
-    <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
-      <div class="row">
-        <div class="col-md-6 py-5">
-          <div class="robo-container">
-            <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
-          </div>
-        </div>
-        <div class="col-md-6 py-10 pr-10">
-          <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row mb-10">
-      <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
-      </div>
-      <div class="col-md-6">
-        <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
-          <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
-        </div>
-        <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
-            1.3</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-        <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-      </div>
-    </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
-    <div class="row my-5">
-      <div class="col-md-6 mb-5">
-        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-          <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-            <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
-          </div>
-          <div class="alert-close pt-5 pr-5">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-            </button>
-          </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+
+    <div class="" style="background:white">
+        <div class="container container-description">
+            <h2 class="text-black">Advance your writing</h2>
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</p>
+                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</p>
+                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                        officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description">1</span>
+                        </div>
+                        <a href="#" class="">Why does SEO important for writing?</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description">2</span>
+                        </div>
+                        <a href="#" class="">How search engine works?</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description">3</span>
+                        </div>
+                        <a href="#" class="">The basic of writing?</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description">4</span>
+                        </div>
+                        <a href="#" class="">Measuring your writing?</a>
+                    </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                        <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                            <span class="label label-lg label-tools-description">5</span>
+                        </div>
+                        <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+                    </div>
+                </div>
+            </div>
+            <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
+                <div class="row">
+                    <div class="col-md-6 py-5">
+                        <div class="robo-container">
+                            <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+                        </div>
+                    </div>
+                    <div class="col-md-6 py-10 pr-10">
+                        <div class="robo-text-container">
+                            <h2 class="text-white">Writing Starter Guide</h2>
+                            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best
+                                practices to make it easier for search engines to crawl, index, and understand your
+                                content.</p>
+                            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-10">
+                <div class="col-md-6">
+                    <h2 class="text-black">Available features</h2>
+                    <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
+                    <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical
+                        thinking to provide technical advice from the our data.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <span class="text-primaryblue">cmlabs Words Counter</span>
+                        <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
+                        <small class="text-grey">Updated 25 Dec, 2020</small>
+                    </div>
+                    <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and
+                        visualize your SERRPs data to suit your business needs.</p>
+                    <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox"
+                                                                                            disabled="disabled"
+                                                                                            checked="checked"
+                                                                                            name="Checkboxes12"/><span></span>&nbsp;&nbsp;<bdi>
+                            Daily domain ranking on SERP. Version 1.0
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox"
+                                                                                            disabled="disabled"
+                                                                                            checked="checked"
+                                                                                            name="Checkboxes13"/><span></span>&nbsp;&nbsp;<bdi>
+                            Exact and average Google Search Volume. Version
+                            1.3
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input
+                            type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily
+                            domain ranking on SERP. Version 0.1
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input
+                            type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily
+                            domain ranking on SERP. Version 0.1
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input
+                            type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily
+                            domain ranking on SERP. Version 0.1
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input
+                            type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily
+                            domain ranking on SERP. Version 0.1
+                        </bdi>
+                    </label>
+                    <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input
+                            type="checkbox" disabled="disabled" name="Checkboxes14"/><span></span>&nbsp;&nbsp;<bdi>Daily
+                            domain ranking on SERP. Version 0.1
+                        </bdi>
+                    </label>
+                </div>
+            </div>
+            <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+            <div class="row my-5">
+                <div class="col-md-6 mb-5">
+                    <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
+                         role="alert" style="background: var(--lightgrey); display:block">
+                        <div class="alert-text mb-5">
+                            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span
+                                class="label label-dot label-alert-features"></span>
+                            <br/>
+                            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                        </div>
+                        <div class="alert-close pt-5 pr-5">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+                            </button>
+                        </div>
+                        <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
             from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
-        </div>
-      </div>
-      <div class="col-md-6 mb-5">
-        <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-          <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-            <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
-          </div>
-          <div class="alert-close pt-5 pr-5">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-            </button>
-          </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
+                         role="alert" style="background: var(--lightgrey); display:block">
+                        <div class="alert-text mb-5">
+                            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span
+                                class="label label-dot label-alert-features"></span>
+                            <br/>
+                            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                        </div>
+                        <div class="alert-close pt-5 pr-5">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
+                            </button>
+                        </div>
+                        <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
             from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-black view-all-release">View all web-release?</p>
+        </div>
+    </div>
+    {{--
+    <div class="d-flex flex-column-fluid">
+        <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
+        <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
+    <li class="breadcrumb-item active" style="color:#2F80ED"><b>Sitemap Generator</b></li>
+    </ol>
+    </nav>
+    <div class="card card-custom mb-5">
+      <div class="card-header">
+        <div class="card-title">
+          <h1 class="card-label">SITEMAP GENERATOR </h1>
+          <small>@lang('sitemap.sub-title')</small>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
-  </div>
-</div>
-{{--
-<div class="d-flex flex-column-fluid">
-    <div class="container-fluid">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb" style="background-color:#EEF0F8 !important;">
-    <li class="breadcrumb-item"><a href="/{{$local}}" class="menu-breadcrumb">@lang('home.homepage')</a></li>
-<li class="breadcrumb-item active" style="color:#2F80ED"><b>Sitemap Generator</b></li>
-</ol>
-</nav>
-<div class="card card-custom mb-5">
-  <div class="card-header">
-    <div class="card-title">
-      <h1 class="card-label">SITEMAP GENERATOR </h1>
-      <small>@lang('sitemap.sub-title')</small>
+    <div class="card card-custom gutter-b">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-5 gutter-b">
+            <div class="" id="spin">
+              <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
+            </div>
+          </div>
+          <div class="col-lg-4 col-xl-3 col-xxl-2 gutter-b">
+            <button type="button" class="btn btn-primary  form-control" name="button" id="generate">
+              <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
+          </div>
+        </div>
+        <center>
+          <div class="col-sm-12 col-md-6 col-lg-5" id="add" style="display:none">
+            <img id="screeshoot" src="https://cmlabs.co/wp-content/uploads/2020/06/mural-cmlabs.jpg" width="100%" class="gutter-b" alt="mural cmlabs">
+          </div>
+        </center>
+      </div>
     </div>
-  </div>
-</div>
-<div class="card card-custom gutter-b">
-  <div class="card-body">
-    <div class="row">
-      <div class="col-lg-5 gutter-b">
-        <div class="" id="spin">
-          <input id="url" type="text" class="form-control" name="" value="" placeholder="@lang('sitemap.input-hint')">
+    <div class="card card-custom gutter-b" id="table" style="display:none">
+      <div class="card-header">
+        <div class="card-title">
+          <h2 class="card-label">@lang('sitemap.result-title')</h2>
         </div>
       </div>
-      <div class="col-lg-4 col-xl-3 col-xxl-2 gutter-b">
-        <button type="button" class="btn btn-primary  form-control" name="button" id="generate">
-          <i class="flaticon2-heart-rate-monitor"></i> @lang('sitemap.btn-generate')</button>
-      </div>
-    </div>
-    <center>
-      <div class="col-sm-12 col-md-6 col-lg-5" id="add" style="display:none">
-        <img id="screeshoot" src="https://cmlabs.co/wp-content/uploads/2020/06/mural-cmlabs.jpg" width="100%" class="gutter-b" alt="mural cmlabs">
-      </div>
-    </center>
-  </div>
-</div>
-<div class="card card-custom gutter-b" id="table" style="display:none">
-  <div class="card-header">
-    <div class="card-title">
-      <h2 class="card-label">@lang('sitemap.result-title')</h2>
-    </div>
-  </div>
-  <div class="card-body">
-    <button id="download" type="button" class="btn btn-info" name="button">@lang('sitemap.btn-download')</button>
-    <table class="table table-striped" id="url-table">
-      <thead>
-        <tr>
-          <th scope="col" width="70px">Page #</th>
-          <th scope="col">URL</th>
-        </tr>
-      </thead>
-      <tbody>
+      <div class="card-body">
+        <button id="download" type="button" class="btn btn-info" name="button">@lang('sitemap.btn-download')</button>
+        <table class="table table-striped" id="url-table">
+          <thead>
+            <tr>
+              <th scope="col" width="70px">Page #</th>
+              <th scope="col">URL</th>
+            </tr>
+          </thead>
+          <tbody>
 
-      </tbody>
-    </table>
-  </div>
-</div>
-<div class="row" data-sticky-container>
-  <div class="col-lg-8 mb-5">
-    <div class="card card-custom">
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-1')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-1-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-2')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-2-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-3')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-3-1')</p>
-        <p>@lang('sitemap.copy-3-2')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-4')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-4-1')</p>
-        <p>@lang('sitemap.copy-4-2')</p>
-        <p>@lang('sitemap.copy-4-3')</p>
-        <p>@lang('sitemap.copy-4-4')</p>
-        <p>@lang('sitemap.copy-4-5')</p>
-        <p>@lang('sitemap.copy-4-6')</p>
-        <p>@lang('sitemap.copy-4-7')</p>
-        <p>@lang('sitemap.copy-4-8')</p>
-        <p>@lang('sitemap.copy-4-9')</p>
-        <p>@lang('sitemap.copy-4-10')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-5')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-5-1')</p>
-      </div>
-      <div class="card-header">
-        <div class="card-title">
-          <h2 class="card-label">@lang('sitemap.copy-title-6')</h2>
-        </div>
-      </div>
-      <div class="card-body">
-        <p>@lang('sitemap.copy-6-1')</p>
-        <p>@lang('sitemap.copy-6-2')</p>
+          </tbody>
+        </table>
       </div>
     </div>
-  </div>
-  @include('layouts/stickybar')
-</div>
-</div>
-</div>
---}}
+    <div class="row" data-sticky-container>
+      <div class="col-lg-8 mb-5">
+        <div class="card card-custom">
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-1')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-1-1')</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-2')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-2-1')</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-3')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-3-1')</p>
+            <p>@lang('sitemap.copy-3-2')</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-4')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-4-1')</p>
+            <p>@lang('sitemap.copy-4-2')</p>
+            <p>@lang('sitemap.copy-4-3')</p>
+            <p>@lang('sitemap.copy-4-4')</p>
+            <p>@lang('sitemap.copy-4-5')</p>
+            <p>@lang('sitemap.copy-4-6')</p>
+            <p>@lang('sitemap.copy-4-7')</p>
+            <p>@lang('sitemap.copy-4-8')</p>
+            <p>@lang('sitemap.copy-4-9')</p>
+            <p>@lang('sitemap.copy-4-10')</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-5')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-5-1')</p>
+          </div>
+          <div class="card-header">
+            <div class="card-title">
+              <h2 class="card-label">@lang('sitemap.copy-title-6')</h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <p>@lang('sitemap.copy-6-1')</p>
+            <p>@lang('sitemap.copy-6-2')</p>
+          </div>
+        </div>
+      </div>
+      @include('layouts/stickybar')
+    </div>
+    </div>
+    </div>
+    --}}
 
 @endsection
 @push('script')
-<script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -1101,21 +990,23 @@ id/sitemap-generator
       "name": "Sitemap Generator"
     }]
   }
-</script>
+
+    </script>
 @endpush
 @push('script')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-<script>
-  const token = "{{csrf_token()}}"
-</script>
-<script src="{{asset('js/logic/download.js')}}"></script>
-<script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
-<script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
-<script src="{{asset('js/logic/sitemap.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+        const token = "{{csrf_token()}}"
+        const URL_API = '{{env('URL_API')}}'
+    </script>
+    <script src="{{asset('js/logic/download.js')}}"></script>
+    <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
+    <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
+    <script src="{{asset('js/logic/sitemap.js')}}"></script>
 @endpush
 
 @section('sitemap')
-active
+    active
 @endsection
