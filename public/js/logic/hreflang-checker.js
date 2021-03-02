@@ -120,7 +120,6 @@ function analyze(_url) {
                     .addClass('btn-cancel')
                     .removeAttr('disabled');
                 updateProgressBar(20);
-                $('#no-crawl-result').hide();
                 $('#progress-stop-message').hide();
                 $('#progress-finish-message').hide();
                 $('#progress-start-message').show();
@@ -160,7 +159,13 @@ function analyze(_url) {
 }
 
 function renderAllData(data){
+    if (data.length === 0) {
+            // if no result
+            $('#no-crawl-result').show();
+            return;
+    }
     $('#hreflang-result-header').removeAttr('style');
+    $('#no-crawl-result').hide();
     $("#hreflang-result-list").empty();
     let _counter = 1;
     for (let _data of data) {

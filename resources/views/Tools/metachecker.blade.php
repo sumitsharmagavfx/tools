@@ -691,20 +691,6 @@ id/page-title-meta-description-checker
 
   }
 
-  .btn-crawl {
-    background: white;
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-
-  .btn-crawl:hover {
-    background: var(--lightgrey);
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-
   @media only screen and (min-width: 768px) and (max-width:991px) {
     .local-collection .local-collection-title {
       max-width: 50%;
