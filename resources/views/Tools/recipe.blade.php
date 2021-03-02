@@ -540,7 +540,7 @@ text-decoration: underline;
                   <div class="input-group date">
                     <div class="input-group-append">
                       <span class="input-group-text">
-                        <i class="bx bx-calendar"></i>
+                        <i class="bx bx-calendar text-darkgrey"></i>
                       </span>
                     </div>
                     <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date publishedDate" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
