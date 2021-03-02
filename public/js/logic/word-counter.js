@@ -3,18 +3,19 @@ const refreshLocalStorage = function(){
         const keys = JSON.parse(localStorage.getItem('keys'))
         if(keys.wc){
             for (let key of keys.wc){
-                let temp = localStorage.getItem(key).slice(0,45)
+                let temp = localStorage.getItem(key)
                 let date = new Date(key*1000)
                 let div = '<div class="custom-card py-5 px-3" onclick="getData('+key+')">'+
                 '<div class="d-flex align-items-center justify-content-between">'+
                     '<div class="local-collection-title">'+temp+'</div>'+
                         '<div class="d-flex align-items-center">'+
-                            '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
-                            '<i class="bx bxs-x-circle text-grey" onclick="removeData('+key+')"></i>'+
+                        '<i class="bx bxs-info-circle text-grey bx-sm mr-2" data-toggle="tooltip" data-theme="dark" title="Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'"></i>'+
+                            // '<span class="mr-2 text-grey date-created">Created at '+((date.getHours() < 10) ? ('0'+date.getHours()):date.getHours())+'.'+((date.getMinutes() < 10) ? ('0'+date.getMinutes()):date.getMinutes())+' | '+date.getDate()+', '+getMonth(date.getMonth())+' '+date.getFullYear()+'</span>'+
+                            '<i class="bx bxs-x-circle text-grey bx-sm" onclick="removeData('+key+')"></i>'+
                         '</div>'+
                     '</div>'+
                 '</div>'
-            
+
                 let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
                 '<div class="d-flex justify-content-between">'+
                 '  <div class="local-collection-title">'+temp+'</div>'+
@@ -24,7 +25,7 @@ const refreshLocalStorage = function(){
                 '  </div>'+
                 '</div>'+
                 '</li>'
-                
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
@@ -98,7 +99,7 @@ $('#textarea').on('input', function(){
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
             var temp = define();
-            if (keys){  
+            if (keys){
                 temp = JSON.parse(keys)
             }
             if (!temp.wc.includes(key)){
@@ -437,4 +438,199 @@ function start(){
         // sticky.update();
     }
     // sticky.update();
+}
+
+$(document).ready(function() {
+  $('#autoSaveOff').tooltip({
+    'template': '<div class="tooltip tooltip-autosave-off" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+  });
+
+  $('#autoSaveOn').tooltip({
+    'template': '<div class="tooltip tooltip-autosave-on" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
+  });
+  $("#top2").hide();
+  $("#top3").hide();
+  $("#top2Mobile").hide();
+  $("#top3Mobile").hide();
+  $("#autoSaveOff").hide();
+
+  $("#autoSaveOn").click(function() {
+    $("#autoSaveOn").hide();
+    $("#autoSaveOff").show();
+    $('#autosaveParam').data('autosave','off');
+  });
+
+  $("#autoSaveOff").click(function() {
+    $("#autoSaveOn").show();
+    $("#autoSaveOff").hide();
+    $('#autosaveParam').data('autosave','on');
+  });
+
+
+  $("#copy-text").click(function() {
+    const textarea = $('#textarea');
+    textarea.select();
+    document.execCommand("copy");
+    toastr.info('Copied to Clipboard', 'Information');
+  });
+
+  $("#set-font-size-10px").click(function() {
+    $("#set-font-size-10px").addClass("active");
+    $("#set-font-size-12px").removeClass("active");
+    $("#set-font-size-15px").removeClass("active");
+    $("#textarea").addClass("font-size-10px");
+    $("#textarea").removeClass("font-size-12px");
+    $("#textarea").removeClass("font-size-15px");
+  });
+
+  $("#set-font-size-12px").click(function() {
+    $("#set-font-size-10px").removeClass("active");
+    $("#set-font-size-12px").addClass("active");
+    $("#set-font-size-15px").removeClass("active");
+    $("#textarea").removeClass("font-size-10px");
+    $("#textarea").addClass("font-size-12px");
+    $("#textarea").removeClass("font-size-15px");
+  });
+
+  $("#set-font-size-15px").click(function() {
+    $("#set-font-size-10px").removeClass("active");
+    $("#set-font-size-12px").removeClass("active");
+    $("#set-font-size-15px").addClass("active");
+    $("#textarea").removeClass("font-size-10px");
+    $("#textarea").removeClass("font-size-12px");
+    $("#textarea").addClass("font-size-15px");
+  });
+
+  $("#showWords1Desktop").click(function() {
+    $("#showWords1Desktop").addClass("active");
+    $("#showWords2Desktop").removeClass("active");
+    $("#showWords3Desktop").removeClass("active");
+    $("#showWords1Mobile").addClass("active");
+    $("#showWords2Mobile").removeClass("active");
+    $("#showWords3Mobile").removeClass("active");
+    $("#topKeywords").show();
+    $("#top2").hide();
+    $("#top3").hide();
+    $("#topKeywordsMobile").show();
+    $("#top2Mobile").hide();
+    $("#top3Mobile").hide();
+  });
+
+  $("#showWords2Desktop").click(function() {
+    $("#showWords1Desktop").removeClass("active");
+    $("#showWords2Desktop").addClass("active");
+    $("#showWords3Desktop").removeClass("active");
+    $("#showWords1Mobile").removeClass("active");
+    $("#showWords2Mobile").addClass("active");
+    $("#showWords3Mobile").removeClass("active");
+    $("#topKeywords").hide();
+    $("#top2").show();
+    $("#top3").hide();
+    $("#topKeywordsMobile").hide();
+    $("#top2Mobile").show();
+    $("#top3Mobile").hide();
+  });
+
+  $("#showWords3Desktop").click(function() {
+    $("#showWords1Desktop").removeClass("active");
+    $("#showWords2Desktop").removeClass("active");
+    $("#showWords3Desktop").addClass("active");
+    $("#showWords1Mobile").removeClass("active");
+    $("#showWords2Mobile").removeClass("active");
+    $("#showWords3Mobile").addClass("active");
+    $("#topKeywords").hide();
+    $("#top2").hide();
+    $("#top3").show();
+    $("#topKeywordsMobile").hide();
+    $("#top2Mobile").hide();
+    $("#top3Mobile").show();
+  });
+
+  $("#showWords1Mobile").click(function() {
+    $("#showWords1Desktop").addClass("active");
+    $("#showWords2Desktop").removeClass("active");
+    $("#showWords3Desktop").removeClass("active");
+    $("#showWords1Mobile").addClass("active");
+    $("#showWords2Mobile").removeClass("active");
+    $("#showWords3Mobile").removeClass("active");
+    $("#topKeywords").show();
+    $("#top2").hide();
+    $("#top3").hide();
+    $("#topKeywordsMobile").show();
+    $("#top2Mobile").hide();
+    $("#top3Mobile").hide();
+  });
+
+  $("#showWords2Mobile").click(function() {
+    $("#showWords1Desktop").removeClass("active");
+    $("#showWords2Desktop").addClass("active");
+    $("#showWords3Desktop").removeClass("active");
+    $("#showWords1Mobile").removeClass("active");
+    $("#showWords2Mobile").addClass("active");
+    $("#showWords3Mobile").removeClass("active");
+    $("#topKeywords").hide();
+    $("#top2").show();
+    $("#top3").hide();
+    $("#topKeywordsMobile").hide();
+    $("#top2Mobile").show();
+    $("#top3Mobile").hide();
+  });
+
+  $("#showWords3Mobile").click(function() {
+    $("#showWords1Desktop").removeClass("active");
+    $("#showWords2Desktop").removeClass("active");
+    $("#showWords3Desktop").addClass("active");
+    $("#showWords1Mobile").removeClass("active");
+    $("#showWords2Mobile").removeClass("active");
+    $("#showWords3Mobile").addClass("active");
+    $("#topKeywords").hide();
+    $("#top2").hide();
+    $("#top3").show();
+    $("#topKeywordsMobile").hide();
+    $("#top2Mobile").hide();
+    $("#top3Mobile").show();
+  });
+
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    var offset = -80;
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top + offset
+        }, 400);
+        return false;
+      }
+    }
+  });
+});
+
+jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+  var offset = this.offsetHeight - this.clientHeight;
+
+  var resizeTextarea = function(el) {
+    jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+  };
+  jQuery(this).on('keyup input', function() {
+    resizeTextarea(this);
+  }).removeAttr('data-autoresize');
+});
+
+var counter = 0;
+
+function myFunction() {
+  document.getElementById("kd").style.borderBottom = "2px solid #24daff";
+  counter += 1;
+  if (counter == 1) {
+    $('#textarea').popover().click(function() {
+      setTimeout(function() {
+        $('#textarea').popover('hide');
+      }, 24000);
+    });
+  } else {
+    $('#textarea').popover().click(function() {
+      $('#textarea').popover('hide');
+    });
+  }
 }
