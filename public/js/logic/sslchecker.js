@@ -64,7 +64,7 @@ $('#crawlButton').on('click', function () {
                 $('#noCrawlResult').show()
             } else {
                 toastr.success('Success scan your ssl', 'Success');
-                save(response)
+                save(response,url)
                 renderData(response)
                 refreshLocalStorage()
             }
@@ -79,6 +79,7 @@ $('#crawlButton').on('click', function () {
 
 let getData = function (index) {
     let data = JSON.parse(localStorage.getItem('ssl-checker'))[index]
+    $('#url').val(data.url)
     renderData(data)
 }
 
@@ -132,13 +133,17 @@ let renderData = function (response){
     }
 }
 
-let save = function (data){
+let save = function (data,url){
     if (data){
         let local = localStorage.getItem('ssl-checker')
         let temp = []
         if (local){
             temp = JSON.parse(local)
         }
+        let urlFormatted = {
+            url:url
+        }
+        Object.assign(data,urlFormatted)
         temp.push(data)
         localStorage.setItem('ssl-checker',JSON.stringify(temp))
     }
@@ -157,7 +162,7 @@ const refreshLocalStorage = function(){
                 let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
                 let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">
-                        <div class="local-collection-title">${key.subject.CN}
+                        <div class="local-collection-title">${key.url}
                         </div>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark"
@@ -169,7 +174,7 @@ const refreshLocalStorage = function(){
 
                 let div2 = `<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData(${index})">
                   <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">${key.subject.CN}</div>
+                    <div class="local-collection-title">${key.url}</div>
                     <div class="d-flex align-items-center">
                       <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="${formatDate}"></i>
                       <i class='bx bxs-x-circle bx-sm text-grey' onclick="removeLocal(${index})"></i>
