@@ -1010,3 +1010,7 @@
 @section('sitemap')
     active
 @endsection
+
+@section('generator')
+active
+@endsection

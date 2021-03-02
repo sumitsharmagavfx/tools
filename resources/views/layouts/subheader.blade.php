@@ -9,35 +9,38 @@
                     <li class="nav-item">
                         <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
                     </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD</a>
+                    </li>
+                    <li class="nav-item ml-7">
+                        <a class="nav-link @yield('keyword-research')" href="/{{ $local }}/keyword-research">Keyword Research</a>
+                    </li>
                     <li class="nav-item dropdown ml-7">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generator</a>
+                        <a class="nav-link dropdown-toggle @yield('generator')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generator</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item active" href="/{{ $local }}/sitemap-generator">Sitemap .XML Generator</a>
+                            <a class="dropdown-item @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap .XML Generator</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="/{{ $local }}/robotstxt-generator">Robots .TXT Generator</a>
+                            <a class="dropdown-item @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots .TXT Generator</a>
                         </div>
                     </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD Generator</a>
+                    <li class="nav-item dropdown ml-7">
+                        <a class="nav-link dropdown-toggle @yield('test-n-checker')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Test & Checker</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('mobile-test')" href="/{{ $local }}/mobile-friendly-test">Mobile Friendly Test</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('ssl-checker')" href="/{{ $local }}/ssl-checker">SSL Certificate Checker</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('redirect-checker')" href="/{{ $local }}/redirect-checker">Redirect Chain Checker</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('hreflang-checker')" href="/{{ $local }}/hreflang-checker">Hreflang Cheker</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('link-analyzer')" href="/{{ $local }}/link-analyzer">Link Analyzer</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
+                        </div>
                     </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('page-speed')" href="/{{ $local }}/pagespeed-test">Page Speed Test</a>
-                    </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('sitemap')" href="/{{ $local }}/sitemap-generator">Sitemap.XML Generator</a>
-                    </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('mobile-test')" href="/{{ $local }}/mobile-friendly-test">Mobile Friendly Test</a>
-                    </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('ssl-checker')" href="/{{ $local }}/ssl-checker">SSL Certificate Checker</a>
-                    </li>
-                    <li class="nav-item ml-7">
-                        <a class="nav-link @yield('robotstxt-generator')" href="/{{ $local }}/robotstxt-generator">Robots.TXT Generator</a>
-                    </li>
-                    <!-- <li class="nav-item ml-7">
-                        <a class="nav-link @yield('technology-lookup')" href="/{{ $local }}/technology-lookup">Technology Lookup</a>
-                    </li> -->
                 </ul>
                 <ul class="nav custom-nav" id="menu_tools_writer">
                     <li class="nav-item">

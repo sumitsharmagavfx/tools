@@ -16,139 +16,174 @@ toastr.options = {
     "hideMethod": "fadeOut"
 };
 
+// Register new robot data
 let main =
 {
     "defaultaccess": "",
     "crawldelay": "",
     "sitemap": "",
     "directive": []
-};
-const result = document.getElementById('result');
+}
 
-jQuery(document).ready(function () {
+// Get all data from input
+jQuery(document).on('change', '#robotAccess', function () {
+    main.defaultaccess = jQuery(this).val()
+    setRobotResult()
+});
+jQuery(document).on('change', '#crawlDelay', function () {
+    main.crawldelay = jQuery(this).val()
+    setRobotResult()
+});
+jQuery(document).on('keyup', '#sitemap', function () {
+    main.sitemap = jQuery(this).val()
+    setRobotResult()
+});
+jQuery(document).on('change', '.access-directive', function () {
+    let index = parseInt(jQuery(this).data('id'));
+    main.directive[index].access = jQuery(this).val();
+    setRobotResult()
+});
+jQuery(document).on('change', '.user-agent', function () {
+    let index = parseInt(jQuery(this).data('id'));
+    main.directive[index].useragent = jQuery(this).val();
+    setRobotResult()
+});
+jQuery(document).on('keyup', '.directory', function () {
+    let index = parseInt(jQuery(this).data('id'));
+    main.directive[index].directory = jQuery(this).val();
+    setRobotResult()
+});
+
+// Add Directive Function
+jQuery('#add').click(function() {
+    $('#directive-title').removeClass('d-none')
+    $('#add-directive').addClass('d-none')
+    $('#add-more-directive').removeClass('d-none')
+
     main.directive.push({
         "access": "",
         "useragent": "",
         "directory": ""
     });
 
+    jQuery('#form').append(
+      "<div class=\"row directive-row\" data-id=\"" +(main.directive.length-1)+ "\">"+
+        "<div class=\"col-10 col-sm-11\">"+
+          "<div class=\"row\">"+
+            "<div class=\"col-md-4\">"+
+              "<div class=\"form-group\">"+
+                "<select name=\"\" class=\"form-control access-directive\" data-id=\"" +(main.directive.length-1)+ "\">"+
+                  "<option value=\"\" disabled selected>Select access</option>"+
+                  "<option value=\"Allow\">Allow</option>"+
+                  "<option value=\"Disallow\">Disallow</option>"+
+                "</select>"+
+              "</div>"+
+            "</div>"+
+            "<div class=\"col-md-4\">"+
+              "<div class=\"form-group\">"+
+                "<select name=\"\" class=\"form-control user-agent\" data-id=\"" +(main.directive.length-1)+ "\">"+
+                    "<option value=\"\" disabled selected>Select user agent</option>"+
+                "</select>"+
+              "</div>"+
+            "</div>"+
+            "<div class=\"col-md-4\">"+
+              "<div class=\"form-group\">"+
+                "<input type=\"text\" class=\"form-control directory\" name=\"\" value=\"\" placeholder=\"/your-directory\" data-id=\"" +(main.directive.length-1)+ "\" required>"+
+              "</div>"+
+            "</div>"+
+          "</div>"+
+        "</div>"+
+        "<div class=\"col-2 col-sm-1\">"+
+          "<div class=\"d-flex justify-content-center align-items-center mt-1\">"+
+            "<i class='bx bxs-x-circle bx-md delete remove' data-id=\"" +(main.directive.length-1)+ "\"></i>"+
+          "</div>"+
+        "</div>"+
+      "</div>"
+    )
+
     jQuery.getJSON('https://my-json-server.typicode.com/rifqiiardhian/botdata/db', function(data) {
         for ( let i = 0; i < data.bot.length; i++ ) {
             jQuery('.user-agent').append(
-                "           <option value=\"" +data.bot[i].value+ "\">" +data.bot[i].name+ "</option>"
+                "<option value=\"" +data.bot[i].value+ "\">" +data.bot[i].name+ "</option>"
             );
         }
     });
+});
 
-    jQuery('#add-directive').click(function() {
-        main.directive.push({
-            "access": "",
-            "useragent": "",
-            "directory": ""
-        });
+// Automatically set data to textarea
+function setRobotResult() {
+    let defuseragent = 'User-agent: *'
+        defaccess = '',
+        crawldel = '',
+        sitemap = ''
 
-        jQuery('#form').append(
-            "<div class=\"row mb-5 directive-row\" data-id=\"" +(main.directive.length-1)+ "\">" +
-            "   <div class=\"col-lg-3\">" +
-            "       <select class=\"form-control access-directive\" name=\"\" data-id=\"" +(main.directive.length-1)+ "\">" +
-            "           <option value=\"\">Select Access</option>" +
-            "           <option value=\"Allow\">Allow</option>" +
-            "           <option value=\"Disallow\">Disallow</option>" +
-            "       </select>" +
-            "   </div>" +
-            "   <div class=\"col-lg-3\">" +
-            "       <select class=\"form-control user-agent\" name=\"\" data-id=\"" +(main.directive.length-1)+ "\">" +
-            "           <option value=\"\">Select User Agent</option>" +
-            "       </select>" +
-            "   </div>" +
-            "   <div class=\"col-lg-3\">" +
-            "       <input type=\"text\" class=\"form-control directory\" name=\"\" placeholder=\"/your-directory\" data-id=\"" +(main.directive.length-1)+ "\"/>" +
-            "   </div>" +
-            "   <div class=\"col-lg-3\">" +
-            "       <button type=\"button\" class=\"btn btn-danger btn-block remove\" data-id=\"" +(main.directive.length-1)+ "\">REMOVE</button>" +
-            "   </div>" +
-            "</div>"
-        );
+    if (main.defaultaccess === '') {
+        defaccess = ''
+    } else {
+        defaccess = defuseragent+ "\n" +main.defaultaccess+ ": /"
+    }
 
-        jQuery.getJSON('https://my-json-server.typicode.com/rifqiiardhian/botdata/db', function(data) {
-            for ( let i = 0; i < data.bot.length; i++ ) {
-                jQuery('.user-agent').append(
-                    "           <option value=\"" +data.bot[i].value+ "\">" +data.bot[i].name+ "</option>"
-                );
-            }
-        });
-    });
+    if (main.crawldelay === '') {
+        crawldel = ''
+    } else {
+        crawldel = '\n\nCrawl-delay: ' +main.crawldelay
+    }
+    
+    if (main.sitemap === '') {
+        sitemap = ''
+    } else {
+        sitemap = '\n\nSitemap: ' +main.sitemap
+    }
 
-    jQuery('#create-robot').click(function() {
-        console.log(main);
+    let directive = ''
 
-        let defaccess = main.defaultaccess + "\n\n";
-        let crawldel = main.crawldelay + "\n\n";
-        let sitemap = main.sitemap + "\n";
-        let directive = '';
+    for (let i = 0; i < main.directive.length; i++) {
+        let useragent = main.directive[i].useragent,
+            access = main.directive[i].access,
+            directory = main.directive[i].directory
 
-        for (let i = 0; i < main.directive.length; i++) {
-            directive += "User-agent: " +main.directive[i].useragent + "\n" +main.directive[i].access+ ": " +main.directive[i].directory+ "\n\n";
+        if (directory == '') {
+            directory = '/'
         }
 
-        jQuery("#robot-result").val(defaccess+ "Crawl-delay: " +crawldel+ "Sitemap: " +sitemap+ "\n" +directive);
+        if (useragent === '*' && directory === '/' && access === main.defaultaccess) {
+            directive += ''    
+        } else {
+            directive += "\n\nUser-agent: " +useragent + "\n" +access+ ": " +directory;
+        }
+    }
 
-        toastr.success('Successfully Generating Robots.txt', 'Success');
-        result.style.display = 'block';
-        sticky.update();
-    });
-});
+    jQuery("#json-format").val(defaccess+ "" +crawldel+ "" +sitemap+ "" +directive);
+}
 
-jQuery(document).on('change', '#defaultaccess', function () {
-    main.defaultaccess = jQuery(this).val();
-});
-
-jQuery(document).on('change', '#crawldelay', function () {
-    main.crawldelay = jQuery(this).val();
-});
-
-jQuery(document).on('keyup', '#sitemapurl', function () {
-    main.sitemap = jQuery(this).val();
-});
-
-jQuery(document).on('change', '.access-directive', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    console.log('index:' + index);
-    main.directive[index].access = jQuery(this).val();
-});
-
-jQuery(document).on('change', '.user-agent', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    console.log('index:' + index);
-    main.directive[index].useragent = jQuery(this).val();
-});
-
-jQuery(document).on('keyup', '.directory', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    console.log('index:' + index);
-    main.directive[index].directory = jQuery(this).val();
-});
-
+// Remove Action
 jQuery(document).on('click', '.remove', function () {
     let index = parseInt(jQuery(this).data('id'));
-    if ( index !== 0 ){
-        main.directive.splice(index, 1);
 
-        for (let i = index + 1; i < main.directive.length + 1; i++) {
-            jQuery('.user-agent[data-id=' + (i - 1) + ']').val(jQuery('.user-agent[data-id=' + (i) + ']').val())
-            jQuery('.access-directive[data-id=' + (i - 1) + ']').val(jQuery('.access-directive[data-id=' + (i) + ']').val())
-            jQuery('.directory[data-id=' + (i - 1) + ']').val(jQuery('.directory[data-id=' + (i) + ']').val())
+    main.directive.splice(index, 1);
+
+        for (let i = index; i < main.directive.length; i++) {
+            jQuery('.user-agent[data-id=' + i + ']').val(jQuery('.user-agent[data-id=' + i + ']').val())
+            jQuery('.access-directive[data-id=' + i + ']').val(jQuery('.access-directive[data-id=' + i + ']').val())
+            jQuery('.directory[data-id=' + i + ']').val(jQuery('.directory[data-id=' + i + ']').val())
         }
         jQuery('.user-agent[data-id=' + main.directive.length + ']').remove();
         jQuery('.access-directive[data-id=' + main.directive.length + ']').remove();
         jQuery('.directory[data-id=' + main.directive.length + ']').remove();
         jQuery('.remove[data-id=' + main.directive.length + ']').remove();
         jQuery('.directive-row[data-id=' + main.directive.length + ']').remove();
+
+    if (main.directive.length === 0) {
+        $('#directive-title').addClass('d-none')
+        $('#add-directive').removeClass('d-none')
+        $('#add-more-directive').addClass('d-none')
     }
+    setRobotResult()
 });
 
+// Export Action
 jQuery('#export').click(function () {
-    var text = jQuery('#robot-result').val();
+    var text = jQuery('#json-format').val();
     var blob = new Blob([text], { type: "text/plain"});
     var anchor = document.createElement("a");
     anchor.download = "robots.txt";
@@ -162,14 +197,41 @@ jQuery('#export').click(function () {
     toastr.success('Successfully Exporting Files', 'Success');
 });
 
+// Copy Action
 jQuery('#copy').click(function () {
-    const textarea = jQuery('#robot-result');
+    const textarea = jQuery('#json-format');
     textarea.select();
     document.execCommand("copy");
 
     toastr.info('Copied to Clipboard', 'Information');
 });
 
+// Reset Action
 jQuery('#reset').click(function () {
-    location.reload();
+    jQuery('#robotAccess').val('')
+    jQuery('#crawlDelay').val('')
+    jQuery('#sitemap').val('')
+
+    for (let i = 0; i < main.directive.length; i++) {
+        jQuery('.user-agent[data-id=' + i + ']').remove();
+        jQuery('.access-directive[data-id=' + i + ']').remove();
+        jQuery('.directory[data-id=' + i + ']').remove();
+        jQuery('.remove[data-id=' + i + ']').remove();
+        jQuery('.directive-row[data-id=' + i + ']').remove();
+    }
+
+    jQuery('#json-format').val('')
+
+    main = {
+        "defaultaccess": "",
+        "crawldelay": "",
+        "sitemap": "",
+        "directive": []
+    }
+
+    if (main.directive.length === 0) {
+        $('#directive-title').addClass('d-none')
+        $('#add-directive').removeClass('d-none')
+        $('#add-more-directive').addClass('d-none')
+    }
 });

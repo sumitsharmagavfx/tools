@@ -14,14 +14,6 @@
 
 @push('style')
 <style media="screen">
-  @media (min-width: 992px) {
-
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-
   .button-result span,
   .button-result i {
     color: var(--darkgrey);
@@ -73,341 +65,6 @@
     }
   }
 
-  /* DESCRIPTION TOOLS */
-
-  @media only screen and (min-width: 768px) and (max-width:991px) {
-    .local-collection .local-collection-title {
-      max-width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-@media only screen and (min-width: 992px) and (max-width:1199px) {
-  .local-collection .local-collection-title {
-    max-width: 55%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width:1399px){
-  .local-collection .local-collection-title {
-    max-width: 65%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .local-collection .local-collection-title {
-    max-width: 70%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-  @media only screen and (max-width: 767px) {
-    .desktop-version {
-      display: none;
-    }
-  }
-  .local-collection-mobile .local-collection-body .custom-card {
-    border-radius: 5px;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover {
-    background: var(--primaryblue);
-    cursor: pointer;
-    color: white;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
-    color: white !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover i {
-    color: #1d7ebf !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card i:hover {
-    color: #66757f !important;
-  }
-  @media only screen and (min-width: 701px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 700px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 65%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 60%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 526px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 55%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 470px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 420px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 45%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 390px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 40%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 370px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 35%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen adn (max-width: 346px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 30%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media (max-width:767px) {
-    .container-description {
-      padding-top: 1.25rem !important;
-      padding-bottom: 1.25rem !important;
-    }
-  }
-  .alert-features-new .alert-text .alert-title {
-    color: var(--darkblue);
-  }
-  .alert-features-new .alert-text .label-alert-features {
-    background: #0FBC0C;
-    margin-bottom: 2px;
-  }
-  .alert-features-new .alert-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .alert-features-new .alert-close>button {
-    opacity: 1;
-  }
-  .alert-features-new .alert-close>button>span>.icon-alert-close {
-    color: var(--darkgrey) !important;
-    font-weight: bolder;
-  }
-  .list-group-item-action:hover,
-  .list-group-item-action:focus {
-    background: var(--primaryblue);
-    color: var(--white);
-    cursor: pointer;
-  }
-  .list-group-item-action:hover .date-created {
-    color: var(--white) !important;
-  }
-  .list-group-item-action:hover i {
-    color: rgba(42, 47, 51, 0.3) !important;
-  }
-  .list-group-item-action:hover i:hover {
-    color: var(--black) !important;
-  }
-  .list-group-item-action i {
-    color: var(--grey) !important;
-  }
-  .btn-explore {
-    background: white;
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .btn-explore:hover {
-    background: var(--lightgrey);
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .robo-img {
-    width: 60%;
-    vertical-align: middle;
-  }
-  @media (min-width: 280px) and (max-width: 767px) {
-    .robo-container {
-      display: flex;
-      justify-content: center;
-      vertical-align: middle;
-    }
-    .robo-text-container {
-      text-align: center;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    .robo-img {
-      width: 40%;
-      vertical-align: middle;
-    }
-    .robo-text-container {
-      padding: 0 50px;
-      text-align: center;
-    }
-  }
-  @media (min-width: 768px) {
-    .robo-container {
-      display: flex;
-      justify-content: flex-end;
-      vertical-align: middle;
-    }
-  }
-  @media (min-width: 992px) {
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-  .card-whats-new {
-    background: var(--lightgrey);
-    border-radius: 5px;
-  }
-  .label-tools-description {
-    background: var(--lightgrey);
-    color: var(--black);
-    font-weight: bold;
-  }
-  .tools-description-points:hover .label-tools-description {
-    background: var(--darkgrey);
-    color: var(--white);
-    font-weight: bold;
-    text-decoration: none !important;
-  }
-  .tools-description-points {
-    color: var(--primaryblue);
-    cursor: pointer;
-  }
-  .tools-description-points:hover a {
-    text-decoration: underline !important;
-    color: #0F90E7 !important;
-  }
-  .checkbox-features {
-    cursor: auto !important;
-    opacity: 1 !important;
-    margin-bottom: 10px !important;
-  }
-  .checkbox-features>span::after {
-    width: 5px !important;
-    height: 10px !important;
-  }
-  .checkbox-features>input:checked~span {
-    background: var(--black);
-  }
-  .checkbox-features.features-disabled bdi {
-    opacity: 0.6;
-  }
-  .label-whats-new {
-    background: #0FBC0C;
-  }
-  .button-close-whats-new {
-    color: var(--darkgrey);
-    cursor: pointer;
-  }
-  .button-close-whats-new:hover {
-    color: var(--black);
-  }
-  .view-all-release {
-    cursor: pointer;
-  }
-  .view-all-release:hover {
-    text-decoration: underline;
-  }
-  .container-description {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .custom-features-accordion .card .card-header .card-title.collapsed,
-  .custom-features-accordion .card .card-header .card-title::after {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title,
-  .custom-features-accordion .card .card-header .card-title.collapsed::after {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title small {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title.collapsed span,
-  .custom-features-accordion .card .card-header .card-title.collapsed small {
-    color: var(--darkgrey) !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card {
-    border-radius: 5px;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover {
-    background: var(--primaryblue);
-    cursor: pointer;
-    color: white;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
-    color: white !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover i {
-    color: #1d7ebf !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card i:hover {
-    color: #66757f !important;
-  }
-  .local-collection-mobile {
-    display: none !important;
-  }
-  @media only screen and (max-width: 767px) {
-    .local-collection-mobile {
-      display: block !important;
-    }
-    .local-collection-mobile .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .local-collection {
-      display: none !important;
-    }
-  }
-  .clear-all:hover {
-    text-decoration: underline;
-  }
-  /* END DESCRIPTION TOOLS */
 </style>
 @endpush
 
@@ -431,8 +88,8 @@
                       <label for="robotAccess" class="text-black font-weight-bold">Default robot access</label>
                       <select class="form-control" name="" id="robotAccess">
                         <option value="" disabled selected>Select access</option>
-                        <option value="allow">Allow</option>
-                        <option value="disallow">Disallow</option>
+                        <option value="Allow">Allow</option>
+                        <option value="Disallow">Disallow</option>
                       </select>
                     </div>
                   </div>
@@ -462,185 +119,15 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <label class="text-black font-weight-bold" for="">Directive</label>
+                    <label class="d-none text-black font-weight-bold" for="" id="directive-title">Directive</label>
                     <span ></span>
-                  </div>
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md btn-delete-disabled'></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md delete'></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-10 col-sm-11">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select access</option>
-                            <option value="allow">Allow</option>
-                            <option value="disallow">Dissalow</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <select name="" class="form-control">
-                            <option value="" disabled selected>Select user agent</option>
-                            <option value="*">All</option>
-                            <option value="NinjaBot">NinjaBot</option>
-                            <option value="Googlebot">Googlebot</option>
-                            <option value="Googlebot-Mobile">Googlebot-Mobile</option>
-                            <option value="Googlebot-Image">Googlebot-Image</option>
-                            <option value="Mediapartners-Google">Mediapartners-Google</option>
-                            <option value="Adsbot-Google">Adsbot-Google</option>
-                            <option value="Bingbot">Bingbot</option>
-                            <option value="Slurp">Slurp</option>
-                            <option value="msnbot">msnbot</option>
-                            <option value="msnbot-media">msnbot-media</option>
-                            <option value="Teoma">Teoma</option>
-                            <option value="twiceler">twiceler</option>
-                            <option value="Gigabot">Gigabot</option>
-                            <option value="Scrubby">Scrubby</option>
-                            <option value="Robozilla">Robozilla</option>
-                            <option value="ia_archiver">ia_archiver</option>
-                            <option value="baiduspider">baiduspider</option>
-                            <option value="naverbot">naverbot</option>
-                            <option value="yeti">yeti</option>
-                            <option value="yahoo-mmcrawler">yahoo-mmcrawler</option>
-                            <option value="psbot">psbot</option>
-                            <option value="asterias">asterias</option>
-                            <option value="yahoo-blogs">yahoo-blogs</option>
-                            <option value="Yandex">Yandex</option>
-                            <option value="Specify">Specify</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="form-group">
-                          <input type="text" class="form-control" name="" value="" placeholder="/your-directory">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-2 col-sm-1">
-                    <div class="d-flex justify-content-center align-items-center mt-1">
-                      <i class='bx bxs-x-circle bx-md delete'></i>
-                    </div>
                   </div>
                 </div>
               </div>
               <button type="button" class="btn btn-add-question d-flex align-items-center justify-content-center" name="button" id="add">
-                <i class='bx bx-plus'></i> ADD DIRECTIVE
+                <i class='bx bx-plus'></i>
+                <span id="add-directive">ADD DIRECTIVE</span>
+                <span class="d-none" id="add-more-directive">ADD MORE DIRECTIVE</span>
               </button>
             </div>
             <div class="col-md-4 mb-5">
@@ -652,15 +139,15 @@
                         <i class='bx bx-copy'></i> <span>Copy</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
-                      <button type="submit" id="test" class="btn font-weight-bold " name="button">
+                      <button type="button" id="export" class="btn font-weight-bold " name="button">
                         <i class='bx bx-download'></i> <span>Export</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
-                      <button type="button" class="btn font-weight-bold" name="button">
+                      <button type="button" id="reset" class="btn font-weight-bold" name="button">
                         <i class='bx bx-refresh'></i> <span>Reset</span></button>
                     </div>
                   </div>
-                  <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format"></textarea>
+                  <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" readonly></textarea>
                 </form>
               </div>
 
@@ -1276,5 +763,9 @@
 <script src="{{asset('js/logic/robotgenerator.js')}}"></script>
 @endpush
 @section('robotstxt-generator')
+active
+@endsection
+
+@section('generator')
 active
 @endsection

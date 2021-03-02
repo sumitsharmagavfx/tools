@@ -115,7 +115,7 @@ color: var(--grey);
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none;
+  border-right-style: none; 
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
@@ -492,12 +492,19 @@ text-decoration: underline;
                     <label class="text-black font-weight-bold" for="identifier">Identifier</label>
                     <input type="text" name="" class="form-control identifier mb-5" placeholder="@lang('jobPosting.identifier')" value="" data-id="0">
                   </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <label class="text-black font-weight-bold" for="description">Job description (in HTML)</label>
+                    <textarea name="" class="form-control custom-textarea-100px description mb-5" placeholder="@lang('jobPosting.description')" data-id="0"></textarea>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-12 col-xl-4">
                     <label class="text-black font-weight-bold" for="name">Company</label>
                     <input type="text" name="" class="form-control name mb-5" placeholder="@lang('jobPosting.name')" value="" data-id="0">
                   </div>
-                  <div class="col-12 col-md-6 col-xl-4  mb-5">
+                  <div class="col-12 col-md-6 col-xl-4 mb-5">
                     <label class="text-black font-weight-bold" for="companyUrl">Company URL</label>
                     <input type="text" name="" class="form-control companyUrl" placeholder="@lang('jobPosting.companyUrl')" value="" data-id="0">
                     <div class="invalid-feedback">Invalid URL</div>
@@ -507,10 +514,10 @@ text-decoration: underline;
                     <input type="text" name="" class="form-control industry mb-5" placeholder="@lang('jobPosting.industry')" value="" data-id="0">
                   </div>
                 </div>
-                  <div class="row">
-                    <div class="col-12 col-xl-6">
-                      <label class="text-black font-weight-bold" for="employmentType">Employment type</label>
-                      <select class="form-control selectpicker employment-type mb-5">
+                <div class="row">
+                  <div class="col-12 col-xl-6">
+                    <label class="text-black font-weight-bold" for="employmentType">Employment type</label>
+                    <select class="form-control selectpicker employment-type mb-5">
                         <option value="none">Employment type</option>
                         <option value="FULL_TIME">Full time</option>
                         <option value="PART_TIME">Part time</option>
@@ -520,34 +527,21 @@ text-decoration: underline;
                         <option value="VOLUNTEER">Volunteer</option>
                         <option value="PER_DIEM">Per diem</option>
                         <option value="OTHER">Other</option>
-                      </select>
-                    </div>
-                    <div class="col-12 col-xl-6">
-                      <label class="text-black font-weight-bold" for="workHours">Work hours</label>
-                      <input type="text" name="" class="form-control workHours mb-5" placeholder="@lang('jobPosting.workHours')" value="" data-id="0">
-                    </div>
+                    </select>
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="datePosted">Date posted</label>
-                      <div class="input-group date mb-5">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <i class="bx bx-calendar"></i>
-                          </span>
-                        </div>
-                        <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="text-black font-weight-bold" for="expiredDate">Date expired</label>
-                      <div class="input-group date mb-5">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <i class="bx bx-calendar"></i>
-                          </span>
-                        </div>
-                        <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
+                  <div class="col-12 col-xl-6">
+                    <label class="text-black font-weight-bold" for="workHours">Work hours</label>
+                    <input type="text" name="" class="form-control workHours mb-5" placeholder="@lang('jobPosting.workHours')" value="" data-id="0">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <label class="text-black font-weight-bold" for="datePosted">Date posted</label>                      
+                    <div class="input-group date mb-5">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="bx bx-calendar text-darkgrey"></i>
+                        </span>
                       </div>
                       <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date datePosted" readonly  placeholder="@lang('jobPosting.datePosted')" value="" data-id="0"/>
                     </div>
@@ -563,65 +557,18 @@ text-decoration: underline;
                       <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date expiredDate" readonly  placeholder="@lang('jobPosting.expiredDate')" value="" data-id="0"/>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-md-8 col-xl-5">
-                      <label class="text-black font-weight-bold" for="province">State/Province/Region</label>
-                        <div id="hide-province">
-                            <select class="form-control selectpicker province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
-                                <option value="none">Choose Province</option>
-                            </select>
-                        </div>
-                        <div id="province-show">
-                            <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
-                                <option value="none">Choose Province</option>
-                                @foreach($province as $p)
-                                    <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-4 col-xl-2">
-                      <label class="text-black font-weight-bold" for="zipCode">Zip code</label>
-                      <input type="text" name="" class="form-control zipCode mb-5" placeholder="@lang('jobPosting.zipCode')" value="" data-id="0">
-                    </div>
-                    <div class="col-8 col-md-12 col-xl-5">
-                      <label class="text-black font-weight-bold" for="country">Country</label>
-                      <select class="form-control selectpicker country mb-5" data-size="4" data-live-search="true" tabindex="null">
-                        <option value="none">Choose Country</option>
-                          @foreach($region as $r)
-                        <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
-                          @endforeach
-                      </select>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-3 col-xxl-2 align-self-center mt-md-2 mb-5 mb-md-0">
+                    <div class="checkbox-list align-items-center">
+                      <label class="checkbox text-black font-weight-bold">
+                      <input type="checkbox" id="remoteJob" name="" />
+                      <span></span>Remote job</label>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-6 col-xl-4">
-                      <label class="text-black font-weight-bold" for="salary">Salary</label>
-                      <input type="number" name="" class="form-control salary mb-5" placeholder="@lang('jobPosting.salary')" value="" min="0" data-id="0">
-                    </div>
-                    <div class="col-6 col-xl-3">
-                      <label class="text-black font-weight-bold" for="maxSalary">Max. Salary</label>
-                      <input type="number" name="" class="form-control maxSalary mb-5" placeholder="@lang('jobPosting.maxSalary')" value="" min="0" data-id="0" disabled="disabled">
-                    </div>
-                    <div class="col-6 col-xl-3">
-                      <label class="text-black font-weight-bold" for="currency">Currency</label>
-                      <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
-                        <option value="none">Choose Currency</option>
-                          @foreach($currencies as $c)
-                          <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
-                          @endforeach
-                        {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
-                      </select>
-                    </div>
-                    <div class="col-6 col-xl-2">
-                      <label class="text-black font-weight-bold" for="unitText">Per-</label>
-                      <select class="form-control selectpicker unitText mb-5" tabindex="null" disabled="disabled">
-                        <option value="Hour">Hour</option>
-                        <option value="Week">Week</option>
-                        <option value="Month">Month</option>
-                        <option value="Year">Year</option>
-                      </select>
-                    </div>
+                  <div class="col-12 col-md-5 col-xxl-5">
+                    <label class="text-black font-weight-bold" for="street">Street</label>
+                    <input type="text" name="" class="form-control street mb-5" placeholder="@lang('jobPosting.street')" value="" data-id="0">
                   </div>
                   <div class="col-12 col-md-4 col-xxl-5">
                     <label class="text-black font-weight-bold" for="city">City</label>
@@ -631,9 +578,19 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-12 col-md-8 col-xl-5">
                     <label class="text-black font-weight-bold" for="province">State/Province/Region</label>
-                    <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
-                      <option value="null">null</option>
-                    </select>
+                    <div id="hide-province">
+                        <select class="form-control selectpicker province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
+                            <option value="none">Choose Province</option>
+                        </select>
+                    </div>
+                    <div id="province-show">
+                        <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
+                            <option value="none">Choose Province</option>
+                            @foreach($province as $p)
+                                <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                   </div>
                   <div class="col-4 col-xl-2">
                     <label class="text-black font-weight-bold" for="zipCode">Zip code</label>
@@ -642,8 +599,10 @@ text-decoration: underline;
                   <div class="col-8 col-md-12 col-xl-5">
                     <label class="text-black font-weight-bold" for="country">Country</label>
                     <select class="form-control selectpicker country mb-5" data-size="4" data-live-search="true" tabindex="null">
-                      <option value="null">null</option>
-                      {{-- use api from https://technicalseo.com/tools/assets/data/regions.json --}}
+                        <option value="none">Choose Country</option>
+                        @foreach($region as $r)
+                            <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
+                        @endforeach
                     </select>
                   </div>
                 </div>
@@ -661,8 +620,10 @@ text-decoration: underline;
                   <div class="col-6 col-xl-3">
                     <label class="text-black font-weight-bold" for="currency">Currency</label>
                     <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
-                      <option value="null">null</option>
-                      {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                        <option value="none">Choose Currency</option>
+                        @foreach($currencies as $c)
+                            <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                        @endforeach
                     </select>
                   </div>
                   <div class="col-6 col-xl-2">
@@ -1137,14 +1098,6 @@ text-decoration: underline;
 @push('script')
 <script type="text/javascript">
   $(document).ready(function() {
-
-      $('.datePosted').datepicker({
-          format: 'yyyy-mm-dd',
-      });
-
-      $('.expiredDate').datepicker({
-          format: 'yyyy-mm-dd',
-      });
     $('#myModal').on('show.bs.modal', function(e) {
       var image = $(e.relatedTarget).attr('src');
       $(".img-responsive").attr("src", image);

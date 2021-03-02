@@ -20,22 +20,6 @@ id/mobile-test
 
 @push('style')
 <style media="screen">
-.btn-crawl {
-  height: 60%;
-  width: 100%;
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.btn-crawl:hover {
-  background: var(--lightgrey);
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-}
-
 .header-blue {
   background: var(--primaryblue);
   border-radius: 5px;
@@ -90,14 +74,6 @@ id/mobile-test
   font-weight: bold;
 }
 
-@media (min-width: 992px) {
-
-  .container-description,
-  .container-tools {
-    padding: 0px 100px;
-  }
-}
-
   .btn-cancel {
     line-height: 1;
     width: 100px;
@@ -130,341 +106,6 @@ id/mobile-test
     cursor: not-allowed;
   }
 
-  /* DESCRIPTION TOOLS */
-
-  @media only screen and (min-width: 768px) and (max-width:991px) {
-    .local-collection .local-collection-title {
-      max-width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-
-@media only screen and (min-width: 992px) and (max-width:1199px) {
-  .local-collection .local-collection-title {
-    max-width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1200px) and (max-width:1399px){
-  .local-collection .local-collection-title {
-    max-width: 60%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .local-collection .local-collection-title {
-    max-width: 63%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-  @media only screen and (max-width: 767px) {
-    .desktop-version {
-      display: none;
-    }
-  }
-  .local-collection-mobile .local-collection-body .custom-card {
-    border-radius: 5px;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover {
-    background: var(--primaryblue);
-    cursor: pointer;
-    color: white;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
-    color: white !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover i {
-    color: #1d7ebf !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card i:hover {
-    color: #66757f !important;
-  }
-  @media only screen and (min-width: 701px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 700px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 65%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 60%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 526px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 55%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 470px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 50%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 420px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 45%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 390px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 40%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen and (max-width: 370px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 35%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media only screen adn (max-width: 346px) {
-    .local-collection-mobile .local-collection-title {
-      max-width: 30%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
-  @media (max-width:767px) {
-    .container-description {
-      padding-top: 1.25rem !important;
-      padding-bottom: 1.25rem !important;
-    }
-  }
-  .alert-features-new .alert-text .alert-title {
-    color: var(--darkblue);
-  }
-  .alert-features-new .alert-text .label-alert-features {
-    background: #0FBC0C;
-    margin-bottom: 2px;
-  }
-  .alert-features-new .alert-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-  .alert-features-new .alert-close>button {
-    opacity: 1;
-  }
-  .alert-features-new .alert-close>button>span>.icon-alert-close {
-    color: var(--darkgrey) !important;
-    font-weight: bolder;
-  }
-  .list-group-item-action:hover,
-  .list-group-item-action:focus {
-    background: var(--primaryblue);
-    color: var(--white);
-    cursor: pointer;
-  }
-  .list-group-item-action:hover .date-created {
-    color: var(--white) !important;
-  }
-  .list-group-item-action:hover i {
-    color: rgba(42, 47, 51, 0.3) !important;
-  }
-  .list-group-item-action:hover i:hover {
-    color: var(--black) !important;
-  }
-  .list-group-item-action i {
-    color: var(--grey) !important;
-  }
-  .btn-explore {
-    background: white;
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .btn-explore:hover {
-    background: var(--lightgrey);
-    color: var(--black);
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .robo-img {
-    width: 60%;
-    vertical-align: middle;
-  }
-  @media (min-width: 280px) and (max-width: 767px) {
-    .robo-container {
-      display: flex;
-      justify-content: center;
-      vertical-align: middle;
-    }
-    .robo-text-container {
-      text-align: center;
-    }
-  }
-  @media (min-width: 576px) and (max-width: 767px) {
-    .robo-img {
-      width: 40%;
-      vertical-align: middle;
-    }
-    .robo-text-container {
-      padding: 0 50px;
-      text-align: center;
-    }
-  }
-  @media (min-width: 768px) {
-    .robo-container {
-      display: flex;
-      justify-content: flex-end;
-      vertical-align: middle;
-    }
-  }
-  @media (min-width: 992px) {
-    .container-description,
-    .container-tools {
-      padding: 0px 100px;
-    }
-  }
-  .card-whats-new {
-    background: var(--lightgrey);
-    border-radius: 5px;
-  }
-  .label-tools-description {
-    background: var(--lightgrey);
-    color: var(--black);
-    font-weight: bold;
-  }
-  .tools-description-points:hover .label-tools-description {
-    background: var(--darkgrey);
-    color: var(--white);
-    font-weight: bold;
-    text-decoration: none !important;
-  }
-  .tools-description-points {
-    color: var(--primaryblue);
-    cursor: pointer;
-  }
-  .tools-description-points:hover a {
-    text-decoration: underline !important;
-    color: #0F90E7 !important;
-  }
-  .checkbox-features {
-    cursor: auto !important;
-    opacity: 1 !important;
-    margin-bottom: 10px !important;
-  }
-  .checkbox-features>span::after {
-    width: 5px !important;
-    height: 10px !important;
-  }
-  .checkbox-features>input:checked~span {
-    background: var(--black);
-  }
-  .checkbox-features.features-disabled bdi {
-    opacity: 0.6;
-  }
-  .label-whats-new {
-    background: #0FBC0C;
-  }
-  .button-close-whats-new {
-    color: var(--darkgrey);
-    cursor: pointer;
-  }
-  .button-close-whats-new:hover {
-    color: var(--black);
-  }
-  .view-all-release {
-    cursor: pointer;
-  }
-  .view-all-release:hover {
-    text-decoration: underline;
-  }
-  .container-description {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .custom-features-accordion .card .card-header .card-title.collapsed,
-  .custom-features-accordion .card .card-header .card-title::after {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title,
-  .custom-features-accordion .card .card-header .card-title.collapsed::after {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title small {
-    color: var(--darkgrey) !important;
-  }
-  .custom-features-accordion .card .card-header .card-title.collapsed span,
-  .custom-features-accordion .card .card-header .card-title.collapsed small {
-    color: var(--darkgrey) !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card {
-    border-radius: 5px;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover {
-    background: var(--primaryblue);
-    cursor: pointer;
-    color: white;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover .date-created {
-    color: white !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card:hover i {
-    color: #1d7ebf !important;
-  }
-  .local-collection-mobile .local-collection-body .custom-card i:hover {
-    color: #66757f !important;
-  }
-  .local-collection-mobile {
-    display: none !important;
-  }
-  @media only screen and (max-width: 767px) {
-    .local-collection-mobile {
-      display: block !important;
-    }
-    .local-collection-mobile .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .local-collection {
-      display: none !important;
-    }
-  }
-  .clear-all:hover {
-    text-decoration: underline;
-  }
-  /* END DESCRIPTION TOOLS */
-
 </style>
 @endpush
 
@@ -478,14 +119,14 @@ id/mobile-test
         <div class="row d-flex align-items-center">
           <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
             <!-- BEFORE CRAWL -->
-            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
+            <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3 d-none'></i>
 
             <!-- HTTPS URL -->
-            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3'></i>
+            <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3 d-none'></i>
 
             <!-- HTTP URL -->
-            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN">
+            <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3 d-none'></i>
+            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN" id="tested_url">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
@@ -510,34 +151,26 @@ id/mobile-test
                 </div>
               </div>
 
-              <div id="crawlResult" class="d-flex justify-content-between align-items-center px-5 mb-5">
+              <div id="crawlResult" class="d-none justify-content-between align-items-center px-5 mb-5">
                 <div class="">
-                  <p class="text-darkgrey">Tested on Feb 4, 2021 at 09.50 AM</p>
-                  <p class="h3 text-black">Page is mobile friendly</p>
-                  <p class="mb-0 text-darkgrey">This page is easy to use on  a mobile device</p>
+                  <p class="text-darkgrey" id="result-date">Tested on Feb 4, 2021 at 09.50 AM</p>
+                  <p class="h3 text-black" id="result-title">Page is mobile friendly</p>
+                  <p class="mb-0 text-darkgrey" id="result-subtitle">This page is easy to use on  a mobile device</p>
                 </div>
                 <div class="">
-                  <img id="mobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
-                  <img id="notMobileFriendlyIcon" src="{{asset('/media/images/bx_bx-mobilered.png')}}" alt="Not Mobile Friendly Icon">
+                  <img id="mobileFriendlyIcon" class="d-none" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
+                  <img id="notMobileFriendlyIcon" class="d-none" src="{{asset('/media/images/bx_bx-mobilered.png')}}" alt="Not Mobile Friendly Icon">
                 </div>
               </div>
 
-              <div id="pageIssues" class="px-5">
+              <div id="pageIssues" class="d-none px-5">
                 <p class="font-weight-boldest text-black">Page loading issues</p>
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918;"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
+                <div id="page-issues-content"></div>
+              </div>
 
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=87513</span>
-                </div>
-
-                <div class="d-block mb-3">
-                  <i class='bx bxs-error mr-3 align-middle' style="color:#FBC918"></i>
-                  <span class="text-darkgrey">https://app.convertful.com/Convertful.js?owner=8743</span>
-                </div>
+              <div id="mobileIssues" class="d-none px-5">
+                <p class="font-weight-boldest text-black">Please resolve the issues below</p>
+                <div id="mobile-issues-content"></div>
               </div>
 
             </div>
@@ -638,14 +271,13 @@ id/mobile-test
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0">Our robot is sleeping right now. Give him a task!</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
-                <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p>
+                <p class="text-black font-weight-bold mb-0" id="task-sleeping">Our robot is sleeping right now. Give him a task!</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-progress">Our robot is excecuting your task..</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-done">Our robot is already finished your task.</p>
                 <div class="progress my-3">
-                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                  <div class="progress-bar" role="progressbar" id="progress-bar-loader" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <button type="button" class="btn btn-cancel" name="button">Cancel</button>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button">Cancel</button>
+                <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">Cancel</button>
               </div>
             </div>
           </div>
@@ -662,8 +294,8 @@ id/mobile-test
                 </div>
               </div>
 
-              <div class="" id="CrawlResultPreview">
-                <img src="{{asset('/media/images/mobilePreviewResult.png')}}" alt="Mobile Test Preview" width="100%">
+              <div class="d-none" id="CrawlResultPreview">
+                <img src="" id="mobile-image-preview" alt="Mobile Test Preview" width="100%">
               </div>
             </div>
           </div>
@@ -1084,5 +716,9 @@ id/mobile-test
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 @endpush
 @section('mobile-test')
+active
+@endsection
+
+@section('test-n-checker')
 active
 @endsection
