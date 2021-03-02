@@ -459,18 +459,19 @@ text-decoration: underline;
                   <div class="col-12 col-md-6">
                     <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
                     <div class="dropdown bootstrap-select show-tick form-control">
-                      <select class="form-control selectpicker mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
-                        <option value="Twitter">Twitter</option>
-                        <option value="Facebook" selected="selected">Facebook</option>
-                        <option value="Instagram">Instagram</option>
-                        <option value="Youtube">Youtube</option>
-                        <option value="Linkedin">Linkedin</option>
-                        <option value="Pinterest">Pinterest</option>
-                        <option value="Soundcloud">Soundcloud</option>
-                        <option value="Tumblr">Tumblr</option>
-                        <option value="Wikipedia">Wikipedia</option>
-                        <option value="Github">Github</option>
-                        <option value="Website">Website</option>
+                      <select class="form-control selectpicker mb-5 social-profiles" multiple="multiple" data-actions-box="false" tabindex="null">
+                          <option value="none">Choose Social Profiles</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="facebook">Facebook</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="youtube">Youtube</option>
+                        <option value="linkedin">Linkedin</option>
+                        <option value="pinterest">Pinterest</option>
+                        <option value="soundcloud">Soundcloud</option>
+                        <option value="tumblr">Tumblr</option>
+                        <option value="wikipedia">Wikipedia</option>
+                        <option value="github">Github</option>
+                        <option value="website">Website</option>
                       </select>
                     </div>
                   </div>
@@ -487,128 +488,9 @@ text-decoration: underline;
                 </div>
                 <div class="row">
                   <div class="col-12 mb-5">
-                    <label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-twitter bx-md text-black'></i>
-                        </div>
+                      <div class="sosial-profile-url">
+
                       </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your twitter URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-facebook-square bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your facebook URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-instagram-alt bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your instagram URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-youtube bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your youtube URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-linkedin-square bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your linkedin URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-pinterest bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your pinterest URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-soundcloud bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your soundcloud URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-tumblr bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your tumblr URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-wikipedia bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your wikipedia URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bxl-github bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your github URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
-                    <div class="row mb-5">
-                      <div class="col-2 col-sm-1 my-auto">
-                        <div class="d-flex justify-content-center">
-                          <i class='bx bx-world bx-md text-black'></i>
-                        </div>
-                      </div>
-                      <div class="col-10 col-sm-11 pl-0">
-                        <input type="text" name="" class="form-control sosmedName" placeholder="Type your website URL here.." value="" data-id="0">
-                        <div class="invalid-feedback">Invalid URL</div>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
