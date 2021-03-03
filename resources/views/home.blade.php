@@ -18,10 +18,10 @@ id
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
             <div class="text-center">
-                <h1 class="text-black font-weight-bold display-4">SEO TOOLS by CMLABS</h1>
+                <h1 class="text-black font-weight-bold display-4">@lang('home.title')</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu nibh mauris imperdiet est tincidunt libero. Pellentesque eget lacus, congue in aliquet luctus.</p>
+                        <p class="text-black">@lang('home.title')</p>
                     </div>
                 </div>
             </div>

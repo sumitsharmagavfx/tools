@@ -9,17 +9,17 @@ var insightSlide = document.getElementById('insight-slide'),
         perMove: 1,
         autoplay: true,
         breakpoints: {
-            992: { 
-                perPage: 3 
+            992: {
+                perPage: 3
             },
-            768: { 
+            768: {
                 perPage: 2 ,
                 drag: true,
                 autoplay: true,
             },
-            520: { 
+            520: {
                 perPage: 1,
-                drag: true, 
+                drag: true,
                 autoplay: true,
             }
         }
@@ -36,6 +36,236 @@ $(document).ready(function() {
         fade: false,
         autoplay: true,
         autoplaySpeed: 3000,
+    });
+
+    $('#nav-desc-tab-1').click(function () {
+        $('#nav-label-tab-1').addClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeIn().removeClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-2').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').addClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeIn().removeClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-3').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').addClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeIn().removeClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-4').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').addClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeIn().removeClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-5').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').addClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeIn().removeClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-6').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').addClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeIn().removeClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-7').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').addClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeIn().removeClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-8').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').addClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeIn().removeClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-9').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').addClass("active");
+        $('#nav-label-tab-10').removeClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeIn().removeClass("d-none");
+        $('#description-tab-10').fadeOut().addClass("d-none");
+    });
+
+    $('#nav-desc-tab-10').click(function () {
+        $('#nav-label-tab-1').removeClass("active");
+        $('#nav-label-tab-2').removeClass("active");
+        $('#nav-label-tab-3').removeClass("active");
+        $('#nav-label-tab-4').removeClass("active");
+        $('#nav-label-tab-5').removeClass("active");
+        $('#nav-label-tab-6').removeClass("active");
+        $('#nav-label-tab-7').removeClass("active");
+        $('#nav-label-tab-8').removeClass("active");
+        $('#nav-label-tab-9').removeClass("active");
+        $('#nav-label-tab-10').addClass("active");
+        $('#description-tab-1').fadeOut().addClass("d-none");
+        $('#description-tab-2').fadeOut().addClass("d-none");
+        $('#description-tab-3').fadeOut().addClass("d-none");
+        $('#description-tab-4').fadeOut().addClass("d-none");
+        $('#description-tab-5').fadeOut().addClass("d-none");
+        $('#description-tab-6').fadeOut().addClass("d-none");
+        $('#description-tab-7').fadeOut().addClass("d-none");
+        $('#description-tab-8').fadeOut().addClass("d-none");
+        $('#description-tab-9').fadeOut().addClass("d-none");
+        $('#description-tab-10').fadeIn().removeClass("d-none");
     });
 
     // Get data for insight slider with ajax
@@ -183,7 +413,7 @@ window.onscroll = function() {
         document.getElementById('kt_header').style.top = "-64px";
         document.getElementById('kt_subheader').style.top = "0";
         $('#subheader_logo').removeClass('d-none');
-        
+
         // document.getElementById('kt_header_mobile').style.top = "-54px";
         // document.getElementById('kt_subheader_mobile').style.top = "0";
         // $('#subheader_logo_mobile').removeClass('d-none');
