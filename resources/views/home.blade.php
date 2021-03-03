@@ -21,7 +21,7 @@ id
                 <h1 class="text-black font-weight-bold display-4">@lang('home.title')</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <p class="text-black">@lang('home.title')</p>
+                        <p class="text-black">@lang('home.sub-title')</p>
                     </div>
                 </div>
             </div>
@@ -170,6 +170,7 @@ id
                         </div>
                     </div>
                 </div>
+                {{--
                 <div class="col-6 col-md-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
@@ -182,66 +183,116 @@ id
                         </div>
                     </div>
                 </div>
+                --}}
             </div>
             <div class="d-flex align-items-center">
                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">Last update 1 Nov, 2020 | Version 1.7</span>
+                <span class="text-darkgrey">Last update 31 Mar, 2021 | Version 1.0</span>
             </div>
         </div>
     </div>
 </div>
 <div class="" style="background:white">
     <div class="container container-description">
-        <h2 class="text-black">Advance your writing</h2>
         <div class="row">
             <div class="col-md-9">
-                <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.</p>
-                <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.</p>
-                <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                    ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                    laborum.</p>
+                <div class="" id="description-tab-1">
+                    <h2>Important Note</h2>
+                    <ul>
+                        <li>In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.</li>
+                        <li>If you run your test on one tool and it shows different results at different times, keep in mind that it may be due to a Google update.</li>
+                        <li>If you lose your internet connection in the middle of testing the tool, we recommend that you refresh the page and try running the test again.</li>
+                        <li>This tool is provided free of charge and has no restrictions for any user.</li>
+                        <li>If you find any bugs or problems using the tool, please contact our team on the live chat in the bottom corner of cmlabs.co.</li>
+                    </ul>
+                </div>
+
+                <div class="d-none" id="description-tab-2">
+                    <h2>How to Use</h2>
+                    <h3>WORD COUNTER</h3>
+                    <ol>
+                        <li>Copy the article you want to check.</li>
+                        <li>Paste in the fields provided.</li>
+                        <li>You will get results for the number of characters, words, sentences, paragraphs and reading time.</li>
+                        <li>On the right, per 1 word, 2 words, up to 5 words, you will also get the keyword density.</li>
+                    </ol>
+                    <h3>TITLE & META DESCRIPTION CHECKER</h3>
+                    <ol>
+                        <li>Copy the URL of the web page you want to analyze.</li>
+                        <li>Paste in the URL field provided.</li>
+                        <li>Click the Get Title & Meta Desc button.</li>
+                        <li>The resulting title and meta description of the page will be available in the fields provided. You can edit directly in that field.</li>
+                        <li>Click Copy to Clipboard to copy the customized title and meta description.</li>
+                    </ol>
+                    <h3>JSON-LD SCHEMA GENERATOR</h3>
+                    <h4>Breadcrumb</h4>
+                    <ol>
+                        <li>Fill the Page name and the URL</li>
+                        <li>If you wish to add more, click the “Add URL” button.</li>
+                        <li>Once done, check the code in the right column to make sure whether it is eligible on Google Rich Result.</li>
+                        <li>Finally, you can copy the code onto your website.</li>
+                    </ol>
+                    <h4>FAQ</h4>
+                    <ol>
+                        <li>Fill in the questions and answers in the given column.</li>
+                        <li>If you wish to add more, click the Add Another FAQ button.</li>
+                        <li>Once done, check the code in the right column to make sure whether it is eligible on Google Rich Result.</li>
+                        <li>Finally, you can copy the code onto your website.</li>
+                    </ol>
+                    <h4></h4>
+                </div>
+
+                <div class="d-none" id="description-tab-3">
+                    <h2>Frequently Asked Question (FAQ)</h2>
+                    <h3>What is the cmlabs tool?</h3>
+                    <p>The cmlabs tool is an online tool developed to help content writers, SEO experts and developers improve the quality of their work. All of these tools are free and accessible to all users without limits.</p>
+                    <p>This tool started after observing the enthusiasm of newbies in learning content writing, SEO and web development. Here we are taking learning shortcuts using this free and unlimited tool.</p>
+                    <p>With the number and features added every week, the cmlabs tool will evolve even further.</p>
+                    <h3>What are the tools that have been released?</h3>
+                    <p><b>Word Counter</b> is useful for counting the number of words, paragraphs, reading time, and keyword density.</p>
+                    <p>You can measure the length of your title and meta definition in pixels and characters with the <b>Title & Meta Length Checker.</b></p>
+                    <p>The <b>JSON-LD Schema FAQ generator</b> is useful for creating schema FAQs in SERPs.</p>
+                    <p>For testing website efficiency from different aspects, the <b>PageSpeed Test</b> is useful.</p>
+                    <p><b>Mobile Friendly Test</b> is useful for testing the responsiveness of websites on mobile devices.</p>
+                    <p><b>The Sitemap Generator</b> is useful for creating XML sitemaps.</p>
+                    <p><b>SSL Checker</b> is useful for checking the validation of a website's SSL certificate.</p>
+                    <p>In number and functionality, the tools is still increasing. Subscribe to our email and push notifications to get the latest updates on the CMLABS tool.</p>
+                    <h3>Who needs this tool?</h3>
+                    <ol>
+                        <li>Content writers and Copywriters need both a Word Counter and a Title & Meta Checker.</li>
+                        <li>SEO experts need the JSON-LD Schema FAQ, PageSpeed ​​Testing, and Mobile Friendly Testing.</li>
+                        <li>Developers need a Sitemap Generator and SSL Checker</li>
+                    </ol>
+                    <h3>When does a Marketer or Product Manager need a cmlabs tool?</h3>
+                    <p>At the research, production, and audit stages, the cmlabs tool can be used. At the research stage, marketers can see the keyword density of competitors by using the Word Counter tool.</p>
+                    <p>At the development stage, the Product Manager can create an FAQ schema in the SERP by using the JSON-LD Schema FAQ. Apart from that, they can also optimize the appearance of websites on mobile devices using Mobile Friendly
+                        Testing. In order to speed up crawling using the Robot.txt Generator, you can also connect robot.txt to the website. The developer at this stage can create an XML sitemap using the Sitemap Generator.</p>
+                    <p>In the audit stage, content writers can check the title length and meta description using the Title & Meta Length Checker. SEO experts and developers can check website performance using the PageSpeed ​​Test. At this stage the
+                        developer can also check the SSL certificate using SSL Checker.</p>
+                </div>
             </div>
             <div class="col-md-3">
-                <div class="d-flex align-items-center mb-5 tools-description-points">
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description">1</span>
+                        <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                     </div>
-                    <a href="#" class="">Why does SEO important for writing?</a>
+                    <a class="">Important Note</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points">
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description">2</span>
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                     </div>
-                    <a href="#" class="">How search engine works?</a>
+                    <a class="">How to Use</a>
                 </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points">
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description">3</span>
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
-                    <a href="#" class="">The basic of writing?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description">4</span>
-                    </div>
-                    <a href="#" class="">Measuring your writing?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description">5</span>
-                    </div>
-                    <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+                    <a class="">Frequently Asked Question (FAQ)</a>
                 </div>
             </div>
         </div>
-        <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
+        <div class="mt-10" style="background:var(--darkgrey); border-radius:20px">
             <div class="row">
                 <div class="col-md-6 py-5">
                     <div class="robo-container">
@@ -250,87 +301,17 @@ id
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
-                        <h2 class="text-white">Writing Starter Guide</h2>
-                        <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-                        <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
+                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mb-10">
-            <div class="col-md-6">
-                <h2 class="text-black">Available features</h2>
-                <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-                <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
-            </div>
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <span class="text-primaryblue">cmlabs Words Counter</span>
-                    <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-                    <small class="text-grey">Updated 25 Dec, 2020</small>
-                </div>
-                <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
-                <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes13" /><span></span>&nbsp;&nbsp;<bdi>Exact and average Google Search Volume. Version
-                        1.3</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-                <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
-            </div>
-        </div>
-        <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
-        <div class="row my-5">
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">Last Update Dec 2, 2020</span>
-                    </div>
-                    <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div>
-                    <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update,
-                        starting
-                        from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
-                </div>
-            </div>
-            <div class="col-md-6 mb-5">
-                <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
-                    <div class="alert-text mb-5">
-                        <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
-                        <br />
-                        <span class="font-weight-light">Last Update Dec 2, 2020</span>
-                    </div>
-                    <div class="alert-close pt-5 pr-5">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
-                        </button>
-                    </div>
-                    <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update,
-                        starting
-                        from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
-                </div>
-            </div>
-        </div>
-        <p class="text-black view-all-release">View all web-release?</p>
     </div>
 </div>
 @endsection
 
-@push('script')
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.contributor-slide').carousel({
-            pause: "hover"
-        })
-    });
-</script>
-@endpush
 @push('script')
 <script type="application/ld+json">
     {
