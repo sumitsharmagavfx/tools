@@ -872,6 +872,13 @@ a:hover {
     text-decoration: none !important;
 }
 
+.tools-description-points .label-tools-description.active {
+    background: var(--darkgrey);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
 .tools-description-points {
     color: var(--primaryblue);
     cursor: pointer;

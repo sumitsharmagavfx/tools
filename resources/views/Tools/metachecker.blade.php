@@ -994,49 +994,120 @@ id/page-title-meta-description-checker
 </div>
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
-    <div class="row">
-      <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="row">
+          <div class="col-md-9">
+              <div class="" id="description-tab-1">
+                  <h2 class="text-black">Why does SEO important for writing?</h2>
+                  <p class="text-black">Lorem 1</p>
+              </div>
+
+              <div class="d-none" id="description-tab-2">
+                  <h2 class="text-black">How search engine works?</h2>
+                  <p class="text-black">Lorem 2</p>
+              </div>
+
+              <div class="d-none" id="description-tab-3">
+                  <h2 class="text-black">The basic of writing?</h2>
+                  <p class="text-black">Lorem 3</p>
+              </div>
+
+              <div class="d-none" id="description-tab-4">
+                  <h2 class="text-black">Tab 4</h2>
+                  <p class="text-black">Lorem 4</p>
+              </div>
+
+              <div class="d-none" id="description-tab-5">
+                  <h2 class="text-black">Tab 5</h2>
+                  <p class="text-black">Lorem 5</p>
+              </div>
+              <div class="d-none" id="description-tab-6">
+                  <h2 class="text-black">Why does SEO important for writing?</h2>
+                  <p class="text-black">Lorem 1</p>
+              </div>
+
+              <div class="d-none" id="description-tab-7">
+                  <h2 class="text-black">How search engine works?</h2>
+                  <p class="text-black">Lorem 2</p>
+              </div>
+
+              <div class="d-none" id="description-tab-8">
+                  <h2 class="text-black">The basic of writing?</h2>
+                  <p class="text-black">Lorem 3</p>
+              </div>
+
+              <div class="d-none" id="description-tab-9">
+                  <h2 class="text-black">Tab 9</h2>
+                  <p class="text-black">Lorem 4</p>
+              </div>
+
+              <div class="d-none" id="description-tab-10">
+                  <h2 class="text-black">Tab 10</h2>
+                  <p class="text-black">Lorem 5</p>
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
+                  </div>
+                  <a class="">Why does SEO important for writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
+                  </div>
+                  <a class="">How search engine works?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
+                  </div>
+                  <a class="">The basic of writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+                  </div>
+                  <a class="">Measuring your writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
+                  </div>
+                  <a class="">Hiring profesional content strategy and consultant?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
+                  </div>
+                  <a class="">Why does SEO important for writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
+                  </div>
+                  <a class="">How search engine works?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-8">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-8">8</span>
+                  </div>
+                  <a class="">The basic of writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-9">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-9">9</span>
+                  </div>
+                  <a class="">Measuring your writing?</a>
+              </div>
+              <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-10">
+                  <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                      <span class="label label-lg label-tools-description" id="nav-label-tab-10">10</span>
+                  </div>
+                  <a class="">Hiring profesional content strategy and consultant?</a>
+              </div>
+          </div>
       </div>
-      <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
-          </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
-          </div>
-          <a href="#" class="">How search engine works?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
-          </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
-          </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
-        </div>
-      </div>
-    </div>
     <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
       <div class="row">
         <div class="col-md-6 py-5">
