@@ -517,7 +517,7 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-12 col-xl-6">
                     <label class="text-black font-weight-bold" for="employmentType">Employment type</label>
-                    <select class="form-control selectpicker employment-type mb-5">
+                    <select class="form-control selectpicker custom-select-blue employment-type mb-5">
                         <option value="none">Employment type</option>
                         <option value="FULL_TIME">Full time</option>
                         <option value="PART_TIME">Part time</option>
@@ -579,12 +579,12 @@ text-decoration: underline;
                   <div class="col-12 col-md-8 col-xl-5">
                     <label class="text-black font-weight-bold" for="province">State/Province/Region</label>
                     <div id="hide-province">
-                        <select class="form-control selectpicker province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
+                        <select class="form-control selectpicker custom-select-blue province mb-5" disabled data-size="4" data-live-search="true" tabindex="null">
                             <option value="none">Choose Province</option>
                         </select>
                     </div>
                     <div id="province-show">
-                        <select class="form-control selectpicker province mb-5" data-size="4" data-live-search="true" tabindex="null">
+                        <select class="form-control selectpicker custom-select-blue province mb-5" data-size="4" data-live-search="true" tabindex="null">
                             <option value="none">Choose Province</option>
                             @foreach($province as $p)
                                 <option value="{{ $p['code'] }}">{{ $p['name'] }}</option>
@@ -598,7 +598,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-8 col-md-12 col-xl-5">
                     <label class="text-black font-weight-bold" for="country">Country</label>
-                    <select class="form-control selectpicker country mb-5" data-size="4" data-live-search="true" tabindex="null">
+                    <select class="form-control selectpicker custom-select-blue country mb-5" data-size="4" data-live-search="true" tabindex="null">
                         <option value="none">Choose Country</option>
                         @foreach($region as $r)
                             <option value="{{ $r['code'] }}">{{ $r['name'] }}</option>
@@ -619,7 +619,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-6 col-xl-3">
                     <label class="text-black font-weight-bold" for="currency">Currency</label>
-                    <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
+                    <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true" disabled="disabled">
                         <option value="none">Choose Currency</option>
                         @foreach($currencies as $c)
                             <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
@@ -628,7 +628,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-6 col-xl-2">
                     <label class="text-black font-weight-bold" for="unitText">Per-</label>
-                    <select class="form-control selectpicker unitText mb-5" tabindex="null" disabled="disabled">
+                    <select class="form-control selectpicker custom-select-blue unitText mb-5" tabindex="null" disabled="disabled">
                       <option value="Hour">Hour</option>
                       <option value="Week">Week</option>
                       <option value="Month">Month</option>
