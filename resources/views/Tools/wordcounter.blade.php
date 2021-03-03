@@ -20,7 +20,7 @@ id/word-counter
 <div class="container container-tools mb-10">
     <div class="d-flex flex-column-fluid">
         <div class="container-fluid px-0">
-            <h1 class="text-darkgrey font-weight-normal">WORDS COUNTER</h1>
+            <h1 class="text-darkgrey font-weight-normal">@lang('wordcounter.title')</h1>
             <span class="text-darkgrey h4 font-weight-normal">@lang('wordcounter.subtitle')</span>
             <div class="row mt-10">
                 <div class="col-md-8">
@@ -223,52 +223,101 @@ id/word-counter
         <div class="row">
             <div class="col-md-9">
                 <div class="" id="description-tab-1">
-                    <h2 class="text-black">Why does SEO important for writing?</h2>
-                    <p class="text-black">Lorem 1</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-1')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-1-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-2">
-                    <h2 class="text-black">How search engine works?</h2>
-                    <p class="text-black">Lorem 2</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-2')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-2-1')</p>
+                    <ul>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-1')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-2')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-3')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-4')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-5')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-6')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-7')</li>
+                    </ul>
                 </div>
 
                 <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">The basic of writing?</h2>
-                    <p class="text-black">Lorem 3</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-3')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-3-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-5')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">Tab 4</h2>
-                    <p class="text-black">Lorem 4</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-4')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-4-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">Tab 5</h2>
-                    <p class="text-black">Lorem 5</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-5')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-5-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-5-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">Why does SEO important for writing?</h2>
-                    <p class="text-black">Lorem 1</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-6')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-6-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-5')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-6-6-1')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-5')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-6-6-2')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-2-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-2-2')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-7">
-                    <h2 class="text-black">How search engine works?</h2>
-                    <p class="text-black">Lorem 2</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-7')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-7-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-7-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-7-3')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-8">
-                    <h2 class="text-black">The basic of writing?</h2>
-                    <p class="text-black">Lorem 3</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-8')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-8-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-1')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-1-1')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-2')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-2-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-2-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-3')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-3-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-3-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-4')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-4-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-9">
-                    <h2 class="text-black">Tab 9</h2>
-                    <p class="text-black">Lorem 4</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-9')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-9-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-10">
-                    <h2 class="text-black">Tab 10</h2>
-                    <p class="text-black">Lorem 5</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-10')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-10-1')</p>
+                </div>
+
+                <div class="d-none" id="description-tab-11">
+                    <h2 class="text-black">@lang('wordcounter.desc-11')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-11-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-5')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -276,61 +325,67 @@ id/word-counter
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                     </div>
-                    <a class="">Why does SEO important for writing?</a>
+                    <a class="">@lang('wordcounter.desc-1')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                     </div>
-                    <a class="">How search engine works?</a>
+                    <a class="">@lang('wordcounter.desc-2')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
-                    <a class="">The basic of writing?</a>
+                    <a class="">@lang('wordcounter.desc-3')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
-                    <a class="">Measuring your writing?</a>
+                    <a class="">@lang('wordcounter.desc-4')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
-                    <a class="">Hiring profesional content strategy and consultant?</a>
+                    <a class="">@lang('wordcounter.desc-5')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
                     </div>
-                    <a class="">Why does SEO important for writing?</a>
+                    <a class="">@lang('wordcounter.desc-6')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
                     </div>
-                    <a class="">How search engine works?</a>
+                    <a class="">@lang('wordcounter.desc-7')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-8">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-8">8</span>
                     </div>
-                    <a class="">The basic of writing?</a>
+                    <a class="">@lang('wordcounter.desc-8')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-9">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-9">9</span>
                     </div>
-                    <a class="">Measuring your writing?</a>
+                    <a class="">@lang('wordcounter.desc-9')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-10">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-10">10</span>
                     </div>
-                    <a class="">Hiring profesional content strategy and consultant?</a>
+                    <a class="">@lang('wordcounter.desc-10')</a>
+                </div>
+                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-11">
+                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                        <span class="label label-lg label-tools-description" id="nav-label-tab-11">11</span>
+                    </div>
+                    <a class="">@lang('wordcounter.desc-11')</a>
                 </div>
             </div>
         </div>
