@@ -1536,8 +1536,7 @@ jQuery.each(jQuery('textarea[data-autoresize]'), function() {
 });
 </script>
 <script type="text/javascript">
-$('#toggle_button_webmaster').click();
-
+    $('#toggle_button_writer').click();
 </script>
 
 @endpush
