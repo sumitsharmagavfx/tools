@@ -1,10 +1,10 @@
 // Init var
 var insightSlide = document.getElementById('insight-slide'),
     insightopts = {
-        type    : 'loop',
+        type: 'loop',
         arrows: false,
         pagination: false,
-        perPage : 3,
+        perPage: 3,
         drag: false,
         perMove: 1,
         autoplay: true,
@@ -13,7 +13,7 @@ var insightSlide = document.getElementById('insight-slide'),
                 perPage: 3
             },
             768: {
-                perPage: 2 ,
+                perPage: 2,
                 drag: true,
                 autoplay: true,
             },
@@ -38,7 +38,7 @@ $(document).ready(function() {
         autoplaySpeed: 3000,
     });
 
-    $('#nav-desc-tab-1').click(function () {
+    $('#nav-desc-tab-1').click(function() {
         $('#nav-label-tab-1').addClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -61,7 +61,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-2').click(function () {
+    $('#nav-desc-tab-2').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').addClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -84,7 +84,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-3').click(function () {
+    $('#nav-desc-tab-3').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').addClass("active");
@@ -107,7 +107,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-4').click(function () {
+    $('#nav-desc-tab-4').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -130,7 +130,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-5').click(function () {
+    $('#nav-desc-tab-5').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -153,7 +153,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-6').click(function () {
+    $('#nav-desc-tab-6').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -176,7 +176,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-7').click(function () {
+    $('#nav-desc-tab-7').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -199,7 +199,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-8').click(function () {
+    $('#nav-desc-tab-8').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -222,7 +222,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-9').click(function () {
+    $('#nav-desc-tab-9').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -245,7 +245,7 @@ $(document).ready(function() {
         $('#description-tab-10').fadeOut().addClass("d-none");
     });
 
-    $('#nav-desc-tab-10').click(function () {
+    $('#nav-desc-tab-10').click(function() {
         $('#nav-label-tab-1').removeClass("active");
         $('#nav-label-tab-2').removeClass("active");
         $('#nav-label-tab-3').removeClass("active");
@@ -325,7 +325,7 @@ $(document).ready(function() {
 })
 
 // Custom Show Hide Tools Title and Menu
-$('#toggle_button_writer').click( function() {
+$('#toggle_button_writer').click(function() {
     $('#header_writer_title').removeClass('d-none')
     $('#headermobile_writer_title').removeClass('d-none')
     $('#asidemobile_writer_title').removeClass('d-none')
@@ -343,7 +343,7 @@ $('#toggle_button_writer').click( function() {
     $('#mobilemenu_tools_webmaster').addClass('d-none')
 })
 
-$('#toggle_button_webmaster').click( function() {
+$('#toggle_button_webmaster').click(function() {
     $('#header_writer_title').addClass('d-none')
     $('#headermobile_writer_title').addClass('d-none')
     $('#asidemobile_writer_title').addClass('d-none')
@@ -361,7 +361,7 @@ $('#toggle_button_webmaster').click( function() {
     $('#mobilemenu_tools_webmaster').removeClass('d-none')
 })
 
-$('#togglemobile_button_writer').click( function() {
+$('#togglemobile_button_writer').click(function() {
     $('#header_writer_title').removeClass('d-none')
     $('#headermobile_writer_title').removeClass('d-none')
     $('#asidemobile_writer_title').removeClass('d-none')
@@ -379,7 +379,7 @@ $('#togglemobile_button_writer').click( function() {
     $('#mobilemenu_tools_webmaster').addClass('d-none')
 })
 
-$('#togglemobile_button_webmaster').click( function() {
+$('#togglemobile_button_webmaster').click(function() {
     $('#header_writer_title').addClass('d-none')
     $('#headermobile_writer_title').addClass('d-none')
     $('#asidemobile_writer_title').addClass('d-none')
