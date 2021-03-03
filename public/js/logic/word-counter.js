@@ -14,7 +14,7 @@ const refreshLocalStorage = function(){
                         '</div>'+
                     '</div>'+
                 '</div>'
-            
+
                 let div2 = '<li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px" onclick="getData('+key+')">'+
                 '<div class="d-flex justify-content-between">'+
                 '  <div class="local-collection-title">'+temp+'</div>'+
@@ -24,7 +24,7 @@ const refreshLocalStorage = function(){
                 '  </div>'+
                 '</div>'+
                 '</li>'
-                
+
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
@@ -98,7 +98,7 @@ $('#textarea').on('input', function(){
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
             var temp = define();
-            if (keys){  
+            if (keys){
                 temp = JSON.parse(keys)
             }
             if (!temp.wc.includes(key)){
