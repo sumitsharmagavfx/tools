@@ -71,16 +71,20 @@ color: white;
 color: var(--grey);
 }
 
-.deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
-color: var(--black);
-cursor: pointer;
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+    transition: 0.15s !important;
 }
 
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description, .form-control.reviewBody {
+.form-control.custom-textarea-82 {
   resize: none;
   height: 82%;
 }
@@ -111,11 +115,11 @@ cursor: pointer;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
@@ -451,15 +455,15 @@ text-decoration: underline;
           <div class="row">
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="text-black font-weight-bold h6">Which Schema would you like to create?</label>
-              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option>Person</option>
-                <option>Product</option>
-                <option selected="selected">Recipe</option>
+              <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product">Product</option>
+                <option value="recipe" selected="selected">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -488,13 +492,14 @@ text-decoration: underline;
                   </div>
                   <div class="col-12 col-lg-6 mb-8 mb-lg-5">
                     <label class="text-black font-weight-bold" for="description">Recipe’s description</label>
-                    <textarea name="" class="form-control description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row mb-5">
                   <div class="col-10 col-sm-11">
                     <label class="text-black font-weight-bold" for="image">Image URL #1</label>
                     <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                   <div class="col-2 col-sm-1">
                     <div class="d-flex justify-content-center mt-9">
@@ -517,10 +522,12 @@ text-decoration: underline;
                 <div class="col-12 col-md-6 mb-5 mb-md-0">
                   <label class="text-black font-weight-bold" for="videoContent">Video: Content URL</label>
                   <input type="text" name="" class="form-control videoContent" placeholder="@lang('recipe.videoContent')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
                 <div class="col-12 col-md-6">
                   <label class="text-black font-weight-bold" for="videoEmbed">Video: Embed URL</label>
                   <input type="text" name="" class="form-control videoEmbed" placeholder="@lang('recipe.videoEmbed')" value="" data-id="0">
+                  <div class="invalid-feedback">Invalid URL</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -533,25 +540,27 @@ text-decoration: underline;
                   <div class="input-group date">
                     <div class="input-group-append">
                       <span class="input-group-text">
-                        <i class="bx bx-calendar"></i>
+                        <i class="bx bx-calendar text-darkgrey"></i>
                       </span>
                     </div>
-                    <input type="text" id="kt_datepicker_2" name="" class="form-control publishedDate" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                    <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date publishedDate" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
                   </div>
                 </div>
                 <div class="col-6 col-md-3 col-xl-2">
                   <label class="text-black font-weight-bold" for="prepTime">Prep time</label>
                   <input type="number" name="" class="form-control prepTime" placeholder="@lang('recipe.prepTime')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
                 <div class="col-6 col-md-3 col-xl-2">
                   <label class="text-black font-weight-bold" for="cookTime">Cook time</label>
                   <input type="number" name="" class="form-control cookTime" placeholder="@lang('recipe.cookTime')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
                 <div class="col-12 col-md-4 mb-5 mb-md-0">
                   <label class="text-black font-weight-bold" for="recipeCategory">Category</label>
-                  <select class="form-control selectpicker recipeCategory">
+                  <select class="form-control selectpicker custom-select-blue recipeCategory">
                     <option value="Appetizer">Appetizer</option>
                     <option value="Entree">Entree</option>
                     <option value="Dessert">Dessert</option>
@@ -565,6 +574,7 @@ text-decoration: underline;
                 <div class="col-12 col-md-4">
                   <label class="text-black font-weight-bold" for="recipeServings">Servings</label>
                   <input type="number" name="" class="form-control recipeServings" placeholder="@lang('recipe.recipeServings')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -585,10 +595,12 @@ text-decoration: underline;
                 <div class="col-6 col-md-4">
                   <label class="text-black font-weight-bold" for="calories">Nutrition: Calories</label>
                   <input type="number" name="" class="form-control calories" placeholder="@lang('recipe.calories')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
                 <div class="col-6 col-md-4">
                   <label class="text-black font-weight-bold" for="fat">Nutrition: Fat</label>
                   <input type="number" name="" class="form-control fat" placeholder="@lang('recipe.fat')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row mb-5">
@@ -602,21 +614,25 @@ text-decoration: underline;
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="aggregate">Aggregate ratings</label>
-                  <input type="number" name="" class="form-control aggregate mb-5" placeholder="@lang('recipe.aggregate')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control aggregate" placeholder="@lang('recipe.aggregate')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="ratings">Number of ratings</label>
-                  <input type="number" name="" class="form-control ratings mb-5" placeholder="@lang('recipe.ratings')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control ratings" placeholder="@lang('recipe.ratings')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="highest">Highest value allowed</label>
-                  <input type="number" name="" class="form-control highest mb-5" placeholder="@lang('recipe.highest')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control highest" placeholder="@lang('recipe.highest')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
-                <div class="col-6 col-xxl-3">
+                <div class="col-6 col-xxl-3 mb-5">
                   <label class="text-black font-weight-bold" for="lowest">Lowest value allowed</label>
-                  <input type="number" name="" class="form-control lowest mb-5" placeholder="@lang('recipe.lowest')" value="" min="0" data-id="0">
+                  <input type="number" name="" class="form-control lowest" placeholder="@lang('recipe.lowest')" value="" min="0" data-id="0">
+                  <div class="invalid-feedback">Value should be more than 0</div>
                 </div>
               </div>
               <div class="row">

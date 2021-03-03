@@ -71,23 +71,23 @@ color: white;
 color: var(--grey);
 }
 
-.deleteImage:hover, .deleteIngredients:hover, .deleteStep:hover, .deleteReview:hover {
-color: var(--black);
-cursor: pointer;
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+    transition: 0.15s !important;
 }
 
 .form-control:focus {
   border-color: var(--primaryblue);
 }
 
-.form-control.description, .form-control.reviewBody {
+.form-control.custom-textarea-82 {
   resize: none;
   height: 82%;
 }
-
-/* #sku, #gtin8, #gtin13, #gtin14, #mpn {
-  display: none;
-} */
 
 .bootstrap-select .bs-searchbox {
   padding: 0;
@@ -111,19 +111,19 @@ cursor: pointer;
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none; 
+  border-right-style: none;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
-#kt_datepicker_2 {
+.custom-date {
   border-left-style: none;
 }
 
-#kt_datepicker_2:focus {
+.custom-date:focus {
   border-left-style: solid;
 }
 
-#ag_offer, #offer {
+.hide-div {
   display: none;
 }
 
@@ -459,15 +459,15 @@ text-decoration: underline;
           <div class="row">
             <div class="col-md-4 mb-5">
               <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
-              <select class="form-control selectpicker" tabindex="null" id="schema-json-ld">
-                <option>Home</option>
-                <option>Breadcrumb</option>
-                <option>FAQ Page</option>
-                <option>How-to</option>
-                <option>Job Posting</option>
-                <option>Person</option>
-                <option selected="selected">Product</option>
-                <option>Recipe</option>
+              <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                <option value="home">Home</option>
+                <option value="breadcrumb">Breadcrumb</option>
+                <option value="faq">FAQ Page</option>
+                <option value="how-to">How-to</option>
+                <option value="job-posting">Job Posting</option>
+                <option value="person">Person</option>
+                <option value="product" selected="selected">Product</option>
+                <option value="recipe">Recipe</option>
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
@@ -488,9 +488,10 @@ text-decoration: underline;
                     <label class="text-black font-weight-bold" for="name">Name</label>
                     <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.name')" value="" data-id="0">
                   </div>
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="image">Image URL</label>
-                    <input type="text" name="" class="form-control image mb-5" placeholder="@lang('product.image')" value="" data-id="0">
+                    <input type="text" name="" class="form-control image" placeholder="@lang('product.image')" value="" data-id="0">
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                 </div>
                 <div class="row">
@@ -501,7 +502,7 @@ text-decoration: underline;
                       <div class="col-12 mb-5">
                         <label class="text-black font-weight-bold" for="identifier">Identification properties</label>
                         <div class="dropdown bootstrap-select show-tick form-control">
-                          <select class="form-control selectpicker identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                          <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
                             <option value="sku">sku</option>
                             <option value="gtin8">gtin8</option>
                             <option value="gtin13">gtin13</option>
@@ -514,71 +515,60 @@ text-decoration: underline;
                   </div>
                   <div class="col-12 col-lg-6 mb-8 mb-lg-5">
                     <label class="text-black font-weight-bold" for="description">Product’s description</label>
-                    <textarea name="" class="form-control description" placeholder="@lang('product.description')" data-id="0"></textarea>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-4 col-md-4" id="sku">
-                    <label class="text-black font-weight-bold" for="sku">sku</label>
-                    <input type="text" name="" class="form-control sku mb-5" placeholder="@lang('product.sku')" value="" data-id="0">
-                  </div>
-                  <div class="col-4 col-md-4" id="gtin8">
-                    <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
-                    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="@lang('product.gtin8')" value="" data-id="0">
-                  </div>
-                  <div class="col-4 col-md-4" id="gtin13">
-                    <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
-                    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="@lang('product.gtin13')" value="" data-id="0">
-                  </div>
-                  <div class="col-6 col-md-4" id="gtin14">
-                    <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
-                    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="@lang('product.gtin14')" value="" data-id="0">
-                  </div>
-                  <div class="col-6 col-md-4" id="mpn">
-                    <label class="text-black font-weight-bold" for="mpn">mpn</label>
-                    <input type="text" name="" class="form-control mpn mb-5" placeholder="@lang('product.mpn')" value="" data-id="0">
-                  </div>
+                <div class="row product-description">
+                    <input type="hidden" id="skulang" value="@lang('product.sku')">
+                    <input type="hidden" id="gtin8lang" value="@lang('product.gtin8')">
+                    <input type="hidden" id="gtin13lang" value="@lang('product.gtin13')">
+                    <input type="hidden" id="gtin14lang" value="@lang('product.gtin14')">
+                    <input type="hidden" id="mpnlang" value="@lang('product.mpn')">
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
-                    <select class="form-control selectpicker offerType mb-5">
+                    <select class="form-control selectpicker custom-select-blue offerType mb-5">
+                      <option value="none">Choose Offer</option>
                       <option value="Offer">Offer</option>
                       <option value="Aggregate Offer">Aggregate Offer</option>
-                      <option selected="selected" value="None">None</option>
                     </select>
                   </div>
-                  <div class="col-6 col-md-3">
+                  <div class="col-6 col-md-3 mb-5">
                     <label class="text-black font-weight-bold" for="url">URL</label>
-                    <input type="text" name="" class="form-control url mb-5" placeholder="@lang('product.url')" value="" data-id="0">
+                    <input type="text" name="" class="form-control url" placeholder="@lang('product.url')" value="" data-id="0" disabled>
+                    <div class="invalid-feedback">Invalid URL</div>
                   </div>
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
-                    <select class="form-control selectpicker priceCurrency mb-5" data-size="4" data-live-search="true">
-                      <option value="null">null</option>
-                      {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                    <select class="form-control selectpicker custom-select-blue priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
+                      <option value="none">Choose Currency</option>
+                        @foreach($currencies as $c)
+                      <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                        @endforeach
                     </select>
                   </div>
-                  <div class="col-6 col-md-3">
+                  <div class="col-6 col-md-3 mb-5">
                     <label class="text-black font-weight-bold" for="price">Price</label>
-                    <input type="number" name="" class="form-control price mb-5" placeholder="@lang('product.price')" value="" data-id="0">
+                    <input type="number" name="" class="form-control price" placeholder="@lang('product.price')" value="" data-id="0" disabled>
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
-                <div id="ag_offer" class="row">
+                <div id="ag_offer" class="row hide-div">
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="validThrough">Price valid until</label>
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
                     </div>
                   </div>
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="availability">Availability</label>
-                    <select class="form-control selectpicker availability mb-5">
+                    <select class="form-control selectpicker custom-select-blue availability mb-5">
                       <option selected="selected" value="In stock">In stock</option>
                       <option value="Out of stock">Out of stock</option>
                       <option value="Online only">Online only</option>
@@ -593,7 +583,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="condition">Item condition</label>
-                    <select class="form-control selectpicker condition mb-5">
+                    <select class="form-control selectpicker custom-select-blue condition mb-5">
                       <option selected="selected" value="New">New</option>
                       <option value="Used">Used</option>
                       <option value="Refurbished">Refurbished</option>
@@ -602,32 +592,38 @@ text-decoration: underline;
                     </select>
                   </div>
                 </div>
-                <div id="offer" class="row">
-                  <div class="col-md-6">
+                <div id="offer" class="row hide-div">
+                  <div class="col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="highPrice">High price</label>
-                    <input type="number" name="" class="form-control highPrice mb-5" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="offer">Number of offers</label>
-                    <input type="number" name="" class="form-control offer mb-5" placeholder="@lang('product.offer')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control offer" placeholder="@lang('product.offer')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-6 col-xxl-3">
+                  <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="ratingValue">Aggregate ratings</label>
-                    <input type="number" name="" class="form-control ratingValue mb-5" placeholder="@lang('product.ratingValue')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control ratingValue" placeholder="@lang('product.ratingValue')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
-                  <div class="col-6 col-xxl-3">
+                  <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
-                    <input type="number" name="" class="form-control ratingCount mb-5" placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
-                  <div class="col-6 col-xxl-3">
+                  <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
-                    <input type="number" name="" class="form-control bestRating mb-5" placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
-                  <div class="col-6 col-xxl-3">
+                  <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
-                    <input type="number" name="" class="form-control worstRating mb-5" placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
                 <div class="row">
@@ -845,6 +841,8 @@ text-decoration: underline;
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
+
+
 
 {{-- <div class="d-flex flex-column-fluid">
     <div class="container-fluid">

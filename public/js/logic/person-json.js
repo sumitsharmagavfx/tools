@@ -1,15 +1,199 @@
-function print() {
-    jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
-}
 
-let main =
-    {
-        "@context": "https://schema.org",
-        "@type": "person",
-        "mainEntity": []
-    };
+    var counterSocial = 0;
 
-jQuery(document).ready(function () {
+    const labelSocial = `<label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>`;
+
+    const twitter = (id) => `<div class="row mb-5" id="twitter">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-twitter bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="twitter" placeholder="Type your twitter URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const facebook = (id) => `<div class="row mb-5" id="facebook">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-facebook-square bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="facebook" placeholder="Type your facebook URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const instagram = (id) => `<div class="row mb-5" id="instagram">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-instagram-alt bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="instagram" placeholder="Type your instagram URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const youtube = (id) => `<div class="row mb-5" id="youtube">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-youtube bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="youtube" placeholder="Type your youtube URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const linkedin = (id) => `<div class="row mb-5" id="linkedin">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-linkedin-square bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="linkedin" placeholder="Type your linkedin URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const pinterest = (id) => `<div class="row mb-5" id="pinterest">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-pinterest bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="pinterest" placeholder="Type your pinterest URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const soundcloud = (id) => `<div class="row mb-5" id="soundcloud">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-soundcloud bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="soundcloud" placeholder="Type your soundcloud URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const tumblr = (id) => `<div class="row mb-5" id="tumblr">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-tumblr bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="tumblr" placeholder="Type your tumblr URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const wikipedia = (id) => `<div class="row mb-5" id="wikipedia">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-wikipedia bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="wikipedia" placeholder="Type your wikipedia URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const github = (id) => `<div class="row mb-5" id="github">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bxl-github bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="github" placeholder="Type your github URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const website = (id) => `<div class="row mb-5" id="website">
+      <div class="col-2 col-sm-1 my-auto">
+        <div class="d-flex justify-content-center">
+          <i class='bx bx-world bx-md text-black'></i>
+        </div>
+      </div>
+      <div class="col-10 col-sm-11 pl-0">
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="wolrd" placeholder="Type your website URL here.." value="" data-id="${id}">
+        <div class="invalid-feedback">Invalid URL</div>
+      </div>
+    </div>`;
+
+    const socialData = {
+        facebook:facebook,
+        twitter:twitter,
+        linkedin:linkedin,
+        wikipedia:wikipedia,
+        website:website,
+        pinterest:pinterest,
+        github:github,
+        tumblr:tumblr,
+        soundcloud:soundcloud,
+        instagram:instagram,
+        youtube:youtube
+    }
+
+    const personSchema = class {
+        constructor() {
+            this.name = '';
+            this.url = '';
+            this.image = '';
+            this.sameAs = [];
+            this.jobTitle = undefined;
+            this.worksFor = {
+                "@type": "Organization",
+                "name": ""
+            }
+
+            this.socialMedia = [];
+            this.tempSocial = [];
+        }
+
+        render(){
+            const obj = {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": this.name,
+                "url": this.url,
+                "image": this.image
+            }
+
+            obj.name = this.name;
+            obj.url = this.url;
+            obj.image = this.image;
+
+            if(this.sameAs.length > 0) obj.sameAs = this.sameAs;
+
+            if(this.jobTitle) obj.jobTitle = this.jobTitle;
+
+            if(this.worksFor.name) obj.worksFor = this.worksFor;
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+            return obj;
+        }
+    }
+
+    let personFormat = new personSchema();
+    personFormat.render();
+
+
+    jQuery(document).ready(function () {
     let deletes = lang ==='en'? 'Delete' : 'Hapus';
     let name = lang ==='en'? 'Name' : 'Nama';
     let url = lang ==='en'? 'Url':'Url';
@@ -18,117 +202,79 @@ jQuery(document).ready(function () {
 
     let sosmed = lang==='en'?'Sosmed':'Medsos';
     let sosmedName = lang==='en'?'Name':'Nama';
+});
 
-    main.mainEntity.push({
-        "@type": "person",
-        "name": "",
-        'url':"",
-        "pictureUrl":"",
-        "jobTitle":"",
-        "company":"",
+    $('.name').keyup(function (e) {
+        personFormat.name = $(this).val();
+        personFormat.render();
     });
-    print();
-    jQuery('#add-person').click(function () {
-        main.mainEntity.push({
-            "socialMedia":{
-                "sosmed":"",
-                "sosmedName":"",
+
+    $('.url').keyup(function (e) {
+        personFormat.url = $(this).val();
+        personFormat.render();
+    });
+
+    $('.pictureUrl').keyup(function (e) {
+        personFormat.image = $(this).val();
+        personFormat.render();
+    });
+
+    $('.jobTitle').keyup(function (e) {
+        personFormat.jobTitle = $(this).val();
+        personFormat.render();
+    });
+
+    $('.company').keyup(function (e) {
+        personFormat.worksFor.name = $(this).val();
+        personFormat.render();
+    });
+
+
+    $('.social-profiles').change(function (e) {
+        if(personFormat.tempSocial.length > $(this).val().length){
+            for(let i=0; i < personFormat.tempSocial.length; i++){
+                if($.inArray(personFormat.tempSocial[i], $(this).val()) == -1) {
+                    $('#'+personFormat.tempSocial[i]+'').remove();
+                    personFormat.tempSocial.splice(i, 1);
+                    personFormat.sameAs.splice(i,1);
+                    // counterSocial--;
+                }
             }
-        });
-        print();
-        jQuery('#formperson').append("<button type=\"button\" class=\"btn btn-danger mb-2 delete\" name=\"button\" data-id=\""+(main.mainEntity.length-1)+"\">"+deletes+"</button>\n" +
-            "                <input type=\"text\" name=\"\" class=\"form-control mb-5 sosmed\" placeholder=\""+sosmed+" :\" value=\"\" data-id=\""+(main.mainEntity.length-1)+"\"> \n" +
-            "                <select name=\"\" class=\"form-control mb-5 sosmedName\" data-id=\""+(main.mainEntity.length-1)+"\"> \n"+
-            "                <option value=\"\">Choose Your Social Media</option> \n"+
-            "                <option value=\" facebook \">Facebook</option> \n"+
-            "                <option value=\" twitter \">Twitter</option> \n"+
-            "                <option value=\" linkedin \">LinkedIn</option> \n"+
-            "                </select>"
-
-        );
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-        sticky.update();
-    });
-
-
-
-});
-
-jQuery(document).on('keyup', '.name', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.url', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].url = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.pictureUrl', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].pictureUrl = jQuery(this).val();
-    print();
-});
-
-
-jQuery(document).on('keyup', '.jobTitle', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].jobTitle = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.company', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].company = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.sosmed', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].socialMedia.sosmed = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('change', '.sosmedName', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.mainEntity[index].socialMedia.sosmedName = jQuery(this).val();
-    print();
-});
-
-
-jQuery(document).on('click', '.delete', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index!==0){
-        main.mainEntity.splice(index, 1);
-        print();
-        for (let i = index + 1; i < main.mainEntity.length + 1; i++) {
-            jQuery('.sosmed[data-id=' + (i - 1) + ']').val(jQuery('.sosmed[data-id=' + (i) + ']').val())
-            jQuery('.sosmedName[data-id=' + (i - 1) + ']').val(jQuery('.sosmedName[data-id=' + (i) + ']').val())
 
         }
-        jQuery('label[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.sosmed[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.sosmedName[data-id=' + main.mainEntity.length + ']').remove();
-        jQuery('.delete[data-id=' + main.mainEntity.length + ']').remove();
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-    }
-    sticky.update();
-});
 
-jQuery('#copy').click(function () {
-    const copyText = jQuery('#json-format');
-    copyText.select();
-    // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
-    document.execCommand("copy");
-});
+    for (let i=0;i< $(this).val().length; i++){
+        if($.inArray($(this).val()[i], personFormat.tempSocial) == -1) {
+            // counterSocial++;
+            $('.sosial-profile-url').append(eval('socialData.'+$(this).val()[i]+'('+i+')'));
+            personFormat.tempSocial.push($(this).val()[i])
+            personFormat.sameAs.push("");
+        }
+    }
+
+    personFormat.render();
+
+    });
+
+    $(document).on('keyup', '.sosmedName', function () {
+        let index = parseInt($(this).data('id'));
+        // console.log(index)
+        personFormat.sameAs[index] = $(this).val();
+        personFormat.render();
+    });
+
+
+    $(document).on('change', '#schema-json-ld', function() {
+        if($(this).val() !== 'home') {
+            window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+        }else{
+            window.location = 'json-ld-schema-generator'
+        }
+    });
+
+    $('#copy').click(function () {
+        const copyText = $('#json-format');
+        copyText.select();
+        // copyText.setSelectionRange(0, 999999); /*For mobile devices*/
+        document.execCommand("copy");
+    });

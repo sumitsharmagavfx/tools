@@ -58,7 +58,7 @@ jQuery(document).ready(function () {
         //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 image\" placeholder=\""+imageUrl+" :\" value=\"\" data-id=\""+(main.image.length-1)+"\">"
         // );
         jQuery('#image').append("<div class=\"row\" data-id=\""+(main.image.length-1)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"image\" data-id=\""+(main.image.length-1)+"\">Image URL #"+(main.image.length)+"</label>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control image mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(main.image.length-1)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteImage\' data-id=\""+(main.image.length-1)+"\"></i></div></div></div>\n"
+        "                <input type=\"text\" name=\"\" class=\"form-control image mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(main.image.length-1)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteImage\' data-id=\""+(main.image.length-1)+"\"></i></div></div></div>\n"
         );
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
@@ -74,7 +74,7 @@ jQuery(document).on('click', '#add-ingredients', function () {
 
     // main.mainEntity.ingredients=[""];
     jQuery('#ingredients').append("<div class=\"row\" data-id=\""+(0)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"ingredients\" data-id=\""+(0)+"\">Ingredients #"+(0)+"</label>\n" +
-    "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(0)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteIngredients\' data-id=\""+(0)+"\"></i></div></div></div>\n"
+    "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(0)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteIngredients\' data-id=\""+(0)+"\"></i></div></div></div>\n"
     );
     // let row = parseInt(jQuery('#json-format').val().split('\n').length);
     // jQuery('#json-format').attr('rows',row);
@@ -96,10 +96,10 @@ jQuery(document).on('click', '#add-recipe-step', function () {
 
     // );
     jQuery('#step').append("<div class=\"row\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(main.recipeInstructions.length-1)+"\">Step #"+(main.recipeInstructions.length)+": Text</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\"Type step here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-2\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-5 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep mb-5\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey deleteStep\' data-id=\""+(main.recipeInstructions.length-1)+"\"></i></div></div>"
+    "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
+    "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
+    "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
+    "                <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteStep\' data-id=\""+(main.recipeInstructions.length-1)+"\"></i></div></div>"
 
     );
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
@@ -344,13 +344,14 @@ jQuery(document).on('click', '#add-recipe-review', function () {
 
     jQuery('#addReview').append("<div class=\"row\"><div class=\"col-12 col-lg-6\"><label class=\"text-black font-weight-bold\" for=\"review\">#"+(0)+" Review’s name</label><input type=\"text\" name=\"\" class=\"form-control review mb-5\" placeholder=\"Type review’s name here..\" value=\"\" data-id=\""+(0)+"\">" +
     "                   <div class=\"row\"><div class=\"col-6 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"rating\">Rating</label><input type=\"number\" name=\"\" class=\"form-control rating mb-5\" placeholder=\"0\" value=\"\" min=\"0\" data-id=\""+(0)+"\"></div>" +
-    "                   <div class=\"col-6 col-md-8\"><label class=\"text-black font-weight-bold\" for=\"dateReview\">Date</label><div class=\"input-group date\"><div class=\"input-group-append\"><span class=\"input-group-text\"><i class=\"bx bx-calendar\"></i></span></div>" +
-    "                   <input type=\"text\" id=\"kt_datepicker_2\" name=\"\" class=\"form-control dateReview\" readonly  placeholder=\"Pick a date\" value=\"\" data-id=\""+(0)+"\"/></div></div></div></div>" +
+    "                   <div class=\"col-6 col-md-8\"><label class=\"text-black font-weight-bold\" for=\"dateReview\">Date</label><div class=\"input-group date\"><div class=\"input-group-append\"><span class=\"input-group-text\"><i class=\"bx bx-calendar text-darkgrey\"></i></span></div>" +
+    "                   <input type=\"text\" id=\"kt_datepicker_2\" name=\"\" class=\"form-control custom-date dateReview\" readonly  placeholder=\"Pick a date\" value=\"\" data-id=\""+(0)+"\"/></div></div></div></div>" +
     "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">Review’s body</label><textarea name=\"\" class=\"form-control reviewBody\" placeholder=\"Type your review’s body here..\" data-id=\""+(0)+"\"></textarea></div></div>" +
     "                   <div class=\"row mb-5\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">Author</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\"Type author name here..\" value=\"\" data-id=\""+(0)+"\"></div>" +
     "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">Publisher</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\"Type publisher here..\" value=\"\" data-id=\""+(0)+"\"></div>" +
-    "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md text-darkgrey deleteReview\"></i></div></div></div>"
+    "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
     );
+    $('#addReview').find('.custom-date').datepicker();
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
     jQuery('#json-format').attr('rows',row);
     sticky.update(); 
@@ -443,6 +444,14 @@ $(document).on('click', '.deleteStep', function () {
 
 $(document).on('click', '.deleteReview', function () {
     $('#addReview > .row').remove();
+});
+
+$(document).on('change', '#schema-json-ld', function() {
+    if($(this).val() !== 'home') {
+        window.location = 'json-ld-' + $(this).val() + '-schema-generator'
+    }else{
+        window.location = 'json-ld-schema-generator'
+    }
 });
 
 jQuery('#copy').click(function () {
