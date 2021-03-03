@@ -28,7 +28,10 @@ class ApiController extends Controller
             $response = Redis::get($cacheKey);
             if (!$response) {
                 $response = $this->requestTechLookup($url);
-                if ($response['statusCode'] === 429) {
+                if ($response['statusCode'] === 200) {
+                    Redis::set($cacheKey, json_encode($response));
+                    Redis::expire($cacheKey, 60 * 60);
+                } else if ($response['statusCode'] === 429) {
                     // get latest key remaining time
                     $keys = Redis::keys("*$ipAddress*");
                     $minimumTime = 60 * 60 * 24 * 30;
@@ -40,10 +43,9 @@ class ApiController extends Controller
                     }
 
                     return new BaseApiResource(['current_time' => $minimumTime], $response['message'], $response['statusCode'], 'danger');
+                } else {
+                    return new BaseApiResource(null, $response['message'], 500);
                 }
-
-                Redis::set($cacheKey, json_encode($response));
-                Redis::expire($cacheKey, 60 * 60);
             } else {
                 $response = json_decode($response, true);
             }
