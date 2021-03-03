@@ -48,9 +48,9 @@ class ApiController extends Controller
                 $response = json_decode($response, true);
             }
 
-            return new BaseApiResource($response['data'], $response['message'], $response['statusCode']);
+            return new BaseApiResource($response['data'] ?? [], $response['message'], $response['statusCode']);
         } catch (\Exception $exception) {
-            return new BaseApiResource(null, 'Please Install Redis on your server', 500);
+            return new BaseApiResource(null, $exception->getMessage(), 500);
         }
     }
 
