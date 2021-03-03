@@ -7,7 +7,7 @@
                 </a>
                 <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
                     <li class="nav-item">
-                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">@lang('layout.home')</a>
                     </li>
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD</a>
@@ -44,7 +44,7 @@
                 </ul>
                 <ul class="nav custom-nav" id="menu_tools_writer">
                     <li class="nav-item">
-                        <a class="nav-link @yield('home')" href="/{{ $local }}">Home</a>
+                        <a class="nav-link @yield('home')" href="/{{ $local }}">@lang('layout.home')</a>
                     </li>
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('word-counter')" href="/{{ $local }}/word-counter">Word Counter</a>
@@ -56,9 +56,9 @@
             </div>
         </div>
         <div class="d-flex align-items-center">
-            Switch to
-            <button class="btn btn-custom-login ml-3" id="toggle_button_webmaster"><b>SEO Tools for Webmaster</b></button>
-            <button class="btn btn-custom-login ml-3 d-none" id="toggle_button_writer"><b>SEO Tools for Writers</b></button>
+            @lang('layout.switch-to')
+            <button class="btn btn-custom-login ml-3" id="toggle_button_webmaster"><b>@lang('layout.for-web-master')</b></button>
+            <button class="btn btn-custom-login ml-3 d-none" id="toggle_button_writer"><b>@lang('layout.for-writers')</b></button>
         </div>
     </div>
 </div>

@@ -216,3 +216,33 @@ const fillDescBar = function(param){
         $('#descbar'+i).addClass("blank")
     }
 }
+
+$(document).ready(function() {
+    $('#manualModeOff').click(function() {
+        $('#manualModeOn').removeClass("d-none").addClass("d-block");
+        $('#botModeOff').removeClass("d-none").addClass("d-block");
+        $('#manual-mode').removeClass("d-none").addClass("d-block").slideDown();
+        $('#manualModeOff').removeClass("d-block").addClass("d-none");
+        $('#botModeOn').removeClass("d-block").addClass("d-none");
+        $("#crawlURL").attr("disabled", true);
+    });
+
+    $('#botModeOff').click(function() {
+        $('#botModeOn').removeClass("d-none").addClass("d-block");
+        $('#manualModeOff').removeClass("d-none").addClass("d-block");
+        $('#manual-mode').slideUp().removeClass("d-block");
+        $('#botModeOff').removeClass("d-block").addClass("d-none");
+        $('#manualModeOn').removeClass("d-block").addClass("d-none");
+        $("#crawlURL").attr("disabled", false);
+    });
+});
+jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+    var offset = this.offsetHeight - this.clientHeight;
+
+    var resizeTextarea = function(el) {
+        jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+    };
+    jQuery(this).on('keyup input', function() {
+        resizeTextarea(this);
+    }).removeAttr('data-autoresize');
+});
