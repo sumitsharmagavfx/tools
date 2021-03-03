@@ -485,7 +485,7 @@ text-decoration: underline;
                       </div>
                       <div class="col-6 col-md-4">
                         <label for="currency" class="text-black font-weight-bold">Currency</label>
-                        <select class="form-control selectpicker currency mb-5" data-size="4" data-live-search="true">
+                        <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true">
                           <option value="null">null</option>
                           {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
                         </select>

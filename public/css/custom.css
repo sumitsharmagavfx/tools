@@ -677,7 +677,6 @@ a:hover {
     }
 }
 
-
 @media only screen and (min-width: 371px) and (max-width: 390px) {
     .local-collection-mobile .local-collection-title {
         max-width: 80%;
@@ -686,7 +685,6 @@ a:hover {
         text-overflow: ellipsis;
     }
 }
-
 
 @media only screen and (min-width: 391px) and (max-width: 420px) {
     .local-collection-mobile .local-collection-title {
@@ -733,7 +731,6 @@ a:hover {
     }
 }
 
-
 @media only screen and (min-width: 701px) {
     .local-collection-mobile .local-collection-title {
         max-width: 70%;
@@ -742,11 +739,6 @@ a:hover {
         text-overflow: ellipsis;
     }
 }
-
-
-
-
-
 
 @media (max-width:767px) {
     .container-description {
@@ -880,6 +872,13 @@ a:hover {
     text-decoration: none !important;
 }
 
+.tools-description-points .label-tools-description.active {
+    background: var(--darkgrey);
+    color: var(--white);
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
 .tools-description-points {
     color: var(--primaryblue);
     cursor: pointer;
@@ -984,14 +983,14 @@ a:hover {
     .local-collection-mobile {
         display: block !important;
     }
-/*
+
+    /*
     .local-collection-mobile .local-collection-title {
         max-width: 70%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     } */
-
     .local-collection {
         display: none !important;
     }
@@ -1159,38 +1158,74 @@ a:hover {
 }
 
 @media only screen and (min-width: 1400px) {
-  #local-collection-desktop.word-counter-local .local-collection-title {
-    max-width: 70%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+    #local-collection-desktop.word-counter-local .local-collection-title {
+        max-width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
-@media only screen and (min-width: 1200px) and (max-width:1399px){
-  #local-collection-desktop.word-counter-local .local-collection-title {
-    max-width: 65%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+@media only screen and (min-width: 1200px) and (max-width:1399px) {
+    #local-collection-desktop.word-counter-local .local-collection-title {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     #local-collection-desktop.word-counter-local .local-collection-title {
-      max-width: 60%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-  }
+}
 
-
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     #local-collection-desktop.word-counter-local .local-collection-title {
-      max-width: 55%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+        max-width: 55%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
-  }
+}
+
+.bx-lg {
+    font-size: 3rem !important;
+    margin-bottom: 0.5rem;
+}
+
+.btn-launch {
+    background: white;
+    font-weight: bold;
+    border: 1px solid var(--darkgrey);
+    color: var(--darkgrey);
+}
+
+.btn-launch:hover {
+    background: white !important;
+    border: 1px solid white !important;
+    color: var(--primaryblue) !important;
+}
+
+.card-home {
+    transition: 0.2s;
+}
+
+.card-home:hover {
+    transition: 0.2s;
+    background: var(--primaryblue);
+}
+
+.card-home:hover i, .card-home:hover h2, .card-home:hover p {
+    color: white;
+}
+
+.card-home:hover .btn-launch {
+    background: var(--primaryblue);
+    color: white;
+    border: 1px solid white;
+}

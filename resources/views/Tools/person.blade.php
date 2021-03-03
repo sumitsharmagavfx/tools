@@ -459,7 +459,7 @@ text-decoration: underline;
                   <div class="col-12 col-md-6">
                     <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
                     <div class="dropdown bootstrap-select show-tick form-control">
-                      <select class="form-control selectpicker mb-5 social-profiles" multiple="multiple" data-actions-box="false" tabindex="null">
+                      <select class="form-control selectpicker custom-select-blue social-profiles mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
                           <option value="none">Choose Social Profiles</option>
                         <option value="twitter">Twitter</option>
                         <option value="facebook">Facebook</option>
