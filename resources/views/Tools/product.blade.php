@@ -502,7 +502,7 @@ text-decoration: underline;
                       <div class="col-12 mb-5">
                         <label class="text-black font-weight-bold" for="identifier">Identification properties</label>
                         <div class="dropdown bootstrap-select show-tick form-control">
-                          <select class="form-control selectpicker identifier" multiple="multiple" data-actions-box="false" tabindex="null">
+                          <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
                             <option value="sku">sku</option>
                             <option value="gtin8">gtin8</option>
                             <option value="gtin13">gtin13</option>
@@ -543,7 +543,7 @@ text-decoration: underline;
                 <div class="row">
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
-                    <select class="form-control selectpicker offerType mb-5">
+                    <select class="form-control selectpicker custom-select-blue offerType mb-5">
                       <option value="Offer">Offer</option>
                       <option value="Aggregate Offer">Aggregate Offer</option>
                       <option selected="selected" value="None">None</option>
@@ -556,7 +556,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
-                    <select class="form-control selectpicker priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
+                    <select class="form-control selectpicker custom-select-blue priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
                       <option value="null">null</option>
                       {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
                     </select>
@@ -573,7 +573,7 @@ text-decoration: underline;
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
-                          <i class="bx bx-calendar"></i>
+                          <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
                       <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
@@ -581,7 +581,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="availability">Availability</label>
-                    <select class="form-control selectpicker availability mb-5">
+                    <select class="form-control selectpicker custom-select-blue availability mb-5">
                       <option selected="selected" value="In stock">In stock</option>
                       <option value="Out of stock">Out of stock</option>
                       <option value="Online only">Online only</option>
@@ -596,7 +596,7 @@ text-decoration: underline;
                   </div>
                   <div class="col-md-4">
                     <label class="text-black font-weight-bold" for="condition">Item condition</label>
-                    <select class="form-control selectpicker condition mb-5">
+                    <select class="form-control selectpicker custom-select-blue condition mb-5">
                       <option selected="selected" value="New">New</option>
                       <option value="Used">Used</option>
                       <option value="Refurbished">Refurbished</option>

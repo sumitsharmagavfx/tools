@@ -560,7 +560,7 @@ text-decoration: underline;
               <div class="row mb-5">
                 <div class="col-12 col-md-4 mb-5 mb-md-0">
                   <label class="text-black font-weight-bold" for="recipeCategory">Category</label>
-                  <select class="form-control selectpicker recipeCategory">
+                  <select class="form-control selectpicker custom-select-blue recipeCategory">
                     <option value="Appetizer">Appetizer</option>
                     <option value="Entree">Entree</option>
                     <option value="Dessert">Dessert</option>
