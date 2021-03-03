@@ -105,8 +105,13 @@ class ToolsController extends Controller
         App::setLocale($lang);
         $dataID = $this->HomeController->getBlogWordpressId();
         $dataEN = $this->HomeController->getBlogWordpressEn();
+
+        // currencies
+        $path_currencies = public_path('json/currencies.json');
+        $currencies = json_decode(file_get_contents($path_currencies), true);
+
         $local = App::getLocale();
-        return view('Tools/product', compact('local', 'dataID', 'dataEN'));
+        return view('Tools/product', compact('local', 'dataID', 'dataEN', 'currencies'));
     }
 
     public function recipe($lang)

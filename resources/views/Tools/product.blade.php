@@ -111,7 +111,7 @@ color: var(--grey);
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none; 
+  border-right-style: none;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
@@ -518,35 +518,20 @@ text-decoration: underline;
                     <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-md-4" id="sku">
-                    <label class="text-black font-weight-bold" for="sku">sku</label>
-                    <input type="text" name="" class="form-control sku mb-5" placeholder="@lang('product.sku')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin8">
-                    <label class="text-black font-weight-bold" for="gtin8">gtin8</label>
-                    <input type="text" name="" class="form-control gtin8 mb-5" placeholder="@lang('product.gtin8')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin13">
-                    <label class="text-black font-weight-bold" for="gtin13">gtin13</label>
-                    <input type="text" name="" class="form-control gtin13 mb-5" placeholder="@lang('product.gtin13')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="gtin14">
-                    <label class="text-black font-weight-bold" for="gtin14">gtin14</label>
-                    <input type="text" name="" class="form-control gtin14 mb-5" placeholder="@lang('product.gtin14')" value="" data-id="0">
-                  </div>
-                  <div class="col-12 col-md-4" id="mpn">
-                    <label class="text-black font-weight-bold" for="mpn">mpn</label>
-                    <input type="text" name="" class="form-control mpn mb-5" placeholder="@lang('product.mpn')" value="" data-id="0">
-                  </div>
+                <div class="row product-description">
+                    <input type="hidden" id="skulang" value="@lang('product.sku')">
+                    <input type="hidden" id="gtin8lang" value="@lang('product.gtin8')">
+                    <input type="hidden" id="gtin13lang" value="@lang('product.gtin13')">
+                    <input type="hidden" id="gtin14lang" value="@lang('product.gtin14')">
+                    <input type="hidden" id="mpnlang" value="@lang('product.mpn')">
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
                     <select class="form-control selectpicker custom-select-blue offerType mb-5">
+                      <option value="none">Choose Offer</option>
                       <option value="Offer">Offer</option>
                       <option value="Aggregate Offer">Aggregate Offer</option>
-                      <option selected="selected" value="None">None</option>
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
@@ -557,8 +542,10 @@ text-decoration: underline;
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
                     <select class="form-control selectpicker custom-select-blue priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
-                      <option value="null">null</option>
-                      {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                      <option value="none">Choose Currency</option>
+                        @foreach($currencies as $c)
+                      <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                        @endforeach
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
@@ -625,17 +612,17 @@ text-decoration: underline;
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
-                    <input type="number" name="" class="form-control ratingCount" placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
-                    <input type="number" name="" class="form-control bestRating" placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
-                    <input type="number" name="" class="form-control worstRating" placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
@@ -854,6 +841,8 @@ text-decoration: underline;
     <p class="text-black view-all-release">View all web-release?</p>
   </div>
 </div>
+
+
 
 {{-- <div class="d-flex flex-column-fluid">
     <div class="container-fluid">
