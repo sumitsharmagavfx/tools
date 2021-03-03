@@ -817,6 +817,7 @@ a:hover {
 }
 
 .robo-img {
+    height: 100%;
     width: 60%;
     vertical-align: middle;
 }

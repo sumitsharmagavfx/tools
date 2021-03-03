@@ -82,7 +82,7 @@ id
                 <i class='text-darkgrey bx bx-calculator bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Word Counter</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/word-counter" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/word-counter'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ id
                 <i class='text-darkgrey bx bx-text bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Title & Lengths Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/page-title-meta-description-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/page-title-meta-description-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ id
                 <i class='text-darkgrey bx bx-code-curly bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">JSON-LD Generator</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/json-ld-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/json-ld-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ id
                 <i class='text-darkgrey bx bx-timer bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Page Speed Test</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/pagespeed-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/pagespeed-test'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ id
                 <i class='text-darkgrey bx bx-code-block bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Sitemap Generator</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/sitemap-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/sitemap-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ id
                 <i class='text-darkgrey bx bx-mobile-alt bx-lg'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Mobile Friendly Test</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/mobile-friendly-test" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/mobile-friendly-test'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -160,7 +160,7 @@ id
                 <i class='text-darkgrey bx bx-check-shield bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">SSL Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/ssl-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/ssl-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -173,7 +173,7 @@ id
                 <i class='text-darkgrey bx bx-mask bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Robot.txt Generator</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/robotstxt-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/robotstxt-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@ id
                 <i class='text-darkgrey bx bx-link bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Redirect Chain Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/redirect-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/redirect-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ id
                 <i class='text-darkgrey bx bx-bot bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Technology Lookup</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/technology-lookup" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/technology-lookup'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ id
                 <i class='text-darkgrey bx bx-lg bx-globe' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Link Analyzer</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/link-analyzer" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/link-analyzer'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -225,7 +225,7 @@ id
                 <i class='text-darkgrey bx bx-file-find bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Hreflang Checker</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/hreflang-checker" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/hreflang-checker'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
@@ -238,7 +238,7 @@ id
                 <i class='text-darkgrey bx bx-test-tube bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
-                <a href="/{{ $local }}/keyword-research" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                <button onclick="window.location.href='/{{ $local }}/keyword-research'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
               </div>
             </div>
           </div>
