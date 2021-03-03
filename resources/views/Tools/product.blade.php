@@ -519,15 +519,19 @@ text-decoration: underline;
                   </div>
                 </div>
                 <div class="row product-description">
-
+                    <input type="hidden" id="skulang" value="@lang('product.sku')">
+                    <input type="hidden" id="gtin8lang" value="@lang('product.gtin8')">
+                    <input type="hidden" id="gtin13lang" value="@lang('product.gtin13')">
+                    <input type="hidden" id="gtin14lang" value="@lang('product.gtin14')">
+                    <input type="hidden" id="mpnlang" value="@lang('product.mpn')">
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
                     <select class="form-control selectpicker offerType mb-5">
-                      <option value="Offer">Offer</option>
+                        <option value="None">None</option>
+                        <option value="Offer">Offer</option>
                       <option value="Aggregate Offer">Aggregate Offer</option>
-                      <option selected="selected" value="None">None</option>
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
@@ -538,8 +542,10 @@ text-decoration: underline;
                   <div class="col-6 col-md-3">
                     <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
                     <select class="form-control selectpicker priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
-                      <option value="null">null</option>
-                      {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                      <option value="none">Choose Currency</option>
+                        @foreach($currencies as $c)
+                      <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                        @endforeach
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
@@ -606,17 +612,17 @@ text-decoration: underline;
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
-                    <input type="number" name="" class="form-control ratingCount" placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
-                    <input type="number" name="" class="form-control bestRating" placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                   <div class="col-6 col-xxl-3 mb-5">
                     <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
-                    <input type="number" name="" class="form-control worstRating" placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
+                    <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
                     <div class="invalid-feedback">Value should be more than 0</div>
                   </div>
                 </div>
