@@ -1,6 +1,50 @@
-function print() {
-    jQuery("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(main, undefined, 4) + "\n<\/script>");
-}
+    const recipeSchema = class {
+        constructor() {
+
+            this.name = '';
+            this.image = '';
+            this.description = '';
+            this.keywords = '';
+            this.author = {
+                "@type": "Person",
+                "name": ""
+            };
+            this.prepTime = '';
+            this.cookTime = '';
+            this.totalTime = '';
+            this.nutrition = {
+                "@type": "NutritionInformation",
+                "calories": ""
+            }
+
+        }
+
+        render(){
+
+            const obj = {
+                "@context": "https://schema.org/",
+                "@type": "Recipe",
+                "name": this.name,
+                "image": this.image,
+                "description": this.description,
+                "keywords": this.keywords,
+                "author": this.author,
+                // "prepTime": this.prepTime,
+                // "cookTime": this.cookTime,
+                // "totalTime": this.totalTime,
+                // "nutrition": this.nutrition
+            }
+
+
+            $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
+
+            return obj;
+
+        }
+    }
+
+    let recipeFormat = new recipeSchema();
+    recipeFormat.render();
 
 let main =
     {
@@ -15,8 +59,8 @@ let main =
           "name": ""
         },
         "prepTime": "",
-        "cookTime": "", 
-        "totalTime": "", 
+        "cookTime": "",
+        "totalTime": "",
         "nutrition": {
           "@type": "NutritionInformation",
           "calories": ""
@@ -39,7 +83,7 @@ jQuery(document).ready(function () {
     let recipeCuisine = lang==='en'?'RecipeCuisine':'RecipeCuisine';
     let recipeYield = lang==='en'?'RecipeYield':'RecipeYield';
     let imageUrl = lang==='en'?'ImageUrl':'UrlGambar';
-    
+
     print();
     jQuery('#add-imageUrl').click(function () {
         if (imageSingle) {
@@ -53,7 +97,7 @@ jQuery(document).ready(function () {
             main.image.push("");
         }
         print();
-        
+
         // jQuery('#image').append("<button type=\"button\" class=\"btn btn-danger mb-2 deleteImage\" name=\"button\" data-id=\""+(main.image.length-1)+"\">"+deletes+"</button>\n" +
         //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 image\" placeholder=\""+imageUrl+" :\" value=\"\" data-id=\""+(main.image.length-1)+"\">"
         // );
@@ -95,10 +139,10 @@ jQuery(document).on('click', '#add-recipe-step', function () {
 
 
     // );
-    jQuery('#step').append("<div class=\"row\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(main.recipeInstructions.length-1)+"\">Step #"+(main.recipeInstructions.length)+": Text</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\"Type step here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" + 
-    "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
-    "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" + 
+    jQuery('#step').append("<div class=\"row\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(main.recipeInstructions.length-1)+"\">Step #"+(main.recipeInstructions.length)+": Text</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\"Type step here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" +
+    "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"></div>" +
+    "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(main.recipeInstructions.length-1)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" +
+    "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(main.recipeInstructions.length-1)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(main.recipeInstructions.length-1)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" +
     "                <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteStep\' data-id=\""+(main.recipeInstructions.length-1)+"\"></i></div></div>"
 
     );
@@ -116,7 +160,7 @@ jQuery(document).on('click', '#add-recipe-step', function () {
             "image": ""
     }
     );
-    print(); 
+    print();
 });
 
 jQuery(document).on('keyup', '.step', function () {
@@ -171,7 +215,7 @@ jQuery(document).on('keyup', '.image', function () {
     } else {
         main.image[index] = jQuery(this).val();
     }
-    
+
     print();
 });
 
@@ -197,7 +241,7 @@ jQuery(document).on('keyup', '.videoContentUrl', function () {
         "name": "",
         "description": $(".description").val(),
         "thumbnailUrl": "",
-        "uploadDate": "", 
+        "uploadDate": "",
         "contentUrl": ""
     }
     main.video.contentUrl = jQuery(this).val();
@@ -354,8 +398,8 @@ jQuery(document).on('click', '#add-recipe-review', function () {
     $('#addReview').find('.custom-date').datepicker();
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
     jQuery('#json-format').attr('rows',row);
-    sticky.update(); 
-    print(); 
+    sticky.update();
+    print();
 
     main.review = {
             "@type": "Review",
@@ -424,7 +468,7 @@ jQuery(document).on('click', '.deleteImage', function () {
         jQuery('.deleteImage[data-id=' + main.image.length + ']').remove();
         jQuery('.image[data-id=' + main.image.length + ']').remove();
         jQuery('.row[data-id=' + main.image.length + ']').remove();
-        
+
         if (main.image.length == 1) {
             imageSingle = true;
             main.image = main.image[0]
