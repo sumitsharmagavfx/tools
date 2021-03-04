@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Hreflang Checker')
+@section('title', Lang::get('hreflang.meta-title'))
 
-@section('meta-desc', 'Hreflang Checker')
-
-@section('meta-keyword', 'Hreflang Checker')
+@section('meta-desc', Lang::get('hreflang.meta-desc'))
 
 @section('conical','/en/hreflang-checker')
 
@@ -16,356 +14,12 @@
     id/hreflang-checker
 @endsection
 
-@push('style')
-    <style media="screen">
-        .header-blue {
-            background: var(--primaryblue);
-            border-radius: 5px;
-        }
-
-        .hreflang-url {
-            background: var(--primaryblue);
-            border: none;
-            color: white;
-        }
-
-        .hreflang-url::placeholder {
-            color: white;
-        }
-
-        .hreflang-url:focus {
-            background: var(--primaryblue);
-            border: none;
-            color: white;
-        }
-
-        .what-is-this {
-            cursor: pointer;
-        }
-
-        .what-is-this:hover {
-            text-decoration: underline;
-        }
-
-        .links {
-            color: var(--primaryblue);
-            cursor: pointer;
-        }
-
-        .links:hover {
-            color: #037BCB;
-            cursor: pointer;
-            text-decoration: underline !important;
-        }
-
-        .label-primary-version {
-            background: var(--lightgrey);
-            color: var(--darkgrey);
-        }
-
-        .clear-all:hover {
-            text-decoration: underline;
-        }
-
-        .hreflang-url-result {
-            color: var(--darkgrey);
-            font-weight: bold;
-        }
-
-        @media (max-width: 767px) {
-            .btn-add-question {
-                width: 100%;
-            }
-        }
-
-
-        @media only screen and (min-width: 768px) {
-            #local-collection-desktop .local-collection-title {
-                max-width: 70%;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-        }
-
-        .btn-cancel {
-            line-height: 1;
-            width: 100px;
-            background: #FF5656;
-            color: white;
-            border-radius: 20px;
-        }
-
-        .btn-cancel:hover {
-            background: #FB1818;
-            color: white;
-            border-radius: 20px;
-        }
-
-        .btn-cancel-disabled {
-            line-height: 1;
-            width: 100px;
-            background: var(--grey);
-            color: white;
-            border-radius: 20px;
-            cursor: not-allowed;
-        }
-
-        .btn-cancel-disabled:hover {
-            line-height: 1;
-            width: 100px;
-            background: var(--grey);
-            color: white;
-            border-radius: 20px;
-            cursor: not-allowed;
-        }
-
-        .btn-download-hreflang {
-            line-height: 1;
-            width: 137px;
-            background: var(--darkgrey);
-            color: white;
-            border-radius: 20px;
-        }
-
-        .btn-download-hreflang:hover {
-            background: var(--black);
-            color: white;
-        }
-
-        .btn-download-hreflang-disabled {
-            line-height: 1;
-            width: 137px;
-            background: var(--grey);
-            color: white;
-            border-radius: 20px;
-            cursor: not-allowed;
-        }
-
-        .btn-download-hreflang-disabled:hover {
-            background: var(--grey);
-            color: white;
-            cursor: not-allowed;
-        }
-
-        .label-hreflang {
-            width: 25px;
-            font-weight: 400;
-            background: var(--lightgrey);
-            color: var(--darkgrey);
-        }
-
-        .hreflang-show-more {
-            color: var(--darkgrey);
-        }
-
-
-        .result-row:hover .label-hreflang {
-            background: var(--primaryblue);
-            color: white;
-        }
-
-        .result-row:hover .hreflang-url-result {
-            color: var(--black);
-        }
-
-        .result-row-show-more {
-            cursor: pointer;
-        }
-
-        .result-row-show-more:hover .label-hreflang {
-            background: var(--primaryblue);
-            color: white;
-        }
-
-        .result-row-show-more:hover .hreflang-url-result, .result-row-show-more:hover .hreflang-show-more {
-            color: var(--black);
-        }
-
-        @media only screen and (max-width: 575px) {
-            .number {
-                min-width: 12%;
-                width: 12%;
-            }
-
-            .url {
-                min-width: 30%;
-                width: 30%;
-            }
-
-            .hreflang {
-                min-width: 20%;
-                width: 20%;
-            }
-
-            .language {
-                min-width: 22%;
-                width: 22%;
-            }
-
-            .region {
-                min-width: 16%;
-                width: 16%;
-            }
-        }
-
-        @media only screen and (min-width: 576px) and (max-width: 767px) {
-            .number {
-                min-width: 8%;
-                width: 8%;
-            }
-
-            .url {
-                min-width: 50%;
-                width: 50%;
-            }
-
-            .hreflang {
-                min-width: 12%;
-                width: 12%;
-            }
-
-            .language {
-                min-width: 15%;
-                width: 15%;
-            }
-
-            .region {
-                min-width: 15%;
-                width: 15%;
-            }
-        }
-
-        @media only screen and (min-width: 768px) and (max-width: 991px) {
-            .number {
-                min-width: 8%;
-                width: 8%;
-            }
-
-            .url {
-                min-width: 50%;
-                width: 50%;
-            }
-
-            .hreflang {
-                min-width: 12%;
-                width: 12%;
-            }
-
-            .language {
-                min-width: 15%;
-                width: 15%;
-            }
-
-            .region {
-                min-width: 15%;
-                width: 15%;
-            }
-        }
-
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
-            .number {
-                min-width: 8%;
-                width: 8%;
-            }
-
-            .url {
-                min-width: 49%;
-                width: 49%;
-            }
-
-            .hreflang {
-                min-width: 13%;
-                width: 13;
-            }
-
-            .language {
-                min-width: 15%;
-                width: 15%;
-            }
-
-            .region {
-                min-width: 15%;
-                width: 15%;
-            }
-        }
-
-        @media only screen and (min-width: 1200px) and (max-width: 1399px) {
-            .number {
-                min-width: 6%;
-                width: 6%;
-            }
-
-            .url {
-                min-width: 43%;
-                width: 43%;
-            }
-
-            .hreflang {
-                min-width: 11%;
-                width: 11%;
-            }
-
-            .language {
-                min-width: 15%;
-                width: 15%;
-            }
-
-            .region {
-                min-width: 25%;
-                width: 25%;
-            }
-        }
-
-        @media only screen and (min-width: 1400px) {
-            .number {
-                min-width: 6%;
-                width: 6%;
-            }
-
-            .url {
-                min-width: 45%;
-                width: 45%;
-            }
-
-            .hreflang {
-                min-width: 9%;
-                width: 9%;
-            }
-
-            .language {
-                min-width: 15%;
-                width: 15%;
-            }
-
-            .region {
-                min-width: 25%;
-                width: 25%;
-            }
-        }
-
-        .result-row .number p, .result-row .url p, .result-row .hreflang p, .result-row .language p, .result-row .region p {
-            max-width: 99%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            color: var(--darkgrey);
-        }
-
-        .result-row:hover .number p, .result-row:hover .url p, .result-row:hover .hreflang p, .result-row:hover .language p, .result-row:hover .region p {
-            color: var(--black);
-            font-weight: bold
-        }
-    </style>
-@endpush
-
 @section('content')
     <div class="container container-tools mb-10">
         <div class="d-flex flex-column-fluid">
             <div class="container-fluid px-0">
-                <h1 class="text-darkgrey font-weight-normal">HREFLANG CHECKER</h1>
-                <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+                <h1 class="text-darkgrey font-weight-normal">@lang('hreflang.title')</h1>
+                <span class="text-darkgrey h4 font-weight-normal">@lang('hreflang.sub-title')</span>
 
                 <div class="header-blue mt-10 mb-5 px-5 py-1">
                     <div class="row d-flex align-items-center">
@@ -402,19 +56,19 @@
                                 <!-- RESULT CRAWL -->
                                 <div class="" id=>
                                     <div class="d-flex mx-5 mb-5" id="hreflang-result-header" style="display: none !important;">
-                                        <div class="number font-weight-bolder text-black">
+                                        <div class="number-hreflang font-weight-bolder text-black">
                                             <p class="mb-0">No.</p>
                                         </div>
-                                        <div class="url font-weight-bolder text-black">
+                                        <div class="url-hreflang font-weight-bolder text-black">
                                             <p class="mb-0">URL</p>
                                         </div>
                                         <div class="hreflang font-weight-bolder text-black">
                                             <p class="mb-0">Hreflang</p>
                                         </div>
-                                        <div class="language font-weight-bolder text-black">
+                                        <div class="language-hreflang font-weight-bolder text-black">
                                             <p class="mb-0">Language</p>
                                         </div>
-                                        <div class="region font-weight-bolder text-black">
+                                        <div class="region-hreflang font-weight-bolder text-black">
                                             <p class="mb-0">Region</p>
                                         </div>
                                     </div>
@@ -423,19 +77,6 @@
                                         <p class="text-center d-block">No URL checked, please input your domain
                                             above!</p>
                                     </div>
-
-                                    <!-- SHOW MORE BUTTON START -->
-                                {{--                <div class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">--}}
-                                {{--                  <div class="">--}}
-                                {{--                    <span class="label label-square label-hreflang">...</span>--}}
-                                {{--                    <span class="mx-3 hreflang-url-result">Show More</span>--}}
-                                {{--                  </div>--}}
-                                {{--                  <div class="d-flex align-items-center">--}}
-                                {{--                    <i class='bx bxs-chevron-down hreflang-show-more'></i>--}}
-                                {{--                  </div>--}}
-                                {{--                </div>--}}
-                                <!-- SHOW MORE BUTTON END -->
-
                                 </div>
 
                                 <!-- BEFORE CRAWL -->
@@ -466,7 +107,6 @@
 
                                         </div>
                                     </div>
-                                    {{--                <p class="text-black font-weight-bold mb-3">10 from 40 pages</p>--}}
                                     <button type="button" class="btn btn-cancel-disabled" disabled name="button"
                                             id="cancel-request-btn">Cancel
                                     </button>
@@ -477,10 +117,10 @@
                             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                                 <div class="d-flex flex-row align-items-center">
                                     <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                                    <span class="text-black font-15px">Your Local History</span>
+                                    <span class="text-black font-15px">@lang('layout.local-history')</span>
                                 </div>
                                 <div>
-                                    <span class="clear-all font-15px pointer mr-3 clear-history--btn">Clear All</span>
+                                    <span class="clear-all font-15px pointer mr-3 clear-history--btn">@lang('layout.clear-all')</span>
                                 </div>
                             </div>
                             <div class="local-collection-body">
@@ -533,10 +173,10 @@
             <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
                 <div class="d-flex flex-row align-items-center">
                     <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                    <span class="text-black font-15px">Your Local History</span>
+                    <span class="text-black font-15px">@lang('layout.local-history')</span>
                 </div>
                 <div>
-                    <span class="clear-all font-15px pointer clear-history--btn">Clear All</span>
+                    <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
                 </div>
             </div>
             <div class="local-collection-body mt-3 px-5" id="local-history-mobile">
@@ -576,58 +216,60 @@
 
     <div class="" style="background:white">
         <div class="container container-description">
-            <h2 class="text-black">Advance your writing</h2>
             <div class="row">
                 <div class="col-md-9">
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
+                    <div class="" id="description-tab-1">
+                        <h2 class="text-black">@lang('hreflang.desc-1')</h2>
+                        <p class="text-black">@lang('hreflang.desc-1-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-2">
+                        <h2 class="text-black">@lang('hreflang.desc-2')</h2>
+                        <p class="text-black">@lang('hreflang.desc-2-1')</p>
+                        <p class="text-black">@lang('hreflang.desc-2-2')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-3">
+                        <h2 class="text-black">@lang('hreflang.desc-3')</h2>
+                        <p class="text-black">@lang('hreflang.desc-3-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-4">
+                        <h2 class="text-black">@lang('hreflang.desc-4')</h2>
+                        <p class="text-black">@lang('hreflang.desc-4-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-5">
+                        <h2 class="text-black">@lang('hreflang.desc-5')</h2>
+                        <p class="text-black">@lang('hreflang.desc-5-1')</p>
+                    </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">1</span>
+                            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                         </div>
-                        <a href="#" class="">Why does SEO important for writing?</a>
+                        <a class="">@lang('hreflang.desc-1')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">2</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                         </div>
-                        <a href="#" class="">How search engine works?</a>
+                        <a class="">@lang('hreflang.desc-2')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">3</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                         </div>
-                        <a href="#" class="">The basic of writing?</a>
+                        <a class="">@lang('hreflang.desc-3')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">4</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                         </div>
-                        <a href="#" class="">Measuring your writing?</a>
+                        <a class="">@lang('hreflang.desc-4')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">5</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                         </div>
-                        <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+                        <a class="">@lang('hreflang.desc-5')</a>
                     </div>
                 </div>
             </div>
@@ -640,11 +282,9 @@
                     </div>
                     <div class="col-md-6 py-10 pr-10">
                         <div class="robo-text-container">
-                            <h2 class="text-white">Writing Starter Guide</h2>
-                            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best
-                                practices to make it easier for search engines to crawl, index, and understand your
-                                content.</p>
-                            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+                            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+                            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+                            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                         </div>
                     </div>
                 </div>
@@ -771,6 +411,7 @@
 @push('script')
     <script type="text/javascript">
         const HREFLANG_API_URL = '{{ route('api.analyze-hreflang') }}';
+        $('#toggle_button_webmaster').click();
     </script>
     <script src="{{ asset('js/logic/hreflang-checker.js') }}"></script>
     <script>

@@ -18,173 +18,14 @@ id/link-analyzer
 
 @push('style')
 <style media="screen">
-  .header-blue {
-    background: var(--primaryblue);
-    border-radius: 5px;
-  }
 
-  .analyzer-url {
-    background: var(--primaryblue);
-    border: none;
-    color: white;
-  }
 
-  .analyzer-url::placeholder {
-    color: white;
-  }
 
-  .analyzer-url:focus {
-    background: var(--primaryblue);
-    border: none;
-    color: white;
-  }
-
-  .what-is-this {
-    cursor: pointer;
-  }
-
-  .what-is-this:hover {
-    text-decoration: underline;
-  }
-
-  .links {
-    color: var(--primaryblue);
-    cursor: pointer;
-  }
-
-  .links:hover {
-    color: #037BCB;
-    cursor: pointer;
-    text-decoration: underline !important;
-  }
-
-  .label-primary-version {
-    background: var(--lightgrey);
+  .result-row .url-analyzer, .result-row .link-rel-analyzer, .result-row .anchor-analyzer {
     color: var(--darkgrey);
   }
 
-  .clear-all:hover {
-    text-decoration: underline;
-  }
-
-  .analyzer-url-result {
-    color: var(--darkgrey);
-    font-weight: bold;
-  }
-
-  @media (max-width:767px) {
-    .btn-add-question {
-      width: 100%;
-    }
-  }
-
-
-
-  @media only screen and (min-width: 768px) {
-    #local-collection-desktop .local-collection-title {
-      max-width: 70%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-  }
-
-  .btn-cancel {
-    line-height: 1;
-    width: 100px;
-    background: #FF5656;
-    color: white;
-    border-radius: 20px;
-  }
-
-  .btn-cancel:hover {
-    background: #FB1818;
-    color: white;
-    border-radius: 20px;
-  }
-
-  .btn-cancel-disabled {
-    line-height: 1;
-    width: 100px;
-    background: var(--grey);
-    color: white;
-    border-radius: 20px;
-    cursor: not-allowed;
-  }
-
-  .btn-cancel-disabled:hover {
-    line-height: 1;
-    width: 100px;
-    background: var(--grey);
-    color: white;
-    border-radius: 20px;
-    cursor: not-allowed;
-  }
-
-  .btn-download-analyzer {
-    line-height: 1;
-    width: 137px;
-    background: var(--darkgrey);
-    color: white;
-    border-radius: 20px;
-  }
-
-  .btn-download-analyzer:hover {
-    background: var(--black);
-    color: white;
-  }
-
-  .btn-download-analyzer-disabled {
-    line-height: 1;
-    width: 137px;
-    background: var(--grey);
-    color: white;
-    border-radius: 20px;
-    cursor: not-allowed;
-  }
-
-  .btn-download-analyzer-disabled:hover {
-    background: var(--grey);
-    color: white;
-    cursor: not-allowed;
-  }
-
-  .label-analyzer {
-    width: 25px;
-    font-weight: 400;
-    background: var(--lightgrey);
-    color: var(--darkgrey);
-  }
-
-  .analyzer-show-more {
-    color:var(--darkgrey);
-  }
-
-
-  .result-row:hover .label-analyzer {
-    background: var(--primaryblue);
-    color: white;
-  }
-
-  .result-row:hover .analyzer-url-result {
-    color: var(--black);
-  }
-
-  .result-row-show-more {
-    cursor: pointer;
-  }
-
-  .result-row-show-more:hover .label-analyzer {
-    background: var(--primaryblue);
-    color: white;
-  }
-
-  .result-row .url, .result-row .link-rel, .result-row .anchor {
-    color: var(--darkgrey);
-  }
-
-  .result-row:hover .url, .result-row:hover .link-rel, .result-row:hover .anchor {
+  .result-row:hover .url-analyzer, .result-row:hover .link-rel-analyzer, .result-row:hover .anchor-analyzer {
     color: var(--black);
     font-weight: 500;
   }
@@ -194,25 +35,25 @@ id/link-analyzer
   }
 
   @media only screen and (max-width:575px){
-    .number {
+    .number-analyzer {
       min-width: 12%;
       max-width: 12%;
       width: 12%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 35%;
       max-width: 35%;
       width: 35%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 28%;
       max-width: 28%;
       width: 28%;
@@ -221,25 +62,25 @@ id/link-analyzer
   }
 
   @media only screen and (min-width:576px) and (max-width: 767px) {
-    .number {
+    .number-analyzer {
       min-width: 8%;
       max-width: 8%;
       width: 8%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 40%;
       max-width: 40%;
       width: 40%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 27%;
       max-width: 27%;
       width: 27%;
@@ -248,25 +89,25 @@ id/link-analyzer
   }
 
   @media only screen and (min-width:768px) and (max-width: 991px) {
-    .number {
+    .number-analyzer {
       min-width: 8%;
       max-width: 8%;
       width: 8%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 40%;
       max-width: 40%;
       width: 40%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 27%;
       max-width: 27%;
       width: 27%;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
@@ -275,25 +116,25 @@ id/link-analyzer
   }
 
   @media only screen and (min-width:992px) and (max-width: 1199px) {
-    .number {
+    .number-analyzer {
       min-width: 8%;
       max-width: 8%;
       width: 8%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 40%;
       max-width: 40%;
       width: 40%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 27%;
       max-width: 27%;
       width: 27;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
@@ -301,25 +142,25 @@ id/link-analyzer
   }
 
   @media only screen and (min-width:1200px) and (max-width: 1399px) {
-    .number {
+    .number-analyzer {
       min-width: 6%;
       max-width: 6%;
       width: 6%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 44%;
       max-width: 44%;
       width: 44%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 25%;
       max-width: 25%;
       width: 25%;
@@ -328,37 +169,37 @@ id/link-analyzer
   }
 
   @media only screen and (min-width:1400px){
-    .number {
+    .number-analyzer {
       min-width: 6%;
       max-width: 6%;
       width: 6%;
     }
 
-    .url {
+    .url-analyzer {
       min-width: 54%;
       max-width: 54%;
       width: 54%;
     }
 
-    .link-rel {
+    .link-rel-analyzer {
       min-width: 20%;
       max-width: 20%;
       width: 20%;
     }
 
-    .anchor {
+    .anchor-analyzer {
       min-width: 20%;
       max-width: 20%;
       width: 20%;
     }
 
   }
-  .number, .url, .link-rel, .anchor {
+  .number-analyzer, .url-analyzer, .link-rel-analyzer, .anchor-analyzer {
     padding-left: 5px;
     padding-right: 5px;
   }
 
-  .url {
+  .url-analyzer {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -516,16 +357,16 @@ id/link-analyzer
 
                     <!-- INTERNAL LINKS START -->
                     <div class="d-flex mx-5 mb-5">
-                      <div class="number font-weight-bolder text-black">
+                      <div class="number-analyzer font-weight-bolder text-black">
                         <p class="mb-0">No.</p>
                       </div>
-                      <div class="url font-weight-bolder text-black">
+                      <div class="url-analyzer font-weight-bolder text-black">
                         <p class="mb-0">URL</p>
                       </div>
-                      <div class="link-rel font-weight-bolder text-black">
+                      <div class="link-rel-analyzer font-weight-bolder text-black">
                         <p class="mb-0">Link rel</p>
                       </div>
-                      <div class="anchor font-weight-bolder text-black">
+                      <div class="anchor-analyzer font-weight-bolder text-black">
                         <p class="mb-0">Anchor text</p>
                       </div>
                     </div>
@@ -552,16 +393,16 @@ id/link-analyzer
 
                     <!-- EXTERNAL LINKS START -->
                     <div class="d-flex mx-5 mb-5">
-                      <div class="number font-weight-bolder text-black">
+                      <div class="number-analyzer font-weight-bolder text-black">
                         <p class="mb-0">No.</p>
                       </div>
-                      <div class="url font-weight-bolder text-black">
+                      <div class="url-analyzer font-weight-bolder text-black">
                         <p class="mb-0">URL</p>
                       </div>
-                      <div class="link-rel font-weight-bolder text-black">
+                      <div class="link-rel-analyzer font-weight-bolder text-black">
                         <p class="mb-0">Link rel</p>
                       </div>
-                      <div class="anchor font-weight-bolder text-black">
+                      <div class="anchor-analyzer font-weight-bolder text-black">
                         <p class="mb-0">Anchor text</p>
                       </div>
                     </div>

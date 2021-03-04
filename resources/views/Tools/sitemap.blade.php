@@ -673,27 +673,74 @@
 
     <div class="" style="background:white">
         <div class="container container-description">
-            <h2 class="text-black">Advance your writing</h2>
             <div class="row">
                 <div class="col-md-9">
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
-                    <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-1')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-1-1')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-2')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-2-1')</p>
+                    <ul>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-1')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-2')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-3')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-4')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-5')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-6')</li>
+                        <li class="text-black">@lang('wordcounter.desc-2-1-7')</li>
+                    </ul>
+                    <h2 class="text-black">@lang('wordcounter.desc-3')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-3-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-3-5')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-4')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-4-1')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-5')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-5-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-5-2')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-6')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-6-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-5')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-6-6-1')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-1-5')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-6-6-2')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-2-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-6-6-2-2')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-7')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-7-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-7-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-7-3')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-8')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-8-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-1')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-1-1')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-2')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-2-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-2-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-3')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-3-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-3-2')</p>
+                    <h3 class="text-black">@lang('wordcounter.desc-8-2-4')</h3>
+                    <p class="text-black">@lang('wordcounter.desc-8-2-4-1')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-9')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-9-1')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-10')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-10-1')</p>
+                    <h2 class="text-black">@lang('wordcounter.desc-11')</h2>
+                    <p class="text-black">@lang('wordcounter.desc-11-1')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-2')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-3')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-4')</p>
+                    <p class="text-black">@lang('wordcounter.desc-11-5')</p>
                 </div>
                 <div class="col-md-3">
                     <div class="d-flex align-items-center mb-5 tools-description-points">
