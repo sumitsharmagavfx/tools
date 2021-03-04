@@ -1,40 +1,83 @@
+
+    var imageUrlCounter = 0;
+    var ingredientsCounter = -1;
+
     const recipeSchema = class {
         constructor() {
 
             this.name = '';
-            this.image = '';
+            this.image = [""];
             this.description = '';
             this.keywords = '';
             this.author = {
                 "@type": "Person",
                 "name": ""
             };
+            this.datePublished = '';
             this.prepTime = '';
             this.cookTime = '';
             this.totalTime = '';
+            this.recipeCategory = undefined;
+            this.recipeCuisine = undefined;
+            this.recipeYield = undefined;
             this.nutrition = {
                 "@type": "NutritionInformation",
                 "calories": ""
             }
+            this.recipeIngredient = undefined;
+            this.aggregateRating = undefined;
+            this.review = undefined;
+            this.video = undefined;
 
         }
 
         render(){
-
             const obj = {
                 "@context": "https://schema.org/",
                 "@type": "Recipe",
                 "name": this.name,
-                "image": this.image,
+                "image": this.image.length === 1 ? this.image[0] : this.image,
                 "description": this.description,
                 "keywords": this.keywords,
                 "author": this.author,
-                // "prepTime": this.prepTime,
-                // "cookTime": this.cookTime,
-                // "totalTime": this.totalTime,
-                // "nutrition": this.nutrition
             }
 
+
+            obj.name = this.name;
+
+            if(this.image.length > 0) {
+                if (this.image.length === 1) {
+                    obj.image = this.image[0];
+                } else {
+                    obj.image = this.image;
+                }
+            }
+
+            obj.description = this.description;
+            obj.keywords = this.keywords;
+
+            if(this.author.name) obj.author.name = this.author.name;
+            if(this.datePublished) obj.datePublished = this.datePublished;
+            obj.prepTime = this.prepTime;
+            obj.cookTime = this.cookTime;
+            obj.totalTime = this.totalTime;
+            if(this.recipeCategory) obj.recipeCategory = this.recipeCategory;
+            if(this.recipeCuisine) obj.recipeCuisine = this.recipeCuisine;
+            if(this.recipeYield) obj.recipeYield = this.recipeYield;
+            obj.nutrition = this.nutrition;
+            if(this.nutrition.servingSize) obj.nutrition.servingSize = this.nutrition.servingSize;
+            obj.nutrition.calories = this.nutrition.calories;
+            if(this.nutrition.fatContent) obj.nutrition.fatContent = this.nutrition.fatContent;
+
+            if(this.recipeIngredient) {
+                if(this.recipeIngredient.length > 0) {
+                    if (this.recipeIngredient.length === 1) {
+                        obj.recipeIngredient = this.recipeIngredient[0];
+                    } else {
+                        obj.recipeIngredient = this.recipeIngredient;
+                    }
+                }
+            }
 
             $("#json-format").val("<script type=\"application/ld+json\">\n" + JSON.stringify(obj, undefined, 4) + "\n<\/script>");
 
@@ -45,30 +88,6 @@
 
     let recipeFormat = new recipeSchema();
     recipeFormat.render();
-
-let main =
-    {
-        "@context": "https://schema.org",
-        "@type": "recipe",
-        "name": "",
-        "image": "",
-        "description": "",
-        "keywords": "",
-        "author": {
-          "@type": "Person",
-          "name": ""
-        },
-        "prepTime": "",
-        "cookTime": "",
-        "totalTime": "",
-        "nutrition": {
-          "@type": "NutritionInformation",
-          "calories": ""
-        },
-        "recipeInstructions": []
-    };
-
-let imageSingle = true;
 
 jQuery(document).ready(function () {
     let deletes = lang ==='en'? 'Delete' : 'Hapus';
@@ -84,47 +103,154 @@ jQuery(document).ready(function () {
     let recipeYield = lang==='en'?'RecipeYield':'RecipeYield';
     let imageUrl = lang==='en'?'ImageUrl':'UrlGambar';
 
-    print();
-    jQuery('#add-imageUrl').click(function () {
-        if (imageSingle) {
-            let getImageSingle = main.image;
-            console.log(getImageSingle);
-            main.image = [
-                getImageSingle,
-                ""
-            ];
-        } else {
-            main.image.push("");
-        }
-        print();
+});
 
-        // jQuery('#image').append("<button type=\"button\" class=\"btn btn-danger mb-2 deleteImage\" name=\"button\" data-id=\""+(main.image.length-1)+"\">"+deletes+"</button>\n" +
-        //     "                <input type=\"text\" name=\"\" class=\"form-control mb-5 image\" placeholder=\""+imageUrl+" :\" value=\"\" data-id=\""+(main.image.length-1)+"\">"
-        // );
-        jQuery('#image').append("<div class=\"row\" data-id=\""+(main.image.length-1)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"image\" data-id=\""+(main.image.length-1)+"\">Image URL #"+(main.image.length)+"</label>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control image mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(main.image.length-1)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteImage\' data-id=\""+(main.image.length-1)+"\"></i></div></div></div>\n"
-        );
-        let row = parseInt(jQuery('#json-format').val().split('\n').length);
-        jQuery('#json-format').attr('rows',row);
-        sticky.update();
-        imageSingle = false;
+    $('.name').keyup(function (e) {
+        recipeFormat.name = $(this).val();
+        recipeFormat.render();
     });
-});
 
-jQuery(document).on('click', '#add-ingredients', function () {
-    // let index = parseInt(jQuery(this).data('id'));
-    // let ingredients = lang==='en'?'Ingredients':'Bahan';
-    // let deletes = lang ==='en'? 'Delete' : 'Hapus';
+    $('.description').keyup(function (e) {
+        recipeFormat.description = $(this).val();
+        recipeFormat.render();
+    });
 
-    // main.mainEntity.ingredients=[""];
-    jQuery('#ingredients').append("<div class=\"row\" data-id=\""+(0)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"ingredients\" data-id=\""+(0)+"\">Ingredients #"+(0)+"</label>\n" +
-    "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(0)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteIngredients\' data-id=\""+(0)+"\"></i></div></div></div>\n"
-    );
-    // let row = parseInt(jQuery('#json-format').val().split('\n').length);
-    // jQuery('#json-format').attr('rows',row);
-    // sticky.update();
-    // print();
-});
+    $('.keywords').keyup(function (e) {
+        recipeFormat.keywords = $(this).val();
+        recipeFormat.render();
+    });
+
+    $('.authorName').keyup(function (e) {
+        recipeFormat.author.name = $(this).val();
+        recipeFormat.render();
+    });
+
+    $(document).on('keyup', '.image', function () {
+        let index = parseInt($(this).data('id'));
+        // console.log('index:' + index);
+        if (recipeFormat.image === 1) {
+            recipeFormat.image[0] = $(this).val();
+        } else {
+            recipeFormat.image[index] = $(this).val();
+        }
+
+        recipeFormat.render();
+
+    });
+
+    $(document).on('click', '#add-imageUrl', function () {
+        imageUrlCounter++;
+        recipeFormat.image.push("")
+        $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">Image URL # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">Invalid URL</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
+        recipeFormat.render();
+    });
+
+    $(document).on('click', '.deleteImage', function () {
+        let index = parseInt($(this).data('id'));
+        recipeFormat.image.splice(index, 1);
+        recipeFormat.render();
+
+        for(let i = index+1; i < recipeFormat.image.length + 1; i++){
+            $('.image[data-id=' + (i - 1) + ']').val($('.image[data-id=' + (i) + ']').val())
+            $('.deleteImageButton[data-id=' + (i - 1) + ']').val($('.deleteImageButton[data-id=' + (i) + ']').val())
+            $('.image-url-data[data-id=' + (i - 1) + ']').val($('.image-url-data[data-id=' + (i) + ']').val())
+        }
+
+        $('.image-url-data[data-id=' + recipeFormat.image.length + ']').remove();
+        $('.deleteImageButton[data-id=' + recipeFormat.image.length + ']').remove();
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
+        imageUrlCounter--;
+        // sticky.update();
+        // if(jsonFormat.supplyItem.length > 0) _supplyCounter--;
+
+    });
+
+    $('.publishedDate').change(function (e) {
+        recipeFormat.datePublished = $(this).val();
+        recipeFormat.render();
+    });
+
+    $('.prepTime').keyup(function (e) {
+        recipeFormat.prepTime = `PT${$(this).val()}M`;
+        recipeFormat.render();
+    });
+
+    $('.cookTime').keyup(function (e) {
+        recipeFormat.cookTime = `PT${$(this).val()}M`;
+        recipeFormat.render();
+    });
+
+    $('.recipeCategory').change(function (e) {
+        recipeFormat.recipeCategory = $(this).val();
+        recipeFormat.render();
+    });
+
+    $(document).on('keyup', '.ingredients', function () {
+        let index = parseInt($(this).data('id'));
+        recipeFormat.recipeIngredient[index] = $(this).val();
+        recipeFormat.render();
+    });
+
+    $(document).on('click', '#add-ingredients', function () {
+        ingredientsCounter++;
+
+        if(recipeFormat.recipeIngredient === undefined){
+            recipeFormat.recipeIngredient= [""];
+        }else{
+            recipeFormat.recipeIngredient.push("")
+        }
+        $('#ingredients').append("<div class=\"ingredients-col\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"row ingredients-col-data\" data-id=\""+(ingredientsCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"ingredients\" data-id=\""+(ingredientsCounter)+"\">Ingredients #"+(ingredientsCounter+1)+"</label>\n" +
+        "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"col-2 col-sm-1 delete-data-ingredients\" data-id=\""+(ingredientsCounter)+"\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteIngredients\' data-id=\""+(ingredientsCounter)+"\"></i></div></div></div></div>\n"
+        );
+        recipeFormat.render();
+    });
+
+    $(document).on('click', '.deleteIngredients', function () {
+        let index = parseInt($(this).data('id'));
+        recipeFormat.recipeIngredient.splice(index, 1);
+        recipeFormat.render();
+
+        for(let i = index+1; i < recipeFormat.recipeIngredient.length + 1; i++){
+            $('.ingredients[data-id=' + (i - 1) + ']').val($('.ingredients[data-id=' + (i) + ']').val())
+            $('.ingredients-col-data[data-id=' + (i - 1) + ']').val($('.ingredients-col-data[data-id=' + (i) + ']').val())
+            $('.delete-data-ingredients[data-id=' + (i - 1) + ']').val($('.delete-data-ingredients[data-id=' + (i) + ']').val())
+        }
+
+        $('.ingredients-col-data[data-id=' + recipeFormat.recipeIngredient.length + ']').remove();
+        // console.log(recipeFormat.recipeIngredient.length)
+        let row = parseInt($('#json-format').val().split('\n').length);
+        $('#json-format').attr('rows',row);
+        ingredientsCounter--;
+
+    });
+
+    $(document).on('keyup', '.recipeCuisine', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        recipeFormat.recipeCuisine = $(this).val();
+        recipeFormat.render();
+    });
+
+    $(document).on('keyup', '.recipeServings', function () {
+        let index = parseInt(jQuery(this).data('id'));
+        recipeFormat.recipeYield = $(this).val();
+        recipeFormat.render();
+    });
+
+    $('.servingSize').keyup(function (e) {
+        recipeFormat.nutrition.servingSize = $(this).val();
+        recipeFormat.render();
+    });
+
+    $('.calories').keyup(function (e) {
+        recipeFormat.nutrition.fatContent = $(this).val()+" g";
+        recipeFormat.render();
+    });
+
+    $('.fat').keyup(function (e) {
+        recipeFormat.nutrition.calories = $(this).val();
+        recipeFormat.render();
+    });
 
 jQuery(document).on('click', '#add-recipe-step', function () {
     let index = parseInt(jQuery(this).data('id'));
@@ -192,30 +318,10 @@ jQuery(document).on('keyup', '.imageStep', function () {
     print();
 });
 
-jQuery(document).on('keyup', '.ingredients', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.ingredients = jQuery(this).val();
-    print();
-});
-
-
 jQuery(document).on('keyup', '.name', function () {
     let index = parseInt(jQuery(this).data('id'));
     // console.log('index:' + index);
     main.name = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.image', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    if (imageSingle) {
-        main.image = jQuery(this).val();
-    } else {
-        main.image[index] = jQuery(this).val();
-    }
-
     print();
 });
 
@@ -268,51 +374,30 @@ jQuery(document).on('keyup', '.creator', function () {
     print();
 });
 
-jQuery(document).on('change', '.datePublished', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.datePublished = jQuery(this).val();
-    print();
-});
+// jQuery(document).on('change', '.datePublished', function () {
+//     let index = parseInt(jQuery(this).data('id'));
+//     // console.log('index:' + index);
+//     main.datePublished = jQuery(this).val();
+//     print();
+// });
 
-jQuery(document).on('keyup', '.prepTime', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.prepTime = "PT"+ jQuery(this).val()+"M";
-    print();
-});
+// jQuery(document).on('keyup', '.prepTime', function () {
+//     let index = parseInt(jQuery(this).data('id'));
+//     // console.log('index:' + index);
+//     main.prepTime = "PT"+ jQuery(this).val()+"M";
+//     print();
+// });
 
-jQuery(document).on('keyup', '.cookTime', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.cookTime = "PT"+ jQuery(this).val()+"M";
-    var prep = parseInt( $(".prepTime").val());
-    var cook = parseInt(jQuery(this).val());
-    var total = prep + cook;
-    main.totalTime ="PT"+ total + "M";
-    print();
-});
-
-jQuery(document).on('change', '.recipeCategory', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.recipeCategory = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.recipeCuisine', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.recipeCuisine = jQuery(this).val();
-    print();
-});
-
-jQuery(document).on('keyup', '.recipeYield', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    // console.log('index:' + index);
-    main.recipeYield = jQuery(this).val();
-    print();
-});
+// jQuery(document).on('keyup', '.cookTime', function () {
+//     let index = parseInt(jQuery(this).data('id'));
+//     // console.log('index:' + index);
+//     main.cookTime = "PT"+ jQuery(this).val()+"M";
+//     var prep = parseInt( $(".prepTime").val());
+//     var cook = parseInt(jQuery(this).val());
+//     var total = prep + cook;
+//     main.totalTime ="PT"+ total + "M";
+//     print();
+// });
 
 jQuery(document).on('keyup', '.servingSize', function () {
     let index = parseInt(jQuery(this).data('id'));
@@ -455,31 +540,6 @@ jQuery(document).on('keyup', '.publisher', function () {
     // console.log('index:' + index);
     main.review.author.publisher = jQuery(this).val();
     print();
-});
-
-jQuery(document).on('click', '.deleteImage', function () {
-    let index = parseInt(jQuery(this).data('id'));
-    if (index!==0){
-        main.image.splice(index, 1);
-        print();
-        for (let i = 1; i < main.image.length + 1; i++) {
-            jQuery('.image[data-id=' + i + ']').val(main.image[i])
-        }
-        jQuery('.deleteImage[data-id=' + main.image.length + ']').remove();
-        jQuery('.image[data-id=' + main.image.length + ']').remove();
-        jQuery('.row[data-id=' + main.image.length + ']').remove();
-
-        if (main.image.length == 1) {
-            imageSingle = true;
-            main.image = main.image[0]
-            print()
-        }
-    }
-    sticky.update();
-});
-
-$(document).on('click', '.deleteIngredients', function () {
-    $('#ingredients > .row').remove();
 });
 
 $(document).on('click', '.deleteStep', function () {
