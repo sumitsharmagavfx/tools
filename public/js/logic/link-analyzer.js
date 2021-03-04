@@ -47,13 +47,13 @@ const LinkTemplate = (no, url, rels, title) => `
   <div class="number d-flex align-items-center">
     <span class="label label-square label-analyzer">${no}</span>
   </div>
-  <div class="url d-flex align-items-center">
+  <div class="url-analyzer d-flex align-items-center">
     <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="${url}">${url}</p>
   </div>
-  <div class="link-rel d-flex align-items-center">
+  <div class="link-rel-analyzer d-flex align-items-center">
     <p class="mb-0">${rels}</p>
   </div>
-  <div class="anchor d-flex align-items-center">
+  <div class="anchor-analyzer d-flex align-items-center">
     <p class="mb-0">${title}</p>
   </div>
 </div>
@@ -230,7 +230,15 @@ function formatDate(date) {
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
 
-
+function checkUrl(url) {
+    try {
+        let _url = new URL(url)
+        return _url.protocol === 'https:' || _url.protocol === 'http:';
+    } catch (e) {
+        console.log(e)
+        return false
+    }
+}
 
 function getProtocol(url) {
     try {

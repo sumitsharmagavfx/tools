@@ -24,7 +24,6 @@ const refreshLocalStorage = function() {
                     '</div>' +
                     '</div>' +
                     '</li>'
-
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
@@ -84,7 +83,7 @@ $('#textarea').on('input', function() {
             const key = $(this).data('key');
             const keys = window.localStorage.getItem('keys')
             var temp = define();
-            if (keys) {
+            if (keys){
                 temp = JSON.parse(keys)
             }
             if (!temp.wc.includes(key)) {

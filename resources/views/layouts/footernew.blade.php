@@ -2,7 +2,7 @@
     <div class="container container-footer-new">
         <div class="row">
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="h3 text-black mb-5">SEO Tools</div>
+                <div class="h3 text-black mb-5">@lang('layout.footer-seo-title')</div>
                 <div class="splide splide-footer-seo mb-7">
                     <div class="splide__track custom_splide_track">
                         <ul class="splide__list">
@@ -81,46 +81,46 @@
                         </ul>
                     </div>
                 </div>
-                <div class="h3 text-custom-black mb-5">Company</div>
+                <div class="h3 text-custom-black mb-5">@lang('layout.footer-company-title')</div>
                 <div class="d-flex mb-10">
                     <a href="">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
-                                <span class="footer-company-cat font-weight-normal">Product</span>
+                                <span class="footer-company-cat font-weight-normal">@lang('layout.footer-company-link-1-1')</span>
                                 <br>
-                                <span class="h6 footer-company-title font-weight-bolder">SERPs Tracker</span>
+                                <span class="h6 footer-company-title font-weight-bolder">@lang('layout.footer-company-link-1-2')</span>
                             </div>
                         </div>
                     </a>
                     <a href="">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
-                                <span class="footer-company-cat font-weight-normal">Services</span>
+                                <span class="footer-company-cat font-weight-normal">@lang('layout.footer-company-link-2-1')</span>
                                 <br>
-                                <span class="h6 footer-company-title font-weight-bolder">SEO & Writing</span>
+                                <span class="h6 footer-company-title font-weight-bolder">@lang('layout.footer-company-link-2-2')</span>
                             </div>
                         </div>
                     </a>
                     <a href="">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
-                                <span class="footer-company-cat font-weight-normal">Company</span>
+                                <span class="footer-company-cat font-weight-normal">@lang('layout.footer-company-link-3-1')</span>
                                 <br>
-                                <span class="h6 footer-company-title font-weight-bolder">Information</span>
+                                <span class="h6 footer-company-title font-weight-bolder">@lang('layout.footer-company-link-3-2')</span>
                             </div>
                         </div>
                     </a>
                     <a href="">
                         <div class="card card-custom card-stretch footer-company-list mr-2">
                             <div class="card-body px-3 py-5">
-                                <span class="footer-company-cat font-weight-normal">Timeline</span>
+                                <span class="footer-company-cat font-weight-normal">@lang('layout.footer-company-link-4-1')</span>
                                 <br>
-                                <span class="h6 footer-company-title font-weight-bolder">Press Room</span>
+                                <span class="h6 footer-company-title font-weight-bolder">@lang('layout.footer-company-link-4-2')</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="h3 text-custom-black mb-5">Resources</div>
+                <div class="h3 text-custom-black mb-5">@lang('layout.footer-resource-title')</div>
                 <div class="mb-10">
                     <a href="">
                         <div class="card card-custom footer-resource-list mb-2">
@@ -129,7 +129,7 @@
                                     <i class="bx bxs-help-circle icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">13</span>
                                 </div>
-                                <div class="h6 footer-resource-text font-weight-light mb-0">SEO Guidelines</div>
+                                <div class="h6 footer-resource-text font-weight-light mb-0">@lang('layout.footer-resource-link-1')</div>
                             </div>
                         </div>
                     </a>
@@ -140,7 +140,7 @@
                                     <i class="bx bxs-book icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">150</span>
                                 </div>
-                                <div class="h6 footer-resource-text font-weight-light mb-0">SEO Terms</div>
+                                <div class="h6 footer-resource-text font-weight-light mb-0">@lang('layout.footer-resource-link-2')</div>
                             </div>
                         </div>
                     </a>
@@ -151,7 +151,7 @@
                                     <i class="bx bxs-news icon-lg mr-2"></i>
                                     <span class="h6 font-weight-normal mb-0">45</span>
                                 </div>
-                                <div class="h6 footer-resource-text font-weight-light mb-0">cmlabs Blog's</div>
+                                <div class="h6 footer-resource-text font-weight-light mb-0">@lang('layout.footer-resource-link-3')</div>
                             </div>
                         </div>
                     </a>
@@ -171,9 +171,9 @@
                     <a rel="noopener noreferrer nofollow" href="" class="footer-new-icon mr-3"><i class="bx bxl-twitter icon-xl"></i></a>
                 </div>
                 <hr class="bg-custom-softgrey">
-                <div class="h6 footer-new-link mb-4"><a href="">Terms & Condition</a></div>
-                <div class="h6 footer-new-link mb-4"><a href="">Privacy Policy</a></div>
-                <div class="h6 footer-new-link mb-10"><a href="">Disclaimer</a></div>
+                <div class="h6 footer-new-link mb-4"><a href="">@lang('layout.footer-link-1')</a></div>
+                <div class="h6 footer-new-link mb-4"><a href="">@lang('layout.footer-link-2')</a></div>
+                <div class="h6 footer-new-link mb-10"><a href="">@lang('layout.footer-link-3')</a></div>
                 <div class="h6 footer-new-copyright text-custom-grey font-weight-light">Copyright &copy;2021</div>
             </div>
         </div>
