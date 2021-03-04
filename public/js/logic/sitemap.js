@@ -234,9 +234,9 @@ const refreshLocalStorage = function(){
 }
 
 let removeLocal = function (index){
-    const keys = JSON.parse(localStorage.getItem('ssl-checker'))
+    const keys = JSON.parse(localStorage.getItem('sitemap-generator'))
     keys.splice(index,1)
-    localStorage.setItem('ssl-checker',JSON.stringify(keys))
+    localStorage.setItem('sitemap-generator',JSON.stringify(keys))
     refreshLocalStorage()
 }
 
