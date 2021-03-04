@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('home.meta-desc'))
 
-@section('meta-keyword', Lang::get('home.meta-keyword'))
-
 @section('en-link')
 en
 @endsection
@@ -221,78 +219,174 @@ id
         <div class="row">
             <div class="col-md-9">
                 <div class="" id="description-tab-1">
-                    <h2>Important Note</h2>
+                    <h2>@lang('home.desc-1')</h2>
                     <ul>
-                        <li>In using some tools that require you to enter a URL, make sure it is valid. Otherwise, the tool will not function properly.</li>
-                        <li>If you run your test on one tool and it shows different results at different times, keep in mind that it may be due to a Google update.</li>
-                        <li>If you lose your internet connection in the middle of testing the tool, we recommend that you refresh the page and try running the test again.</li>
-                        <li>This tool is provided free of charge and has no restrictions for any user.</li>
-                        <li>If you find any bugs or problems using the tool, please contact our team on the live chat in the bottom corner of cmlabs.co.</li>
+                        <li>@lang('home.desc-1-1')</li>
+                        <li>@lang('home.desc-1-2')</li>
+                        <li>@lang('home.desc-1-3')</li>
+                        <li>@lang('home.desc-1-4')</li>
+                        <li>@lang('home.desc-1-5')</li>
                     </ul>
                 </div>
 
                 <div class="d-none" id="description-tab-2">
-                    <h2>How to Use</h2>
-                    <h3>WORD COUNTER</h3>
+                    <h2>@lang('home.desc-2')</h2>
+                    <h3>@lang('home.desc-2-1')</h3>
                     <ol>
-                        <li>Copy the article you want to check.</li>
-                        <li>Paste in the fields provided.</li>
-                        <li>You will get results for the number of characters, words, sentences, paragraphs and reading time.</li>
-                        <li>On the right, per 1 word, 2 words, up to 5 words, you will also get the keyword density.</li>
+                        <li>@lang('home.desc-2-1-1')</li>
+                        <li>@lang('home.desc-2-1-2')</li>
+                        <li>@lang('home.desc-2-1-3')</li>
+                        <li>@lang('home.desc-2-1-4')</li>
                     </ol>
-                    <h3>TITLE & META DESCRIPTION CHECKER</h3>
+                    <h3>@lang('home.desc-2-2')</h3>
                     <ol>
-                        <li>Copy the URL of the web page you want to analyze.</li>
-                        <li>Paste in the URL field provided.</li>
-                        <li>Click the Get Title & Meta Desc button.</li>
-                        <li>The resulting title and meta description of the page will be available in the fields provided. You can edit directly in that field.</li>
-                        <li>Click Copy to Clipboard to copy the customized title and meta description.</li>
+                        <li>@lang('home.desc-2-2-1')</li>
+                        <li>@lang('home.desc-2-2-2')</li>
+                        <li>@lang('home.desc-2-2-3')</li>
+                        <li>@lang('home.desc-2-2-4')</li>
                     </ol>
-                    <h3>JSON-LD SCHEMA GENERATOR</h3>
-                    <h4>Breadcrumb</h4>
+                    <h3>@lang('home.desc-2-3')</h3>
+                    <h4>@lang('home.desc-2-3-1')</h4>
                     <ol>
-                        <li>Fill the Page name and the URL</li>
-                        <li>If you wish to add more, click the “Add URL” button.</li>
-                        <li>Once done, check the code in the right column to make sure whether it is eligible on Google Rich Result.</li>
-                        <li>Finally, you can copy the code onto your website.</li>
+                        <li>@lang('home.desc-2-3-1-1')</li>
+                        <li>@lang('home.desc-2-3-1-2')</li>
+                        <li>@lang('home.desc-2-3-1-3')</li>
+                        <li>@lang('home.desc-2-3-1-4')</li>
                     </ol>
-                    <h4>FAQ</h4>
+                    <h4>@lang('home.desc-2-3-2')</h4>
                     <ol>
-                        <li>Fill in the questions and answers in the given column.</li>
-                        <li>If you wish to add more, click the Add Another FAQ button.</li>
-                        <li>Once done, check the code in the right column to make sure whether it is eligible on Google Rich Result.</li>
-                        <li>Finally, you can copy the code onto your website.</li>
+                        <li>@lang('home.desc-2-3-2-1')</li>
+                        <li>@lang('home.desc-2-3-2-2')</li>
+                        <li>@lang('home.desc-2-3-2-3')</li>
+                        <li>@lang('home.desc-2-3-2-4')</li>
                     </ol>
-                    <h4></h4>
+                    <h4>@lang('home.desc-2-3-3')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-3-1')</li>
+                        <li>@lang('home.desc-2-3-3-2')</li>
+                        <li>@lang('home.desc-2-3-3-3')</li>
+                        <li>@lang('home.desc-2-3-3-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-4')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-4-1')</li>
+                        <li>@lang('home.desc-2-3-4-2')</li>
+                        <li>@lang('home.desc-2-3-4-3')</li>
+                        <li>@lang('home.desc-2-3-4-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-5')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-5-1')</li>
+                        <li>@lang('home.desc-2-3-5-2')</li>
+                        <li>@lang('home.desc-2-3-5-3')</li>
+                        <li>@lang('home.desc-2-3-5-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-6')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-6-1')</li>
+                        <li>@lang('home.desc-2-3-6-2')</li>
+                        <li>@lang('home.desc-2-3-6-3')</li>
+                        <li>@lang('home.desc-2-3-6-4')</li>
+                    </ol>
+                    <h4>@lang('home.desc-2-3-7')</h4>
+                    <ol>
+                        <li>@lang('home.desc-2-3-7-1')</li>
+                        <li>@lang('home.desc-2-3-7-2')</li>
+                        <li>@lang('home.desc-2-3-7-3')</li>
+                        <li>@lang('home.desc-2-3-7-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-4')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-4-1')</li>
+                        <li>@lang('home.desc-2-4-2')</li>
+                        <li>@lang('home.desc-2-4-3')</li>
+                        <li>@lang('home.desc-2-4-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-5')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-5-1')</li>
+                        <li>@lang('home.desc-2-5-2')</li>
+                        <li>@lang('home.desc-2-5-3')</li>
+                        <li>@lang('home.desc-2-5-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-6')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-6-1')</li>
+                        <li>@lang('home.desc-2-6-2')</li>
+                        <li>@lang('home.desc-2-6-3')</li>
+                        <li>@lang('home.desc-2-6-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-7')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-7-1')</li>
+                        <li>@lang('home.desc-2-7-2')</li>
+                        <li>@lang('home.desc-2-7-3')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-8')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-8-1')</li>
+                        <li>@lang('home.desc-2-8-2')</li>
+                        <li>@lang('home.desc-2-8-3')</li>
+                        <li>@lang('home.desc-2-8-4')</li>
+                        <li>@lang('home.desc-2-8-5')</li>
+                        <li>@lang('home.desc-2-8-6')</li>
+                        <li>@lang('home.desc-2-8-7')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-9')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-9-1')</li>
+                        <li>@lang('home.desc-2-9-2')</li>
+                        <li>@lang('home.desc-2-9-3')</li>
+                        <li>@lang('home.desc-2-9-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-10')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-10-1')</li>
+                        <li>@lang('home.desc-2-10-2')</li>
+                        <li>@lang('home.desc-2-10-3')</li>
+                        <li>@lang('home.desc-2-10-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-11')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-11-1')</li>
+                        <li>@lang('home.desc-2-11-2')</li>
+                        <li>@lang('home.desc-2-11-3')</li>
+                        <li>@lang('home.desc-2-11-4')</li>
+                    </ol>
+                    <h3>@lang('home.desc-2-12')</h3>
+                    <ol>
+                        <li>@lang('home.desc-2-12-1')</li>
+                        <li>@lang('home.desc-2-12-2')</li>
+                        <li>@lang('home.desc-2-12-3')</li>
+                        <li>@lang('home.desc-2-12-4')</li>
+                    </ol>
                 </div>
 
                 <div class="d-none" id="description-tab-3">
-                    <h2>Frequently Asked Question (FAQ)</h2>
-                    <h3>What is the cmlabs tool?</h3>
-                    <p>The cmlabs tool is an online tool developed to help content writers, SEO experts and developers improve the quality of their work. All of these tools are free and accessible to all users without limits.</p>
-                    <p>This tool started after observing the enthusiasm of newbies in learning content writing, SEO and web development. Here we are taking learning shortcuts using this free and unlimited tool.</p>
-                    <p>With the number and features added every week, the cmlabs tool will evolve even further.</p>
-                    <h3>What are the tools that have been released?</h3>
-                    <p><b>Word Counter</b> is useful for counting the number of words, paragraphs, reading time, and keyword density.</p>
-                    <p>You can measure the length of your title and meta definition in pixels and characters with the <b>Title & Meta Length Checker.</b></p>
-                    <p>The <b>JSON-LD Schema FAQ generator</b> is useful for creating schema FAQs in SERPs.</p>
-                    <p>For testing website efficiency from different aspects, the <b>PageSpeed Test</b> is useful.</p>
-                    <p><b>Mobile Friendly Test</b> is useful for testing the responsiveness of websites on mobile devices.</p>
-                    <p><b>The Sitemap Generator</b> is useful for creating XML sitemaps.</p>
-                    <p><b>SSL Checker</b> is useful for checking the validation of a website's SSL certificate.</p>
-                    <p>In number and functionality, the tools is still increasing. Subscribe to our email and push notifications to get the latest updates on the CMLABS tool.</p>
-                    <h3>Who needs this tool?</h3>
+                    <h2>@lang('home.desc-3')</h2>
+                    <h3>@lang('home.desc-3-1')</h3>
+                    <p>@lang('home.desc-3-1-1')</p>
+                    <p>@lang('home.desc-3-1-2')</p>
+                    <p>@lang('home.desc-3-1-3')</p>
+                    <h3>@lang('home.desc-3-2')</h3>
+                    <p>@lang('home.desc-3-2-1')</p>
+                    <p>@lang('home.desc-3-2-2')</p>
+                    <p>@lang('home.desc-3-2-3')</p>
+                    <p>@lang('home.desc-3-2-4')</p>
+                    <p>@lang('home.desc-3-2-5')</p>
+                    <p>@lang('home.desc-3-2-6')</p>
+                    <p>@lang('home.desc-3-2-7')</p>
+                    <p>@lang('home.desc-3-2-8')</p>
+                    <h3>@lang('home.desc-3-3')</h3>
                     <ol>
-                        <li>Content writers and Copywriters need both a Word Counter and a Title & Meta Checker.</li>
-                        <li>SEO experts need the JSON-LD Schema FAQ, PageSpeed ​​Testing, and Mobile Friendly Testing.</li>
-                        <li>Developers need a Sitemap Generator and SSL Checker</li>
+                        <li>@lang('home.desc-3-3-1')</li>
+                        <li>@lang('home.desc-3-3-2')</li>
+                        <li>@lang('home.desc-3-3-3')</li>
                     </ol>
-                    <h3>When does a Marketer or Product Manager need a cmlabs tool?</h3>
-                    <p>At the research, production, and audit stages, the cmlabs tool can be used. At the research stage, marketers can see the keyword density of competitors by using the Word Counter tool.</p>
-                    <p>At the development stage, the Product Manager can create an FAQ schema in the SERP by using the JSON-LD Schema FAQ. Apart from that, they can also optimize the appearance of websites on mobile devices using Mobile Friendly
-                        Testing. In order to speed up crawling using the Robot.txt Generator, you can also connect robot.txt to the website. The developer at this stage can create an XML sitemap using the Sitemap Generator.</p>
-                    <p>In the audit stage, content writers can check the title length and meta description using the Title & Meta Length Checker. SEO experts and developers can check website performance using the PageSpeed ​​Test. At this stage the
-                        developer can also check the SSL certificate using SSL Checker.</p>
+                    <h3>@lang('home.desc-3-4')</h3>
+                    <p>@lang('home.desc-3-4-1')</p>
+                    <p>@lang('home.desc-3-4-2')</p>
+                    <p>@lang('home.desc-3-4-3')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -300,19 +394,19 @@ id
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                     </div>
-                    <a class="">Important Note</a>
+                    <a class="">@lang('home.desc-1')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                     </div>
-                    <a class="">How to Use</a>
+                    <a class="">@lang('home.desc-2')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
-                    <a class="">Frequently Asked Question (FAQ)</a>
+                    <a class="">@lang('home.desc-3')</a>
                 </div>
             </div>
         </div>

@@ -4,8 +4,6 @@
 
 @section('meta-desc', 'JSON-LD Schema Generator')
 
-@section('meta-keyword', 'JSON-LD Schema Generator')
-
 @section('en-link')
 en/json-ld-schema-generator
 @endsection
@@ -72,7 +70,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-chevron-right-square bx-lg text-darkgrey'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Breadcrumb</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-breadcrumb-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-breadcrumb-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -87,7 +85,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-help-circle text-darkgrey bx-lg'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">FAQ Page</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-faq-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-faq-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -102,7 +100,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bx-list-check text-darkgrey bx-lg'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">How-to</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-howto-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-howto-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -117,7 +115,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-briefcase text-darkgrey bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Job Posting</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-jobposting-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-jobposting-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -132,7 +130,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-user text-darkgrey bx-lg'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Person</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-person-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-person-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -147,7 +145,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-purchase-tag text-darkgrey bx-lg' ></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Product</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-product-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-product-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
@@ -162,7 +160,7 @@ id/json-ld-schema-generator
               <div class="">
                 <i class='bx bxs-receipt text-darkgrey bx-lg'></i>
                 <h2 class="h6 text-darkgrey font-weight-bolder">Recipe</h2>
-                <p class="text-darkgrey mb-0">@lang('home.json-ld-recipe-desc')</p>
+                <p class="text-darkgrey mb-0">@lang('jsonldhome.json-ld-recipe-desc')</p>
               </div>
             </div>
             <div class="card-footer text-right border-top-0 pt-0">
