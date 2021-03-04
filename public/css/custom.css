@@ -1299,7 +1299,6 @@ a:hover {
     color: var(--white);
     border: none;
     width: 100%;
-    text-transform: uppercase;
     outline: none;
 }
 
@@ -1401,5 +1400,312 @@ textarea.input-meta-description {
 
     #DesktopResult {
         display: none !important;
+    }
+}
+
+.hreflang-url {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+}
+
+.hreflang-url::placeholder {
+    color: white;
+}
+
+.hreflang-url:focus {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+}
+
+.what-is-this {
+    cursor: pointer;
+}
+
+.what-is-this:hover {
+    text-decoration: underline;
+}
+
+.links {
+    color: var(--primaryblue);
+    cursor: pointer;
+}
+
+.links:hover {
+    color: #037BCB;
+    cursor: pointer;
+    text-decoration: underline !important;
+}
+
+.hreflang-url-result, .analyzer-url-result {
+    color: var(--darkgrey);
+    font-weight: bold;
+}
+
+.btn-cancel {
+    line-height: 1;
+    width: 100px;
+    background: #FF5656;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-cancel:hover {
+    background: #FB1818;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-cancel-disabled {
+    line-height: 1;
+    width: 100px;
+    background: var(--grey);
+    color: white;
+    border-radius: 20px;
+    cursor: not-allowed;
+}
+
+.btn-cancel-disabled:hover {
+    line-height: 1;
+    width: 100px;
+    background: var(--grey);
+    color: white;
+    border-radius: 20px;
+    cursor: not-allowed;
+}
+
+.label-hreflang, .label-analyzer {
+    width: 25px;
+    font-weight: 400;
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+}
+
+.hreflang-show-more, .analyzer-show-more {
+    color: var(--darkgrey);
+}
+
+.result-row:hover .label-hreflang, .result-row:hover .label-analyzer {
+    background: var(--primaryblue);
+    color: white;
+}
+
+.result-row:hover .hreflang-url-result, .result-row:hover .analyzer-url-result {
+    color: var(--black);
+}
+
+.result-row-show-more {
+    cursor: pointer;
+}
+
+.result-row-show-more:hover .label-hreflang, .result-row-show-more:hover .label-analyzer {
+    background: var(--primaryblue);
+    color: white;
+}
+
+.result-row-show-more:hover .hreflang-url-result, .result-row-show-more:hover .hreflang-show-more {
+    color: var(--black);
+}
+
+@media only screen and (max-width: 575px) {
+    .number-hreflang {
+        min-width: 12%;
+        width: 12%;
+    }
+
+    .url-hreflang {
+        min-width: 30%;
+        width: 30%;
+    }
+
+    .hreflang {
+        min-width: 20%;
+        width: 20%;
+    }
+
+    .language-hreflang {
+        min-width: 22%;
+        width: 22%;
+    }
+
+    .region-hreflang {
+        min-width: 16%;
+        width: 16%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .number-hreflang {
+        min-width: 8%;
+        width: 8%;
+    }
+
+    .url-hreflang {
+        min-width: 50%;
+        width: 50%;
+    }
+
+    .hreflang {
+        min-width: 12%;
+        width: 12%;
+    }
+
+    .language-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+
+    .region-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .number-hreflang {
+        min-width: 8%;
+        width: 8%;
+    }
+
+    .url-hreflang {
+        min-width: 50%;
+        width: 50%;
+    }
+
+    .hreflang {
+        min-width: 12%;
+        width: 12%;
+    }
+
+    .language-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+
+    .region-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .number-hreflang {
+        min-width: 8%;
+        width: 8%;
+    }
+
+    .url-hreflang {
+        min-width: 49%;
+        width: 49%;
+    }
+
+    .hreflang {
+        min-width: 13%;
+        width: 13;
+    }
+
+    .language-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+
+    .region-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .number-hreflang {
+        min-width: 6%;
+        width: 6%;
+    }
+
+    .url-hreflang {
+        min-width: 43%;
+        width: 43%;
+    }
+
+    .hreflang {
+        min-width: 11%;
+        width: 11%;
+    }
+
+    .language-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+
+    .region-hreflang {
+        min-width: 25%;
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .number-hreflang {
+        min-width: 6%;
+        width: 6%;
+    }
+
+    .url-hreflang {
+        min-width: 45%;
+        width: 45%;
+    }
+
+    .hreflang {
+        min-width: 9%;
+        width: 9%;
+    }
+
+    .language-hreflang {
+        min-width: 15%;
+        width: 15%;
+    }
+
+    .region-hreflang {
+        min-width: 25%;
+        width: 25%;
+    }
+}
+
+.result-row .number-hreflang p, .result-row .url-hreflang p, .result-row .hreflang p, .result-row .language-hreflang p, .result-row .region-hreflang p {
+    max-width: 99%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--darkgrey);
+}
+
+.result-row:hover .number-hreflang p, .result-row:hover .url-hreflang p, .result-row:hover .hreflang p, .result-row:hover .language-hreflang p, .result-row:hover .region-hreflang p {
+    color: var(--black);
+    font-weight: bold
+}
+
+.analyzer-url {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+}
+
+.analyzer-url::placeholder {
+    color: white;
+}
+
+.analyzer-url:focus {
+    background: var(--primaryblue);
+    border: none;
+    color: white;
+}
+
+.label-primary-version {
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+}
+
+@media (max-width:767px) {
+    .btn-add-question {
+        width: 100%;
     }
 }
