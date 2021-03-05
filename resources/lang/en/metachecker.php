@@ -4,6 +4,11 @@ return [
     "sub-title" => "Check Title and Meta Lengths",            
     "meta-title" => "Page Title and Meta Description Length Checker",
     "meta-desc" => "Check the length of the Page Title and Meta Description of your website in the content writing Tools from cmlabs. Improve your writing skills!",
+    "btn-crawl" => "CRAWL URL",
+    "tooltip-manual-off" => "MANUAL mode is OFF",
+    "tooltip-manual-on" => "MANUAL mode is ON",
+    "tooltip-bot-off" => "BOT mode is OFF",
+    "tooltip-bot-on" => "BOT mode is ON",
     "desc-1" => "The Importance of This Tool",
     "desc-1-1" => "SERP, which stands for Search Engine Results Page, is an important medium for the results of SEO (Search Engine Optimization) activities. This job demands special attention from every marketer, from junior to senior level. URL, Page Title, and Meta Definition are the three most critical attributes for SERP.",
     "desc-2" => "Why are these 3 attributes important?",
@@ -54,4 +59,6 @@ return [
     "desc-5-3-4-1" => "Putting keywords at the beginning of a sentence is one way to introduce search engines to the keywords we use. In addition, this location is considered a good position, which aims to prevent the search process from being interrupted when search results are displayed on search engine pages.",
     "desc-5-3-5" => "Don't overdo your keywords",
     "desc-5-3-5-1" => "We recommend that the Meta Description should contain keywords in it. However, overusing keywords in Meta Description is not a good thing to do. Since the meta description will be displayed and read by the user, make the Description easy to use.",
+    "whats-new-1" => "We added a bot feature on this new version. This feature update functions to check the meta title and meta description from any website. You only need to copy the URL link and place it in the column provided. It's time to track down easier with our latest version update.",
+    "whats-new-2" => "Now users can preview the meta title and descrption for mobile and desktop. We added this feature in the latest version so that you get the best experience to see how your meta title and meta description appear on search engines. You can learn more about this feature and feel the changes.",
 ];

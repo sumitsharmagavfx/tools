@@ -1,7 +1,7 @@
 <?php
 
 return [
-    "meta-title" => "Penghitung Kata Online - Cek Jumlah kata Hingga Density",
+    "meta-title" => "Word Counter Online – Tool penghitung jumlah kata",
     "meta-desc" => "Hitung jumlah kata, paragraf, waktu membaca, dan kepadatan keyword dengan Word Counter Tool.",
     "title" => "WORD COUNTER",
     "subtitle" => "Tingkatkan Skill Menulis",
@@ -77,4 +77,6 @@ return [
     "desc-11-3"=>"Permintaan untuk posisi penulis konten semakin dicari dan menulis konten sekarang merupakan keterampilan yang mahal. Itu sebabnya Word Counter adalah suatu kebutuhan.",
     "desc-11-4"=>"Copywriter",
     "desc-11-5"=>"Popularitas copywriter semakin meningkat dan membuat pekerjaan ini perlu bagi perusahaan. Oleh karena itu, copywriter perlu menggunakan tool Word Counter ini.",
+    "whats-new-1"=>"Saat ini, pengguna dapat menggunakan tools Word Counter dengan fitur autosave. Dengan adanya update dan fitur tambahan ini, Anda tidak perlu khawatir jika tulisan hilang ketika terjadi masalah teknis. Hasil tulisan Anda tetap tersimpan dengan aman di sistem kami. Ini saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
+    "whats-new-2"=>"Update versi terbaru mendukung fitur copy dan adjust font. Dengan ini Anda bisa menyesuaikan tampilan font sesuai dengan hal yang Anda butuhkan. Copy tulisan dengan mudah dan atur sesuka Anda. Kami mendukung penulisan yang lebih kreatif di update terbaru ini.Saat yang tepat untuk upgrade tulisanmu.",
 ];

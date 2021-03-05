@@ -34,5 +34,11 @@ return [
     "banner-robo-title" => "Panduan Memulai Menulis",
     "banner-robo-desc" => "Panduan Memulai Optimasi Mesin Pencari (SEO) memberikan praktik terbaik untuk mempermudah mesin pencari merayapi, mengindeks, dan memahami konten Anda.",
     "banner-robo-btn" => "Jelajahi Sekarang?",
-
+    "feature-title" => "Fitur yang tersedia",
+    "feature-sub-title" => "Jelajahi fitur lengkap cmlabs",
+    "feature-desc" => "CMLABS akan meningkatkan kemampuan menulis Anda dan menggabungkan pemikiran strategis untuk memberikan saran teknis dari data kami.",
+    "whats-new-title" => "Apa yang baru di cmlabs",
+    "whats-new-sub-title" => "Terbaru",
+    "whats-new-update" => "Terakhir diperbarui",
+    "view-web-release" => "Lihat semua web-rilis?",
 ];

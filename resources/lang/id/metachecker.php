@@ -2,8 +2,13 @@
 return [
     "title" => "TITLE & META DESCRIPTION CHECKER",
     "sub-title" => "Cek Panjang Judul dan Meta",            
-    "meta-title" => "Pemeriksa Panjang Judul Halaman dan Meta Deskripsi Online",
+    "meta-title" => "Page Title dan Meta Description Length Checker",
     "meta-desc" => "Cek panjang Judul Halaman dan Meta Description di tampilan Google menggunakan tool meta length checker dari CMLABS.",
+    "btn-crawl" => "TELUSURI URL",
+    "tooltip-manual-off" => "mode MANUAL NONAKTIF",
+    "tooltip-manual-on" => "mode MANUAL AKTIF",
+    "tooltip-bot-off" => "mode BOT NONAKTIF",
+    "tooltip-bot-on" => "mode BOT AKTIF",
     "desc-1" => "Pentingnya Tool Ini",
     "desc-1-1" => "SERP, yang merupakan singkatan dari Search Engine Results Page, merupakan media penting untuk hasil kegiatan SEO (Search Engine Optimization). Pekerjaan ini menuntut perhatian khusus dari setiap pemasar, dari level junior hingga senior. URL, Judul Halaman, dan Meta Definisi adalah tiga atribut terpenting untuk SERP.",
     "desc-2" => "Mengapa 3 atribut ini penting?",
@@ -54,4 +59,6 @@ return [
     "desc-5-3-4-1" => "Meletakkan keyword di awal kalimat merupakan salah satu cara untuk mengenalkan mesin pencari pada keyword yang kita gunakan. Selain itu, lokasi ini dianggap posisi yang baik, yang bertujuan agar proses pencarian tidak terputus saat hasil pencarian ditampilkan pada halaman mesin pencari.",
     "desc-5-3-5" => "Jangan gunakan keyword yang berlebihan",
     "desc-5-3-5-1" => "Kami merekomendasikan Meta Description untuk mengandung keyword di dalamnya. Namun, penggunaan keyword yang berlebihan dalam Meta Description bukanlah hal yang baik untuk dilakukan. Karena meta description akan ditampilkan dan dibaca oleh pengguna, buat deskripsi mudah dipahami.",
+    "whats-new-1" => "Kami menambahkan fitur bot. Pembaruan fitur ini berfungsi untuk cek meta title dan meta description dari website manapun. Anda hanya perlu menyalin link url dan letakkan di kolom yang tersedia. Ini saatnya melacak lebih mudah dengan update versi terbaru kami.",
+    "whats-new-2" => "Di mulai dari sekarang, Anda bisa melakukan preview untuk mobile dan desktop. Kami menambahkan fitur ini di versi terbaru,agar Anda mendapatkan pengalaman terbaik untuk melihat bagaimana meta title dan meta description Anda tayang di mesin pencari. Anda bisa mempelajari fitur ini lebih lanjut dan rasakan perubahannya.",
 ];
