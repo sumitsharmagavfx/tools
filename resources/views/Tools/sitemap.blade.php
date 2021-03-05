@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('sitemap.meta-desc'))
 
-@section('meta-keyword', Lang::get('sitemap.meta-keyword'))
-
 @section('conical','/en/sitemap-generator')
 
 @section('en-link')
@@ -500,8 +498,8 @@
     <div class="container container-tools mb-10">
         <div class="d-flex flex-column-fluid">
             <div class="container-fluid px-0">
-                <h1 class="text-darkgrey font-weight-normal">SITEMAP GENERATOR</h1>
-                <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+                <h1 class="text-darkgrey font-weight-normal">@lang('sitemap.title')</h1>
+                <span class="text-darkgrey h4 font-weight-normal">@lang('sitemap.sub-title')</span>
 
                 <div class="header-blue mt-10 mb-5 px-5 py-1">
                     <div class="row d-flex align-items-center">
@@ -515,11 +513,11 @@
                             <!-- HTTP URL -->
                             <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
                             <input id="url" type="url" class="form-control sitemap-url" name="" value=""
-                                   placeholder="INPUT / PASTE YOUR DOMAIN">
+                                   placeholder="{{ Lang::get('sitemap.input-hint') }}">
                         </div>
                         <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                             <!-- CRAWL BUTTON -->
-                            <button id="generate" type="button" class="btn btn-crawl" name="button">GENERATE</button>
+                            <button id="generate" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
                         </div>
                     </div>
                 </div>
@@ -527,10 +525,10 @@
                     <div class="col-md-8">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="px-2 mb-3">
-                                <span class="text-black font-15px font-weight-bolder">Results</span>
+                                <span class="text-black font-15px font-weight-bolder">@lang('sitemap.result-title')</span>
                                 <span id="length-result" class="font-15px font-weight-bolder"
                                       style="color:#9A99A2">(0)</span>
-                                <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
+                                <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('sitemap.result-sub-title'))</span>
                             </div>
                             <div id="download-button" class="mb-3">
                             </div>
@@ -541,8 +539,8 @@
                                 <!-- BEFORE CRAWL -->
                                 <div class="" id="noCrawlResult">
                                     <div class="text-center">
-                                        <p class="d-block">No sitemap generated, please input your domain above!</p>
-                                        <a href="#" class="links">Learn how to use this tools?</a>
+                                        <p class="d-block">@lang('sitemap.no-crawl-result')</p>
+                                        <a href="#" class="links">@lang('sitemap.learn-tool')</a>
                                     </div>
                                 </div>
 
@@ -560,13 +558,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="px-2 mb-3 d-flex align-items-center" style="height:31.88px">
-                            <span class="text-black font-15px font-weight-bolder">Progress</span>
+                            <span class="text-black font-15px font-weight-bolder">@lang('sitemap.label-progress')</span>
                         </div>
                         <div class="card card-custom mb-5">
                             <div class="card-body py-4 px-5">
                                 <div class="text-center">
-                                    <p id="info" class="text-black font-weight-bold mb-0">Our robot is sleeping right
-                                        now. Give him a task!</p>
+                                    <p id="info" class="text-black font-weight-bold mb-0">@lang('sitemap.label-robot')</p>
                                     {{-- <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
                                     <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p> --}}
                                     {{-- <div class="progress my-3">
@@ -584,10 +581,10 @@
                             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                                 <div class="d-flex flex-row align-items-center">
                                     <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                                    <span class="text-black font-15px">Your Local History</span>
+                                    <span class="text-black font-15px">@lang('layout.local-history')</span>
                                 </div>
                                 <div>
-                                    <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                                    <span class="clear-all font-15px pointer mr-3">@lang('layout.clear-all')</span>
                                 </div>
                             </div>
                             <div class="local-collection-body">
@@ -634,10 +631,10 @@
             <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
                 <div class="d-flex flex-row align-items-center">
                     <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                    <span class="text-black font-15px">Your Local History</span>
+                    <span class="text-black font-15px">@lang('layout.local-history')</span>
                 </div>
                 <div>
-                    <span class="clear-all font-15px pointer">Clear All</span>
+                    <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
                 </div>
             </div>
             <div class="local-collection-body mt-3 px-5" id="localsavemobile">
@@ -675,104 +672,77 @@
         <div class="container container-description">
             <div class="row">
                 <div class="col-md-9">
-                    <h2 class="text-black">@lang('wordcounter.desc-1')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-1-1')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-2')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-2-1')</p>
-                    <ul>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-1')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-2')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-3')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-4')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-5')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-6')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-7')</li>
-                    </ul>
-                    <h2 class="text-black">@lang('wordcounter.desc-3')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-3-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-5')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-4')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-4-1')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-5')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-5-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-5-2')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-6')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-6-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-5')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-6-6-1')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-5')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-6-6-2')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-2-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-2-2')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-7')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-7-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-7-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-7-3')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-8')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-8-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-1')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-1-1')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-2')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-2-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-2-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-3')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-3-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-3-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-4')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-4-1')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-9')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-9-1')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-10')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-10-1')</p>
-                    <h2 class="text-black">@lang('wordcounter.desc-11')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-11-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-5')</p>
+                    <div class="" id="description-tab-1">
+                        <h2>@lang('sitemap.desc-1')</h2>
+                        <p>@lang('sitemap.desc-1-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-2">
+                        <h2>@lang('sitemap.desc-2')</h2>
+                        <p>@lang('sitemap.desc-2-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-3">
+                        <h2>@lang('sitemap.desc-3')</h2>
+                        <p>@lang('sitemap.desc-3-1')</p>
+                        <p>@lang('sitemap.desc-3-2')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-4">
+                        <h2>@lang('sitemap.desc-4')</h2>
+                        <p>@lang('sitemap.desc-4-1')</p>
+                        <p>@lang('sitemap.desc-4-2')</p>
+                        <p>@lang('sitemap.desc-4-3')</p>
+                        <p>@lang('sitemap.desc-4-4')</p>
+                        <p>@lang('sitemap.desc-4-5')</p>
+                        <p>@lang('sitemap.desc-4-6')</p>
+                        <p>@lang('sitemap.desc-4-7')</p>
+                        <p>@lang('sitemap.desc-4-8')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-5">
+                        <h2>@lang('sitemap.desc-5')</h2>
+                        <p>@lang('sitemap.desc-5-1')</p>
+                    </div>
+                    <div class="d-none" id="description-tab-6">
+                      <h2>@lang('sitemap.desc-6')</h2>
+                      <p>@lang('sitemap.desc-6-1')</p>
+                      <p>@lang('sitemap.desc-6-2')</p>
+                  </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">1</span>
+                            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                         </div>
-                        <a href="#" class="">Why does SEO important for writing?</a>
+                        <a class="">@lang('sitemap.desc-1')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">2</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                         </div>
-                        <a href="#" class="">How search engine works?</a>
+                        <a class="">@lang('sitemap.desc-2')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">3</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                         </div>
-                        <a href="#" class="">The basic of writing?</a>
+                        <a class="">@lang('sitemap.desc-3')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">4</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                         </div>
-                        <a href="#" class="">Measuring your writing?</a>
+                        <a class="">@lang('sitemap.desc-4')</a>
                     </div>
-                    <div class="d-flex align-items-center mb-5 tools-description-points">
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
                         <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                            <span class="label label-lg label-tools-description">5</span>
+                            <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                         </div>
-                        <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+                        <a class="">@lang('sitemap.desc-5')</a>
                     </div>
+                    <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+                      <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                          <span class="label label-lg label-tools-description" id="nav-label-tab-5">6</span>
+                      </div>
+                      <a class="">@lang('sitemap.desc-6')</a>
+                  </div>
                 </div>
             </div>
             <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
@@ -784,25 +754,22 @@
                     </div>
                     <div class="col-md-6 py-10 pr-10">
                         <div class="robo-text-container">
-                            <h2 class="text-white">Writing Starter Guide</h2>
-                            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best
-                                practices to make it easier for search engines to crawl, index, and understand your
-                                content.</p>
-                            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+                            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+                            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+                            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row mb-10">
                 <div class="col-md-6">
-                    <h2 class="text-black">Available features</h2>
-                    <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-                    <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical
-                        thinking to provide technical advice from the our data.</p>
+                    <h2 class="text-black">@lang('layout.feature-title')</h2>
+                    <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') <span>@lang('sitemap.title')</span></p>
+                    <p class="text-black">@lang('layout.feature-desc')</p>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex align-items-center">
-                        <span class="text-primaryblue">cmlabs Words Counter</span>
+                        <span class="text-primaryblue">cmlabs Sitemap Generator</span>
                         <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
                         <small class="text-grey">Updated 25 Dec, 2020</small>
                     </div>
@@ -850,46 +817,44 @@
                     </label>
                 </div>
             </div>
-            <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+            <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('sitemap.title')</span></h2>
             <div class="row my-5">
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
                          role="alert" style="background: var(--lightgrey); display:block">
                         <div class="alert-text mb-5">
-                            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span
+                            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span
                                 class="label label-dot label-alert-features"></span>
                             <br/>
-                            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
                         </div>
                         <div class="alert-close pt-5 pr-5">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                             </button>
                         </div>
-                        <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+                        <span class="alert-features-text">@lang('sitemap.whats-new-1')</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
                          role="alert" style="background: var(--lightgrey); display:block">
                         <div class="alert-text mb-5">
-                            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span
+                            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span
                                 class="label label-dot label-alert-features"></span>
                             <br/>
-                            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
                         </div>
                         <div class="alert-close pt-5 pr-5">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                             </button>
                         </div>
-                        <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+                        <span class="alert-features-text">@lang('sitemap.whats-new-2')</span>
                     </div>
                 </div>
             </div>
-            <p class="text-black view-all-release">View all web-release?</p>
+            <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
         </div>
     </div>
     {{--

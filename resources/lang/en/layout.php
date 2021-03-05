@@ -34,4 +34,11 @@ return [
     "banner-robo-title" => "Writing Starter Guide",
     "banner-robo-desc" => "The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.",
     "banner-robo-btn" => "Explore today?",
+    "feature-title" => "Available features",
+    "feature-sub-title" => "Explore the full features of cmlabs",
+    "feature-desc" => "CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.",
+    "whats-new-title" => "What’s new on cmlabs",
+    "whats-new-sub-title" => "What's new",
+    "whats-new-update" => "Last Update",
+    "view-web-release" => "View all web-release?",
 ];

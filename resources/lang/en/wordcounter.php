@@ -1,8 +1,7 @@
 <?php
 return[
-    "meta-title" => "Word Counter Online – Content Writing Tools",
-    "meta-desc" => "Count the number of words your article here. Just copy and paste, then the CMLABS Word Counter tool automatically calculates words and keyword density",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "meta-title" => "Word Counter Online - Word counter tools",
+    "meta-desc" => "Count the number of words, paragraphs, reading time, and keyword density with the Word Counter Tool",
     "title" => "WORD COUNTER",
     "subtitle" => "Advance Your Writing",
     "character" => "Characters",
@@ -77,4 +76,6 @@ return[
     "desc-11-3"=>"The demand for content writer positions is increasingly sought after and content writing is now an expensive skill. That's why Word Counter is a necessity.",
     "desc-11-4"=>"Copywriter",
     "desc-11-5"=>"The popularity of copywriters is increasing and making this job necessary for companies. Therefore, copywriters need to use a Word Counter.",
+    "whats-new-1"=>"Now users can use the Word Counter tool with the autosave feature. With these updates and additional features, you don't have to worry if your writing gets lost when a technical problem occurs. Your writing would be saved safely on our system. It's time to write securely for better writing results.",
+    "whats-new-2"=>"The latest version update supports copy and adjusts font features. With this, you can adjust the appearance of the font according to what you need. Copy text easily and organize it in any way you like. We support more creative writing in this latest update. It's the right time to upgrade your writing result.",
 ];
