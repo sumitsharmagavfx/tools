@@ -406,21 +406,21 @@ function showAs(audit) {
     switch (audit.scoreDisplayMode) {
         case "manual":
         case "notApplicable":
-            return {label : audit.scoreDisplayMode, status : 'pass', color : 'gray-500'};
+            return {label : audit.scoreDisplayMode, status : 'pass', color : 'grey'};
         case "error":
         case "informative":
-            return {label : audit.scoreDisplayMode, status : 'fail', color : 'danger'};
+            return {label : audit.scoreDisplayMode, status : 'fail', color : 'red'};
         case "numeric":
         case "binary":
         default:
             if (audit.score >= PASS){
-                return {label : audit.scoreDisplayMode, status : 'pass', color : 'success'};
+                return {label : audit.scoreDisplayMode, status : 'pass', color : 'green'};
             }else if (audit.score >= AVERAGE){
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'warning'};
+                return {label : audit.scoreDisplayMode, status : 'fail', color : 'orange'};
             }else if (audit.score >= 0){
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'danger'};
+                return {label : audit.scoreDisplayMode, status : 'fail', color : 'red'};
             }else {
-                return {label : audit.scoreDisplayMode, status : 'fail', color : 'gray-500'};
+                return {label : audit.scoreDisplayMode, status : 'fail', color : 'grey'};
             }
     }
 }

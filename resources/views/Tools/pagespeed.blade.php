@@ -134,6 +134,22 @@ id/pagespeed-test
             margin-bottom: 1.5rem;
         }
     }
+
+    .bg-green {
+        background-color: #84DB15 !important;
+    }
+
+    .bg-orange {
+        background-color: #FBC918 !important;
+    }
+
+    .bg-red {
+        background-color: #FF5656 !important;
+    }
+
+    .bg-grey {
+        background-color: #CCD6DD !important;
+    }
 </style>
 @endpush
 
@@ -177,7 +193,7 @@ id/pagespeed-test
 
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
                                             <!-- <a href="#performance"> -->
-                                            <div class="circleProgressBar active" id="performancePB" data-toggle="tab" href="#internal-link-tab" role="tab" aria-controls="nav-home" aria-selected="true" id="internal-links-value-tab">
+                                            <div class="circleProgressBar active" id="performancePB">
                                                 <div class="progress progress-red performance" data-percentage="0">
                                                     <span class="progress-left">
                                                         <span class="progress-bar progress-bar-performance"></span>
@@ -201,7 +217,7 @@ id/pagespeed-test
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
                                             <!-- <a href="#accessibility"> -->
                                             <div class="circleProgressBar" id="accessibilityPB">
-                                                <div class="progress progress-orange accessibility" data-percentage="0">
+                                                <div class="progress progress-red accessibility" data-percentage="0">
                                                     <span class="progress-left">
                                                         <span class="progress-bar progress-bar-accessibility"></span>
                                                     </span>
@@ -209,7 +225,7 @@ id/pagespeed-test
                                                         <span class="progress-bar progress-bar-accessibility"></span>
                                                     </span>
                                                     <div class="progress-value" style="width:100%">
-                                                        <div class="value-accessibility value-orange">
+                                                        <div class="value-accessibility value-red">
                                                             0
                                                         </div>
                                                     </div>
@@ -224,7 +240,7 @@ id/pagespeed-test
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
                                             <!-- <a href="#best-practice" id="nav-best-practices"> -->
                                             <div class="circleProgressBar" id="practicePB">
-                                                <div class="progress progress-green best-practices" data-percentage="0">
+                                                <div class="progress progress-red best-practices" data-percentage="0">
                                                     <span class="progress-left">
                                                         <span class="progress-bar progress-bar-best-practices"></span>
                                                     </span>
@@ -232,7 +248,7 @@ id/pagespeed-test
                                                         <span class="progress-bar progress-bar-best-practices"></span>
                                                     </span>
                                                     <div class="progress-value" style="width:100%">
-                                                        <div class="value-best-practices value-green">
+                                                        <div class="value-best-practices value-red">
                                                             0
                                                         </div>
                                                     </div>
@@ -270,7 +286,7 @@ id/pagespeed-test
                                         <div class="col-6 col-sm-4 col-md-4 col-lg-4 col-xl">
                                             <!-- <a href="#pwa"> -->
                                             <div class="circleProgressBar" id="pwaPB">
-                                                <div class="progress progress-green pwa" data-percentage="0">
+                                                <div class="progress progress-red pwa" data-percentage="0">
                                                     <span class="progress-left">
                                                         <span class="progress-bar progress-bar-pwa"></span>
                                                     </span>
@@ -278,7 +294,7 @@ id/pagespeed-test
                                                         <span class="progress-bar progress-bar-pwa"></span>
                                                     </span>
                                                     <div class="progress-value" style="width:100%">
-                                                        <div class="value-pwa value-green">
+                                                        <div class="value-pwa value-red">
                                                             0
                                                         </div>
                                                     </div>
@@ -341,7 +357,7 @@ id/pagespeed-test
                                     <p class="h4">Accesibility</p>
                                     <div class="col">
                                         <div class="">
-                                            <div class="progress progress-orange accessibility result" data-percentage="0">
+                                            <div class="progress progress-red accessibility result" data-percentage="0">
                                                 <span class="progress-left">
                                                     <span class="progress-bar progress-bar-accessibility"></span>
                                                 </span>
@@ -349,7 +365,7 @@ id/pagespeed-test
                                                     <span class="progress-bar progress-bar-accessibility"></span>
                                                 </span>
                                                 <div class="progress-value" style="width:100%">
-                                                    <div class="value-accessibility value-orange">
+                                                    <div class="value-accessibility value-red">
                                                         0
                                                     </div>
                                                 </div>
@@ -370,7 +386,7 @@ id/pagespeed-test
                                     <p class="h4">Best Practies</p>
                                     <div class="col">
                                         <div class="">
-                                            <div class="progress progress-green practices result" data-percentage="0">
+                                            <div class="progress progress-red practices result" data-percentage="0">
                                                 <span class="progress-left">
                                                     <span class="progress-bar progress-bar-best-practices"></span>
                                                 </span>
@@ -378,7 +394,7 @@ id/pagespeed-test
                                                     <span class="progress-bar progress-bar-best-practices"></span>
                                                 </span>
                                                 <div class="progress-value" style="width:100%">
-                                                    <div class="value-best-practices value-green">
+                                                    <div class="value-best-practices value-red">
                                                         0
                                                     </div>
                                                 </div>
@@ -426,7 +442,7 @@ id/pagespeed-test
                                     <p class="h4">PWA</p>
                                     <div class="col">
                                         <div class="">
-                                            <div class="progress progress-green pwa result" data-percentage="0">
+                                            <div class="progress progress-red pwa result" data-percentage="0">
                                                 <span class="progress-left">
                                                     <span class="progress-bar progress-bar-pwa"></span>
                                                 </span>
@@ -434,7 +450,7 @@ id/pagespeed-test
                                                     <span class="progress-bar progress-bar-pwa"></span>
                                                 </span>
                                                 <div class="progress-value" style="width:100%">
-                                                    <div class="value-pwa value-green">
+                                                    <div class="value-pwa value-red">
                                                         0
                                                     </div>
                                                 </div>
