@@ -276,44 +276,98 @@ id/page-title-meta-description-checker
         <div class="row">
             <div class="col-md-9">
                 <div class="" id="description-tab-1">
-                    <h2 class="text-black">Why does SEO important for writing?</h2>
-                    <p class="text-black">Lorem 1</p>
+                    <h2>@lang('metachecker.desc-1')</h2>
+                    <p>@lang('metachecker.desc-1-1')</p>
                 </div>
                 <div class="d-none" id="description-tab-2">
-                    <h2 class="text-black">How search engine works?</h2>
-                    <p class="text-black">Lorem 2</p>
+                    <h2>@lang('metachecker.desc-2')</h2>
+                    <p>@lang('metachecker.desc-2-1')</p>
+                    <p>@lang('metachecker.desc-2-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">The basic of writing?</h2>
-                    <p class="text-black">Lorem 3</p>
+                    <h2>@lang('metachecker.desc-3')</h2>
+                    <p>@lang('metachecker.desc-3-1')</p>
+                    <h3>@lang('metachecker.desc-3-2')</h3>
+                    <ul>
+                        <li>@lang('metachecker.desc-3-2-1')</li>
+                        <li>@lang('metachecker.desc-3-2-2')</li>
+                        <li>@lang('metachecker.desc-3-2-3')</li>
+                        <li>@lang('metachecker.desc-3-2-4')</li>
+                    </ul>
+                    <h3>@lang('metachecker.desc-3-3')</h3>
+                    <ul>
+                        <li>
+                            <p>@lang('metachecker.desc-3-3-1')</p>
+                            <p>@lang('metachecker.desc-3-3-1-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-3-3-2')</p>
+                            <p>@lang('metachecker.desc-3-3-2-1')</p>
+                        </li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">Tab 4</h2>
-                    <p class="text-black">Lorem 4</p>
+                    <h2>@lang('metachecker.desc-4')</h2>
+                    <p>@lang('metachecker.desc-4-1')</p>
+                    <h3>@lang('metachecker.desc-4-2')</h3>
+                    <ul>
+                        <li>
+                            <p>@lang('metachecker.desc-4-2-1')</p>
+                            <p>@lang('metachecker.desc-4-2-1-1')</p>
+                            <p>@lang('metachecker.desc-4-2-1-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-4-2-2')</p>
+                            <p>@lang('metachecker.desc-4-2-2-1')</p>
+                            <p>@lang('metachecker.desc-4-2-2-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-4-2-3')</p>
+                            <p>@lang('metachecker.desc-4-2-3-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-4-2-4')</p>
+                            <p>@lang('metachecker.desc-4-2-4-1')</p>
+                            <p>@lang('metachecker.desc-4-2-4-2')</p>
+                            <p>@lang('metachecker.desc-4-2-4-3')</p>
+                            <ul>
+                                <li>
+                                    <p>@lang('metachecker.desc-4-2-4-3-1')</p>
+                                    <p>@lang('metachecker.desc-4-2-4-3-1-1')</p>
+                                </li>
+                                <li>
+                                    <p>@lang('metachecker.desc-4-2-4-3-2')</p>
+                                    <p>@lang('metachecker.desc-4-2-4-3-2-1')</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">Tab 5</h2>
-                    <p class="text-black">Lorem 5</p>
-                </div>
-                <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">Why does SEO important for writing?</h2>
-                    <p class="text-black">Lorem 1</p>
-                </div>
-                <div class="d-none" id="description-tab-7">
-                    <h2 class="text-black">How search engine works?</h2>
-                    <p class="text-black">Lorem 2</p>
-                </div>
-                <div class="d-none" id="description-tab-8">
-                    <h2 class="text-black">The basic of writing?</h2>
-                    <p class="text-black">Lorem 3</p>
-                </div>
-                <div class="d-none" id="description-tab-9">
-                    <h2 class="text-black">Tab 9</h2>
-                    <p class="text-black">Lorem 4</p>
-                </div>
-                <div class="d-none" id="description-tab-10">
-                    <h2 class="text-black">Tab 10</h2>
-                    <p class="text-black">Lorem 5</p>
+                    <h2>@lang('metachecker.desc-5')</h2>
+                    <p>@lang('metachecker.desc-5-1')</p>
+                    <p>@lang('metachecker.desc-5-2')</p>
+                    <p>@lang('metachecker.desc-5-2-1')</p>
+                    <h3>@lang('metachecker.desc-5-3')</h3>
+                    <p>@lang('metachecker.desc-5-3-1')</p>
+                    <ul>
+                        <li>
+                            <p>@lang('metachecker.desc-5-3-2')</p>
+                            <p>@lang('metachecker.desc-5-3-2-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-5-3-3')</p>
+                            <p>@lang('metachecker.desc-5-3-3-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-5-3-4')</p>
+                            <p>@lang('metachecker.desc-5-3-4-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('metachecker.desc-5-3-5')</p>
+                            <p>@lang('metachecker.desc-5-3-5-1')</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-3">
@@ -321,61 +375,31 @@ id/page-title-meta-description-checker
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
                     </div>
-                    <a class="">Why does SEO important for writing?</a>
+                    <a class="">@lang('metachecker.desc-1')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
                     </div>
-                    <a class="">How search engine works?</a>
+                    <a class="">@lang('metachecker.desc-2')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
                     </div>
-                    <a class="">The basic of writing?</a>
+                    <a class="">@lang('metachecker.desc-3')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
                     </div>
-                    <a class="">Measuring your writing?</a>
+                    <a class="">@lang('metachecker.desc-4')</a>
                 </div>
                 <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
                     <div class="mr-2" style="width:24px !important; height: 24px !important;">
                         <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
                     </div>
-                    <a class="">Hiring profesional content strategy and consultant?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-6">6</span>
-                    </div>
-                    <a class="">Why does SEO important for writing?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-7">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-7">7</span>
-                    </div>
-                    <a class="">How search engine works?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-8">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-8">8</span>
-                    </div>
-                    <a class="">The basic of writing?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-9">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-9">9</span>
-                    </div>
-                    <a class="">Measuring your writing?</a>
-                </div>
-                <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-10">
-                    <div class="mr-2" style="width:24px !important; height: 24px !important;">
-                        <span class="label label-lg label-tools-description" id="nav-label-tab-10">10</span>
-                    </div>
-                    <a class="">Hiring profesional content strategy and consultant?</a>
+                    <a class="">@lang('metachecker.desc-5')</a>
                 </div>
             </div>
         </div>

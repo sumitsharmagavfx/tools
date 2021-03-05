@@ -2,8 +2,7 @@
 
 return [
     "meta-title" => "Penghitung Kata Online - Cek Jumlah kata Hingga Density",
-    "meta-desc" => "Word counter adalah tools SEO gratis dari cmlabs memiliki fitur menghitung kepadatan kata kunci atau keyword density.",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "meta-desc" => "Hitung jumlah kata, paragraf, waktu membaca, dan kepadatan keyword dengan Word Counter Tool.",
     "title" => "WORD COUNTER",
     "subtitle" => "Tingkatkan Skill Menulis",
     "character" => "Karakter",
