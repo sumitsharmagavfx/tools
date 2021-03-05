@@ -5,6 +5,8 @@ return [
     "lang" => "en",
     "title" => "LINK ANALYZER",
     "sub-title" => "Keep Track All The Links Of Your Site",
+    "analyze-btn" => "Analyze URL",
+    "result-none" => "No URL analyzed, please input your domain above!",
     "desc-1" => "How Do I Use This Link Analysis Tool?",
     "desc-1-1" => "Simply enter the URL of the website you want to review to use this Link Analyzer tool and choose if you want it through an external link, an internal link or both. You can also check the box for do not follow links.",
     "desc-1-2" => "This Link Analyzer will produce results instantly. This will display a report covering all incoming and outgoing links and associated link text. If there is a hyperlinked image on the page, the image's alt attribute will be displayed as link text.",

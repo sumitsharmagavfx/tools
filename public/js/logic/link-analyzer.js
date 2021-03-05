@@ -4,6 +4,12 @@ var dataResult = undefined;
 var counter = 1;
 var analyzeChart = undefined;
 
+if (lang == "en") {
+    var localStorageNone = "This is your first impressions, no history yet!";
+} else if  (lang == "id") {
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+}
+
 const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
@@ -19,7 +25,7 @@ const HistoryTemplate = (url, date) => `
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>This is your first impressions, no history yet!</span>
+    <span>` + localStorageNone + `</span>
   </div>
 </li>`;
 
