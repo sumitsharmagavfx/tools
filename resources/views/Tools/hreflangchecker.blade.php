@@ -20,25 +20,15 @@
             <div class="container-fluid px-0">
                 <h1 class="text-darkgrey font-weight-normal">@lang('hreflang.title')</h1>
                 <span class="text-darkgrey h4 font-weight-normal">@lang('hreflang.sub-title')</span>
-
                 <div class="header-blue mt-10 mb-5 px-5 py-1">
                     <div class="row d-flex align-items-center">
                         <div class="col-sm-9 col-md-10 col-lg-9 col-xl-10 d-flex align-items-center py-1">
-                            <!-- BEFORE CRAWL -->
                             <i id="empty-url" class='bx bxs-shield text-white bx-md mr-3'></i>
-
-                            <!-- HTTPS URL -->
-                            <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3'
-                               style="display: none"></i>
-
-                            <!-- HTTP URL -->
-                            <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3'
-                               style="display: none"></i>
-                            <input type="url" class="form-control hreflang-url" name="" value=""
-                                   placeholder="http://example.com" id="input-url" autocomplete="off">
+                            <i id="secure-url" class='bx bxs-check-shield text-white bx-md mr-3' style="display: none"></i>
+                            <i id="unsecure-url" class='bx bxs-shield-x text-white bx-md mr-3' style="display: none"></i>
+                            <input type="url" class="form-control hreflang-url" name="" value="" placeholder="http://example.com" id="input-url" autocomplete="off">
                         </div>
                         <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
-                            <!-- CRAWL BUTTON -->
                             <button id="check-btn" type="button" class="btn btn-crawl" name="button">CHECK URL</button>
                         </div>
                     </div>
@@ -51,9 +41,6 @@
                         </div>
                         <div class="card card-custom mb-5">
                             <div class="card-body py-4 px-0">
-
-
-                                <!-- RESULT CRAWL -->
                                 <div class="" id=>
                                     <div class="d-flex mx-5 mb-5" id="hreflang-result-header" style="display: none !important;">
                                         <div class="number-hreflang font-weight-bolder text-black">
@@ -72,14 +59,10 @@
                                             <p class="mb-0">Region</p>
                                         </div>
                                     </div>
-
                                     <div id="hreflang-result-list">
-                                        <p class="text-center d-block">No URL checked, please input your domain
-                                            above!</p>
+                                        <p class="text-center d-block">No URL checked, please input your domain above!</p>
                                     </div>
                                 </div>
-
-                                <!-- BEFORE CRAWL -->
                                 <div class="" id="no-crawl-result">
                                     <div class="text-center">
                                         <a href="#" class="links">Learn how to use this tools?</a>
@@ -95,21 +78,14 @@
                         <div class="card card-custom mb-5">
                             <div class="card-body py-4 px-5">
                                 <div class="text-center">
-                                    <p class="text-black font-weight-bold mb-0" id="progress-stop-message">Our robot is sleeping right now. Give
-                                        him a task!</p>
+                                    <p class="text-black font-weight-bold mb-0" id="progress-stop-message">Our robot is sleeping right now. Give him a task!</p>
                                     <p class="text-black font-weight-bold mb-0" id="progress-start-message" style="display: none">Our robot is excecuting your task..</p>
-                                    <p class="text-black font-weight-bold mb-0" id="progress-finish-message" style="display: none">Our robot is already finished your
-                                        task.</p>
+                                    <p class="text-black font-weight-bold mb-0" id="progress-finish-message" style="display: none">Our robot is already finished your task.</p>
                                     <div class="progress my-3">
-                                        <div class="progress-bar" role="progressbar" style="width: 0%;"
-                                             aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                                             id="progress-bar-loader">
-
+                                        <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progress-bar-loader">
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-cancel-disabled" disabled name="button"
-                                            id="cancel-request-btn">Cancel
-                                    </button>
+                                    <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -161,7 +137,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -293,8 +268,7 @@
                 <div class="col-md-6">
                     <h2 class="text-black">Available features</h2>
                     <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-                    <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical
-                        thinking to provide technical advice from the our data.</p>
+                    <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="d-flex align-items-center">
