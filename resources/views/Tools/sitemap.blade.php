@@ -513,7 +513,7 @@
                             <!-- HTTP URL -->
                             <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
                             <input id="url" type="url" class="form-control sitemap-url" name="" value=""
-                                   placeholder="{{ Lang::get('sitemap.input-hint') }}">
+                                   placeholder="{{ Lang::get('layout.input-hint') }}">
                         </div>
                         <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                             <!-- CRAWL BUTTON -->
@@ -525,10 +525,10 @@
                     <div class="col-md-8">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="px-2 mb-3">
-                                <span class="text-black font-15px font-weight-bolder">@lang('sitemap.result-title')</span>
+                                <span class="text-black font-15px font-weight-bolder">@lang('layout.result-title')</span>
                                 <span id="length-result" class="font-15px font-weight-bolder"
                                       style="color:#9A99A2">(0)</span>
-                                <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('sitemap.result-sub-title'))</span>
+                                <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.result-sub-title'))</span>
                             </div>
                             <div id="download-button" class="mb-3">
                             </div>
@@ -540,7 +540,7 @@
                                 <div class="" id="noCrawlResult">
                                     <div class="text-center">
                                         <p class="d-block">@lang('sitemap.no-crawl-result')</p>
-                                        <a href="#" class="links">@lang('sitemap.learn-tool')</a>
+                                        <a href="#" class="links">@lang('layout.learn-tool')</a>
                                     </div>
                                 </div>
 
@@ -558,12 +558,12 @@
                     </div>
                     <div class="col-md-4">
                         <div class="px-2 mb-3 d-flex align-items-center" style="height:31.88px">
-                            <span class="text-black font-15px font-weight-bolder">@lang('sitemap.label-progress')</span>
+                            <span class="text-black font-15px font-weight-bolder">@lang('layout.label-progress')</span>
                         </div>
                         <div class="card card-custom mb-5">
                             <div class="card-body py-4 px-5">
                                 <div class="text-center">
-                                    <p id="info" class="text-black font-weight-bold mb-0">@lang('sitemap.label-robot')</p>
+                                    <p id="info" class="text-black font-weight-bold mb-0">@lang('layout.label-robot')</p>
                                     {{-- <p class="text-black font-weight-bold mb-0">Our robot is excecuting your task..</p>
                                     <p class="text-black font-weight-bold mb-0">Our robot is already finished your task.</p> --}}
                                     {{-- <div class="progress my-3">

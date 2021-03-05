@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('mobiletest.meta-desc'))
 
-@section('meta-keyword', Lang::get('mobiletest.meta-keyword'))
-
 @section('conical','/en/mobile-test')
 
 @section('en-link')
@@ -112,8 +110,8 @@ id/mobile-test
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">MOBILE FRIENDLY TEST</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <h1 class="text-darkgrey font-weight-normal">@lang('mobiletest.title')</h1>
+      <span class="text-darkgrey h4 font-weight-normal">@lang('mobiletest.sub-title')</span>
 
       <div class="header-blue mt-10 mb-5 px-5 py-1">
         <div class="row d-flex align-items-center">
@@ -126,19 +124,19 @@ id/mobile-test
 
             <!-- HTTP URL -->
             <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3 d-none'></i>
-            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="INPUT / PASTE YOUR DOMAIN" id="tested_url">
+            <input type="url" class="form-control sitemap-url" name="" value="" placeholder="{{ Lang::get('layout.input-hint') }}" id="tested_url">
           </div>
           <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
             <!-- CRAWL BUTTON -->
-            <button id="generateButton" type="button" class="btn btn-crawl" name="button">CHECK URL</button>
+            <button id="generateButton" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-7">
           <div class="px-2 mb-3">
-            <span class="text-black font-15px font-weight-bolder">Results</span>
-            <span class="font-15px what-is-this" style="color:#9A99A2">(What is this?)</span>
+            <span class="text-black font-15px font-weight-bolder">@lang('layout.result-title')</span>
+            <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.result-sub-title'))</span>
           </div>
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-0">
@@ -146,8 +144,8 @@ id/mobile-test
               <!-- BEFORE CRAWL -->
               <div class="" id="noCrawlResult">
                 <div class="text-center">
-                  <p class="d-block text-black">No URL tested, please input your domain above!</p>
-                  <a href="#" class="links">Learn how to use this tools?</a>
+                  <p class="d-block text-black">@lang('mobiletest.no-test-result')</p>
+                  <a href="#" class="links">@lang('layout.learn-tool')</a>
                 </div>
               </div>
 
@@ -180,10 +178,10 @@ id/mobile-test
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer mr-3">Clear All</span>
+                <span class="clear-all font-15px pointer mr-3">@lang('layout.clear-all')</span>
               </div>
             </div>
             <div class="local-collection-body">
@@ -266,12 +264,12 @@ id/mobile-test
         </div>
         <div class="col-md-5">
           <div class="px-2 mb-3 d-flex align-items-center">
-            <span class="text-black font-15px font-weight-bolder">Progress</span>
+            <span class="text-black font-15px font-weight-bolder">@lang('layout.label-progress')</span>
           </div>
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0" id="task-sleeping">Our robot is sleeping right now. Give him a task!</p>
+                <p class="text-black font-weight-bold mb-0" id="task-sleeping">@lang('layout.label-robot')</p>
                 <p class="d-none text-black font-weight-bold mb-0" id="task-progress">Our robot is excecuting your task..</p>
                 <p class="d-none text-black font-weight-bold mb-0" id="task-done">Our robot is already finished your task.</p>
                 <div class="progress my-3">
@@ -282,15 +280,15 @@ id/mobile-test
             </div>
           </div>
           <div class="px-2 mb-3 d-flex align-items-center">
-            <span class="text-black font-15px font-weight-bolder">Mobile Preview</span>
+            <span class="text-black font-15px font-weight-bolder">@lang('mobiletest.label-mobile-preview')</span>
           </div>
           <div class="card card-custom">
             <div class="card-body">
 
               <div class="" id="noCrawlResultPreview">
                 <div class="text-center">
-                  <p class="d-block">No URL tested, please input your domain above!</p>
-                  <a href="#" class="links">Learn how to use this tools?</a>
+                  <p class="d-block">@lang('mobiletest.no-test-result')</p>
+                  <a href="#" class="links">@lang('layout.learn-tool')</a>
                 </div>
               </div>
 
@@ -310,10 +308,10 @@ id/mobile-test
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
+        <span class="text-black font-15px">@lang('layout.local-history')</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
       </div>
     </div>
     <div class="local-collection-body mt-3 px-5">
@@ -392,47 +390,66 @@ id/mobile-test
 
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+            <h2>@lang('mobiletest.desc-1')</h2>
+            <p>@lang('mobiletest.desc-1-1')</p>
+        </div>
+        <div class="d-none" id="description-tab-2">
+            <h2>@lang('mobiletest.desc-2')</h2>
+            <p>@lang('mobiletest.desc-2-1')</p>
+            <p>@lang('mobiletest.desc-2-2')</p>
+            <h3>@lang('mobiletest.desc-2-3')</h3>
+            <p>@lang('mobiletest.desc-2-3-1')</p>
+            <p>@lang('mobiletest.desc-2-3-2')</p>
+            <h3>@lang('mobiletest.desc-2-4')</h3>
+            <p>@lang('mobiletest.desc-2-4-1')</p>
+            <ul>
+              <li>@lang('mobiletest.desc-2-4-1-1')</li>
+              <li>@lang('mobiletest.desc-2-4-1-2')</li>
+              <li>@lang('mobiletest.desc-2-4-1-3')</li>
+              <li>@lang('mobiletest.desc-2-4-1-4')</li>
+            </ul>
+            <h3>@lang('mobiletest.desc-2-5')</h3>
+            <p>@lang('mobiletest.desc-2-5-1')</p>
+            <h3>@lang('mobiletest.desc-2-6')</h3>
+            <p>@lang('mobiletest.desc-2-6-1')</p>
+        </div>
+        <div class="d-none" id="description-tab-3">
+            <h2>@lang('mobiletest.desc-3')</h2>
+            <p>@lang('mobiletest.desc-3-1')</p>
+            <h3>@lang('mobiletest.desc-3-1-1')</h3>
+            <p>@lang('mobiletest.desc-3-1-1-1')</p>
+            <h3>@lang('mobiletest.desc-3-1-2')</h3>
+            <p>@lang('mobiletest.desc-3-1-2-1')</p>
+            <h3>@lang('mobiletest.desc-3-1-3')</h3>
+            <p>@lang('mobiletest.desc-3-1-3-1')</p>
+            <h3>@lang('mobiletest.desc-3-1-4')</h3>
+            <p>@lang('mobiletest.desc-3-1-4-1')</p>
+            <h3>@lang('mobiletest.desc-3-1-5')</h3>
+            <p>@lang('mobiletest.desc-3-1-5-1')</p>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
+              <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                  <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
+              </div>
+              <a class="">@lang('mobiletest.desc-1')</a>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
+              <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                  <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
+              </div>
+              <a class="">@lang('mobiletest.desc-2')</a>
           </div>
-          <a href="#" class="">How search engine works?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
+              <div class="mr-2" style="width:24px !important; height: 24px !important;">
+                  <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
+              </div>
+              <a class="">@lang('mobiletest.desc-3')</a>
           </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
-          </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
-        </div>
       </div>
     </div>
     <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
@@ -444,22 +461,22 @@ id/mobile-test
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
     <div class="row mb-10">
       <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">@lang('layout.feature-title')</h2>
+        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') <span>@lang('mobiletest.title')</span></p>
+        <p class="text-black">@lang('layout.feature-desc')</p>
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="text-primaryblue">cmlabs Mobile Friendly Test</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
           <small class="text-grey">Updated 25 Dec, 2020</small>
         </div>
@@ -474,42 +491,40 @@ id/mobile-test
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('mobiletest.title')</span></h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('mobiletest.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('mobiletest.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
   </div>
 </div>
 
