@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Link Analyzer')
+@section('title', Lang::get('analyzer.meta-title'))
 
-@section('meta-desc', 'Link Analyzer')
+@section('meta-desc', Lang::get('analyzer.meta-desc'))
 
 @section('conical','/en/link-analyzer')
 
