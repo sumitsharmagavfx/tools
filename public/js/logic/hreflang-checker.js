@@ -42,19 +42,19 @@ const EmptyHistoryTemplateMobile = () => `
 
 const HreflangResultTemplate = (no, url, hreflang, language, region) => `
 <div class="d-flex mx-5 result-row">
-  <div class="number">
+  <div class="number-hreflang">
     <span class="label label-square label-hreflang">${no}</span>
   </div>
-  <div class="url">
+  <div class="url-hreflang">
     <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="${url}">${url}</p>
   </div>
   <div class="hreflang">
     <p class="mb-0">${hreflang}</p>
   </div>
-  <div class="language">
+  <div class="language-hreflang">
     <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="${language}">${language}</p>
   </div>
-  <div class="region">
+  <div class="region-hreflang">
     <p class="mb-0" data-toggle="tooltip" data-theme="dark" title="${region}">${region}</p>
   </div>
 </div>
