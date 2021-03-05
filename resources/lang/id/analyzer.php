@@ -5,6 +5,8 @@ return [
     "lang" => "id",
     "title" => "LINK ANALYZER",
     "sub-title" => "Terus Lacak Semua Tautan Di Situs Web Anda",
+    "analyze-btn" => "Analisis URL",
+    "result-none" => "Tidak ada URL yang dianalisis, harap masukkan domain Anda di atas!",
     "desc-1" => "Bagaimana Saya Menggunakan Tool Link Analysis",
     "desc-1-1" => "Cukup masukkan URL situs web yang ingin Anda tinjau untuk menggunakan tool link analysis ini dan pilih apakah Anda menginginkannya melalui tautan eksternal, tautan internal, atau keduanya. Anda juga dapat mencentang kotak untuk tautan jangan ikuti.",
     "desc-1-2" => "Link Analyzer ini akan memberikan hasil secara instan. Ini akan menampilkan laporan yang mencakup semua tautan masuk dan keluar serta teks tautan terkait. Jika ada gambar hyperlink pada halaman tersebut, atribut alt gambar akan ditampilkan sebagai teks link.",
