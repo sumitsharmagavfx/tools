@@ -563,3 +563,4 @@ let clearAll = function () {
 }
 
 refreshLocalStorage();
+
