@@ -44,7 +44,7 @@ const EmptyHistoryTemplateMobile = () => `
 
 const LinkTemplate = (no, url, rels, title) => `
 <div class="d-flex mx-5 result-row">
-  <div class="number d-flex align-items-center">
+  <div class="number-analyzer d-flex align-items-center">
     <span class="label label-square label-analyzer">${no}</span>
   </div>
   <div class="url-analyzer d-flex align-items-center">
