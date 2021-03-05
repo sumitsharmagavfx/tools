@@ -29,6 +29,7 @@ return [
     "for-writers" => "SEO Tool untuk Writers",
     "switch-to" => "Beralih ke",
     "home" => "Beranda",
+    "input-hint" => "MASUKKAN / TEMPEL DOMAIN ANDA",
     "result" => "Hasil",
     "what-is-this" => "Apa ini?",
     "progress" => "Progres",

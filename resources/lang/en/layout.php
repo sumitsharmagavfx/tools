@@ -29,6 +29,7 @@ return [
     "for-writers" => "SEO Tools for Writers",
     "switch-to" => "Switch to",
     "home" => "Home",
+    "input-hint" => "INPUT / PASTE YOUR DOMAIN",
     "result" => "Results",
     "what-is-this" => "What is this?",
     "progress" => "Progress",

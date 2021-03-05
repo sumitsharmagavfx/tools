@@ -135,8 +135,8 @@ id/mobile-test
       <div class="row">
         <div class="col-md-7">
           <div class="px-2 mb-3">
-            <span class="text-black font-15px font-weight-bolder">@lang('layout.result-title')</span>
-            <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.result-sub-title'))</span>
+            <span class="text-black font-15px font-weight-bolder">@lang('layout.result')</span>
+            <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
           </div>
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-0">
@@ -145,7 +145,7 @@ id/mobile-test
               <div class="" id="noCrawlResult">
                 <div class="text-center">
                   <p class="d-block text-black">@lang('mobiletest.no-test-result')</p>
-                  <a href="#" class="links">@lang('layout.learn-tool')</a>
+                  <a href="#" class="links">@lang('layout.learn-how-to-use')</a>
                 </div>
               </div>
 
@@ -188,7 +188,7 @@ id/mobile-test
               <ul class="list-group">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>@lang('layout.local-history-none')</span>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
@@ -245,7 +245,7 @@ id/mobile-test
               <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                   <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                    Version 2.3
+                    @lang('layout.version') 2.3
                   </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -254,7 +254,7 @@ id/mobile-test
                       consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     <div class="d-flex align-items-center">
                       <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                      <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                      <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                     </div>
                   </div>
                 </div>
@@ -264,18 +264,18 @@ id/mobile-test
         </div>
         <div class="col-md-5">
           <div class="px-2 mb-3 d-flex align-items-center">
-            <span class="text-black font-15px font-weight-bolder">@lang('layout.label-progress')</span>
+            <span class="text-black font-15px font-weight-bolder">@lang('layout.progress')</span>
           </div>
           <div class="card card-custom mb-5">
             <div class="card-body py-4 px-5">
               <div class="text-center">
-                <p class="text-black font-weight-bold mb-0" id="task-sleeping">@lang('layout.label-robot')</p>
-                <p class="d-none text-black font-weight-bold mb-0" id="task-progress">Our robot is excecuting your task..</p>
-                <p class="d-none text-black font-weight-bold mb-0" id="task-done">Our robot is already finished your task.</p>
+                <p class="text-black font-weight-bold mb-0" id="task-sleeping">@lang('layout.robot-sleep')</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-progress">@lang('layout.robot-progress')</p>
+                <p class="d-none text-black font-weight-bold mb-0" id="task-done">@lang('layout.robot-done')</p>
                 <div class="progress my-3">
                   <div class="progress-bar" role="progressbar" id="progress-bar-loader" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">Cancel</button>
+                <button type="button" class="btn btn-cancel-disabled" disabled name="button" id="cancel-request-btn">@lang('layout.cancel-btn')</button>
               </div>
             </div>
           </div>
@@ -288,7 +288,7 @@ id/mobile-test
               <div class="" id="noCrawlResultPreview">
                 <div class="text-center">
                   <p class="d-block">@lang('mobiletest.no-test-result')</p>
-                  <a href="#" class="links">@lang('layout.learn-tool')</a>
+                  <a href="#" class="links">@lang('layout.learn-how-to-use')</a>
                 </div>
               </div>
 
@@ -317,7 +317,7 @@ id/mobile-test
     <div class="local-collection-body mt-3 px-5">
       <div class="custom-card py-5 px-3">
         <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
+          <span>@lang('layout.local-history-none')</span>
         </div>
       </div>
       <div class="custom-card py-5 px-3">
@@ -379,7 +379,7 @@ id/mobile-test
               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <div class="d-flex align-items-center">
               <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-              <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+              <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
             </div>
           </div>
         </div>
@@ -478,7 +478,7 @@ id/mobile-test
         <div class="d-flex align-items-center">
           <span class="text-primaryblue">cmlabs Mobile Friendly Test</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
+          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
         <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
