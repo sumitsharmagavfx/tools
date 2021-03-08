@@ -1403,17 +1403,17 @@ textarea.input-meta-description {
     }
 }
 
-.hreflang-url, .lookup-url {
+.hreflang-url, .lookup-url, .redirect-url {
     background: var(--primaryblue);
     border: none;
     color: white;
 }
 
-.hreflang-url::placeholder, .lookup-url::placeholder {
+.hreflang-url::placeholder, .lookup-url::placeholder, .redirect-url::placeholder {
     color: white;
 }
 
-.hreflang-url:focus, .lookup-url:focus {
+.hreflang-url:focus, .lookup-url:focus, .redirect-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -1438,7 +1438,7 @@ textarea.input-meta-description {
     text-decoration: underline !important;
 }
 
-.hreflang-url-result, .analyzer-url-result {
+.hreflang-url-result, .analyzer-url-result, .redirect-url-result {
     color: var(--darkgrey);
     font-weight: bold;
 }
@@ -1482,16 +1482,16 @@ textarea.input-meta-description {
     color: var(--darkgrey);
 }
 
-.hreflang-show-more, .analyzer-show-more {
+.hreflang-show-more, .analyzer-show-more, .redirect-show-more {
     color: var(--darkgrey);
 }
 
-.result-row:hover .label-hreflang, .result-row:hover .label-analyzer {
+.result-row:hover .label-hreflang, .result-row:hover .label-analyzer, .result-row:hover .label-redirect {
     background: var(--primaryblue);
     color: white;
 }
 
-.result-row:hover .hreflang-url-result, .result-row:hover .analyzer-url-result {
+.result-row:hover .hreflang-url-result, .result-row:hover .analyzer-url-result, .result-row:hover .redirect-url-result {
     color: var(--black);
 }
 
@@ -1931,26 +1931,66 @@ textarea.input-meta-description {
 }
 
 .btn-crawl-disabled {
-  height: 60%;
-  width: 100%;
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: not-allowed;
+    height: 60%;
+    width: 100%;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: not-allowed;
 }
+
 .btn-crawl-disabled:hover {
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: not-allowed;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: not-allowed;
 }
 
 .technology-name {
-  color: var(--darkgrey);
-  font-weight: bold;
+    color: var(--darkgrey);
+    font-weight: bold;
 }
+
 .technology-name:hover {
-  color: var(--black);
+    color: var(--black);
+}
+
+.label-redirect {
+    width: 40px;
+    font-weight: 400;
+    background: var(--lightgrey);
+    color: var(--darkgrey);
+}
+
+.redirect-url-result-link {
+    color: var(--primaryblue);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.redirect-url-result-link:hover {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.user-agent button {
+    border-radius: 20px !important
+}
+
+.user-agent {
+    border-radius: 20px !important;
+}
+
+.bootstrap-select.user-agent .dropdown-menu.inner>li.selected>a, .bootstrap-select.user-agent .dropdown-menu.inner>li:hover>a {
+    background: var(--primaryblue) !important;
+    color: white !important;
+}
+
+.bootstrap-select.user-agent .dropdown-menu.inner.show li.selected>a>.text, .bootstrap-select.user-agent .dropdown-menu.inner.show li:hover>a>.text {
+    color: white;
+    transition: 0.15s !important
 }
