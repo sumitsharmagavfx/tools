@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', "JSON-LD Breadcrumb Schema Generator")
+@section('title', Lang::get('breadcrumb.meta-title'))
 
-@section('meta-desc', "JSON-LD Breadcrumb Schema Generator")
-
-@section('meta-keyword', "JSON-LD Breadcrumb Schema Generator")
+@section('meta-desc', Lang::get('breadcrumb.meta-desc'))
 
 @section('conical','/en/json-ld-breadcrumb-schema-generator')
 
@@ -409,14 +407,14 @@ id/json-ld-breadcrumb-schema-generator
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">JSON-LD BREADCRUMB SCHEMA GENERATOR</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <h1 class="text-darkgrey font-weight-normal">@lang('breadcrumb.title')</h1>
+      <span class="text-darkgrey h4 font-weight-normal">@lang('breadcrumb.subtitle')</span>
 
       <div class="card card-custom mt-10 mb-5">
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
-              <label for="schema-json-ld" class="font-weight-bold text-black h6">Which Schema would you like to create?</label>
+              <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('jsonldhome.which-schema')</label>
               <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
                 <option value="home">Home</option>
                 <option value="breadcrumb" selected="selected">Breadcrumb</option>
@@ -429,7 +427,7 @@ id/json-ld-breadcrumb-schema-generator
               </select>
             </div>
             <div class="col-md-8 d-flex align-items-center mb-5">
-              <p class="text-black mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+              <p class="text-black mb-0">@lang('jsonldhome.json-ld-breadcrumb-desc')</p>
             </div>
           </div>
         </div>
@@ -446,12 +444,12 @@ id/json-ld-breadcrumb-schema-generator
                       <div class="row">
                           <div class="col-sm-5 mb-5">
                               <label for="pageName" class="font-weight-bold text-black">Page #1 name</label>
-                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="Type your name here.." value="" data-id="0">
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.pageName') }}" value="" data-id="0">
                           </div>
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #1</label>
-                              <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="0">
-                              <div class="invalid-feedback">Invalid URL</div>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.url') }}" value="" data-id="0">
+                              <div class="invalid-feedback">@lang('breadcrumb.invalid-url')</div>
                             </div>
                       </div>
                   </div>
@@ -467,12 +465,12 @@ id/json-ld-breadcrumb-schema-generator
                       <div class="row">
                           <div class="col-sm-5 mb-5">
                               <label for="pageName" class="font-weight-bold text-black">Page #2 name</label>
-                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="Type your name here.." value="" data-id="1">
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.pageName') }}" value="" data-id="1">
                           </div>
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #2</label>
-                              <input type="text" id="url" class="form-control url" name="" placeholder="Type your URL here.." value="" data-id="1">
-                              <div class="invalid-feedback">Invalid URL</div>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.url') }}" value="" data-id="1">
+                              <div class="invalid-feedback">@lang('breadcrumb.invalid-url')</div>
                           </div>
                       </div>
                   </div>
@@ -490,7 +488,7 @@ id/json-ld-breadcrumb-schema-generator
 
               </div> -->
               <button type="button" class="btn btn-add-question mb-5 mt-5" name="button" id="add-breadcrumb">
-                  <i class='bx bx-plus'></i> ADD URL
+                  <i class='bx bx-plus'></i> @lang('breadcrumb.btn-add')
               </button>
 
             </div>
@@ -500,15 +498,15 @@ id/json-ld-breadcrumb-schema-generator
                     <div class="row mb-2">
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>Copy</span></button>
+                        <i class='bx bx-copy'></i> <span>@lang('breadcrumb.btn-copy')</span></button>
                       </div>
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="submit" id="test" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-check-circle'></i> <span>Check</span></button>
+                        <i class='bx bx-check-circle'></i> <span>@lang('breadcrumb.btn-check')</span></button>
                       </div>
                       <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh' ></i> <span>Reset</span></button>
+                        <i class='bx bx-refresh' ></i> <span>@lang('breadcrumb.btn-reset')</span></button>
                       </div>
                     </div>
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
@@ -525,10 +523,10 @@ id/json-ld-breadcrumb-schema-generator
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
               </div>
               <div onclick="clearAll()">
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
               </div>
             </div>
             <div class="local-collection-body">
@@ -541,15 +539,15 @@ id/json-ld-breadcrumb-schema-generator
              <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                Version 2.3
+                @lang('layout.version') 2.3
                </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>@lang('breadcrumb.highlight')</p>
                 <div class="d-flex align-items-center">
                   <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                 </div>
                </div>
               </div>
@@ -566,10 +564,10 @@ id/json-ld-breadcrumb-schema-generator
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
+        <span class="text-black font-15px">@lang('layout.local-history')</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
       </div>
     </div>
     <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
@@ -577,46 +575,158 @@ id/json-ld-breadcrumb-schema-generator
 </div>
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+          <h2>@lang('breadcrumb.desc-1')</h2>
+          <p>@lang('breadcrumb.desc-1-1')</p>
+          <p>@lang('breadcrumb.desc-1-2')</p>
+          <p>@lang('breadcrumb.desc-1-3')</p>
+        </div>
+        <div class="d-none" id="description-tab-2">
+          <h2>@lang('breadcrumb.desc-2')</h2>
+          <p>@lang('breadcrumb.desc-2-1')</p>
+          <p>@lang('breadcrumb.desc-2-2')</p>
+          <div class="d-flex flex-column px-3 py-3">
+            <div class="title-meta mb-1">
+              Structured Data Mark Up Optimisation & Consultancy | Organic Digital
+            </div>
+            <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
+              <span>https://organicdigital.co › Services <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+            </div>
+            <div class="desc-meta mb-4">
+                Enhance your search listings and click through rate. Organic Digital can assist your site's structured data <br>mark up optimisation
+            </div>
+          </div>
+          <p>@lang('breadcrumb.desc-2-3')</p>
+          <div class="d-flex flex-column px-3 py-3">
+            <div class="title-meta mb-1">
+              Organic & Technical SEO Services | Organic Digital
+            </div>
+            <div class="link-meta d-flex flex-row align-items-center color-green mb-1">
+              <span>https://organicdigital.co/services/ <i class='bx bx-caret-down ml-1' style="color: #4D5156; vertical-align: text-bottom;"></i></span>
+            </div>
+            <div class="desc-meta mb-4">
+                Diagnose, fix and optimise every part of your website to drive the best performance. Contact now to find out <br>more
+            </div>
+          </div>
+        </div>
+        <div class="d-none" id="description-tab-3">
+          <h2>@lang('breadcrumb.desc-3')</h2>
+          <p>@lang('breadcrumb.desc-3-1')</p>
+          <p>@lang('breadcrumb.desc-3-2')</p>
+          <p>@lang('breadcrumb.desc-3-3')</p>
+          <img src="{{asset('/media/images/breadcrumb-instruction-1.png')}}" alt="">
+          <p>@lang('breadcrumb.desc-3-4')</p>
+          <p>@lang('breadcrumb.desc-3-5')</p>
+          <p>@lang('breadcrumb.desc-3-6')</p>
+        </div>
+        <div class="d-none" id="description-tab-4">
+          <h2>@lang('breadcrumb.desc-4')</h2>
+          <p>@lang('breadcrumb.desc-4-1')</p>
+          <h3>@lang('breadcrumb.desc-4-1-1')</h3>
+          <p>@lang('breadcrumb.desc-4-1-1-1')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;ul id="breadcrumblist"&gt;
+                 &lt;li&gt;&lt;a href="https://organicdigital.co/"&gt;Home&lt;/a&gt;/&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/"&gt;Services&lt;/a&gt;/&lt;/li&gt;
+                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/structured-data.php"&gt;Structured Data&lt;/a&gt;&lt;/li&gt;  
+               &lt;/ul&gt;
+            </code>
+          </pre>
+          <p>@lang('breadcrumb.desc-4-1-1-2')</p>
+          <p>@lang('breadcrumb.desc-4-1-1-3')</p>
+          <p>@lang('breadcrumb.desc-4-1-1-4')</p>
+          <ul>
+            <li>@lang('breadcrumb.desc-4-1-1-4-1')</li>
+          </ul>
+          <p>@lang('breadcrumb.desc-4-1-1-5')</p>
+          <ul>
+            <li>@lang('breadcrumb.desc-4-1-1-5-1')</li>
+            <li>@lang('breadcrumb.desc-4-1-1-5-2')</li>
+            <li>@lang('breadcrumb.desc-4-1-1-5-3')</li>
+          </ul>
+          <p>@lang('breadcrumb.desc-4-1-1-6')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;ul id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList"&gt;
+                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/"&gt;&lt;span itemprop="name"&gt;Home&lt;/span&gt;&lt;/a&gt;/&lt;meta itemprop="position" content="1" /&gt;&lt;/li&gt;
+                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/"&gt;&lt;span itemprop="name"&gt;Services&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="2" /&gt;/&lt;/li&gt;
+                &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/structured-data.php"&gt;&lt;span itemprop="name"&gt;Structured Data&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="3" /&gt;&lt;/li&gt;
+              &lt;/ul&gt;                
+            </code>
+          </pre>
+          <h3>@lang('breadcrumb.desc-4-1-2')</h3>
+          <p>@lang('breadcrumb.desc-4-1-2-1')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;script type="application/ld+json"&gt;
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                      "@id": "https://organicdigital.co/",
+                      "name": "Home"
+                    }
+                  },{
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                      "@id": "https://organicdigital.co/services/",
+                      "name": "Services"
+                    }
+                  },{
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                      "@id": "https://organicdigital.co/services/structured-data.php",
+                      "name": "Structured Data"
+                    }
+                  }]
+                }
+                &lt;/script&gt;               
+            </code>
+          </pre>
+        </div>
+        <div class="d-none" id="description-tab-5">
+          <h2>@lang('breadcrumb.desc-5')</h2>
+          <p>@lang('breadcrumb.desc-5-1')</p>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
+            <div class="mr-2" style="width:24px !important; height: 24px !important;">
+              <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
+            </div>
+            <a class="">@lang('breadcrumb.desc-1')</a>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
+            <div class="mr-2" style="width:24px !important; height: 24px !important;">
+              <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
+            </div>
+            <a class="">@lang('breadcrumb.desc-2')</a>
           </div>
-          <a href="#" class="">How search engine works?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
+            <div class="mr-2" style="width:24px !important; height: 24px !important;">
+              <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
+            </div>
+            <a class="">@lang('breadcrumb.desc-3')</a>
           </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
+          <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
+            <div class="mr-2" style="width:24px !important; height: 24px !important;">
+              <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
+            </div>
+            <a class="">@lang('breadcrumb.desc-4')</a>
           </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
           </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+          <a class="">@lang('breadcrumb.desc-5')</a>
         </div>
       </div>
     </div>
@@ -629,24 +739,24 @@ id/json-ld-breadcrumb-schema-generator
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
     <div class="row mb-10">
       <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">@lang('layout.feature-title')</h2>
+        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('breadcrumb.title')</p>
+        <p class="text-black">@lang('layout.feature-desc')</p>
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="text-primaryblue">cmlabs JSON-LD Breadcrumb Schema Generator</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
+          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
         <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
@@ -659,42 +769,40 @@ id/json-ld-breadcrumb-schema-generator
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <h2 class="text-black">@lang('layout.whats-new-title') @lang('breadcrumb.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('breadcrumb.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('breadcrumb.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
   </div>
 </div>
 
