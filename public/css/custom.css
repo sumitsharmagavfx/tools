@@ -1403,17 +1403,17 @@ textarea.input-meta-description {
     }
 }
 
-.hreflang-url {
+.hreflang-url, .lookup-url {
     background: var(--primaryblue);
     border: none;
     color: white;
 }
 
-.hreflang-url::placeholder {
+.hreflang-url::placeholder, .lookup-url::placeholder {
     color: white;
 }
 
-.hreflang-url:focus {
+.hreflang-url:focus, .lookup-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -1928,4 +1928,29 @@ textarea.input-meta-description {
     background-color: var(--lightgrey);
     border-radius: 20px;
     color: var(--black);
+}
+
+.btn-crawl-disabled {
+  height: 60%;
+  width: 100%;
+  background: white;
+  color: var(--black);
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+.btn-crawl-disabled:hover {
+  background: white;
+  color: var(--black);
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.technology-name {
+  color: var(--darkgrey);
+  font-weight: bold;
+}
+.technology-name:hover {
+  color: var(--black);
 }

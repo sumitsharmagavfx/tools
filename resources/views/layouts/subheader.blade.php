@@ -12,9 +12,11 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD</a>
                     </li>
+                    {{--
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('keyword-research')" href="/{{ $local }}/keyword-research">Keyword Research</a>
                     </li>
+                    --}}
                     <li class="nav-item dropdown ml-7">
                         <a class="nav-link dropdown-toggle @yield('generator')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generator</a>
                         <div class="dropdown-menu">
