@@ -150,6 +150,8 @@ let save = function (data,url){
 }
 
 const refreshLocalStorage = function(){
+    let no_history = lang === 'en' ? 'This is your first impressions, no history yet!' : 'Ini adalah kesan pertama Anda, belum ada riwayat!';
+
     try{
         const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
         $('#localsavemobile').empty();
@@ -187,12 +189,12 @@ const refreshLocalStorage = function(){
         }else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>`+no_history+`</span>
                   </div>
                 </li>`
             let div = `<div class="custom-card py-5 px-3">
                     <div class="d-flex justify-content-center text-center">
-                        <span>This is your first impressions, no history yet!</span>
+                        <span>`+no_history+`</span>
                     </div>
                 </div>`
 

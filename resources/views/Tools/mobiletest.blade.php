@@ -151,9 +151,9 @@ id/mobile-test
 
               <div id="crawlResult" class="d-none justify-content-between align-items-center px-5 mb-5">
                 <div class="">
-                  <p class="text-darkgrey" id="result-date">Tested on Feb 4, 2021 at 09.50 AM</p>
-                  <p class="h3 text-black" id="result-title">Page is mobile friendly</p>
-                  <p class="mb-0 text-darkgrey" id="result-subtitle">This page is easy to use on  a mobile device</p>
+                  <p class="text-darkgrey" id="result-date"></p>
+                  <p class="h3 text-black" id="result-title"></p>
+                  <p class="mb-0 text-darkgrey" id="result-subtitle"></p>
                 </div>
                 <div class="">
                   <img id="mobileFriendlyIcon" class="d-none" src="{{asset('/media/images/bx_bx-mobile.png')}}" alt="Mobile Friendly Icon">
@@ -162,12 +162,12 @@ id/mobile-test
               </div>
 
               <div id="pageIssues" class="d-none px-5">
-                <p class="font-weight-boldest text-black">Page loading issues</p>
+                <p class="font-weight-boldest text-black">@lang('mobiletest.page-issues')</p>
                 <div id="page-issues-content"></div>
               </div>
 
               <div id="mobileIssues" class="d-none px-5">
-                <p class="font-weight-boldest text-black">Please resolve the issues below</p>
+                <p class="font-weight-boldest text-black">@lang('mobiletest.mobile-issues')</p>
                 <div id="mobile-issues-content"></div>
               </div>
 
@@ -250,8 +250,7 @@ id/mobile-test
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                   <div class="card-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>@lang('mobiletest.highlight')</p>
                     <div class="d-flex align-items-center">
                       <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                       <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
@@ -370,13 +369,12 @@ id/mobile-test
       <div class="card bg-transparent" style="">
         <div class="card-header" id="headingOne2">
           <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-            Version 2.3
+            @lang('layout.version') 2.3
           </div>
         </div>
         <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
           <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>@lang('mobiletest.highlight')</p>
             <div class="d-flex align-items-center">
               <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
               <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
