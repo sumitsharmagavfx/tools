@@ -138,7 +138,7 @@ check_url.click(function() {
             },
             error: function(e) {
                 if (e.statusText === 'abort'){
-                    toastr.error('Cencel button clicked','Cancel');
+                    toastr.error('Cancel button clicked','Cancel');
                 }else {
                     toastr.error('Error',"An error occurred during the test process. Please try again or try with another website URL");
                 }
@@ -165,24 +165,29 @@ check_url.click(function() {
 
 function resultdata(titledata, imagedata) {
     let title, subtitle
+    let title_friendly = lang ==='en'? 'Page is mobile friendly' : 'Halaman mobile friendly';
+    let subtitle_friendly = lang ==='en'? 'This page is easy to use on a mobile device' : 'Halaman ini mudah digunakan di perangkat seluler';
+    let title_unspecified = lang ==='en'? 'An Error Occurred While Performing a Test. Please Try Again' : 'Terjadi Kesalahan Saat Melakukan Tes. Silakan Coba Lagi';
+    let title_not_friendly = lang ==='en'? 'Page is not mobile friendly' : 'Halaman tidak mobile friendly';
+    let subtitle_not_friendly = lang ==='en'? 'This page is difficult to use on a mobile device' : 'Halaman ini tidak mudah digunakan di perangkat seluler';
 
     mobile_indicator_1.removeClass('d-none')
     mobile_indicator_2.removeClass('d-none')
 
     if(titledata === 'MOBILE_FRIENDLY') {
-        title = 'Page is mobile friendly'
-        subtitle = 'This page is easy to use on a mobile device'
+        title = title_friendly
+        subtitle = subtitle_friendly
 
         mobile_indicator_2.addClass('d-none')
     } else if(titledata === 'MOBILE_FRIENDLY_TEST_RESULT_UNSPECIFIED') {
-        title = 'An Error Occurred While Performing a Test. Please Try Again'
+        title = title_unspecified
         subtitle = ''
 
         mobile_indicator_1.addClass('d-none')
         mobile_indicator_2.addClass('d-none')
     } else if(titledata === 'NOT_MOBILE_FRIENDLY') {
-        title = 'Page is not mobile friendly'
-        subtitle = 'This page is difficult to use on a mobile device'
+        title = title_not_friendly
+        subtitle = subtitle_not_friendly
 
         mobile_indicator_1.addClass('d-none')
     }
@@ -263,9 +268,12 @@ function mobileissues(rules) {
 }
 
 function formatDate(date) {
+    let test_date = lang ==='en'? 'Tested on ' : 'Diuji pada '; 
+    let test_time = lang ==='en'? ' at ' : ' jam ';
+
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    return `Tested on ${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}`
+    return test_date+`${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`+test_time+`${date.getHours()}:${date.getMinutes()}`
 }
 
 function updateProgressBar(value) {

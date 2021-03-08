@@ -44,7 +44,7 @@ id/page-title-meta-description-checker
                         </div>
                     </div>
                     <div class="col-md-6 col-mobile">
-                        <input id="url" type="text" class="input-url text-center w-100" placeholder="Input URL" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <input id="url" type="text" class="input-url text-center w-100" placeholder="{{ Lang::get('layout.input-hint') }}" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
                     </div>
                     <div class="col-md-3 text-right col-mobile">
                         <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
@@ -62,7 +62,7 @@ id/page-title-meta-description-checker
                                 <div id="titlebar3" class="progress-bar_item progress-bar_item-3 blank"></div>
                             </div>
                         </div>
-                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" placeholder="Type or paste your text..">
+                        <input id="title" type="text" class="form-control bg-primaryblue text-white px-0 input-meta-title" id="meta-title" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}">
                     </div>
                 </div>
                 <div class="bg-info py-5 px-9 bg-primaryblue border-radius-5px">
@@ -75,7 +75,7 @@ id/page-title-meta-description-checker
                                 <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
                             </div>
                         </div>
-                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="Type or paste your text.." style="resize:none; overflow:hidden"></textarea>
+                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}" style="resize:none; overflow:hidden"></textarea>
                     </div>
                 </div>
             </div>
@@ -205,22 +205,15 @@ id/page-title-meta-description-checker
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        Version 2.3
+                                        @lang('layout.version') 2.3
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                            commodo
-                                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                                            id est laborum.</p>
+                                        <p>@lang('metachecker.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -248,20 +241,15 @@ id/page-title-meta-description-checker
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        Version 2.3
+                        @lang('layout.version') 2.3
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia deserunt mollit anim id est laborum.</p>
+                        <p>@lang('metachecker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -427,7 +415,7 @@ id/page-title-meta-description-checker
                 <div class="d-flex align-items-center">
                     <span class="text-primaryblue">cmlabs Title & Meta Description Checker</span>
                     <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-                    <small class="text-grey">Updated 25 Dec, 2020</small>
+                    <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
                 </div>
                 <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
                 <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
