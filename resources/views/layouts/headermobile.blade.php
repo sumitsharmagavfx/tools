@@ -9,9 +9,9 @@
 		</button>
         <a href="/{{ $local }}" class="d-flex align-items-center">
             <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" height="30px" width="30px"/>
-            <span class="h2 title-logo-1 font-weight-bolder ml-3 my-2 mt-2">SEO TOOLS</span>&nbsp;&nbsp;
-            <span class="h2 title-logo-2 font-weight-light my-2 mt-2" id="headermobile_writer_title">for Writers</span>
-            <span class="h2 title-logo-2 font-weight-light my-2 mt-2 d-none" id="headermobile_webmaster_title">for Webmaster</span>
+            <span class="h2 title-logo-1 font-weight-bolder ml-3 my-2 mt-2">@lang('layout.title')</span>&nbsp;&nbsp;
+            <span class="h2 title-logo-2 font-weight-light my-2 mt-2" id="headermobile_writer_title">@lang('layout.writers')</span>
+            <span class="h2 title-logo-2 font-weight-light my-2 mt-2 d-none" id="headermobile_webmaster_title">@lang('layout.web-master')</span>
         </a>
     </div>
 </div>

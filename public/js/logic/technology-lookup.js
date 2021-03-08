@@ -1,5 +1,11 @@
 const TECH_LOOKUP_LOCAL_STORAGE_KEY = 'tech-lookup-history';
 
+if (lang == "en") {
+    var localStorageNone = "This is your first impressions, no history yet!";
+} else if  (lang == "id") {
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+}
+
 const TechnologyTemplate = (title, icon, category, version) => `
 <div class="d-flex justify-content-between align-items-center mx-5">
   <div class="d-flex align-items-center">
@@ -28,7 +34,7 @@ const HistoryTemplate = (url, date) => `
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>This is your first impressions, no history yet!</span>
+    <span>` + localStorageNone + `</span>
   </div>
 </li>`;
 
@@ -46,7 +52,7 @@ const HistoryTemplateMobile = (url, date) => `
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>This is your first impressions, no history yet!</span>
+  <span>` + localStorageNone + `</span>
 </div>
 </div>`;
 
@@ -252,4 +258,3 @@ $('.clear-history--btn').click(function(){
 $('#crawl-btn').click(function(){
     analyzeUrl($('#input-url').val());
 })
-

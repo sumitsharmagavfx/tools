@@ -280,7 +280,7 @@
                                 <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                             </button>
                         </div>
-                        <span class="alert-features-text">@lang('analyzer.whats-new-1')</span>
+                        <span class="alert-features-text">@lang('hreflang.whats-new-1')</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-5">
@@ -297,7 +297,7 @@
                                 <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                             </button>
                         </div>
-                        <span class="alert-features-text">@lang('analyzer.whats-new-2')</span>
+                        <span class="alert-features-text">@lang('hreflang.whats-new-2')</span>
                     </div>
                 </div>
             </div>
@@ -340,5 +340,5 @@
 @endsection
 
 @section('test-n-checker')
-active
+    active
 @endsection
