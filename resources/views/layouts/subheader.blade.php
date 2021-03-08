@@ -3,7 +3,7 @@
         <div class="d-flex align-items-center flex-wrap mr-1">
             <div class="d-flex align-items-baseline flex-wrap mr-5">
                 <a href="/{{ $local }}" id="subheader_logo" class="d-none">
-                    <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-30px mr-8"/>
+                    <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-30px mr-8" />
                 </a>
                 <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
                     <li class="nav-item">

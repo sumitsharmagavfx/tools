@@ -1931,26 +1931,28 @@ textarea.input-meta-description {
 }
 
 .btn-crawl-disabled {
-  height: 60%;
-  width: 100%;
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: not-allowed;
+    height: 60%;
+    width: 100%;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: not-allowed;
 }
+
 .btn-crawl-disabled:hover {
-  background: white;
-  color: var(--black);
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: not-allowed;
+    background: white;
+    color: var(--black);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: not-allowed;
 }
 
 .technology-name {
-  color: var(--darkgrey);
-  font-weight: bold;
+    color: var(--darkgrey);
+    font-weight: bold;
 }
+
 .technology-name:hover {
-  color: var(--black);
+    color: var(--black);
 }

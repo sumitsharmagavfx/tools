@@ -4,7 +4,7 @@
             <div class="row border-bottom pt-5 pb-5">
                 <div class="col-12 d-flex justify-content-start align-items-center">
                     <a href="/{{ $local }}" class="brand-logo d-flex align-items-center">
-                        <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" height="30px" width="30px"/>
+                        <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" height="30px" width="30px" />
                         <span class="h4 title-logo-1 font-weight-bold ml-3 my-2 mt-2">@lang('layout.title')</span>&nbsp;&nbsp;
                         <span class="h4 title-logo-2 font-weight-light my-2 mt-2" id="asidemobile_writer_title">@lang('layout.writers')</span>
                         <span class="h4 title-logo-2 font-weight-light my-2 mt-2 d-none" id="asidemobile_webmaster_title">@lang('layout.web-master')</span>
@@ -46,9 +46,9 @@
                 {{--
                     <li class="menu-item" aria-haspopup="true">
                         <a href="/{{ $local }}/keyword-research" class="menu-link">
-                            <span class="menu-text">Keyword Research</span>
-                        </a>
-                    </li>
+                <span class="menu-text">Keyword Research</span>
+                </a>
+                </li>
                 --}}
                 <li class="menu-item menu-item-submenu" aria-haspopup="true">
                     <a href="" class="menu-link menu-toggle">
@@ -58,20 +58,20 @@
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
-								<span class="menu-link">
-									<span class="menu-text">Generator</span>
-								</span>
-							</li>
+                                <span class="menu-link">
+                                    <span class="menu-text">Generator</span>
+                                </span>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/sitemap-generator" class="menu-link">
-									<span class="menu-text">Sitemap .XML Generator</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/sitemap-generator" class="menu-link">
+                                    <span class="menu-text">Sitemap .XML Generator</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/robotstxt-generator" class="menu-link">
-									<span class="menu-text">Robots .TXT Generator</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/robotstxt-generator" class="menu-link">
+                                    <span class="menu-text">Robots .TXT Generator</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -83,45 +83,45 @@
                         <i class="menu-arrow"></i>
                         <ul class="menu-subnav">
                             <li class="menu-item menu-item-parent" aria-haspopup="true">
-								<span class="menu-link">
-									<span class="menu-text">Test & Checker</span>
-								</span>
-							</li>
+                                <span class="menu-link">
+                                    <span class="menu-text">Test & Checker</span>
+                                </span>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/pagespeed-test" class="menu-link">
-									<span class="menu-text">Page Speed Test</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/pagespeed-test" class="menu-link">
+                                    <span class="menu-text">Page Speed Test</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/mobile-friendly-test" class="menu-link">
-									<span class="menu-text">Mobile Friendly Test</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/mobile-friendly-test" class="menu-link">
+                                    <span class="menu-text">Mobile Friendly Test</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/ssl-checker" class="menu-link">
-									<span class="menu-text">SSL Certificate Checker</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/ssl-checker" class="menu-link">
+                                    <span class="menu-text">SSL Certificate Checker</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/redirect-checker" class="menu-link">
-									<span class="menu-text">Redirect Chain Checker</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/redirect-checker" class="menu-link">
+                                    <span class="menu-text">Redirect Chain Checker</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/hreflang-checker" class="menu-link">
-									<span class="menu-text">Hreflang Checker</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/hreflang-checker" class="menu-link">
+                                    <span class="menu-text">Hreflang Checker</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/link-analyzer" class="menu-link">
-									<span class="menu-text">Link Analyzer</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/link-analyzer" class="menu-link">
+                                    <span class="menu-text">Link Analyzer</span>
+                                </a>
+                            </li>
                             <li class="menu-item menu-item-children" aria-haspopup="true">
-								<a href="/{{ $local }}/technology-lookup" class="menu-link">
-									<span class="menu-text">Technology Lookup</span>
-								</a>
-							</li>
+                                <a href="/{{ $local }}/technology-lookup" class="menu-link">
+                                    <span class="menu-text">Technology Lookup</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
