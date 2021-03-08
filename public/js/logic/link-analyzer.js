@@ -43,7 +43,7 @@ const HistoryTemplateMobile = (url, date) => `
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>This is your first impressions, no history yet!</span>
+  <span>`+ localStorageNone +`</span>
 </div>
 </div>`;
 
