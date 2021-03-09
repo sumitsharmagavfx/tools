@@ -253,16 +253,16 @@
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
+        <span class="text-black font-15px">@lang('layout.local-history')</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
       </div>
     </div>
     <div class="local-collection-body mt-3 px-5">
       <div class="custom-card py-5 px-3">
         <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
+          <span>@lang('layout.local-history-none')</span>
         </div>
       </div>
       <div class="custom-card py-5 px-3">
@@ -506,7 +506,7 @@
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2 class="text-black">@lang('layout.whats-new-title') Words Counter</h2>
+    <h2 class="text-black">@lang('layout.whats-new-title') @lang('robot.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">

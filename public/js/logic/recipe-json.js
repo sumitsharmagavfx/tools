@@ -178,7 +178,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '#add-imageUrl', function () {
         imageUrlCounter++;
         recipeFormat.image.push("")
-        $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">Image URL # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">Invalid URL</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
+        $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data mb-5" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">Image URL # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">Invalid URL</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
         recipeFormat.render();
     });
 
@@ -487,12 +487,32 @@ jQuery(document).on('change', '.fatContent', function () {
         "                   <div class=\"row\"><div class=\"col-6 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"rating\">Rating</label><input type=\"number\" name=\"\" class=\"form-control rating mb-5\" placeholder=\"0\" value=\"\" min=\"0\" data-id=\""+(reviewCounter)+"\"></div>" +
         "                   <div class=\"col-6 col-md-8\"><label class=\"text-black font-weight-bold\" for=\"dateReview\">Date</label><div class=\"input-group date\"><div class=\"input-group-append\"><span class=\"input-group-text\"><i class=\"bx bx-calendar text-darkgrey\"></i></span></div>" +
         "                   <input type=\"text\" id=\"kt_datepicker_2\" name=\"\" class=\"form-control custom-date dateReview\" readonly  placeholder=\"Pick a date\" value=\"\" data-id=\""+(reviewCounter)+"\"/></div></div></div></div>" +
-        "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">Review’s body</label><textarea name=\"\" class=\"form-control reviewBody\" placeholder=\"Type your review’s body here..\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
+        "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">Review’s body</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\"Type your review’s body here..\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
         "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">Author</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\"Type author name here..\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
         "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">Publisher</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\"Type publisher here..\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
         "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
         );
-        $('#addReview').find('.custom-date').datepicker();
+        
+        var arrows;
+        if (KTUtil.isRTL()) {
+            arrows = {
+                leftArrow: '<i class="la la-angle-right"></i>',
+                rightArrow: '<i class="la la-angle-left"></i>'
+            }
+        } else {
+            arrows = {
+                leftArrow: '<i class="la la-angle-left"></i>',
+                rightArrow: '<i class="la la-angle-right"></i>'
+            }
+        }
+
+        $('#addReview').find('.custom-date').datepicker({
+            rtl: KTUtil.isRTL(),
+            todayHighlight: true,
+            orientation: "bottom left",
+            templates: arrows
+        });
+
         let row = parseInt($('#json-format').val().split('\n').length);
         jQuery('#json-format').attr('rows',row);
 

@@ -495,8 +495,8 @@ text-decoration: underline;
                     <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row mb-5 imageurlList">
-                  <div class="col-10 col-sm-11">
+                <div class="row imageurlList">
+                  <div class="col-10 col-sm-11 mb-5">
                     <label class="text-black font-weight-bold" for="image">Image URL #1</label>
                     <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="0">
                     <div class="invalid-feedback">Invalid URL</div>
