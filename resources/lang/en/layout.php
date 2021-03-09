@@ -53,4 +53,8 @@ return [
     "whats-new-sub-title" => "What's new",
     "whats-new-update" => "Last Update",
     "view-web-release" => "View all web-release?",
+    "btn-copy" => "Copy",
+    "btn-check" => "Check",
+    "btn-export" => "Export",
+    "btn-reset" => "Reset",
 ];

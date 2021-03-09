@@ -21,4 +21,7 @@ return [
     "desc-5-1" => "This tool provides quick access to the website's technology stack, contact details, and social media profiles. Monitor the technology choices of your potential, check out a wide range of websites, or enrich technographic perspectives with your own data collection.",
     "desc-6" => "Get notified when the website technology stack changes",
     "desc-6-1" => "Monitor your competitors' technology choices with alerts. Be the first to notice when they move to a new CMS, e-commerce platform, or other technology.",
+    "highlight" => "In this latest version, the Technology Lookup tool in this latest version helps users identify technology on certain websites. Apart from that, it can also help users to list websites that use a particular technology and browse several websites at once. With this, you can find new prospects with the technology used by your competitors.",
+    "whats-new-1" => "Currently, we are adding the Technology Lookup tool. With this tool, users can identify the technology on the website and find out what the website was created with. So that it can generate prospects, market analysis, and competitor research. With this tool, we hope to help you to build the best website possible.",
+    "whats-new-2" => "The Technology Lookup Tool in this latest version also has other features. We developed Technology Lookup so that users can list websites that use a particular technology and browse several websites at once. With this, you can find new prospects with the technology used by your competitors.",
 ];

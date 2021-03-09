@@ -189,7 +189,7 @@ id/redirect-checker
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>@lang('analyzer.highlight')</p>
+                        <p>@lang('redirectchecker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                             <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
@@ -328,7 +328,7 @@ id/redirect-checker
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('redirectchecker.feature-7')</bdi></label>
             </div>
         </div>
-        <h2 class="text-black">@lang('layout.whats-new-title') Redirect Checker</h2>
+        <h2 class="text-black">@lang('layout.whats-new-title') @lang('redirectchecker.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">

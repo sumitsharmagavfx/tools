@@ -68,5 +68,5 @@ return [
     "desc-6-4-1-3-1" => "Only one domain or one subdomain can be covered by this certificate. In using Single Domain SSL, you must choose to provide protection to the primary domain or subdomain.",
     "desc-6-4-1-3-2" => "As a simple example, if the cmlabs.co website uses a Single Domain certificate and chooses to protect the primary domain, then the tools.cmlabs.co subdomain website will not be protected. Likewise, if you choose to protect a sub domain, the main cmlabs.co domain will not be protected.",
     "whats-new-1"=> "In this latest version, users can view the search history. The SSL checker tool is now equipped with a \"local history\" feature. You don't need to enter SSL twice if you want to check the previous results, all you need to do is look in the search history list. Make your work more efficient with this latest change.",
-    "whats-new-2"=> "",
+    "whats-new-2"=> "Now, with this SSL Checker tool, you can check if the SSL certificate on your web server is installed properly and does trust. Just by entering the hostname or server IP address, you can immediately view the details associated with the SSL certificate. Improve the security performance of your website.",
 ];

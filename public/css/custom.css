@@ -191,7 +191,7 @@ a:hover {
     }
 
     .custom-header-mobile {
-        box-shadow: none !important;
+        box-shadow: 0px 1px 9px -3px rgba(0, 0, 0, 0.3);
     }
 
     .custom-subheader-mobile {
@@ -1403,17 +1403,17 @@ textarea.input-meta-description {
     }
 }
 
-.hreflang-url, .lookup-url, .redirect-url {
+.hreflang-url, .lookup-url, .redirect-url, .pagespeed-url, .sitemap-url {
     background: var(--primaryblue);
     border: none;
     color: white;
 }
 
-.hreflang-url::placeholder, .lookup-url::placeholder, .redirect-url::placeholder {
+.hreflang-url::placeholder, .lookup-url::placeholder, .redirect-url::placeholder, .pagespeed-url::placeholder, .sitemap-url::placeholder {
     color: white;
 }
 
-.hreflang-url:focus, .lookup-url:focus, .redirect-url:focus {
+.hreflang-url:focus, .lookup-url:focus, .redirect-url:focus, .pagespeed-url:focus, .sitemap-url:focus {
     background: var(--primaryblue);
     border: none;
     color: white;
@@ -1438,7 +1438,7 @@ textarea.input-meta-description {
     text-decoration: underline !important;
 }
 
-.hreflang-url-result, .analyzer-url-result, .redirect-url-result {
+.hreflang-url-result, .analyzer-url-result, .redirect-url-result, .sitemap-url-result {
     color: var(--darkgrey);
     font-weight: bold;
 }
@@ -1482,16 +1482,16 @@ textarea.input-meta-description {
     color: var(--darkgrey);
 }
 
-.hreflang-show-more, .analyzer-show-more, .redirect-show-more {
+.hreflang-show-more, .analyzer-show-more, .redirect-show-more, .sitemap-show-more {
     color: var(--darkgrey);
 }
 
-.result-row:hover .label-hreflang, .result-row:hover .label-analyzer, .result-row:hover .label-redirect {
+.result-row:hover .label-hreflang, .result-row:hover .label-analyzer, .result-row:hover .label-redirect, .result-row:hover .label-sitemap {
     background: var(--primaryblue);
     color: white;
 }
 
-.result-row:hover .hreflang-url-result, .result-row:hover .analyzer-url-result, .result-row:hover .redirect-url-result {
+.result-row:hover .hreflang-url-result, .result-row:hover .analyzer-url-result, .result-row:hover .redirect-url-result, .result-row:hover .sitemap-url-result {
     color: var(--black);
 }
 
@@ -1957,7 +1957,7 @@ textarea.input-meta-description {
     color: var(--black);
 }
 
-.label-redirect {
+.label-redirect, .label-sitemap {
     width: 40px;
     font-weight: 400;
     background: var(--lightgrey);
@@ -1993,4 +1993,68 @@ textarea.input-meta-description {
 .bootstrap-select.user-agent .dropdown-menu.inner.show li.selected>a>.text, .bootstrap-select.user-agent .dropdown-menu.inner.show li:hover>a>.text {
     color: white;
     transition: 0.15s !important
+}
+
+.circleProgressBar {
+    border-bottom: 4px solid var(--white);
+    cursor: pointer
+}
+
+.circleProgressBar.active {
+    border-bottom: 4px solid var(--primaryblue);
+}
+
+.circleProgressBar:hover {
+    border-bottom: 4px solid var(--primaryblue);
+    cursor: pointer
+}
+
+@media only screen and (max-width:1200px) {
+    .circleProgressBar {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.bg-green {
+    background-color: #84DB15 !important;
+}
+
+.bg-orange {
+    background-color: #FBC918 !important;
+}
+
+.bg-red {
+    background-color: #FF5656 !important;
+}
+
+.bg-grey {
+    background-color: #CCD6DD !important;
+}
+
+.btn-download-sitemap {
+  line-height: 1;
+  width: 137px;
+  background: var(--darkgrey);
+  color: white;
+  border-radius: 20px;
+}
+
+.btn-download-sitemap:hover {
+  background: var(--black);
+  color: white;
+}
+
+.btn-download-sitemap-disabled {
+  line-height: 1;
+  width: 137px;
+  background: var(--grey);
+  color: white;
+  border-radius: 20px;
+  cursor: not-allowed;
+}
+
+.btn-download-sitemap-disabled:hover {
+  background: var(--grey);
+  color: white;
+  cursor: not-allowed;
 }
