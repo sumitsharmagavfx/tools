@@ -164,61 +164,11 @@
                 <span class="text-black font-15px">Your Local History</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer clear-history--btn">Clear All</span>
               </div>
             </div>
             <div class="local-collection-body">
-              <ul class="list-group">
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana Hari ini saya akan menulis tentang bagaimana</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.40 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Sudah sembilan puluh hari, perusahaan kami m..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 09.17 | 8, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Dalam banyak kasus, virus paling mematikan di..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 08.05 | 7, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">SEO merupakan pekerjaan marketing dengan ef..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 11.21 | 5, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
-                <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
-                  <div class="d-flex justify-content-between">
-                    <div class="local-collection-title">Pekerjaan ini menuntut setiap penulis harus pek..</div>
-                    <div class="d-flex align-items-center">
-                      <span class="mr-2 text-grey date-created">Created at 16.56 | 3, JAN 2021</span>
-                      <i class='bx bxs-x-circle text-grey'></i>
-                    </div>
-                  </div>
-                </li>
+              <ul class="list-group" id="local-history">
               </ul>
             </div>
           </div>
@@ -259,61 +209,10 @@
         <span class="text-black font-15px">Your Local History</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer clear-history--btn">Clear All</span>
       </div>
     </div>
-    <div class="local-collection-body mt-3 px-5">
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex justify-content-center text-center">
-          <span>This is your first impressions, no history yet!</span>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-      <div class="custom-card py-5 px-3">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="local-collection-title">https://v2-analytics.cmlabs.co/member/domain-management</div>
-          <div class="d-flex align-items-center">
-            <i class='bx bxs-info-circle text-grey bx-sm mr-2' data-toggle="tooltip" data-theme="dark" title="Created at 09.17 | 8, JAN 2021"></i>
-            <i class='bx bxs-x-circle bx-sm text-grey'></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="local-collection-body mt-3 px-5" id="local-history-mobile"></div>
     <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
       <div class="card bg-transparent" style="">
         <div class="card-header" id="headingOne2">
