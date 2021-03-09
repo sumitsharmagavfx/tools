@@ -498,15 +498,15 @@ id/json-ld-breadcrumb-schema-generator
                     <div class="row mb-2">
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>@lang('breadcrumb.btn-copy')</span></button>
+                        <i class='bx bx-copy'></i> <span>@lang('layout.btn-copy')</span></button>
                       </div>
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="submit" id="test" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-check-circle'></i> <span>@lang('breadcrumb.btn-check')</span></button>
+                        <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                       </div>
                       <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh' ></i> <span>@lang('breadcrumb.btn-reset')</span></button>
+                        <i class='bx bx-refresh' ></i> <span>@lang('layout.btn-reset')</span></button>
                       </div>
                     </div>
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>

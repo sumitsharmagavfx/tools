@@ -68,5 +68,5 @@ return [
     "desc-6-4-1-3-1" => "Hanya satu domain atau satu subdomain yang dapat dicakup oleh sertifikat ini. Dalam menggunakan SSL Domain Tunggal, Anda harus memilih untuk memberikan perlindungan ke domain primer atau subdomain.",
     "desc-6-4-1-3-2" => "Sebagai contoh sederhana, jika situs web cmlabs.co menggunakan sertifikat Domain Tunggal dan memilih untuk melindungi domain primer, maka situs web subdomain tools.cmlabs.co tidak akan dilindungi. Demikian juga, jika Anda memilih untuk melindungi sub-domain, domain cmlabs.co utama tidak akan dilindungi.",
     "whats-new-1"=> "Pada versi terbaru ini, Pengguna dapat melihat riwayat pencarian. Tool SSL checker kini dilengkapi dengan fitur \"local history\". Anda tidak perlu lagi memasukkan SSL dua kali jika ingin memeriksa hasil sebelumnya, yang perlu Anda lakukan hanya melihat di daftar riwayat pencarian. Jadikan pekerjaan Anda lebih efisien dengan perubahan terbaru ini.",
-    "whats-new-2"=> "",
+    "whats-new-2"=> "Sekarang, dengan tool SSL Checker ini, Anda dapat memeriksa apakah sertifikat SSL di server web Anda dipasang dengan benar dan terpercaya. Hanya dengan memasukkan nama host atau alamat IP server, Anda dapat langsung melihat detail yang terkait dengan sertifikat SSL. Tingkatkan performa keamaan website Anda.",
 ];
