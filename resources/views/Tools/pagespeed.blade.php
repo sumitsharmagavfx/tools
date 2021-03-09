@@ -213,7 +213,7 @@ id/pagespeed-test
                                     <p class="h4">Best Practies</p>
                                     <div class="col">
                                         <div class="">
-                                            <div class="progress progress-red practices result" data-percentage="0">
+                                            <div class="progress progress-red best-practices result" data-percentage="0">
                                                 <span class="progress-left">
                                                     <span class="progress-bar progress-bar-best-practices"></span>
                                                 </span>
@@ -258,9 +258,9 @@ id/pagespeed-test
                                     </div>
                                     <div class="">
                                         <div class="accordion accordion-light accordion-toggle-arrow seo-audit" id="seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow pass-pwa-audit" id="pass-seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-pwa-audit" id="not-app-seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow manual-pwa-audit" id="manual-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-seo-audit" id="pass-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-seo-audit" id="not-app-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-seo-audit" id="manual-seo-audit"></div>
                                     </div>
                                 </div>
                             </div>
@@ -285,10 +285,10 @@ id/pagespeed-test
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div class="accordion accordion-light accordion-toggle-arrow accessibility-audit" id="accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow pass-accessibility-audit" id="pass-accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-accessibility-audit" id="not-app-accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow manual-accessibility-audit" id="manual-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pwa-audit" id="pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-pwa-audit" id="pass-pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-pwa-audit" id="not-app-pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-pwa-audit" id="manual-pwa-audit"></div>
                                     </div>
                                 </div>
                             </div>
