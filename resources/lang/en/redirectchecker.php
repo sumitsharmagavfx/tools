@@ -39,5 +39,8 @@ return [
     "desc-6-2" => 'They negatively affect the promotion: increase the loading time of the content, spend the crawling budget, "steal" the link weight, and can bring the site to cyclical redirection.',
     "desc-6-3" => "You will need to find out the reason and understand why the redirect occurs.",
     "desc-6-4" => "Find redirect chains using our free tool.",
+    "highlight" => "In the latest version of the Redirect Chain Checker tool, it allows users to check the not found page and find out where the link is pointing (301 or 302). Redirect Chain Checker will display the HTTP status code and destination URL. You can view affiliate links without clicking on them. We hope that this new tool from cmlabs can make your work easier.",
+    "whats-new-1" => 'In this newest version, we added the Redirect Chains Checker tool. This tool allows each user to check if the page is "not found: provide a 404 code and find out which redirect is configured on the server (301 or 302). So the Redirect Checker will display the HTTP status code and destination URL.',
+    "whats-new-2" => "Now, users can use the Redirect Chain Checker tool which has a feature to avoid surprises when pasting PageRank and finding out where the link leads. So you can see the affiliate link without clicking on it. We hope this new tool from cmlabs can make your work easier.",
 
 ];
