@@ -39,11 +39,9 @@ function regexHttps(url) {
 function clearTable() {
     $("#noCrawlResult").show();
     $("#generateCrawlResult").hide();
-    // $("#result").empty();
 }
 
-$('#crawlButton').on('click', function() {
-    // $('#url').addClass('spinner spinner-success spinner-right');
+$('#crawlButton').on('click', function() {    
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
     $.ajax({
