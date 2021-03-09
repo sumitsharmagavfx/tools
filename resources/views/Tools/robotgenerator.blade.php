@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('robot.meta-desc'))
 
-@section('meta-keyword', Lang::get('robot.meta-keyword'))
-
 @section('conical','/en/robotstxt-generator')
 
 @section('en-link','/en/robotstxt-generator')
@@ -74,8 +72,8 @@
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">ROBOT.TXT GENERATOR</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <h1 class="text-darkgrey font-weight-normal">@lang('robot.title')</h1>
+      <span class="text-darkgrey h4 font-weight-normal">@lang('robot.subtitle')</span>
 
       <div class="card card-custom mb-5 mt-10">
         <div class="card-body">
@@ -85,25 +83,25 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="robotAccess" class="text-black font-weight-bold">Default robot access</label>
+                      <label for="robotAccess" class="text-black font-weight-bold">@lang('robot.label-robot-access')</label>
                       <select class="form-control" name="" id="robotAccess">
-                        <option value="" disabled selected>Select access</option>
-                        <option value="Allow">Allow</option>
-                        <option value="Disallow">Disallow</option>
+                        <option value="" disabled selected>@lang('robot.placeholder-robot-access')</option>
+                        <option value="Allow">@lang('robot.robot-access-opt-1')</option>
+                        <option value="Disallow">@lang('robot.robot-access-opt-2')</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="crawlDelay" class="text-black font-weight-bold">Crawl delay</label>
+                      <label for="crawlDelay" class="text-black font-weight-bold">@lang('robot.label-crawl-delay')</label>
                       <select class="form-control" name="" id="crawlDelay">
-                        <option value="" disabled selected>Select delay</option>
-                        <option value="">No delay</option>
-                        <option value="5">5 second</option>
-                        <option value="10">10 second</option>
-                        <option value="20">20 second</option>
-                        <option value="60">60 second</option>
-                        <option value="120">120 second</option>
+                        <option value="" disabled selected>@lang('robot.placeholder-crawl-delay')</option>
+                        <option value="">@lang('robot.crawl-delay-opt-1')</option>
+                        <option value="5">@lang('robot.crawl-delay-opt-2')</option>
+                        <option value="10">@lang('robot.crawl-delay-opt-3')</option>
+                        <option value="20">@lang('robot.crawl-delay-opt-4')</option>
+                        <option value="60">@lang('robot.crawl-delay-opt-5')</option>
+                        <option value="120">@lang('robot.crawl-delay-opt-6')</option>
                       </select>
                     </div>
                   </div>
@@ -111,23 +109,23 @@
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="sitemap" class="text-black font-weight-bold">Sitemap</label>
-                      <span class="text-darkgrey">(leave blank if you don’t have)</span>
+                      <label for="sitemap" class="text-black font-weight-bold">@lang('robot.label-sitemap')</label>
+                      <span class="text-darkgrey">@lang('robot.label-sitemap-helper')</span>
                       <input type="text" id="sitemap" class="form-control" name="" value="" placeholder="https://example.com/sitemap.xml">
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <label class="d-none text-black font-weight-bold" for="" id="directive-title">Directive</label>
+                    <label class="d-none text-black font-weight-bold" for="" id="directive-title">@lang('robot.label-directive')</label>
                     <span ></span>
                   </div>
                 </div>
               </div>
               <button type="button" class="btn btn-add-question d-flex align-items-center justify-content-center" name="button" id="add">
                 <i class='bx bx-plus'></i>
-                <span id="add-directive">ADD DIRECTIVE</span>
-                <span class="d-none" id="add-more-directive">ADD MORE DIRECTIVE</span>
+                <span id="add-directive">@lang('robot.btn-add')</span>
+                <span class="d-none" id="add-more-directive">@lang('robot.btn-add')</span>
               </button>
             </div>
             <div class="col-md-4 mb-5">
@@ -136,15 +134,15 @@
                   <div class="row mb-2">
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
                       <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>Copy</span></button>
+                        <i class='bx bx-copy'></i> <span>@lang('layout.btn-copy')</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
                       <button type="button" id="export" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-download'></i> <span>Export</span></button>
+                        <i class='bx bx-download'></i> <span>@lang('layout.btn-export')</span></button>
                     </div>
                     <div class="col-4 d-flex justify-content-center px-0 button-result">
                       <button type="button" id="reset" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh'></i> <span>Reset</span></button>
+                        <i class='bx bx-refresh'></i> <span>@lang('layout.btn-reset')</span></button>
                     </div>
                   </div>
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" readonly></textarea>
@@ -161,17 +159,17 @@
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
               </div>
               <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
               </div>
             </div>
             <div class="local-collection-body">
               <ul class="list-group">
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>@lang('layout.local-history-none')</span>
                   </div>
                 </li>
                 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
@@ -229,16 +227,15 @@
             <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
                 <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                  Version 2.3
+                  @lang('layout.version') 2.3
                 </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                 <div class="card-body">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>@lang('robot.highlight')</p>
                   <div class="d-flex align-items-center">
                     <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                    <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                    <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                   </div>
                 </div>
               </div>
@@ -318,16 +315,15 @@
       <div class="card bg-transparent" style="">
         <div class="card-header" id="headingOne2">
           <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-            Version 2.3
+            @lang('layout.version') 2.3
           </div>
         </div>
         <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
           <div class="card-body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>@lang('robot.highlight')</p>
             <div class="d-flex align-items-center">
               <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-              <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+              <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
             </div>
           </div>
         </div>
@@ -338,49 +334,139 @@
 
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+          <h2>@lang('robot.desc-1')</h2>
+          <p>@lang('robot.desc-1-1')</p>
+          <p>@lang('robot.desc-1-2')</p>
+        </div>
+        <div class="d-none" id="description-tab-2">
+          <h2>@lang('robot.desc-2')</h2>
+          <p>@lang('robot.desc-2-1')</p>  
+          <p>@lang('robot.desc-2-2')</p> 
+        </div>
+        <div class="d-none" id="description-tab-3">
+          <h2>@lang('robot.desc-3')</h2>
+          <p>@lang('robot.desc-3-1')</p>
+          <p>@lang('robot.desc-3-2')</p>
+          <p>@lang('robot.desc-3-3')</p>
+          <p>@lang('robot.desc-3-4')</p>
+          <p>@lang('robot.desc-3-5')</p>
+        </div>
+        <div class="d-none" id="description-tab-4">
+          <h2>@lang('robot.desc-4')</h2>
+          <p>@lang('robot.desc-4-1')</p>
+          <p>@lang('robot.desc-4-2')</p>
+        </div>
+        <div class="d-none" id="description-tab-5">
+          <h2>@lang('robot.desc-5')</h2>
+          <p>@lang('robot.desc-5-1')</p>
+          <ol>
+            <li>@lang('robot.desc-5-1-1')</li>
+            <li>@lang('robot.desc-5-1-2')</li>
+            <li>@lang('robot.desc-5-1-3')</li>
+            <li>@lang('robot.desc-5-1-4')</li>
+          </ol>
+          <p>@lang('robot.desc-5-2')</p>
+        </div>
+        <div class="d-none" id="description-tab-6">
+          <h2>@lang('robot.desc-6')</h2>
+          <ol>
+            <li>
+              <p>@lang('robot.desc-6-1')</p>
+              <p>@lang('robot.desc-6-1-1')</p>
+              <ul>
+                <li>
+                  <p>@lang('robot.desc-6-1-1-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-1-1-2')</p>
+                  <p>@lang('robot.desc-6-1-1-2-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-1-1-3')</p>
+                  <p>@lang('robot.desc-6-1-1-3-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-1-1-4')</p>
+                  <p>@lang('robot.desc-6-1-1-4-1')</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>@lang('robot.desc-6-2')</p>
+              <p>@lang('robot.desc-6-2-1')</p>
+              <ul>
+                <li>
+                  <p>@lang('robot.desc-6-2-1-1')</p>
+                  <p>@lang('robot.desc-6-2-1-1-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-2-1-2')</p>
+                  <p>@lang('robot.desc-6-2-1-2-1')</p>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p>@lang('robot.desc-6-3')</p>
+              <ul>
+                <li>
+                  <p>@lang('robot.desc-6-3-1')</p>
+                  <p>@lang('robot.desc-6-3-1-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-3-2')</p>
+                  <p>@lang('robot.desc-6-3-2-1')</p>
+                </li>
+                <li>
+                  <p>@lang('robot.desc-6-3-3')</p>
+                  <p>@lang('robot.desc-6-3-3-1')</p>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
+          <a class="">@lang('robot.desc-1')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
           </div>
-          <a href="#" class="">How search engine works?</a>
+          <a class="">@lang('robot.desc-2')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
           </div>
-          <a href="#" class="">The basic of writing?</a>
+          <a class="">@lang('robot.desc-3')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
           </div>
-          <a href="#" class="">Measuring your writing?</a>
+          <a class="">@lang('robot.desc-4')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-5">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-5">5</span>
           </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+          <a class="">@lang('robot.desc-5')</a>
+        </div>
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-6">
+          <div class="mr-2" style="width:24px !important; height: 24px !important;">
+            <span class="label label-lg label-tools-description" id="nav-label-tab-5">6</span>
+          </div>
+          <a class="">@lang('robot.desc-6')</a>
         </div>
       </div>
-    </div>
+  </div>
     <div class="my-10" style="background:var(--darkgrey); border-radius:20px">
       <div class="row">
         <div class="col-md-6 py-5">
@@ -390,24 +476,24 @@
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
     <div class="row mb-10">
       <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">@lang('layout.feature-title') @lang('robot.title')</h2>
+        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title')</p>
+        <p class="text-black">@lang('layout.feature-desc')</p>
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="text-primaryblue">cmlabs Robot.txt Generator</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
+          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
         <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
@@ -420,42 +506,40 @@
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <h2 class="text-black">@lang('layout.whats-new-title') Words Counter</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('robot.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('robot.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
   </div>
 </div>
 
