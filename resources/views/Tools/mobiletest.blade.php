@@ -26,7 +26,7 @@ id/mobile-test
                         <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3 d-none'></i>
                         <i id="crawlHttps" class='bx bxs-check-shield text-white bx-md mr-3 d-none'></i>
                         <i id="crawlHttp" class='bx bxs-shield-x text-white bx-md mr-3 d-none'></i>
-                        <input type="url" class="form-control sitemap-url" name="" value="" placeholder="{{ Lang::get('layout.input-hint') }}" id="tested_url">
+                        <input type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="{{ Lang::get('layout.input-hint') }}" id="tested_url">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         <button id="generateButton" type="button" class="btn btn-crawl" name="button">@lang('mobiletest.btn-check')</button>
@@ -436,6 +436,9 @@ id/mobile-test
 @push('script')
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
+<script type="text/javascript">
+    $('#toggle_button_webmaster').click();
+</script>
 @endpush
 @section('mobile-test')
 active
