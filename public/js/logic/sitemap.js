@@ -23,6 +23,11 @@ let rendering = {
     take : 10
 }
 $(document).ready(function () {
+    let robot_sleep = lang ==='en'? 'Our robot is sleeping right now. Give him a task!' : 'Robot kita sedang tidur sekarang. Beri dia tugas!';
+    let robot_progress = lang ==='en'? 'Our robot is excecuting your task..' : 'Robot kami sedang menjalankan tugas Anda ...';
+    let robot_done = lang ==='en'? 'Our robot is already finished your task.' : 'Robot kami sudah menyelesaikan tugas Anda.';
+    let has_crawled = lang ==='en'? ' Has been crawled' : ' Telah ditelusuri';
+
     $('#noCrawl').show()
     $('#crawlHttps').hide()
     $('#crawlHttp').hide()
@@ -40,7 +45,7 @@ $(document).ready(function () {
         if (url.substr(url.length-1)==='/')
             socket.emit('crawl',"https://"+url.slice(0,-1));
         else socket.emit('crawl',"https://"+url);
-        $('#info').html("Our robot is excecuting your task..")
+        $('#info').html(robot_progress)
         cancel(true)
         $("#noCrawlResult").hide();
         $("#generateCrawlResult").show();
@@ -54,7 +59,7 @@ $(document).ready(function () {
         cancel(false)
         $("#noCrawlResult").show();
         $("#generateCrawlResult").hide();
-        $('#info').html("Our robot is sleeping right now. Give him a task!")
+        $('#info').html(robot_sleep)
         $('#detail-progress').empty();
         isCanceled = true;
         updateProgressBar(0)
@@ -64,7 +69,7 @@ $(document).ready(function () {
 
     socket.on('update queue', data =>{
         if (!isCanceled){
-            $('#detail-progress').html(data.site_length+' Has been crawled')
+            $('#detail-progress').html(data.site_length+has_crawled)
         }
     });
 
@@ -72,7 +77,7 @@ $(document).ready(function () {
         clearTable();
         $('#length-result').html(`(${response.data.length})`)
         $('#detail-progress').empty()
-        $('#info').html("Our robot is already finished your task.")
+        $('#info').html(robot_done)
         $('#noCrawlResult').hide();
         buttonOn(true, response.hash)
         DATA_FINAL = response.data;
@@ -141,13 +146,15 @@ function regexHttps(url){
 }
 
 let renderData = function() {
+    let show_more = lang === 'en' ? 'Show More' : 'Tampilkan Lebih Banyak';
+
     for (let i = rendering.skip ; i < DATA_FINAL.length; i++){
         addData(DATA_FINAL[i],i+1)
         if(i === rendering.skip + rendering.take){
             $("#result").append('<div id="show-more" onclick="showMore()" class="d-flex align-items-center justify-content-between mx-5 result-row-show-more">\n' +
                 '                  <div class="">\n' +
                 '                    <span class="label label-square label-sitemap">...</span>\n' +
-                '                    <span class="mx-3 sitemap-url-result">Show More</span>\n' +
+                '                    <span class="mx-3 sitemap-url-result">'+show_more+'</span>\n' +
                 '                  </div>\n' +
                 '                  <div class="d-flex align-items-center">\n' +
                 '                    <i class=\'bx bxs-chevron-down sitemap-show-more\'></i>\n' +
@@ -179,6 +186,8 @@ let saveData = function (data) {
 }
 
 const refreshLocalStorage = function(){
+    let no_history = lang === 'en' ? 'This is your first impressions, no history yet!' : 'Ini adalah kesan pertama Anda, belum ada riwayat!';
+
     try{
         const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
         $('#localsavemobile').empty();
@@ -216,12 +225,12 @@ const refreshLocalStorage = function(){
         }else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>`+no_history+`</span>
                   </div>
                 </li>`
             let div = `<div class="custom-card py-5 px-3">
                     <div class="d-flex justify-content-center text-center">
-                        <span>This is your first impressions, no history yet!</span>
+                        <span>`+no_history+`</span>
                     </div>
                 </div>`
 
@@ -253,26 +262,30 @@ let getData = function (index) {
 }
 
 let buttonOn = function (param, hash = null) {
+    let btn_download = lang === 'en' ? 'Download Sitemap' : 'Unduh Sitemap';
+
     let download = $('#download-button')
     download.empty()
     if (param){
-        download.append(`<a href="${URL_API+'/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">Download Sitemap</a>`)
+        download.append(`<a href="${URL_API+'/download/'+hash}" id="downloadOn" type="button" class="btn btn-download-sitemap">`+btn_download+`</a>`)
     }else {
         download.append(`<button id="downloadOff" type="button" class="btn btn-download-sitemap-disabled"
-                                        disabled name="button">Download Sitemap
+                                        disabled name="button">`+btn_download+`
                                 </button>`)
     }
 }
 
 let cancel = function (param) {
+    let btn_cancel = lang === 'en' ? 'Cancel' : 'Batal';
+
     let cancel = $('#cancel-button')
     cancel.empty()
     if (param){
-        cancel.append(`<button id="cancelOn" type="button" class="btn btn-cancel" name="button">Cancel
+        cancel.append(`<button id="cancelOn" type="button" class="btn btn-cancel" name="button">`+btn_cancel+`
                                     </button>`)
     }else {
         cancel.append(`<button id="cancelOff" type="button" class="btn btn-cancel-disabled" disabled
-                                name="button">Cancel
+                                name="button">`+btn_cancel+`
                         </button>`)
     }
 }

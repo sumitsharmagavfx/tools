@@ -172,7 +172,7 @@ id/json-ld-schema-generator
       </div>
       <div class="d-flex align-items-center">
         <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-        <span class="text-darkgrey">Last update 1 Nov, 2020   |   Version 1.7</span>
+        <span class="text-darkgrey">@lang('layout.whats-new-update') 1 Nov, 2020   |   @lang('layout.version') 1.7</span>
       </div>
     </div>
   </div>
@@ -181,46 +181,79 @@ id/json-ld-schema-generator
 
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+          <h2>@lang('jsonldhome.desc-1')</h2>
+          <p>@lang('jsonldhome.desc-1-1')</p>
+          <p>@lang('jsonldhome.desc-1-2')</p>
+          <p>@lang('jsonldhome.desc-1-3')</p>
+          <p>@lang('jsonldhome.desc-1-3-1')</p>
+          <p>@lang('jsonldhome.desc-1-3-1-1')</p>
+          <p>@lang('jsonldhome.desc-1-3-2')</p>
+          <p>@lang('jsonldhome.desc-1-3-2-1')</p>
+          <p>@lang('jsonldhome.desc-1-4')</p>
+        </div>
+        <div class="d-none" id="description-tab-2">
+          <h2>@lang('jsonldhome.desc-2')</h2>
+          <p>@lang('jsonldhome.desc-2-1')</p>
+          <p>@lang('jsonldhome.desc-2-2')</p>
+          <p>@lang('jsonldhome.desc-2-3')</p>
+          <p>@lang('jsonldhome.desc-2-4')</p>
+          <p>@lang('jsonldhome.desc-2-5')</p>
+          <p>@lang('jsonldhome.desc-2-6')</p>
+        </div>
+        <div class="d-none" id="description-tab-3">
+          <h2>@lang('jsonldhome.desc-3')</h2>
+          <p>@lang('jsonldhome.desc-3-1')</p>
+          <p>@lang('jsonldhome.desc-3-2')</p>
+          <p>@lang('jsonldhome.desc-3-3')</p>
+          <p>@lang('jsonldhome.desc-3-4')</p>
+          <p>@lang('jsonldhome.desc-3-5')</p>
+          <p>@lang('jsonldhome.desc-3-6')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;script type="application/ld+json"&gt;
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Product",
+                  "name": "Yoast SEO for WordPress",
+                  "image": "https://cdn-images.yoast.com/uploads/2010/10/Yoast_SEO_WP_plugin_FB.png",
+                  "description": "Yoast SEO is the most complete WordPress SEO plugin. It handles the technical optimization of your site & assists with optimizing your content.",
+                  "brand": {
+                    "@type": "Thing",
+                    "name": "Yoast"
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": "69.00"
+                  }
+                }
+              &lt;/script&gt;               
+            </code>
+          </pre>
+          <p>@lang('jsonldhome.desc-3-7')</p>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
+          <a class="">@lang('jsonldhome.desc-1')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
           </div>
-          <a href="#" class="">How search engine works?</a>
+          <a class="">@lang('jsonldhome.desc-2')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
           </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
-          </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+          <a class="">@lang('jsonldhome.desc-3')</a>
         </div>
       </div>
     </div>
@@ -233,24 +266,24 @@ id/json-ld-schema-generator
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
     <div class="row mb-10">
       <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">@lang('layout.feature-title')</h2>
+        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('jsonldhome.title')</p>
+        <p class="text-black">@lang('layout.feature-desc')</p>
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="text-primaryblue">cmlabs JSON-LD Schema Generator</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
+          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
         <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
@@ -263,42 +296,40 @@ id/json-ld-schema-generator
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
     </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    <h2 class="text-black">@lang('layout.whats-new-title') @lang('jsonldhome.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('jsonldhome.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('jsonldhome.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
   </div>
 </div>
 

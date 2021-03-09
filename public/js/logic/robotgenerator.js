@@ -56,6 +56,12 @@ jQuery(document).on('keyup', '.directory', function () {
 
 // Add Directive Function
 jQuery('#add').click(function() {
+    let placeholder_access = lang === 'en' ? 'Select access' : 'Pilih akses';
+    let access_opt_1 = lang === 'en' ? 'Allow' : 'Izinkan';
+    let access_opt_2 = lang === 'en' ? 'Disallow' : 'Jangan izinkan';
+    let placeholder_user_agent = lang === 'en' ? 'Select user agent' : 'Pilih agen pengguna';
+    let placeholder_directory = lang === 'en' ? 'your-directory' : 'direktori-anda';
+
     $('#directive-title').removeClass('d-none')
     $('#add-directive').addClass('d-none')
     $('#add-more-directive').removeClass('d-none')
@@ -73,22 +79,22 @@ jQuery('#add').click(function() {
             "<div class=\"col-md-4\">"+
               "<div class=\"form-group\">"+
                 "<select name=\"\" class=\"form-control access-directive\" data-id=\"" +(main.directive.length-1)+ "\">"+
-                  "<option value=\"\" disabled selected>Select access</option>"+
-                  "<option value=\"Allow\">Allow</option>"+
-                  "<option value=\"Disallow\">Disallow</option>"+
+                  "<option value=\"\" disabled selected>"+placeholder_access+"</option>"+
+                  "<option value=\"Allow\">"+access_opt_1+"</option>"+
+                  "<option value=\"Disallow\">"+access_opt_2+"</option>"+
                 "</select>"+
               "</div>"+
             "</div>"+
             "<div class=\"col-md-4\">"+
               "<div class=\"form-group\">"+
                 "<select name=\"\" class=\"form-control user-agent\" data-id=\"" +(main.directive.length-1)+ "\">"+
-                    "<option value=\"\" disabled selected>Select user agent</option>"+
+                    "<option value=\"\" disabled selected>"+placeholder_user_agent+"</option>"+
                 "</select>"+
               "</div>"+
             "</div>"+
             "<div class=\"col-md-4\">"+
               "<div class=\"form-group\">"+
-                "<input type=\"text\" class=\"form-control directory\" name=\"\" value=\"\" placeholder=\"/your-directory\" data-id=\"" +(main.directive.length-1)+ "\" required>"+
+                "<input type=\"text\" class=\"form-control directory\" name=\"\" value=\"\" placeholder=\"/"+placeholder_directory+"\" data-id=\"" +(main.directive.length-1)+ "\" required>"+
               "</div>"+
             "</div>"+
           "</div>"+

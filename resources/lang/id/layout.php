@@ -53,4 +53,8 @@ return [
     "whats-new-sub-title" => "Terbaru",
     "whats-new-update" => "Terakhir diperbarui",
     "view-web-release" => "Lihat semua web-rilis?",
+    "btn-copy" => "Salin",
+    "btn-check" => "Cek",
+    "btn-export" => "Ekspor",
+    "btn-reset" => "Reset",
 ];

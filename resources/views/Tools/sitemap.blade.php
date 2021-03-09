@@ -547,7 +547,7 @@
                                 <!-- WHEN CRAWL -->
                                 <div style="display: none;" id="generateCrawlResult">
                                     <div class="text-center">
-                                        <p class="d-block">Generating your sitemap...</p>
+                                        <p class="d-block">@lang('sitemap.generating')</p>
                                     </div>
                                 </div>
 
@@ -602,14 +602,7 @@
                                     </div>
                                     <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                                         <div class="card-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                                commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                                                id est laborum.</p>
+                                            <p>@lang('sitemap.highlight')</p>
                                             <div class="d-flex align-items-center">
                                                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                                                 <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
@@ -651,12 +644,7 @@
                     </div>
                     <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                         <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                qui officia deserunt mollit anim id est laborum.</p>
+                            <p>@lang('sitemap.highlight')</p>
                             <div class="d-flex align-items-center">
                                 <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
                                 <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
