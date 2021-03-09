@@ -57,4 +57,7 @@ return [
     "btn-check" => "Check",
     "btn-export" => "Export",
     "btn-reset" => "Reset",
+    "invalid-url" => "Invalid URL",
+    "invalid-number" => "Value should be more than 0",
+    "which-schema" => "Which Schema would you like to create?",
 ];
