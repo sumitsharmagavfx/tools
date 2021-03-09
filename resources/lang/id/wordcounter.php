@@ -1,19 +1,20 @@
 <?php
 
 return [
-    "meta-title" => "Penghitung Kata Online - Cek Jumlah kata Hingga Density",
-    "meta-desc" => "Word counter adalah tools SEO gratis dari cmlabs memiliki fitur menghitung kepadatan kata kunci atau keyword density.",
-    "meta-keyword" => "word counter, word counter tool, keyword density, keyword stuffing, keyword density tool, keyword tool, seo tool",
+    "meta-title" => "Word Counter Online – Tool penghitung jumlah kata",
+    "meta-desc" => "Hitung jumlah kata, paragraf, waktu membaca, dan kepadatan keyword dengan Word Counter Tool.",
     "title" => "WORD COUNTER",
     "subtitle" => "Tingkatkan Skill Menulis",
+    "autosave-on" => "Autosave <b>AKTIF</b>",
+    "autosave-off" => "Autosave <b>NONAKTIF</b>",
     "character" => "Karakter",
     "word" => "Kata",
     "sentence" => "Kalimat",
     "paragraph" => "Paragraf",
     "reading-time" => "Waktu Baca",
-    "local-history-title" => "Local History Anda",
-    "local-history-clear-all" => "Bersihkan Semua",
     "keyword-density" => "KATA",
+    "textarea-placeholder" => "Ketik atau tempel teks Anda..",
+    "highlight" => "Update versi terbaru ini menyediakan fitur autosave dan copy & adjust font. Dengan fitur autosave, anda tidak perlu khawatir jika tulisan hilang karena masalah teknis, sistem akan menyimpan tulisanmu dengan aman. Sedangkan fitur copy & adjust font akan memudahkan Anda untuk menyalin tulisan dan menyesuaikan ukurannya sesuai keinginan. Ini saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
     "desc-1"=>"Tingkatkan Tulisan Anda dengan Word Counter",
     "desc-1-1"=>"Penulisan konten sudah menjadi rutinitas baik bagi penulis konten online maupun copywriter. Penulis online umumnya diharapkan mampu untuk memaksimalkan konten yang mereka tulis dengan sejumlah kata atau kalimat tertentu. Oleh karena itu, jumlah kata merupakan aspek yang sangat penting. Anda dapat mengintegrasikan penghitung kata cmlabs ini untuk menambah pengalaman menulis konten Anda!",
     "desc-2"=>"Tahapan Umum Menulis Konten",
@@ -78,4 +79,6 @@ return [
     "desc-11-3"=>"Permintaan untuk posisi penulis konten semakin dicari dan menulis konten sekarang merupakan keterampilan yang mahal. Itu sebabnya Word Counter adalah suatu kebutuhan.",
     "desc-11-4"=>"Copywriter",
     "desc-11-5"=>"Popularitas copywriter semakin meningkat dan membuat pekerjaan ini perlu bagi perusahaan. Oleh karena itu, copywriter perlu menggunakan tool Word Counter ini.",
+    "whats-new-1"=>"Saat ini, pengguna dapat menggunakan tools Word Counter dengan fitur autosave. Dengan adanya update dan fitur tambahan ini, Anda tidak perlu khawatir jika tulisan hilang ketika terjadi masalah teknis. Hasil tulisan Anda tetap tersimpan dengan aman di sistem kami. Ini saatnya menulis dengan aman untuk hasil tulisan yang lebih baik.",
+    "whats-new-2"=>"Update versi terbaru mendukung fitur copy dan adjust font. Dengan ini Anda bisa menyesuaikan tampilan font sesuai dengan hal yang Anda butuhkan. Copy tulisan dengan mudah dan atur sesuka Anda. Kami mendukung penulisan yang lebih kreatif di update terbaru ini.Saat yang tepat untuk upgrade tulisanmu.",
 ];

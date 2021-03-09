@@ -111,7 +111,7 @@ color: var(--grey);
 
 .input-group-text {
   background-color: transparent;
-  border-right-style: none; 
+  border-right-style: none;
   border-radius: 0.42rem 0 0 0.42rem !important;
 }
 
@@ -495,8 +495,8 @@ text-decoration: underline;
                     <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('recipe.description')" data-id="0"></textarea>
                   </div>
                 </div>
-                <div class="row mb-5">
-                  <div class="col-10 col-sm-11">
+                <div class="row imageurlList">
+                  <div class="col-10 col-sm-11 mb-5">
                     <label class="text-black font-weight-bold" for="image">Image URL #1</label>
                     <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="0">
                     <div class="invalid-feedback">Invalid URL</div>
@@ -646,7 +646,7 @@ text-decoration: underline;
                 </div>
               </div>
             </div>
-            
+
             <div class="col-md-4 mb-5">
               <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
                 <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">

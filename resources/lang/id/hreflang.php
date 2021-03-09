@@ -5,6 +5,10 @@ return [
     "lang" => "id",
     "title" => "HREFLANG CHECKER",
     "sub-title" => "Cepat Memeriksa Tag Hreflang Untuk Halaman",
+    "check-btn" => "Cek URL",
+    "table-lang" => "Bahasa",
+    "table-region" => "Wilayah",
+    "result-none" => "Tidak ada URL yang dicentang, harap masukkan domain Anda di atas!",
     "desc-1" => "Apa itu hreflang dan mengapa itu penting",
     "desc-1-1" => "Hreflang adalah standar yang ditetapkan oleh Google yang membantu Google menargetkan konten yang benar di situs Anda kepada pengguna internasional. Google mencoba yang terbaik untuk membedakan halaman yang benar untuk melayani pengguna, tetapi terkadang Anda akan memiliki halaman serupa dalam bahasa yang sama dan mungkin sulit untuk menentukan halaman mana yang paling cocok. Hal ini dapat mengakibatkan Google menyajikan halaman Anda yang ditargetkan di pasar Jerman kepada pengguna berbahasa Jerman di Austria. Hreflang dirancang untuk mengatasi ini dengan memungkinkan Anda menentukan halaman mana yang Anda ingin Google kembalikan di setiap pasar, membantu menebaknya!",
     "desc-2" => "Kapan hreflang berguna",
@@ -16,4 +20,7 @@ return [
     "desc-4-1" => "Praktiknya hreflang sulit diterapkan, hal ini karena seringkali situs web internasional akan beroperasi pada sistem yang berbeda dan memiliki kebiasaan unik yang dapat mempersulit logika penerapan. Hreflang sangat bergantung pada rantai referensi yang selalu rahasia, begitu satu referensi rusak, ini dapat membuat seluruh logika tidak berlaku. Jadi, penting untuk memastikan halaman Anda tidak mengalami error.",
     "desc-5" => "Bagaimana Anda menggunakan tool ini",
     "desc-5-1" => "Di hreflangtest.com Anda dapat menguji penerapan hreflang Anda jika muncul di halaman (di header halaman atau header HTTP) dan menggunakan tool pengujian peta situs hreflang kami jika tag hreflang Anda ada di peta situs Anda.",
+    "highlight" => "Pada versi terbaru ini, kami menambahkan tool Hreflang Checker. Tool ini berguna untuk memungkinkan pengguna untuk menentukan halaman yang Anda ingin Google tampilkan di setiap pangsa pasar. Anda dapat menguji penerapan hreflang Anda jika muncul di halaman (di header halaman atau header HTTP) dan menggunakan tool pengujian sitemap hreflang kami jika tag hreflang Anda ada di sitemap Anda. Anda dapat menampilkan website Anda pada suatu negara yang memiliki lebih dari satu bahasa.",
+    "whats-new-1" => "Pada versi terbaru ini, kami menambahkan tool Hreflang Checker. Tool ini berguna untuk memungkinkan pengguna untuk menentukan halaman yang Anda ingin Google tampilkan di setiap pangsa pasar. Sehingga Anda dapat menampilkan website Anda pada suatu negara yang memiliki lebih dari satu bahasa. Dengan adanya Hreflang Checker ini, kami berharap Anda dapat mengoptimalkan konten di situs web Anda.",
+    "whats-new-2" => "Pada tools terbaru Hreflang Checker ini, Anda dapat menguji penerapan hreflang Anda jika muncul di halaman (di header halaman atau header HTTP) dan menggunakan tool pengujian sitemap hreflang kami jika tag hreflang Anda ada di sitemap Anda. Bahasa dan wilayah mengacu pada bahasa default website Anda, pastikan developer Anda menyiapkan bahasa href.",
 ];

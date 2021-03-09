@@ -3,7 +3,7 @@
         <div class="d-flex align-items-center flex-wrap mr-1">
             <div class="d-flex align-items-baseline flex-wrap mr-5">
                 <a href="/{{ $local }}" id="subheader_logo" class="d-none">
-                    <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-30px mr-8"/>
+                    <img alt="Logo" src="{{ asset('media/logos/new/new-logo-default.png') }}" class="max-h-30px mr-8" />
                 </a>
                 <ul class="nav custom-nav d-none" id="menu_tools_webmaster">
                     <li class="nav-item">
@@ -12,9 +12,11 @@
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('json-ld')" href="/{{ $local }}/json-ld-schema-generator">JSON-LD</a>
                     </li>
+                    {{--
                     <li class="nav-item ml-7">
                         <a class="nav-link @yield('keyword-research')" href="/{{ $local }}/keyword-research">Keyword Research</a>
                     </li>
+                    --}}
                     <li class="nav-item dropdown ml-7">
                         <a class="nav-link dropdown-toggle @yield('generator')" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Generator</a>
                         <div class="dropdown-menu">

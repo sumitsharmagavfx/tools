@@ -1,5 +1,5 @@
 triggerEnter('#btn-ssl', '#url');
-$(document).ready(function () {
+$(document).ready(function() {
     $('#noCrawl').show()
     $('#crawlHttps').hide()
     $('#crawlHttp').hide()
@@ -7,7 +7,7 @@ $(document).ready(function () {
     refreshLocalStorage()
 })
 
-$('#url').on('input', function () {
+$('#url').on('input', function() {
     let check = regexHttps($(this).val());
     if (check === 'https') {
         $('#noCrawl').hide()
@@ -39,11 +39,9 @@ function regexHttps(url) {
 function clearTable() {
     $("#noCrawlResult").show();
     $("#generateCrawlResult").hide();
-    // $("#result").empty();
 }
 
-$('#crawlButton').on('click', function () {
-    // $('#url').addClass('spinner spinner-success spinner-right');
+$('#crawlButton').on('click', function() {    
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
     $.ajax({
@@ -64,7 +62,7 @@ $('#crawlButton').on('click', function () {
                 $('#noCrawlResult').show()
             } else {
                 toastr.success('Success scan your ssl', 'Success');
-                save(response,url)
+                save(response, url)
                 renderData(response)
                 refreshLocalStorage()
             }
@@ -77,14 +75,14 @@ $('#crawlButton').on('click', function () {
     })
 });
 
-let getData = function (index) {
+let getData = function(index) {
     let data = JSON.parse(localStorage.getItem('ssl-checker'))[index]
     $('#url').val(data.url)
     renderData(data)
 }
 
-let renderData = function (response){
-    if (response){
+let renderData = function(response) {
+    if (response) {
         $('#result').empty()
         $('#noCrawlResult').hide()
         let expDate = new Date(response.valid_to)
@@ -92,11 +90,11 @@ let renderData = function (response){
         let displayText;
         let icon;
         let textExpired;
-        if (difDate < 0){
+        if (difDate < 0) {
             displayText = `SSL Certificate expired on ${expDate.getDate()}th, ${parseMonth(expDate.getMonth()+1)} ${expDate.getFullYear()} (${(Math.abs(difDate)/(1000*3600*24)).toFixed(0)} days ago).`
             icon = `<i class='bx bxs-x-circle bx-md' style="color:#D60404"></i>`
             textExpired = `Your TSL Certificate is expired`
-        }else {
+        } else {
             displayText = `SSL Certificate expired on ${expDate.getDate()}th, ${parseMonth(expDate.getMonth()+1)} ${expDate.getFullYear()} (${(Math.abs(difDate)/(1000*3600*24)).toFixed(0)} days from now).`
             icon = `<i class='bx bxs-check-circle bx-md' style="color:#67B405"></i>`
             textExpired = `TLS Certificate is installed well.`
@@ -133,31 +131,33 @@ let renderData = function (response){
     }
 }
 
-let save = function (data,url){
-    if (data){
+let save = function(data, url) {
+    if (data) {
         let local = localStorage.getItem('ssl-checker')
         let temp = []
-        if (local){
+        if (local) {
             temp = JSON.parse(local)
         }
         let urlFormatted = {
-            url:url
+            url: url
         }
-        Object.assign(data,urlFormatted)
+        Object.assign(data, urlFormatted)
         temp.push(data)
-        localStorage.setItem('ssl-checker',JSON.stringify(temp))
+        localStorage.setItem('ssl-checker', JSON.stringify(temp))
     }
 }
 
-const refreshLocalStorage = function(){
-    try{
-        const month = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DES']
+const refreshLocalStorage = function() {
+    let no_history = lang === 'en' ? 'This is your first impressions, no history yet!' : 'Ini adalah kesan pertama Anda, belum ada riwayat!';
+
+    try {
+        const month = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DES']
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('ssl-checker'))
-        if(keys){
+        if (keys) {
             let index = 0;
-            for (let key of keys){
+            for (let key of keys) {
                 let date = new Date()
                 let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
                 let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
@@ -184,29 +184,29 @@ const refreshLocalStorage = function(){
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
-        }else {
+        } else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>` + no_history + `</span>
                   </div>
                 </li>`
             let div = `<div class="custom-card py-5 px-3">
                     <div class="d-flex justify-content-center text-center">
-                        <span>This is your first impressions, no history yet!</span>
+                        <span>` + no_history + `</span>
                     </div>
                 </div>`
 
             $('#localsavemobile').append(div)
             $('#localsavedesktop').append(div2)
         }
-    }catch(e){
+    } catch (e) {
         console.log(e)
     }
 }
 
-let removeLocal = function (index){
+let removeLocal = function(index) {
     const keys = JSON.parse(localStorage.getItem('ssl-checker'))
-    keys.splice(index,1)
+    keys.splice(index, 1)
     localStorage.setItem('ssl-checker', JSON.stringify(keys))
     refreshLocalStorage()
     $('#result').empty()

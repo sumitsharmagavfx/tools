@@ -4,6 +4,12 @@ var dataResult = undefined;
 var counter = 1;
 var analyzeChart = undefined;
 
+if (lang == "en") {
+    var localStorageNone = "This is your first impressions, no history yet!";
+} else if (lang == "id") {
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+}
+
 const HistoryTemplate = (url, date) => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px history--list" data-url="${url}">
   <div class="d-flex justify-content-between">
@@ -19,7 +25,7 @@ const HistoryTemplate = (url, date) => `
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>This is your first impressions, no history yet!</span>
+    <span>` + localStorageNone + `</span>
   </div>
 </li>`;
 
@@ -37,14 +43,14 @@ const HistoryTemplateMobile = (url, date) => `
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>This is your first impressions, no history yet!</span>
+  <span>` + localStorageNone + `</span>
 </div>
 </div>`;
 
 
 const LinkTemplate = (no, url, rels, title) => `
 <div class="d-flex mx-5 result-row">
-  <div class="number d-flex align-items-center">
+  <div class="number-analyzer d-flex align-items-center">
     <span class="label label-square label-analyzer">${no}</span>
   </div>
   <div class="url-analyzer d-flex align-items-center">
@@ -96,7 +102,7 @@ function deleteHistory(_url = null) {
     let histories = [];
     if (_url) {
         histories = localStorage.getItem(LINK_ANALYZER_LOCAL_STORAGE_KEY) || [];
-        if (typeof (histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
+        if (typeof(histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
         histories = histories.filter((history) => {
             return history.url !== _url;
         });
@@ -315,7 +321,7 @@ function createChart(internal_link_value, external_link_value, nofollow_link_val
     }
 }
 
-$('#input-url').keyup(function () {
+$('#input-url').keyup(function() {
     const _url = $(this).val();
     if (checkUrl(_url)) {
         $('#empty-url').hide();
@@ -334,9 +340,9 @@ $('#input-url').keyup(function () {
     }
 });
 
-$('#local-history').on('click', '.delete-history--btn', function () {
+$('#local-history').on('click', '.delete-history--btn', function() {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function (e) {
+}).on('click', '.history--list', function(e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     const _url = $(this).data('url');
 
@@ -351,9 +357,9 @@ $('#local-history').on('click', '.delete-history--btn', function () {
     renderAllData(history.data);
 })
 
-$('#local-history-mobile').on('click', '.delete-history--btn', function () {
+$('#local-history-mobile').on('click', '.delete-history--btn', function() {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function (e) {
+}).on('click', '.history--list', function(e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     // analyze($(this).data('url'));
     const _url = $(this).data('url');
@@ -369,15 +375,15 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function () {
     renderAllData(history.data);
 })
 
-$('#analyze-btn').click(function () {
+$('#analyze-btn').click(function() {
     analyze($('#input-url').val());
 })
 
-$('.show-more--btn').click(function () {
+$('.show-more--btn').click(function() {
     renderListOfLinks(10);
 });
 
-$('#cancel-request-btn').click(function () {
+$('#cancel-request-btn').click(function() {
     jqueryRequest.abort();
     updateProgressBar(0);
     $('#cancel-request-btn')
@@ -386,6 +392,6 @@ $('#cancel-request-btn').click(function () {
         .attr('disabled', 'disabled')
 })
 
-$('.clear-history--btn').click(function () {
+$('.clear-history--btn').click(function() {
     deleteHistory();
 });

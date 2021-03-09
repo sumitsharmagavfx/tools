@@ -563,3 +563,76 @@ let clearAll = function () {
 }
 
 refreshLocalStorage();
+
+$(document).ready(function() {
+    $("#performancePB").click(function() {
+        $("#performance").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").addClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#accessibilityPB").click(function() {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").addClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#practicePB").click(function() {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").addClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#seoPB").click(function() {
+
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").fadeIn().removeClass("d-none").addClass("d-block");
+        $("#pwa").removeClass("d-block").addClass("d-none").fadeOut();
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").addClass("active");
+        $("#pwaPB").removeClass("active");
+    });
+
+    $("#pwaPB").click(function() {
+        $("#performance").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#accessibility").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#best-practices").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#seo").removeClass("d-block").addClass("d-none").fadeOut();
+        $("#pwa").fadeIn().removeClass("d-none").addClass("d-block");
+
+        $("#performancePB").removeClass("active");
+        $("#accessibilityPB").removeClass("active");
+        $("#practicePB").removeClass("active");
+        $("#seoPB").removeClass("active");
+        $("#pwaPB").addClass("active");
+    });
+});

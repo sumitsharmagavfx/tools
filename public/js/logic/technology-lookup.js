@@ -1,5 +1,11 @@
 const TECH_LOOKUP_LOCAL_STORAGE_KEY = 'tech-lookup-history';
 
+if (lang == "en") {
+    var localStorageNone = "This is your first impressions, no history yet!";
+} else if (lang == "id") {
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!";
+}
+
 const TechnologyTemplate = (title, icon, category, version) => `
 <div class="d-flex justify-content-between align-items-center mx-5">
   <div class="d-flex align-items-center">
@@ -28,7 +34,7 @@ const HistoryTemplate = (url, date) => `
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
   <div class="d-flex justify-content-center text-center">
-    <span>This is your first impressions, no history yet!</span>
+    <span>` + localStorageNone + `</span>
   </div>
 </li>`;
 
@@ -46,7 +52,7 @@ const HistoryTemplateMobile = (url, date) => `
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
-  <span>This is your first impressions, no history yet!</span>
+  <span>` + localStorageNone + `</span>
 </div>
 </div>`;
 
@@ -86,7 +92,7 @@ function deleteHistory(_url = null) {
     let histories = [];
     if (_url) {
         histories = localStorage.getItem(TECH_LOOKUP_LOCAL_STORAGE_KEY) || [];
-        if (typeof (histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
+        if (typeof(histories) === 'string' || histories instanceof String) histories = JSON.parse(histories);
         histories = histories.filter((history) => {
             return history.url !== _url;
         });
@@ -98,7 +104,7 @@ function deleteHistory(_url = null) {
 
 
 
-function convertSecond(seconds){
+function convertSecond(seconds) {
     let minute = (seconds / 60).toFixed(0);
     let second = seconds % 60;
     return {
@@ -135,8 +141,11 @@ function analyzeUrl(_url) {
                 }
             },
             error: (err) => {
-                if(err.responseJSON.statusCode === 429){
-                    let {minute, second} = convertSecond(err.responseJSON.data.current_time);
+                if (err.responseJSON.statusCode === 429) {
+                    let {
+                        minute,
+                        second
+                    } = convertSecond(err.responseJSON.data.current_time);
                     toastr.error(`Please wait for ${minute} minutes and ${second} seconds`, `Error ${err.responseJSON.message}`)
                 } else {
                     toastr.error(err.responseJSON.message, 'Error')
@@ -156,7 +165,7 @@ function analyzeUrl(_url) {
     }
 }
 
-function renderAllData(data){
+function renderAllData(data) {
     $('#technology-lookup-result-empty').hide();
     $('#technology-lookup-result-list').empty().show();
     $('#technology-lookup-result-total').text(`(${data.technologies.length})`)
@@ -168,7 +177,7 @@ function renderAllData(data){
     }
 }
 
-function formatDate(date){
+function formatDate(date) {
     // Format should be : DD/MM/YYYY HH:ii
     return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`
 }
@@ -182,7 +191,7 @@ function checkUrl(url) {
     }
 }
 
-function getProtocol(url){
+function getProtocol(url) {
     try {
         let _url = new URL(url)
         return _url.protocol;
@@ -191,12 +200,12 @@ function getProtocol(url){
     }
 }
 
-$('#input-url').keyup(function () {
+$('#input-url').keyup(function() {
     const _url = $(this).val();
-    if(checkUrl(_url)){
+    if (checkUrl(_url)) {
         $('#empty-url').hide();
         const _protocol = getProtocol(_url)
-        if(_protocol === 'https:') {
+        if (_protocol === 'https:') {
             $('#unsecure-url').hide();
             $('#secure-url').show();
         } else {
@@ -210,9 +219,9 @@ $('#input-url').keyup(function () {
     }
 });
 
-$('#local-history').on('click', '.delete-history--btn', function () {
+$('#local-history').on('click', '.delete-history--btn', function() {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function (e) {
+}).on('click', '.history--list', function(e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     const _url = $(this).data('url');
 
@@ -227,9 +236,9 @@ $('#local-history').on('click', '.delete-history--btn', function () {
     renderAllData(history.data);
 })
 
-$('#local-history-mobile').on('click', '.delete-history--btn', function () {
+$('#local-history-mobile').on('click', '.delete-history--btn', function() {
     deleteHistory($(this).data('url'))
-}).on('click', '.history--list', function (e) {
+}).on('click', '.history--list', function(e) {
     if (e.target.classList.contains('delete-history--btn')) return;
     // analyze($(this).data('url'));
     const _url = $(this).data('url');
@@ -245,11 +254,10 @@ $('#local-history-mobile').on('click', '.delete-history--btn', function () {
     renderAllData(history.data);
 })
 
-$('.clear-history--btn').click(function(){
+$('.clear-history--btn').click(function() {
     deleteHistory();
 });
 
-$('#crawl-btn').click(function(){
+$('#crawl-btn').click(function() {
     analyzeUrl($('#input-url').val());
 })
-

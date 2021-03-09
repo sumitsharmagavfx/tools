@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('wordcounter.meta-desc'))
 
-@section('meta-keyword', Lang::get('wordcounter.meta-keyword'))
-
 @section('conical','/en/word-counter')
 
 @section('en-link')
@@ -51,8 +49,8 @@ id/word-counter
                                     <a href="#local-collection-desktop">
                                         <i class='bx bxs-collection bx-sm mx-2 text-darkgrey text-hover-primaryblue'></i>
                                     </a>
-                                    <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="Autosave is <b>OFF</b>"></i>
-                                    <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-html="true" data-placement="top" title="Autosave is <b>ON</b>"></i>
+                                    <i id="autoSaveOff" class='bx bxs-server bx-sm mx-2 text-darkgrey text-hover-primaryblue auto-save-off' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-off') }}"></i>
+                                    <i id="autoSaveOn" class='bx bxs-server bx-sm mx-2 text-primaryblue text-hover-primaryblue auto-save-on' data-html="true" data-placement="top" title="{{ Lang::get('wordcounter.autosave-on') }}"></i>
                                 </div>
                             </div>
                         </div>
@@ -85,18 +83,18 @@ id/word-counter
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            <textarea data-key="{{time()}}" data-autoresize name="name" placeholder="Type or paste your text.." rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area font-size-12px"
-                                id="textarea"></textarea>
+                            <textarea data-key="{{time()}}" data-autoresize name="name" placeholder="{{ Lang::get('wordcounter.textarea-placeholder') }}" rows="15" style="resize:none; overflow:hidden"
+                                class="form-control word-counter-text-area font-size-12px" id="textarea"></textarea>
                         </div>
                     </div>
                     <div id="local-collection-desktop" class="local-collection word-counter-local">
                         <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
                             <div class="d-flex flex-row align-items-center">
                                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                                <span class="text-black font-15px">@lang('wordcounter.local-history-title')</span>
+                                <span class="text-black font-15px">@lang('layout.local-history')</span>
                             </div>
                             <div onclick="clearAll()">
-                                <span class="clear-all font-15px pointer">@lang('wordcounter.local-history-clear-all')</span>
+                                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
                             </div>
                         </div>
                         <div class="local-collection-body">
@@ -139,17 +137,15 @@ id/word-counter
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        Version 2.3
+                                        @lang('layout.version') 2.3
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                                     <div class="card-body">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                            deserunt mollit anim id est laborum.</p>
+                                        <p>@lang('wordcounter.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -166,10 +162,10 @@ id/word-counter
         <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
             <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
             </div>
             <div>
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
             </div>
         </div>
         <div class="local-collection-body mt-3 px-5" id="localsavemobile">
@@ -200,17 +196,15 @@ id/word-counter
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        Version 2.3
+                        @lang('layout.version') 2.3
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                     <div class="card-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum.</p>
+                        <p>@lang('wordcounter.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -223,101 +217,101 @@ id/word-counter
         <div class="row">
             <div class="col-md-9">
                 <div class="" id="description-tab-1">
-                    <h2 class="text-black">@lang('wordcounter.desc-1')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-1-1')</p>
+                    <h2>@lang('wordcounter.desc-1')</h2>
+                    <p>@lang('wordcounter.desc-1-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-2">
-                    <h2 class="text-black">@lang('wordcounter.desc-2')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-2-1')</p>
+                    <h2>@lang('wordcounter.desc-2')</h2>
+                    <p>@lang('wordcounter.desc-2-1')</p>
                     <ul>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-1')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-2')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-3')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-4')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-5')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-6')</li>
-                        <li class="text-black">@lang('wordcounter.desc-2-1-7')</li>
+                        <li>@lang('wordcounter.desc-2-1-1')</li>
+                        <li>@lang('wordcounter.desc-2-1-2')</li>
+                        <li>@lang('wordcounter.desc-2-1-3')</li>
+                        <li>@lang('wordcounter.desc-2-1-4')</li>
+                        <li>@lang('wordcounter.desc-2-1-5')</li>
+                        <li>@lang('wordcounter.desc-2-1-6')</li>
+                        <li>@lang('wordcounter.desc-2-1-7')</li>
                     </ul>
                 </div>
 
                 <div class="d-none" id="description-tab-3">
-                    <h2 class="text-black">@lang('wordcounter.desc-3')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-3-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-3-5')</p>
+                    <h2>@lang('wordcounter.desc-3')</h2>
+                    <p>@lang('wordcounter.desc-3-1')</p>
+                    <p>@lang('wordcounter.desc-3-2')</p>
+                    <p>@lang('wordcounter.desc-3-3')</p>
+                    <p>@lang('wordcounter.desc-3-4')</p>
+                    <p>@lang('wordcounter.desc-3-5')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-4">
-                    <h2 class="text-black">@lang('wordcounter.desc-4')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-4-1')</p>
+                    <h2>@lang('wordcounter.desc-4')</h2>
+                    <p>@lang('wordcounter.desc-4-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-5">
-                    <h2 class="text-black">@lang('wordcounter.desc-5')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-5-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-5-2')</p>
+                    <h2>@lang('wordcounter.desc-5')</h2>
+                    <p>@lang('wordcounter.desc-5-1')</p>
+                    <p>@lang('wordcounter.desc-5-2')</p>
                 </div>
                 <div class="d-none" id="description-tab-6">
-                    <h2 class="text-black">@lang('wordcounter.desc-6')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-6-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-5')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-6-6-1')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-1-5')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-6-6-2')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-2-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-6-6-2-2')</p>
+                    <h2>@lang('wordcounter.desc-6')</h2>
+                    <p>@lang('wordcounter.desc-6-1')</p>
+                    <p>@lang('wordcounter.desc-6-2')</p>
+                    <p>@lang('wordcounter.desc-6-3')</p>
+                    <p>@lang('wordcounter.desc-6-4')</p>
+                    <p>@lang('wordcounter.desc-6-5')</p>
+                    <h3>@lang('wordcounter.desc-6-6-1')</h3>
+                    <p>@lang('wordcounter.desc-6-6-1-1')</p>
+                    <p>@lang('wordcounter.desc-6-6-1-2')</p>
+                    <p>@lang('wordcounter.desc-6-6-1-3')</p>
+                    <p>@lang('wordcounter.desc-6-6-1-4')</p>
+                    <p>@lang('wordcounter.desc-6-6-1-5')</p>
+                    <h3>@lang('wordcounter.desc-6-6-2')</h3>
+                    <p>@lang('wordcounter.desc-6-6-2-1')</p>
+                    <p>@lang('wordcounter.desc-6-6-2-2')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-7">
-                    <h2 class="text-black">@lang('wordcounter.desc-7')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-7-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-7-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-7-3')</p>
+                    <h2>@lang('wordcounter.desc-7')</h2>
+                    <p>@lang('wordcounter.desc-7-1')</p>
+                    <p>@lang('wordcounter.desc-7-2')</p>
+                    <p>@lang('wordcounter.desc-7-3')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-8">
-                    <h2 class="text-black">@lang('wordcounter.desc-8')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-8-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-1')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-1-1')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-2')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-2-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-2-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-3')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-3-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-3-2')</p>
-                    <h3 class="text-black">@lang('wordcounter.desc-8-2-4')</h3>
-                    <p class="text-black">@lang('wordcounter.desc-8-2-4-1')</p>
+                    <h2>@lang('wordcounter.desc-8')</h2>
+                    <p>@lang('wordcounter.desc-8-1')</p>
+                    <p>@lang('wordcounter.desc-8-2')</p>
+                    <h3>@lang('wordcounter.desc-8-2-1')</h3>
+                    <p>@lang('wordcounter.desc-8-2-1-1')</p>
+                    <h3>@lang('wordcounter.desc-8-2-2')</h3>
+                    <p>@lang('wordcounter.desc-8-2-2-1')</p>
+                    <p>@lang('wordcounter.desc-8-2-2-2')</p>
+                    <h3>@lang('wordcounter.desc-8-2-3')</h3>
+                    <p>@lang('wordcounter.desc-8-2-3-1')</p>
+                    <p>@lang('wordcounter.desc-8-2-3-2')</p>
+                    <h3>@lang('wordcounter.desc-8-2-4')</h3>
+                    <p>@lang('wordcounter.desc-8-2-4-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-9">
-                    <h2 class="text-black">@lang('wordcounter.desc-9')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-9-1')</p>
+                    <h2>@lang('wordcounter.desc-9')</h2>
+                    <p>@lang('wordcounter.desc-9-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-10">
-                    <h2 class="text-black">@lang('wordcounter.desc-10')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-10-1')</p>
+                    <h2>@lang('wordcounter.desc-10')</h2>
+                    <p>@lang('wordcounter.desc-10-1')</p>
                 </div>
 
                 <div class="d-none" id="description-tab-11">
-                    <h2 class="text-black">@lang('wordcounter.desc-11')</h2>
-                    <p class="text-black">@lang('wordcounter.desc-11-1')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-2')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-3')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-4')</p>
-                    <p class="text-black">@lang('wordcounter.desc-11-5')</p>
+                    <h2>@lang('wordcounter.desc-11')</h2>
+                    <p>@lang('wordcounter.desc-11-1')</p>
+                    <p>@lang('wordcounter.desc-11-2')</p>
+                    <p>@lang('wordcounter.desc-11-3')</p>
+                    <p>@lang('wordcounter.desc-11-4')</p>
+                    <p>@lang('wordcounter.desc-11-5')</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -398,24 +392,24 @@ id/word-counter
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
-                        <h2 class="text-white">Writing Starter Guide</h2>
-                        <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-                        <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+                        <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+                        <p class="text-white">@lang('layout.banner-robo-desc')</p>
+                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row mb-10">
             <div class="col-md-6">
-                <h2 class="text-black">Available features</h2>
-                <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-                <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+                <h2 class="text-black">@lang('layout.feature-title')</h2>
+                <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') <span>@lang('wordcounter.title')</span></p>
+                <p class="text-black">@lang('layout.feature-desc')</p>
             </div>
             <div class="col-md-6">
                 <div class="d-flex align-items-center">
                     <span class="text-primaryblue">cmlabs Words Counter</span>
                     <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-                    <small class="text-grey">Updated 25 Dec, 2020</small>
+                    <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
                 </div>
                 <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
                 <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
@@ -428,44 +422,40 @@ id/word-counter
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
             </div>
         </div>
-        <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+        <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('wordcounter.title')</span></h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
                     <div class="alert-text mb-5">
-                        <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
                     </div>
-                    <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update,
-                        starting
-                        from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+                    <span class="alert-features-text">@lang('wordcounter.whats-new-1')</span>
                 </div>
             </div>
             <div class="col-md-6 mb-5">
                 <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
                     <div class="alert-text mb-5">
-                        <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+                        <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">Last Update Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
                         </button>
                     </div>
-                    <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update,
-                        starting
-                        from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+                    <span class="alert-features-text">@lang('wordcounter.whats-new-2')</span>
                 </div>
             </div>
         </div>
-        <p class="text-black view-all-release">View all web-release?</p>
+        <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
     </div>
 </div>
 @endsection
