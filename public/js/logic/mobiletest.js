@@ -33,8 +33,8 @@ var ic_normal = $('#noCrawl'),
     result_subtitle = $('#result-subtitle'),
     result_date = $('#result-date'),
     image = $('#mobile-image-preview'),
-    mobile_indicator_1 = $('#mobileFriendlyIcon')
-mobile_indicator_2 = $('#notMobileFriendlyIcon')
+    mobile_indicator_1 = $('#mobileFriendlyIcon'),
+    mobile_indicator_2 = $('#notMobileFriendlyIcon')
 
 $(document).ready(function() {
     ic_normal.removeClass('d-none')
