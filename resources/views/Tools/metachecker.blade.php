@@ -27,10 +27,12 @@ id/page-title-meta-description-checker
                             <div class="metachecker-background-text-size-left-edge d-flex justify-content-center align-items-center p-2 ml-5">
                                 <i class='bx bxs-cog text-white'></i>
                             </div>
-                            <div id="manualModeOff" class="d-block metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('metachecker.tooltip-manual-off') }}">
+                            <div id="manualModeOff" class="d-block metachecker-background-text-size text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
+                                title="{{ Lang::get('metachecker.tooltip-manual-off') }}">
                                 MANUAL
                             </div>
-                            <div id="manualModeOn" class="d-none metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark" title="{{ Lang::get('metachecker.tooltip-manual-on') }}">
+                            <div id="manualModeOn" class="d-none metachecker-background-text-size active text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip" data-theme="dark"
+                                title="{{ Lang::get('metachecker.tooltip-manual-on') }}">
                                 MANUAL
                             </div>
                             <div id="botModeOff" class="d-none metachecker-background-text-size metachecker-background-text-size-right-edge text-white font-weight-bolder justify-content-center align-items-center p-2" data-toggle="tooltip"
@@ -75,7 +77,8 @@ id/page-title-meta-description-checker
                                 <div id="descbar3" class="progress-bar_item progress-bar_item-3 blank"></div>
                             </div>
                         </div>
-                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}" style="resize:none; overflow:hidden"></textarea>
+                        <textarea id="desc" data-autoresize rows="1" class="form-control bg-primaryblue text-white px-0 input-meta-description" placeholder="{{ Lang::get('metachecker.input-hint-manual') }}"
+                            style="resize:none; overflow:hidden"></textarea>
                     </div>
                 </div>
             </div>

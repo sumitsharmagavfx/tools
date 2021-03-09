@@ -83,8 +83,8 @@ id/word-counter
                             </div>
                         </div>
                         <div class="card-body p-0">
-                            <textarea data-key="{{time()}}" data-autoresize name="name" placeholder="{{ Lang::get('wordcounter.textarea-placeholder') }}" rows="15" style="resize:none; overflow:hidden" class="form-control word-counter-text-area font-size-12px"
-                                id="textarea"></textarea>
+                            <textarea data-key="{{time()}}" data-autoresize name="name" placeholder="{{ Lang::get('wordcounter.textarea-placeholder') }}" rows="15" style="resize:none; overflow:hidden"
+                                class="form-control word-counter-text-area font-size-12px" id="textarea"></textarea>
                         </div>
                     </div>
                     <div id="local-collection-desktop" class="local-collection word-counter-local">
