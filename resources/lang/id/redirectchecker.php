@@ -39,5 +39,8 @@ return [
     "desc-6-2" => 'Mereka berdampak negatif pada promosi: menambah waktu pemuatan konten, menghabiskan anggaran perayapan, "mencuri" bobot tautan, dan dapat membawa situs ke pengalihan siklus.',
     "desc-6-3" => "Anda perlu mencari tahu alasannya dan memahami mengapa pengalihan terjadi.",
     "desc-6-4" => "Temukan redirect chain menggunakan tool gratis kami.",
+    "highlight" => "Pada versi terbaru di tool Redirect Chain Checker ini, memungkinkan pengguna untuk memeriksa halaman not founf dan mencari tahu kemana link mengarah (301 atau 302). Redirect Chain Checker akan menampilkan kode status HTTP dan URL tujuan. Anda dapat melihat tautan afiliasi tanpa mengkliknya. Kami berharap tool terbaru dari cmlabs ini dapat memudahkan pekerjaan Anda.",
+    "whats-new-1" => 'Pada versi terbaru ini, kami menambahkan tool Redirect Chains Checker. Tool ini memungkinkan pengguna untuk memeriksa apakah halaman "not found: memberikan kode 404 dan mencari tahu redirect mana yang dikonfigurasi di server (301 atau 302). Sehingga Redirect Checker akan menampilkan kode status HTTP dan URL tujuan.',
+    "whats-new-2" => "Saat ini, pengguna dapat menggunakan tool Redirect Chain Checker yang memiliki fitur untuk menghindari kejutan saat menempelkan PageRank dan mencari tahu kemana link mengarah. Sehingga Anda dapat melihat tautan afiliasi tanpa mengkliknya.Kami berharap tool terbaru dari cmlabs ini dapat memudahkan pekerjaan Anda.",
 
 ];

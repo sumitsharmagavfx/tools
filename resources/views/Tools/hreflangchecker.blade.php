@@ -264,7 +264,7 @@
                     <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('hreflang.feature-7')</bdi></label>
                 </div>
             </div>
-            <h2 class="text-black">@lang('layout.whats-new-title') Hreflang Checker</h2>
+            <h2 class="text-black">@lang('layout.whats-new-title') @lang('hreflang.title')</h2>
             <div class="row my-5">
                 <div class="col-md-6 mb-5">
                     <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch"
