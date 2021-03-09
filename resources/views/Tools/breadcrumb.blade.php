@@ -917,7 +917,8 @@ id/json-ld-breadcrumb-schema-generator
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
+    <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+    <script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
 @endpush
 @section('json-ld-breadcrumb')
 active

@@ -557,7 +557,7 @@ text-decoration: underline;
                 </div>
               </div>
             </div>
-            
+
             <div class="col-md-4 mb-5">
               <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
                 <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
@@ -1022,7 +1022,8 @@ text-decoration: underline;
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/howto-json.js')}}"></script>
+    <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+    <script src="{{asset('js/logic/howto-json.js')}}"></script>
 @endpush
 @section('json-ld-howto')
 active
