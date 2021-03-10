@@ -486,8 +486,10 @@ text-decoration: underline;
                       <div class="col-6 col-md-4">
                         <label for="currency" class="text-black font-weight-bold">Currency</label>
                         <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true">
-                          <option value="null">null</option>
-                          {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                            <option value="none">Choose Currency</option>
+                            @foreach($currencies as $c)
+                                <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                            @endforeach
                         </select>
                       </div>
                     </div>
