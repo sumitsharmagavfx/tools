@@ -6,7 +6,6 @@ return [
     "lang" => "id",
     "title" => "JSON-LD SCHEMA GENERATOR",
     "sub-title" => "JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.",
-    "which-schema" => "Skema mana yang ingin Anda buat?",
     "json-ld-breadcrumb-desc" => "JSON-LD Generator Breadcrumb adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user melihat navigasi yang terlihat dalam bentuk tautan internal.",
     "json-ld-faq-desc" => "Frequently Asked Questions (FAQ) berisi pertanyaan dan jawaban berkaitan dengan topik, produk, hingga perusahaan tertentu. Gunakan Google Rich Result untuk menjawab pertanyaan pengguna langsung di SERP.",
     "json-ld-howto-desc" => "JSON-LD How To Schema Generator adalah tool yang membantu untuk memberitahu Google secara eksplisit bahwa konten Anda adalah panduan dan tingkatkan peluang Google menampilkan rich snippets dari situs Anda di hasil penelusuran.",

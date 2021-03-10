@@ -1,13 +1,12 @@
 <?php
 return [
-    "meta-title" => "Breadcrumb Schema Generator Tool Online Gratis",
+    "meta-title" => "Tool Gratis JSON-LD Breadcrumb Schema Generator",
     "meta-desc" => "Tampilkan letak spesifik halaman website Anda dengan gunakan breadcrumb schema generator tool secara gratis.",
     "title" => "JSON-LD BREADCRUMB SCHEMA GENERATOR",
     "subtitle" => "Tampilkan Halaman Anda Lebih Spesifik",
     "btn-add" => "TAMBAH URL",
     "pageName" => "Ketik nama halaman Anda di sini ...",
     "url" => "Ketik URL halaman Anda di sini ...",
-    "invalid-url" => "URL Tidak Valid",
     "highlight" => "Pada versi terbaru dari JSON LD , kami menambahkan Breadcrumb Schema Generator. Tool ini berguna untuk memungkinkan pengguna mengambil klik dari halaman yang diberi peringkat diatasnya jika Anda memiliki markup breadcrumb sedangkan kompetitor tidak. Sekarang pengguna dapat menambahkan skema. Skema ini berfungsi untuk menguji implementasi Anda di halaman atau tingkat kode dengan Rich Snippet Testing Tool Google dan memintanya untuk merayapi laman website Anda yang telah dimodifikasi. Dengan adanya tool ini, Anda dapat melihat CTR dan tingkat kunjungan website Anda melonjak.",
     "desc-1" => "Apa Itu Jejak Breadcrumb?",
     "desc-1-1" => "Anda mungkin sudah mengetahui hal ini, tetapi pelacakan tautan diterapkan ke situs web untuk membantu pengguna dalam menavigasi dan menemukan jalan mereka di sekitar situs menggunakan tautan di bagian atas halaman, yang menunjukkan posisi Anda saat ini dalam hierarki situs.",
