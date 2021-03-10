@@ -631,7 +631,7 @@ id/json-ld-breadcrumb-schema-generator
               &lt;ul id="breadcrumblist"&gt;
                  &lt;li&gt;&lt;a href="https://organicdigital.co/"&gt;Home&lt;/a&gt;/&lt;/li&gt;
                  &lt;li&gt;&lt;a href="https://organicdigital.co/services/"&gt;Services&lt;/a&gt;/&lt;/li&gt;
-                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/structured-data.php"&gt;Structured Data&lt;/a&gt;&lt;/li&gt;  
+                 &lt;li&gt;&lt;a href="https://organicdigital.co/services/structured-data.php"&gt;Structured Data&lt;/a&gt;&lt;/li&gt;
                &lt;/ul&gt;
             </code>
           </pre>
@@ -654,7 +654,7 @@ id/json-ld-breadcrumb-schema-generator
                 &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/"&gt;&lt;span itemprop="name"&gt;Home&lt;/span&gt;&lt;/a&gt;/&lt;meta itemprop="position" content="1" /&gt;&lt;/li&gt;
                 &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/"&gt;&lt;span itemprop="name"&gt;Services&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="2" /&gt;/&lt;/li&gt;
                 &lt;li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"&gt;&lt;a itemprop="item" href="https://organicdigital.co/services/structured-data.php"&gt;&lt;span itemprop="name"&gt;Structured Data&lt;/span&gt;&lt;/a&gt;&lt;meta itemprop="position" content="3" /&gt;&lt;/li&gt;
-              &lt;/ul&gt;                
+              &lt;/ul&gt;
             </code>
           </pre>
           <h3>@lang('breadcrumb.desc-4-1-2')</h3>
@@ -688,7 +688,7 @@ id/json-ld-breadcrumb-schema-generator
                     }
                   }]
                 }
-                &lt;/script&gt;               
+                &lt;/script&gt;
             </code>
           </pre>
         </div>

@@ -391,24 +391,6 @@ id/link-analyzer
 </div>
 @endsection
 @push('script')
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "@lang('home.homepage')",
-            "item": "{{url('/')}}/{{$local}}"
-        }, {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Analyzer Checker"
-        }]
-    }
-</script>
-@endpush
-@push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
 <script>
     const LINK_ANALYZER_API_URL = '{{ route('api.analyze-link') }}';
@@ -419,6 +401,23 @@ id/link-analyzer
     $(document).ready(function() {
         getHistories();
     })
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Link Analyzer",
+            "item": "{{url('/')}}/{{$local}}/link-analyzer"
+        }]
+    }
 </script>
 @endpush
 

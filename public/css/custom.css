@@ -1704,6 +1704,25 @@ textarea.input-meta-description {
     color: var(--darkgrey);
 }
 
+.btn-add-question {
+  color: white;
+  background: var(--primaryblue);
+  border-radius: 20px;
+}
+
+.btn-add-question i {
+  color: white;
+}
+
+.btn-add-question:hover {
+  background: #1382CC;
+  color: white;
+}
+
+.btn-add-question:hover i {
+  color: white;
+}
+
 @media (max-width:767px) {
     .btn-add-question {
         width: 100%;
@@ -2032,29 +2051,56 @@ textarea.input-meta-description {
 }
 
 .btn-download-sitemap {
-  line-height: 1;
-  width: 137px;
-  background: var(--darkgrey);
-  color: white;
-  border-radius: 20px;
+    line-height: 1;
+    width: 137px;
+    background: var(--darkgrey);
+    color: white;
+    border-radius: 20px;
 }
 
 .btn-download-sitemap:hover {
-  background: var(--black);
-  color: white;
+    background: var(--black);
+    color: white;
 }
 
 .btn-download-sitemap-disabled {
-  line-height: 1;
-  width: 137px;
-  background: var(--grey);
-  color: white;
-  border-radius: 20px;
-  cursor: not-allowed;
+    line-height: 1;
+    width: 137px;
+    background: var(--grey);
+    color: white;
+    border-radius: 20px;
+    cursor: not-allowed;
 }
 
 .btn-download-sitemap-disabled:hover {
-  background: var(--grey);
-  color: white;
-  cursor: not-allowed;
+    background: var(--grey);
+    color: white;
+    cursor: not-allowed;
 }
+
+.button-result span,
+.button-result i {
+  color: var(--darkgrey);
+}
+
+.button-result:hover span {
+  color: var(--black);
+}
+
+.button-result:hover i {
+  color: var(--primaryblue);
+}
+
+.delete-robo {
+  color: var(--darkgrey);
+  cursor: pointer;
+}
+
+.delete-robo:hover {
+  color: var(--black);
+}
+
+
+  .btn-delete-disabled {
+    color: var(--grey);
+  }
