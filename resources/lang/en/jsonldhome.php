@@ -6,7 +6,6 @@ return [
     "lang" => "en",
     "title" => "JSON-LD SCHEMA GENERATOR",
     "sub-title" => "JSON-LD SCHEMA GENERATOR is a special tool created by CMLABS to facilitate SEO writers to add schema.org markup to their content.",
-    "which-schema" => "Which Schema would you like to create?",
     "json-ld-breadcrumb-desc" => "JSON-LD Generator Breadcrumb is a tool created by cmlabs to make it easier for users to see visible navigation in the form of internal links.",
     "json-ld-faq-desc" => "Frequently Asked Questions (FAQ) containing questions and answers related to topics, products, to specific companies. Use Google Rich Result to answer user questions directly on Google Search Page.",
     "json-ld-howto-desc" => "JSON-LD How To Schema Generator is a tool that helps to explicitly tell Google that your content is a guide and increase the chances of Google showing rich snippets from your site in search results.",

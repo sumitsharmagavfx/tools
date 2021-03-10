@@ -57,4 +57,7 @@ return [
     "btn-check" => "Cek",
     "btn-export" => "Ekspor",
     "btn-reset" => "Reset",
+    "invalid-url" => "URL Tidak Valid",
+    "invalid-number" => "Nilai harus lebih dari 0",
+    "which-schema" => "Skema mana yang ingin Anda buat?",
 ];

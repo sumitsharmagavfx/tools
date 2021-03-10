@@ -4,6 +4,31 @@
     var stepCounter = -1;
     var reviewCounter = -1;
 
+    let invalid_url = lang ==='en'? 'Invalid URL' : 'URL Tidak Valid';
+    let invalid_number = lang ==='en'? 'Value should be more than 0' : 'Nilai harus lebih dari 0';
+    let label_image = lang ==='en'? 'Image URL' : 'URL Gambar';
+    let label_ingredients = lang ==='en'? 'Ingredients' : 'Bahan';
+    let label_step = lang ==='en'? 'Step' : 'Langkah';
+    let label_name_step = lang ==='en'? 'Name' : 'Nama';
+    let label_text = lang ==='en'? 'Text' : 'Teks';
+    let label_image_step = lang ==='en'? 'Image URL' : 'URL Gambar';
+    let label_review_name = lang ==='en'? 'Review’s name' : 'Nama Ulasan';
+    let label_review_body = lang ==='en'? 'Review’s body' : 'Isi Ulasan';
+    let label_review_rating = lang ==='en'? 'Rating' : 'Peringkat';
+    let label_review_date = lang ==='en'? 'Date' : 'Tanggal';
+    let label_review_author = lang ==='en'? 'Author' : 'Penulis';
+    let label_review_publisher = lang ==='en'? 'Publisher' : 'Penerbit';
+    let placeholder_image = lang ==='en'? 'Type image url here..' : 'Ketik url gambar di sini..';
+    let placeholder_ingredients = lang ==='en'? 'Type ingredient here..' : 'Ketik bahan disini..';
+    let placeholder_step = lang ==='en'? 'Type step here..' : 'Ketik langkah di sini..';
+    let placeholder_name_step = lang ==='en'? 'Type name here..' : 'Ketik nama di sini..';
+    let placeholder_url_step = lang ==='en'? 'Type URL here..' : 'Ketik URL di sini..';
+    let placeholder_review_name = lang ==='en'? 'Type review\'s name here..' : 'Ketik nama ulasan disini..';
+    let placeholder_review_body = lang ==='en'? 'Type review\'s body here..' : 'Ketik isi ulasan disini..';
+    let placeholder_review_date = lang ==='en'? 'Pick a date' : 'Pilih tanggal';
+    let placeholder_review_author = lang ==='en'? 'Type author name here..' : 'Ketik nama penulis disini..';
+    let placeholder_review_publisher = lang ==='en'? 'Type publisher here..' : 'Ketik penerbit disini';
+
     const recipeSchema = class {
         constructor() {
 
@@ -126,21 +151,21 @@
     let recipeFormat = new recipeSchema();
     recipeFormat.render();
 
-jQuery(document).ready(function () {
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let name = lang ==='en'? 'Name':'Nama';
-    let image = lang ==='en'?'Image':'Gambar';
-    let description = lang ==='en'?'Description':'Deskripsi';
-    let keywords = lang==='en'?'KeyWords':'KataKunci';
-    let authorName = lang==='en'?'AuthorName':'NamaPenulis';
-    let prepTime = lang ==='en'?'PrepTime':'WaktuPersiapan';
-    let cookTime = lang==='en'?'CookTime':'Waktu Masak';
-    let recipeCategory = lang==='en'?'RecipeCategory':'KategoriResep';
-    let recipeCuisine = lang==='en'?'RecipeCuisine':'RecipeCuisine';
-    let recipeYield = lang==='en'?'RecipeYield':'RecipeYield';
-    let imageUrl = lang==='en'?'ImageUrl':'UrlGambar';
+// jQuery(document).ready(function () {
+//     let deletes = lang ==='en'? 'Delete' : 'Hapus';
+//     let name = lang ==='en'? 'Name':'Nama';
+//     let image = lang ==='en'?'Image':'Gambar';
+//     let description = lang ==='en'?'Description':'Deskripsi';
+//     let keywords = lang==='en'?'KeyWords':'KataKunci';
+//     let authorName = lang==='en'?'AuthorName':'NamaPenulis';
+//     let prepTime = lang ==='en'?'PrepTime':'WaktuPersiapan';
+//     let cookTime = lang==='en'?'CookTime':'Waktu Masak';
+//     let recipeCategory = lang==='en'?'RecipeCategory':'KategoriResep';
+//     let recipeCuisine = lang==='en'?'RecipeCuisine':'RecipeCuisine';
+//     let recipeYield = lang==='en'?'RecipeYield':'RecipeYield';
+//     let imageUrl = lang==='en'?'ImageUrl':'UrlGambar';
 
-});
+// });
 
     $('.name').keyup(function (e) {
         recipeFormat.name = $(this).val();
@@ -178,7 +203,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '#add-imageUrl', function () {
         imageUrlCounter++;
         recipeFormat.image.push("")
-        $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data mb-5" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">Image URL # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="@lang('recipe.image')" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">Invalid URL</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
+        $('.imageurlList').append(`<div class="col-10 col-sm-11 image-url-data mb-5" data-id="${imageUrlCounter}"> <label class="text-black font-weight-bold" for="image">`+label_image+` # ${imageUrlCounter+1}</label> <input type="text" name="" class="form-control image" placeholder="`+placeholder_image+`" value="" data-id="${imageUrlCounter}"><div class="invalid-feedback" data-id="${imageUrlCounter}">`+invalid_url+`</div></div><div class="col-2 col-sm-1 deleteImageButton" data-id="${imageUrlCounter}"><div class="d-flex justify-content-center mt-9"> <i class='bx bxs-x-circle bx-md delete deleteImage' data-id="${imageUrlCounter}"></i></div></div></div>`);
         recipeFormat.render();
     });
 
@@ -237,8 +262,8 @@ jQuery(document).ready(function () {
         }else{
             recipeFormat.recipeIngredient.push("")
         }
-        $('#ingredients').append("<div class=\"ingredients-col\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"row ingredients-col-data\" data-id=\""+(ingredientsCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"ingredients\" data-id=\""+(ingredientsCounter)+"\">Ingredients #"+(ingredientsCounter+1)+"</label>\n" +
-        "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\"Type image url here..\" value=\"\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"col-2 col-sm-1 delete-data-ingredients\" data-id=\""+(ingredientsCounter)+"\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteIngredients\' data-id=\""+(ingredientsCounter)+"\"></i></div></div></div></div>\n"
+        $('#ingredients').append("<div class=\"ingredients-col\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"row ingredients-col-data\" data-id=\""+(ingredientsCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"ingredients\" data-id=\""+(ingredientsCounter)+"\">"+label_ingredients+" #"+(ingredientsCounter+1)+"</label>\n" +
+        "                <input type=\"text\" name=\"\" class=\"form-control ingredients mb-5\" placeholder=\""+placeholder_ingredients+"\" value=\"\" data-id=\""+(ingredientsCounter)+"\"></div><div class=\"col-2 col-sm-1 delete-data-ingredients\" data-id=\""+(ingredientsCounter)+"\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteIngredients\' data-id=\""+(ingredientsCounter)+"\"></i></div></div></div></div>\n"
         );
         recipeFormat.render();
     });
@@ -295,10 +320,10 @@ jQuery(document).ready(function () {
         let step = lang==='en'?'Step':'Langkah Langkah';
         let deletes = lang ==='en'? 'Delete Step' : 'Hapus Langkah';
 
-        $('#step').append("<div class=\"row step-data\" data-id=\""+(stepCounter)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(stepCounter)+"\">Step #"+(stepCounter+1)+": Text</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\"Type step here..\" value=\"\" data-id=\""+(stepCounter)+"\"></div>" +
-        "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(stepCounter)+"\">Name</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\"Type name here..\" value=\"\" data-id=\""+(stepCounter)+"\"></div>" +
-        "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(stepCounter)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(stepCounter)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" +
-        "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(stepCounter)+"\">Image URL</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\"Type URL here..\" value=\"\" data-id=\""+(stepCounter)+"\"><div class=\"invalid-feedback\">Value should be more than 0</div></div>" +
+        $('#step').append("<div class=\"row step-data\" data-id=\""+(stepCounter)+"\"><div class=\"col-6 col-md-3\"><label class=\"text-black font-weight-bold\" for=\"step\" data-id=\""+(stepCounter)+"\">"+label_step+" #"+(stepCounter+1)+": "+label_text+"</label><input type=\"text\" name=\"\" class=\"form-control step mb-5\" placeholder=\""+placeholder_step+"\" value=\"\" data-id=\""+(stepCounter)+"\"></div>" +
+        "                <div class=\"col-6 col-md-2 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(stepCounter)+"\">"+label_name_step+"</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\""+placeholder_name_step+"\" value=\"\" data-id=\""+(stepCounter)+"\"></div>" +
+        "                <div class=\"col-6 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(stepCounter)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\""+placeholder_url_step+"\" value=\"\" data-id=\""+(stepCounter)+"\"><div class=\"invalid-feedback\">"+invalid_url+"</div></div>" +
+        "                <div class=\"col-5 col-md-3 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(stepCounter)+"\">"+label_image_step+"</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\""+placeholder_url_step+"\" value=\"\" data-id=\""+(stepCounter)+"\"><div class=\"invalid-feedback\">"+invalid_url+"</div></div>" +
         "                <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md delete deleteStep\' data-id=\""+(stepCounter)+"\"></i></div></div>"
 
         );
@@ -483,13 +508,13 @@ jQuery(document).on('change', '.fatContent', function () {
         let deletes = lang ==='en'? 'Delete Review' : 'Hapus Review';
         reviewCounter++;
 
-        $('#addReview').append("<div class=\"row review-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-12 col-lg-6\"><label class=\"text-black font-weight-bold\" for=\"review\">#"+(reviewCounter+1)+" Review’s name</label><input type=\"text\" name=\"\" class=\"form-control review mb-5\" placeholder=\"Type review’s name here..\" value=\"\" data-id=\""+(reviewCounter)+"\">" +
-        "                   <div class=\"row\"><div class=\"col-6 col-md-4\"><label class=\"text-black font-weight-bold\" for=\"rating\">Rating</label><input type=\"number\" name=\"\" class=\"form-control rating mb-5\" placeholder=\"0\" value=\"\" min=\"0\" data-id=\""+(reviewCounter)+"\"></div>" +
-        "                   <div class=\"col-6 col-md-8\"><label class=\"text-black font-weight-bold\" for=\"dateReview\">Date</label><div class=\"input-group date\"><div class=\"input-group-append\"><span class=\"input-group-text\"><i class=\"bx bx-calendar text-darkgrey\"></i></span></div>" +
-        "                   <input type=\"text\" id=\"kt_datepicker_2\" name=\"\" class=\"form-control custom-date dateReview\" readonly  placeholder=\"Pick a date\" value=\"\" data-id=\""+(reviewCounter)+"\"/></div></div></div></div>" +
-        "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">Review’s body</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\"Type your review’s body here..\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
-        "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">Author</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\"Type author name here..\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
-        "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">Publisher</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\"Type publisher here..\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
+        $('#addReview').append("<div class=\"row review-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-12 col-lg-6\"><label class=\"text-black font-weight-bold\" for=\"review\">#"+(reviewCounter+1)+" "+label_review_name+"</label><input type=\"text\" name=\"\" class=\"form-control review mb-5\" placeholder=\""+placeholder_review_name+"\" value=\"\" data-id=\""+(reviewCounter)+"\">" +
+        "                   <div class=\"row\"><div class=\"col-6 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"rating\">"+label_review_rating+"</label><input type=\"number\" name=\"\" class=\"form-control rating\" placeholder=\"0\" value=\"\" min=\"0\" data-id=\""+(reviewCounter)+"\"><div class=\"invalid-feedback\" data-id="+(reviewCounter)+">"+invalid_number+"</div></div>" +
+        "                   <div class=\"col-6 col-md-8\"><label class=\"text-black font-weight-bold\" for=\"dateReview\">"+label_review_date+"</label><div class=\"input-group date\"><div class=\"input-group-append\"><span class=\"input-group-text\"><i class=\"bx bx-calendar text-darkgrey\"></i></span></div>" +
+        "                   <input type=\"text\" id=\"kt_datepicker_2\" name=\"\" class=\"form-control custom-date dateReview\" readonly  placeholder=\""+placeholder_review_date+"\" value=\"\" data-id=\""+(reviewCounter)+"\"/></div></div></div></div>" +
+        "                   <div class=\"col-12 col-lg-6 mb-8 mb-lg-5\"><label class=\"text-black font-weight-bold\" for=\"reviewBody\">"+label_review_body+"</label><textarea name=\"\" class=\"form-control custom-textarea-82 reviewBody\" placeholder=\""+placeholder_review_body+"\" data-id=\""+(reviewCounter)+"\"></textarea></div></div>" +
+        "                   <div class=\"row mb-5 author-data\" data-id=\""+(reviewCounter)+"\"><div class=\"col-5\"><label class=\"text-black font-weight-bold\" for=\"authorReview\">"+label_review_author+"</label><input type=\"text\" name=\"\" class=\"form-control authorReview\" placeholder=\""+placeholder_review_author+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
+        "                   <div class=\"col-6\"><label class=\"text-black font-weight-bold\" for=\"publisher\">"+label_review_publisher+"</label><input type=\"text\" name=\"\" class=\"form-control publisher\" placeholder=\""+placeholder_review_publisher+"\" value=\"\" data-id=\""+(reviewCounter)+"\"></div>" +
         "                   <div class=\"col-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\"bx bxs-x-circle bx-md delete deleteReview\"></i></div></div></div>"
         );
         
