@@ -4,9 +4,12 @@
 
 @section('meta-desc', Lang::get('home.meta-desc'))
 
+@section('conical','/en')
+
 @section('en-link')
 en
 @endsection
+
 @section('id-link')
 id
 @endsection

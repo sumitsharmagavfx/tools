@@ -367,24 +367,6 @@ id/redirect-checker
 
 @endsection
 @push('script')
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "@lang('home.homepage')",
-            "item": "{{url('/')}}/{{$local}}"
-        }, {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Redirect Checker"
-        }]
-    }
-</script>
-@endpush
-@push('script')
 <script>
     const REDIRECT_CHAIN_CHECKER_API_URL = '{{ route('api.analyze-redirect-chain') }}';
     $('#toggle_button_webmaster').click();
@@ -408,6 +390,23 @@ id/redirect-checker
     $(document).ready(function() {
         getHistories();
     })
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Redirect Checker",
+            "item": "{{url('/')}}/{{$local}}/redirect-checker"
+        }]
+    }
 </script>
 @endpush
 

@@ -4,9 +4,12 @@
 
 @section('meta-desc', 'JSON-LD Schema Generator')
 
+@section('conical','/en/json-ld-schema-generator')
+
 @section('en-link')
 en/json-ld-schema-generator
 @endsection
+
 @section('id-link')
 id/json-ld-schema-generator
 @endsection
@@ -34,7 +37,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-breadcrumb-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-breadcrumb-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -48,7 +51,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-faq-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-faq-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +65,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-how-to-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-how-to-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +79,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-job-posting-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-job-posting-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +93,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-person-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-person-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -104,7 +107,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-product-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-product-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -118,7 +121,7 @@ id/json-ld-schema-generator
                             </div>
                         </div>
                         <div class="card-footer text-right border-top-0 pt-0">
-                            <a href="/{{ $local }}/json-ld-recipe-schema-generator" type="button" class="btn btn-launch" name="button">LAUNCH</a>
+                            <button onclick="window.location.href='/{{ $local }}/json-ld-recipe-schema-generator'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
                         </div>
                     </div>
                 </div>
@@ -289,16 +292,20 @@ id/json-ld-schema-generator
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
-@endpush
-@push('script')
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')"
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "JSON-LD Schema Generator",
+            "item": "{{url('/')}}/{{$local}}/json-ld-schema-generator"
         }]
     }
 </script>
