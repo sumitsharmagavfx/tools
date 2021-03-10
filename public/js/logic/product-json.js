@@ -272,9 +272,9 @@ jQuery(document).ready(function () {
     $('.ratingValue').keyup(function (e) {
 
         if($(this).val().length < 1){
-            $('.ratingCount').attr('disabled')
-            $('.bestRating').attr('disabled')
-            $('.worstRating').attr('disabled')
+            $('.ratingCount').attr('disabled', true)
+            $('.bestRating').attr('disabled', true)
+            $('.worstRating').attr('disabled', true)
             delete productFormat.aggregateRating;
             $('.ratingCount').val('');
             $('.bestRating').val('');
