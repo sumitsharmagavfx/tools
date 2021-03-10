@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
-@section('title', "JSON-LD Product Schema Generator")
+@section('title', Lang::get('product.meta-title'))
 
-@section('meta-desc', "JSON-LD Product Schema Generator")
-
-@section('meta-keyword', "JSON-LD Product Schema Generator")
+@section('meta-desc', Lang::get('product.meta-desc'))
 
 @section('conical','/en/json-ld-product-schema-generator')
 
@@ -451,10 +449,10 @@ text-decoration: underline;
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">JSON-LD PRODUCT SCHEMA GENERATOR</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <h1 class="text-darkgrey font-weight-normal">@lang('product.title')</h1>
+      <span class="text-darkgrey h4 font-weight-normal">@lang('product.subtitle')</span>
 
-      <div class="card card-custom mt-10 mb-5">
+      {{-- <div class="card card-custom mt-10 mb-5">
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
@@ -475,32 +473,47 @@ text-decoration: underline;
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
-      <div class="card card-custom mb-5">
+      <div class="card card-custom mb-5 mt-10">
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
+              <div class="row mb-8">
+                <div class="col-12">
+                  <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
+                  <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                    <option value="home">Home</option>
+                    <option value="breadcrumb">Breadcrumb</option>
+                    <option value="faq">FAQ Page</option>
+                    <option value="how-to">How-to</option>
+                    <option value="job-posting">Job Posting</option>
+                    <option value="person">Person</option>
+                    <option value="product" selected="selected">Product</option>
+                    <option value="recipe">Recipe</option>
+                  </select>
+                </div>
+              </div>
               <p class="h6 text-black mb-5">Product</p>
               <div class="" id="formproduct">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <label class="text-black font-weight-bold" for="name">Name</label>
-                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.name')" value="" data-id="0">
+                    <label class="text-black font-weight-bold" for="name">@lang('product.label-name')</label>
+                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('product.placeholder-name')" value="" data-id="0">
                   </div>
                   <div class="col-12 col-md-6 mb-5">
-                    <label class="text-black font-weight-bold" for="image">Image URL</label>
-                    <input type="text" name="" class="form-control image" placeholder="@lang('product.image')" value="" data-id="0">
-                    <div class="invalid-feedback">Invalid URL</div>
+                    <label class="text-black font-weight-bold" for="image">@lang('product.label-image')</label>
+                    <input type="text" name="" class="form-control image" placeholder="@lang('product.placeholder-image')" value="" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 col-lg-6">
-                    <label class="text-black font-weight-bold" for="productBrand">Brand</label>
-                    <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.productBrand')" value="" data-id="0">
+                    <label class="text-black font-weight-bold" for="productBrand">@lang('product.label-productBrand')</label>
+                    <input type="text" name="" class="form-control productBrand mb-5" placeholder="@lang('product.placeholder-productBrand')" value="" data-id="0">
                     <div class="row">
                       <div class="col-12 mb-5">
-                        <label class="text-black font-weight-bold" for="identifier">Identification properties</label>
+                        <label class="text-black font-weight-bold" for="identifier">@lang('product.label-identifier')</label>
                         <div class="dropdown bootstrap-select show-tick form-control">
                           <select class="form-control selectpicker custom-select-blue identifier" multiple="multiple" data-actions-box="false" tabindex="null">
                             <option value="sku">sku</option>
@@ -514,116 +527,116 @@ text-decoration: underline;
                     </div>
                   </div>
                   <div class="col-12 col-lg-6 mb-8 mb-lg-5">
-                    <label class="text-black font-weight-bold" for="description">Product’s description</label>
-                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.description')" data-id="0"></textarea>
+                    <label class="text-black font-weight-bold" for="description">@lang('product.label-description')</label>
+                    <textarea name="" class="form-control custom-textarea-82 description" placeholder="@lang('product.placeholder-description')" data-id="0"></textarea>
                   </div>
                 </div>
                 <div class="row product-description">
-                    <input type="hidden" id="skulang" value="@lang('product.sku')">
-                    <input type="hidden" id="gtin8lang" value="@lang('product.gtin8')">
-                    <input type="hidden" id="gtin13lang" value="@lang('product.gtin13')">
-                    <input type="hidden" id="gtin14lang" value="@lang('product.gtin14')">
-                    <input type="hidden" id="mpnlang" value="@lang('product.mpn')">
+                    <input type="hidden" id="skulang" value="@lang('product.placeholder-sku')">
+                    <input type="hidden" id="gtin8lang" value="@lang('product.placeholder-gtin8')">
+                    <input type="hidden" id="gtin13lang" value="@lang('product.placeholder-gtin13')">
+                    <input type="hidden" id="gtin14lang" value="@lang('product.placeholder-gtin14')">
+                    <input type="hidden" id="mpnlang" value="@lang('product.placeholder-mpn')">
                 </div>
                 <div class="row">
                   <div class="col-6 col-md-3">
-                    <label class="text-black font-weight-bold" for="offerType">Offer @type</label>
+                    <label class="text-black font-weight-bold" for="offerType">@lang('product.label-offer-type') @type</label>
                     <select class="form-control selectpicker custom-select-blue offerType mb-5">
-                      <option value="none">Choose Offer</option>
-                      <option value="Offer">Offer</option>
-                      <option value="Aggregate Offer">Aggregate Offer</option>
+                      <option value="None">@lang('product.offer-type-opt-1')</option>
+                      <option value="Offer">@lang('product.offer-type-opt-2')</option>
+                      <option value="Aggregate Offer">@lang('product.offer-type-opt-3')</option>
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
                     <label class="text-black font-weight-bold" for="url">URL</label>
-                    <input type="text" name="" class="form-control url" placeholder="@lang('product.url')" value="" data-id="0" disabled>
-                    <div class="invalid-feedback">Invalid URL</div>
+                    <input type="text" name="" class="form-control url" placeholder="@lang('product.placeholder-url')" value="" data-id="0" disabled>
+                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
                   </div>
                   <div class="col-6 col-md-3">
-                    <label class="text-black font-weight-bold" for="priceCurrency">Currency</label>
+                    <label class="text-black font-weight-bold" for="priceCurrency">@lang('product.label-currency')</label>
                     <select class="form-control selectpicker custom-select-blue priceCurrency mb-5" data-size="4" data-live-search="true" disabled>
-                      <option value="none">Choose Currency</option>
+                      <option value="None">@lang('product.placeholder-currency')</option>
                         @foreach($currencies as $c)
                       <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
                         @endforeach
                     </select>
                   </div>
                   <div class="col-6 col-md-3 mb-5">
-                    <label class="text-black font-weight-bold" for="price">Price</label>
-                    <input type="number" name="" class="form-control price" placeholder="@lang('product.price')" value="" data-id="0" disabled>
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                    <label class="text-black font-weight-bold" for="price">@lang('product.label-price')</label>
+                    <input type="number" name="" class="form-control price" placeholder="@lang('product.placeholder-price')" value="" data-id="0" disabled>
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
                 </div>
                 <div id="ag_offer" class="row hide-div">
                   <div class="col-md-4">
-                    <label class="text-black font-weight-bold" for="validThrough">Price valid until</label>
+                    <label class="text-black font-weight-bold" for="validThrough">@lang('product.label-validThrough')</label>
                     <div class="input-group date mb-5">
                       <div class="input-group-append">
                         <span class="input-group-text">
                           <i class="bx bx-calendar text-darkgrey"></i>
                         </span>
                       </div>
-                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly  placeholder="@lang('recipe.publishedDate')" value="" data-id="0"/>
+                      <input type="text" id="kt_datepicker_2" name="" class="form-control custom-date validThrough" readonly  placeholder="@lang('product.placeholder-validThrough')" value="" data-id="0"/>
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <label class="text-black font-weight-bold" for="availability">Availability</label>
+                    <label class="text-black font-weight-bold" for="availability">@lang('product.label-availability')</label>
                     <select class="form-control selectpicker custom-select-blue availability mb-5">
-                      <option selected="selected" value="In stock">In stock</option>
-                      <option value="Out of stock">Out of stock</option>
-                      <option value="Online only">Online only</option>
-                      <option value="In store only">In store only</option>
-                      <option value="Pre-order">Pre-order</option>
-                      <option value="Pre-sale">Pre-sale</option>
-                      <option value="Limited availability">Limited availability</option>
-                      <option value="Sold out">Sold out</option>
-                      <option value="Discontinued">Discontinued</option>
-                      <option class="font-italic" value="Not specified">Not specified</option>
+                      <option selected="selected" value="In stock">@lang('product.availability-opt-1')</option>
+                      <option value="Out of stock">@lang('product.availability-opt-2')</option>
+                      <option value="Online only">@lang('product.availability-opt-3')</option>
+                      <option value="In store only">@lang('product.availability-opt-4')</option>
+                      <option value="Pre-order">@lang('product.availability-opt-5')</option>
+                      <option value="Pre-sale">@lang('product.availability-opt-6')</option>
+                      <option value="Limited availability">@lang('product.availability-opt-7')</option>
+                      <option value="Sold out">@lang('product.availability-opt-8')</option>
+                      <option value="Discontinued">@lang('product.availability-opt-9')</option>
+                      <option class="font-italic" value="Not specified">@lang('product.availability-opt-10')</option>
                     </select>
                   </div>
                   <div class="col-md-4">
-                    <label class="text-black font-weight-bold" for="condition">Item condition</label>
+                    <label class="text-black font-weight-bold" for="condition">@lang('product.label-condition')</label>
                     <select class="form-control selectpicker custom-select-blue condition mb-5">
-                      <option selected="selected" value="New">New</option>
-                      <option value="Used">Used</option>
-                      <option value="Refurbished">Refurbished</option>
-                      <option value="Damaged">Damaged</option>
-                      <option value="Pre-order">Pre-order</option>
+                      <option selected="selected" value="New">@lang('product.condition-opt-1')</option>
+                      <option value="Used">@lang('product.condition-opt-2')</option>
+                      <option value="Refurbished">@lang('product.condition-opt-3')</option>
+                      <option value="Damaged">@lang('product.condition-opt-4')</option>
+                      <option value="Pre-order">@lang('product.condition-opt-5')</option>
                     </select>
                   </div>
                 </div>
                 <div id="offer" class="row hide-div">
                   <div class="col-md-6 mb-5">
-                    <label class="text-black font-weight-bold" for="highPrice">High price</label>
-                    <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.highPrice')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                    <label class="text-black font-weight-bold" for="highPrice">@lang('product.label-highPrice')</label>
+                    <input type="number" name="" class="form-control highPrice" placeholder="@lang('product.placeholder-highPrice')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
                   <div class="col-md-6 mb-5">
-                    <label class="text-black font-weight-bold" for="offer">Number of offers</label>
-                    <input type="number" name="" class="form-control offer" placeholder="@lang('product.offer')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                    <label class="text-black font-weight-bold" for="offer">@lang('product.label-offer')</label>
+                    <input type="number" name="" class="form-control offer" placeholder="@lang('product.placeholder-offer')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-6 col-xxl-3 mb-5">
-                    <label class="text-black font-weight-bold" for="ratingValue">Aggregate ratings</label>
-                    <input type="number" name="" class="form-control ratingValue" placeholder="@lang('product.ratingValue')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                  <div class="col-6 mb-5">
+                    <label class="text-black font-weight-bold" for="ratingValue">@lang('product.label-ratingValue')</label>
+                    <input type="number" name="" class="form-control ratingValue" placeholder="@lang('product.placeholder-ratingValue')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
-                  <div class="col-6 col-xxl-3 mb-5">
-                    <label class="text-black font-weight-bold" for="ratingCount">Number of ratings</label>
-                    <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.ratingCount')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                  <div class="col-6 mb-5">
+                    <label class="text-black font-weight-bold" for="ratingCount">@lang('product.label-ratingCount')</label>
+                    <input type="number" name="" class="form-control ratingCount" disabled placeholder="@lang('product.placeholder-ratingCount')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
-                  <div class="col-6 col-xxl-3 mb-5">
-                    <label class="text-black font-weight-bold" for="bestRating">Highest value allowed</label>
-                    <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.bestRating')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                  <div class="col-6 mb-5">
+                    <label class="text-black font-weight-bold" for="bestRating">@lang('product.label-bestRating')</label>
+                    <input type="number" name="" class="form-control bestRating" disabled placeholder="@lang('product.placeholder-bestRating')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
-                  <div class="col-6 col-xxl-3 mb-5">
-                    <label class="text-black font-weight-bold" for="worstRating">Lowest value allowed</label>
-                    <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.worstRating')" value="" min="0" data-id="0">
-                    <div class="invalid-feedback">Value should be more than 0</div>
+                  <div class="col-6 mb-5">
+                    <label class="text-black font-weight-bold" for="worstRating">@lang('product.label-worstRating')</label>
+                    <input type="number" name="" class="form-control worstRating" disabled placeholder="@lang('product.placeholder-worstRating')" value="" min="0" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-number')</div>
                   </div>
                 </div>
                 <div class="row">
@@ -644,15 +657,15 @@ text-decoration: underline;
                     <div class="row mb-2">
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>Copy</span></button>
+                        <i class='bx bx-copy'></i> <span>@lang('layout.btn-copy')</span></button>
                       </div>
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="submit" id="test" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-check-circle'></i> <span>Check</span></button>
+                        <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                       </div>
                       <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh' ></i> <span>Reset</span></button>
+                        <i class='bx bx-refresh' ></i> <span>@lang('layout.btn-reset')</span></button>
                       </div>
                     </div>
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
@@ -669,10 +682,10 @@ text-decoration: underline;
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
               </div>
               <div onclick="clearAll()">
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
               </div>
             </div>
             <div class="local-collection-body">
@@ -685,15 +698,15 @@ text-decoration: underline;
              <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                Version 2.3
+                @lang('layout.version') 1.0
                </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>@lang('product.highlight')</p>
                 <div class="d-flex align-items-center">
                   <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                 </div>
                </div>
               </div>
@@ -710,10 +723,10 @@ text-decoration: underline;
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
+        <span class="text-black font-15px">@lang('layout.local-history')</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
       </div>
     </div>
     <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
@@ -721,46 +734,119 @@ text-decoration: underline;
 </div>
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+          <h2>@lang('product.desc-1')</h2>
+          <p>@lang('product.desc-1-1')</p>
+          <p>@lang('product.desc-1-2')</p>
+          <p>@lang('product.desc-1-3')</p>
+          <img class="mb-4" src="{{asset('/media/images/product-instruction-1.png')}}" alt="" width="300">
+          <p>@lang('product.desc-1-4')</p>
+          <ul>
+            <li>@lang('product.desc-1-4-1')</li>
+            <li>@lang('product.desc-1-4-2')</li>
+          </ul>
+          <p>@lang('product.desc-1-5')</p>
+        </div>
+        <div class="d-none" id="description-tab-2">
+          <h2>@lang('product.desc-2')</h2>
+          <p>@lang('product.desc-2-1')</p>
+          <p>@lang('product.desc-2-2')</p>
+          <p>@lang('product.desc-2-3')</p>
+          <img class="mb-4" src="{{asset('/media/images/product-instruction-2.png')}}" alt="" width="300">
+        </div>
+        <div class="d-none" id="description-tab-3">
+          <h2>@lang('product.desc-3')</h2>
+          <p>@lang('product.desc-3-1')</p>
+          <p>@lang('product.desc-3-2')</p>
+          <p>@lang('product.desc-3-3')</p>
+        </div>
+        <div class="d-none" id="description-tab-4">
+          <h2>@lang('product.desc-4')</h2>
+          <p>@lang('product.desc-4-1')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;html&gt;
+                &lt;head&gt;
+                  &lt;title&gt;Executive Anvil&lt;/title&gt;
+                  &lt;script type="application/ld+json"&gt;
+                  {
+                    "@context": "https://schema.org/",
+                    "@type": "Product",
+                    "name": "Executive Anvil",
+                    "image": [
+                      "https://example.com/photos/1x1/photo.jpg",
+                      "https://example.com/photos/4x3/photo.jpg",
+                      "https://example.com/photos/16x9/photo.jpg"
+                     ],
+                    "description": "Sleeker than ACME's Classic Anvil, the Executive Anvil is perfect for the business traveler looking for something to drop from a height.",
+                    "sku": "0446310786",
+                    "mpn": "925872",
+                    "brand": {
+                      "@type": "Brand",
+                      "name": "ACME"
+                    },
+                    "review": {
+                      "@type": "Review",
+                      "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "4",
+                        "bestRating": "5"
+                      },
+                      "author": {
+                        "@type": "Person",
+                        "name": "Fred Benson"
+                      }
+                    },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.4",
+                      "reviewCount": "89"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "url": "https://example.com/anvil",
+                      "priceCurrency": "USD",
+                      "price": "119.99",
+                      "priceValidUntil": "2020-11-20",
+                      "itemCondition": "https://schema.org/UsedCondition",
+                      "availability": "https://schema.org/InStock"
+                    }
+                  }              
+                  &lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;                            
+            </code>
+          </pre>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
+          <a class="">@lang('product.desc-1')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
           </div>
-          <a href="#" class="">How search engine works?</a>
+          <a class="">@lang('product.desc-2')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-3">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-3">3</span>
           </div>
-          <a href="#" class="">The basic of writing?</a>
+          <a class="">@lang('product.desc-3')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-4">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-4">4</span>
           </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+          <a class="">@lang('product.desc-4')</a>
         </div>
       </div>
     </div>
@@ -773,24 +859,24 @@ text-decoration: underline;
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="row mb-10">
+    {{-- <div class="row mb-10">
       <div class="col-md-6">
-        <h2 class="text-black">Available features</h2>
-        <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
-        <p class="text-black">CMLABS will enhance your writing capabilities and incorporate strategical thinking to provide technical advice from the our data.</p>
+        <h2 class="text-black">@lang('layout.feature-title')</h2>
+        <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('product.title')</p>
+        <p class="text-black">@lang('layout.feature-desc')</p>
       </div>
       <div class="col-md-6">
         <div class="d-flex align-items-center">
-          <span class="text-primaryblue">cmlabs Words Counter</span>
+          <span class="text-primaryblue">cmlabs JSON-LD Product Schema Generator</span>
           <span class="bx bxs-check-circle ml-5 mr-1 text-primaryblue"></span>
-          <small class="text-grey">Updated 25 Dec, 2020</small>
+          <small class="text-grey">@lang('layout.updated') 25 Dec, 2020</small>
         </div>
         <p class="font-weight-bold mt-3">CMLABS Analytics opens many possible ways to access, organize, and visualize your SERRPs data to suit your business needs.</p>
         <label class="checkbox checkbox-disabled checkbox-features mb-1"><input type="checkbox" disabled="disabled" checked="checked" name="Checkboxes12" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 1.0</bdi></label>
@@ -802,43 +888,41 @@ text-decoration: underline;
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
-    </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    </div> --}}
+    <h2 class="text-black">@lang('layout.whats-new-title') @lang('product.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('product.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('product.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    {{-- <p class="text-black view-all-release">@lang('layout.view-web-release')</p> --}}
   </div>
 </div>
 

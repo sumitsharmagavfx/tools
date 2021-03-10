@@ -574,10 +574,10 @@ text-decoration: underline;
                 <div class="col-12 col-md-4 mb-5 mb-md-0">
                   <label class="text-black font-weight-bold" for="recipeCategory">@lang('recipe.label-recipeCategory')</label>
                   <select class="form-control selectpicker custom-select-blue recipeCategory">
-                    <option value="Appetizer">Appetizer</option>
-                    <option value="Entree">Entree</option>
-                    <option value="Dessert">Dessert</option>
-                    <option selected="selected" value="Not specified">Not specified</option>
+                    <option value="Appetizer">@lang('recipe.recipe-category-opt-1')</option>
+                    <option value="Entree">@lang('recipe.recipe-category-opt-2')</option>
+                    <option value="Dessert">@lang('recipe.recipe-category-opt-3')</option>
+                    <option selected="selected" value="Not specified">@lang('recipe.recipe-category-opt-4')</option>
                   </select>
                 </div>
                 <div class="col-12 col-md-4 mb-5 mb-md-0">
@@ -707,7 +707,7 @@ text-decoration: underline;
              <div class="card bg-transparent">
               <div class="card-header" id="headingOne2">
                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                @lang('layout.version') 2.3
+                @lang('layout.version') 1.0
                </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -715,7 +715,7 @@ text-decoration: underline;
                 <p>@lang('recipe.highlight')</p>
                 <div class="d-flex align-items-center">
                   <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                 </div>
                </div>
               </div>
@@ -798,12 +798,12 @@ text-decoration: underline;
           <div class="robo-text-container">
             <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
             <p class="text-white">@lang('layout.banner-robo-desc')</p>
-            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+            <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="row mb-10">
+    {{-- <div class="row mb-10">
       <div class="col-md-6">
         <h2 class="text-black">@lang('layout.feature-title')</h2>
         <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('recipe.title')</p>
@@ -825,7 +825,7 @@ text-decoration: underline;
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
-    </div>
+    </div> --}}
     <h2 class="text-black">@lang('layout.whats-new-title') @lang('recipe.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
@@ -833,7 +833,7 @@ text-decoration: underline;
           <div class="alert-text mb-5">
             <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -848,7 +848,7 @@ text-decoration: underline;
           <div class="alert-text mb-5">
             <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -859,7 +859,7 @@ text-decoration: underline;
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+    {{-- <p class="text-black view-all-release">@lang('layout.view-web-release')</p> --}}
   </div>
 </div>
 
