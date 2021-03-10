@@ -101,7 +101,7 @@ jQuery('#add').click(function() {
         "</div>"+
         "<div class=\"col-2 col-sm-1\">"+
           "<div class=\"d-flex justify-content-center align-items-center mt-1\">"+
-            "<i class='bx bxs-x-circle bx-md delete remove' data-id=\"" +(main.directive.length-1)+ "\"></i>"+
+            "<i class='bx bxs-x-circle bx-md delete-robo remove' data-id=\"" +(main.directive.length-1)+ "\"></i>"+
           "</div>"+
         "</div>"+
       "</div>"
@@ -134,7 +134,7 @@ function setRobotResult() {
     } else {
         crawldel = '\n\nCrawl-delay: ' +main.crawldelay
     }
-    
+
     if (main.sitemap === '') {
         sitemap = ''
     } else {
@@ -153,7 +153,7 @@ function setRobotResult() {
         }
 
         if (useragent === '*' && directory === '/' && access === main.defaultaccess) {
-            directive += ''    
+            directive += ''
         } else {
             directive += "\n\nUser-agent: " +useragent + "\n" +access+ ": " +directory;
         }

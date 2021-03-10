@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('pagespeed.meta-desc'))
 
-@section('meta-keyword', Lang::get('pagespeed.meta-keyword'))
-
 @section('conical','/en/pagespeed-test')
 
 @section('en-link')
@@ -701,38 +699,35 @@ id/pagespeed-test
     </div>
 </div>
 @endsection
+
 @push('script')
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')",
+            "name": "@lang('layout.home')",
             "item": "{{url('/')}}/{{$local}}"
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Page Speed"
+            "name": "Page Speed",
+            "item": "{{url('/')}}/{{$local}}/pagespeed-test"
         }]
     }
 </script>
-@endpush
-@push('style')
-<link rel="stylesheet" href="{{asset('css/pagespeed.css')}}">
-@endpush
-
-@push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
-@endpush
-
-@push('script')
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
+@endpush
+
+@push('style')
+<link rel="stylesheet" href="{{asset('css/pagespeed.css')}}">
 @endpush
 
 @section('page-speed')

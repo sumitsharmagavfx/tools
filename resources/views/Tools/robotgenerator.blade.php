@@ -10,71 +10,12 @@
 
 @section('id-link','/id/robotstxt-generator')
 
-@push('style')
-<style media="screen">
-  .button-result span,
-  .button-result i {
-    color: var(--darkgrey);
-  }
-
-  .button-result:hover span {
-    color: var(--black);
-  }
-
-  .button-result:hover i {
-    color: var(--primaryblue);
-  }
-
-  .delete {
-    color: var(--darkgrey);
-    cursor: pointer;
-  }
-
-  .delete:hover {
-    color: var(--black);
-  }
-
-  .btn-add-question {
-    color: white;
-    background: var(--primaryblue);
-    border-radius: 20px;
-  }
-
-  .btn-add-question i {
-    color: white;
-  }
-
-  .btn-add-question:hover {
-    background: #1382CC;
-    color: white;
-  }
-
-  .btn-add-question:hover i {
-    color: white;
-  }
-
-  .btn-delete-disabled {
-    color: var(--grey);
-  }
-
-  @media (max-width:767px) {
-    .btn-add-question {
-      width: 100%;
-    }
-  }
-
-</style>
-@endpush
-
-
 @section('content')
-
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
       <h1 class="text-darkgrey font-weight-normal">@lang('robot.title')</h1>
       <span class="text-darkgrey h4 font-weight-normal">@lang('robot.subtitle')</span>
-
       <div class="card card-custom mb-5 mt-10">
         <div class="card-body">
           <div class="row">
@@ -148,7 +89,6 @@
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" readonly></textarea>
                 </form>
               </div>
-
             </div>
           </div>
         </div>
@@ -247,7 +187,6 @@
     </div>
   </div>
 </div>
-
 <div class="w-100">
   <div class="local-collection-mobile bg-white py-5">
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
@@ -331,7 +270,6 @@
     </div>
   </div>
 </div>
-
 <div class="" style="background:white">
   <div class="container container-description">
     <div class="row">
@@ -343,8 +281,8 @@
         </div>
         <div class="d-none" id="description-tab-2">
           <h2>@lang('robot.desc-2')</h2>
-          <p>@lang('robot.desc-2-1')</p>  
-          <p>@lang('robot.desc-2-2')</p> 
+          <p>@lang('robot.desc-2-1')</p>
+          <p>@lang('robot.desc-2-2')</p>
         </div>
         <div class="d-none" id="description-tab-3">
           <h2>@lang('robot.desc-3')</h2>

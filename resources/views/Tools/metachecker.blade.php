@@ -468,32 +468,32 @@ id/page-title-meta-description-checker
     </div>
 </div>
 @endsection
+
 @push('script')
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')",
+            "name": "@lang('layout.home')",
             "item": "{{url('/')}}/{{$local}}"
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Title & Meta Description Checker"
+            "name": "Title & Meta Description Checker",
+            "item": "{{url('/')}}/{{$local}}/page-title-meta-description-checker"
         }]
     }
 </script>
-@endpush
-@push('script')
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/metachecker.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_writer').click();
 </script>
-
 @endpush
+
 @section('title-checker')
 active
 @endsection

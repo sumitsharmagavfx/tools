@@ -330,24 +330,6 @@ id/sitemap-generator
 @endsection
 
 @push('script')
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "@lang('home.homepage')",
-            "item": "{{url('/')}}/{{$local}}"
-        }, {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Sitemap Generator"
-        }]
-    }
-</script>
-@endpush
-@push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
@@ -360,6 +342,23 @@ id/sitemap-generator
 <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/sitemap.js')}}"></script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sitemap Generator",
+            "item": "{{url('/')}}/{{$local}}/sitemap-generator"
+        }]
+    }
+</script>
 @endpush
 
 @section('sitemap')

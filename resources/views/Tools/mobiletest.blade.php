@@ -415,31 +415,32 @@ id/mobile-test
     </div>
 </div>
 @endsection
-@push('script')
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "@lang('home.homepage')",
-            "item": "{{url('/')}}/{{$local}}"
-        }, {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Mobile Friendly Test"
-        }]
-    }
-</script>
-@endpush
+
 @push('script')
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/mobiletest.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mobile Friendly Test",
+            "item": "{{url('/')}}/{{$local}}/mobile-friendly-test"
+        }]
+    }
+</script>
 @endpush
+
 @section('mobile-test')
 active
 @endsection
