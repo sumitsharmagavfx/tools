@@ -276,28 +276,8 @@ id/technology-lookup
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
-@endpush
-@push('script')
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "name": "@lang('home.homepage')",
-            "item": "{{url('/')}}/{{$local}}"
-        }, {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Technology Lookup"
-        }]
-    }
-</script>
-@endpush
-@push('script')
 <script>
-    const LOOKUP_API_URL = '{{ route('api.analyze-technology') }}';    
+    const LOOKUP_API_URL = '{{ route('api.analyze-technology') }}';
 </script>
 <script src="{{asset('js/logic/technology-lookup.js')}}"></script>
 
@@ -306,7 +286,25 @@ id/technology-lookup
         getHistories();
     })
 </script>
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
+        }, {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Technology Lookup",
+            "item": "{{url('/')}}/{{$local}}/technology-lookup"
+        }]
+    }
+</script>
 @endpush
+
 @section('technology-lookup')
 active
 @endsection

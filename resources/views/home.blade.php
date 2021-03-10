@@ -4,9 +4,12 @@
 
 @section('meta-desc', Lang::get('home.meta-desc'))
 
+@section('conical','/en')
+
 @section('en-link')
 en
 @endsection
+
 @section('id-link')
 id
 @endsection
@@ -201,18 +204,18 @@ id
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                                 <button onclick="window.location.href='/{{ $local }}/keyword-research'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                --}}
-            </div>
-            <div class="d-flex align-items-center">
-                <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                <span class="text-darkgrey">Last update 31 Mar, 2021 | Version 1.0</span>
             </div>
         </div>
     </div>
+</div>
+--}}
+</div>
+<div class="d-flex align-items-center">
+    <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+    <span class="text-darkgrey">Last update 31 Mar, 2021 | Version 1.0</span>
+</div>
+</div>
+</div>
 </div>
 <div class="" style="background:white">
     <div class="container container-description">
@@ -433,12 +436,13 @@ id
 @push('script')
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')"
+            "name": "@lang('layout.home')",
+            "item": "{{url('/')}}/{{$local}}"
         }]
     }
 </script>

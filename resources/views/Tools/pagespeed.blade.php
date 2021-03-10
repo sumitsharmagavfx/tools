@@ -4,8 +4,6 @@
 
 @section('meta-desc', Lang::get('pagespeed.meta-desc'))
 
-@section('meta-keyword', Lang::get('pagespeed.meta-keyword'))
-
 @section('conical','/en/pagespeed-test')
 
 @section('en-link')
@@ -213,7 +211,7 @@ id/pagespeed-test
                                     <p class="h4">Best Practies</p>
                                     <div class="col">
                                         <div class="">
-                                            <div class="progress progress-red practices result" data-percentage="0">
+                                            <div class="progress progress-red best-practices result" data-percentage="0">
                                                 <span class="progress-left">
                                                     <span class="progress-bar progress-bar-best-practices"></span>
                                                 </span>
@@ -258,9 +256,9 @@ id/pagespeed-test
                                     </div>
                                     <div class="">
                                         <div class="accordion accordion-light accordion-toggle-arrow seo-audit" id="seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow pass-pwa-audit" id="pass-seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-pwa-audit" id="not-app-seo-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow manual-pwa-audit" id="manual-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-seo-audit" id="pass-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-seo-audit" id="not-app-seo-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-seo-audit" id="manual-seo-audit"></div>
                                     </div>
                                 </div>
                             </div>
@@ -285,10 +283,10 @@ id/pagespeed-test
                                         </div>
                                     </div>
                                     <div class="">
-                                        <div class="accordion accordion-light accordion-toggle-arrow accessibility-audit" id="accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow pass-accessibility-audit" id="pass-accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-accessibility-audit" id="not-app-accessibility-audit"></div>
-                                        <div class="accordion accordion-light accordion-toggle-arrow manual-accessibility-audit" id="manual-accessibility-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pwa-audit" id="pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow pass-pwa-audit" id="pass-pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow not-app-pwa-audit" id="not-app-pwa-audit"></div>
+                                        <div class="accordion accordion-light accordion-toggle-arrow manual-pwa-audit" id="manual-pwa-audit"></div>
                                     </div>
                                 </div>
                             </div>
@@ -701,38 +699,35 @@ id/pagespeed-test
     </div>
 </div>
 @endsection
+
 @push('script')
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')",
+            "name": "@lang('layout.home')",
             "item": "{{url('/')}}/{{$local}}"
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Page Speed"
+            "name": "Page Speed",
+            "item": "{{url('/')}}/{{$local}}/pagespeed-test"
         }]
     }
 </script>
-@endpush
-@push('style')
-<link rel="stylesheet" href="{{asset('css/pagespeed.css')}}">
-@endpush
-
-@push('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
-@endpush
-
-@push('script')
 <script src="{{asset('js/logic/trigerEnterButton.js')}}"></script>
 <script src="{{asset('js/logic/pagespeed.js')}}"></script>
 <script type="text/javascript">
     $('#toggle_button_webmaster').click();
 </script>
+@endpush
+
+@push('style')
+<link rel="stylesheet" href="{{asset('css/pagespeed.css')}}">
 @endpush
 
 @section('page-speed')

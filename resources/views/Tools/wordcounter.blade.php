@@ -459,26 +459,29 @@ id/word-counter
     </div>
 </div>
 @endsection
+
 @push('script')
 <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
 <script src="{{asset('js/logic/word-counter.js')}}"></script>
 <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
+        "@context": "https://schema.org/",
         "@type": "BreadcrumbList",
         "itemListElement": [{
             "@type": "ListItem",
             "position": 1,
-            "name": "@lang('home.homepage')",
+            "name": "@lang('layout.home')",
             "item": "{{url('/')}}/{{$local}}"
         }, {
             "@type": "ListItem",
             "position": 2,
-            "name": "Word Counter"
+            "name": "Word Counter",
+            "item": "{{url('/')}}/{{$local}}/word-counter"
         }]
     }
 </script>
 @endpush
+
 @section('word-counter')
 active
 @endsection
