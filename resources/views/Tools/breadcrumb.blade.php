@@ -756,7 +756,7 @@ id/json-ld-breadcrumb-schema-generator
           <div class="robo-text-container">
             <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
             <p class="text-white">@lang('layout.banner-robo-desc')</p>
-            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+            <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>

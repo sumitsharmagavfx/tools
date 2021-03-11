@@ -160,9 +160,9 @@ let main =
     };
 
 jQuery(document).ready(function () {
-    let deletes = lang ==='en'? 'Delete' : 'Hapus';
-    let question = lang ==='en'? 'Question' : 'Pertanyaan';
-    let answer = lang ==='en'? 'Answer' : 'Jawaban';
+    // let deletes = lang ==='en'? 'Delete' : 'Hapus';
+    // let question = lang ==='en'? 'Question' : 'Pertanyaan';
+    // let answer = lang ==='en'? 'Answer' : 'Jawaban';
     main.mainEntity.push({
         "@type": "Question",
         "name": "",
@@ -176,6 +176,11 @@ jQuery(document).ready(function () {
 });
 
 jQuery('#add').click(function () {
+    let label_question = lang ==='en'? 'Question' : 'Pertanyaan';
+    let label_answer = lang ==='en'? 'Answer' : 'Jawaban';
+    let placeholder_question = lang ==='en'? 'Type your question here..' : 'Ketik pertanyaan Anda di sini..';
+    let placeholder_answer = lang ==='en'? 'Type your answer here..' : 'Ketik jawaban Anda di sini..';
+
     data = getDataFromText()
     data.mainEntity.push({
         "@type": "Question",
@@ -187,7 +192,7 @@ jQuery('#add').click(function () {
     });
     print(data);
     jQuery('#form').append(
-        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>Question " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group mb-5'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>Answer "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
+        "<div class='row parent' data-id='"+(data.mainEntity.length-1)+"'><div class='col-10 col-sm-11'><div class='form-group mb-5'><label for='question-" + (data.mainEntity.length) + "' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold question'>"+label_question+" " + (data.mainEntity.length) + "</label><input type='text' class='form-control question' name='' value='' placeholder='"+placeholder_question+"' data-id='" + (data.mainEntity.length-1) + "'></div><div class='form-group mb-5'><label for='answer-"+(data.mainEntity.length)+"' data-id='"+(data.mainEntity.length-1)+"' class='font-weight-bold answer'>"+label_answer+" "+(data.mainEntity.length)+"</label><input type='text' class='form-control answer' name='' value='' placeholder='"+placeholder_answer+"' data-id='"+(data.mainEntity.length-1)+"'></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(data.mainEntity.length-1)+"'></i></div></div></div>"
     );
 
     let row = parseInt(jQuery('#json-format').val().split('\n').length);
