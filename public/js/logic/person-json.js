@@ -3,7 +3,7 @@
 
     let invalid_url = lang ==='en'? 'Invalid URL' : 'URL Tidak Valid';
     let placeholder_type = lang ==='en'? 'Type your' : 'Ketik URL';
-    let placeholder_url = lang ==='en'? 'URL here..' : 'Anda disini..';
+    let placeholder_url = lang ==='en'? 'URL here..' : 'Anda di sini..';
 
     const labelSocial = `<label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>`;
 
