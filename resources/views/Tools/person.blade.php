@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', "JSON-LD Person Schema Generator")
+@section('title', Lang::get('person.meta-title'))
 
-@section('meta-desc', "JSON-LD Person Schema Generator")
+@section('meta-desc', Lang::get('person.meta-desc'))
 
 @section('conical','/en/json-ld-person-schema-generator')
 
