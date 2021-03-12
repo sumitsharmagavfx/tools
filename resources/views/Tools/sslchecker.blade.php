@@ -168,12 +168,71 @@ id/ssl-checker
                 </div>
                 <div class="d-none" id="description-tab-4">
                     <h2>@lang('sslchecker.desc-4')</h2>
+                    <p>@lang('sslchecker.desc-4-1')</p>
+                    <p>@lang('sslchecker.desc-4-2')</p>
+                    <ul>
+                        <li>
+                            <p>@lang('sslchecker.desc-4-2-1')</p>
+                            <p>@lang('sslchecker.desc-4-2-1-1')</p>
+                        </li>
+                        <li>
+                            <p>@lang('sslchecker.desc-4-2-2')</p>
+                            <p>@lang('sslchecker.desc-4-2-2-1')</p>
+                        </li>
+                    </ul>
                 </div>
                 <div class="d-none" id="description-tab-5">
                     <h2>@lang('sslchecker.desc-5')</h2>
+                    <p>@lang('sslchecker.desc-5-1')</p>
+                    <h3>@lang('sslchecker.desc-5-1-1')</h3>
+                    <p>@lang('sslchecker.desc-5-1-1-1')</p>
+                    <h3>@lang('sslchecker.desc-5-1-2')</h3>
+                    <p>@lang('sslchecker.desc-5-1-2-1')</p>
+                    <h3>@lang('sslchecker.desc-5-1-3')</h3>
+                    <p>@lang('sslchecker.desc-5-1-3-1')</p>
                 </div>
                 <div class="d-none" id="description-tab-6">
                     <h2>@lang('sslchecker.desc-6')</h2>
+                    <p>@lang('sslchecker.desc-6-1')</p>
+                    <p>@lang('sslchecker.desc-6-2')</p>
+                    <h3>@lang('sslchecker.desc-6-3')</h3>
+                    <p>@lang('sslchecker.desc-6-3-1')</p>
+                    <ul>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-3-1-1')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-1-1')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-1-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-3-1-2')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-2-1')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-2-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-3-1-3')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-3-1')</p>
+                            <p>@lang('sslchecker.desc-6-3-1-3-2')</p>
+                        </li>
+                    </ul>
+                    <h3>@lang('sslchecker.desc-6-4')</h3>
+                    <p>@lang('sslchecker.desc-6-4-1')</p>
+                    <ul>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-4-1-1')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-1-1')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-1-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-4-1-2')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-2-1')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-2-2')</p>
+                        </li>
+                        <li>
+                            <p>@lang('sslchecker.desc-6-4-1-3')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-3-1')</p>
+                            <p>@lang('sslchecker.desc-6-4-1-3-2')</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-3">
