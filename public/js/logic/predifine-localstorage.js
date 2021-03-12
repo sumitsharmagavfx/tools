@@ -2,6 +2,8 @@ const define = function (){
     return {
         faq:[],
         wc:[],
-        meta:[]
+        meta:[],
+        breadcrumbs: [],
+        how_to: [],
     }
 }

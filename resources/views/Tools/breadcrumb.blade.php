@@ -464,7 +464,7 @@ id/json-ld-breadcrumb-schema-generator
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #1</label>
                               <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="0">
-                              <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                              <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
                             </div>
                       </div>
                   </div>
@@ -485,7 +485,7 @@ id/json-ld-breadcrumb-schema-generator
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #2</label>
                               <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="1">
-                              <div class="invalid-feedback">@lang('layout.invalid-url')</div>
+                              <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
                           </div>
                       </div>
                   </div>
@@ -1040,7 +1040,8 @@ id/json-ld-breadcrumb-schema-generator
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
+    <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+    <script src="{{asset('js/logic/breadcrumb-json.js')}}"></script>
 @endpush
 @section('json-ld-breadcrumb')
 active

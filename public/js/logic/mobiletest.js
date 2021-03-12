@@ -54,14 +54,14 @@ const HistoryTemplate = (url, date) => `
     </div>
 </li>
 `;
-    
+
 const EmptyHistoryTemplate = () => `
 <li class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
     <div class="d-flex justify-content-center text-center">
     <span>`+localStorageNone+`</span>
     </div>
 </li>`;
-    
+
 const HistoryTemplateMobile = (url, date) => `
 <div class="custom-card py-5 px-3 history--list" data-url="${url}">
 <div class="d-flex align-items-center justify-content-between">
@@ -72,7 +72,7 @@ const HistoryTemplateMobile = (url, date) => `
     </div>
 </div>
 </div>`;
-    
+
 const EmptyHistoryTemplateMobile = () => `
 <div class="custom-card py-5 px-3">
 <div class="d-flex justify-content-center text-center">
@@ -99,7 +99,7 @@ function getHistories() {
         )
     }
 }
-    
+
 function addHistory(url, data) {
     let histories = localStorage.getItem(MOBILE_TEST_LOCAL_STORAGE_KEY);
     histories = histories ? JSON.parse(histories) : [];
@@ -111,7 +111,7 @@ function addHistory(url, data) {
     localStorage.setItem(MOBILE_TEST_LOCAL_STORAGE_KEY, JSON.stringify(histories));
     getHistories();
 }
-    
+
 function deleteHistory(_url = null) {
     let histories = [];
     if (_url) {
@@ -301,7 +301,7 @@ function renderAllData(result){
     before_crawl_result.addClass('d-none')
     after_crawl_result.removeClass('d-none')
     after_crawl_result.addClass('d-flex')
-    
+
     before_crawl_preview.addClass('d-none')
     after_crawl_preview.removeClass('d-none')
 }
