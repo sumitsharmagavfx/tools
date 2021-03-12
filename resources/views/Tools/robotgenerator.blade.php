@@ -95,21 +95,21 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <div id="local-collection-desktop" class="local-collection">
-                        <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
-                            <div class="d-flex flex-row align-items-center">
-                                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                                <span class="text-black font-15px">@lang('layout.local-history')</span>
-                            </div>
-                            <div>
-                                <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
-                            </div>
-                        </div>
-                        <div class="local-collection-body">
-                            <ul class="list-group" id="local-history">
-                            </ul>
-                        </div>
-                    </div>
+                    {{--<div id="local-collection-desktop" class="local-collection">--}}
+                        {{--<div class="local-collection-header d-flex justify-content-between px-2 mb-3">--}}
+                            {{--<div class="d-flex flex-row align-items-center">--}}
+                                {{--<i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>--}}
+                                {{--<span class="text-black font-15px">@lang('layout.local-history')</span>--}}
+                            {{--</div>--}}
+                            {{-- <div> --}}
+                                {{-- <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span> --}}
+                            {{-- </div> --}}
+                        {{-- </div> --}}
+                        {{-- <div class="local-collection-body"> --}}
+                            {{-- <ul class="list-group" id="local-history"> --}}
+                            {{-- </ul> --}}
+                        {{-- </div> --}}
+                    {{-- </div> --}}
                 </div>
                 <div class="col-md-4">
                     <div class="desktop-version">
@@ -139,16 +139,16 @@
 </div>
 <div class="w-100">
     <div class="local-collection-mobile bg-white py-5">
-        <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
-            <div class="d-flex flex-row align-items-center">
-                <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">@lang('layout.local-history')</span>
-            </div>
-            <div>
-                <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span>
-            </div>
-        </div>
-        <div class="local-collection-body mt-3 px-5" id="local-history-mobile"></div>
+        {{-- <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5"> --}}
+            {{-- <div class="d-flex flex-row align-items-center"> --}}
+                {{-- <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i> --}}
+                {{-- <span class="text-black font-15px">@lang('layout.local-history')</span> --}}
+            {{-- </div> --}}
+            {{-- <div> --}}
+                {{-- <span class="clear-all font-15px pointer clear-history--btn">@lang('layout.clear-all')</span> --}}
+            {{-- </div> --}}
+        {{-- </div> --}}
+        {{-- <div class="local-collection-body mt-3 px-5" id="local-history-mobile"></div> --}}
         <div id="mobile-version" class="px-5 accordion accordion-light accordion-toggle-arrow custom-features-accordion" id="accordionExample2">
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
