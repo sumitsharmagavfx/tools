@@ -226,11 +226,7 @@
             "item": "",
         });
         jsonFormat();
-<<<<<<< HEAD
-        $('#formbreadcrumb').append("<div class='row form-cotainer' data-id='"+(counter)+"'><input type='hidden' id='itemListLength' value='"+(main.itemListElement.length)+"'><div class='col-10 col-sm-11'><div class='row'><div class='col-sm-5 mb-5'><label for='pageName' class='font-weight-bold'>Page #"+(counter)+" name</label><input type='text' id='pageName' class='form-control pageName' name='' placeholder='"+pageName+"' value='' data-id='"+(counter)+"'></div><div class='col-sm-7 mb-5'><label for='url' class='font-weight-bold'>URL #"+(counter)+"</label><input type='text' id='url' class='form-control url' name='' placeholder='"+url+"' value='' data-id='"+(counter)+"'><div class='invalid-feedback' data-id='"+(counter)+"'>Invalid URL</div></div></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(counter)+"'></i></div></div></div>");
-=======
         $('#formbreadcrumb').append("<div class='row form-cotainer' data-id='"+(counter)+"'><input type='hidden' id='itemListLength' value='"+(main.itemListElement.length)+"'><div class='col-10 col-sm-11'><div class='row'><div class='col-sm-5 mb-5'><label for='pageName' class='font-weight-bold'>"+label_page+" #"+(counter)+" "+label_name+"</label><input type='text' id='pageName' class='form-control pageName' name='' placeholder='"+placeholder_pageName+"' value='' data-id='"+(counter)+"'></div><div class='col-sm-7 mb-5'><label for='url' class='font-weight-bold'>URL #"+(counter)+"</label><input type='text' id='url' class='form-control url' name='' placeholder='"+placeholder_url+"' value='' data-id='"+(counter)+"'><div class='invalid-feedback'>"+invalid_url+"</div></div></div></div><div class='col-2 col-sm-1'><div class='d-flex justify-content-center mt-9'><i class='bx bxs-x-circle bx-md delete' data-id='"+(counter)+"'></i></div></div></div>");
->>>>>>> 364c0e4318b90aac63db819ed065fe516cbbd811
         let row = parseInt(jQuery('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
         // sticky.update();
