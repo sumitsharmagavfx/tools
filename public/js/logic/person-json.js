@@ -1,6 +1,10 @@
 
     var counterSocial = 0;
 
+    let invalid_url = lang ==='en'? 'Invalid URL' : 'URL Tidak Valid';
+    let placeholder_type = lang ==='en'? 'Type your' : 'Ketik URL';
+    let placeholder_url = lang ==='en'? 'URL here..' : 'Anda di sini..';
+
     const labelSocial = `<label class="text-black font-weight-bold" for="sosmedName">Social profile URL</label>`;
 
     const twitter = (id) => `<div class="row mb-5" id="twitter">
@@ -10,8 +14,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="twitter" placeholder="Type your twitter URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="twitter" placeholder="`+placeholder_type+` twitter `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -22,8 +26,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="facebook" placeholder="Type your facebook URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="facebook" placeholder="`+placeholder_type+` facebook `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -34,8 +38,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="instagram" placeholder="Type your instagram URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="instagram" placeholder="`+placeholder_type+` instagram `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -46,8 +50,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="youtube" placeholder="Type your youtube URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="youtube" placeholder="`+placeholder_type+` youtube `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -58,8 +62,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="linkedin" placeholder="Type your linkedin URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="linkedin" placeholder="`+placeholder_type+` linkedin `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -70,8 +74,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="pinterest" placeholder="Type your pinterest URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="pinterest" placeholder="`+placeholder_type+` pinterest `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -82,8 +86,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="soundcloud" placeholder="Type your soundcloud URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="soundcloud" placeholder="`+placeholder_type+` soundcloud `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -94,8 +98,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="tumblr" placeholder="Type your tumblr URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="tumblr" placeholder="`+placeholder_type+` tumblr `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -106,8 +110,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="wikipedia" placeholder="Type your wikipedia URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="wikipedia" placeholder="`+placeholder_type+` wikipedia `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -118,8 +122,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="github" placeholder="Type your github URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="github" placeholder="`+placeholder_type+` github `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
@@ -130,8 +134,8 @@
         </div>
       </div>
       <div class="col-10 col-sm-11 pl-0">
-        <input type="text" name="" class="form-control sosmedName" data-sosmed="wolrd" placeholder="Type your website URL here.." value="" data-id="${id}">
-        <div class="invalid-feedback">Invalid URL</div>
+        <input type="text" name="" class="form-control sosmedName" data-sosmed="wolrd" placeholder="`+placeholder_type+` website `+placeholder_url+`" value="" data-id="${id}">
+        <div class="invalid-feedback">`+invalid_url+`</div>
       </div>
     </div>`;
 
