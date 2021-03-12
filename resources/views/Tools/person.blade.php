@@ -4,8 +4,6 @@
 
 @section('meta-desc', "JSON-LD Person Schema Generator")
 
-@section('meta-keyword', "JSON-LD Person Schema Generator")
-
 @section('conical','/en/json-ld-person-schema-generator')
 
 @section('en-link')
@@ -408,10 +406,10 @@ text-decoration: underline;
 <div class="container container-tools mb-10">
   <div class="d-flex flex-column-fluid">
     <div class="container-fluid px-0">
-      <h1 class="text-darkgrey font-weight-normal">JSON-LD PERSON SCHEMA GENERATOR</h1>
-      <span class="text-darkgrey h4 font-weight-normal">Login to unlock all features here, 100% free!</span>
+      <h1 class="text-darkgrey font-weight-normal">@lang('person.title')</h1>
+      <span class="text-darkgrey h4 font-weight-normal">@lang('person.subtitle')</span>
 
-      <div class="card card-custom mt-10 mb-5">
+      {{-- <div class="card card-custom mt-10 mb-5">
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
@@ -432,35 +430,50 @@ text-decoration: underline;
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
-      <div class="card card-custom mb-5">
+      <div class="card card-custom mb-5 mt-10">
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
+              <div class="row mb-8">
+                <div class="col-12">
+                  <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
+                  <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                    <option value="home">Home</option>
+                    <option value="breadcrumb">Breadcrumb</option>
+                    <option value="faq">FAQ Page</option>
+                    <option value="how-to">How-to</option>
+                    <option value="job-posting">Job Posting</option>
+                    <option value="person" selected="selected">Person</option>
+                    <option value="product">Product</option>
+                    <option value="recipe">Recipe</option>
+                  </select>
+                </div>
+              </div>
               <p class="h6 text-black mb-5">Person</p>
               <div class="" id="formperson">
                 <div class="row">
-                  <div class="col-12 col-md-6">
-                    <label class="text-black font-weight-bold" for="name">Name</label>
-                    <input type="text" name="" class="form-control name mb-5" placeholder="@lang('person.name')" value="" data-id="0">
+                  <div class="col-12 col-md-6 mb-5">
+                    <label class="text-black font-weight-bold" for="name">@lang('person.label-name')</label>
+                    <input type="text" name="" class="form-control name" placeholder="@lang('person.placeholder-name')" value="" data-id="0">
                   </div>
-                  <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6 mb-5">
                     <label class="text-black font-weight-bold" for="url">URL</label>
-                    <input type="text" name="" class="form-control url mb-5" placeholder="@lang('person.url')" value="" data-id="0">
+                    <input type="text" name="" class="form-control url" placeholder="@lang('person.placeholder-url')" value="" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-12 col-md-6 mb-5">
-                    <label class="text-black font-weight-bold" for="pictureUrl">Image URL</label>
-                    <input type="text" name="" class="form-control pictureUrl" placeholder="@lang('person.pictureUrl')" value="" data-id="0">
-                    <div class="invalid-feedback">Invalid URL</div>
+                    <label class="text-black font-weight-bold" for="pictureUrl">@lang('person.label-pictureUrl')</label>
+                    <input type="text" name="" class="form-control pictureUrl" placeholder="@lang('person.placeholder-pictureUrl')" value="" data-id="0">
+                    <div class="invalid-feedback">@lang('layout.invalid-url')</div>
                   </div>
                   <div class="col-12 col-md-6">
-                    <label class="text-black font-weight-bold" for="sosmed">Social profiles</label>
+                    <label class="text-black font-weight-bold" for="sosmed">@lang('person.label-social-profiles')</label>
                     <div class="dropdown bootstrap-select show-tick form-control">
                       <select class="form-control selectpicker custom-select-blue social-profiles mb-5" multiple="multiple" data-actions-box="false" tabindex="null">
-                          <option value="none">Choose Social Profiles</option>
                         <option value="twitter">Twitter</option>
                         <option value="facebook">Facebook</option>
                         <option value="instagram">Instagram</option>
@@ -478,12 +491,12 @@ text-decoration: underline;
                 </div>
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <label class="text-black font-weight-bold" for="jobTitle">Job title</label>
-                    <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.jobTitle')" value="" data-id="0">
+                    <label class="text-black font-weight-bold" for="jobTitle">@lang('person.label-jobTitle')</label>
+                    <input type="text" name="" class="form-control jobTitle mb-5" placeholder="@lang('person.placeholder-jobTitle')" value="" data-id="0">
                   </div>
                   <div class="col-12 col-md-6">
-                    <label class="text-black font-weight-bold" for="company">Company</label>
-                    <input type="text" name="" class="form-control company mb-5" placeholder="Type your company here.." value="" data-id="0">
+                    <label class="text-black font-weight-bold" for="company">@lang('person.label-company')</label>
+                    <input type="text" name="" class="form-control company mb-5" placeholder="@lang('person.placeholder-company')" value="" data-id="0">
                   </div>
                 </div>
                 <div class="row">
@@ -501,15 +514,15 @@ text-decoration: underline;
                     <div class="row mb-2">
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" id="copy" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-copy'></i> <span>Copy</span></button>
+                        <i class='bx bx-copy'></i> <span>@lang('layout.btn-copy')</span></button>
                       </div>
                       <div class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="submit" id="test" class="btn font-weight-bold " name="button">
-                        <i class='bx bx-check-circle'></i> <span>Check</span></button>
+                        <i class='bx bx-check-circle'></i> <span>@lang('layout.btn-check')</span></button>
                       </div>
                       <div id="reset" class="col-4 d-flex justify-content-center px-0 button-result">
                         <button type="button" class="btn font-weight-bold" name="button">
-                        <i class='bx bx-refresh' ></i> <span>Reset</span></button>
+                        <i class='bx bx-refresh' ></i> <span>@lang('layout.btn-reset')</span></button>
                       </div>
                     </div>
                   <textarea name="code_snippet" style="resize:none" rows="16" class="form-control" id="json-format" data-key="{{time()}}"></textarea>
@@ -526,10 +539,10 @@ text-decoration: underline;
             <div class="local-collection-header d-flex justify-content-between px-2 mb-3">
               <div class="d-flex flex-row align-items-center">
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-                <span class="text-black font-15px">Your Local History</span>
+                <span class="text-black font-15px">@lang('layout.local-history')</span>
               </div>
               <div onclick="clearAll()">
-                <span class="clear-all font-15px pointer">Clear All</span>
+                <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
               </div>
             </div>
             <div class="local-collection-body">
@@ -542,15 +555,15 @@ text-decoration: underline;
              <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                Version 2.3
+                @lang('layout.version') 1.0
                </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
                <div class="card-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>@lang('person.highlight')</p>
                 <div class="d-flex align-items-center">
                   <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">Updated 8 Jan, 2021</span>
+                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                 </div>
                </div>
               </div>
@@ -567,10 +580,10 @@ text-decoration: underline;
     <div class="local-collection-header d-flex justify-content-between mb-3 w-100 px-5">
       <div class="d-flex flex-row align-items-center">
         <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
-        <span class="text-black font-15px">Your Local History</span>
+        <span class="text-black font-15px">@lang('layout.local-history')</span>
       </div>
       <div>
-        <span class="clear-all font-15px pointer">Clear All</span>
+        <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
       </div>
     </div>
     <div id="localsavemobile" class="local-collection-body mt-3 px-5"></div>
@@ -578,46 +591,168 @@ text-decoration: underline;
 </div>
 <div class="" style="background:white">
   <div class="container container-description">
-    <h2 class="text-black">Advance your writing</h2>
     <div class="row">
       <div class="col-md-9">
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="" id="description-tab-1">
+          <h2>@lang('person.desc-1')</h2>
+          <p>@lang('person.desc-1-1')</p>
+          <p>@lang('person.desc-1-2')</p>
+          <p>@lang('person.desc-1-3')</p>
+          <p>@lang('person.desc-1-4')</p>
+          <p>@lang('person.desc-1-5')</p>
+          <p>@lang('person.desc-1-6')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;script type="application/ld+json"&gt;
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Person",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Colorado Springs",
+                    "addressRegion": "CO",
+                    "postalCode": "80840",
+                    "streetAddress": "100 Main Street"
+                  },
+                  "colleague": [
+                    "http://www.example.com/JohnColleague.html",
+                    "http://www.example.com/JameColleague.html"
+                  ],
+                  "email": "info@example.com",
+                  "image": "janedoe.jpg",
+                  "jobTitle": "Research Assistant",
+                  "name": "Jane Doe",
+                  "alumniOf": "Dartmouth",
+                  "birthPlace": "Philadelphia, PA",
+                  "birthDate": "1979-10-12",
+                  "height": "72 inches",
+                  "gender": "female",
+                  "memberOf": "Republican Party",
+                  "nationality": "Albanian",
+                  "telephone": "(123) 456-6789",
+                  "url": "http://www.example.com",
+                  "sameAs" : [ "https://www.facebook.com/",
+                  "https://www.linkedin.com/",
+                  "http://twitter.com/",
+                  "http://instagram.com/",
+                  "https://plus.google.com/"]
+                }          
+              &lt;/script&gt;
+            view rawperson.js hosted with ❤ by GitHub
+            </code>
+          </pre>
+          <p>@lang('person.desc-1-7')</p>
+          <pre class="language-html mb-4">
+            <code class="language-html">
+              &lt;script type="application/ld+json"&gt;
+                {
+                  "@context": "http://www.schema.org",
+                  "@type": "Person",
+                  "@id": "https://jay.holtslander.ca/#person",
+                  "name": "Jay Holtslander",
+                  "alternateName": "Jason Holtslander",
+                  "nationality": "Canadian",
+                  "birthPlace" : {
+                    "@type": "Place",
+                      "address": {
+                        "@type": "PostalAddress",
+                      "addressLocality": "Vancouver",
+                      "addressRegion": "BC",
+                          "addressCountry": "Canada"
+                    }
+                  },
+                  "affiliation": [
+                    {
+                      "@type": "Organization",
+                      "name": "Futurpreneur",
+                      "sameAs": [
+                        "https://twitter.com/futurpreneur",
+                        "https://www.facebook.com/futurpreneur/",
+                        "https://www.linkedin.com/company-beta/100369/",
+                        "https://www.youtube.com/user/CYBF"
+                      ]
+                      }
+                  ],
+                  "alumniOf": [
+                    {
+                     "@type": "CollegeOrUniversity",
+                     "name": "Vancouver Film School",
+                     "sameAs": "https://en.wikipedia.org/wiki/Vancouver_Film_School"
+                    },
+                    {
+                     "@type": "CollegeOrUniversity",
+                     "name": "CodeCore Bootcamp"
+                    }
+                  ],
+                  "gender": "Male",
+                  "Description": "Technologist",
+                  "disambiguatingDescription": "Co-founder of CodeCore Bootcamp",
+                  "jobTitle": "Technical Director",
+                  "worksFor": [
+                    {
+                      "@type": "Organization",
+                      "name": "Skunkworks Creative Group Inc.",
+                      "sameAs": [
+                        "https://twitter.com/skunkworks_ca",
+                        "https://www.facebook.com/skunkworks.ca",
+                        "https://www.linkedin.com/company/skunkworks-creative-group-inc-",
+                        "https://plus.google.com/+SkunkworksCa"
+                      ]
+                    }
+                  ],
+                  "url": "https://jay.holtslander.ca",
+                  "image": "https://s.gravatar.com/avatar/961997eb7fd5c22b3e12fb3c8ca14e11?s=512&r=g",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Vancouver",
+                    "addressRegion": "BC",
+                    "addressCountry": "Canada"
+                  },
+                  "sameAs": [
+                    "https://twitter.com/j_holtslander",
+                    "https://pinterest.com/j_holtslander",
+                    "https://instagram.com/j_holtslander",
+                    "https://www.facebook.com/jay.holtslander",
+                    "https://ca.linkedin.com/in/holtslander/en",
+                    "https://plus.google.com/+JayHoltslander",
+                    "https://www.youtube.com/user/jasonh1234",
+                    "https://github.com/JayHoltslander",
+                    "https://profiles.wordpress.org/jasonh1234",
+                    "https://angel.co/j_holtslander",
+                    "https://www.foursquare.com/user/184843",
+                    "https://jholtslander.yelp.ca",
+                    "https://codepen.io/j_holtslander/",
+                    "https://stackoverflow.com/users/751570/jay",
+                    "https://dribbble.com/j_holtslander",
+                    "http://jasonh1234.deviantart.com/",
+                    "https://www.behance.net/j_holtslander",
+                    "https://www.flickr.com/people/jasonh1234/",
+                    "https://medium.com/@j_holtslander"
+                    ]
+                }                
+              &lt;/script&gt;
+            </code>
+          </pre>
+        </div>
+        <div class="d-none" id="description-tab-2">
+          <h2>@lang('person.desc-2')</h2>
+          <p>@lang('person.desc-2-1')</p>
+          <img class="mb-4" src="{{asset('/media/images/person-instruction-1.png')}}" alt="" width="300">
+          <p>@lang('person.desc-2-2')</p>
+        </div>
       </div>
       <div class="col-md-3">
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-1">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">1</span>
+            <span class="label label-lg label-tools-description active" id="nav-label-tab-1">1</span>
           </div>
-          <a href="#" class="">Why does SEO important for writing?</a>
+          <a class="">@lang('person.desc-1')</a>
         </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
+        <div class="d-flex align-items-center mb-5 tools-description-points" id="nav-desc-tab-2">
           <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">2</span>
+            <span class="label label-lg label-tools-description" id="nav-label-tab-2">2</span>
           </div>
-          <a href="#" class="">How search engine works?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">3</span>
-          </div>
-          <a href="#" class="">The basic of writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">4</span>
-          </div>
-          <a href="#" class="">Measuring your writing?</a>
-        </div>
-        <div class="d-flex align-items-center mb-5 tools-description-points">
-          <div class="mr-2" style="width:24px !important; height: 24px !important;">
-            <span class="label label-lg label-tools-description">5</span>
-          </div>
-          <a href="#" class="">Hiring profesional content strategy and consultant?</a>
+          <a class="">@lang('person.desc-2')</a>
         </div>
       </div>
     </div>
@@ -630,14 +765,14 @@ text-decoration: underline;
         </div>
         <div class="col-md-6 py-10 pr-10">
           <div class="robo-text-container">
-            <h2 class="text-white">Writing Starter Guide</h2>
-            <p class="text-white">The Search Engine Optimization (SEO) Starter Guide provides best practices to make it easier for search engines to crawl, index, and understand your content.</p>
-            <button type="button" class="btn btn-explore " name="button">Explore today?</button>
+            <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
+            <p class="text-white">@lang('layout.banner-robo-desc')</p>
+            <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="row mb-10">
+    {{-- <div class="row mb-10">
       <div class="col-md-6">
         <h2 class="text-black">Available features</h2>
         <p class="text-black" style="font-size:1.5rem">Explore the full features of cmlabs WORD COUNTER</p>
@@ -659,43 +794,41 @@ text-decoration: underline;
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
-    </div>
-    <h2 class="text-black">What’s new on cmlabs Words Counter</h2>
+    </div> --}}
+    <h2 class="text-black">@lang('layout.whats-new-title') @lang('person.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives.</span>
+          <span class="alert-features-text">@lang('person.whats-new-1')</span>
         </div>
       </div>
       <div class="col-md-6 mb-5">
         <div class="alert alert-custom alert-features-new fade show card card-custom card-stretch" role="alert" style="background: var(--lightgrey); display:block">
           <div class="alert-text mb-5">
-            <span class="h4 alert-title">What's new</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
+            <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">Last Update Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true"><i class="ki ki-close icon-alert-close"></i></span>
             </button>
           </div>
-          <span class="alert-features-text">Now user can set their CTR’s for the each market projection with three-level of keywords. (a) Domain Level, (b) Page Category / Product Level, and (c) Tag / Sub-Catagory Level. With this update, starting
-            from now you will have better insight for specific niche. You can learn more about this update anytimes, hopefully the changes better for your business objectives. </span>
+          <span class="alert-features-text">@lang('person.whats-new-2')</span>
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">View all web-release?</p>
+    {{-- <p class="text-black view-all-release">View all web-release?</p> --}}
   </div>
 </div>
 

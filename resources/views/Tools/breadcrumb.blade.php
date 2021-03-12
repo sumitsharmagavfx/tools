@@ -410,7 +410,7 @@ id/json-ld-breadcrumb-schema-generator
       <h1 class="text-darkgrey font-weight-normal">@lang('breadcrumb.title')</h1>
       <span class="text-darkgrey h4 font-weight-normal">@lang('breadcrumb.subtitle')</span>
 
-      <div class="card card-custom mt-10 mb-5">
+      {{-- <div class="card card-custom mt-10 mb-5">
         <div class="card-body py-5">
           <div class="row">
             <div class="col-md-4 mb-5">
@@ -431,25 +431,40 @@ id/json-ld-breadcrumb-schema-generator
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
 
-      <div class="card card-custom mb-5">
+      <div class="card card-custom mb-5 mt-10">
         <div class="card-body">
           <div class="row">
             <div class="col-md-8 mb-5">
+              <div class="row mb-8">
+                <div class="col-12">
+                  <label for="schema-json-ld" class="font-weight-bold text-black h6">@lang('layout.which-schema')</label>
+                  <select class="form-control selectpicker custom-select-blue" tabindex="null" id="schema-json-ld">
+                    <option value="home">Home</option>
+                    <option value="breadcrumb" selected="selected">Breadcrumb</option>
+                    <option value="faq">FAQ Page</option>
+                    <option value="how-to">How-to</option>
+                    <option value="job-posting">Job Posting</option>
+                    <option value="person">Person</option>
+                    <option value="product">Product</option>
+                    <option value="recipe">Recipe</option>
+                  </select>
+                </div>
+              </div>
               <p class="h6 text-black mb-5">Breadcrumb Generator</p>
               <div class="" id="formbreadcrumb">
               <div class="row">
                   <div class="col-10 col-sm-11">
                       <div class="row">
                           <div class="col-sm-5 mb-5">
-                              <label for="pageName" class="font-weight-bold text-black">Page #1 name</label>
-                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.pageName') }}" value="" data-id="0">
+                              <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #1 @lang('breadcrumb.label-name')</label>
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="0">
                           </div>
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #1</label>
-                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.url') }}" value="" data-id="0">
-                              <div class="invalid-feedback" data-id="0">@lang('breadcrumb.invalid-url')</div>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="0">
+                              <div class="invalid-feedback" data-id="0">@lang('layout.invalid-url')</div>
                             </div>
                       </div>
                   </div>
@@ -464,13 +479,13 @@ id/json-ld-breadcrumb-schema-generator
                   <div class="col-10 col-sm-11">
                       <div class="row">
                           <div class="col-sm-5 mb-5">
-                              <label for="pageName" class="font-weight-bold text-black">Page #2 name</label>
-                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.pageName') }}" value="" data-id="1">
+                              <label for="pageName" class="font-weight-bold text-black">@lang('breadcrumb.label-page') #2 @lang('breadcrumb.label-name')</label>
+                              <input type="text" id="pageName" class="form-control pageName" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-pageName') }}" value="" data-id="1">
                           </div>
                           <div class="col-sm-7 mb-5">
                               <label for="url" class="font-weight-bold text-black">URL #2</label>
-                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.url') }}" value="" data-id="1">
-                              <div class="invalid-feedback" data-id="1">@lang('breadcrumb.invalid-url')</div>
+                              <input type="text" id="url" class="form-control url" name="" placeholder="{{ Lang::get('breadcrumb.placeholder-url') }}" value="" data-id="1">
+                              <div class="invalid-feedback" data-id="1">@lang('layout.invalid-url')</div>
                           </div>
                       </div>
                   </div>
@@ -539,7 +554,7 @@ id/json-ld-breadcrumb-schema-generator
              <div class="card bg-transparent" style="">
               <div class="card-header" id="headingOne2">
                <div class="card-title pt-0" data-toggle="collapse" data-target="#collapseOne2">
-                @lang('layout.version') 2.3
+                @lang('layout.version') 1.0
                </div>
               </div>
               <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -547,7 +562,7 @@ id/json-ld-breadcrumb-schema-generator
                 <p>@lang('breadcrumb.highlight')</p>
                 <div class="d-flex align-items-center">
                   <i class='bx bxs-check-circle text-darkgrey mr-1' ></i>
-                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                  <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                 </div>
                </div>
               </div>
@@ -741,12 +756,12 @@ id/json-ld-breadcrumb-schema-generator
           <div class="robo-text-container">
             <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
             <p class="text-white">@lang('layout.banner-robo-desc')</p>
-            <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+            <button type="button" class="btn btn-explore " name="button" onclick="window.open('https://cmlabs.co','_blank')">@lang('layout.banner-robo-btn')</button>
           </div>
         </div>
       </div>
     </div>
-    <div class="row mb-10">
+    {{-- <div class="row mb-10">
       <div class="col-md-6">
         <h2 class="text-black">@lang('layout.feature-title')</h2>
         <p class="text-black" style="font-size:1.5rem">@lang('layout.feature-sub-title') @lang('breadcrumb.title')</p>
@@ -768,7 +783,7 @@ id/json-ld-breadcrumb-schema-generator
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
         <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
       </div>
-    </div>
+    </div> --}}
     <h2 class="text-black">@lang('layout.whats-new-title') @lang('breadcrumb.title')</h2>
     <div class="row my-5">
       <div class="col-md-6 mb-5">
@@ -776,7 +791,7 @@ id/json-ld-breadcrumb-schema-generator
           <div class="alert-text mb-5">
             <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -791,7 +806,7 @@ id/json-ld-breadcrumb-schema-generator
           <div class="alert-text mb-5">
             <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
             <br />
-            <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+            <span class="font-weight-light">@lang('layout.whats-new-update') 15 Mar, 2021</span>
           </div>
           <div class="alert-close pt-5 pr-5">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -802,7 +817,7 @@ id/json-ld-breadcrumb-schema-generator
         </div>
       </div>
     </div>
-    <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+    {{-- <p class="text-black view-all-release">@lang('layout.view-web-release')</p> --}}
   </div>
 </div>
 
