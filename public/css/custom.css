@@ -2107,3 +2107,27 @@ textarea.input-meta-description {
 .card-word-counter {
     background-color: var(--lightgrey);
 }
+
+.delete {
+  color:var(--darkgrey);
+  cursor: pointer;
+}
+
+.delete:hover {
+  color:var(--black);
+}
+
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a {
+    background: var(--primaryblue) !important;
+}
+
+.bootstrap-select.custom-select-blue .dropdown-menu.inner > li.selected > a .text, .bootstrap-select.custom-select-blue .dropdown-menu.inner > li:hover > a .text {
+    color: white;
+    transition: 0.15s !important;
+}
+
+
+.form-control:focus {
+  border-color: var(--primaryblue);
+}
