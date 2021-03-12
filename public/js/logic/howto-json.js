@@ -2,6 +2,7 @@
     var _toolsCounter = 0;
     var _stepCounter = 0;
 
+    let invalid_url = lang ==='en'? 'Invalid URL' : 'URL Tidak Valid';
     let label_step = lang ==='en'? 'Step' : 'Langkah';
     let label_instructions = lang ==='en'? 'instruction' : 'instruksi';
     let label_imageStep = lang ==='en'? 'Image URL' : 'URL Gambar';
@@ -147,9 +148,9 @@
 
         jQuery('#howto-step').append("<div class='loopStep' data-id='"+(_stepCounter)+"'><input type='hidden' id='stepCounter' value='"+(_stepCounter)+"'><div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-10 col-sm-11\"><label class=\"text-black font-weight-bold\" for=\"instructions\" data-id=\""+(_stepCounter)+"\">"+label_step+" #"+(_stepCounter+1)+": "+label_instructions+"</label>\n" +
             "                <input type=\"text\" name=\"\" class=\"form-control instructions mb-5\" placeholder=\""+placeholder_instructions+"\" value=\"\" data-id=\""+(_stepCounter)+"\"></div><div class=\"col-2 col-sm-1\"><div class=\"d-flex justify-content-center mt-9\"><i class=\'bx bxs-x-circle bx-md text-darkgrey delete deleteStep\' data-id=\""+(_stepCounter)+"\"></i></div></div></div>\n" +
-            "                <div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(_stepCounter)+"\">"+label_imageStep+"</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\""+placeholder_imageStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"><div class=\"invalid-feedback\">Invalid URL</div></div>" +
+            "                <div class=\"row\" data-id=\""+(_stepCounter)+"\"><div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"imageStep\" data-id=\""+(_stepCounter)+"\">"+label_imageStep+"</label><input type=\"text\" name=\"\" class=\"form-control imageStep\" placeholder=\""+placeholder_imageStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"><div class=\"invalid-feedback\">"+invalid_url+"</div></div>" +
             "                <div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"nameStep\" data-id=\""+(_stepCounter)+"\">"+label_nameStep+"</label><input type=\"text\" name=\"\" class=\"form-control nameStep\" placeholder=\""+placeholder_nameStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"></div>" +
-            "                <div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(_stepCounter)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\""+placeholder_urlStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"><div class=\"invalid-feedback\">Invalid URL</div></div></div></div>");
+            "                <div class=\"col-12 col-md-4 mb-5\"><label class=\"text-black font-weight-bold\" for=\"url\" data-id=\""+(_stepCounter)+"\">URL</label><input type=\"text\" name=\"\" class=\"form-control url\" placeholder=\""+placeholder_urlStep+"\" value=\"\" data-id=\""+(_stepCounter)+"\"><div class=\"invalid-feedback\">"+invalid_url+"</div></div></div></div>");
         let row = parseInt($('#json-format').val().split('\n').length);
         $('#json-format').attr('rows',row);
         sticky.update();
