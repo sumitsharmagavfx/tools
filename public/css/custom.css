@@ -1705,22 +1705,22 @@ textarea.input-meta-description {
 }
 
 .btn-add-question {
-  color: white;
-  background: var(--primaryblue);
-  border-radius: 20px;
+    color: white;
+    background: var(--primaryblue);
+    border-radius: 20px;
 }
 
 .btn-add-question i {
-  color: white;
+    color: white;
 }
 
 .btn-add-question:hover {
-  background: #1382CC;
-  color: white;
+    background: #1382CC;
+    color: white;
 }
 
 .btn-add-question:hover i {
-  color: white;
+    color: white;
 }
 
 @media (max-width:767px) {
@@ -2080,27 +2080,30 @@ textarea.input-meta-description {
 
 .button-result span,
 .button-result i {
-  color: var(--darkgrey);
+    color: var(--darkgrey);
 }
 
 .button-result:hover span {
-  color: var(--black);
+    color: var(--black);
 }
 
 .button-result:hover i {
-  color: var(--primaryblue);
+    color: var(--primaryblue);
 }
 
 .delete-robo {
-  color: var(--darkgrey);
-  cursor: pointer;
+    color: var(--darkgrey);
+    cursor: pointer;
 }
 
 .delete-robo:hover {
-  color: var(--black);
+    color: var(--black);
 }
 
-
-  .btn-delete-disabled {
+.btn-delete-disabled {
     color: var(--grey);
-  }
+}
+
+.card-word-counter {
+    background-color: var(--lightgrey);
+}
