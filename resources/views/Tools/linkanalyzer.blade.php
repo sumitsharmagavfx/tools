@@ -37,14 +37,16 @@ id/link-analyzer
                 <div class="col-md-8">
                     <div class="px-2 mb-3">
                         <span class="text-black font-15px font-weight-bolder">@lang('layout.result')</span>
+                        {{--
                         <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
+                        --}}
                     </div>
                     <div class="card card-custom mb-5">
                         <div class="card-body py-4 px-0">
                             <div class="" id="empty-container">
                                 <div class="text-center">
                                     <p class="d-block">@lang('analyzer.result-none')</p>
-                                    <a href="#" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#analyzer-description" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div class="mt-7" id="analyzer-container" style="display: none">
@@ -196,7 +198,7 @@ id/link-analyzer
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        @lang('layout.version') 2.3
+                                        @lang('layout.version') 1.0
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -204,7 +206,7 @@ id/link-analyzer
                                         <p>@lang('analyzer.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -234,7 +236,7 @@ id/link-analyzer
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        @lang('layout.version') 2.3
+                        @lang('layout.version') 1.0
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -242,7 +244,7 @@ id/link-analyzer
                         <p>@lang('analyzer.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -251,7 +253,7 @@ id/link-analyzer
     </div>
 </div>
 
-<div class="" style="background:white">
+<div class="" style="background:white" id="analyzer-description">
     <div class="container container-description">
         <div class="row">
             <div class="col-md-9">
@@ -319,18 +321,19 @@ id/link-analyzer
             <div class="row">
                 <div class="col-md-6 py-5">
                     <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
                     </div>
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
                         <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
                         <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{--
         <div class="row mb-10">
             <div class="col-md-6">
                 <h2 class="text-black">@lang('layout.feature-title')</h2>
@@ -353,6 +356,7 @@ id/link-analyzer
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>@lang('analyzer.feature-7')</bdi></label>
             </div>
         </div>
+        --}}
         <h2 class="text-black">@lang('layout.whats-new-title') @lang('analyzer.title')</h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
@@ -360,7 +364,7 @@ id/link-analyzer
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -375,7 +379,7 @@ id/link-analyzer
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -386,7 +390,9 @@ id/link-analyzer
                 </div>
             </div>
         </div>
+        {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+        --}}
     </div>
 </div>
 @endsection
@@ -395,6 +401,19 @@ id/link-analyzer
 <script>
     const LINK_ANALYZER_API_URL = '{{ route('api.analyze-link') }}';
     $('#toggle_button_webmaster').click();
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        var offset = -80;
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top + offset
+                }, 400);
+                return false;
+            }
+        }
+    });
 </script>
 <script src="{{ asset('js/logic/link-analyzer.js') }}"></script>
 <script>

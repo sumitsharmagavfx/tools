@@ -502,11 +502,11 @@ const refreshLocalStorage = function(){
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('page-speed'))
-        if(keys){
+        if(keys.length > 0 ){
             let index = 0;
             for (let key of keys){
                 let date = new Date(key.analysisUTCTimestamp)
-                date.setTime(date.getTime() + (1000*3600))
+                date.setTime(date.getTime())
                 let formatDate = `${created_at} ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
                 let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">

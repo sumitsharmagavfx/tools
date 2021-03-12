@@ -256,32 +256,37 @@
         * Adding regex url
         * */
 
-        var expression = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
-        var regex = new RegExp(expression);
+        var _url = new URL(url);
 
         if(index < 2){
-            console.log(index)
-            if (url.match(regex)) {
+            // console.log(index)
+            if (_url.protocol === 'https:' || _url.protocol === 'http:') {
                 main.itemListElement[index].item = url;
                 jsonFormat();
             } else {
+                main.itemListElement[index].item = url;
+                jsonFormat();
                 $(`.url[data-id=${index}]`).addClass('is-invalid');
                 $(`.invalid-feedback[data-id=${index}]`).show();
             }
         }else{
             if(counter > 2){
-                if (url.match(regex)) {
+                if (_url.protocol === 'https:' || _url.protocol === 'http:') {
                     main.itemListElement[index-1].item = url;
                     jsonFormat();
                 } else {
+                    main.itemListElement[index].item = url;
+                    jsonFormat();
                     $(`.url[data-id=${counter}]`).addClass('is-invalid');
                     $('.invalid-feedback[data-id=' + (counter) + ']').show();
                 }
             }else{
-                if (url.match(regex)) {
+                if (_url.protocol === 'https:' || _url.protocol === 'http:') {
                     main.itemListElement[index].item = url;
                     jsonFormat();
                 } else {
+                    main.itemListElement[index].item = url;
+                    jsonFormat();
                     $(`.url[data-id=${counter}]`).addClass('is-invalid');
                     $('.invalid-feedback[data-id=' + (counter) + ']').show();
                 }
