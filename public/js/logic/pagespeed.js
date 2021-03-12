@@ -502,7 +502,7 @@ const refreshLocalStorage = function(){
         $('#localsavemobile').empty();
         $('#localsavedesktop').empty();
         const keys = JSON.parse(localStorage.getItem('page-speed'))
-        if(keys){
+        if(keys.length > 0 ){
             let index = 0;
             for (let key of keys){
                 let date = new Date(key.analysisUTCTimestamp)
