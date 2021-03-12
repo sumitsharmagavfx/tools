@@ -504,7 +504,7 @@ id/json-ld-faq-schema-generator
 
 @push('script')
 <script type="text/javascript">
-
+    $('#toggle_button_webmaster').click();
 </script>
 @endpush
 @push('script')

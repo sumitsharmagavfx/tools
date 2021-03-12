@@ -2131,3 +2131,8 @@ textarea.input-meta-description {
 .form-control:focus {
   border-color: var(--primaryblue);
 }
+
+.form-control.custom-textarea-82 {
+  resize: none;
+  height: 82%;
+}
