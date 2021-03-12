@@ -27,7 +27,7 @@
             let data = JSON.parse(sliceFirstLastLine(raw));
             $("#formbreadcrumb").empty();
             for (let i in data.itemListElement){
-                
+
                 if(i < 2){
                     $('#formbreadcrumb').append(
                         `<div class='row form-cotainer' data-id='${i}'><input type='hidden' id='itemListLength' value='${data.itemListElement[i].length}'>
