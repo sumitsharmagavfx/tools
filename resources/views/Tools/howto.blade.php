@@ -499,8 +499,10 @@ text-decoration: underline;
                       <div class="col-6 col-md-4">
                         <label for="currency" class="text-black font-weight-bold">@lang('howto.label-currency')</label>
                         <select class="form-control selectpicker custom-select-blue currency mb-5" data-size="4" data-live-search="true">
-                          <option value="null">null</option>
-                          {{-- use api from https://technicalseo.com/tools/assets/data/currencies.json --}}
+                            <option value="none">Choose Currency</option>
+                            @foreach($currencies as $c)
+                                <option value="{{ $c['code'] }}">{{ $c['name'] }}</option>
+                            @endforeach
                         </select>
                       </div>
                     </div>
@@ -570,7 +572,7 @@ text-decoration: underline;
                 </div>
               </div>
             </div>
-            
+
             <div class="col-md-4 mb-5">
               <div class="p-2" style="border: 1px solid #E4E6EF; border-radius: 0.42rem;">
                 <form class="" target="_blank" rel="nofollow noopener noreferrer" action="https://search.google.com/test/rich-results" method="post">
@@ -1223,7 +1225,8 @@ text-decoration: underline;
 </script>
 @endpush
 @push('script')
-<script src="{{asset('js/logic/howto-json.js')}}"></script>
+    <script src="{{asset('js/logic/predifine-localstorage.js')}}"></script>
+    <script src="{{asset('js/logic/howto-json.js')}}"></script>
 @endpush
 @section('json-ld-howto')
 active
