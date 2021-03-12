@@ -1,3 +1,11 @@
+if (lang == "en") {
+    var created_at = "Created at "
+    var localStorageNone = "This is your first impressions, no history yet!"
+} else if (lang == "id") {
+    var created_at = "Dibuat pada "
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
+}
+
 jQuery(document).ready(function() {
     $("#manual-mode").hide();
     refreshLocalStorage();
@@ -104,7 +112,7 @@ const refreshLocalStorage = function() {
                     '<div class="d-flex align-items-center justify-content-between">' +
                     '<div class="local-collection-title">' + temp + '</div>' +
                     '<div class="d-flex align-items-center">' +
-                    '<span class="mr-2 text-grey date-created">Created at ' + ((date.getHours() < 10) ? ('0' + date.getHours()) : date.getHours()) + '.' + ((date.getMinutes() < 10) ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
+                    '<span class="mr-2 text-grey date-created">' + created_at + ((date.getHours() < 10) ? ('0' + date.getHours()) : date.getHours()) + '.' + ((date.getMinutes() < 10) ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
                     '<i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
                     '</div>' +
                     '</div>' +
@@ -114,7 +122,7 @@ const refreshLocalStorage = function() {
                     '<div class="d-flex justify-content-between">' +
                     '  <div class="local-collection-title">' + temp + '</div>' +
                     '  <div class="d-flex align-items-center">' +
-                    '    <span class="mr-2 text-grey date-created">Created at ' + (date.getHours() < 10 ? ('0' + date.getHours()) : date.getHours()) + '.' + (date.getMinutes() < 10 ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
+                    '    <span class="mr-2 text-grey date-created">' + created_at + (date.getHours() < 10 ? ('0' + date.getHours()) : date.getHours()) + '.' + (date.getMinutes() < 10 ? ('0' + date.getMinutes()) : date.getMinutes()) + ' | ' + date.getDate() + ', ' + getMonth(date.getMonth()) + ' ' + date.getFullYear() + '</span>' +
                     '    <i class="bx bxs-x-circle text-grey" onclick="removeData(' + key + ')"></i>' +
                     '  </div>' +
                     '</div>' +
@@ -123,6 +131,20 @@ const refreshLocalStorage = function() {
                 $('#localsavemobile').append(div)
                 $('#localsavedesktop').append(div2)
             }
+        } else {
+            let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
+                  <div class="d-flex justify-content-center text-center">
+                    <span>` + localStorageNone + `</span>
+                  </div>
+                </li>`
+            let div = `<div class="custom-card py-5 px-3">
+                    <div class="d-flex justify-content-center text-center">
+                        <span>` + localStorageNone + `</span>
+                    </div>
+                </div>`
+
+            $('#localsavemobile').append(div)
+            $('#localsavedesktop').append(div2)
         }
     } catch (e) {}
 }

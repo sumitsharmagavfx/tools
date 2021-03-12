@@ -27,7 +27,7 @@ id/sitemap-generator
                         <i id="noCrawl" class='bx bxs-shield text-white bx-md mr-3'></i>
                         <i id="crawlHttps" style="display: none;" class='bx bxs-check-shield text-white bx-md mr-3'></i>
                         <i id="crawlHttp" style="display: none;" class='bx bxs-shield-x text-white bx-md mr-3'></i>
-                        <input id="url" type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="{{ Lang::get('layout.input-hint') }}">
+                        <input id="url" type="url" class="form-control sitemap-url" name="" value="" autocomplete="off" placeholder="https://example.com">
                     </div>
                     <div class="col-sm-3 col-md-2 col-lg-3 col-xl-2 d-flex justify-content-end py-1">
                         <button id="generate" type="button" class="btn btn-crawl" name="button">@lang('sitemap.btn-generate')</button>
@@ -40,7 +40,9 @@ id/sitemap-generator
                         <div class="px-2 mb-3">
                             <span class="text-black font-15px font-weight-bolder">@lang('layout.result')</span>
                             <span id="length-result" class="font-15px font-weight-bolder" style="color:#9A99A2">(0)</span>
+                            {{--
                             <span class="font-15px what-is-this" style="color:#9A99A2">(@lang('layout.what-is-this'))</span>
+                            --}}
                         </div>
                         <div id="download-button" class="mb-3">
                         </div>
@@ -50,7 +52,7 @@ id/sitemap-generator
                             <div class="" id="noCrawlResult">
                                 <div class="text-center">
                                     <p class="d-block">@lang('sitemap.no-crawl-result')</p>
-                                    <a href="#" class="links">@lang('layout.learn-how-to-use')</a>
+                                    <a href="#sitemap-description" class="links">@lang('layout.learn-how-to-use')</a>
                                 </div>
                             </div>
                             <div style="display: none;" id="generateCrawlResult">
@@ -69,7 +71,7 @@ id/sitemap-generator
                     <div class="card card-custom mb-5">
                         <div class="card-body py-4 px-5">
                             <div class="text-center">
-                                <p id="info" class="text-black font-weight-bold mb-0">@lang('layout.robot-sleep')</p>
+                                <p id="info" class="text-black font-weight-bold mb-5">@lang('layout.robot-sleep')</p>
                                 {{-- <div class="progress my-3">
                                       <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                                     </div> --}}
@@ -87,7 +89,7 @@ id/sitemap-generator
                                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                                 <span class="text-black font-15px">@lang('layout.local-history')</span>
                             </div>
-                            <div>
+                            <div onclick="clearAll()">
                                 <span class="clear-all font-15px pointer mr-3">@lang('layout.clear-all')</span>
                             </div>
                         </div>
@@ -100,7 +102,7 @@ id/sitemap-generator
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        @lang('layout.version') 2.3
+                                        @lang('layout.version') 2.0
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -108,7 +110,7 @@ id/sitemap-generator
                                         <p>@lang('sitemap.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +129,7 @@ id/sitemap-generator
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">@lang('layout.local-history')</span>
             </div>
-            <div>
+            <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
             </div>
         </div>
@@ -137,7 +139,7 @@ id/sitemap-generator
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        @lang('layout.version') 2.3
+                        @lang('layout.version') 2.0
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -145,7 +147,7 @@ id/sitemap-generator
                         <p>@lang('sitemap.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -153,7 +155,7 @@ id/sitemap-generator
         </div>
     </div>
 </div>
-<div class="" style="background:white">
+<div class="" style="background:white" id="sitemap-description">
     <div class="container container-description">
         <div class="row">
             <div class="col-md-9">
@@ -241,11 +243,12 @@ id/sitemap-generator
                     <div class="robo-text-container">
                         <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
                         <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{--
         <div class="row mb-10">
             <div class="col-md-6">
                 <h2 class="text-black">@lang('layout.feature-title')</h2>
@@ -291,6 +294,7 @@ id/sitemap-generator
                 </label>
             </div>
         </div>
+        --}}
         <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('sitemap.title')</span></h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
@@ -298,7 +302,7 @@ id/sitemap-generator
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -313,7 +317,7 @@ id/sitemap-generator
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -324,7 +328,9 @@ id/sitemap-generator
                 </div>
             </div>
         </div>
+        {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+        --}}
     </div>
 </div>
 @endsection
@@ -337,6 +343,19 @@ id/sitemap-generator
     const token = "{{csrf_token()}}"
     const URL_API = '{{env('URL_API')}}'
     $('#toggle_button_webmaster').click();
+    $('a[href*="#"]:not([href="#"])').click(function() {
+        var offset = -80;
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top + offset
+                }, 400);
+                return false;
+            }
+        }
+    });
 </script>
 <script src="{{asset('js/logic/download.js')}}"></script>
 <script src="{{asset('js/logic/vkbeautify.0.99.00.beta.js')}}"></script>

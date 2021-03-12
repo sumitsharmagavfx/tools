@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', "JSON-LD How To Schema Generator")
+@section('title', Lang::get('howto.meta-title'))
 
-@section('meta-desc', "JSON-LD How To Schema Generator")
+@section('meta-desc', Lang::get('howto.meta-desc'))
 
 @section('conical','/en/json-ld-howto-schema-generator')
 
