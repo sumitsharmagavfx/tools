@@ -135,16 +135,35 @@ $(document).ready(function() {
     getHistories()
 })
 
-data_url.on('keyup', function() {
-    let protocol = getProtocol(data_url)
+// data_url.on('keyup', function() {
+//     let protocol = getProtocol(data_url)
 
-    console.log(protocol)
+//     console.log(protocol)
 
-    if (protocol == 'http') {
+//     if (protocol == 'http') {
+//         ic_normal.addClass('d-none')
+//         ic_http.removeClass('d-none')
+//         ic_https.addClass('d-none')
+//     } else if (protocol == 'https') {
+//         ic_normal.addClass('d-none')
+//         ic_http.addClass('d-none')
+//         ic_https.removeClass('d-none')
+//     } else {
+//         ic_normal.removeClass('d-none')
+//         ic_http.addClass('d-none')
+//         ic_https.addClass('d-none')
+//     }
+// })
+
+check_url.click(function() {
+    let _url = data_url.val()
+    let protocol = getProtocol(_url)
+
+    if (protocol == 'http:') {
         ic_normal.addClass('d-none')
         ic_http.removeClass('d-none')
         ic_https.addClass('d-none')
-    } else if (protocol == 'https') {
+    } else if (protocol == 'https:') {
         ic_normal.addClass('d-none')
         ic_http.addClass('d-none')
         ic_https.removeClass('d-none')
@@ -153,16 +172,14 @@ data_url.on('keyup', function() {
         ic_http.addClass('d-none')
         ic_https.addClass('d-none')
     }
-})
-
-check_url.click(function() {
+    
     $('#task-sleeping').addClass('d-none')
     $('#task-progress').removeClass('d-none')
 
     updateProgressBar(0)
 
     let match = /^(http(s)?|ftp):\/\//
-    let url = data_url.val().replace(match, '')
+    let url = _url.replace(match, '')
 
     var newData = {
         "url": 'https://' + url,
@@ -175,7 +192,7 @@ check_url.click(function() {
         type: "POST",
         credentials: 'include',
         header: {
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "x-requested-with",
         },
         dataType: "JSON",
         contentType: "application/json",
@@ -193,9 +210,9 @@ check_url.click(function() {
                 mobileissues(result.mobileFriendlyIssues)
                 resourceissues(result.resourceIssues)
 
-                addHistory(url, data)
+                addHistory(url, result)
 
-                console.log(result)
+                // console.log(result)
                 $('#task-progress').addClass('d-none')
                 $('#task-done').removeClass('d-none')
                 updateProgressBar(100)
@@ -210,6 +227,10 @@ check_url.click(function() {
 
                 before_crawl_preview.addClass('d-none')
                 after_crawl_preview.removeClass('d-none')
+
+                ic_normal.removeClass('d-none')
+                ic_http.addClass('d-none')
+                ic_https.addClass('d-none')
             } else {
                 toastr.error('Error', "An error occurred during the test process. Please try again with http/https or try with another website URL");
 
@@ -230,6 +251,10 @@ check_url.click(function() {
                 $('#task-progress').addClass('d-none')
                 $('#task-done').addClass('d-none')
                 page_issues.addClass('d-none')
+
+                ic_normal.removeClass('d-none')
+                ic_http.addClass('d-none')
+                ic_https.addClass('d-none')
             }
         },
         error: function(e) {
