@@ -41,7 +41,7 @@ function clearTable() {
     $("#generateCrawlResult").hide();
 }
 
-$('#crawlButton').on('click', function() {    
+$('#crawlButton').on('click', function() {
     let url = $('#url').val().replace(/^(http(s)?|ftp):\/\//, '');
     url = url.substr(url.length - 1) === '/' ? url.slice(0, -1) : url;
     $.ajax({
@@ -211,6 +211,11 @@ let removeLocal = function(index) {
     refreshLocalStorage()
     $('#result').empty()
     $('#noCrawlResult').show()
+}
+
+let clearAll = function () {
+    localStorage.removeItem('ssl-checker')
+    refreshLocalStorage();
 }
 
 
