@@ -137,7 +137,7 @@ id/word-counter
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        @lang('layout.version') 2.3
+                                        @lang('layout.version') 2.0
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -145,7 +145,7 @@ id/word-counter
                                         <p>@lang('wordcounter.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ id/word-counter
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">@lang('layout.local-history')</span>
             </div>
-            <div>
+            <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
             </div>
         </div>
@@ -196,7 +196,7 @@ id/word-counter
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        @lang('layout.version') 2.3
+                        @lang('layout.version') 2.0
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -204,7 +204,7 @@ id/word-counter
                         <p>@lang('wordcounter.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -237,11 +237,28 @@ id/word-counter
 
                 <div class="d-none" id="description-tab-3">
                     <h2>@lang('wordcounter.desc-3')</h2>
-                    <p>@lang('wordcounter.desc-3-1')</p>
-                    <p>@lang('wordcounter.desc-3-2')</p>
-                    <p>@lang('wordcounter.desc-3-3')</p>
-                    <p>@lang('wordcounter.desc-3-4')</p>
-                    <p>@lang('wordcounter.desc-3-5')</p>
+                    <table class="table">
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-3-1')</td>
+                            <td>@lang('wordcounter.desc-3-1-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-3-2')</td>
+                            <td>@lang('wordcounter.desc-3-2-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-3-3')</td>
+                            <td>@lang('wordcounter.desc-3-3-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-3-4')</td>
+                            <td>@lang('wordcounter.desc-3-4-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-3-5')</td>
+                            <td>@lang('wordcounter.desc-3-5-1')</td>
+                        </tr>
+                    </table>
                 </div>
 
                 <div class="d-none" id="description-tab-4">
@@ -258,9 +275,20 @@ id/word-counter
                     <h2>@lang('wordcounter.desc-6')</h2>
                     <p>@lang('wordcounter.desc-6-1')</p>
                     <p>@lang('wordcounter.desc-6-2')</p>
-                    <p>@lang('wordcounter.desc-6-3')</p>
-                    <p>@lang('wordcounter.desc-6-4')</p>
-                    <p>@lang('wordcounter.desc-6-5')</p>
+                    <table class="table">
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-6-3')</td>
+                            <td>@lang('wordcounter.desc-6-3-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-6-4')</td>
+                            <td>@lang('wordcounter.desc-6-4-1')</td>
+                        </tr>
+                        <tr>
+                            <td scope="col">@lang('wordcounter.desc-6-5')</td>
+                            <td>@lang('wordcounter.desc-6-5-1')</td>
+                        </tr>
+                    </table>
                     <h3>@lang('wordcounter.desc-6-6-1')</h3>
                     <p>@lang('wordcounter.desc-6-6-1-1')</p>
                     <p>@lang('wordcounter.desc-6-6-1-2')</p>
@@ -308,10 +336,24 @@ id/word-counter
                 <div class="d-none" id="description-tab-11">
                     <h2>@lang('wordcounter.desc-11')</h2>
                     <p>@lang('wordcounter.desc-11-1')</p>
-                    <p>@lang('wordcounter.desc-11-2')</p>
-                    <p>@lang('wordcounter.desc-11-3')</p>
-                    <p>@lang('wordcounter.desc-11-4')</p>
-                    <p>@lang('wordcounter.desc-11-5')</p>
+                    <div class="row">
+                        <div class="col-sm-6 mb-5">
+                            <div class="card card-word-counter card-custom  card-stretch">
+                                <div class="card-body">
+                                    <p class="h4">@lang('wordcounter.desc-11-2')</p>
+                                    <p>@lang('wordcounter.desc-11-3')</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 mb-5">
+                            <div class="card card-word-counter card-custom card-stretch">
+                                <div class="card-body">
+                                    <p class="h4">@lang('wordcounter.desc-11-4')</p>
+                                    <p>@lang('wordcounter.desc-11-5')</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3">
@@ -387,18 +429,19 @@ id/word-counter
             <div class="row">
                 <div class="col-md-6 py-5">
                     <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
                     </div>
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
                         <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
                         <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{--
         <div class="row mb-10">
             <div class="col-md-6">
                 <h2 class="text-black">@lang('layout.feature-title')</h2>
@@ -422,6 +465,7 @@ id/word-counter
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
             </div>
         </div>
+        --}}
         <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('wordcounter.title')</span></h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
@@ -429,7 +473,7 @@ id/word-counter
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -444,7 +488,7 @@ id/word-counter
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -455,7 +499,9 @@ id/word-counter
                 </div>
             </div>
         </div>
+        {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+        --}}
     </div>
 </div>
 @endsection

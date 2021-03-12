@@ -46,7 +46,7 @@ id/page-title-meta-description-checker
                         </div>
                     </div>
                     <div class="col-md-6 col-mobile">
-                        <input id="url" type="text" class="input-url text-center w-100" placeholder="{{ Lang::get('layout.input-hint') }}" value="HTTPS://SCHENGENVISAINFO.CO/SCHENGEN-VISA-INSURANCE">
+                        <input id="url" type="text" class="input-url text-center w-100" placeholder="https://example.com" value="" autocomplete="off">
                     </div>
                     <div class="col-md-3 text-right col-mobile">
                         <button id="crawlURL" class="btn btn-crawl px-10">@lang('metachecker.btn-crawl')</button>
@@ -208,7 +208,7 @@ id/page-title-meta-description-checker
                             <div class="card bg-transparent" style="">
                                 <div class="card-header" id="headingOne2">
                                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                                        @lang('layout.version') 2.3
+                                        @lang('layout.version') 2.0
                                     </div>
                                 </div>
                                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -216,7 +216,7 @@ id/page-title-meta-description-checker
                                         <p>@lang('metachecker.highlight')</p>
                                         <div class="d-flex align-items-center">
                                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@ id/page-title-meta-description-checker
                 <i class='bx bxs-collection bx-sm text-darkgrey mr-2'></i>
                 <span class="text-black font-15px">@lang('layout.local-history')</span>
             </div>
-            <div>
+            <div onclick="clearAll()">
                 <span class="clear-all font-15px pointer">@lang('layout.clear-all')</span>
             </div>
         </div>
@@ -244,7 +244,7 @@ id/page-title-meta-description-checker
             <div class="card bg-transparent" style="">
                 <div class="card-header" id="headingOne2">
                     <div class="card-title" data-toggle="collapse" data-target="#collapseOne2">
-                        @lang('layout.version') 2.3
+                        @lang('layout.version') 2.0
                     </div>
                 </div>
                 <div id="collapseOne2" class="collapse show" data-parent="#accordionExample2">
@@ -252,7 +252,7 @@ id/page-title-meta-description-checker
                         <p>@lang('metachecker.highlight')</p>
                         <div class="d-flex align-items-center">
                             <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 8 Jan, 2021</span>
+                            <span class="text-darkgrey h6 mb-0">@lang('layout.updated') 15 Mar, 2021</span>
                         </div>
                     </div>
                 </div>
@@ -396,18 +396,19 @@ id/page-title-meta-description-checker
             <div class="row">
                 <div class="col-md-6 py-5">
                     <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
                     </div>
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
                         <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
                         <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{--
         <div class="row mb-10">
             <div class="col-md-6">
                 <h2 class="text-black">@lang('layout.feature-title')</h2>
@@ -431,6 +432,7 @@ id/page-title-meta-description-checker
                 <label class="checkbox checkbox-disabled checkbox-features features-disabled mb-1"><input type="checkbox" disabled="disabled" name="Checkboxes14" /><span></span>&nbsp;&nbsp;<bdi>Daily domain ranking on SERP. Version 0.1</bdi></label>
             </div>
         </div>
+        --}}
         <h2 class="text-black">@lang('layout.whats-new-title') <span>@lang('metachecker.title')</span></h2>
         <div class="row my-5">
             <div class="col-md-6 mb-5">
@@ -438,7 +440,7 @@ id/page-title-meta-description-checker
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -453,7 +455,7 @@ id/page-title-meta-description-checker
                     <div class="alert-text mb-5">
                         <span class="h4 alert-title">@lang('layout.whats-new-sub-title')</span>&nbsp;&nbsp;<span class="label label-dot label-alert-features"></span>
                         <br />
-                        <span class="font-weight-light">@lang('layout.whats-new-update') Dec 2, 2020</span>
+                        <span class="font-weight-light">@lang('layout.whats-new-update') Mar 15, 2021</span>
                     </div>
                     <div class="alert-close pt-5 pr-5">
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -464,7 +466,9 @@ id/page-title-meta-description-checker
                 </div>
             </div>
         </div>
+        {{--
         <p class="text-black view-all-release">@lang('layout.view-web-release')</p>
+        --}}
     </div>
 </div>
 @endsection

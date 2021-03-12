@@ -1,3 +1,11 @@
+if (lang == "en") {
+    var created_at = "Created at "
+    var localStorageNone = "This is your first impressions, no history yet!"
+} else if (lang == "id") {
+    var created_at = "Dibuat pada "
+    var localStorageNone = "Ini adalah kesan pertama Anda, belum ada riwayat!"
+}
+
 let loader;
 var converter = new showdown.Converter();
 toastr.options = {
@@ -499,7 +507,7 @@ const refreshLocalStorage = function(){
             for (let key of keys){
                 let date = new Date(key.analysisUTCTimestamp)
                 date.setTime(date.getTime() + (1000*3600*7))
-                let formatDate = `Created at ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
+                let formatDate = `${created_at} ${date.getHours() < 10 ? ('0'+date.getHours()) : date.getHours()}.${date.getMinutes() < 10 ? ('0'+date.getMinutes()) : date.getMinutes()} | ${date.getDate()}, ${month[date.getMonth()]} ${date.getFullYear()}`
                 let div = `<div class="custom-card py-5 px-3" onclick="getData(${index})">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="local-collection-title">${key.id}
@@ -527,12 +535,12 @@ const refreshLocalStorage = function(){
         }else {
             let div2 = `<li id="empty-impression" class="list-group-item list-group-item-action pointer mb-2 border-radius-5px">
                   <div class="d-flex justify-content-center text-center">
-                    <span>This is your first impressions, no history yet!</span>
+                    <span>` + localStorageNone + `</span>
                   </div>
                 </li>`
             let div = `<div class="custom-card py-5 px-3">
                     <div class="d-flex justify-content-center text-center">
-                        <span>This is your first impressions, no history yet!</span>
+                        <span>` + localStorageNone + `</span>
                     </div>
                 </div>`
 

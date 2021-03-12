@@ -195,7 +195,7 @@ id
                         </div>
                     </div>
                 </div>
-                {{--
+                    {{--
                 <div class="col-6 col-md-3 mb-8">
                     <div class="card card-custom card-stretch card-home">
                         <div class="card-body p-7">
@@ -204,18 +204,19 @@ id
                                 <h2 class="h6 text-darkgrey font-weight-bolder">Keyword Research</h2>
                                 <p class="text-darkgrey">JSON-LD Generator adalah sebuah tools yang dibuat oleh cmlabs untuk memudahkan user.</p>
                                 <button onclick="window.location.href='/{{ $local }}/keyword-research'" type="button" class="btn btn-launch" name="button">LAUNCH</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                --}}
+
+            </div>
+            <div class="d-flex align-items-center">
+                <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
+                <span class="text-darkgrey">Last update 15 Mar, 2021 | Version 1.0</span>
             </div>
         </div>
     </div>
-</div>
---}}
-</div>
-<div class="d-flex align-items-center">
-    <i class='bx bxs-check-circle text-darkgrey mr-1'></i>
-    <span class="text-darkgrey">Last update 31 Mar, 2021 | Version 1.0</span>
-</div>
-</div>
-</div>
 </div>
 <div class="" style="background:white">
     <div class="container container-description">
@@ -417,14 +418,14 @@ id
             <div class="row">
                 <div class="col-md-6 py-5">
                     <div class="robo-container">
-                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="" class="robo-img">
+                        <img src="{{asset('/media/images/robo-footer.png')}}" alt="robo-img" class="robo-img">
                     </div>
                 </div>
                 <div class="col-md-6 py-10 pr-10">
                     <div class="robo-text-container">
                         <h2 class="text-white">@lang('layout.banner-robo-title')</h2>
                         <p class="text-white">@lang('layout.banner-robo-desc')</p>
-                        <button type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
+                        <button onclick="window.open('https://cmlabs.co','_blank')" type="button" class="btn btn-explore " name="button">@lang('layout.banner-robo-btn')</button>
                     </div>
                 </div>
             </div>
